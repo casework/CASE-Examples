@@ -110,7 +110,13 @@
                 },
                 {
                     "@type": "uco-observable:ContentData",
-                    "dataPayloadReferenceURL": "E:\\Traffic\\20090402-scenario.pcap",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@type": "case-core:Trace",
+                        "case-core:hasPropertyBundle": {
+                            "@type": "uco-observable:URL",
+                            "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
+                        }
+                    },
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
