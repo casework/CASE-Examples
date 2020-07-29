@@ -1,3 +1,6 @@
 [submodule "dependencies/CASE"]
 	path = dependencies/CASE
 	url = https://github.com/casework/CASE.git
+[submodule "dependencies/UCO"]
+	path = dependencies/UCO
+	url = https://github.com/ucoProject/UCO.git
