@@ -1,11 +1,14 @@
-# Cyber-investigation Analysis Standard Expression (CASE)
+# CASE Examples
 
-_Read the [Wiki tab](https://github.com/casework/CASE/wiki) to learn **everything** you need to know about the Cyber-investigation Analysis Standard Expression (CASE) ontology._
-_For learning about the Unified Cyber Ontology, CASE's parent, see [UCO](https://github.com/ucoProject/UCO)._
+This repository holds example data illustrating usage of the Cyber-investigation Analysis Standard Expression (CASE) language.
 
-# Examples in this Repository
-_These will eventually be moved to the Wiki (likely [Mapping Guide](https://github.com/casework/CASE/wiki/Mapping-Guide))._
+Further illustration can be found at the [CASE Topics gallery](https://caseontology.org/ontology/gallery.html).
+
+
+## Examples in this repository
+
 Mapping notes & respective JSON-LD output:
+
 - [Accounts](examples/accounts.json)
 - [Bulk Extractor Forensic Path](examples/bulk_extractor_forensic_path.json) (*[info](examples/bulk_extractor_forensic_path.md)*)
 - [Call Log](examples/call_log.json)
@@ -20,12 +23,3 @@ Mapping notes & respective JSON-LD output:
 - [Raw Data](examples/raw_data.json)
 - [Reconstructed File](examples/reconstructed_file.json) (*[info](examples/reconstructed_file.md)*)
 - [SMS and Contacts](examples/sms_and_contacts.json)
-
-# I have a question!
-
-Before you post a Github issue or send an email ensure you've done this checklist:
-
-1. [Determined scope](https://caseontology.org/ontology/start.html#scope) of your task. It is not necessary for most parties to understand all aspects of the ontology, mapping methods, and supporting tools.
-
-2. Familiarize yourself with the [labels](https://github.com/casework/CASE/labels) and search the [Issues tab](https://github.com/casework/CASE/issues). Typically, only light-blue and red labels should be used by non-admin Github users while the others should be used by CASE Github admins.
-*All but the red `Project` labels are found in every [`casework`](https://github.com/casework) repository.*
