@@ -1,0 +1,3 @@
+[submodule "dependencies/CASE"]
+	path = dependencies/CASE
+	url = https://github.com/casework/CASE.git
