@@ -4,24 +4,28 @@
         "": "http://example.org/kb#",
         "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
+        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": ":bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab",
-    "@type": "Bundle",
-    "description": [
+    "@type": "uco-core:Bundle",
+    "uco-core:name": "PCAP Analysis 4711",
+    "uco-core:description": [
         "This example of representing network connections in captured network traffic (e.g., PCAP)."
     ],
-    "content": [
+    "uco-core:object": [
         {
             "@id": ":investigation-952d677d-6b62-4e53-9bac-1b113d268ac5",
-            "@type": "Investigation",
-            "name": "NetTheft1234",
-            "focus": "Media Theft",
-            "description": "Network traffic of media theft",
-            "object": [
+            "@type": "uco-investigation:Investigation",
+            "uco-core:name": "NetTheft1234",
+            "uco-investigation:focus": "Media Theft",
+            "uco-core:description": "Network traffic of media theft",
+            "uco-core:object": [
                 ":pcap-tool-uuid",
                 ":extraction-action-uuid",
                 ":pcap-provenancerecord-uuid",
@@ -36,34 +40,38 @@
             ],
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "Authorization",
-                    "authorizationIdentifier": "Warrant3554",
-                    "authorizationType": "warrant"
+                    "@type": "uco-investigation:Authorization",
+                    "uco-investigation:authorizationIdentifier": "Warrant3554",
+                    "uco-investigation:authorizationType": "warrant"
                 }
             ]
         },
         {
-            "@type": "Tool",
+            "@type": "uco-tool:Tool",
             "@id": ":pcap-tool-uuid",
-            "name": "PCAPAnalyser",
-            "creator": ":NetworkAnalyser",
-            "toolType": "PCAParser",
-            "version": "3.5"
+            "uco-core:name": "PCAP Analyser",
+            "uco-tool:creator": ":NetworkAnalyser Corporation",
+            "uco-tool:toolType": "PCAP Parser",
+            "uco-tool:version": "2.5.0.0"
         },
         {
-            "@type": "InvestigativeAction",
+            "@type": "uco-investigation:InvestigativeAction",
             "@id": ":extraction-action-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:name": "extracted",
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ActionReferences",
-                    "instrument": ":pcap-tool-uuid",
-                    "object": [
+                    "@type": "uco-action:ActionReferences",
+                    "uco-action:instrument": ":pcap-tool-uuid",
+                    "uco-action:object": [
                         ":pcap-provenancerecord-uuid",
                         ":pcap-file-uuid"
                     ],
-                    "result": [
+                    "uco-action:result": [
                         ":extracted-connections-provenancerecord-uuid",
                         ":network-connection1-uuid",
                         ":network-connection2-uuid",
@@ -71,24 +79,32 @@
                     ]
                 }
             ],
-            "endTime": "2017-09-29T11:47:54.2889922Z",
-            "name": "extracted"
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            }
         },
         {
-            "@type": "ProvenanceRecord",
+            "@type": "uco-investigation:ProvenanceRecord",
             "@id": ":pcap-provenancerecord-uuid",
-            "createdBy": ":81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
-            "description": "Parsed packet capture files",
-            "object": [
+            "uco-core:createdBy": ":81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
+            "uco-core:description": "Parsed packet capture files",
+            "uco-core:object": [
                 ":pcap-file-uuid"
             ]
         },
         {
             "@id": ":pcap-file-uuid",
             "@type": "case-core:Trace",
-            "createdBy": ":81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:createdBy": ":81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
                     "@type": "uco-observable:File",
@@ -134,12 +150,15 @@
             ]
         },
         {
-            "@type": "ProvenanceRecord",
+            "@type": "uco-investigation:ProvenanceRecord",
             "@id": ":extracted-connections-provenancerecord-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
-            "description": "Network connections and files parsed with PCAParser",
-            "object": [
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
+            "uco-core:description": "Network connections and files parsed with PCAParser",
+            "uco-core:object": [
                 ":network-connection1-uuid",
                 ":network-connection2-uuid",
                 ":network-connection3-uuid"
@@ -148,89 +167,119 @@
         {
             "@type": "case-core:Trace",
             "@id": ":source-host-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "IPv4Address",
-                    "value": "10.10.10.2"
+                    "@type": "uco-observable:IPv4Address",
+                    "uco-observable:value": "10.10.10.2"
                 },
                 {
-                    "@type": "DomainName",
-                    "value": "EOGHANMACBOOK"
+                    "@type": "uco-observable:DomainName",
+                    "uco-observable:value": "EOGHANMACBOOK"
                 }
             ]
         },
         {
             "@type": "case-core:Trace",
             "@id": ":destination-host-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "IPv4Address",
-                    "value": "10.10.10.50"
+                    "@type": "uco-observable:IPv4Address",
+                    "uco-observable:value": "10.10.10.50"
                 },
                 {
-                    "@type": "DomainName",
-                    "value": "JHL-IDNOLHYSVIA"
+                    "@type": "uco-observable:DomainName",
+                    "uco-observable:value": "JHL-IDNOLHYSVIA"
                 }
             ]
         },
         {
             "@type": "case-core:Trace",
             "@id": ":network-connection1-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "NetworkConnection",
-                    "startTime": "2009-04-03T02:29:25.6256260Z",
-                    "endTime": "2009-04-03T02:29:25.6365510Z",
-                    "dst": ":destination-host-uuid",
-                    "destinationPort": 139,
-                    "src": ":source-host-uuid",
-                    "sourcePort": 52960,
-                    "protocols": "TCP, NETBIOSSESSIONSERVICE",
-                    "connectionState": "APSF"
+                    "@type": "uco-observable:NetworkConnection",
+                    "uco-observable:startTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2009-04-03T02:29:25.6256260Z"
+                    },
+                    "uco-observable:endTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2009-04-03T02:29:25.6365510Z"
+                    },
+                    "uco-observable:dst": ":destination-host-uuid",
+                    "uco-observable:destinationPort": 139,
+                    "uco-observable:src": ":source-host-uuid",
+                    "uco-observable:sourcePort": 52960,
+                    "uco-observable:protocols": "TCP, NETBIOSSESSIONSERVICE"
                 }
             ]
         },
         {
             "@type": "case-core:Trace",
             "@id": ":network-connection2-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "NetworkConnection",
-                    "startTime": "2009-04-03T02:29:25.6264620Z",
-                    "endTime": "2009-04-03T02:29:25.6369450Z",
-                    "dst": ":destination-host-uuid",
-                    "destinationPort": 139,
-                    "src": ":source-host-uuid",
-                    "sourcePort": 52961,
-                    "protocols": "TCP, NETBIOSSESSIONSERVICE",
-                    "connectionState": "APSF"
+                    "@type": "uco-observable:NetworkConnection",
+                    "uco-observable:startTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2009-04-03T02:29:25.6264620Z"
+                    },
+                    "uco-observable:endTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2009-04-03T02:29:25.6369450Z"
+                    },
+                    "uco-observable:dst": ":destination-host-uuid",
+                    "uco-observable:destinationPort": 139,
+                    "uco-observable:src": ":source-host-uuid",
+                    "uco-observable:sourcePort": 52961,
+                    "uco-observable:protocols": "TCP, NETBIOSSESSIONSERVICE"
                 }
             ]
         },
         {
             "@type": "case-core:Trace",
             "@id": ":network-connection3-uuid",
-            "createdBy": ":investigator1-uuid",
-            "createdTime": "2017-09-29T11:47:54.2889922Z",
+            "uco-core:createdBy": ":investigator1-uuid",
+            "uco-core:createdTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-09-29T11:47:54.2889922Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "NetworkConnection",
-                    "startTime": "2009-04-03T02:29:25.6370540Z",
-                    "endTime": "2009-04-03T02:29:25.6475500Z",
-                    "dst": ":destination-host-uuid",
-                    "destinationPort": 139,
-                    "src": ":source-host-uuid",
-                    "sourcePort": 52962,
-                    "protocols": "TCP, NETBIOSSESSIONSERVICE",
-                    "connectionState": "APSF"
+                    "@type": "uco-observable:NetworkConnection",
+                    "uco-observable:startTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2009-04-03T02:29:25.6370540Z"
+                    },
+                    "uco-observable:endTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2009-04-03T02:29:25.6475500Z"
+                    },
+                    "uco-observable:dst": ":destination-host-uuid",
+                    "uco-observable:destinationPort": 139,
+                    "uco-observable:src": ":source-host-uuid",
+                    "uco-observable:sourcePort": 52962,
+                    "uco-observable:protocols": "TCP, NETBIOSSESSIONSERVICE"
                 }
             ]
         },
@@ -245,13 +294,7 @@
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
             },
-            "uco-core:isDirectional": "true",
-            "case-core:hasPropertyBundle": [
-                {
-                    "@type": "StarttimeRelation",
-                    "startTime": "2009-04-03T02:29:25.6256260Z"
-                }
-            ]
+            "uco-core:isDirectional": "true"
         },
         {
             "@id": ":trace-relationship2-uuid",
@@ -264,13 +307,7 @@
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
             },
-            "uco-core:isDirectional": "true",
-            "case-core:hasPropertyBundle": [
-                {
-                    "@type": "StarttimeRelation",
-                    "startTime": "2009-04-03T02:29:25.6264620Z"
-                }
-            ]
+            "uco-core:isDirectional": "true"
         },
         {
             "@id": ":trace-relationship3-uuid",
@@ -283,13 +320,7 @@
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
             },
-            "uco-core:isDirectional": "true",
-            "case-core:hasPropertyBundle": [
-                {
-                    "@type": "StarttimeRelation",
-                    "startTime": "2009-04-03T02:29:25.6370540Z"
-                }
-            ]
+            "uco-core:isDirectional": "true"
         }
     ]
 }
