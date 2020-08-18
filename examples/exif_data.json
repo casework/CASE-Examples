@@ -3,10 +3,10 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "case-core": "https://caseontology.org/ontology/case/core#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -167,7 +167,7 @@
         },
         {
             "@id": ":forensic_action7",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "annotated",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",

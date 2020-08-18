@@ -3,10 +3,10 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "case-core": "https://caseontology.org/ontology/case/core#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
@@ -21,9 +21,9 @@
     "uco-core:object": [
         {
             "@id": ":investigation-952d677d-6b62-4e53-9bac-1b113d268ac5",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "NetTheft1234",
-            "uco-investigation:focus": "Media Theft",
+            "case-investigation:focus": "Media Theft",
             "uco-core:description": "Network traffic of media theft",
             "uco-core:object": [
                 ":pcap-tool-uuid",
@@ -40,9 +40,9 @@
             ],
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "uco-investigation:Authorization",
-                    "uco-investigation:authorizationIdentifier": "Warrant3554",
-                    "uco-investigation:authorizationType": "warrant"
+                    "@type": "case-investigation:Authorization",
+                    "case-investigation:authorizationIdentifier": "Warrant3554",
+                    "case-investigation:authorizationType": "warrant"
                 }
             ]
         },
@@ -55,7 +55,7 @@
             "uco-tool:version": "2.5.0.0"
         },
         {
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "@id": ":extraction-action-uuid",
             "uco-core:name": "extracted",
             "uco-core:createdBy": ":investigator1-uuid",
@@ -85,7 +85,7 @@
             }
         },
         {
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "@id": ":pcap-provenancerecord-uuid",
             "uco-core:createdBy": ":81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
             "uco-core:createdTime": {
@@ -150,7 +150,7 @@
             ]
         },
         {
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "@id": ":extracted-connections-provenancerecord-uuid",
             "uco-core:createdBy": ":investigator1-uuid",
             "uco-core:createdTime": {

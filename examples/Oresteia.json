@@ -3,13 +3,13 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "case-core": "https://caseontology.org/ontology/case/core#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-role": "https://unifiedcyberontology.org/ontology/uco/role#",
@@ -34,9 +34,9 @@
     "uco-core:object": [
         {
             "@id": ":investigation-4586742a-710a-454f-bcb8-b60e230ec1b2",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime A",
-            "uco-investigation:focus": "Murder",
+            "case-investigation:focus": "Murder",
             "uco-core:description": "In Mycenae, Atreus killed two sons of Thyestes, cooked them (except for their hands and heads), fed them to Thyestes, and then taunted Thyestes with his murdered sons' hands and heads.",
             "uco-core:object": [
                 ":thyestes-uuid",
@@ -46,9 +46,9 @@
         },
         {
             "@id": ":investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime B",
-            "uco-investigation:focus": "Rape",
+            "case-investigation:focus": "Rape",
             "uco-core:description": "In Mycenae, Thyestes raped his daughter Pelopia to have a son (Aegisthus)",
             "uco-core:object": [
                 ":thyestes-uuid",
@@ -60,25 +60,25 @@
         },
         {
             "@id": ":investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime C",
-            "uco-investigation:focus": "Murder",
+            "case-investigation:focus": "Murder",
             "uco-core:description": "In Mycenae, Aegisthus killed Atreus (Agamemnon's father)",
             "uco-core:object": []
         },
         {
             "@id": ":investigation-2545442b-321c-754d-bcb8-c40d321ce2c2",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime D",
-            "uco-investigation:focus": "Murder",
+            "case-investigation:focus": "Murder",
             "uco-core:description": "In Aulis, Agamemnon killed his daughter Iphigenia as a sacrifice to the gods",
             "uco-core:object": []
         },
         {
             "@id": ":investigation-952d677d-6b62-4e53-9bac-1b113d268ac5",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime E",
-            "uco-investigation:focus": "Murder",
+            "case-investigation:focus": "Murder",
             "uco-core:description": "In the Palace of Argos, Agamemnon and Cassandra were killed by Clytemnestra (accomplice Aegisthus)",
             "uco-core:object": [
                 ":argos-palace-uuid",
@@ -134,17 +134,17 @@
             ],
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "uco-investigation:Authorization",
-                    "uco-investigation:authorizationIdentifier": "Warrant12345",
-                    "uco-investigation:authorizationType": "warrant"
+                    "@type": "case-investigation:Authorization",
+                    "case-investigation:authorizationIdentifier": "Warrant12345",
+                    "case-investigation:authorizationType": "warrant"
                 }
             ]
         },
         {
             "@id": ":investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime F",
-            "uco-investigation:focus": "Murder",
+            "case-investigation:focus": "Murder",
             "uco-core:description": "In the Palace of Argos, Clytemnestra and Aegisthus were killed by Orestes (accomplice Electra)",
             "uco-core:object": [
                 ":electra-uuid",
@@ -557,7 +557,7 @@
         },
         {
             "@id": ":investigative-action1-uuid",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "preserved",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
@@ -590,7 +590,7 @@
         },
         {
             "@id": ":investigative-action10-uuid",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "transferred",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
@@ -614,25 +614,25 @@
         },
         {
             "@id": ":provenance-record1-uuid",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Mobile device used by murder victim Cassandra",
-            "uco-investigation:exhibitNumber": "ArgosPD-20170622-001A",
+            "case-investigation:exhibitNumber": "ArgosPD-20170622-001A",
             "uco-core:object": [
                 ":cassandra-device-uuid"
             ]
         },
         {
             "@id": ":provenance-record2-uuid",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android smartphone seized by Argos PD",
-            "uco-investigation:exhibitNumber": "AthensPD-2017220601",
+            "case-investigation:exhibitNumber": "AthensPD-2017220601",
             "uco-core:object": [
                 "cassandra-device-uuid"
             ]
         },
         {
             "@id": ":investigative-action2-uuid",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "extracted",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
@@ -678,9 +678,9 @@
         },
         {
             "@id": ":provenance-record3-uuid",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Forensic duplicate of mobile device used by murder victim Cassandra",
-            "uco-investigation:exhibitNumber": "AthensPD-2017220601-02",
+            "case-investigation:exhibitNumber": "AthensPD-2017220601-02",
             "uco-core:object": [
                 ":cassandra-mobiledevice-forensicduplicate-uuid"
             ]
@@ -737,9 +737,9 @@
         },
         {
             "@id": ":provenance-record4-uuid",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "SMS SQLite database on mobile device used by murder victim Cassandra",
-            "uco-investigation:exhibitNumber": "AthensPD-2017220601-02-03",
+            "case-investigation:exhibitNumber": "AthensPD-2017220601-02-03",
             "uco-core:object": [
                 ":cassandra-mobiledevice-mmssms-uuid"
             ]
@@ -953,7 +953,7 @@
         },
         {
             "@id": ":investigative-action4-uuid",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "extracted",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
@@ -984,7 +984,7 @@
         },
         {
             "@id": ":investigative-action5-uuid",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "parsed",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
@@ -1018,9 +1018,9 @@
         },
         {
             "@id": ":provenance-record5-uuid",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Parsed messages from mobile device used by murder victim Cassandra",
-            "uco-investigation:exhibitNumber": "ArgosPD-20170622-001A-100",
+            "case-investigation:exhibitNumber": "ArgosPD-20170622-001A-100",
             "uco-core:object": [
                 ":sms-message1-uuid",
                 ":sms-message2-uuid",
