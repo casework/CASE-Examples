@@ -2,15 +2,15 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
     },
     "@graph": [
         {
             "@id": ":phone_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountIssuer": ":ATT",
@@ -24,8 +24,8 @@
         },
         {
             "@id": ":phone_account2",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountIssuer": ":Sprint",
@@ -39,8 +39,8 @@
         },
         {
             "@id": ":phone_call1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:PhoneCall",
                     "uco-observable:callType": "mobile",

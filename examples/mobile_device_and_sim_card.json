@@ -3,7 +3,6 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
@@ -12,8 +11,8 @@
     "@graph": [
         {
             "@id": ":mobile-device-uuid",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Device",
                     "manufacturer": "iPhone",
@@ -67,8 +66,8 @@
         },
         {
             "@id": ":sim-card-uuid",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "SIMCard",
                     "ICCID": "456673345673436xxx",
@@ -83,8 +82,8 @@
         },
         {
             "@id": ":mobile-account1-uuid",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Account",
                     "accountType": "Phone",
@@ -98,8 +97,8 @@
         },
         {
             "@id": ":mobile-account2-uuid",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Account",
                     "accountType": "Phone",

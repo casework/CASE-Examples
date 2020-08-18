@@ -2,16 +2,17 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
     },
     "@graph": [
         {
             "@id": ":sms_message1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Message",
                     "application": ":sms_application1",
@@ -26,8 +27,8 @@
         },
         {
             "@id": ":contact1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Contact",
                     "rdfs:comment": [
@@ -84,8 +85,8 @@
         },
         {
             "@id": ":phone_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Account",
                     "rdfs:comment": "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)",
@@ -100,8 +101,8 @@
         },
         {
             "@id": ":phone_account2",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Account",
                     "accountType": "Phone",
@@ -115,8 +116,8 @@
         },
         {
             "@id": ":email_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Account",
                     "accountType": "Email",
@@ -130,8 +131,8 @@
         },
         {
             "@id": ":phone_account3",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Account",
                     "accountType": "Phone",
@@ -145,8 +146,8 @@
         },
         {
             "@id": ":android_phonebook1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "Application",
                     "name": "Android Phonebook",

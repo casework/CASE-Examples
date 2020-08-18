@@ -2,7 +2,6 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
@@ -13,7 +12,7 @@
         {
             "@id": ":actor1",
             "@type": "uco-identity:Identity",
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-identity:SimpleName",
                     "uco-identity:givenName": "William",
@@ -60,8 +59,8 @@
         },
         {
             "@id": ":facebook_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountIdentifier": "1235556677@facebook.net",
@@ -118,8 +117,8 @@
         },
         {
             "@id": ":google_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountIdentifier": "willyROX@gmail.com",
@@ -183,8 +182,8 @@
         },
         {
             "@id": ":email_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailAccount",
                     "uco-observable:emailAddress": ":email-address1"
@@ -193,8 +192,8 @@
         },
         {
             "@id": ":email_address1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailAddress",
                     "uco-observable:value": "willyROX@gmail.com"
