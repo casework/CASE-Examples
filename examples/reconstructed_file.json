@@ -1,16 +1,16 @@
 {
     "@context": {
-        "@vocab":         "http://example.org/local#",
-        "":                  "http://example.org/kb#",
-        "case-core":         "https://caseontology.org/ontology/case/core#",
-        "rdfs":              "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-core":          "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable":    "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-types":         "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary":    "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "@vocab": "http://example.org/local#",
+        "": "http://example.org/kb#",
+        "case-core": "https://caseontology.org/ontology/case/core#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
-        "uco-action":        "https://unifiedcyberontology.org/ontology/uco/investigation#",
-        "xsd":               "http://www.w3.org/2001/XMLSchema#"
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
@@ -72,10 +72,10 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
+                    "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
-                       "@type": "uco-vocabulary:EndiannessTypeVocab",
-                       "@value": "Big-endian"
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -106,10 +106,10 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
+                    "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
-                       "@type": "uco-vocabulary:EndiannessTypeVocab",
-                       "@value": "Big-endian"
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -140,10 +140,10 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
+                    "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
-                       "@type": "uco-vocabulary:EndiannessTypeVocab",
-                       "@value": "Big-endian"
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -174,10 +174,10 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
+                    "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
-                       "@type": "uco-vocabulary:EndiannessTypeVocab",
-                       "@value": "Big-endian"
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -326,12 +326,12 @@
                 "@value": "2010-01-20T17:59:43.25Z"
             },
             "uco-investigation:endTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2010-01-21T17:59:43.25Z"
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-21T17:59:43.25Z"
             },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ActionReferences",
+                    "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":role4",
                     "uco-action:instrument": ":carving_tool1",
                     "uco-action:object": [
@@ -356,15 +356,15 @@
             "uco-core:name": "reconstructed",
             "uco-investigation:startTime": {
                 "@type": "xsd:dateTime",
-                "@value":"2010-01-20T17:59:43.25Z"
+                "@value": "2010-01-20T17:59:43.25Z"
             },
             "uco-investigation:endTime": {
                 "@type": "xsd:dateTime",
-                "@value":"2010-01-21T17:59:43.25Z"
+                "@value": "2010-01-21T17:59:43.25Z"
             },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ActionReferences",
+                    "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":role4",
                     "uco-action:instrument": ":carving_tool1",
                     "uco-action:object": [
