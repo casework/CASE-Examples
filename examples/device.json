@@ -5,7 +5,9 @@
         "acme": "http://custompb.acme.org/core#",
         "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
-        "olo": "http://purl.org/ontology/olo/core#"
+        "olo": "http://purl.org/ontology/olo/core#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
     },
     "@graph": [
         {
@@ -14,35 +16,38 @@
             "location": ":forensic_lab1",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "Device",
-                    "manufacturer": "Dell",
-                    "model": "Inspiron 5000",
-                    "serialNumber": "D1234567"
+                    "@type": "uco-observable:Device",
+                    "uco-observable:manufacturer": "Dell",
+                    "uco-observable:model": "Inspiron 5000",
+                    "uco-observable:serialNumber": "D1234567"
                 },
                 {
-                    "@type": "OperatingSystem",
-                    "name": "Windows 7 Ultimate Edition",
-                    "manufacturer": "Microsoft",
-                    "version": "6.1.7601 Service Pack 1 Build 7601"
+                    "@type": "uco-observable:OperatingSystem",
+                    "uco-core:name": "Windows 7 Ultimate Edition",
+                    "uco-observable:manufacturer": "Microsoft",
+                    "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
                 },
                 {
-                    "@type": "ComputerSpecification",
-                    "biosVersion": "E1762IMS.10M",
-                    "cpuFamily": "Intel Pentium i7",
-                    "totalRam": "4GB"
+                    "@type": "uco-observable:ComputerSpecification",
+                    "uco-observable:biosVersion": "E1762IMS.10M",
+                    "uco-observable:cpuFamily": "Intel Pentium i7",
+                    "uco-observable:totalRam": {
+                        "@type": "xsd:long",
+                        "@value": 4294967296
+                    }
                 },
                 {
-                    "@type": "DomainName",
-                    "value": "dfl.local"
+                    "@type": "uco-observable:DomainName",
+                    "uco-observable:value": "dfl.local"
                 },
                 {
-                    "@type": "IPv4Address",
-                    "value": "192.168.1.145"
+                    "@type": "uco-observable:IPv4Address",
+                    "uco-observable:value": "192.168.1.145"
                 },
                 {
                     "@type": "acme:InventoryComputer",
-                    "name": "DFL-03",
-                    "inventoryNumber": "10503"
+                    "acme:name": "DFL-03",
+                    "acme:inventoryNumber": "10503"
                 }
             ]
         }
