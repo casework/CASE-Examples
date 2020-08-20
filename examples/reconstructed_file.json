@@ -2,58 +2,68 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "acme": "http://custompb.acme.org/core#",
         "case-core": "https://caseontology.org/ontology/case/core#",
-        "draft": "http://example.org/draft#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
             "@id": ":relationship0",
-            "@type": "Relationship",
-            "source": ":reconstructed_file",
-            "target": ":data_piece0",
-            "kindOfRelationship": "has-fragment",
-            "isDirectional": true,
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":reconstructed_file",
+            "uco-core:target": ":data_piece0",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Has_Fragment"
+            },
+            "uco-core:isDirectional": true,
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "Fragment",
-                    "fragmentIndex": 0,
-                    "totalFragments": 3
+                    "@type": "uco-observable:Fragment",
+                    "uco-observable:fragmentIndex": 0,
+                    "uco-observable:totalFragments": 3
                 }
             ]
         },
         {
             "@id": ":relationship1",
-            "@type": "Relationship",
-            "source": ":reconstructed_file",
-            "target": ":data_piece1",
-            "kindOfRelationship": "has-fragment",
-            "isDirectional": true,
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":reconstructed_file",
+            "uco-core:target": ":data_piece1",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Has_Fragment"
+            },
+            "uco-core:isDirectional": true,
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "Fragment",
-                    "fragmentIndex": 1,
-                    "totalFragments": 3
+                    "@type": "uco-observable:Fragment",
+                    "uco-observable:fragmentIndex": 1,
+                    "uco-observable:totalFragments": 3
                 }
             ]
         },
         {
             "@id": ":relationship2",
-            "@type": "Relationship",
-            "source": ":reconstructed_file",
-            "target": ":data_piece2",
-            "kindOfRelationship": "has-fragment",
-            "isDirectional": true,
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":reconstructed_file",
+            "uco-core:target": ":data_piece2",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Has_Fragment"
+            },
+            "uco-core:isDirectional": true,
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "Fragment",
-                    "fragmentIndex": 2,
-                    "totalFragments": 3
+                    "@type": "uco-observable:Fragment",
+                    "uco-observable:fragmentIndex": 2,
+                    "uco-observable:totalFragments": 3
                 }
             ]
         },
@@ -62,18 +72,30 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
-                    "byteOrder": "BigEndian",
+                    "@type": "uco-observable:ContentData",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 774
                     },
-                    "dataPayload": "<base 64 encoded data of the file>",
-                    "hash": [
+                    "uco-observable:dataPayload": {
+                        "@type": "xsd:base64Binary",
+                        "@value": "<base 64 encoded data of the file>"
+                    },
+                    "uco-observable:hash": [
                         {
-                            "@type": "Hash",
-                            "hashMethod": "SHA256",
-                            "hashValue": "e5ca3be56f66200a1bb2262e948ac08dbc672bc8033c1ada743787b0c667dea6"
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "e5ca3be56f66200a1bb2262e948ac08dbc672bc8033c1ada743787b0c667dea6"
+                            }
                         }
                     ]
                 }
@@ -84,18 +106,30 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
-                    "byteOrder": "BigEndian",
+                    "@type": "uco-observable:ContentData",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 14
                     },
-                    "dataPayload": "w7/DmMO/w6AAEEpGSUY=",
-                    "hash": [
+                    "uco-observable:dataPayload": {
+                        "@type": "xsd:base64Binary",
+                        "@value": "w7/DmMO/w6AAEEpGSUY="
+                    },
+                    "uco-observable:hash": [
                         {
-                            "@type": "Hash",
-                            "hashMethod": "SHA256",
-                            "hashValue": "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"
+                            }
                         }
                     ]
                 }
@@ -106,18 +140,30 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
-                    "byteOrder": "BigEndian",
+                    "@type": "uco-observable:ContentData",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 512
                     },
-                    "dataPayload": "<base 64 encoded data of the file>",
-                    "hash": [
+                    "uco-observable:dataPayload": {
+                        "@type": "xsd:base64Binary",
+                        "@value": "<base 64 encoded data of the file>"
+                    },
+                    "uco-observable:hash": [
                         {
-                            "@type": "Hash",
-                            "hashMethod": "SHA256",
-                            "hashValue": "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"
+                            }
                         }
                     ]
                 }
@@ -128,18 +174,30 @@
             "@type": "case-core:Trace",
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ContentData",
-                    "byteOrder": "BigEndian",
+                    "@type": "uco-observable:ContentData",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 248
                     },
-                    "dataPayload": "<base 64 encoded data of the file>",
-                    "hash": [
+                    "uco-observable:dataPayload": {
+                        "@type": "xsd:base64Binary",
+                        "@value": "<base 64 encoded data of the file>"
+                    },
+                    "uco-observable:hash": [
                         {
-                            "@type": "Hash",
-                            "hashMethod": "SHA256",
-                            "hashValue": "befb6b14790081e9d79e9b533e227791033e952d04b5f07d577ad65d4806a7a9"
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA256"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "befb6b14790081e9d79e9b533e227791033e952d04b5f07d577ad65d4806a7a9"
+                            }
                         }
                     ]
                 }
@@ -168,6 +226,27 @@
         },
         {
             "@id": ":relationship4",
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":data_piece1",
+            "uco-core:target": ":android_image",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@value": "Contained_Within"
+            },
+            "uco-core:isDirectional": true,
+            "case-core:hasPropertyBundle": [
+                {
+                    "@type": "uco-observable:DataRange",
+                    "uco-observable:rangeOffset": 45156,
+                    "uco-observable:rangeSize": {
+                        "@type": "xsd:long",
+                        "@value": 512
+                    }
+                }
+            ]
+        },
+        {
+            "@id": ":relationship5",
             "@type": "uco-observable:CyberRelationship",
             "uco-core:source": ":data_piece2",
             "uco-core:target": ":android_image",
@@ -225,7 +304,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -239,66 +318,78 @@
         },
         {
             "@id": ":investigative_action1",
-            "@type": "InvestigativeAction",
+            "@type": "uco-investigation:InvestigativeAction",
             "rdfs:comment": "TODO: Determine if it's better to group objects together using provenance records or to have a provenance record for each object.",
-            "name": "carved",
-            "startTime": "2010-01-20T17:59:43.25Z",
-            "endTime": "2010-01-21T17:59:43.25Z",
+            "uco-core:name": "carved",
+            "uco-investigation:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-20T17:59:43.25Z"
+            },
+            "uco-investigation:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-21T17:59:43.25Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ActionReferences",
-                    "performer": ":role4",
-                    "instrument": ":carving_tool1",
-                    "object": [
+                    "@type": "uco-action:ActionReferences",
+                    "uco-action:performer": ":role4",
+                    "uco-action:instrument": ":carving_tool1",
+                    "uco-action:object": [
                         ":android_image"
                     ],
-                    "result": [
+                    "uco-action:result": [
                         ":data_piece1",
                         ":data_piece2",
                         ":relationship3",
                         ":relationship4",
                         ":provenance_record2"
                     ],
-                    "location": ":forensic_lab1",
-                    "environment": ":forensic_lab_computer1"
+                    "uco-action:location": ":forensic_lab1",
+                    "uco-action:environment": ":forensic_lab_computer1"
                 }
             ]
         },
         {
             "@id": ":investigative_action2",
-            "@type": "Investigative",
+            "@type": "uco-investigation:InvestigativeAction",
             "rdfs:comment": "Start and end times are the same as investigative_action1 because this action was part of the same action that performed the carving.",
-            "name": "reconstructed",
-            "startTime": "2010-01-20T17:59:43.25Z",
-            "endTime": "2010-01-21T17:59:43.25Z",
+            "uco-core:name": "reconstructed",
+            "uco-investigation:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-20T17:59:43.25Z"
+            },
+            "uco-investigation:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-21T17:59:43.25Z"
+            },
             "case-core:hasPropertyBundle": [
                 {
-                    "@type": "ActionReferences",
-                    "performer": ":role4",
-                    "instrument": ":carving_tool1",
-                    "object": [
+                    "@type": "uco-action:ActionReferences",
+                    "uco-action:performer": ":role4",
+                    "uco-action:instrument": ":carving_tool1",
+                    "uco-action:object": [
                         ":data_piece0",
                         ":data_piece1",
                         ":data_piece2"
                     ],
-                    "result": [
+                    "uco-action:result": [
                         ":reconstructed_file",
                         ":relationship0",
                         ":relationship1",
                         ":relationship2",
                         ":provenance_record1"
                     ],
-                    "location": ":forensic_lab1",
-                    "environment": ":forensic_lab_computer1"
+                    "uco-action:location": ":forensic_lab1",
+                    "uco-action:environment": ":forensic_lab_computer1"
                 }
             ]
         },
         {
             "@id": ":provenance_record1",
-            "@type": "ProvenanceRecord",
-            "description": "Reconstructed JPG File",
-            "exhibitNumber": "ACME-676553402357-00",
-            "object": [
+            "@type": "uco-investigation:ProvenanceRecord",
+            "uco-core:description": "Reconstructed JPG File",
+            "uco-investigation:exhibitNumber": "ACME-676553402357-00",
+            "uco-action:object": [
                 ":relationship0",
                 ":relationship1",
                 ":relationship2",
@@ -307,10 +398,10 @@
         },
         {
             "@id": ":provenance_record2",
-            "@type": "ProvenanceRecord",
-            "description": "Carved data fragments",
-            "exhibitNumber": "ACME-676553402357-01",
-            "object": [
+            "@type": "uco-investigation:ProvenanceRecord",
+            "uco-core:description": "Carved data fragments",
+            "uco-investigation:exhibitNumber": "ACME-676553402357-01",
+            "uco-action:object": [
                 ":data_piece1",
                 ":data_piece2",
                 ":relationship3",
@@ -319,10 +410,10 @@
         },
         {
             "@id": ":provenance_record3",
-            "@type": "ProvenanceRecord",
-            "description": "JPG Header",
-            "exhibitNumber": "ACME-676553402357-02",
-            "object": [
+            "@type": "uco-investigation:ProvenanceRecord",
+            "uco-core:description": "JPG Header",
+            "uco-investigation:exhibitNumber": "ACME-676553402357-02",
+            "uco-action:object": [
                 ":data_piece0"
             ]
         }
