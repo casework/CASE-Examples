@@ -32,7 +32,7 @@
                     "uco-observable:biosVersion": "E1762IMS.10M",
                     "uco-observable:cpuFamily": "Intel Pentium i7",
                     "uco-observable:totalRam": {
-                        "@type": "xsd:long", 
+                        "@type": "xsd:long",
                         "@value": 4294967296
                     }
                 },
