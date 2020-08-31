@@ -13,10 +13,10 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "OperatingSystem",
-                    "name": "Android",
-                    "manufacturer": "Google",
-                    "version": "5.4.3"
+                    "@type": "uco-observable:OperatingSystem",
+                    "uco-core:name": "Android",
+                    "uco-observable:manufacturer": "Google",
+                    "uco-observable:version": "5.4.3"
                 }
             ]
         },
@@ -25,12 +25,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "Application",
-                    "name": "WhatsApp",
-                    "applicationIdentifier": "com.whatsapp",
-                    "version": "1.23.45",
-                    "operatingSystem": "os1",
-                    "numberOfLaunches": 34
+                    "@type": "uco-observable:Application",
+                    "uco-core:name": "WhatsApp",
+                    "uco-observable:applicationIdentifier": "com.whatsapp",
+                    "uco-observable:version": "1.23.45",
+                    "uco-observable:operatingSystem": ":os1",
+                    "uco-observable:numberOfLaunches": 34
                 }
             ]
         },
@@ -39,8 +39,8 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "ApplicationAccount",
-                    "application": ":application1"
+                    "@type": "uco-observable:ApplicationAccount",
+                    "uco-observable:application": ":application1"
                 }
             ]
         },
@@ -49,8 +49,8 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "ApplicationAccount",
-                    "application": ":application1"
+                    "@type": "uco-observable:ApplicationAccount",
+                    "uco-observable:application": ":application1"
                 }
             ]
         },
@@ -59,8 +59,8 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "ApplicationAccount",
-                    "application": ":application2"
+                    "@type": "uco-observable:ApplicationAccount",
+                    "uco-observable:application": ":application2"
                 }
             ]
         },
@@ -69,8 +69,8 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "ApplicationAccount",
-                    "application": ":application2"
+                    "@type": "uco-observable:ApplicationAccount",
+                    "uco-observable:application": ":application2"
                 }
             ]
         },
@@ -79,10 +79,10 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "MessageThread",
+                    "@type": "uco-observable:MessageThread",
                     "identifier": "billy~sarah@whatsapp.gs.net",
-                    "displayName": "Best Friend Chat!!",
-                    "visibility": "PRIVATE",
+                    "uco-observable:displayName": "Best Friend Chat!!",
+                    "draft:visibility": "PRIVATE",
                     "messages": {
                         "olo:length": 3,
                         "olo:slot": [
@@ -100,7 +100,7 @@
                             }
                         ]
                     },
-                    "participant": [
+                    "uco-observable:participant": [
                         ":account1",
                         ":account2"
                     ]
@@ -112,10 +112,10 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "MessageThread",
+                    "@type": "uco-observable:MessageThread",
                     "identifier": "twitter_public",
-                    "display_name": "Argle-bargle",
-                    "visibility": "PUBLIC",
+                    "uco-observable:displayName": "Argle-bargle",
+                    "draft:visibility": "PUBLIC",
                     "messages": {
                         "olo:length": 1,
                         "olo:slot": [
@@ -125,7 +125,7 @@
                             }
                         ]
                     },
-                    "participant": [
+                    "uco-observable:participant": [
                         ":account3",
                         ":account4"
                     ]
@@ -137,11 +137,11 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "Message",
-                    "application": ":application2",
-                    "messageText": "I said some things in a tweet! @sarahsmithtweeter #hashtag",
-                    "from": ":account3",
-                    "to": [
+                    "@type": "uco-observable:Message",
+                    "uco-observable:application": ":application2",
+                    "uco-observable:messageText": "I said some things in a tweet! @sarahsmithtweeter #hashtag",
+                    "uco-observable:from": ":account3",
+                    "uco-observable:to": [
                         ":account4"
                     ]
                 }
@@ -152,56 +152,59 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "Message",
-                    "application": ":application1",
-                    "messageText": "Hey bud!",
-                    "from": ":account1",
-                    "to": [
+                    "@type": "uco-observable:Message",
+                    "uco-observable:application": ":application1",
+                    "uco-observable:messageText": "Hey bud!",
+                    "uco-observable:from": ":account1",
+                    "uco-observable:to": [
                         ":account2"
                     ],
-                    "sentTime": "2010-01-15T17:59:43.25Z"
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2010-01-15T17:59:43.25Z"
+                    }
                 }
             ]
         },
         {
             "@id": ":attach_relationship1",
-            "@type": "Relationship",
-            "source": ":location1",
-            "target": ":message1",
-            "kindOfRelationship": "attachment-of",
-            "isDirectional": true,
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":location1",
+            "uco-core:target": ":message1",
+            "uco-core:kindOfRelationship": "attachment-of",
+            "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "Attachment",
-                    "url": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
+                    "@type": "uco-observable:Attachment",
+                    "uco-observable:url": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
                 }
             ]
         },
         {
             "@id": ":attach_relationship2",
-            "@type": "Relationship",
-            "source": ":attachment_file1",
-            "target": ":message1",
-            "kindOfRelationship": "attachment-of",
-            "isDirectional": true,
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":attachment_file1",
+            "uco-core:target": ":message1",
+            "uco-core:kindOfRelationship": "attachment-of",
+            "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "Attachment",
-                    "url": "http://whatsapp.com/attachments/thumbnails/1.png"
+                    "@type": "uco-observable:Attachment",
+                    "uco-observable:url": "http://whatsapp.com/attachments/thumbnails/1.png"
                 }
             ]
         },
         {
             "@id": ":attach_relationship3",
-            "@type": "Relationship",
-            "source": ":attachment_file2",
-            "target": ":message1",
-            "kindOfRelationship": "attachment-of",
-            "isDirectional": true,
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":attachment_file2",
+            "uco-core:target": ":message1",
+            "uco-core:kindOfRelationship": "attachment-of",
+            "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "Attachment",
-                    "url": "http://whatsapp.com/attachments/1.png"
+                    "@type": "uco-observable:Attachment",
+                    "uco-observable:url": "http://whatsapp.com/attachments/1.png"
                 }
             ]
         }
