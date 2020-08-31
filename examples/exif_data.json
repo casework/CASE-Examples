@@ -2,11 +2,10 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -14,8 +13,8 @@
     "@graph": [
         {
             "@id": ":camera1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-observable:manufacturer": "Canon",
@@ -32,7 +31,7 @@
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
             },
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "/sdcard/IMG_0123.jpg"
@@ -41,8 +40,8 @@
         },
         {
             "@id": ":digital_photograph1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "EXT4",
@@ -80,7 +79,7 @@
                 },
                 {
                     "@type": "uco-observable:RasterPicture",
-                    "uco-observable:picturetype": "jpg",
+                    "uco-observable:pictureType": "jpg",
                     "uco-observable:pictureHeight": 12345,
                     "uco-observable:pictureWidth": 12345,
                     "uco-observable:bitsPerPixel": 2
@@ -143,7 +142,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:instrument": ":camera1",
@@ -167,7 +166,7 @@
         },
         {
             "@id": ":forensic_action7",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "annotated",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
@@ -177,7 +176,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T18:59:43.25Z"
             },
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":examiner1",

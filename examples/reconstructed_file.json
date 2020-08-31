@@ -2,11 +2,10 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
@@ -23,7 +22,7 @@
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Fragment",
                     "uco-observable:fragmentIndex": 0,
@@ -41,7 +40,7 @@
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Fragment",
                     "uco-observable:fragmentIndex": 1,
@@ -59,7 +58,7 @@
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Fragment",
                     "uco-observable:fragmentIndex": 2,
@@ -69,8 +68,8 @@
         },
         {
             "@id": ":reconstructed_file",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
@@ -103,8 +102,8 @@
         },
         {
             "@id": ":data_piece0",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
@@ -137,8 +136,8 @@
         },
         {
             "@id": ":data_piece1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
@@ -171,8 +170,8 @@
         },
         {
             "@id": ":data_piece2",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": {
@@ -213,7 +212,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 45156,
@@ -234,7 +233,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 45156,
@@ -255,7 +254,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 57984,
@@ -268,8 +267,8 @@
         },
         {
             "@id": ":android_image",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "NTFS",
@@ -318,18 +317,18 @@
         },
         {
             "@id": ":investigative_action1",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "rdfs:comment": "TODO: Determine if it's better to group objects together using provenance records or to have a provenance record for each object.",
             "uco-core:name": "carved",
-            "uco-investigation:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-20T17:59:43.25Z"
             },
-            "uco-investigation:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":role4",
@@ -351,18 +350,18 @@
         },
         {
             "@id": ":investigative_action2",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "rdfs:comment": "Start and end times are the same as investigative_action1 because this action was part of the same action that performed the carving.",
             "uco-core:name": "reconstructed",
-            "uco-investigation:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-20T17:59:43.25Z"
             },
-            "uco-investigation:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":role4",
@@ -386,9 +385,9 @@
         },
         {
             "@id": ":provenance_record1",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
-            "uco-investigation:exhibitNumber": "ACME-676553402357-00",
+            "case-investigation:exhibitNumber": "ACME-676553402357-00",
             "uco-action:object": [
                 ":relationship0",
                 ":relationship1",
@@ -398,9 +397,9 @@
         },
         {
             "@id": ":provenance_record2",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Carved data fragments",
-            "uco-investigation:exhibitNumber": "ACME-676553402357-01",
+            "case-investigation:exhibitNumber": "ACME-676553402357-01",
             "uco-action:object": [
                 ":data_piece1",
                 ":data_piece2",
@@ -410,9 +409,9 @@
         },
         {
             "@id": ":provenance_record3",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "JPG Header",
-            "uco-investigation:exhibitNumber": "ACME-676553402357-02",
+            "case-investigation:exhibitNumber": "ACME-676553402357-02",
             "uco-action:object": [
                 ":data_piece0"
             ]

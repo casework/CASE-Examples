@@ -3,7 +3,6 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
@@ -14,8 +13,8 @@
     "@graph": [
         {
             "@id": ":chunk_of_data",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -50,7 +49,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 45,
@@ -63,8 +62,8 @@
         },
         {
             "@id": ":decoded_attachment",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -109,7 +108,7 @@
             "uco-core:target": ":tar_archive_file",
             "uco-core:kindOfRelationship": "decoded-from",
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:EncodedStream",
                     "uco-observable:encodingMethod": "BASE64"
@@ -118,8 +117,8 @@
         },
         {
             "@id": ":tar_archive_file",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "TAR",
@@ -174,7 +173,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "/some/files/in/archive/attachment.jpg"
@@ -183,8 +182,8 @@
         },
         {
             "@id": ":decrypted_blob",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -217,7 +216,7 @@
             "uco-core:target": ":sqlite_blob",
             "uco-core:kindOfRelationship": "decrypted-from",
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:EncryptedStream",
                     "uco-observable:encryptionMethod": "AES",
@@ -229,8 +228,8 @@
         },
         {
             "@id": ":sqlite_blob",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -271,7 +270,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:SQLiteBlob",
                     "uco-observable:tableName": "AttachmentTable",
@@ -282,8 +281,8 @@
         },
         {
             "@id": ":sqlite_database",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "EXT4",
@@ -342,7 +341,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "/data/data/com.whatsapp/cache/messages.db"
@@ -351,8 +350,8 @@
         },
         {
             "@id": ":image_partition",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -385,7 +384,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DiskPartition",
                     "uco-observable:partitionID": 3
@@ -394,8 +393,8 @@
         },
         {
             "@id": ":android_image",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "NTFS",
@@ -443,7 +442,7 @@
             "uco-core:target": ":forensic_lab_computer1",
             "uco-core:kindOfRelationship": "stored-on",
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "C:/input_devices/DFL-20140712-001C.img"
@@ -460,10 +459,10 @@
         },
         {
             "@id": ":forensic_lab_computer1",
-            "@type": "case-core:Trace",
+            "@type": "uco-observable:CyberItem",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": ":forensic_lab1",
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-observable:manufacturer": "Dell",
@@ -494,10 +493,10 @@
         },
         {
             "@id": ":android_device1",
-            "@type": "case-core:Trace",
+            "@type": "uco-observable:CyberItem",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": ":forensic_lab1",
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-observable:manufacturer": "Samsung",
