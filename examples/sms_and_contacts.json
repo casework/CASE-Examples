@@ -2,34 +2,38 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#"
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
     },
     "@graph": [
         {
             "@id": ":sms_message1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Message",
-                    "application": ":sms_application1",
-                    "messageText": "Yo dude! This is my new number.",
-                    "from": ":phone_account3",
-                    "to": [
+                    "@type": "uco-observable:Message",
+                    "uco-observable:application": ":sms_application1",
+                    "uco-observable:messageText": "Yo dude! This is my new number.",
+                    "uco-observable:from": ":phone_account3",
+                    "uco-observable:to": [
                         ":phone_account1"
                     ],
-                    "sentTime": "2010-01-15T17:59:43.25Z"
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2010-01-15T17:59:43.25Z"
+                    }
                 }
             ]
         },
         {
             "@id": ":contact1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Contact",
+                    "@type": "uco-observable:Contact",
                     "rdfs:comment": [
                         "TODO: Should the contactName property be renamed to 'displayName'?",
                         "TODO: How do we distingish 'Home', 'Work', 'Mobile', etc?",
@@ -37,11 +41,11 @@
                         "TODO: How do we represent location information? (example: Home and Work)",
                         "TODO: I assume the screenName property is supposed to point to Digital/Application accounts?"
                     ],
-                    "firstName": "John",
-                    "familyName": "Doe",
-                    "contactName": "BFF Joe",
-                    "application": ":android_phonebook1",
-                    "emailAddress": [
+                    "uco-observable:firstName": "John",
+                    "uco-observable:lastName": "Doe",
+                    "uco-observable:contactName": "BFF Joe",
+                    "uco-observable:application": ":android_phonebook1",
+                    "uco-observable:emailAddress": [
                         ":email_account1"
                     ],
                     "phoneNumber": [
@@ -54,106 +58,106 @@
         },
         {
             "@id": ":associated-account1",
-            "@type": "Relationship",
-            "source": ":contact1",
-            "target": [
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":contact1",
+            "uco-core:target": [
                 ":phone_account1"
             ],
-            "kindOfRelationship": "has-account",
-            "isDirectional": true
+            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:isDirectional": true
         },
         {
             "@id": ":associated-account2",
-            "@type": "Relationship",
-            "source": ":contact1",
-            "target": [
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":contact1",
+            "uco-core:target": [
                 ":phone_account2"
             ],
-            "kindOfRelationship": "has-account",
-            "isDirectional": true
+            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:isDirectional": true
         },
         {
             "@id": ":associated-account3",
-            "@type": "Relationship",
-            "source": ":contact1",
-            "target": [
+            "@type": "uco-observable:CyberRelationship",
+            "uco-core:source": ":contact1",
+            "uco-core:target": [
                 ":email_account1"
             ],
-            "kindOfRelationship": "has-account",
-            "isDirectional": true
+            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:isDirectional": true
         },
         {
             "@id": ":phone_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Account",
+                    "@type": "uco-observable:Account",
                     "rdfs:comment": "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)",
-                    "accountType": "Phone",
-                    "isActive": true
+                    "uco-observable:accountType": "Phone",
+                    "uco-observable:isActive": true
                 },
                 {
-                    "@type": "PhoneAccount",
-                    "phoneNumber": "1237771337"
+                    "@type": "uco-observable:PhoneAccount",
+                    "uco-observable:phoneNumber": "1237771337"
                 }
             ]
         },
         {
             "@id": ":phone_account2",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Account",
-                    "accountType": "Phone",
-                    "isActive": true
+                    "@type": "uco-observable:Account",
+                    "uco-observable:accountType": "Phone",
+                    "uco-observable:isActive": true
                 },
                 {
-                    "@type": "PhoneAccount",
-                    "phoneNumber": "1234560000"
+                    "@type": "uco-observable:PhoneAccount",
+                    "uco-observable:phoneNumber": "1234560000"
                 }
             ]
         },
         {
             "@id": ":email_account1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Account",
-                    "accountType": "Email",
-                    "isActive": true
+                    "@type": "uco-observable:Account",
+                    "uco-observable:accountType": "Email",
+                    "uco-observable:isActive": true
                 },
                 {
-                    "@type": "EmailAccount",
-                    "emailAddress": "jdoe@example.com"
+                    "@type": "uco-observable:EmailAccount",
+                    "uco-observable:value": "jdoe@example.com"
                 }
             ]
         },
         {
             "@id": ":phone_account3",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Account",
-                    "accountType": "Phone",
-                    "isActive": true
+                    "@type": "uco-observable:Account",
+                    "uco-observable:accountType": "Phone",
+                    "uco-observable:isActive": true
                 },
                 {
-                    "@type": "PhoneAccount",
-                    "phoneNumber": "11235557890"
+                    "@type": "uco-observable:PhoneAccount",
+                    "uco-observable:phoneNumber": "11235557890"
                 }
             ]
         },
         {
             "@id": ":android_phonebook1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
-                    "@type": "Application",
-                    "name": "Android Phonebook",
-                    "applicationIdentifier": "com.android.providers.telephony",
-                    "operatingSystem": ":os1",
-                    "version": "2.3.4",
-                    "numberOfLaunches": 323
+                    "@type": "uco-observable:Application",
+                    "uco-core:name": "Android Phonebook",
+                    "uco-observable:applicationIdentifier": "com.android.providers.telephony",
+                    "uco-observable:operatingSystem": ":os1",
+                    "uco-observable:version": "2.3.4",
+                    "uco-observable:numberOfLaunches": 323
                 }
             ]
         }
