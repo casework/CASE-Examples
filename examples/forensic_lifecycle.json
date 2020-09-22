@@ -3,10 +3,9 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
+	"case-investigation": "https://caseontology.org/ontology/case/investigation#",
 	"uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
 	"uco-action": "https://unifiedcyberontology.org/ontology/uco/action#", 
-	"uco-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
 	"uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
 	"uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
 	"uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
@@ -69,17 +68,17 @@
         },
         {
             "@id": ":case1",
-            "@type": "uco-investigation:Investigation",
+            "@type": "case-investigation:Investigation",
             "uco-core:description": "John Doe solicited minor (Jane Doe) and exchange contraband (digital photographs)",
-            "uco-investigation:startTime": {
+            "uco-action:startTime": {
 			"@type": "xsd:dateTime",
     			"@value": "2010-01-12T17:59:43.25Z"
 			},
-            "uco-invetigation:endTime": {
+            "uco-action:endTime": {
 			"@type": "xsd:dateTime",
     			"@value": "2010-01-25T13:05:22.10Z"
 			},
-            "uco-investigation:focus": [
+            "case-investigation:focus": [
                 "Pornography/Obscene Material"
             ],
             "uco-core:object": [
@@ -160,17 +159,17 @@
         },
         {
             "@id": ":forensic_action1",
-            "@type": "uco-investigation:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "seized",
-            "uco-investigation:startTime": {
+            "uco-action:startTime": {
 		"@type": "xsd:dateTime",
     		"@value":"2010-01-15T17:59:43.25Z"
 		},
-            "uco-investigation:endTime": {
+            "uco-action:endTime": {
 		"@type": "xsd:dateTime",
     		"@value": "2010-01-15T19:59:43.25Z"
 		},
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":investigator1",
@@ -201,13 +200,13 @@
         },
         {
             "@id": ":forensic_action2",
-            "@type": "uco-core:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "custody-receive",
-            "uco-investigation:startTime": {  
+            "uco-action:startTime": {  
 		"@type": "xsd:dateTime",
     		"@value":"2010-01-15T17:59:43.25Z"
 		},
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":examiner1",
@@ -243,17 +242,17 @@
         },
         {
             "@id": ":forensic_action3",
-            "@type": "uco-core:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "imaged",
-            "uco-investigation:startTime": {
+            "uco-action:startTime": {
  		"@type": "xsd:dateTime",
     		"@value":"2010-01-15T17:59:43.25Z"
 		},
-            "uco-investigation:endTime": {
+            "uco-action:endTime": {
 		"@type": "xsd:dateTime",
     		"@value":"2010-01-15T19:59:43.25Z"
 		},
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":examiner1",
@@ -295,17 +294,17 @@
         },
         {
             "@id": ":forensic_action4",
-            "@type": "uco-core:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "imaged",
-            "uco-investigation:startTime":{
+            "uco-action:startTime":{
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-16T17:59:43.25Z"
 		},
-            "uco-investigation:endTime":{
+            "uco-action:endTime":{
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-16T19:59:43.25Z"
 		},
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":examiner1",
@@ -342,17 +341,17 @@
         },
         {
             "@id": ":forensic_action5",
-            "@type": "uco-core:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "parsed",
-            "uco-investigation:startTime":{
+            "uco-action:startTime":{
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-20T17:59:43.25Z"
 		},
-            "uco-investigation:endTime":{
+            "uco-action:endTime":{
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
 		},
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":examiner2",
@@ -426,17 +425,17 @@
         },
         {
             "@id": ":forensic_action6",
-            "@type": "uco-core:InvestigativeAction",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "executed",
-            "uco-investigation:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value":  "2010-02-15T17:59:43.25Z"
 		},
-            "uco-investigation:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-02-16T17:59:43.25Z"
 		},
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": ":examiner2",
@@ -474,149 +473,149 @@
         },
         {
             "@id": ":provenance_record1",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android Smartphone",
-            "uco-investigation:exhibitNumber": "ACME-676553402357",
+            "case-investigation:exhibitNumber": "ACME-676553402357",
             "uco-core:object": ":device1"
         },
         {
             "@id": ":provenance_record2",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android Smartphone",
-            "uco-investigation:exhibitNumber": "DFL-20140712-001A",
+            "case-investigation:exhibitNumber": "DFL-20140712-001A",
             "uco-core:object": ":device1"
         },
         {
             "@id": ":provenance_record3",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "SD Card",
-            "uco-investigation:exhibitNumber": "DFL-20140712-001B",
+            "case-investigation:exhibitNumber": "DFL-20140712-001B",
             "uco-core:object": ":sd_card1"
         },
         {
             "@id": ":provenance_record4",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Forensic image of Android Smartphone",
-            "uco-investigation:exhibitNumber": "DFL-20140712-001C",
+            "case-investigation:exhibitNumber": "DFL-20140712-001C",
             "uco-core:object": ":android_image"
         },
         {
             "@id": ":provenance_record5",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Forensic image of SD Card",
-            "uco-investigation:exhibitNumber": "DFL-20140712-001D",
+            "case-investigation:exhibitNumber": "DFL-20140712-001D",
             "uco-core:object": ":sd_card1_image"
         },
         {
             "@id": ":provenance_record6",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Chat Messages Report",
-            "uco-investigation:exhibitNumber": "DFL-20140712-001E",
+            "case-investigation:exhibitNumber": "DFL-20140712-001E",
             "uco-core:object": ":chat_messages_report"
         },
         {
             "@id": ":provenance_record7",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Plaso Storage File",
-            "uco-investigation:exhibitNumber": "DFL-20140712-001F",
+            "case-investigation:exhibitNumber": "DFL-20140712-001F",
             "uco-core:object": ":plaso_storage_file"
         },
         {
             "@id": ":provenance_record8",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android OS Information",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0020",
+            "case-investigation:exhibitNumber": "DFL-20140712-0020",
             "uco-core:object": ":os1"
         },
         {
             "@id": ":provenance_record9",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Contraband photograph",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0021",
+            "case-investigation:exhibitNumber": "DFL-20140712-0021",
             "uco-core:object": ":attachment_file"
         },
         {
             "@id": ":provenance_record10",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp message database",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0022",
+            "case-investigation:exhibitNumber": "DFL-20140712-0022",
             "uco-core:object": ":message_database"
         },
         {
             "@id": ":provenance_record11",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp thumbnail database",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0023",
+            "case-investigation:exhibitNumber": "DFL-20140712-0023",
             "uco-core:object": ":thumbnail_database"
         },
         {
             "@id": ":provenance_record12",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android data partition",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0024",
+            "case-investigation:exhibitNumber": "DFL-20140712-0024",
             "uco-core:object": ":image_partition"
         },
         {
             "@id": ":provenance_record13",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp message being sent from subject to victim",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0025",
+            "case-investigation:exhibitNumber": "DFL-20140712-0025",
             "uco-core:object": ":message_action1"
         },
         {
             "@id": ":provenance_record14",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp chat message thread between subject and victim",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0026",
+            "case-investigation:exhibitNumber": "DFL-20140712-0026",
             "uco-core:object": ":thread1"
         },
         {
             "@id": ":provenance_record15",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp chat message containing contraband attachment",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0027",
+            "case-investigation:exhibitNumber": "DFL-20140712-0027",
             "uco-core:object": ":message1"
         },
         {
             "@id": ":provenance_record16",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Location of subject when using WhatsApp",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0028",
+            "case-investigation:exhibitNumber": "DFL-20140712-0028",
             "uco-core:object": ":location1"
         },
         {
             "@id": ":provenance_record17",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Subject's WhatsApp account",
-            "uco-investigation:exhibitNumber": "DFL-20140712-0029",
+            "case-investigation:exhibitNumber": "DFL-20140712-0029",
             "uco-core:object": ":account1"
         },
         {
             "@id": ":provenance_record18",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Victim's WhatsApp account",
-            "uco-investigation:exhibitNumber": "DFL-20140712-002A",
+            "case-investigation:exhibitNumber": "DFL-20140712-002A",
             "uco-core:object": ":account2"
         },
         {
             "@id": ":provenance_record19",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Thumbnail of contraband picture",
-            "uco-investigation:exhibitNumber": "DFL-20140712-002B",
+            "case-investigation:exhibitNumber": "DFL-20140712-002B",
             "uco-core:object": ":decoded_blob"
         },
         {
             "@id": ":provenance_record20",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Encoded thumbnail of contraband picture",
-            "uco-investigation:exhibitNumber": "DFL-20140712-002C",
+            "case-investigation:exhibitNumber": "DFL-20140712-002C",
             "uco-core:object": ":decrypted_blob"
         },
         {
             "@id": ":provenance_record21",
-            "@type": "uco-investigation:ProvenanceRecord",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Encrypted thumbnail of contraband picture",
-            "uco-investigation:exhibitNumber": "DFL-20140712-002D",
+            "case-investigation:exhibitNumber": "DFL-20140712-002D",
             "uco-core:object": ":sqlite_blob"
         }
     ]
