@@ -3,7 +3,6 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
@@ -12,9 +11,9 @@
     "@graph": [
         {
             "@id": ":forensic_lab_computer1",
-            "@type": "case-core:Trace",
+            "@type": "uco-observable:CyberItem",
             "location": ":forensic_lab1",
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-observable:manufacturer": "Dell",

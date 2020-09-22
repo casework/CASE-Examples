@@ -2,7 +2,6 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
-        "case-core": "https://caseontology.org/ontology/case/core#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
@@ -12,8 +11,8 @@
     "@graph": [
         {
             "@id": ":extracted_email_address0",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -48,7 +47,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 1600,
@@ -61,8 +60,8 @@
         },
         {
             "@id": ":extracted_email_address1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -97,7 +96,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 16095,
@@ -110,8 +109,8 @@
         },
         {
             "@id": ":decompressed_gzip0",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -144,7 +143,7 @@
             "uco-core:target": ":compressed_gzip0",
             "uco-core:kindOfRelationship": "decompressed-from",
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:CompressedStream",
                     "uco-observable:compressionMethod": "GZIP"
@@ -153,8 +152,8 @@
         },
         {
             "@id": ":compressed_gzip0",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -188,7 +187,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 64000,
@@ -201,8 +200,8 @@
         },
         {
             "@id": ":decompressed_gzip1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -233,7 +232,7 @@
             "uco-core:target": ":compressed_gzip1",
             "uco-core:kindOfRelationship": "decompressed-from",
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:CompressedStream",
                     "uco-observable:compressionMethod": "GZIP"
@@ -242,8 +241,8 @@
         },
         {
             "@id": ":compressed_gzip1",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -277,7 +276,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "case-core:hasPropertyBundle": [
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 946315592,
@@ -290,8 +289,8 @@
         },
         {
             "@id": ":disk_image",
-            "@type": "case-core:Trace",
-            "case-core:hasPropertyBundle": [
+            "@type": "uco-observable:CyberItem",
+            "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
