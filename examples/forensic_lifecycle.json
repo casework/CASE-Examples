@@ -3,12 +3,12 @@
         "@vocab": "http://example.org/local#",
         "": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
-	"case-investigation": "https://caseontology.org/ontology/case/investigation#",
-	"uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-	"uco-action": "https://unifiedcyberontology.org/ontology/uco/action#", 
-	"uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-	"uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-	"uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#"
     },
@@ -71,13 +71,13 @@
             "@type": "case-investigation:Investigation",
             "uco-core:description": "John Doe solicited minor (Jane Doe) and exchange contraband (digital photographs)",
             "uco-action:startTime": {
-			"@type": "xsd:dateTime",
-    			"@value": "2010-01-12T17:59:43.25Z"
-			},
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-12T17:59:43.25Z"
+            },
             "uco-action:endTime": {
-			"@type": "xsd:dateTime",
-    			"@value": "2010-01-25T13:05:22.10Z"
-			},
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-25T13:05:22.10Z"
+            },
             "case-investigation:focus": [
                 "Pornography/Obscene Material"
             ],
@@ -162,13 +162,13 @@
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "seized",
             "uco-action:startTime": {
-		"@type": "xsd:dateTime",
-    		"@value":"2010-01-15T17:59:43.25Z"
-		},
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-15T17:59:43.25Z"
+            },
             "uco-action:endTime": {
-		"@type": "xsd:dateTime",
-    		"@value": "2010-01-15T19:59:43.25Z"
-		},
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-15T19:59:43.25Z"
+            },
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
@@ -184,7 +184,7 @@
             "@type": "uco-core:Relationship",
             "uco-core:source": ":forensic_action1",
             "uco-core:target": ":phase1",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into", 
+            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
             "uco-core:isDirectional": true
         },
         {
@@ -202,10 +202,10 @@
             "@id": ":forensic_action2",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "custody-receive",
-            "uco-action:startTime": {  
-		"@type": "xsd:dateTime",
-    		"@value":"2010-01-15T17:59:43.25Z"
-		},
+            "uco-action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-15T17:59:43.25Z"
+            },
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
@@ -245,13 +245,13 @@
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "imaged",
             "uco-action:startTime": {
- 		"@type": "xsd:dateTime",
-    		"@value":"2010-01-15T17:59:43.25Z"
-		},
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-15T17:59:43.25Z"
+            },
             "uco-action:endTime": {
-		"@type": "xsd:dateTime",
-    		"@value":"2010-01-15T19:59:43.25Z"
-		},
+                "@type": "xsd:dateTime",
+                "@value": "2010-01-15T19:59:43.25Z"
+            },
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
@@ -269,7 +269,7 @@
                 {
                     "@type": "acme:UFEDArguments",
                     "acme:aquisitionType": "Logical",
-                    "acme:method": "ADB" 
+                    "acme:method": "ADB"
                 }
             ]
         },
@@ -296,14 +296,14 @@
             "@id": ":forensic_action4",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "imaged",
-            "uco-action:startTime":{
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-16T17:59:43.25Z"
-		},
-            "uco-action:endTime":{
+            },
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-16T19:59:43.25Z"
-		},
+            },
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
@@ -334,7 +334,7 @@
             "uco-core:tag": [
                 "forensic"
             ],
-            "uco-core:description": "Run Plaso tool to find communications and multimedia exchanged between subject and victim.", 
+            "uco-core:description": "Run Plaso tool to find communications and multimedia exchanged between subject and victim.",
             "uco-core:object": [
                 ":forensic_action5"
             ]
@@ -343,14 +343,14 @@
             "@id": ":forensic_action5",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "parsed",
-            "uco-action:startTime":{
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-20T17:59:43.25Z"
-		},
-            "uco-action:endTime":{
+            },
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
-		},
+            },
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
@@ -378,17 +378,15 @@
                     "uco-observable:arguments": "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log",
                     "uco-observable:pid": 1234,
                     "uco-observable:currentWorkingDirectory": "C:\\exams",
-                    "uco-observable:createdTime":{
-                	"@type": "xsd:dateTime",
-                	"@value": "2010-01-20T17:59:43.25Z"
-			},
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2010-01-20T17:59:43.25Z"
+                    },
                     "uco-observable:creatorUser": ":role4",
-                    "uco-observable:environmentVariables": 
-                        {
-                            "uco-types:key": "PYTHONPATH",
-                            "uco-types:value": "C:\\Python27\\Scripts\\python.exe"
-                        }
-                    ,
+                    "uco-observable:environmentVariables": {
+                        "uco-types:key": "PYTHONPATH",
+                        "uco-types:value": "C:\\Python27\\Scripts\\python.exe"
+                    },
                     "uco-observable:isHidden": false
                 },
                 {
@@ -429,12 +427,12 @@
             "uco-core:name": "executed",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
-                "@value":  "2010-02-15T17:59:43.25Z"
-		},
+                "@value": "2010-02-15T17:59:43.25Z"
+            },
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2010-02-16T17:59:43.25Z"
-		},
+            },
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
