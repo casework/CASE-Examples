@@ -384,8 +384,14 @@
                     },
                     "uco-observable:creatorUser": ":role4",
                     "uco-observable:environmentVariables": {
-                        "uco-types:key": "PYTHONPATH",
-                        "uco-types:value": "C:\\Python27\\Scripts\\python.exe"
+                        "@type": "uco-types:Dictionary",
+                        "uco-types:entry": [
+                            {
+                                "@type": "uco-types:DictionaryEntry",
+                                "uco-types:key": "PYTHONPATH",
+                                "uco-types:value": "C:\\Python27\\Scripts\\python.exe"
+                            }
+                        ]
                     },
                     "uco-observable:isHidden": false
                 },
