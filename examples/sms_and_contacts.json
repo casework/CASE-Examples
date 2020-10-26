@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -10,16 +10,16 @@
     },
     "@graph": [
         {
-            "@id": ":sms_message1",
+            "@id": "kb:sms_message1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Message",
-                    "uco-observable:application": ":sms_application1",
+                    "uco-observable:application": "kb:sms_application1",
                     "uco-observable:messageText": "Yo dude! This is my new number.",
-                    "uco-observable:from": ":phone_account3",
+                    "uco-observable:from": "kb:phone_account3",
                     "uco-observable:to": [
-                        ":phone_account1"
+                        "kb:phone_account1"
                     ],
                     "uco-observable:sentTime": {
                         "@type": "xsd:dateTime",
@@ -29,7 +29,7 @@
             ]
         },
         {
-            "@id": ":contact1",
+            "@id": "kb:contact1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -44,50 +44,50 @@
                     "uco-observable:firstName": "John",
                     "uco-observable:lastName": "Doe",
                     "uco-observable:contactName": "BFF Joe",
-                    "uco-observable:application": ":android_phonebook1",
+                    "uco-observable:application": "kb:android_phonebook1",
                     "uco-observable:emailAddress": [
-                        ":email_account1"
+                        "kb:email_account1"
                     ],
                     "phoneNumber": [
-                        ":phone_account1",
-                        ":phone_account2"
+                        "kb:phone_account1",
+                        "kb:phone_account2"
                     ],
                     "screenName": []
                 }
             ]
         },
         {
-            "@id": ":associated-account1",
+            "@id": "kb:associated-account1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":contact1",
+            "uco-core:source": "kb:contact1",
             "uco-core:target": [
-                ":phone_account1"
+                "kb:phone_account1"
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":associated-account2",
+            "@id": "kb:associated-account2",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":contact1",
+            "uco-core:source": "kb:contact1",
             "uco-core:target": [
-                ":phone_account2"
+                "kb:phone_account2"
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":associated-account3",
+            "@id": "kb:associated-account3",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":contact1",
+            "uco-core:source": "kb:contact1",
             "uco-core:target": [
-                ":email_account1"
+                "kb:email_account1"
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":phone_account1",
+            "@id": "kb:phone_account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -103,7 +103,7 @@
             ]
         },
         {
-            "@id": ":phone_account2",
+            "@id": "kb:phone_account2",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -118,7 +118,7 @@
             ]
         },
         {
-            "@id": ":email_account1",
+            "@id": "kb:email_account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -133,7 +133,7 @@
             ]
         },
         {
-            "@id": ":phone_account3",
+            "@id": "kb:phone_account3",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -148,14 +148,14 @@
             ]
         },
         {
-            "@id": ":android_phonebook1",
+            "@id": "kb:android_phonebook1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Application",
                     "uco-core:name": "Android Phonebook",
                     "uco-observable:applicationIdentifier": "com.android.providers.telephony",
-                    "uco-observable:operatingSystem": ":os1",
+                    "uco-observable:operatingSystem": "kb:os1",
                     "uco-observable:version": "2.3.4",
                     "uco-observable:numberOfLaunches": 323
                 }

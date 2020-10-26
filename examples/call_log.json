@@ -1,19 +1,19 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
     },
     "@graph": [
         {
-            "@id": ":phone_account1",
+            "@id": "kb:phone_account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
-                    "uco-observable:accountIssuer": ":ATT",
+                    "uco-observable:accountIssuer": "kb:ATT",
                     "uco-observable:isActive": true
                 },
                 {
@@ -23,12 +23,12 @@
             ]
         },
         {
-            "@id": ":phone_account2",
+            "@id": "kb:phone_account2",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
-                    "uco-observable:accountIssuer": ":Sprint",
+                    "uco-observable:accountIssuer": "kb:Sprint",
                     "uco-observable:isActive": true
                 },
                 {
@@ -38,7 +38,7 @@
             ]
         },
         {
-            "@id": ":phone_call1",
+            "@id": "kb:phone_call1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -52,8 +52,8 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T18:30:41.25Z"
                     },
-                    "uco-observable:from": ":phone_account1",
-                    "uco-observable:to": ":phone_account2",
+                    "uco-observable:from": "kb:phone_account1",
+                    "uco-observable:to": "kb:phone_account2",
                     "uco-observable:duration": {
                         "@type": "xsd:long",
                         "@value": 1862

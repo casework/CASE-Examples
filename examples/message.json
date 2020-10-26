@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
@@ -9,7 +9,7 @@
     },
     "@graph": [
         {
-            "@id": ":os1",
+            "@id": "kb:os1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -21,7 +21,7 @@
             ]
         },
         {
-            "@id": ":application1",
+            "@id": "kb:application1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -29,53 +29,53 @@
                     "uco-core:name": "WhatsApp",
                     "uco-observable:applicationIdentifier": "com.whatsapp",
                     "uco-observable:version": "1.23.45",
-                    "uco-observable:operatingSystem": ":os1",
+                    "uco-observable:operatingSystem": "kb:os1",
                     "uco-observable:numberOfLaunches": 34
                 }
             ]
         },
         {
-            "@id": ":account1",
+            "@id": "kb:account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": ":application1"
+                    "uco-observable:application": "kb:application1"
                 }
             ]
         },
         {
-            "@id": ":account2",
+            "@id": "kb:account2",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": ":application1"
+                    "uco-observable:application": "kb:application1"
                 }
             ]
         },
         {
-            "@id": ":account3",
+            "@id": "kb:account3",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": ":application2"
+                    "uco-observable:application": "kb:application2"
                 }
             ]
         },
         {
-            "@id": ":account4",
+            "@id": "kb:account4",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": ":application2"
+                    "uco-observable:application": "kb:application2"
                 }
             ]
         },
         {
-            "@id": ":thread1",
+            "@id": "kb:thread1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -88,27 +88,27 @@
                         "olo:slot": [
                             {
                                 "olo:index": 1,
-                                "olo:item": ":message1"
+                                "olo:item": "kb:message1"
                             },
                             {
                                 "olo:index": 2,
-                                "olo:item": ":message2"
+                                "olo:item": "kb:message2"
                             },
                             {
                                 "olo:index": 3,
-                                "olo:item": ":message3"
+                                "olo:item": "kb:message3"
                             }
                         ]
                     },
                     "uco-observable:participant": [
-                        ":account1",
-                        ":account2"
+                        "kb:account1",
+                        "kb:account2"
                     ]
                 }
             ]
         },
         {
-            "@id": ":thread2",
+            "@id": "kb:thread2",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -121,43 +121,43 @@
                         "olo:slot": [
                             {
                                 "olo:index": 1,
-                                "olo:item": ":post1"
+                                "olo:item": "kb:post1"
                             }
                         ]
                     },
                     "uco-observable:participant": [
-                        ":account3",
-                        ":account4"
+                        "kb:account3",
+                        "kb:account4"
                     ]
                 }
             ]
         },
         {
-            "@id": ":post1",
+            "@id": "kb:post1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Message",
-                    "uco-observable:application": ":application2",
+                    "uco-observable:application": "kb:application2",
                     "uco-observable:messageText": "I said some things in a tweet! @sarahsmithtweeter #hashtag",
-                    "uco-observable:from": ":account3",
+                    "uco-observable:from": "kb:account3",
                     "uco-observable:to": [
-                        ":account4"
+                        "kb:account4"
                     ]
                 }
             ]
         },
         {
-            "@id": ":message1",
+            "@id": "kb:message1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Message",
-                    "uco-observable:application": ":application1",
+                    "uco-observable:application": "kb:application1",
                     "uco-observable:messageText": "Hey bud!",
-                    "uco-observable:from": ":account1",
+                    "uco-observable:from": "kb:account1",
                     "uco-observable:to": [
-                        ":account2"
+                        "kb:account2"
                     ],
                     "uco-observable:sentTime": {
                         "@type": "xsd:dateTime",
@@ -167,10 +167,10 @@
             ]
         },
         {
-            "@id": ":attach_relationship1",
+            "@id": "kb:attach_relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":location1",
-            "uco-core:target": ":message1",
+            "uco-core:source": "kb:location1",
+            "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -181,10 +181,10 @@
             ]
         },
         {
-            "@id": ":attach_relationship2",
+            "@id": "kb:attach_relationship2",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":attachment_file1",
-            "uco-core:target": ":message1",
+            "uco-core:source": "kb:attachment_file1",
+            "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -195,10 +195,10 @@
             ]
         },
         {
-            "@id": ":attach_relationship3",
+            "@id": "kb:attach_relationship3",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":attachment_file2",
-            "uco-core:target": ":message1",
+            "uco-core:source": "kb:attachment_file2",
+            "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
             "uco-core:facets": [

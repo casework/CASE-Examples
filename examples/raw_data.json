@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
@@ -10,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": ":digital_photograph_thumbnail1",
+            "@id": "kb:digital_photograph_thumbnail1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -39,10 +39,10 @@
             ]
         },
         {
-            "@id": ":relationship0",
+            "@id": "kb:relationship0",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":digital_photograph_thumbnail1",
-            "uco-core:target": ":digital_photograph1",
+            "uco-core:source": "kb:digital_photograph_thumbnail1",
+            "uco-core:target": "kb:digital_photograph1",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -60,7 +60,7 @@
             ]
         },
         {
-            "@id": ":digital_photograph1",
+            "@id": "kb:digital_photograph1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {

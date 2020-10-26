@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
@@ -11,7 +11,7 @@
     },
     "@graph": [
         {
-            "@id": ":mobile-device-uuid",
+            "@id": "kb:mobile-device-uuid",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -36,7 +36,7 @@
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
                     "MSISDN": [
-                        ":mobile-account1-uuid"
+                        "kb:mobile-account1-uuid"
                     ],
                     "uco-observable:clockSetting": "2018-02-24T07:36:24.35Z",
                     "timezoneSetting": "UTC+01:01 (Europe/Rome)",
@@ -56,11 +56,11 @@
             ]
         },
         {
-            "@id": ":trace-relationship1-uuid",
+            "@id": "kb:trace-relationship1-uuid",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":sim-card-uuid",
+            "uco-core:source": "kb:sim-card-uuid",
             "uco-core:target": [
-                ":mobile-device-uuid"
+                "kb:mobile-device-uuid"
             ],
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
@@ -69,14 +69,14 @@
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":sim-card-uuid",
+            "@id": "kb:sim-card-uuid",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:SIMCard",
                     "uco-observable:ICCID": "456673345673436xxx",
                     "IMSI": [
-                        ":mobile-account2-uuid"
+                        "kb:mobile-account2-uuid"
                     ],
                     "uco-observable:SIMType": "USIM",
                     "uco-observable:SIMForm": "micro",
@@ -85,7 +85,7 @@
             ]
         },
         {
-            "@id": ":mobile-account1-uuid",
+            "@id": "kb:mobile-account1-uuid",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -100,7 +100,7 @@
             ]
         },
         {
-            "@id": ":mobile-account2-uuid",
+            "@id": "kb:mobile-account2-uuid",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {

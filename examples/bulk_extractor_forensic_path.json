@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
@@ -10,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": ":extracted_email_address0",
+            "@id": "kb:extracted_email_address0",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -38,10 +38,10 @@
             ]
         },
         {
-            "@id": ":relationship0",
+            "@id": "kb:relationship0",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":extracted_email_address0",
-            "uco-core:target": ":decompressed_gzip0",
+            "uco-core:source": "kb:extracted_email_address0",
+            "uco-core:target": "kb:decompressed_gzip0",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -59,7 +59,7 @@
             ]
         },
         {
-            "@id": ":extracted_email_address1",
+            "@id": "kb:extracted_email_address1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -87,10 +87,10 @@
             ]
         },
         {
-            "@id": ":relationship1",
+            "@id": "kb:relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":extracted_email_address1",
-            "uco-core:target": ":decompressed_gzip0",
+            "uco-core:source": "kb:extracted_email_address1",
+            "uco-core:target": "kb:decompressed_gzip0",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -108,7 +108,7 @@
             ]
         },
         {
-            "@id": ":decompressed_gzip0",
+            "@id": "kb:decompressed_gzip0",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -137,10 +137,10 @@
             ]
         },
         {
-            "@id": ":relationship3",
+            "@id": "kb:relationship3",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":decompressed_gzip0",
-            "uco-core:target": ":compressed_gzip0",
+            "uco-core:source": "kb:decompressed_gzip0",
+            "uco-core:target": "kb:compressed_gzip0",
             "uco-core:kindOfRelationship": "decompressed-from",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -151,7 +151,7 @@
             ]
         },
         {
-            "@id": ":compressed_gzip0",
+            "@id": "kb:compressed_gzip0",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -178,10 +178,10 @@
             ]
         },
         {
-            "@id": ":relationship4",
+            "@id": "kb:relationship4",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":compressed_gzip0",
-            "uco-core:target": ":decompressed_gzip1",
+            "uco-core:source": "kb:compressed_gzip0",
+            "uco-core:target": "kb:decompressed_gzip1",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -199,7 +199,7 @@
             ]
         },
         {
-            "@id": ":decompressed_gzip1",
+            "@id": "kb:decompressed_gzip1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -226,10 +226,10 @@
             ]
         },
         {
-            "@id": ":relationship5",
+            "@id": "kb:relationship5",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":decompressed_gzip1",
-            "uco-core:target": ":compressed_gzip1",
+            "uco-core:source": "kb:decompressed_gzip1",
+            "uco-core:target": "kb:compressed_gzip1",
             "uco-core:kindOfRelationship": "decompressed-from",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -240,7 +240,7 @@
             ]
         },
         {
-            "@id": ":compressed_gzip1",
+            "@id": "kb:compressed_gzip1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -267,10 +267,10 @@
             ]
         },
         {
-            "@id": ":relationship6",
+            "@id": "kb:relationship6",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":compressed_gzip1",
-            "uco-core:target": ":disk_image",
+            "uco-core:source": "kb:compressed_gzip1",
+            "uco-core:target": "kb:disk_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -288,7 +288,7 @@
             ]
         },
         {
-            "@id": ":disk_image",
+            "@id": "kb:disk_image",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {

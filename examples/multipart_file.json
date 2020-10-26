@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
@@ -12,10 +12,10 @@
     },
     "@graph": [
         {
-            "@id": ":relationship0",
+            "@id": "kb:relationship0",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":multipart_file",
-            "uco-core:target": ":data_piece0",
+            "uco-core:source": "kb:multipart_file",
+            "uco-core:target": "kb:data_piece0",
             "uco-core:kindOfRelationship": "has-fragment",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -27,10 +27,10 @@
             ]
         },
         {
-            "@id": ":relationship1",
+            "@id": "kb:relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":multipart_file",
-            "uco-core:target": ":data_piece1",
+            "uco-core:source": "kb:multipart_file",
+            "uco-core:target": "kb:data_piece1",
             "uco-core:kindOfRelationship": "has-fragment",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -42,10 +42,10 @@
             ]
         },
         {
-            "@id": ":relationship2",
+            "@id": "kb:relationship2",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":multipart_file",
-            "uco-core:target": ":data_piece2",
+            "uco-core:source": "kb:multipart_file",
+            "uco-core:target": "kb:data_piece2",
             "uco-core:kindOfRelationship": "has-fragment",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -57,7 +57,7 @@
             ]
         },
         {
-            "@id": ":multipart_file",
+            "@id": "kb:multipart_file",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -85,7 +85,7 @@
             ]
         },
         {
-            "@id": ":data_piece0",
+            "@id": "kb:data_piece0",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -134,7 +134,7 @@
             ]
         },
         {
-            "@id": ":data_piece1",
+            "@id": "kb:data_piece1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -183,7 +183,7 @@
             ]
         },
         {
-            "@id": ":data_piece2",
+            "@id": "kb:data_piece2",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -232,10 +232,10 @@
             ]
         },
         {
-            "@id": ":relationship3",
+            "@id": "kb:relationship3",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":data_piece0",
-            "uco-core:target": ":android_image",
+            "uco-core:source": "kb:data_piece0",
+            "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -249,10 +249,10 @@
             ]
         },
         {
-            "@id": ":relationship4",
+            "@id": "kb:relationship4",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":data_piece1",
-            "uco-core:target": ":android_image",
+            "uco-core:source": "kb:data_piece1",
+            "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -266,10 +266,10 @@
             ]
         },
         {
-            "@id": ":relationship5",
+            "@id": "kb:relationship5",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":data_piece2",
-            "uco-core:target": ":android_image",
+            "uco-core:source": "kb:data_piece2",
+            "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"

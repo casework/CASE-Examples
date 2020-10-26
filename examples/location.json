@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
@@ -10,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": ":location1",
+            "@id": "kb:location1",
             "@type": "uco-location:Location",
             "uco-core:facets": [
                 {
@@ -28,7 +28,7 @@
             ]
         },
         {
-            "@id": ":location2",
+            "@id": "kb:location2",
             "@type": "uco-location:Location",
             "uco-core:facets": [
                 {

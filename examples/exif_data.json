@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
@@ -13,7 +13,7 @@
     },
     "@graph": [
         {
-            "@id": ":camera1",
+            "@id": "kb:camera1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -24,10 +24,10 @@
             ]
         },
         {
-            "@id": ":relationship1",
+            "@id": "kb:relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":digital_photograph1",
-            "uco-core:target": ":device_partition3",
+            "uco-core:source": "kb:digital_photograph1",
+            "uco-core:target": "kb:device_partition3",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -40,7 +40,7 @@
             ]
         },
         {
-            "@id": ":digital_photograph1",
+            "@id": "kb:digital_photograph1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -136,7 +136,7 @@
             ]
         },
         {
-            "@id": ":camera_action1",
+            "@id": "kb:camera_action1",
             "@type": "uco-action:Action",
             "uco-core:name": "photo_taken",
             "uco-action:startTime": {
@@ -146,16 +146,16 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:instrument": ":camera1",
+                    "uco-action:instrument": "kb:camera1",
                     "uco-action:result": [
-                        ":digital_photograph1"
+                        "kb:digital_photograph1"
                     ],
-                    "uco-action:location": ":location1"
+                    "uco-action:location": "kb:location1"
                 }
             ]
         },
         {
-            "@id": ":annotation1",
+            "@id": "kb:annotation1",
             "@type": "uco-core:Annotation",
             "uco-core:description": "Photo was taken by a Canon digital camera.",
             "uco-core:tag": [
@@ -163,10 +163,10 @@
                 "user_added",
                 "extracted"
             ],
-            "uco-action:object": ":camera_action1"
+            "uco-action:object": "kb:camera_action1"
         },
         {
-            "@id": ":forensic_action7",
+            "@id": "kb:forensic_action7",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "annotated",
             "uco-action:startTime": {
@@ -180,13 +180,13 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": ":examiner1",
-                    "uco-action:instrument": ":annotator_tool1",
+                    "uco-action:performer": "kb:examiner1",
+                    "uco-action:instrument": "kb:annotator_tool1",
                     "uco-action:result": [
-                        ":annotation1"
+                        "kb:annotation1"
                     ],
-                    "uco-action:location": ":forensic_lab1",
-                    "uco-action:environment": ":forensic_lab_computer1"
+                    "uco-action:location": "kb:forensic_lab1",
+                    "uco-action:environment": "kb:forensic_lab_computer1"
                 }
             ]
         }

@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
@@ -13,10 +13,10 @@
     },
     "@graph": [
         {
-            "@id": ":relationship0",
+            "@id": "kb:relationship0",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":reconstructed_file",
-            "uco-core:target": ":data_piece0",
+            "uco-core:source": "kb:reconstructed_file",
+            "uco-core:target": "kb:data_piece0",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:CyberItemRelationshipVocab",
                 "@value": "Has_Fragment"
@@ -31,10 +31,10 @@
             ]
         },
         {
-            "@id": ":relationship1",
+            "@id": "kb:relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":reconstructed_file",
-            "uco-core:target": ":data_piece1",
+            "uco-core:source": "kb:reconstructed_file",
+            "uco-core:target": "kb:data_piece1",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:CyberItemRelationshipVocab",
                 "@value": "Has_Fragment"
@@ -49,10 +49,10 @@
             ]
         },
         {
-            "@id": ":relationship2",
+            "@id": "kb:relationship2",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":reconstructed_file",
-            "uco-core:target": ":data_piece2",
+            "uco-core:source": "kb:reconstructed_file",
+            "uco-core:target": "kb:data_piece2",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:CyberItemRelationshipVocab",
                 "@value": "Has_Fragment"
@@ -67,7 +67,7 @@
             ]
         },
         {
-            "@id": ":reconstructed_file",
+            "@id": "kb:reconstructed_file",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -101,7 +101,7 @@
             ]
         },
         {
-            "@id": ":data_piece0",
+            "@id": "kb:data_piece0",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -135,7 +135,7 @@
             ]
         },
         {
-            "@id": ":data_piece1",
+            "@id": "kb:data_piece1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -169,7 +169,7 @@
             ]
         },
         {
-            "@id": ":data_piece2",
+            "@id": "kb:data_piece2",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -203,10 +203,10 @@
             ]
         },
         {
-            "@id": ":relationship3",
+            "@id": "kb:relationship3",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":data_piece1",
-            "uco-core:target": ":android_image",
+            "uco-core:source": "kb:data_piece1",
+            "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -224,10 +224,10 @@
             ]
         },
         {
-            "@id": ":relationship4",
+            "@id": "kb:relationship4",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":data_piece1",
-            "uco-core:target": ":android_image",
+            "uco-core:source": "kb:data_piece1",
+            "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -245,10 +245,10 @@
             ]
         },
         {
-            "@id": ":relationship5",
+            "@id": "kb:relationship5",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":data_piece2",
-            "uco-core:target": ":android_image",
+            "uco-core:source": "kb:data_piece2",
+            "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -266,7 +266,7 @@
             ]
         },
         {
-            "@id": ":android_image",
+            "@id": "kb:android_image",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
@@ -316,7 +316,7 @@
             ]
         },
         {
-            "@id": ":investigative_action1",
+            "@id": "kb:investigative_action1",
             "@type": "case-investigation:InvestigativeAction",
             "rdfs:comment": "TODO: Determine if it's better to group objects together using provenance records or to have a provenance record for each object.",
             "uco-core:name": "carved",
@@ -331,25 +331,25 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": ":role4",
-                    "uco-action:instrument": ":carving_tool1",
+                    "uco-action:performer": "kb:role4",
+                    "uco-action:instrument": "kb:carving_tool1",
                     "uco-action:object": [
-                        ":android_image"
+                        "kb:android_image"
                     ],
                     "uco-action:result": [
-                        ":data_piece1",
-                        ":data_piece2",
-                        ":relationship3",
-                        ":relationship4",
-                        ":provenance_record2"
+                        "kb:data_piece1",
+                        "kb:data_piece2",
+                        "kb:relationship3",
+                        "kb:relationship4",
+                        "kb:provenance_record2"
                     ],
-                    "uco-action:location": ":forensic_lab1",
-                    "uco-action:environment": ":forensic_lab_computer1"
+                    "uco-action:location": "kb:forensic_lab1",
+                    "uco-action:environment": "kb:forensic_lab_computer1"
                 }
             ]
         },
         {
-            "@id": ":investigative_action2",
+            "@id": "kb:investigative_action2",
             "@type": "case-investigation:InvestigativeAction",
             "rdfs:comment": "Start and end times are the same as investigative_action1 because this action was part of the same action that performed the carving.",
             "uco-core:name": "reconstructed",
@@ -364,56 +364,56 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": ":role4",
-                    "uco-action:instrument": ":carving_tool1",
+                    "uco-action:performer": "kb:role4",
+                    "uco-action:instrument": "kb:carving_tool1",
                     "uco-action:object": [
-                        ":data_piece0",
-                        ":data_piece1",
-                        ":data_piece2"
+                        "kb:data_piece0",
+                        "kb:data_piece1",
+                        "kb:data_piece2"
                     ],
                     "uco-action:result": [
-                        ":reconstructed_file",
-                        ":relationship0",
-                        ":relationship1",
-                        ":relationship2",
-                        ":provenance_record1"
+                        "kb:reconstructed_file",
+                        "kb:relationship0",
+                        "kb:relationship1",
+                        "kb:relationship2",
+                        "kb:provenance_record1"
                     ],
-                    "uco-action:location": ":forensic_lab1",
-                    "uco-action:environment": ":forensic_lab_computer1"
+                    "uco-action:location": "kb:forensic_lab1",
+                    "uco-action:environment": "kb:forensic_lab_computer1"
                 }
             ]
         },
         {
-            "@id": ":provenance_record1",
+            "@id": "kb:provenance_record1",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
             "case-investigation:exhibitNumber": "ACME-676553402357-00",
             "uco-action:object": [
-                ":relationship0",
-                ":relationship1",
-                ":relationship2",
-                ":reconstructed_file"
+                "kb:relationship0",
+                "kb:relationship1",
+                "kb:relationship2",
+                "kb:reconstructed_file"
             ]
         },
         {
-            "@id": ":provenance_record2",
+            "@id": "kb:provenance_record2",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Carved data fragments",
             "case-investigation:exhibitNumber": "ACME-676553402357-01",
             "uco-action:object": [
-                ":data_piece1",
-                ":data_piece2",
-                ":relationship3",
-                ":relationship4"
+                "kb:data_piece1",
+                "kb:data_piece2",
+                "kb:relationship3",
+                "kb:relationship4"
             ]
         },
         {
-            "@id": ":provenance_record3",
+            "@id": "kb:provenance_record3",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "JPG Header",
             "case-investigation:exhibitNumber": "ACME-676553402357-02",
             "uco-action:object": [
-                ":data_piece0"
+                "kb:data_piece0"
             ]
         }
     ]

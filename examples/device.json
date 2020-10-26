@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
@@ -10,9 +10,9 @@
     },
     "@graph": [
         {
-            "@id": ":forensic_lab_computer1",
+            "@id": "kb:forensic_lab_computer1",
             "@type": "uco-observable:CyberItem",
-            "location": ":forensic_lab1",
+            "location": "kb:forensic_lab1",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Device",

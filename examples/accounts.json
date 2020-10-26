@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "": "http://example.org/kb#",
+        "kb": "http://example.org/kb#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
@@ -10,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": ":actor1",
+            "@id": "kb:actor1",
             "@type": "uco-identity:Identity",
             "uco-core:facets": [
                 {
@@ -28,43 +28,43 @@
             ]
         },
         {
-            "@id": ":associated-account1",
+            "@id": "kb:associated-account1",
             "@type": "uco-core:Relationship",
-            "uco-core:source": ":actor1",
+            "uco-core:source": "kb:actor1",
             "uco-core:target": [
-                ":facebook_account1"
+                "kb:facebook_account1"
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":associated-account2",
+            "@id": "kb:associated-account2",
             "@type": "uco-core:Relationship",
-            "uco-core:source": ":actor1",
+            "uco-core:source": "kb:actor1",
             "uco-core:target": [
-                ":google_account1"
+                "kb:google_account1"
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":associated-account3",
+            "@id": "kb:associated-account3",
             "@type": "uco-core:Relationship",
-            "uco-core:source": ":actor1",
+            "uco-core:source": "kb:actor1",
             "uco-core:target": [
-                ":email_account1"
+                "kb:email_account1"
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":facebook_account1",
+            "@id": "kb:facebook_account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountIdentifier": "1235556677@facebook.net",
-                    "uco-observable:accountIssuer": ":facebook_org"
+                    "uco-observable:accountIssuer": "kb:facebook_org"
                 },
                 {
                     "@type": "uco-observable:DigitalAccount",
@@ -89,7 +89,7 @@
                 },
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": ":application1"
+                    "uco-observable:application": "kb:application1"
                 },
                 {
                     "@type": "uco-identity:SimpleName",
@@ -106,23 +106,23 @@
             ]
         },
         {
-            "@id": ":associated-account4",
+            "@id": "kb:associated-account4",
             "@type": "uco-core:Relationship",
-            "uco-core:source": ":facebook_account1",
+            "uco-core:source": "kb:facebook_account1",
             "uco-core:target": [
-                ":email_account1"
+                "kb:email_account1"
             ],
             "uco-core:kindOfRelationship": "associated-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":google_account1",
+            "@id": "kb:google_account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountIdentifier": "willyROX@gmail.com",
-                    "uco-observable:accountIssuer": ":google_org",
+                    "uco-observable:accountIssuer": "kb:google_org",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
@@ -154,7 +154,7 @@
                 },
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": ":application2"
+                    "uco-observable:application": "kb:application2"
                 },
                 {
                     "@type": "uco-identity:SimpleName",
@@ -171,27 +171,27 @@
             ]
         },
         {
-            "@id": ":associated-account4",
+            "@id": "kb:associated-account4",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": ":google_account1",
+            "uco-core:source": "kb:google_account1",
             "uco-core:target": [
-                ":email_account1"
+                "kb:email_account1"
             ],
             "uco-core:kindOfRelationship": "associated-account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": ":email_account1",
+            "@id": "kb:email_account1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailAccount",
-                    "uco-observable:emailAddress": ":email-address1"
+                    "uco-observable:emailAddress": "kb:email-address1"
                 }
             ]
         },
         {
-            "@id": ":email_address1",
+            "@id": "kb:email_address1",
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
