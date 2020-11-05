@@ -2,7 +2,7 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb#",
-        "case-investigation": "https://unifiedcyberontology.org/ontology/uco/investigation#",
+        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
