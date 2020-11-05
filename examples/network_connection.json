@@ -38,7 +38,7 @@
                 "kb:trace-relationship2-uuid",
                 "kb:trace-relationship3-uuid"
             ],
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant3554",
@@ -63,7 +63,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:instrument": "kb:pcap-tool-uuid",
@@ -105,7 +105,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:createdTime": {
@@ -128,7 +128,7 @@
                     "@type": "uco-observable:ContentData",
                     "uco-observable:dataPayloadReferenceURL": {
                         "@type": "uco-observable:CyberItem",
-                        "uco-core:facets": {
+                        "uco-core:hasFacet": {
                             "@type": "uco-observable:URL",
                             "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
                         }
@@ -172,7 +172,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:IPv4Address",
                     "uco-observable:value": "10.10.10.2"
@@ -191,7 +191,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:IPv4Address",
                     "uco-observable:value": "10.10.10.50"
@@ -210,7 +210,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:NetworkConnection",
                     "uco-observable:startTime": {
@@ -237,7 +237,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:NetworkConnection",
                     "uco-observable:startTime": {
@@ -264,7 +264,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:NetworkConnection",
                     "uco-observable:startTime": {

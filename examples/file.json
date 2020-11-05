@@ -15,7 +15,7 @@
         {
             "@id": "kb:chunk_of_data",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -50,7 +50,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 45,
@@ -64,7 +64,7 @@
         {
             "@id": "kb:decoded_attachment",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:byteOrder": "BigEndian",
@@ -109,7 +109,7 @@
             "uco-core:target": "kb:tar_archive_file",
             "uco-core:kindOfRelationship": "decoded-from",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EncodedStream",
                     "uco-observable:encodingMethod": "BASE64"
@@ -119,7 +119,7 @@
         {
             "@id": "kb:tar_archive_file",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "TAR",
@@ -174,7 +174,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "/some/files/in/archive/attachment.jpg"
@@ -184,7 +184,7 @@
         {
             "@id": "kb:decrypted_blob",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -217,7 +217,7 @@
             "uco-core:target": "kb:sqlite_blob",
             "uco-core:kindOfRelationship": "decrypted-from",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EncryptedStream",
                     "uco-observable:encryptionMethod": "AES",
@@ -230,7 +230,7 @@
         {
             "@id": "kb:sqlite_blob",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -271,7 +271,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:SQLiteBlob",
                     "uco-observable:tableName": "AttachmentTable",
@@ -283,7 +283,7 @@
         {
             "@id": "kb:sqlite_database",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "EXT4",
@@ -342,7 +342,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "/data/data/com.whatsapp/cache/messages.db"
@@ -352,7 +352,7 @@
         {
             "@id": "kb:image_partition",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:sizeInBytes": {
@@ -385,7 +385,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DiskPartition",
                     "uco-observable:partitionID": 3
@@ -395,7 +395,7 @@
         {
             "@id": "kb:android_image",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:File",
                     "uco-observable:fileSystemType": "NTFS",
@@ -443,7 +443,7 @@
             "uco-core:target": "kb:forensic_lab_computer1",
             "uco-core:kindOfRelationship": "stored-on",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PathRelation",
                     "uco-observable:path": "C:/input_devices/DFL-20140712-001C.img"
@@ -463,7 +463,7 @@
             "@type": "uco-observable:CyberItem",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": "kb:forensic_lab1",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-observable:manufacturer": "Dell",
@@ -497,7 +497,7 @@
             "@type": "uco-observable:CyberItem",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": "kb:forensic_lab1",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-observable:manufacturer": "Samsung",

@@ -12,7 +12,7 @@
         {
             "@id": "kb:digital_photograph_thumbnail1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
@@ -48,7 +48,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRange",
                     "uco-observable:rangeOffset": 224,
@@ -62,7 +62,7 @@
         {
             "@id": "kb:digital_photograph1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",

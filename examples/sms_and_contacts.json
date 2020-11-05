@@ -12,7 +12,7 @@
         {
             "@id": "kb:sms_message1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Message",
                     "uco-observable:application": "kb:sms_application1",
@@ -31,7 +31,7 @@
         {
             "@id": "kb:contact1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Contact",
                     "rdfs:comment": [
@@ -89,7 +89,7 @@
         {
             "@id": "kb:phone_account1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Account",
                     "rdfs:comment": "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)",
@@ -105,7 +105,7 @@
         {
             "@id": "kb:phone_account2",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountType": "Phone",
@@ -120,7 +120,7 @@
         {
             "@id": "kb:email_account1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountType": "Email",
@@ -135,7 +135,7 @@
         {
             "@id": "kb:phone_account3",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountType": "Phone",
@@ -150,7 +150,7 @@
         {
             "@id": "kb:android_phonebook1",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Application",
                     "uco-core:name": "Android Phonebook",

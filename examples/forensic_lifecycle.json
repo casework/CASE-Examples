@@ -169,7 +169,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T19:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:investigator1",
@@ -206,7 +206,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:examiner1",
@@ -252,7 +252,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T19:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:examiner1",
@@ -304,7 +304,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-16T19:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:examiner1",
@@ -351,7 +351,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:examiner2",
@@ -439,7 +439,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-02-16T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:examiner2",

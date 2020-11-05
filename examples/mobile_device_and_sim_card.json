@@ -13,7 +13,7 @@
         {
             "@id": "kb:mobile-device-uuid",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Device",
                     "uco-core:name": "iPhone",
@@ -71,7 +71,7 @@
         {
             "@id": "kb:sim-card-uuid",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:SIMCard",
                     "uco-observable:ICCID": "456673345673436xxx",
@@ -87,7 +87,7 @@
         {
             "@id": "kb:mobile-account1-uuid",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountType": "Phone",
@@ -102,7 +102,7 @@
         {
             "@id": "kb:mobile-account2-uuid",
             "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:Account",
                     "uco-observable:accountType": "Phone",
