@@ -11,7 +11,7 @@
     "@graph": [
         {
             "@id": "kb:sms_message1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Message",
@@ -30,7 +30,7 @@
         },
         {
             "@id": "kb:contact1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Contact",
@@ -58,7 +58,7 @@
         },
         {
             "@id": "kb:associated-account1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:contact1",
             "uco-core:target": [
                 "kb:phone_account1"
@@ -68,7 +68,7 @@
         },
         {
             "@id": "kb:associated-account2",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:contact1",
             "uco-core:target": [
                 "kb:phone_account2"
@@ -78,7 +78,7 @@
         },
         {
             "@id": "kb:associated-account3",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:contact1",
             "uco-core:target": [
                 "kb:email_account1"
@@ -88,7 +88,7 @@
         },
         {
             "@id": "kb:phone_account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
@@ -104,7 +104,7 @@
         },
         {
             "@id": "kb:phone_account2",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
@@ -119,7 +119,7 @@
         },
         {
             "@id": "kb:email_account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
@@ -134,7 +134,7 @@
         },
         {
             "@id": "kb:phone_account3",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
@@ -149,7 +149,7 @@
         },
         {
             "@id": "kb:android_phonebook1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Application",

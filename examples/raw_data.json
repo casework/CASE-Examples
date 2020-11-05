@@ -11,7 +11,7 @@
     "@graph": [
         {
             "@id": "kb:digital_photograph_thumbnail1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
@@ -40,11 +40,11 @@
         },
         {
             "@id": "kb:relationship0",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:digital_photograph_thumbnail1",
             "uco-core:target": "kb:digital_photograph1",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -61,7 +61,7 @@
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",

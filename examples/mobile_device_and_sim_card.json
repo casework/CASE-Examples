@@ -12,7 +12,7 @@
     "@graph": [
         {
             "@id": "kb:mobile-device-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Device",
@@ -57,20 +57,20 @@
         },
         {
             "@id": "kb:trace-relationship1-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:sim-card-uuid",
             "uco-core:target": [
                 "kb:mobile-device-uuid"
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true
         },
         {
             "@id": "kb:sim-card-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:SIMCard",
@@ -86,7 +86,7 @@
         },
         {
             "@id": "kb:mobile-account1-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
@@ -101,7 +101,7 @@
         },
         {
             "@id": "kb:mobile-account2-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",

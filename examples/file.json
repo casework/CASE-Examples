@@ -14,7 +14,7 @@
     "@graph": [
         {
             "@id": "kb:chunk_of_data",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
@@ -42,11 +42,11 @@
         },
         {
             "@id": "kb:relationship0",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:chunk_of_data",
             "uco-core:target": "kb:decoded_attachment",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -63,7 +63,7 @@
         },
         {
             "@id": "kb:decoded_attachment",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
@@ -104,7 +104,7 @@
         },
         {
             "@id": "kb:relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:decoded_attachment",
             "uco-core:target": "kb:tar_archive_file",
             "uco-core:kindOfRelationship": "decoded-from",
@@ -118,7 +118,7 @@
         },
         {
             "@id": "kb:tar_archive_file",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
@@ -166,11 +166,11 @@
         },
         {
             "@id": "kb:relationship2",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:tar_archive_file",
             "uco-core:target": "kb:decrypted_blob",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -183,7 +183,7 @@
         },
         {
             "@id": "kb:decrypted_blob",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
@@ -212,7 +212,7 @@
         },
         {
             "@id": "kb:relationship3",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:decrypted_blob",
             "uco-core:target": "kb:sqlite_blob",
             "uco-core:kindOfRelationship": "decrypted-from",
@@ -229,7 +229,7 @@
         },
         {
             "@id": "kb:sqlite_blob",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
@@ -263,11 +263,11 @@
         },
         {
             "@id": "kb:relationship4",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:sqlite_blob",
             "uco-core:target": "kb:sqlite_database",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -282,7 +282,7 @@
         },
         {
             "@id": "kb:sqlite_database",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
@@ -334,11 +334,11 @@
         },
         {
             "@id": "kb:relationship5",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:sqlite_database",
             "uco-core:target": "kb:image_partition",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -351,7 +351,7 @@
         },
         {
             "@id": "kb:image_partition",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ContentData",
@@ -377,11 +377,11 @@
         },
         {
             "@id": "kb:relationship6",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:image_partition",
             "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -394,7 +394,7 @@
         },
         {
             "@id": "kb:android_image",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:File",
@@ -438,7 +438,7 @@
         },
         {
             "@id": "kb:relationship7",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:android_image",
             "uco-core:target": "kb:forensic_lab_computer1",
             "uco-core:kindOfRelationship": "stored-on",
@@ -452,7 +452,7 @@
         },
         {
             "@id": "kb:relationship8",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:android_image",
             "uco-core:target": "kb:android_device1",
             "uco-core:kindOfRelationship": "forensic_image_of",
@@ -460,7 +460,7 @@
         },
         {
             "@id": "kb:forensic_lab_computer1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": "kb:forensic_lab1",
             "uco-core:facets": [
@@ -494,7 +494,7 @@
         },
         {
             "@id": "kb:android_device1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": "kb:forensic_lab1",
             "uco-core:facets": [

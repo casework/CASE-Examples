@@ -99,7 +99,7 @@
         },
         {
             "@id": "kb:pcap-file-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -127,7 +127,7 @@
                 {
                     "@type": "uco-observable:ContentData",
                     "uco-observable:dataPayloadReferenceURL": {
-                        "@type": "uco-observable:CyberItem",
+                        "@type": "uco-observable:ObservableObject",
                         "uco-core:facets": {
                             "@type": "uco-observable:URL",
                             "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
@@ -165,7 +165,7 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "@id": "kb:source-host-uuid",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
@@ -184,7 +184,7 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "@id": "kb:destination-host-uuid",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
@@ -203,7 +203,7 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "@id": "kb:network-connection1-uuid",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
@@ -230,7 +230,7 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "@id": "kb:network-connection2-uuid",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
@@ -257,7 +257,7 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "@id": "kb:network-connection3-uuid",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
@@ -285,39 +285,39 @@
         },
         {
             "@id": "kb:trace-relationship1-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:network-connection1-uuid",
             "uco-core:target": [
                 "kb:pcap-file-uuid"
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": "true"
         },
         {
             "@id": "kb:trace-relationship2-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:network-connection3-uuid",
             "uco-core:target": [
                 "kb:pcap-file-uuid"
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": "true"
         },
         {
             "@id": "kb:trace-relationship3-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:network-connection3-uuid",
             "uco-core:target": [
                 "kb:pcap-file-uuid"
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": "true"
