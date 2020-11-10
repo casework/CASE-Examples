@@ -14,7 +14,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -49,7 +49,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 1600,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -63,7 +63,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -98,7 +98,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 16095,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -112,7 +112,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:magicNumber": "H4s=",
                     "uco-observable:mimeType": "application/x-compressed",
@@ -145,7 +145,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:CompressedStream",
+                    "@type": "uco-observable:CompressedStreamFacet",
                     "uco-observable:compressionMethod": "GZIP"
                 }
             ]
@@ -155,7 +155,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 4598
@@ -189,7 +189,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 64000,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -203,7 +203,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 54564465
@@ -234,7 +234,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:CompressedStream",
+                    "@type": "uco-observable:CompressedStreamFacet",
                     "uco-observable:compressionMethod": "GZIP"
                 }
             ]
@@ -244,7 +244,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 23564465
@@ -278,7 +278,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 946315592,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -292,7 +292,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 2000000000
