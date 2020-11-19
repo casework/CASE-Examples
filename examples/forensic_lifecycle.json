@@ -398,13 +398,13 @@
                 {
                     "@type": "acme:PlasoArguments",
                     "acme:input": "kb:android_image",
-                    "acme:configFile": "config_file",
+                    "acme:configFile": "kb:config_file",
                     "acme:analysisReport": [
-                        "chat_messages_report",
-                        "windows_registries_report"
+                        "kb:chat_messages_report",
+                        "kb:windows_registries_report"
                     ],
-                    "acme:storageFile": "plaso_storage_file",
-                    "acme:logFile": "log_file"
+                    "acme:storageFile": "kb:plaso_storage_file",
+                    "acme:logFile": "kb:log_file"
                 }
             ]
         },
@@ -465,10 +465,10 @@
                 },
                 {
                     "@type": "acme:PlasoParserArguments",
-                    "acme:parsedFile": "message_database",
+                    "acme:parsedFile": "kb:message_database",
                     "acme:attachmentFile": [
-                        "thumbnail_database",
-                        "attachment_file"
+                        "kb:thumbnail_database",
+                        "kb:attachment_file"
                     ],
                     "acme:fullQueryMatch": true,
                     "acme:query": "SELECT sender, recipients, body from MessageTable"
