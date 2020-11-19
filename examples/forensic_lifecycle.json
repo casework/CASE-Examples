@@ -184,7 +184,10 @@
             "@type": "uco-core:Relationship",
             "uco-core:source": "kb:forensic_action1",
             "uco-core:target": "kb:phase1",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -226,7 +229,10 @@
             "@type": "uco-core:Relationship",
             "uco-core:source": "kb:forensic_action2",
             "uco-core:target": "kb:phase2",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -278,7 +284,10 @@
             "@type": "uco-core:Relationship",
             "uco-core:source": "kb:forensic_action3",
             "uco-core:target": "kb:phase2",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -325,7 +334,10 @@
             "@type": "uco-core:Relationship",
             "uco-core:source": "kb:forensic_action4",
             "uco-core:target": "kb:phase2",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -413,7 +425,10 @@
             "@type": "uco-core:Relationship",
             "uco-core:source": "kb:forensic_action5",
             "uco-core:target": "kb:phase3",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
