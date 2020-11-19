@@ -41,8 +41,12 @@
         {
             "@id": "kb:relationship0",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": "kb:digital_photograph_thumbnail1",
-            "uco-core:target": "kb:digital_photograph1",
+            "uco-core:source": {
+                "@id": "kb:digital_photograph_thumbnail1"
+            },
+            "uco-core:target": {
+                "@id": "kb:digital_photograph1"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"

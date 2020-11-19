@@ -36,7 +36,9 @@
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
                     "MSISDN": [
-                        "kb:mobile-account1-uuid"
+                        {
+                            "@id": "kb:mobile-account1-uuid"
+                        }
                     ],
                     "uco-observable:clockSetting": "2018-02-24T07:36:24.35Z",
                     "timezoneSetting": "UTC+01:01 (Europe/Rome)",
@@ -58,9 +60,13 @@
         {
             "@id": "kb:trace-relationship1-uuid",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": "kb:sim-card-uuid",
+            "uco-core:source": {
+                "@id": "kb:sim-card-uuid"
+            },
             "uco-core:target": [
-                "kb:mobile-device-uuid"
+                {
+                    "@id": "kb:mobile-device-uuid"
+                }
             ],
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
@@ -76,7 +82,9 @@
                     "@type": "uco-observable:SIMCard",
                     "uco-observable:ICCID": "456673345673436xxx",
                     "IMSI": [
-                        "kb:mobile-account2-uuid"
+                        {
+                            "@id": "kb:mobile-account2-uuid"
+                        }
                     ],
                     "uco-observable:SIMType": "USIM",
                     "uco-observable:SIMForm": "micro",

@@ -13,7 +13,9 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
-                    "uco-observable:accountIssuer": "kb:ATT",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:ATT"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -28,7 +30,9 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Account",
-                    "uco-observable:accountIssuer": "kb:Sprint",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:Sprint"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -52,8 +56,12 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T18:30:41.25Z"
                     },
-                    "uco-observable:from": "kb:phone_account1",
-                    "uco-observable:to": "kb:phone_account2",
+                    "uco-observable:from": {
+                        "@id": "kb:phone_account1"
+                    },
+                    "uco-observable:to": {
+                        "@id": "kb:phone_account2"
+                    },
                     "uco-observable:duration": {
                         "@type": "xsd:long",
                         "@value": 1862

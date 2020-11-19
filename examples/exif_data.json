@@ -26,8 +26,12 @@
         {
             "@id": "kb:relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": "kb:digital_photograph1",
-            "uco-core:target": "kb:device_partition3",
+            "uco-core:source": {
+                "@id": "kb:digital_photograph1"
+            },
+            "uco-core:target": {
+                "@id": "kb:device_partition3"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:CyberItemRelationshipEnum",
                 "@value": "Contained_Within"
@@ -146,11 +150,17 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:instrument": "kb:camera1",
+                    "uco-action:instrument": {
+                        "@id": "kb:camera1"
+                    },
                     "uco-action:result": [
-                        "kb:digital_photograph1"
+                        {
+                            "@id": "kb:digital_photograph1"
+                        }
                     ],
-                    "uco-action:location": "kb:location1"
+                    "uco-action:location": {
+                        "@id": "kb:location1"
+                    }
                 }
             ]
         },
@@ -163,7 +173,9 @@
                 "user_added",
                 "extracted"
             ],
-            "uco-action:object": "kb:camera_action1"
+            "uco-action:object": {
+                "@id": "kb:camera_action1"
+            }
         },
         {
             "@id": "kb:forensic_action7",
@@ -180,13 +192,23 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:examiner1",
-                    "uco-action:instrument": "kb:annotator_tool1",
+                    "uco-action:performer": {
+                        "@id": "kb:examiner1"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:annotator_tool1"
+                    },
                     "uco-action:result": [
-                        "kb:annotation1"
+                        {
+                            "@id": "kb:annotation1"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 }
             ]
         }

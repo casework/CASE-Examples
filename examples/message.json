@@ -29,7 +29,9 @@
                     "uco-core:name": "WhatsApp",
                     "uco-observable:applicationIdentifier": "com.whatsapp",
                     "uco-observable:version": "1.23.45",
-                    "uco-observable:operatingSystem": "kb:os1",
+                    "uco-observable:operatingSystem": {
+                        "@id": "kb:os1"
+                    },
                     "uco-observable:numberOfLaunches": 34
                 }
             ]
@@ -40,7 +42,9 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": "kb:application1"
+                    "uco-observable:application": {
+                        "@id": "kb:application1"
+                    }
                 }
             ]
         },
@@ -50,7 +54,9 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": "kb:application1"
+                    "uco-observable:application": {
+                        "@id": "kb:application1"
+                    }
                 }
             ]
         },
@@ -60,7 +66,9 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": "kb:application2"
+                    "uco-observable:application": {
+                        "@id": "kb:application2"
+                    }
                 }
             ]
         },
@@ -70,7 +78,9 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccount",
-                    "uco-observable:application": "kb:application2"
+                    "uco-observable:application": {
+                        "@id": "kb:application2"
+                    }
                 }
             ]
         },
@@ -88,21 +98,31 @@
                         "olo:slot": [
                             {
                                 "olo:index": 1,
-                                "olo:item": "kb:message1"
+                                "olo:item": {
+                                    "@id": "kb:message1"
+                                }
                             },
                             {
                                 "olo:index": 2,
-                                "olo:item": "kb:message2"
+                                "olo:item": {
+                                    "@id": "kb:message2"
+                                }
                             },
                             {
                                 "olo:index": 3,
-                                "olo:item": "kb:message3"
+                                "olo:item": {
+                                    "@id": "kb:message3"
+                                }
                             }
                         ]
                     },
                     "uco-observable:participant": [
-                        "kb:account1",
-                        "kb:account2"
+                        {
+                            "@id": "kb:account1"
+                        },
+                        {
+                            "@id": "kb:account2"
+                        }
                     ]
                 }
             ]
@@ -121,13 +141,19 @@
                         "olo:slot": [
                             {
                                 "olo:index": 1,
-                                "olo:item": "kb:post1"
+                                "olo:item": {
+                                    "@id": "kb:post1"
+                                }
                             }
                         ]
                     },
                     "uco-observable:participant": [
-                        "kb:account3",
-                        "kb:account4"
+                        {
+                            "@id": "kb:account3"
+                        },
+                        {
+                            "@id": "kb:account4"
+                        }
                     ]
                 }
             ]
@@ -138,11 +164,17 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Message",
-                    "uco-observable:application": "kb:application2",
+                    "uco-observable:application": {
+                        "@id": "kb:application2"
+                    },
                     "uco-observable:messageText": "I said some things in a tweet! @sarahsmithtweeter #hashtag",
-                    "uco-observable:from": "kb:account3",
+                    "uco-observable:from": {
+                        "@id": "kb:account3"
+                    },
                     "uco-observable:to": [
-                        "kb:account4"
+                        {
+                            "@id": "kb:account4"
+                        }
                     ]
                 }
             ]
@@ -153,11 +185,17 @@
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:Message",
-                    "uco-observable:application": "kb:application1",
+                    "uco-observable:application": {
+                        "@id": "kb:application1"
+                    },
                     "uco-observable:messageText": "Hey bud!",
-                    "uco-observable:from": "kb:account1",
+                    "uco-observable:from": {
+                        "@id": "kb:account1"
+                    },
                     "uco-observable:to": [
-                        "kb:account2"
+                        {
+                            "@id": "kb:account2"
+                        }
                     ],
                     "uco-observable:sentTime": {
                         "@type": "xsd:dateTime",
@@ -169,8 +207,12 @@
         {
             "@id": "kb:attach_relationship1",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": "kb:location1",
-            "uco-core:target": "kb:message1",
+            "uco-core:source": {
+                "@id": "kb:location1"
+            },
+            "uco-core:target": {
+                "@id": "kb:message1"
+            },
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -183,8 +225,12 @@
         {
             "@id": "kb:attach_relationship2",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": "kb:attachment_file1",
-            "uco-core:target": "kb:message1",
+            "uco-core:source": {
+                "@id": "kb:attachment_file1"
+            },
+            "uco-core:target": {
+                "@id": "kb:message1"
+            },
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
@@ -197,8 +243,12 @@
         {
             "@id": "kb:attach_relationship3",
             "@type": "uco-observable:CyberRelationship",
-            "uco-core:source": "kb:attachment_file2",
-            "uco-core:target": "kb:message1",
+            "uco-core:source": {
+                "@id": "kb:attachment_file2"
+            },
+            "uco-core:target": {
+                "@id": "kb:message1"
+            },
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
             "uco-core:facets": [
