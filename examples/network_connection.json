@@ -289,7 +289,21 @@
                         "@id": "kb:source-host-uuid"
                     },
                     "uco-observable:sourcePort": 52960,
-                    "uco-observable:protocols": "TCP, NETBIOSSESSIONSERVICE"
+                    "uco-observable:protocols": {
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Transport Layer",
+                                "uco-types:value": "TCP"
+                            },
+                            {
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Session Layer",
+                                "uco-types:value": "NETBIOSSESSIONSERVICE "
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -322,7 +336,21 @@
                         "@id": "kb:source-host-uuid"
                     },
                     "uco-observable:sourcePort": 52961,
-                    "uco-observable:protocols": "TCP, NETBIOSSESSIONSERVICE"
+                    "uco-observable:protocols": {
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Transport Layer",
+                                "uco-types:value": "TCP"
+                            },
+                            {
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Session Layer",
+                                "uco-types:value": "NETBIOSSESSIONSERVICE "
+                            }
+                        ]
+                    }
                 }
             ]
         },
@@ -355,7 +383,21 @@
                         "@id": "kb:source-host-uuid"
                     },
                     "uco-observable:sourcePort": 52962,
-                    "uco-observable:protocols": "TCP, NETBIOSSESSIONSERVICE"
+                    "uco-observable:protocols": {
+                        "@type": "uco-types:ControlledDictionary",
+                        "uco-types:entry": [
+                            {
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Transport Layer",
+                                "uco-types:value": "TCP"
+                            },
+                            {
+                                "@type": "uco-types:ControlledDictionaryEntry",
+                                "uco-types:key": "Session Layer",
+                                "uco-types:value": "NETBIOSSESSIONSERVICE "
+                            }
+                        ]
+                    }
                 }
             ]
         },
