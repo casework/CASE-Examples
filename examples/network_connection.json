@@ -47,16 +47,16 @@
             ]
         },
         {
-            "@type": "uco-tool:Tool",
             "@id": "kb:pcap-tool-uuid",
+            "@type": "uco-tool:Tool",
             "uco-core:name": "PCAP Analyser",
             "uco-tool:creator": "kb:NetworkAnalyser Corporation",
             "uco-tool:toolType": "PCAP Parser",
             "uco-tool:version": "2.5.0.0"
         },
         {
-            "@type": "case-investigation:InvestigativeAction",
             "@id": "kb:extraction-action-uuid",
+            "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "extracted",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
@@ -85,8 +85,8 @@
             }
         },
         {
-            "@type": "case-investigation:ProvenanceRecord",
             "@id": "kb:pcap-provenancerecord-uuid",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:createdBy": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -150,8 +150,8 @@
             ]
         },
         {
-            "@type": "case-investigation:ProvenanceRecord",
             "@id": "kb:extracted-connections-provenancerecord-uuid",
+            "@type": "case-investigation:ProvenanceRecord",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -165,8 +165,8 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
             "@id": "kb:source-host-uuid",
+            "@type": "uco-observable:CyberItem",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -184,8 +184,8 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
             "@id": "kb:destination-host-uuid",
+            "@type": "uco-observable:CyberItem",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -203,8 +203,8 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
             "@id": "kb:network-connection1-uuid",
+            "@type": "uco-observable:CyberItem",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -230,8 +230,8 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
             "@id": "kb:network-connection2-uuid",
+            "@type": "uco-observable:CyberItem",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
@@ -257,8 +257,8 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
             "@id": "kb:network-connection3-uuid",
+            "@type": "uco-observable:CyberItem",
             "uco-core:createdBy": "kb:investigator1-uuid",
             "uco-core:createdTime": {
                 "@type": "xsd:dateTime",
