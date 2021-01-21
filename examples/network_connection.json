@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",

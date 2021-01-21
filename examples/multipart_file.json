@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
