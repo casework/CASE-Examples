@@ -803,7 +803,7 @@
             "uco-core:description": "Android smartphone seized by Argos PD",
             "case-investigation:exhibitNumber": "AthensPD-2017220601",
             "uco-core:object": {
-                "@id": "cassandra-device-uuid"
+                "@id": "kb:cassandra-device-uuid"
             }
         },
         {
