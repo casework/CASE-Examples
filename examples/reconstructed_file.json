@@ -14,17 +14,17 @@
     "@graph": [
         {
             "@id": "kb:relationship0",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:reconstructed_file",
             "uco-core:target": "kb:data_piece0",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
                     "uco-observable:totalFragments": 3
                 }
@@ -32,17 +32,17 @@
         },
         {
             "@id": "kb:relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:reconstructed_file",
             "uco-core:target": "kb:data_piece1",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
                     "uco-observable:totalFragments": 3
                 }
@@ -50,17 +50,17 @@
         },
         {
             "@id": "kb:relationship2",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:reconstructed_file",
             "uco-core:target": "kb:data_piece2",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
                     "uco-observable:totalFragments": 3
                 }
@@ -68,10 +68,10 @@
         },
         {
             "@id": "kb:reconstructed_file",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -102,10 +102,10 @@
         },
         {
             "@id": "kb:data_piece0",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -136,10 +136,10 @@
         },
         {
             "@id": "kb:data_piece1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -170,10 +170,10 @@
         },
         {
             "@id": "kb:data_piece2",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -204,17 +204,17 @@
         },
         {
             "@id": "kb:relationship3",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:data_piece1",
             "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -225,17 +225,17 @@
         },
         {
             "@id": "kb:relationship4",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:data_piece1",
             "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -246,17 +246,17 @@
         },
         {
             "@id": "kb:relationship5",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:data_piece2",
             "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 57984,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -267,10 +267,10 @@
         },
         {
             "@id": "kb:android_image",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:isDirectory": false,
                     "uco-observable:extension": "img",
@@ -294,7 +294,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 45654000

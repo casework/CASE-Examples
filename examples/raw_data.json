@@ -11,10 +11,10 @@
     "@graph": [
         {
             "@id": "kb:digital_photograph_thumbnail1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
@@ -40,17 +40,17 @@
         },
         {
             "@id": "kb:relationship0",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:digital_photograph_thumbnail1",
             "uco-core:target": "kb:digital_photograph1",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 224,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -61,10 +61,10 @@
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
                     "uco-observable:mimeType": "image/jpg"
                 }

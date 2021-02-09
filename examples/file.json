@@ -14,10 +14,10 @@
     "@graph": [
         {
             "@id": "kb:chunk_of_data",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -42,17 +42,17 @@
         },
         {
             "@id": "kb:relationship0",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:chunk_of_data",
             "uco-core:target": "kb:decoded_attachment",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -63,10 +63,10 @@
         },
         {
             "@id": "kb:decoded_attachment",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -104,24 +104,24 @@
         },
         {
             "@id": "kb:relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:decoded_attachment",
             "uco-core:target": "kb:tar_archive_file",
             "uco-core:kindOfRelationship": "decoded-from",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:EncodedStream",
+                    "@type": "uco-observable:EncodedStreamFacet",
                     "uco-observable:encodingMethod": "BASE64"
                 }
             ]
         },
         {
             "@id": "kb:tar_archive_file",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "TAR",
                     "uco-observable:filePath": "/some/files/in/archive/attachment.jpg",
                     "uco-observable:accessedTime": {
@@ -138,7 +138,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 23000
@@ -159,34 +159,34 @@
                     ]
                 },
                 {
-                    "@type": "uco-observable:EncodedStream",
+                    "@type": "uco-observable:EncodedStreamFacet",
                     "uco-observable:encodingMethod": "BASE64"
                 }
             ]
         },
         {
             "@id": "kb:relationship2",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:tar_archive_file",
             "uco-core:target": "kb:decrypted_blob",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/some/files/in/archive/attachment.jpg"
                 }
             ]
         },
         {
             "@id": "kb:decrypted_blob",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "23000"
@@ -212,14 +212,14 @@
         },
         {
             "@id": "kb:relationship3",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:decrypted_blob",
             "uco-core:target": "kb:sqlite_blob",
             "uco-core:kindOfRelationship": "decrypted-from",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:EncryptedStream",
+                    "@type": "uco-observable:EncryptedStreamFacet",
                     "uco-observable:encryptionMethod": "AES",
                     "uco-observable:encryptionMode": "CBC",
                     "uco-observable:encryptionKey": "whatsappKEY",
@@ -229,10 +229,10 @@
         },
         {
             "@id": "kb:sqlite_blob",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "54000"
@@ -253,7 +253,7 @@
                     ]
                 },
                 {
-                    "@type": "uco-observable:EncryptedStream",
+                    "@type": "uco-observable:EncryptedStreamFacet",
                     "uco-observable:encryptionMethod": "AES",
                     "uco-observable:encryptionMode": "CBC",
                     "uco-observable:encryptionKey": "whatsappKEY",
@@ -263,17 +263,17 @@
         },
         {
             "@id": "kb:relationship4",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:sqlite_blob",
             "uco-core:target": "kb:sqlite_database",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:SQLiteBlob",
+                    "@type": "uco-observable:SQLiteBlobFacet",
                     "uco-observable:tableName": "AttachmentTable",
                     "uco-observable:columnName": "data",
                     "uco-observable:rowCondition": "pk_id == 5"
@@ -282,10 +282,10 @@
         },
         {
             "@id": "kb:sqlite_database",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:isDirectory": false,
                     "uco-observable:filePath": "/data/data/com.whatsapp/cache/messages.db",
@@ -309,7 +309,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 546000
@@ -334,27 +334,27 @@
         },
         {
             "@id": "kb:relationship5",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:sqlite_database",
             "uco-core:target": "kb:image_partition",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/com.whatsapp/cache/messages.db"
                 }
             ]
         },
         {
             "@id": "kb:image_partition",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "45654000"
@@ -377,27 +377,27 @@
         },
         {
             "@id": "kb:relationship6",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:image_partition",
             "uco-core:target": "kb:android_image",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:DiskPartition",
+                    "@type": "uco-observable:DiskPartitionFacet",
                     "uco-observable:partitionID": 3
                 }
             ]
         },
         {
             "@id": "kb:android_image",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:isDirectory": false,
                     "uco-observable:extension": "img",
@@ -415,7 +415,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "45654000"
@@ -438,21 +438,21 @@
         },
         {
             "@id": "kb:relationship7",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:android_image",
             "uco-core:target": "kb:forensic_lab_computer1",
             "uco-core:kindOfRelationship": "stored-on",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "C:/input_devices/DFL-20140712-001C.img"
                 }
             ]
         },
         {
             "@id": "kb:relationship8",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:android_image",
             "uco-core:target": "kb:android_device1",
             "uco-core:kindOfRelationship": "forensic_image_of",
@@ -460,24 +460,24 @@
         },
         {
             "@id": "kb:forensic_lab_computer1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": "kb:forensic_lab1",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Dell",
                     "uco-observable:model": "Inspiron 5000",
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
-                    "@type": "uco-observable:OperatingSystem",
+                    "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Windows 7 Ultimate Edition",
                     "uco-observable:manufacturer": "Microsoft",
                     "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
                 },
                 {
-                    "@type": "uco-observable:ComputerSpecification",
+                    "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
                     "uco-observable:cpuFamily": "Intel Pentium i7",
                     "uco-observable:totalRam": {
@@ -494,24 +494,24 @@
         },
         {
             "@id": "kb:android_device1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
             "uco-observable:location": "kb:forensic_lab1",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Samsung",
                     "uco-observable:model": "I9500 Galaxy S4",
                     "uco-observable:serialNumber": "123456SAM"
                 },
                 {
-                    "@type": "uco-observable:OperatingSystem",
+                    "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
                     "uco-observable:manufacturer": "Google",
                     "uco-observable:version": "4.2.2"
                 },
                 {
-                    "@type": "uco-observable:ComputerSpecification",
+                    "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:processorArchitecture": "Octa-core",
                     "uco-observable:cpuFamily": "Exynos 5410 Octa",
                     "uco-observable:gpuFamily": "Power VR SGX544MP3",

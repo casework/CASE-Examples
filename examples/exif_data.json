@@ -14,10 +14,10 @@
     "@graph": [
         {
             "@id": "kb:camera1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Canon",
                     "uco-observable:model": "PowerShot SX540"
                 }
@@ -25,26 +25,26 @@
         },
         {
             "@id": "kb:relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:digital_photograph1",
             "uco-core:target": "kb:device_partition3",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/sdcard/IMG_0123.jpg"
                 }
             ]
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:fileName": "IMG_0123.jpg",
                     "uco-observable:filePath": "/sdcard/IMG_0123.jpg",
@@ -55,7 +55,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
@@ -79,14 +79,14 @@
                     ]
                 },
                 {
-                    "@type": "uco-observable:RasterPicture",
+                    "@type": "uco-observable:RasterPictureFacet",
                     "uco-observable:pictureType": "jpg",
                     "uco-observable:pictureHeight": 12345,
                     "uco-observable:pictureWidth": 12345,
                     "uco-observable:bitsPerPixel": 2
                 },
                 {
-                    "@type": "uco-observable:EXIF",
+                    "@type": "uco-observable:EXIFFacet",
                     "uco-observable:exifData": {
                         "@type": "uco-types:ControlledDictionary",
                         "uco-types:entry": [

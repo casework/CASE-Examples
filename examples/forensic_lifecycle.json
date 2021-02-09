@@ -374,7 +374,7 @@
                     "uco-action:environment": "kb:forensic_lab_computer1"
                 },
                 {
-                    "@type": "uco-observable:Process",
+                    "@type": "uco-observable:ProcessFacet",
                     "uco-observable:arguments": "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log",
                     "uco-observable:pid": 1234,
                     "uco-observable:currentWorkingDirectory": "C:\\exams",
