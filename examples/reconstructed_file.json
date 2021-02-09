@@ -22,7 +22,7 @@
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
@@ -40,7 +40,7 @@
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
@@ -58,7 +58,7 @@
                 "@value": "Has_Fragment"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
@@ -69,7 +69,7 @@
         {
             "@id": "kb:reconstructed_file",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
@@ -103,7 +103,7 @@
         {
             "@id": "kb:data_piece0",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
@@ -137,7 +137,7 @@
         {
             "@id": "kb:data_piece1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
@@ -171,7 +171,7 @@
         {
             "@id": "kb:data_piece2",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
@@ -212,7 +212,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
@@ -233,7 +233,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
@@ -254,7 +254,7 @@
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 57984,
@@ -268,7 +268,7 @@
         {
             "@id": "kb:android_image",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NTFS",
@@ -328,7 +328,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:role4",
@@ -361,7 +361,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:role4",

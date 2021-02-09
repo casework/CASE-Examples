@@ -15,7 +15,7 @@
         {
             "@id": "kb:camera1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Canon",
@@ -32,7 +32,7 @@
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/sdcard/IMG_0123.jpg"
@@ -42,7 +42,7 @@
         {
             "@id": "kb:digital_photograph1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
@@ -143,7 +143,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:instrument": "kb:camera1",
@@ -177,7 +177,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T18:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": "kb:examiner1",

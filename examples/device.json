@@ -13,7 +13,7 @@
             "@id": "kb:forensic_lab_computer1",
             "@type": "uco-observable:ObservableObject",
             "location": "kb:forensic_lab1",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Dell",

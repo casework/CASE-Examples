@@ -11,7 +11,7 @@
         {
             "@id": "kb:os1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
@@ -23,7 +23,7 @@
         {
             "@id": "kb:application1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationFacet",
                     "uco-core:name": "WhatsApp",
@@ -37,7 +37,7 @@
         {
             "@id": "kb:account1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": "kb:application1"
@@ -47,7 +47,7 @@
         {
             "@id": "kb:account2",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": "kb:application1"
@@ -57,7 +57,7 @@
         {
             "@id": "kb:account3",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": "kb:application2"
@@ -67,7 +67,7 @@
         {
             "@id": "kb:account4",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": "kb:application2"
@@ -77,7 +77,7 @@
         {
             "@id": "kb:thread1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
@@ -110,7 +110,7 @@
         {
             "@id": "kb:thread2",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
@@ -135,7 +135,7 @@
         {
             "@id": "kb:post1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": "kb:application2",
@@ -150,7 +150,7 @@
         {
             "@id": "kb:message1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": "kb:application1",
@@ -173,7 +173,7 @@
             "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AttachmentFacet",
                     "uco-observable:url": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
@@ -187,7 +187,7 @@
             "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AttachmentFacet",
                     "uco-observable:url": "http://whatsapp.com/attachments/thumbnails/1.png"
@@ -201,7 +201,7 @@
             "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AttachmentFacet",
                     "uco-observable:url": "http://whatsapp.com/attachments/1.png"
