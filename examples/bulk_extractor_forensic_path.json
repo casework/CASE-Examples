@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
@@ -40,8 +40,12 @@
         {
             "@id": "kb:relationship0",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:extracted_email_address0",
-            "uco-core:target": "kb:decompressed_gzip0",
+            "uco-core:source": {
+                "@id": "kb:extracted_email_address0"
+            },
+            "uco-core:target": {
+                "@id": "kb:decompressed_gzip0"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -89,8 +93,12 @@
         {
             "@id": "kb:relationship1",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:extracted_email_address1",
-            "uco-core:target": "kb:decompressed_gzip0",
+            "uco-core:source": {
+                "@id": "kb:extracted_email_address1"
+            },
+            "uco-core:target": {
+                "@id": "kb:decompressed_gzip0"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -139,8 +147,12 @@
         {
             "@id": "kb:relationship3",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:decompressed_gzip0",
-            "uco-core:target": "kb:compressed_gzip0",
+            "uco-core:source": {
+                "@id": "kb:decompressed_gzip0"
+            },
+            "uco-core:target": {
+                "@id": "kb:compressed_gzip0"
+            },
             "uco-core:kindOfRelationship": "decompressed-from",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
@@ -180,8 +192,12 @@
         {
             "@id": "kb:relationship4",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:compressed_gzip0",
-            "uco-core:target": "kb:decompressed_gzip1",
+            "uco-core:source": {
+                "@id": "kb:compressed_gzip0"
+            },
+            "uco-core:target": {
+                "@id": "kb:decompressed_gzip1"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -228,8 +244,12 @@
         {
             "@id": "kb:relationship5",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:decompressed_gzip1",
-            "uco-core:target": "kb:compressed_gzip1",
+            "uco-core:source": {
+                "@id": "kb:decompressed_gzip1"
+            },
+            "uco-core:target": {
+                "@id": "kb:compressed_gzip1"
+            },
             "uco-core:kindOfRelationship": "decompressed-from",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
@@ -269,8 +289,12 @@
         {
             "@id": "kb:relationship6",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:compressed_gzip1",
-            "uco-core:target": "kb:disk_image",
+            "uco-core:source": {
+                "@id": "kb:compressed_gzip1"
+            },
+            "uco-core:target": {
+                "@id": "kb:disk_image"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"

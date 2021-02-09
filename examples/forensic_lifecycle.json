@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
@@ -21,23 +21,33 @@
             "olo:slot": [
                 {
                     "olo:index": 1,
-                    "olo:item": "kb:phase1"
+                    "olo:item": {
+                        "@id": "kb:phase1"
+                    }
                 },
                 {
                     "olo:index": 2,
-                    "olo:item": "kb:phase2"
+                    "olo:item": {
+                        "@id": "kb:phase2"
+                    }
                 },
                 {
                     "olo:index": 3,
-                    "olo:item": "kb:phase3"
+                    "olo:item": {
+                        "@id": "kb:phase3"
+                    }
                 },
                 {
                     "olo:index": 4,
-                    "olo:item": "kb:phase4"
+                    "olo:item": {
+                        "@id": "kb:phase4"
+                    }
                 },
                 {
                     "olo:index": 5,
-                    "olo:item": "kb:phase5"
+                    "olo:item": {
+                        "@id": "kb:phase5"
+                    }
                 }
             ]
         },
@@ -82,79 +92,225 @@
                 "Pornography/Obscene Material"
             ],
             "uco-core:object": [
-                "kb:investigator1",
-                "kb:examiner1",
-                "kb:examiner2",
-                "kb:subject1",
-                "kb:victim2",
-                "kb:forensic_action1",
-                "kb:lifecycle_phase1",
-                "kb:annotation2",
-                "kb:forensic_action2",
-                "kb:lifecycle_phase2",
-                "kb:annotation3",
-                "kb:forensic_action3",
-                "kb:lifecycle_phase3",
-                "kb:annotation4",
-                "kb:forensic_action4",
-                "kb:lifecycle_phase4",
-                "kb:annotation5",
-                "kb:forensic_action5",
-                "kb:lifecycle_phase5",
-                "kb:annotation6",
-                "kb:forensic_action6",
-                "kb:provenance_record1",
-                "kb:provenance_record2",
-                "kb:provenance_record3",
-                "kb:provenance_record4",
-                "kb:provenance_record5",
-                "kb:provenance_record6",
-                "kb:provenance_record7",
-                "kb:provenance_record8",
-                "kb:provenance_record9",
-                "kb:provenance_record10",
-                "kb:provenance_record11",
-                "kb:provenance_record12",
-                "kb:provenance_record13",
-                "kb:provenance_record14",
-                "kb:provenance_record15",
-                "kb:provenance_record16",
-                "kb:provenance_record17",
-                "kb:provenance_record18",
-                "kb:provenance_record19",
-                "kb:provenance_record20",
-                "kb:provenance_record21",
-                "kb:device1",
-                "kb:sd_card1",
-                "kb:android_image",
-                "kb:sd_card1_image",
-                "kb:chat_messages_report",
-                "kb:plaso_storage_file",
-                "kb:os1",
-                "kb:attachment_file",
-                "kb:message_database",
-                "kb:thumbnail_database",
-                "kb:image_partition",
-                "kb:message_action1",
-                "kb:thread1",
-                "kb:message1",
-                "kb:location1",
-                "kb:account1",
-                "kb:account2",
-                "kb:decoded_blob",
-                "kb:decrypted_blob",
-                "kb:sqlite_blob",
-                "kb:tool1",
-                "kb:tool2",
-                "kb:tool3",
-                "kb:fedex_dropoff_location1",
-                "kb:forensic_lab1",
-                "kb:forensic_lab_computer1",
-                "kb:config_file",
-                "kb:log_file",
-                "kb:windows_registries_report",
-                "kb:parser1",
-                "kb:attachment_file"
+                {
+                    "@id": "kb:investigator1"
+                },
+                {
+                    "@id": "kb:examiner1"
+                },
+                {
+                    "@id": "kb:examiner2"
+                },
+                {
+                    "@id": "kb:subject1"
+                },
+                {
+                    "@id": "kb:victim2"
+                },
+                {
+                    "@id": "kb:forensic_action1"
+                },
+                {
+                    "@id": "kb:lifecycle_phase1"
+                },
+                {
+                    "@id": "kb:annotation2"
+                },
+                {
+                    "@id": "kb:forensic_action2"
+                },
+                {
+                    "@id": "kb:lifecycle_phase2"
+                },
+                {
+                    "@id": "kb:annotation3"
+                },
+                {
+                    "@id": "kb:forensic_action3"
+                },
+                {
+                    "@id": "kb:lifecycle_phase3"
+                },
+                {
+                    "@id": "kb:annotation4"
+                },
+                {
+                    "@id": "kb:forensic_action4"
+                },
+                {
+                    "@id": "kb:lifecycle_phase4"
+                },
+                {
+                    "@id": "kb:annotation5"
+                },
+                {
+                    "@id": "kb:forensic_action5"
+                },
+                {
+                    "@id": "kb:lifecycle_phase5"
+                },
+                {
+                    "@id": "kb:annotation6"
+                },
+                {
+                    "@id": "kb:forensic_action6"
+                },
+                {
+                    "@id": "kb:provenance_record1"
+                },
+                {
+                    "@id": "kb:provenance_record2"
+                },
+                {
+                    "@id": "kb:provenance_record3"
+                },
+                {
+                    "@id": "kb:provenance_record4"
+                },
+                {
+                    "@id": "kb:provenance_record5"
+                },
+                {
+                    "@id": "kb:provenance_record6"
+                },
+                {
+                    "@id": "kb:provenance_record7"
+                },
+                {
+                    "@id": "kb:provenance_record8"
+                },
+                {
+                    "@id": "kb:provenance_record9"
+                },
+                {
+                    "@id": "kb:provenance_record10"
+                },
+                {
+                    "@id": "kb:provenance_record11"
+                },
+                {
+                    "@id": "kb:provenance_record12"
+                },
+                {
+                    "@id": "kb:provenance_record13"
+                },
+                {
+                    "@id": "kb:provenance_record14"
+                },
+                {
+                    "@id": "kb:provenance_record15"
+                },
+                {
+                    "@id": "kb:provenance_record16"
+                },
+                {
+                    "@id": "kb:provenance_record17"
+                },
+                {
+                    "@id": "kb:provenance_record18"
+                },
+                {
+                    "@id": "kb:provenance_record19"
+                },
+                {
+                    "@id": "kb:provenance_record20"
+                },
+                {
+                    "@id": "kb:provenance_record21"
+                },
+                {
+                    "@id": "kb:device1"
+                },
+                {
+                    "@id": "kb:sd_card1"
+                },
+                {
+                    "@id": "kb:android_image"
+                },
+                {
+                    "@id": "kb:sd_card1_image"
+                },
+                {
+                    "@id": "kb:chat_messages_report"
+                },
+                {
+                    "@id": "kb:plaso_storage_file"
+                },
+                {
+                    "@id": "kb:os1"
+                },
+                {
+                    "@id": "kb:attachment_file"
+                },
+                {
+                    "@id": "kb:message_database"
+                },
+                {
+                    "@id": "kb:thumbnail_database"
+                },
+                {
+                    "@id": "kb:image_partition"
+                },
+                {
+                    "@id": "kb:message_action1"
+                },
+                {
+                    "@id": "kb:thread1"
+                },
+                {
+                    "@id": "kb:message1"
+                },
+                {
+                    "@id": "kb:location1"
+                },
+                {
+                    "@id": "kb:account1"
+                },
+                {
+                    "@id": "kb:account2"
+                },
+                {
+                    "@id": "kb:decoded_blob"
+                },
+                {
+                    "@id": "kb:decrypted_blob"
+                },
+                {
+                    "@id": "kb:sqlite_blob"
+                },
+                {
+                    "@id": "kb:tool1"
+                },
+                {
+                    "@id": "kb:tool2"
+                },
+                {
+                    "@id": "kb:tool3"
+                },
+                {
+                    "@id": "kb:fedex_dropoff_location1"
+                },
+                {
+                    "@id": "kb:forensic_lab1"
+                },
+                {
+                    "@id": "kb:forensic_lab_computer1"
+                },
+                {
+                    "@id": "kb:config_file"
+                },
+                {
+                    "@id": "kb:log_file"
+                },
+                {
+                    "@id": "kb:windows_registries_report"
+                },
+                {
+                    "@id": "kb:parser1"
+                },
+                {
+                    "@id": "kb:attachment_file"
+                }
             ]
         },
         {
@@ -172,9 +328,13 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:investigator1",
+                    "uco-action:performer": {
+                        "@id": "kb:investigator1"
+                    },
                     "uco-action:result": [
-                        "kb:provenance_record1"
+                        {
+                            "@id": "kb:provenance_record1"
+                        }
                     ]
                 }
             ]
@@ -182,9 +342,16 @@
         {
             "@id": "kb:lifecycle_phase1",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:forensic_action1",
-            "uco-core:target": "kb:phase1",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:source": {
+                "@id": "kb:forensic_action1"
+            },
+            "uco-core:target": {
+                "@id": "kb:phase1"
+            },
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -195,7 +362,9 @@
                 "forensic"
             ],
             "uco-core:object": [
-                "kb:forensic_action2"
+                {
+                    "@id": "kb:forensic_action2"
+                }
             ]
         },
         {
@@ -209,24 +378,41 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:examiner1",
+                    "uco-action:performer": {
+                        "@id": "kb:examiner1"
+                    },
                     "uco-action:object": [
-                        "kb:device1"
+                        {
+                            "@id": "kb:device1"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:provenance_record2",
-                        "kb:provenance_record3"
+                        {
+                            "@id": "kb:provenance_record2"
+                        },
+                        {
+                            "@id": "kb:provenance_record3"
+                        }
                     ],
-                    "uco-action:location": "kb:fedex_dropoff_location1"
+                    "uco-action:location": {
+                        "@id": "kb:fedex_dropoff_location1"
+                    }
                 }
             ]
         },
         {
             "@id": "kb:lifecycle_phase2",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:forensic_action2",
-            "uco-core:target": "kb:phase2",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:source": {
+                "@id": "kb:forensic_action2"
+            },
+            "uco-core:target": {
+                "@id": "kb:phase2"
+            },
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -234,10 +420,12 @@
             "@type": "uco-core:Annotation",
             "uco-core:description": "Make forensic image of suspect's cell phone",
             "uco-core:tag": [
-                "kb:forensic"
+                "forensic"
             ],
             "uco-core:object": [
-                "kb:forensic_action3"
+                {
+                    "@id": "kb:forensic_action3"
+                }
             ]
         },
         {
@@ -255,16 +443,28 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:examiner1",
-                    "uco-action:instrument": "kb:tool1",
+                    "uco-action:performer": {
+                        "@id": "kb:examiner1"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:tool1"
+                    },
                     "uco-action:object": [
-                        "kb:device1"
+                        {
+                            "@id": "kb:device1"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:provenance_record4"
+                        {
+                            "@id": "kb:provenance_record4"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 },
                 {
                     "@type": "acme:UFEDArguments",
@@ -276,9 +476,16 @@
         {
             "@id": "kb:lifecycle_phase3",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:forensic_action3",
-            "uco-core:target": "kb:phase2",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:source": {
+                "@id": "kb:forensic_action3"
+            },
+            "uco-core:target": {
+                "@id": "kb:phase2"
+            },
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -289,7 +496,9 @@
                 "forensic"
             ],
             "uco-core:object": [
-                "kb:forensic_action4"
+                {
+                    "@id": "kb:forensic_action4"
+                }
             ]
         },
         {
@@ -307,25 +516,44 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:examiner1",
-                    "uco-action:instrument": "kb:tool2",
+                    "uco-action:performer": {
+                        "@id": "kb:examiner1"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:tool2"
+                    },
                     "uco-action:object": [
-                        "kb:sd_card1"
+                        {
+                            "@id": "kb:sd_card1"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:provenance_record5"
+                        {
+                            "@id": "kb:provenance_record5"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 }
             ]
         },
         {
             "@id": "kb:lifecycle_phase4",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:forensic_action4",
-            "uco-core:target": "kb:phase2",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:source": {
+                "@id": "kb:forensic_action4"
+            },
+            "uco-core:target": {
+                "@id": "kb:phase2"
+            },
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -336,7 +564,9 @@
             ],
             "uco-core:description": "Run Plaso tool to find communications and multimedia exchanged between subject and victim.",
             "uco-core:object": [
-                "kb:forensic_action5"
+                {
+                    "@id": "kb:forensic_action5"
+                }
             ]
         },
         {
@@ -354,24 +584,52 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:examiner2",
-                    "uco-action:instrument": "kb:tool3",
+                    "uco-action:performer": {
+                        "@id": "kb:examiner2"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:tool3"
+                    },
                     "uco-action:object": [
-                        "kb:android_image",
-                        "kb:sd_card1_image"
+                        {
+                            "@id": "kb:android_image"
+                        },
+                        {
+                            "@id": "kb:sd_card1_image"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:provenance_record6",
-                        "kb:provenance_record7",
-                        "kb:provenance_record8",
-                        "kb:provenance_record9",
-                        "kb:provenance_record10",
-                        "kb:provenance_record11",
-                        "kb:provenance_record12",
-                        "kb:forensic_action6"
+                        {
+                            "@id": "kb:provenance_record6"
+                        },
+                        {
+                            "@id": "kb:provenance_record7"
+                        },
+                        {
+                            "@id": "kb:provenance_record8"
+                        },
+                        {
+                            "@id": "kb:provenance_record9"
+                        },
+                        {
+                            "@id": "kb:provenance_record10"
+                        },
+                        {
+                            "@id": "kb:provenance_record11"
+                        },
+                        {
+                            "@id": "kb:provenance_record12"
+                        },
+                        {
+                            "@id": "kb:forensic_action6"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 },
                 {
                     "@type": "uco-observable:ProcessFacet",
@@ -382,7 +640,9 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-20T17:59:43.25Z"
                     },
-                    "uco-observable:creatorUser": "kb:role4",
+                    "uco-observable:creatorUser": {
+                        "@id": "kb:role4"
+                    },
                     "uco-observable:environmentVariables": {
                         "@type": "uco-types:Dictionary",
                         "uco-types:entry": [
@@ -397,23 +657,42 @@
                 },
                 {
                     "@type": "acme:PlasoArguments",
-                    "acme:input": "kb:android_image",
-                    "acme:configFile": "config_file",
+                    "acme:input": {
+                        "@id": "kb:android_image"
+                    },
+                    "acme:configFile": {
+                        "@id": "kb:config_file"
+                    },
                     "acme:analysisReport": [
-                        "chat_messages_report",
-                        "windows_registries_report"
+                        {
+                            "@id": "kb:chat_messages_report"
+                        },
+                        {
+                            "@id": "kb:windows_registries_report"
+                        }
                     ],
-                    "acme:storageFile": "plaso_storage_file",
-                    "acme:logFile": "log_file"
+                    "acme:storageFile": {
+                        "@id": "kb:plaso_storage_file"
+                    },
+                    "acme:logFile": {
+                        "@id": "kb:log_file"
+                    }
                 }
             ]
         },
         {
             "@id": "kb:lifecycle_phase5",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:forensic_action5",
-            "uco-core:target": "kb:phase3",
-            "uco-core:kindOfRelationship": "uco-vocabulary:Mapped_into",
+            "uco-core:source": {
+                "@id": "kb:forensic_action5"
+            },
+            "uco-core:target": {
+                "@id": "kb:phase3"
+            },
+            "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@value": "Mapped_Into"
+            },
             "uco-core:isDirectional": true
         },
         {
@@ -424,7 +703,9 @@
                 "forensic"
             ],
             "uco-core:object": [
-                "kb:forensic_action6"
+                {
+                    "@id": "kb:forensic_action6"
+                }
             ]
         },
         {
@@ -442,33 +723,71 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:examiner2",
-                    "uco-action:instrument": "kb:parser1",
+                    "uco-action:performer": {
+                        "@id": "kb:examiner2"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:parser1"
+                    },
                     "uco-action:object": [
-                        "kb:provenance_record9",
-                        "kb:provenance_record10",
-                        "kb:provenance_record11"
+                        {
+                            "@id": "kb:provenance_record9"
+                        },
+                        {
+                            "@id": "kb:provenance_record10"
+                        },
+                        {
+                            "@id": "kb:provenance_record11"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:provenance_record13",
-                        "kb:provenance_record14",
-                        "kb:provenance_record15",
-                        "kb:provenance_record16",
-                        "kb:provenance_record17",
-                        "kb:provenance_record18",
-                        "kb:provenance_record19",
-                        "kb:provenance_record20",
-                        "kb:provenance_record21"
+                        {
+                            "@id": "kb:provenance_record13"
+                        },
+                        {
+                            "@id": "kb:provenance_record14"
+                        },
+                        {
+                            "@id": "kb:provenance_record15"
+                        },
+                        {
+                            "@id": "kb:provenance_record16"
+                        },
+                        {
+                            "@id": "kb:provenance_record17"
+                        },
+                        {
+                            "@id": "kb:provenance_record18"
+                        },
+                        {
+                            "@id": "kb:provenance_record19"
+                        },
+                        {
+                            "@id": "kb:provenance_record20"
+                        },
+                        {
+                            "@id": "kb:provenance_record21"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 },
                 {
                     "@type": "acme:PlasoParserArguments",
-                    "acme:parsedFile": "message_database",
+                    "acme:parsedFile": {
+                        "@id": "kb:message_database"
+                    },
                     "acme:attachmentFile": [
-                        "thumbnail_database",
-                        "attachment_file"
+                        {
+                            "@id": "kb:thumbnail_database"
+                        },
+                        {
+                            "@id": "kb:attachment_file"
+                        }
                     ],
                     "acme:fullQueryMatch": true,
                     "acme:query": "SELECT sender, recipients, body from MessageTable"
@@ -480,147 +799,189 @@
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android Smartphone",
             "case-investigation:exhibitNumber": "ACME-676553402357",
-            "uco-core:object": "kb:device1"
+            "uco-core:object": {
+                "@id": "kb:device1"
+            }
         },
         {
             "@id": "kb:provenance_record2",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android Smartphone",
             "case-investigation:exhibitNumber": "DFL-20140712-001A",
-            "uco-core:object": "kb:device1"
+            "uco-core:object": {
+                "@id": "kb:device1"
+            }
         },
         {
             "@id": "kb:provenance_record3",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "SD Card",
             "case-investigation:exhibitNumber": "DFL-20140712-001B",
-            "uco-core:object": "kb:sd_card1"
+            "uco-core:object": {
+                "@id": "kb:sd_card1"
+            }
         },
         {
             "@id": "kb:provenance_record4",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Forensic image of Android Smartphone",
             "case-investigation:exhibitNumber": "DFL-20140712-001C",
-            "uco-core:object": "kb:android_image"
+            "uco-core:object": {
+                "@id": "kb:android_image"
+            }
         },
         {
             "@id": "kb:provenance_record5",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Forensic image of SD Card",
             "case-investigation:exhibitNumber": "DFL-20140712-001D",
-            "uco-core:object": "kb:sd_card1_image"
+            "uco-core:object": {
+                "@id": "kb:sd_card1_image"
+            }
         },
         {
             "@id": "kb:provenance_record6",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Chat Messages Report",
             "case-investigation:exhibitNumber": "DFL-20140712-001E",
-            "uco-core:object": "kb:chat_messages_report"
+            "uco-core:object": {
+                "@id": "kb:chat_messages_report"
+            }
         },
         {
             "@id": "kb:provenance_record7",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Plaso Storage File",
             "case-investigation:exhibitNumber": "DFL-20140712-001F",
-            "uco-core:object": "kb:plaso_storage_file"
+            "uco-core:object": {
+                "@id": "kb:plaso_storage_file"
+            }
         },
         {
             "@id": "kb:provenance_record8",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android OS Information",
             "case-investigation:exhibitNumber": "DFL-20140712-0020",
-            "uco-core:object": "kb:os1"
+            "uco-core:object": {
+                "@id": "kb:os1"
+            }
         },
         {
             "@id": "kb:provenance_record9",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Contraband photograph",
             "case-investigation:exhibitNumber": "DFL-20140712-0021",
-            "uco-core:object": "kb:attachment_file"
+            "uco-core:object": {
+                "@id": "kb:attachment_file"
+            }
         },
         {
             "@id": "kb:provenance_record10",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp message database",
             "case-investigation:exhibitNumber": "DFL-20140712-0022",
-            "uco-core:object": "kb:message_database"
+            "uco-core:object": {
+                "@id": "kb:message_database"
+            }
         },
         {
             "@id": "kb:provenance_record11",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp thumbnail database",
             "case-investigation:exhibitNumber": "DFL-20140712-0023",
-            "uco-core:object": "kb:thumbnail_database"
+            "uco-core:object": {
+                "@id": "kb:thumbnail_database"
+            }
         },
         {
             "@id": "kb:provenance_record12",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Android data partition",
             "case-investigation:exhibitNumber": "DFL-20140712-0024",
-            "uco-core:object": "kb:image_partition"
+            "uco-core:object": {
+                "@id": "kb:image_partition"
+            }
         },
         {
             "@id": "kb:provenance_record13",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp message being sent from subject to victim",
             "case-investigation:exhibitNumber": "DFL-20140712-0025",
-            "uco-core:object": "kb:message_action1"
+            "uco-core:object": {
+                "@id": "kb:message_action1"
+            }
         },
         {
             "@id": "kb:provenance_record14",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp chat message thread between subject and victim",
             "case-investigation:exhibitNumber": "DFL-20140712-0026",
-            "uco-core:object": "kb:thread1"
+            "uco-core:object": {
+                "@id": "kb:thread1"
+            }
         },
         {
             "@id": "kb:provenance_record15",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "WhatsApp chat message containing contraband attachment",
             "case-investigation:exhibitNumber": "DFL-20140712-0027",
-            "uco-core:object": "kb:message1"
+            "uco-core:object": {
+                "@id": "kb:message1"
+            }
         },
         {
             "@id": "kb:provenance_record16",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Location of subject when using WhatsApp",
             "case-investigation:exhibitNumber": "DFL-20140712-0028",
-            "uco-core:object": "kb:location1"
+            "uco-core:object": {
+                "@id": "kb:location1"
+            }
         },
         {
             "@id": "kb:provenance_record17",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Subject's WhatsApp account",
             "case-investigation:exhibitNumber": "DFL-20140712-0029",
-            "uco-core:object": "kb:account1"
+            "uco-core:object": {
+                "@id": "kb:account1"
+            }
         },
         {
             "@id": "kb:provenance_record18",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Victim's WhatsApp account",
             "case-investigation:exhibitNumber": "DFL-20140712-002A",
-            "uco-core:object": "kb:account2"
+            "uco-core:object": {
+                "@id": "kb:account2"
+            }
         },
         {
             "@id": "kb:provenance_record19",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Thumbnail of contraband picture",
             "case-investigation:exhibitNumber": "DFL-20140712-002B",
-            "uco-core:object": "kb:decoded_blob"
+            "uco-core:object": {
+                "@id": "kb:decoded_blob"
+            }
         },
         {
             "@id": "kb:provenance_record20",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Encoded thumbnail of contraband picture",
             "case-investigation:exhibitNumber": "DFL-20140712-002C",
-            "uco-core:object": "kb:decrypted_blob"
+            "uco-core:object": {
+                "@id": "kb:decrypted_blob"
+            }
         },
         {
             "@id": "kb:provenance_record21",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Encrypted thumbnail of contraband picture",
             "case-investigation:exhibitNumber": "DFL-20140712-002D",
-            "uco-core:object": "kb:sqlite_blob"
+            "uco-core:object": {
+                "@id": "kb:sqlite_blob"
+            }
         }
     ]
 }

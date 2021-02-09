@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -43,8 +43,12 @@
         {
             "@id": "kb:relationship0",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:chunk_of_data",
-            "uco-core:target": "kb:decoded_attachment",
+            "uco-core:source": {
+                "@id": "kb:chunk_of_data"
+            },
+            "uco-core:target": {
+                "@id": "kb:decoded_attachment"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -105,8 +109,12 @@
         {
             "@id": "kb:relationship1",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:decoded_attachment",
-            "uco-core:target": "kb:tar_archive_file",
+            "uco-core:source": {
+                "@id": "kb:decoded_attachment"
+            },
+            "uco-core:target": {
+                "@id": "kb:tar_archive_file"
+            },
             "uco-core:kindOfRelationship": "decoded-from",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
@@ -167,8 +175,12 @@
         {
             "@id": "kb:relationship2",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:tar_archive_file",
-            "uco-core:target": "kb:decrypted_blob",
+            "uco-core:source": {
+                "@id": "kb:tar_archive_file"
+            },
+            "uco-core:target": {
+                "@id": "kb:decrypted_blob"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -213,8 +225,12 @@
         {
             "@id": "kb:relationship3",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:decrypted_blob",
-            "uco-core:target": "kb:sqlite_blob",
+            "uco-core:source": {
+                "@id": "kb:decrypted_blob"
+            },
+            "uco-core:target": {
+                "@id": "kb:sqlite_blob"
+            },
             "uco-core:kindOfRelationship": "decrypted-from",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
@@ -264,8 +280,12 @@
         {
             "@id": "kb:relationship4",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:sqlite_blob",
-            "uco-core:target": "kb:sqlite_database",
+            "uco-core:source": {
+                "@id": "kb:sqlite_blob"
+            },
+            "uco-core:target": {
+                "@id": "kb:sqlite_database"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -335,8 +355,12 @@
         {
             "@id": "kb:relationship5",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:sqlite_database",
-            "uco-core:target": "kb:image_partition",
+            "uco-core:source": {
+                "@id": "kb:sqlite_database"
+            },
+            "uco-core:target": {
+                "@id": "kb:image_partition"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -378,8 +402,12 @@
         {
             "@id": "kb:relationship6",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:image_partition",
-            "uco-core:target": "kb:android_image",
+            "uco-core:source": {
+                "@id": "kb:image_partition"
+            },
+            "uco-core:target": {
+                "@id": "kb:android_image"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -439,8 +467,12 @@
         {
             "@id": "kb:relationship7",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:android_image",
-            "uco-core:target": "kb:forensic_lab_computer1",
+            "uco-core:source": {
+                "@id": "kb:android_image"
+            },
+            "uco-core:target": {
+                "@id": "kb:forensic_lab_computer1"
+            },
             "uco-core:kindOfRelationship": "stored-on",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
@@ -453,8 +485,12 @@
         {
             "@id": "kb:relationship8",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:android_image",
-            "uco-core:target": "kb:android_device1",
+            "uco-core:source": {
+                "@id": "kb:android_image"
+            },
+            "uco-core:target": {
+                "@id": "kb:android_device1"
+            },
             "uco-core:kindOfRelationship": "forensic_image_of",
             "uco-core:isDirectional": true
         },
@@ -462,7 +498,9 @@
             "@id": "kb:forensic_lab_computer1",
             "@type": "uco-observable:ObservableObject",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
-            "uco-observable:location": "kb:forensic_lab1",
+            "uco-observable:location": {
+                "@id": "kb:forensic_lab1"
+            },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -496,7 +534,9 @@
             "@id": "kb:android_device1",
             "@type": "uco-observable:ObservableObject",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
-            "uco-observable:location": "kb:forensic_lab1",
+            "uco-observable:location": {
+                "@id": "kb:forensic_lab1"
+            },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",

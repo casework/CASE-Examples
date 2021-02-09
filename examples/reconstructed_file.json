@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "case-investigation": "https://caseontology.org/ontology/case/investigation#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
@@ -15,8 +15,12 @@
         {
             "@id": "kb:relationship0",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:reconstructed_file",
-            "uco-core:target": "kb:data_piece0",
+            "uco-core:source": {
+                "@id": "kb:reconstructed_file"
+            },
+            "uco-core:target": {
+                "@id": "kb:data_piece0"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Has_Fragment"
@@ -33,8 +37,12 @@
         {
             "@id": "kb:relationship1",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:reconstructed_file",
-            "uco-core:target": "kb:data_piece1",
+            "uco-core:source": {
+                "@id": "kb:reconstructed_file"
+            },
+            "uco-core:target": {
+                "@id": "kb:data_piece1"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Has_Fragment"
@@ -51,8 +59,12 @@
         {
             "@id": "kb:relationship2",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:reconstructed_file",
-            "uco-core:target": "kb:data_piece2",
+            "uco-core:source": {
+                "@id": "kb:reconstructed_file"
+            },
+            "uco-core:target": {
+                "@id": "kb:data_piece2"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Has_Fragment"
@@ -205,8 +217,12 @@
         {
             "@id": "kb:relationship3",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:data_piece1",
-            "uco-core:target": "kb:android_image",
+            "uco-core:source": {
+                "@id": "kb:data_piece1"
+            },
+            "uco-core:target": {
+                "@id": "kb:android_image"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -226,8 +242,12 @@
         {
             "@id": "kb:relationship4",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:data_piece1",
-            "uco-core:target": "kb:android_image",
+            "uco-core:source": {
+                "@id": "kb:data_piece1"
+            },
+            "uco-core:target": {
+                "@id": "kb:android_image"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -247,8 +267,12 @@
         {
             "@id": "kb:relationship5",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:data_piece2",
-            "uco-core:target": "kb:android_image",
+            "uco-core:source": {
+                "@id": "kb:data_piece2"
+            },
+            "uco-core:target": {
+                "@id": "kb:android_image"
+            },
             "uco-core:kindOfRelationship": {
                 "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
@@ -331,20 +355,40 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:role4",
-                    "uco-action:instrument": "kb:carving_tool1",
+                    "uco-action:performer": {
+                        "@id": "kb:role4"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:carving_tool1"
+                    },
                     "uco-action:object": [
-                        "kb:android_image"
+                        {
+                            "@id": "kb:android_image"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:data_piece1",
-                        "kb:data_piece2",
-                        "kb:relationship3",
-                        "kb:relationship4",
-                        "kb:provenance_record2"
+                        {
+                            "@id": "kb:data_piece1"
+                        },
+                        {
+                            "@id": "kb:data_piece2"
+                        },
+                        {
+                            "@id": "kb:relationship3"
+                        },
+                        {
+                            "@id": "kb:relationship4"
+                        },
+                        {
+                            "@id": "kb:provenance_record2"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 }
             ]
         },
@@ -364,22 +408,46 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
-                    "uco-action:performer": "kb:role4",
-                    "uco-action:instrument": "kb:carving_tool1",
+                    "uco-action:performer": {
+                        "@id": "kb:role4"
+                    },
+                    "uco-action:instrument": {
+                        "@id": "kb:carving_tool1"
+                    },
                     "uco-action:object": [
-                        "kb:data_piece0",
-                        "kb:data_piece1",
-                        "kb:data_piece2"
+                        {
+                            "@id": "kb:data_piece0"
+                        },
+                        {
+                            "@id": "kb:data_piece1"
+                        },
+                        {
+                            "@id": "kb:data_piece2"
+                        }
                     ],
                     "uco-action:result": [
-                        "kb:reconstructed_file",
-                        "kb:relationship0",
-                        "kb:relationship1",
-                        "kb:relationship2",
-                        "kb:provenance_record1"
+                        {
+                            "@id": "kb:reconstructed_file"
+                        },
+                        {
+                            "@id": "kb:relationship0"
+                        },
+                        {
+                            "@id": "kb:relationship1"
+                        },
+                        {
+                            "@id": "kb:relationship2"
+                        },
+                        {
+                            "@id": "kb:provenance_record1"
+                        }
                     ],
-                    "uco-action:location": "kb:forensic_lab1",
-                    "uco-action:environment": "kb:forensic_lab_computer1"
+                    "uco-action:location": {
+                        "@id": "kb:forensic_lab1"
+                    },
+                    "uco-action:environment": {
+                        "@id": "kb:forensic_lab_computer1"
+                    }
                 }
             ]
         },
@@ -389,10 +457,18 @@
             "uco-core:description": "Reconstructed JPG File",
             "case-investigation:exhibitNumber": "ACME-676553402357-00",
             "uco-action:object": [
-                "kb:relationship0",
-                "kb:relationship1",
-                "kb:relationship2",
-                "kb:reconstructed_file"
+                {
+                    "@id": "kb:relationship0"
+                },
+                {
+                    "@id": "kb:relationship1"
+                },
+                {
+                    "@id": "kb:relationship2"
+                },
+                {
+                    "@id": "kb:reconstructed_file"
+                }
             ]
         },
         {
@@ -401,10 +477,18 @@
             "uco-core:description": "Carved data fragments",
             "case-investigation:exhibitNumber": "ACME-676553402357-01",
             "uco-action:object": [
-                "kb:data_piece1",
-                "kb:data_piece2",
-                "kb:relationship3",
-                "kb:relationship4"
+                {
+                    "@id": "kb:data_piece1"
+                },
+                {
+                    "@id": "kb:data_piece2"
+                },
+                {
+                    "@id": "kb:relationship3"
+                },
+                {
+                    "@id": "kb:relationship4"
+                }
             ]
         },
         {
@@ -413,7 +497,9 @@
             "uco-core:description": "JPG Header",
             "case-investigation:exhibitNumber": "ACME-676553402357-02",
             "uco-action:object": [
-                "kb:data_piece0"
+                {
+                    "@id": "kb:data_piece0"
+                }
             ]
         }
     ]

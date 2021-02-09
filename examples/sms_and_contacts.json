@@ -1,7 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
-        "kb": "http://example.org/kb#",
+        "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -15,11 +15,17 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
-                    "uco-observable:application": "kb:sms_application1",
+                    "uco-observable:application": {
+                        "@id": "kb:sms_application1"
+                    },
                     "uco-observable:messageText": "Yo dude! This is my new number.",
-                    "uco-observable:from": "kb:phone_account3",
+                    "uco-observable:from": {
+                        "@id": "kb:phone_account3"
+                    },
                     "uco-observable:to": [
-                        "kb:phone_account1"
+                        {
+                            "@id": "kb:phone_account1"
+                        }
                     ],
                     "uco-observable:sentTime": {
                         "@type": "xsd:dateTime",
@@ -44,13 +50,21 @@
                     "uco-observable:firstName": "John",
                     "uco-observable:lastName": "Doe",
                     "uco-observable:contactName": "BFF Joe",
-                    "uco-observable:application": "kb:android_phonebook1",
+                    "uco-observable:application": {
+                        "@id": "kb:android_phonebook1"
+                    },
                     "uco-observable:emailAddress": [
-                        "kb:email_account1"
+                        {
+                            "@id": "kb:email_account1"
+                        }
                     ],
                     "phoneNumber": [
-                        "kb:phone_account1",
-                        "kb:phone_account2"
+                        {
+                            "@id": "kb:phone_account1"
+                        },
+                        {
+                            "@id": "kb:phone_account2"
+                        }
                     ],
                     "screenName": []
                 }
@@ -59,9 +73,13 @@
         {
             "@id": "kb:associated-account1",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:contact1",
+            "uco-core:source": {
+                "@id": "kb:contact1"
+            },
             "uco-core:target": [
-                "kb:phone_account1"
+                {
+                    "@id": "kb:phone_account1"
+                }
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
@@ -69,9 +87,13 @@
         {
             "@id": "kb:associated-account2",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:contact1",
+            "uco-core:source": {
+                "@id": "kb:contact1"
+            },
             "uco-core:target": [
-                "kb:phone_account2"
+                {
+                    "@id": "kb:phone_account2"
+                }
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
@@ -79,9 +101,13 @@
         {
             "@id": "kb:associated-account3",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-core:source": "kb:contact1",
+            "uco-core:source": {
+                "@id": "kb:contact1"
+            },
             "uco-core:target": [
-                "kb:email_account1"
+                {
+                    "@id": "kb:email_account1"
+                }
             ],
             "uco-core:kindOfRelationship": "has-account",
             "uco-core:isDirectional": true
@@ -155,7 +181,9 @@
                     "@type": "uco-observable:ApplicationFacet",
                     "uco-core:name": "Android Phonebook",
                     "uco-observable:applicationIdentifier": "com.android.providers.telephony",
-                    "uco-observable:operatingSystem": "kb:os1",
+                    "uco-observable:operatingSystem": {
+                        "@id": "kb:os1"
+                    },
                     "uco-observable:version": "2.3.4",
                     "uco-observable:numberOfLaunches": 323
                 }
