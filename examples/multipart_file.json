@@ -20,7 +20,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
                     "totalFragments": 3
                 }
@@ -35,7 +35,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
                     "totalFragments": 3
                 }
@@ -50,7 +50,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
                     "totalFragments": 3
                 }
@@ -61,7 +61,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -89,7 +89,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.001",
                     "uco-observable:modifiedTime": {
@@ -110,7 +110,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -138,7 +138,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.002",
                     "uco-observable:modifiedTime": {
@@ -159,7 +159,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -187,7 +187,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.003",
                     "uco-observable:modifiedTime": {
@@ -208,7 +208,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -243,7 +243,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.001"
                 }
             ]
@@ -260,7 +260,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.002"
                 }
             ]
@@ -277,7 +277,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.003"
                 }
             ]

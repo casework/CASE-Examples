@@ -107,7 +107,7 @@
             },
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:28:42.0086110Z"
@@ -125,11 +125,11 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
                         "@type": "uco-observable:ObservableObject",
                         "uco-core:facets": {
-                            "@type": "uco-observable:URL",
+                            "@type": "uco-observable:URLFacet",
                             "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
                         }
                     },
@@ -174,11 +174,11 @@
             },
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:IPv4Address",
+                    "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:value": "10.10.10.2"
                 },
                 {
-                    "@type": "uco-observable:DomainName",
+                    "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "EOGHANMACBOOK"
                 }
             ]
@@ -193,11 +193,11 @@
             },
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:IPv4Address",
+                    "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:value": "10.10.10.50"
                 },
                 {
-                    "@type": "uco-observable:DomainName",
+                    "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "JHL-IDNOLHYSVIA"
                 }
             ]
@@ -212,7 +212,7 @@
             },
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:NetworkConnection",
+                    "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:29:25.6256260Z"
@@ -239,7 +239,7 @@
             },
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:NetworkConnection",
+                    "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:29:25.6264620Z"
@@ -266,7 +266,7 @@
             },
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:NetworkConnection",
+                    "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:29:25.6370540Z"

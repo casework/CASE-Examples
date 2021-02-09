@@ -12,12 +12,12 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": "kb:ATT",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:PhoneAccount",
+                    "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237771337"
                 }
             ]
@@ -27,12 +27,12 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": "kb:Sprint",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:PhoneAccount",
+                    "@type": "uco-observable:PhoneAccountFacet",
                     "identifier": "1234560000"
                 }
             ]
@@ -42,7 +42,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PhoneCall",
+                    "@type": "uco-observable:PhoneCallFacet",
                     "uco-observable:callType": "mobile",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",

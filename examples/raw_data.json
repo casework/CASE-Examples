@@ -14,7 +14,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
@@ -50,7 +50,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 224,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -64,7 +64,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
                     "uco-observable:mimeType": "image/jpg"
                 }

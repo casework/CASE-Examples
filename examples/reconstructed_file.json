@@ -24,7 +24,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
                     "uco-observable:totalFragments": 3
                 }
@@ -42,7 +42,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
                     "uco-observable:totalFragments": 3
                 }
@@ -60,7 +60,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
                     "uco-observable:totalFragments": 3
                 }
@@ -71,7 +71,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -105,7 +105,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -139,7 +139,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -173,7 +173,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
@@ -214,7 +214,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -235,7 +235,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -256,7 +256,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 57984,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -270,7 +270,7 @@
             "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:isDirectory": false,
                     "uco-observable:extension": "img",
@@ -294,7 +294,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 45654000
