@@ -17,7 +17,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -52,7 +52,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45,
                     "uco-observable:rangeSize": {
                         "@type": "xsd:long",
@@ -66,7 +66,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -111,7 +111,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:EncodedStream",
+                    "@type": "uco-observable:EncodedStreamFacet",
                     "uco-observable:encodingMethod": "BASE64"
                 }
             ]
@@ -121,7 +121,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "TAR",
                     "uco-observable:filePath": "/some/files/in/archive/attachment.jpg",
                     "uco-observable:accessedTime": {
@@ -138,7 +138,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 23000
@@ -159,7 +159,7 @@
                     ]
                 },
                 {
-                    "@type": "uco-observable:EncodedStream",
+                    "@type": "uco-observable:EncodedStreamFacet",
                     "uco-observable:encodingMethod": "BASE64"
                 }
             ]
@@ -176,7 +176,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/some/files/in/archive/attachment.jpg"
                 }
             ]
@@ -186,7 +186,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "23000"
@@ -219,7 +219,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:EncryptedStream",
+                    "@type": "uco-observable:EncryptedStreamFacet",
                     "uco-observable:encryptionMethod": "AES",
                     "uco-observable:encryptionMode": "CBC",
                     "uco-observable:encryptionKey": "whatsappKEY",
@@ -232,7 +232,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "54000"
@@ -253,7 +253,7 @@
                     ]
                 },
                 {
-                    "@type": "uco-observable:EncryptedStream",
+                    "@type": "uco-observable:EncryptedStreamFacet",
                     "uco-observable:encryptionMethod": "AES",
                     "uco-observable:encryptionMode": "CBC",
                     "uco-observable:encryptionKey": "whatsappKEY",
@@ -273,7 +273,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:SQLiteBlob",
+                    "@type": "uco-observable:SQLiteBlobFacet",
                     "uco-observable:tableName": "AttachmentTable",
                     "uco-observable:columnName": "data",
                     "uco-observable:rowCondition": "pk_id == 5"
@@ -285,7 +285,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:isDirectory": false,
                     "uco-observable:filePath": "/data/data/com.whatsapp/cache/messages.db",
@@ -309,7 +309,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 546000
@@ -344,7 +344,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/com.whatsapp/cache/messages.db"
                 }
             ]
@@ -354,7 +354,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "45654000"
@@ -387,7 +387,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DiskPartition",
+                    "@type": "uco-observable:DiskPartitionFacet",
                     "uco-observable:partitionID": 3
                 }
             ]
@@ -397,7 +397,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:isDirectory": false,
                     "uco-observable:extension": "img",
@@ -415,7 +415,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "45654000"
@@ -445,7 +445,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "C:/input_devices/DFL-20140712-001C.img"
                 }
             ]
@@ -465,19 +465,19 @@
             "uco-observable:location": "kb:forensic_lab1",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Dell",
                     "uco-observable:model": "Inspiron 5000",
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
-                    "@type": "uco-observable:OperatingSystem",
+                    "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Windows 7 Ultimate Edition",
                     "uco-observable:manufacturer": "Microsoft",
                     "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
                 },
                 {
-                    "@type": "uco-observable:ComputerSpecification",
+                    "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
                     "uco-observable:cpuFamily": "Intel Pentium i7",
                     "uco-observable:totalRam": {
@@ -499,19 +499,19 @@
             "uco-observable:location": "kb:forensic_lab1",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Samsung",
                     "uco-observable:model": "I9500 Galaxy S4",
                     "uco-observable:serialNumber": "123456SAM"
                 },
                 {
-                    "@type": "uco-observable:OperatingSystem",
+                    "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
                     "uco-observable:manufacturer": "Google",
                     "uco-observable:version": "4.2.2"
                 },
                 {
-                    "@type": "uco-observable:ComputerSpecification",
+                    "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:processorArchitecture": "Octa-core",
                     "uco-observable:cpuFamily": "Exynos 5410 Octa",
                     "uco-observable:gpuFamily": "Power VR SGX544MP3",

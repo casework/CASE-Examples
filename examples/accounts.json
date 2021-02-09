@@ -62,12 +62,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "1235556677@facebook.net",
                     "uco-observable:accountIssuer": "kb:facebook_org"
                 },
                 {
-                    "@type": "uco-observable:DigitalAccount",
+                    "@type": "uco-observable:DigitalAccountFacet",
                     "uco-observable:accountLogin": "xXWillyRocksXx",
                     "uco-observable:firstLoginTime": {
                         "@type": "xsd:dateTime",
@@ -80,7 +80,7 @@
                     "uco-observable:displayName": "WILLY THE KID"
                 },
                 {
-                    "@type": "uco-observable:AccountAuthentication",
+                    "@type": "uco-observable:AccountAuthenticationFacet",
                     "uco-observable:password": "123secretpassword456",
                     "uco-observable:passwordLastChanged": {
                         "@type": "xsd:dateTime",
@@ -88,7 +88,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ApplicationAccount",
+                    "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": "kb:application1"
                 },
                 {
@@ -120,7 +120,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "willyROX@gmail.com",
                     "uco-observable:accountIssuer": "kb:google_org",
                     "uco-observable:createdTime": {
@@ -129,7 +129,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:DigitalAccount",
+                    "@type": "uco-observable:DigitalAccountFacet",
                     "uco-observable:accountLogin": [
                         "willyROX",
                         "willyROX@gmail.com"
@@ -145,7 +145,7 @@
                     "uco-observable:displayName": "William Smith"
                 },
                 {
-                    "@type": "uco-observable:AccountAuthentication",
+                    "@type": "uco-observable:AccountAuthenticationFacet",
                     "uco-observable:password": "1337_P@ZZW0RD",
                     "uco-observable:passwordLastChanged": {
                         "@type": "xsd:dateTime",
@@ -153,7 +153,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ApplicationAccount",
+                    "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": "kb:application2"
                 },
                 {
@@ -185,7 +185,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:EmailAccount",
+                    "@type": "uco-observable:EmailAccountFacet",
                     "uco-observable:emailAddress": "kb:email-address1"
                 }
             ]
@@ -195,7 +195,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:EmailAddress",
+                    "@type": "uco-observable:EmailAddressFacet",
                     "uco-observable:value": "willyROX@gmail.com"
                 }
             ]

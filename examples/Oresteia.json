@@ -317,13 +317,13 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Samsung",
                     "uco-observable:model": "SM-G925F Galaxy S6 Edge",
                     "uco-observable:serialNumber": "FDG344657"
                 },
                 {
-                    "@type": "uco-observable:MobileDevice",
+                    "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should uco-observable:clockSetting be a datetime instead of a string?",
                         "TODO: An earlier version of Oresteia had a timezoneSetting property.  This can apparently now be either uco-observable property 'timezoneDST' or 'timezoneStandard', both a xsd:string type.  Is there an option, such as drawing data from the IANA time zones database, to simplify this?"
@@ -337,7 +337,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:MobileAccount",
+                    "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:MSISDN": "1239275339"
                 }
             ]
@@ -347,12 +347,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountType": "PhoneAccount",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:MobileAccount",
+                    "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:MSISDN": "1239275339"
                 }
             ]
@@ -490,14 +490,14 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Apple",
                     "uco-observable:deviceType": "iPhone",
                     "uco-observable:model": "MG552",
                     "uco-observable:serialNumber": "F18Q4LGRG5MD"
                 },
                 {
-                    "@type": "uco-observable:MobileDevice",
+                    "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should clockSetting be a xsd:dateTime?",
                         "TODO: MSISDN here may be the wrong type.  Why is a uuid indicated?",
@@ -523,18 +523,18 @@
                     "draft:ownerName": "Clytemnestras iPhone"
                 },
                 {
-                    "@type": "uco-observable:OperatingSystem",
+                    "@type": "uco-observable:OperatingSystemFacet",
                     "rdfs:comment": "TODO: uco-observable:version doesn't have OS in its domain.  ( https://github.com/ucoProject/UCO/issues/144 )",
                     "uco-core:name": "iOS",
                     "uco-observable:manufacturer": "Apple",
                     "uco-observable:version": "10.3"
                 },
                 {
-                    "@type": "uco-observable:WifiAddress",
+                    "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:value": "d0:33:11:13:e7:a1"
                 },
                 {
-                    "@type": "uco-observable:BluetoothAddress",
+                    "@type": "uco-observable:BluetoothAddressFacet",
                     "rdfs:comment": "TODO: uco-observable:value only applies to IPv4 address.  ( https://github.com/ucoProject/UCO/issues/145 )",
                     "uco-observable:value": "d0:33:11:13:e7:a2"
                 }
@@ -545,12 +545,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountType": "PhoneAccount",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:MobileAccount",
+                    "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:MSISDN": "1237471334"
                 }
             ]
@@ -690,7 +690,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
@@ -706,7 +706,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -749,7 +749,7 @@
             "@id": "kb:cassandra-mobiledevice-mmssms-uuid",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
@@ -764,7 +764,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 122925
@@ -801,7 +801,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/com.android.providers.telephony/mmssms.db"
                 }
             ]
@@ -811,7 +811,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DiskPartition",
+                    "@type": "uco-observable:DiskPartitionFacet",
                     "rdfs:comment": [
                         "TODO: partitionOffset should be in bytes.  Nothing in this example specifies the sector size of the device's storage.",
                         "TODO: diskPartitionType in UCO 0.3.0 is supposed to describe the type of partition (per documenting rdfs:comment), not the type of the containing partition system.  However, further clarification is needed on the range of this property - the numeric type?  There does not appear to be a consistent dictionary labeling these numeric types, and tools frequently provide multiple guesses (e.g. TSK's mmls reports exfat and ntfs for one code)."
@@ -822,11 +822,11 @@
                     "uco-observable:partitionLength": 245235063
                 },
                 {
-                    "@type": "uco-observable:FileSystem",
+                    "@type": "uco-observable:FileSystemFacet",
                     "uco-observable:fileSystemType": "EXT3"
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 245235000
@@ -861,7 +861,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:DataRange",
+                    "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 234909233,
                     "uco-observable:rangeSize": 120000000000
                 }
@@ -1034,7 +1034,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Message",
+                    "@type": "uco-observable:MessageFacet",
                     "rdfs:comment": [
                         "TODO: uco-observable:to only has a domain of uco-observable:PhoneCall.",
                         "TODO: uco-observable:sentTime only has a domain of uco-observable:EmailMessage."
@@ -1059,7 +1059,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Message",
+                    "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": "kb:sms-application1",
                     "uco-observable:messageText": "Low lie the shattered towers whereas they fell, and I--ah burning heart!--shall soon lie low as well.",
                     "uco-observable:from": "kb:cassandra-mobileaccount-uuid",
@@ -1080,12 +1080,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": "kb:olympus-uuid",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:PhoneAccount",
+                    "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237771337"
                 }
             ]
@@ -1095,12 +1095,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": "kb:olympus-uuid",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:PhoneAccount",
+                    "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237772341"
                 }
             ]
@@ -1110,12 +1110,12 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Account",
+                    "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": "kb:olympus-uuid",
                     "uco-observable:isActive": true
                 },
                 {
-                    "@type": "uco-observable:PhoneAccount",
+                    "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237775121"
                 }
             ]
@@ -1125,7 +1125,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:EmailAccount",
+                    "@type": "uco-observable:EmailAccountFacet",
                     "uco-observable:emailAddress": "electra.pleiade@sevensisters.com"
                 }
             ]
@@ -1135,7 +1135,7 @@
             "@type": "uco-observable:CyberItem",
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:EmailMessage",
+                    "@type": "uco-observable:EmailMessageFacet",
                     "uco-observable:to": [
                         "kb:orestes-emailaccount-uuid"
                     ],
@@ -1201,7 +1201,7 @@
             "uco-core:isDirectional": true,
             "uco-core:facets": [
                 {
-                    "@type": "uco-observable:Attachment",
+                    "@type": "uco-observable:AttachmentFacet",
                     "rdfs:comment": "TODO: uco-observable:Attachment seems ill-defined.",
                     "uco-observable:url": "http://www.facebook.com/corpses.jpg"
                 }
