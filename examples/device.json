@@ -11,7 +11,7 @@
     "@graph": [
         {
             "@id": "kb:forensic_lab_computer1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "location": "kb:forensic_lab1",
             "uco-core:facets": [
                 {

@@ -59,7 +59,7 @@
         },
         {
             "@id": "kb:facebook_account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -117,7 +117,7 @@
         },
         {
             "@id": "kb:google_account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -172,7 +172,7 @@
         },
         {
             "@id": "kb:associated-account4",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:google_account1",
             "uco-core:target": [
                 "kb:email_account1"
@@ -182,7 +182,7 @@
         },
         {
             "@id": "kb:email_account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailAccountFacet",
@@ -192,7 +192,7 @@
         },
         {
             "@id": "kb:email_address1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailAddressFacet",

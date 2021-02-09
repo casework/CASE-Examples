@@ -9,7 +9,7 @@
     "@graph": [
         {
             "@id": "kb:phone_account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -24,7 +24,7 @@
         },
         {
             "@id": "kb:phone_account2",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -39,7 +39,7 @@
         },
         {
             "@id": "kb:phone_call1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",

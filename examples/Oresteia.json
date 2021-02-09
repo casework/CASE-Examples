@@ -216,7 +216,7 @@
             "uco-core:target": [
                 "kb:investigator1-uuid"
             ],
-            "rdfs:comment": "TODO: 'Has_Role' is not in uco-observable:CyberItemRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Has_Role' is not in uco-observable:ObservableObjectRelationshipEnum.",
             "uco-core:kindOfRelationship": "Has_Role",
             "uco-core:isDirectional": true
         },
@@ -308,13 +308,13 @@
             "uco-core:target": [
                 "kb:cassandra-device-uuid"
             ],
-            "rdfs:comment": "TODO: 'Has_Device' is not in uco-observable:CyberItemRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Has_Device' is not in uco-observable:ObservableObjectRelationshipEnum.",
             "uco-core:kindOfRelationship": "Has_Device",
             "uco-core:isDirectional": true
         },
         {
             "@id": "kb:cassandra-device-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -344,7 +344,7 @@
         },
         {
             "@id": "kb:cassandra-mobileaccount-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -364,7 +364,7 @@
             "uco-core:target": [
                 "kb:cassandra-mobileaccount-uuid"
             ],
-            "rdfs:comment": "TODO: 'Has_Account' is not in uco-observable:CyberItemRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Has_Account' is not in uco-observable:ObservableObjectRelationshipEnum.",
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:startTime": {
                 "@type": "xsd:dateTime",
@@ -390,7 +390,7 @@
             "uco-core:target": [
                 "kb:argos-palace-uuid"
             ],
-            "rdfs:comment": "TODO: 'Located_At' is not in uco-observable:CyberItemRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Located_At' is not in uco-observable:ObservableObjectRelationshipEnum.",
             "uco-core:kindOfRelationship": "Located_At",
             "uco-core:startTime": {
                 "@type": "xsd:dateTime",
@@ -487,7 +487,7 @@
         },
         {
             "@id": "kb:clytemnestra-device-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -542,7 +542,7 @@
         },
         {
             "@id": "kb:clytemnestra-mobileaccount-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -687,7 +687,7 @@
         },
         {
             "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -745,7 +745,7 @@
             ]
         },
         {
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "@id": "kb:cassandra-mobiledevice-mmssms-uuid",
             "uco-core:facets": [
                 {
@@ -788,14 +788,14 @@
         },
         {
             "@id": "kb:trace-relationship3-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:cassandra-mobiledevice-mmssms-uuid",
             "uco-core:target": [
                 "kb:cassandra-image-partition6-uuid"
             ],
             "rdfs:comment": "TODO: CyberItemRelationshipEnum does not seem to be tied to uco-core:ControlledVocabulary.  ( https://github.com/ucoProject/UCO/issues/146 )",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -808,7 +808,7 @@
         },
         {
             "@id": "kb:cassandra-image-partition6-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:DiskPartitionFacet",
@@ -855,7 +855,7 @@
                 "kb:cassandra-mobiledevice-forensicduplicate-uuid"
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -1031,7 +1031,7 @@
         },
         {
             "@id": "kb:sms-message1-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1056,7 +1056,7 @@
         },
         {
             "@id": "kb:sms-message2-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1077,7 +1077,7 @@
         },
         {
             "@id": "kb:argive-elder1-phoneaccnt-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1092,7 +1092,7 @@
         },
         {
             "@id": "kb:argive-elder2-phoneaccnt-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1107,7 +1107,7 @@
         },
         {
             "@id": "kb:argive-elder3-phoneaccnt-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1122,7 +1122,7 @@
         },
         {
             "@id": "kb:electra-emailaccount-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailAccountFacet",
@@ -1132,7 +1132,7 @@
         },
         {
             "@id": "kb:electra-orestes-email-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:EmailMessageFacet",
@@ -1168,7 +1168,7 @@
         },
         {
             "@id": "kb:orestes-facebookmsg-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "draft:FacebookMessage",
@@ -1191,7 +1191,7 @@
             "@type": "uco-core:Relationship",
             "rdfs:comment": [
                 "TODO: This Relationship node is confusing to interpret, particularly with :location1 not defined in the document.  Is this supposed to be an investigator interpretation of the location of the depicted corpses?",
-                "TODO: 'Attachment_Of' is not in uco-observable:CyberItemRelationshipEnum."
+                "TODO: 'Attachment_Of' is not in uco-observable:ObservableObjectRelationshipEnum."
             ],
             "uco-core:source": "kb:location1",
             "uco-core:target": [

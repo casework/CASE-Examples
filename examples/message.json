@@ -10,7 +10,7 @@
     "@graph": [
         {
             "@id": "kb:os1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
@@ -22,7 +22,7 @@
         },
         {
             "@id": "kb:application1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationFacet",
@@ -36,7 +36,7 @@
         },
         {
             "@id": "kb:account1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -46,7 +46,7 @@
         },
         {
             "@id": "kb:account2",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -56,7 +56,7 @@
         },
         {
             "@id": "kb:account3",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -66,7 +66,7 @@
         },
         {
             "@id": "kb:account4",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -76,7 +76,7 @@
         },
         {
             "@id": "kb:thread1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:MessageThreadFacet",
@@ -109,7 +109,7 @@
         },
         {
             "@id": "kb:thread2",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:MessageThreadFacet",
@@ -134,7 +134,7 @@
         },
         {
             "@id": "kb:post1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -149,7 +149,7 @@
         },
         {
             "@id": "kb:message1",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:facets": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -168,7 +168,7 @@
         },
         {
             "@id": "kb:attach_relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:location1",
             "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
@@ -182,7 +182,7 @@
         },
         {
             "@id": "kb:attach_relationship2",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:attachment_file1",
             "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
@@ -196,7 +196,7 @@
         },
         {
             "@id": "kb:attach_relationship3",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": "kb:attachment_file2",
             "uco-core:target": "kb:message1",
             "uco-core:kindOfRelationship": "attachment-of",
