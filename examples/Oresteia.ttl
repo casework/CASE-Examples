@@ -1,0 +1,1039 @@
+@prefix case-investigation: <http://dev.caseontology.org/ontology/case/investigation/0.2.1#> .
+@prefix draft: <http://example.org/draft#> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-action: <http://dev.caseontology.org/ontology/uco/action/0.4.1#> .
+@prefix uco-core: <http://dev.caseontology.org/ontology/uco/core/0.4.1#> .
+@prefix uco-identity: <http://dev.caseontology.org/ontology/uco/identity/0.4.1#> .
+@prefix uco-location: <http://dev.caseontology.org/ontology/uco/location/0.4.1#> .
+@prefix uco-observable: <http://dev.caseontology.org/ontology/uco/observable/0.4.1#> .
+@prefix uco-role: <http://dev.caseontology.org/ontology/uco/role/0.4.1#> .
+@prefix uco-tool: <http://dev.caseontology.org/ontology/uco/tool/0.4.1#> .
+@prefix uco-types: <http://dev.caseontology.org/ontology/uco/types/0.4.1#> .
+@prefix uco-vocabulary: <http://dev.caseontology.org/ontology/uco/vocabulary/0.4.1#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:aeschylus-uuid
+	a uco-identity:Identity ;
+	uco-core:createdBy kb:eoghan-uuid ;
+	uco-core:createdTime "2017-06-25T12:12:12.12Z"^^xsd:dateTime ;
+	uco-core:facets
+		[
+			a uco-identity:BirthInformation ;
+			uco-identity:birthdate "1954-03-07T15:34:24.02Z"^^xsd:dateTime ;
+		] ,
+		[
+			a uco-identity:SimpleName ;
+			uco-identity:familyName "Bard" ;
+			uco-identity:givenName "Aeschylus" ;
+		]
+		;
+	.
+
+kb:annotation1-uuid
+	a uco-core:Annotation ;
+	uco-core:description "Forensic preservation of Cassandra mobile device." ;
+	uco-core:object kb:investigative-action1-uuid ;
+	uco-core:tag "forensic" ;
+	.
+
+kb:annotation2-uuid
+	a uco-core:Annotation ;
+	uco-core:description "Forensic extraction of data from Cassandra mobile device." ;
+	uco-core:object kb:investigative-action2-uuid ;
+	uco-core:tag "forensic" ;
+	.
+
+kb:annotation3-uuid
+	a uco-core:Annotation ;
+	uco-core:description "Digital photograph of corpses taken at crime scene by killer" ;
+	uco-core:object kb:orestes-selfie-photograph-uuid ;
+	uco-core:tag
+		"picture" ,
+		"selfie"
+		;
+	.
+
+kb:argive-elder1-phoneaccnt-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:Account ;
+			uco-observable:accountIssuer kb:olympus-uuid ;
+			uco-observable:isActive "true"^^xsd:boolean ;
+		] ,
+		[
+			a uco-observable:PhoneAccount ;
+			uco-observable:phoneNumber "1237771337" ;
+		]
+		;
+	.
+
+kb:argive-elder2-phoneaccnt-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:Account ;
+			uco-observable:accountIssuer kb:olympus-uuid ;
+			uco-observable:isActive "true"^^xsd:boolean ;
+		] ,
+		[
+			a uco-observable:PhoneAccount ;
+			uco-observable:phoneNumber "1237772341" ;
+		]
+		;
+	.
+
+kb:argive-elder3-phoneaccnt-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:Account ;
+			uco-observable:accountIssuer kb:olympus-uuid ;
+			uco-observable:isActive "true"^^xsd:boolean ;
+		] ,
+		[
+			a uco-observable:PhoneAccount ;
+			uco-observable:phoneNumber "1237775121" ;
+		]
+		;
+	.
+
+kb:argos-palace-uuid
+	a uco-location:Location ;
+	uco-core:facets
+		[
+			a uco-location:LatLongCoordinates ;
+			uco-location:latitude "4.8860346E1"^^xsd:double ;
+			uco-location:longitude "2.331199E0"^^xsd:double ;
+		] ,
+		[
+			a uco-location:SimpleAddress ;
+			uco-location:locality "Argos" ;
+			uco-location:postalCode "98052" ;
+			uco-location:region "Greece" ;
+			uco-location:street "Palace Blvd" ;
+		]
+		;
+	.
+
+kb:associated-device1-uuid
+	a uco-core:Relationship ;
+	rdfs:comment "TODO: 'Has_Device' is not in uco-observable:CyberItemRelationshipEnum." ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Device" ;
+	uco-core:source kb:victim5-uuid ;
+	uco-core:target kb:cassandra-device-uuid ;
+	.
+
+kb:associated-emailaccount1-uuid
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Account" ;
+	uco-core:source kb:electra-uuid ;
+	uco-core:target kb:electra-emailaccount-uuid ;
+	.
+
+kb:attach_relationship1
+	a uco-core:Relationship ;
+	rdfs:comment
+		"TODO: 'Attachment_Of' is not in uco-observable:CyberItemRelationshipEnum." ,
+		"TODO: This Relationship node is confusing to interpret, particularly with :location1 not defined in the document.  Is this supposed to be an investigator interpretation of the location of the depicted corpses?"
+		;
+	uco-core:facets [
+		a uco-observable:Attachment ;
+		rdfs:comment "TODO: uco-observable:Attachment seems ill-defined." ;
+		uco-observable:url "http://www.facebook.com/corpses.jpg" ;
+	] ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Attachment_Of" ;
+	uco-core:source kb:location1 ;
+	uco-core:target kb:orestes-facebookmsg-uuid ;
+	.
+
+kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd
+	a uco-core:Bundle ;
+	rdfs:comment
+		"TODO: The long list of contained objects was previously related with a draft property 'content', which is not defined in UCO.  Is that name desired?" ,
+		"TODO: uco-core:description has a maxCardinality of one.  Something will need to be tweaked about this description text that benefits from being multiple lines."
+		;
+	uco-core:description
+		"Clock on Clytemnestra's device is one day and one hour slow (offet -25 hours)" ,
+		"There will be an action for each successful parsing of a file and file objects for each collected file." ,
+		"This illustrative scenario imagines The Oresteia in the age mobile devices for the purpose of demonstrating use of CASE to represent digital investigations into multiple related crimes." ,
+		"Thyestes is the victim in Crime A, and the offender in Crime B" ,
+		"To reduce repetitive examples in this illustrative scenario, not all Identity objects are explicitly represented here. Instead, each object that is referenced in this scenario uses the associated person's name in the simplified UUID."
+		;
+	uco-core:name "Greek Case 13" ;
+	uco-core:object
+		kb:aeschylus-uuid ,
+		kb:annotation1-uuid ,
+		kb:annotation2-uuid ,
+		kb:annotation3-uuid ,
+		kb:argive-elder1-phoneaccnt-uuid ,
+		kb:argive-elder2-phoneaccnt-uuid ,
+		kb:argive-elder3-phoneaccnt-uuid ,
+		kb:argos-palace-uuid ,
+		kb:associated-device1-uuid ,
+		kb:associated-emailaccount1-uuid ,
+		kb:attach_relationship1 ,
+		kb:cassandra-device-uuid ,
+		kb:cassandra-image-partition6-uuid ,
+		kb:cassandra-mobileaccount-uuid ,
+		kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+		kb:cassandra-mobiledevice-mmssms-uuid ,
+		kb:cassandra-uuid ,
+		kb:clytemnestra-device-uuid ,
+		kb:clytemnestra-mobileaccount-uuid ,
+		kb:device-account-relationship1 ,
+		kb:device-location-relationship1 ,
+		kb:electra-emailaccount-uuid ,
+		kb:electra-orestes-email-uuid ,
+		kb:electra-uuid ,
+		kb:euripides-uuid ,
+		kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2 ,
+		kb:investigation-4586742a-710a-454f-bcb8-b60e230ec1b2 ,
+		kb:investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220 ,
+		kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5 ,
+		kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8 ,
+		kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd ,
+		kb:investigative-action1-uuid ,
+		kb:investigative-action10-uuid ,
+		kb:investigative-action2-uuid ,
+		kb:investigative-action4-uuid ,
+		kb:investigative-action5-uuid ,
+		kb:investigator1-uuid ,
+		kb:investigator2-uuid ,
+		kb:offender1-uuid ,
+		kb:orestes-facebookmsg-uuid ,
+		kb:provenance-record1-uuid ,
+		kb:provenance-record2-uuid ,
+		kb:provenance-record3-uuid ,
+		kb:provenance-record4-uuid ,
+		kb:provenance-record5-uuid ,
+		kb:role-relationship1-uuid ,
+		kb:role-relationship2-uuid ,
+		kb:role-relationship5-uuid ,
+		kb:role-relationship51-uuid ,
+		kb:role-relationship52-uuid ,
+		kb:sms-message1-uuid ,
+		kb:sms-message2-uuid ,
+		kb:thyestes-uuid ,
+		kb:tool1-uuid ,
+		kb:tool2-uuid ,
+		kb:tool3-uuid ,
+		kb:trace-relationship3-uuid ,
+		kb:trace-relationship4-uuid ,
+		kb:victim1-uuid ,
+		kb:victim5-uuid
+		;
+	.
+
+kb:cassandra-device-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:MobileDevice ;
+			rdfs:comment
+				"TODO: An earlier version of Oresteia had a timezoneSetting property.  This can apparently now be either uco-observable property 'timezoneDST' or 'timezoneStandard', both a xsd:string type.  Is there an option, such as drawing data from the IANA time zones database, to simplify this?" ,
+				"TODO: Should uco-observable:clockSetting be a datetime instead of a string?"
+				;
+			uco-observable:IMEI "359305065690067" ;
+			uco-observable:clockSetting "2017-06-22T07:36:24.35Z" ;
+			uco-observable:keypadUnlockCode "1234" ;
+			uco-observable:storageCapacityInBytes "11000000000"^^xsd:long ;
+		] ,
+		[
+			a uco-observable:MobileAccount ;
+			uco-observable:MSISDN "1239275339" ;
+		] ,
+		[
+			a uco-observable:Device ;
+			uco-observable:manufacturer "Samsung" ;
+			uco-observable:model "SM-G925F Galaxy S6 Edge" ;
+			uco-observable:serialNumber "FDG344657" ;
+		]
+		;
+	.
+
+kb:cassandra-image-partition6-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:DiskPartition ;
+			rdfs:comment
+				"TODO: diskPartitionType in UCO 0.3.0 is supposed to describe the type of partition (per documenting rdfs:comment), not the type of the containing partition system.  However, further clarification is needed on the range of this property - the numeric type?  There does not appear to be a consistent dictionary labeling these numeric types, and tools frequently provide multiple guesses (e.g. TSK's mmls reports exfat and ntfs for one code)." ,
+				"TODO: partitionOffset should be in bytes.  Nothing in this example specifies the sector size of the device's storage."
+				;
+			uco-observable:diskPartitionType "MBR" ;
+			uco-observable:partitionID "06" ;
+			uco-observable:partitionLength "245235063"^^xsd:integer ;
+			uco-observable:partitionOffset "63"^^xsd:integer ;
+		] ,
+		[
+			a uco-observable:FileSystem ;
+			uco-observable:fileSystemType "EXT3" ;
+		] ,
+		[
+			a uco-observable:ContentData ;
+			uco-observable:hash [
+				a uco-types:Hash ;
+				uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+				uco-types:hashValue "0611ea093d19b1c73a5285ff43741dd77f2a8d983c1c71044eb072e44f5dcb0a"^^xsd:hexBinary ;
+			] ;
+			uco-observable:sizeInBytes "245235000"^^xsd:long ;
+		]
+		;
+	.
+
+kb:cassandra-mobileaccount-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:MobileAccount ;
+			uco-observable:MSISDN "1239275339" ;
+		] ,
+		[
+			a uco-observable:Account ;
+			uco-observable:accountType "PhoneAccount" ;
+			uco-observable:isActive "true"^^xsd:boolean ;
+		]
+		;
+	.
+
+kb:cassandra-mobiledevice-forensicduplicate-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:File ;
+			uco-observable:createdTime "2017-06-22T08:12:19.32Z"^^xsd:dateTime ;
+			uco-observable:extension "dd" ;
+			uco-observable:fileName "AthensPD-2017220601-01.dd" ;
+			uco-observable:filePath "C:/evidence/AthensPD-2017220601-01.dd" ;
+			uco-observable:fileSystemType "NTFS" ;
+			uco-observable:isDirectory "false"^^xsd:boolean ;
+			uco-observable:sizeInBytes "90080500"^^xsd:long ;
+		] ,
+		[
+			a uco-observable:ContentData ;
+			uco-observable:hash [
+				a uco-types:Hash ;
+				uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+				uco-types:hashValue "7ea081166336119da78ee4bbdbd06840b94efe28988a2bdb0bcf2387a481e283"^^xsd:hexBinary ;
+			] ;
+			uco-observable:sizeInBytes "9080500"^^xsd:long ;
+		]
+		;
+	.
+
+kb:cassandra-mobiledevice-mmssms-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:File ;
+			uco-observable:createdTime "2017-06-22T08:12:19.32Z"^^xsd:dateTime ;
+			uco-observable:extension "db" ;
+			uco-observable:fileName "/data/data/com.android.providers.telephony/mmssms.db" ;
+			uco-observable:fileSystemType "EXT3" ;
+			uco-observable:isDirectory "false"^^xsd:boolean ;
+			uco-observable:sizeInBytes "122925"^^xsd:long ;
+		] ,
+		[
+			a uco-observable:ContentData ;
+			uco-observable:hash [
+				a uco-types:Hash ;
+				uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
+				uco-types:hashValue "a13225720074371d56a4f4d5117fbb4953c5b1d316b31f21edcb7ed8fdf66c6e"^^xsd:hexBinary ;
+			] ;
+			uco-observable:magicNumber "U1FMaXRlIGZvcm1hdCAzAA==" ;
+			uco-observable:sizeInBytes "122925"^^xsd:long ;
+		]
+		;
+	.
+
+kb:cassandra-uuid
+	a uco-identity:Identity ;
+	uco-core:facets
+		[
+			a uco-identity:BirthInformation ;
+			uco-identity:birthdate "1968-09-25T17:59:43.25Z"^^xsd:dateTime ;
+		] ,
+		[
+			a uco-identity:SimpleName ;
+			uco-identity:familyName "Troy" ;
+			uco-identity:givenName "Cassandra" ;
+		]
+		;
+	.
+
+kb:clytemnestra-device-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:OperatingSystem ;
+			rdfs:comment "TODO: uco-observable:version doesn't have OS in its domain.  ( https://github.com/ucoProject/UCO/issues/144 )" ;
+			uco-core:name "iOS" ;
+			uco-observable:manufacturer "Apple" ;
+			uco-observable:version "10.3" ;
+		] ,
+		[
+			a uco-observable:MobileDevice ;
+			rdfs:comment
+				"TODO: MSISDN here may be the wrong type.  Why is a uuid indicated?" ,
+				"TODO: Should clockSetting be a xsd:dateTime?" ,
+				"TODO: clockSetting as a time-point somewhat illustrates the scenario's specified skew of 25 hours, but might need a reference time-point."
+				;
+			uco-observable:IMEI "359305065690067" ;
+			uco-observable:MSISDN "[clytemnestra-mobileaccount-uuid]" ;
+			uco-observable:clockSetting "2017-06-21T06:36:24.35Z" ;
+			uco-observable:keypadUnlockCode "123789" ;
+			uco-observable:phoneActivationTime "2017-05-09T07:36:24.35Z"^^xsd:dateTime ;
+			uco-observable:storageCapacityInBytes "11000000000"^^xsd:long ;
+			draft:localeLanguage "en_GR" ;
+		] ,
+		[
+			a uco-observable:Device ;
+			uco-observable:deviceType "iPhone" ;
+			uco-observable:manufacturer "Apple" ;
+			uco-observable:model "MG552" ;
+			uco-observable:serialNumber "F18Q4LGRG5MD" ;
+		] ,
+		[
+			a uco-observable:WifiAddress ;
+			uco-observable:value "d0:33:11:13:e7:a1" ;
+		] ,
+		[
+			a uco-observable:BluetoothAddress ;
+			rdfs:comment "TODO: uco-observable:value only applies to IPv4 address.  ( https://github.com/ucoProject/UCO/issues/145 )" ;
+			uco-observable:value "d0:33:11:13:e7:a2" ;
+		] ,
+		[
+			a draft:iPhoneDevice ;
+			draft:ownerName "Clytemnestras iPhone" ;
+			draft:uniqueID "B3858A69A29375E6C706226B3633A3A11EB2A774" ;
+		]
+		;
+	.
+
+kb:clytemnestra-mobileaccount-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets
+		[
+			a uco-observable:MobileAccount ;
+			uco-observable:MSISDN "1237471334" ;
+		] ,
+		[
+			a uco-observable:Account ;
+			uco-observable:accountType "PhoneAccount" ;
+			uco-observable:isActive "true"^^xsd:boolean ;
+		]
+		;
+	.
+
+kb:device-account-relationship1
+	a uco-core:Relationship ;
+	rdfs:comment "TODO: 'Has_Account' is not in uco-observable:CyberItemRelationshipEnum." ;
+	uco-core:endTime "2017-06-25T15:59:43.00Z"^^xsd:dateTime ;
+	uco-core:facets [
+		a uco-core:Confidence ;
+		rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
+		uco-core:confidence "Probably True" ;
+	] ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Account" ;
+	uco-core:source kb:cassandra-device-uuid ;
+	uco-core:startTime "2017-05-12T15:32:31.09Z"^^xsd:dateTime ;
+	uco-core:target kb:cassandra-mobileaccount-uuid ;
+	.
+
+kb:device-location-relationship1
+	a uco-core:Relationship ;
+	rdfs:comment "TODO: 'Located_At' is not in uco-observable:CyberItemRelationshipEnum." ;
+	uco-core:endTime "2017-06-22T15:59:43.25Z"^^xsd:dateTime ;
+	uco-core:facets [
+		a uco-core:Confidence ;
+		rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
+		uco-core:confidence "Probably True" ;
+	] ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Located_At" ;
+	uco-core:source kb:cassandra-device-uuid ;
+	uco-core:startTime "2017-06-19T13:59:43.25Z"^^xsd:dateTime ;
+	uco-core:target kb:argos-palace-uuid ;
+	.
+
+kb:electra-emailaccount-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets [
+		a uco-observable:EmailAccount ;
+		uco-observable:emailAddress "electra.pleiade@sevensisters.com" ;
+	] ;
+	.
+
+kb:electra-orestes-email-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets [
+		a uco-observable:EmailMessage ;
+		uco-observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
+		uco-observable:from kb:electra-emailaccount-uuid ;
+		uco-observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
+		uco-observable:receivedTime "2017-06-21T13:44:23.40Z"^^xsd:dateTime ;
+		uco-observable:sentTime "2017-06-21T13:44:22.19Z"^^xsd:dateTime ;
+		uco-observable:subject "Revenge our father" ;
+		uco-observable:to kb:orestes-emailaccount-uuid ;
+	] ;
+	.
+
+kb:electra-uuid
+	a uco-identity:Identity ;
+	uco-core:facets
+		[
+			a uco-identity:BirthInformation ;
+			uco-identity:birthdate "1998-03-02T14:23:42.23Z"^^xsd:dateTime ;
+		] ,
+		[
+			a uco-identity:SimpleName ;
+			uco-identity:familyName "Argos" ;
+			uco-identity:givenName "Electra" ;
+		]
+		;
+	.
+
+kb:euripides-uuid
+	a uco-identity:Identity ;
+	uco-core:createdBy kb:eoghan-uuid ;
+	uco-core:createdTime "2017-06-25T12:12:12.12Z"^^xsd:dateTime ;
+	uco-core:facets
+		[
+			a uco-identity:BirthInformation ;
+			uco-identity:birthdate "1956-04-08T16:35:23.35Z"^^xsd:dateTime ;
+		] ,
+		[
+			a uco-identity:SimpleName ;
+			uco-identity:familyName "Forte" ;
+			uco-identity:givenName "Euripides" ;
+		]
+		;
+	.
+
+kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2
+	a case-investigation:Investigation ;
+	case-investigation:focus "Murder" ;
+	uco-core:description "In Aulis, Agamemnon killed his daughter Iphigenia as a sacrifice to the gods" ;
+	uco-core:name "Crime D" ;
+	.
+
+kb:investigation-4586742a-710a-454f-bcb8-b60e230ec1b2
+	a case-investigation:Investigation ;
+	case-investigation:focus "Murder" ;
+	uco-core:description "In Mycenae, Atreus killed two sons of Thyestes, cooked them (except for their hands and heads), fed them to Thyestes, and then taunted Thyestes with his murdered sons' hands and heads." ;
+	uco-core:name "Crime A" ;
+	uco-core:object
+		kb:role-relationship1-uuid ,
+		kb:thyestes-uuid ,
+		kb:victim1-uuid
+		;
+	.
+
+kb:investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220
+	a case-investigation:Investigation ;
+	case-investigation:focus "Murder" ;
+	uco-core:description "In the Palace of Argos, Clytemnestra and Aegisthus were killed by Orestes (accomplice Electra)" ;
+	uco-core:name "Crime F" ;
+	uco-core:object
+		kb:argos-palace-uuid ,
+		kb:electra-orestes-email-uuid ,
+		kb:electra-uuid ,
+		kb:orestes-facebookmsg-uuid
+		;
+	.
+
+kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5
+	a case-investigation:Investigation ;
+	case-investigation:focus "Murder" ;
+	uco-core:description "In the Palace of Argos, Agamemnon and Cassandra were killed by Clytemnestra (accomplice Aegisthus)" ;
+	uco-core:facets [
+		a case-investigation:Authorization ;
+		case-investigation:authorizationIdentifier "Warrant12345" ;
+		case-investigation:authorizationType "warrant" ;
+	] ;
+	uco-core:name "Crime E" ;
+	uco-core:object
+		kb:aeschylus-uuid ,
+		kb:annotation1-uuid ,
+		kb:annotation2-uuid ,
+		kb:annotation3-uuid ,
+		kb:argive-elder1-phoneaccnt-uuid ,
+		kb:argive-elder2-phoneaccnt-uuid ,
+		kb:argive-elder3-phoneaccnt-uuid ,
+		kb:argos-palace-uuid ,
+		kb:associated-device1-uuid ,
+		kb:associated-emailaccount1-uuid ,
+		kb:attach_relationship1 ,
+		kb:cassandra-device-uuid ,
+		kb:cassandra-image-partition6-uuid ,
+		kb:cassandra-mobileaccount-uuid ,
+		kb:cassandra-uuid ,
+		kb:clytemnestra-device-uuid ,
+		kb:clytemnestra-mobileaccount-uuid ,
+		kb:device-location-relationship1 ,
+		kb:electra-orestes-email-uuid ,
+		kb:electra-uuid ,
+		kb:euripides-uuid ,
+		kb:investigative-action1-uuid ,
+		kb:investigative-action10-uuid ,
+		kb:investigative-action2-uuid ,
+		kb:investigative-action4-uuid ,
+		kb:investigative-action5-uuid ,
+		kb:investigator1-uuid ,
+		kb:investigator2-uuid ,
+		kb:offender1-uuid ,
+		kb:orestes-facebookmsg-uuid ,
+		kb:provenance-record1-uuid ,
+		kb:provenance-record2-uuid ,
+		kb:provenance-record3-uuid ,
+		kb:provenance-record4-uuid ,
+		kb:provenance-record5-uuid ,
+		kb:role-relationship1-uuid ,
+		kb:role-relationship2-uuid ,
+		kb:role-relationship5-uuid ,
+		kb:role-relationship51-uuid ,
+		kb:role-relationship52-uuid ,
+		kb:sms-message1-uuid ,
+		kb:sms-message2-uuid ,
+		kb:thyestes-uuid ,
+		kb:tool1-uuid ,
+		kb:tool2-uuid ,
+		kb:tool3-uuid ,
+		kb:trace-relationship3-uuid ,
+		kb:trace-relationship4-uuid ,
+		kb:victim1-uuid ,
+		kb:victim5-uuid
+		;
+	.
+
+kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8
+	a case-investigation:Investigation ;
+	case-investigation:focus "Murder" ;
+	uco-core:description "In Mycenae, Aegisthus killed Atreus (Agamemnon's father)" ;
+	uco-core:name "Crime C" ;
+	.
+
+kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd
+	a case-investigation:Investigation ;
+	case-investigation:focus "Rape" ;
+	uco-core:description "In Mycenae, Thyestes raped his daughter Pelopia to have a son (Aegisthus)" ;
+	uco-core:name "Crime B" ;
+	uco-core:object
+		kb:cctv-recording-uuid ,
+		kb:offender1-uuid ,
+		kb:provenance-record5-uuid ,
+		kb:role-relationship2-uuid ,
+		kb:thyestes-uuid
+		;
+	.
+
+kb:investigative-action1-uuid
+	a case-investigation:InvestigativeAction ;
+	uco-action:startTime "2017-06-21T22:36:24.35Z"^^xsd:dateTime ;
+	uco-core:facets [
+		a uco-action:ActionReferences ;
+		uco-action:instrument kb:athens-warrant1-uuid ;
+		uco-action:location kb:argos-palace-uuid ;
+		uco-action:performer kb:investigator2-uuid ;
+		uco-action:result
+			kb:cassandra-device-uuid ,
+			kb:provenance-record1-uuid
+			;
+	] ;
+	uco-core:name "preserved" ;
+	.
+
+kb:investigative-action10-uuid
+	a case-investigation:InvestigativeAction ;
+	uco-action:startTime "2017-06-22T08:01:23.14Z"^^xsd:dateTime ;
+	uco-core:facets [
+		a uco-action:ActionReferences ;
+		uco-action:instrument kb:athens-warrant1-uuid ;
+		uco-action:location kb:athenspd-evidenceroom-uuid ;
+		uco-action:object
+			kb:cassandra-device-uuid ,
+			kb:provenance-record1-uuid
+			;
+		uco-action:performer kb:investigator1-uuid ;
+		uco-action:result kb:provenance-record2-uuid ;
+	] ;
+	uco-core:name "transferred" ;
+	.
+
+kb:investigative-action2-uuid
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2017-06-22T08:39:19.24Z"^^xsd:dateTime ;
+	uco-action:startTime "2017-06-22T08:12:19.32Z"^^xsd:dateTime ;
+	uco-core:facets
+		[
+			a uco-action:ActionReferences ;
+			uco-action:environment kb:forensic-computer1-uuid ;
+			uco-action:instrument kb:tool1-uuid ;
+			uco-action:location kb:argos-palace-uuid ;
+			uco-action:object
+				kb:cassandra-device-uuid ,
+				kb:provenance-record2-uuid
+				;
+			uco-action:performer kb:investigator1-uuid ;
+			uco-action:result
+				kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+				kb:provenance-record3-uuid
+				;
+		] ,
+		[
+			a <MobileExtractor:ToolArguments> ;
+			draft:aquisitionType "Physical Extraction" ;
+			draft:method "Boot Loader" ;
+		]
+		;
+	uco-core:name "extracted" ;
+	.
+
+kb:investigative-action4-uuid
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2017-06-22T10:31:19.24Z"^^xsd:dateTime ;
+	uco-action:startTime "2017-06-22T09:57:23.64Z"^^xsd:dateTime ;
+	uco-core:facets [
+		a uco-action:ActionReferences ;
+		uco-action:environment kb:forensic-computer1-uuid ;
+		uco-action:instrument kb:tool2-uuid ;
+		uco-action:location kb:argos-palace-uuid ;
+		uco-action:object
+			kb:cassandra-mobiledevice-forensicduplicate-uuid ,
+			kb:provenance-record3-uuid
+			;
+		uco-action:performer kb:investigator1-uuid ;
+		uco-action:result
+			kb:cassandra-mobiledevice-mmssms-uuid ,
+			kb:investigative-action5-uuid ,
+			kb:provenance-record4-uuid
+			;
+	] ;
+	uco-core:name "extracted" ;
+	.
+
+kb:investigative-action5-uuid
+	a case-investigation:InvestigativeAction ;
+	uco-action:endTime "2017-06-22T10:31:19.24Z"^^xsd:dateTime ;
+	uco-action:startTime "2017-06-22T09:57:23.64Z"^^xsd:dateTime ;
+	uco-core:facets [
+		a uco-action:ActionReferences ;
+		uco-action:environment kb:forensic-computer1-uuid ;
+		uco-action:instrument kb:tool3-uuid ;
+		uco-action:location kb:argos-palace-uuid ;
+		uco-action:performer kb:investigative-action4-uuid ;
+		uco-action:result
+			kb:argive-elder1-phoneaccnt-uuid ,
+			kb:argive-elder2-phoneaccnt-uuid ,
+			kb:argive-elder3-phoneaccnt-uuid ,
+			kb:provenance-record5-uuid ,
+			kb:sms-message1-uuid ,
+			kb:sms-message2-uuid
+			;
+		uco-core:object
+			kb:cassandra-mobiledevice-mmssms-uuid ,
+			kb:provenance-record4-uuid
+			;
+	] ;
+	uco-core:name "parsed" ;
+	.
+
+kb:investigator1-uuid
+	a uco-role:Role ;
+	uco-core:createdBy kb:eoghan-uuid ;
+	uco-core:createdTime "2017-06-25T12:12:12.12Z"^^xsd:dateTime ;
+	uco-core:name "Investigator" ;
+	.
+
+kb:investigator2-uuid
+	a uco-role:Role ;
+	uco-core:createdBy kb:eoghan-uuid ;
+	uco-core:createdTime "2017-06-25T12:12:12.12Z"^^xsd:dateTime ;
+	uco-core:name "Investigator" ;
+	.
+
+kb:offender1-uuid
+	a uco-role:Role ;
+	uco-core:name "Offender" ;
+	.
+
+kb:orestes-facebookmsg-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets [
+		a draft:FacebookMessage ;
+		uco-observable:body "There lies our country's twofold tyranny, My father's slayers, spoilers of my home." ;
+		uco-observable:from kb:orestes-facebookaccount-uuid ;
+		uco-observable:sentTime "2017-06-21T14:44:54.19Z"^^xsd:dateTime ;
+		uco-observable:to kb:friends ;
+	] ;
+	.
+
+kb:provenance-record1-uuid
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "ArgosPD-20170622-001A" ;
+	uco-core:description "Mobile device used by murder victim Cassandra" ;
+	uco-core:object kb:cassandra-device-uuid ;
+	.
+
+kb:provenance-record2-uuid
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "AthensPD-2017220601" ;
+	uco-core:description "Android smartphone seized by Argos PD" ;
+	uco-core:object kb:cassandra-device-uuid ;
+	.
+
+kb:provenance-record3-uuid
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02" ;
+	uco-core:description "Forensic duplicate of mobile device used by murder victim Cassandra" ;
+	uco-core:object kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+	.
+
+kb:provenance-record4-uuid
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02-03" ;
+	uco-core:description "SMS SQLite database on mobile device used by murder victim Cassandra" ;
+	uco-core:object kb:cassandra-mobiledevice-mmssms-uuid ;
+	.
+
+kb:provenance-record5-uuid
+	a case-investigation:ProvenanceRecord ;
+	case-investigation:exhibitNumber "ArgosPD-20170622-001A-100" ;
+	uco-core:description "Parsed messages from mobile device used by murder victim Cassandra" ;
+	uco-core:object
+		kb:argive-elder1-phoneaccnt-uuid ,
+		kb:argive-elder2-phoneaccnt-uuid ,
+		kb:argive-elder3-phoneaccnt-uuid ,
+		kb:sms-message1-uuid ,
+		kb:sms-message2-uuid
+		;
+	.
+
+kb:role-relationship1-uuid
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:thyestes-uuid ;
+	uco-core:target kb:victim1-uuid ;
+	.
+
+kb:role-relationship2-uuid
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:thyestes-uuid ;
+	uco-core:target kb:offender1-uuid ;
+	.
+
+kb:role-relationship5-uuid
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:cassandra-uuid ;
+	uco-core:target kb:victim5-uuid ;
+	.
+
+kb:role-relationship51-uuid
+	a uco-core:Relationship ;
+	rdfs:comment "TODO: 'Has_Role' is not in uco-observable:CyberItemRelationshipEnum." ;
+	uco-core:createdBy kb:eoghan-uuid ;
+	uco-core:createdTime "2017-06-25T12:12:12.12Z"^^xsd:dateTime ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:aeschylus-uuid ;
+	uco-core:target kb:investigator1-uuid ;
+	.
+
+kb:role-relationship52-uuid
+	a uco-core:Relationship ;
+	uco-core:createdBy kb:eoghan-uuid ;
+	uco-core:createdTime "2017-06-25T12:12:12.12Z"^^xsd:dateTime ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:euripides-uuid ;
+	uco-core:target kb:investigator2-uuid ;
+	.
+
+kb:sms-message1-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets [
+		a uco-observable:Message ;
+		rdfs:comment
+			"TODO: uco-observable:sentTime only has a domain of uco-observable:EmailMessage." ,
+			"TODO: uco-observable:to only has a domain of uco-observable:PhoneCall."
+			;
+		uco-observable:application kb:sms-application1 ;
+		uco-observable:from kb:cassandra-mobileaccount-uuid ;
+		uco-observable:messageText "A wedded wife, she slays her lord, Helped by another hand!" ;
+		uco-observable:sentTime "2017-06-20T09:34:42.12Z"^^xsd:dateTime ;
+		uco-observable:to
+			kb:argive-elder1-phoneaccnt-uuid ,
+			kb:argive-elder2-phoneaccnt-uuid ,
+			kb:argive-elder3-phoneaccnt-uuid
+			;
+	] ;
+	.
+
+kb:sms-message2-uuid
+	a uco-observable:CyberItem ;
+	uco-core:facets [
+		a uco-observable:Message ;
+		uco-observable:application kb:sms-application1 ;
+		uco-observable:from kb:cassandra-mobileaccount-uuid ;
+		uco-observable:messageText "Low lie the shattered towers whereas they fell, and I--ah burning heart!--shall soon lie low as well." ;
+		uco-observable:sentTime "2017-06-20T09:37:35.13Z"^^xsd:dateTime ;
+		uco-observable:to
+			kb:argive-elder1-phoneaccnt-uuid ,
+			kb:argive-elder2-phoneaccnt-uuid ,
+			kb:argive-elder3-phoneaccnt-uuid
+			;
+	] ;
+	.
+
+kb:thyestes-uuid
+	a uco-identity:Identity ;
+	uco-core:facets
+		[
+			a uco-identity:BirthInformation ;
+			uco-identity:birthdate "1964-10-03T14:39:23.15Z"^^xsd:dateTime ;
+		] ,
+		[
+			a uco-identity:SimpleName ;
+			uco-identity:familyName "Mycenae" ;
+			uco-identity:givenName "Thyestes" ;
+		]
+		;
+	.
+
+kb:tool1-uuid
+	a uco-tool:Tool ;
+	uco-core:name "MobileExtractor" ;
+	uco-tool:creator "Zeus" ;
+	uco-tool:toolType "Extraction" ;
+	uco-tool:version "5.3" ;
+	.
+
+kb:tool2-uuid
+	a uco-tool:Tool ;
+	uco-core:facets [
+		a uco-tool:ToolConfigurationType ;
+		uco-tool:configurationSettings
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "command_line_arguments" ;
+				uco-tool:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "debug_mode" ;
+				uco-tool:itemValue "False" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "enabled_parser_names" ;
+				uco-tool:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "filter_expression" ;
+				uco-tool:itemValue "" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "filter_file" ;
+				uco-tool:itemValue "" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "identifier" ;
+				uco-tool:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "parser_filter_expression" ;
+				uco-tool:itemValue "sqlite" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "preferred_encoding" ;
+				uco-tool:itemValue "cp1252" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "preferred_year" ;
+				uco-tool:itemValue "" ;
+			]
+			;
+	] ;
+	uco-core:name "Plaso" ;
+	uco-tool:creator "Joachim Metz" ;
+	uco-tool:toolType "Extraction" ;
+	uco-tool:version "1.5.2_201701013" ;
+	.
+
+kb:tool3-uuid
+	a uco-tool:Tool ;
+	uco-core:facets [
+		a uco-tool:ToolConfigurationType ;
+		uco-tool:configurationSettings
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "query" ;
+				uco-tool:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
+			] ,
+			[
+				a uco-tool:ConfigurationSettingType ;
+				uco-tool:itemName "schema_match" ;
+				uco-tool:itemValue "True" ;
+			]
+			;
+	] ;
+	uco-core:name "sqlite/android_sms" ;
+	uco-tool:creator "Joachim Metz" ;
+	uco-tool:toolType "Parser" ;
+	.
+
+kb:trace-relationship3-uuid
+	a uco-observable:CyberRelationship ;
+	rdfs:comment "TODO: CyberItemRelationshipEnum does not seem to be tied to uco-core:ControlledVocabulary.  ( https://github.com/ucoProject/UCO/issues/146 )" ;
+	uco-core:facets [
+		a uco-observable:PathRelation ;
+		uco-observable:path "/data/data/com.android.providers.telephony/mmssms.db" ;
+	] ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within"^^uco-observable:CyberItemRelationshipEnum ;
+	uco-core:source kb:cassandra-mobiledevice-mmssms-uuid ;
+	uco-core:target kb:cassandra-image-partition6-uuid ;
+	.
+
+kb:trace-relationship4-uuid
+	a uco-core:Relationship ;
+	uco-core:facets [
+		a uco-observable:DataRange ;
+		uco-observable:rangeOffset "234909233"^^xsd:integer ;
+		uco-observable:rangeSize "120000000000"^^xsd:integer ;
+	] ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Contained_Within"^^uco-observable:CyberItemRelationshipEnum ;
+	uco-core:source kb:cassandra-image-partition6-uuid ;
+	uco-core:target kb:cassandra-mobiledevice-forensicduplicate-uuid ;
+	.
+
+kb:victim1-uuid
+	a uco-role:Role ;
+	uco-core:name "Victim" ;
+	.
+
+kb:victim5-uuid
+	a uco-role:Role ;
+	uco-core:name "Victim" ;
+	.
+
