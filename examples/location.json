@@ -5,8 +5,8 @@
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#"
+        "uco-core": "http://dev.caseontology.org/ontology/uco/core/0.4.1#",
+        "uco-location": "http://dev.caseontology.org/ontology/uco/location/0.4.1#"
     },
     "@graph": [
         {

@@ -4,8 +4,8 @@
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
+        "uco-core": "http://dev.caseontology.org/ontology/uco/core/0.4.1#",
+        "uco-observable": "http://dev.caseontology.org/ontology/uco/observable/0.4.1#"
     },
     "@graph": [
         {
