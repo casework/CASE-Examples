@@ -92,6 +92,17 @@
                     "@type": "uco-observable:MessageThread",
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
+                    "uco-observable:message": [
+                        {
+                            "@id": "kb:message1"
+                        },
+                        {
+                            "@id": "kb:message2"
+                        },
+                        {
+                            "@id": "kb:message3"
+                        }
+                    ],
                     "draft:visibility": "PRIVATE",
                     "messages": {
                         "olo:length": 3,
@@ -135,6 +146,11 @@
                     "@type": "uco-observable:MessageThread",
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
+                    "uco-observable:message": [
+                        {
+                            "@id": "kb:post1"
+                        }
+                    ],
                     "draft:visibility": "PUBLIC",
                     "messages": {
                         "olo:length": 1,
