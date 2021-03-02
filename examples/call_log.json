@@ -4,7 +4,8 @@
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
