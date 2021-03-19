@@ -60,7 +60,10 @@
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:sizeInBytes": {

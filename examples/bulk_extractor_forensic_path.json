@@ -15,7 +15,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 17
@@ -68,7 +71,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": 15
@@ -121,7 +127,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:magicNumber": "H4s=",
                     "uco-observable:mimeType": "application/x-compressed",
                     "uco-observable:sizeInBytes": {
