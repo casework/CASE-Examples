@@ -354,7 +354,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:role4"
                     },
@@ -407,7 +407,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:role4"
                     },

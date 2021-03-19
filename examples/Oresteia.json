@@ -282,14 +282,14 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-location:SimpleAddress",
+                    "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Argos",
                     "uco-location:region": "Greece",
                     "uco-location:postalCode": "98052",
                     "uco-location:street": "Palace Blvd"
                 },
                 {
-                    "@type": "uco-location:LatLongCoordinates",
+                    "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": 48.860346,
                     "uco-location:longitude": 2.331199
                 }
@@ -307,12 +307,12 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Aeschylus",
                     "uco-identity:familyName": "Bard"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1954-03-07T15:34:24.02Z"
@@ -364,12 +364,12 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Euripides",
                     "uco-identity:familyName": "Forte"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1956-04-08T16:35:23.35Z"
@@ -413,12 +413,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Cassandra",
                     "uco-identity:familyName": "Troy"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1968-09-25T17:59:43.25Z"
@@ -523,7 +523,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-core:Confidence",
+                    "@type": "uco-core:ConfidenceFacet",
                     "rdfs:comment": "TODO This no longer matches the type prescription in UCO.",
                     "uco-core:confidence": "Probably True"
                 }
@@ -551,7 +551,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-core:Confidence",
+                    "@type": "uco-core:ConfidenceFacet",
                     "rdfs:comment": "TODO This no longer matches the type prescription in UCO.",
                     "uco-core:confidence": "Probably True"
                 }
@@ -562,12 +562,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Thyestes",
                     "uco-identity:familyName": "Mycenae"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1964-10-03T14:39:23.15Z"
@@ -614,12 +614,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Electra",
                     "uco-identity:familyName": "Argos"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1998-03-02T14:23:42.23Z"
@@ -719,7 +719,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:instrument": {
                         "@id": "kb:athens-warrant1-uuid"
                     },
@@ -762,7 +762,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:instrument": {
                         "@id": "kb:athens-warrant1-uuid"
                     },
@@ -820,7 +820,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:location": {
                         "@id": "kb:argos-palace-uuid"
                     },
@@ -1074,7 +1074,7 @@
             "uco-tool:version": "1.5.2_201701013",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-tool:ToolConfigurationType",
+                    "@type": "uco-tool:ToolConfigurationTypeFacet",
                     "uco-tool:configurationSettings": [
                         {
                             "@type": "uco-tool:ConfigurationSettingType",
@@ -1133,7 +1133,7 @@
             "uco-tool:creator": "Joachim Metz",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-tool:ToolConfigurationType",
+                    "@type": "uco-tool:ToolConfigurationTypeFacet",
                     "uco-tool:configurationSettings": [
                         {
                             "@type": "uco-tool:ConfigurationSettingType",
@@ -1163,7 +1163,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:location": {
                         "@id": "kb:argos-palace-uuid"
                     },
@@ -1212,7 +1212,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:location": {
                         "@id": "kb:argos-palace-uuid"
                     },
