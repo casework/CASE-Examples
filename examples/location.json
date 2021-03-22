@@ -13,7 +13,7 @@
         {
             "@id": "kb:location1",
             "@type": "uco-location:Location",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-location:SimpleAddress",
                     "uco-location:locality": "Seattle",
@@ -31,7 +31,7 @@
         {
             "@id": "kb:location2",
             "@type": "uco-location:Location",
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-location:SimpleAddress",
                     "uco-location:locality": "Paris",

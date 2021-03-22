@@ -14,10 +14,10 @@
     "@graph": [
         {
             "@id": "kb:camera1",
-            "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Device",
+                    "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": "Canon",
                     "uco-observable:model": "PowerShot SX540"
                 }
@@ -25,7 +25,7 @@
         },
         {
             "@id": "kb:relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:digital_photograph1"
             },
@@ -33,22 +33,22 @@
                 "@id": "kb:device_partition3"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/sdcard/IMG_0123.jpg"
                 }
             ]
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:fileName": "IMG_0123.jpg",
                     "uco-observable:filePath": "/sdcard/IMG_0123.jpg",
@@ -59,7 +59,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
@@ -83,14 +83,14 @@
                     ]
                 },
                 {
-                    "@type": "uco-observable:RasterPicture",
+                    "@type": "uco-observable:RasterPictureFacet",
                     "uco-observable:pictureType": "jpg",
                     "uco-observable:pictureHeight": 12345,
                     "uco-observable:pictureWidth": 12345,
                     "uco-observable:bitsPerPixel": 2
                 },
                 {
-                    "@type": "uco-observable:EXIF",
+                    "@type": "uco-observable:EXIFFacet",
                     "uco-observable:exifData": {
                         "@type": "uco-types:ControlledDictionary",
                         "uco-types:entry": [
@@ -147,7 +147,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:instrument": {
@@ -189,7 +189,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T18:59:43.25Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:performer": {

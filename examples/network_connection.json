@@ -60,7 +60,7 @@
                     "@id": "kb:trace-relationship3-uuid"
                 }
             ],
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant3554",
@@ -89,7 +89,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-action:ActionReferences",
                     "uco-action:instrument": {
@@ -143,7 +143,7 @@
         },
         {
             "@id": "kb:pcap-file-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": {
                 "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b"
             },
@@ -151,9 +151,9 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:28:42.0086110Z"
@@ -171,11 +171,11 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
-                        "@type": "uco-observable:CyberItem",
-                        "uco-core:facets": {
-                            "@type": "uco-observable:URL",
+                        "@type": "uco-observable:ObservableObject",
+                        "uco-core:hasFacet": {
+                            "@type": "uco-observable:URLFacet",
                             "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
                         }
                     },
@@ -220,7 +220,7 @@
         },
         {
             "@id": "kb:source-host-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -228,20 +228,20 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:IPv4Address",
+                    "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:value": "10.10.10.2"
                 },
                 {
-                    "@type": "uco-observable:DomainName",
+                    "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "EOGHANMACBOOK"
                 }
             ]
         },
         {
             "@id": "kb:destination-host-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -249,20 +249,20 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:IPv4Address",
+                    "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:value": "10.10.10.50"
                 },
                 {
-                    "@type": "uco-observable:DomainName",
+                    "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "JHL-IDNOLHYSVIA"
                 }
             ]
         },
         {
             "@id": "kb:network-connection1-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -270,9 +270,9 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:NetworkConnection",
+                    "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:29:25.6256260Z"
@@ -309,7 +309,7 @@
         },
         {
             "@id": "kb:network-connection2-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -317,9 +317,9 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:NetworkConnection",
+                    "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:29:25.6264620Z"
@@ -356,7 +356,7 @@
         },
         {
             "@id": "kb:network-connection3-uuid",
-            "@type": "uco-observable:CyberItem",
+            "@type": "uco-observable:ObservableObject",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -364,9 +364,9 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:NetworkConnection",
+                    "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:29:25.6370540Z"
@@ -403,7 +403,7 @@
         },
         {
             "@id": "kb:trace-relationship1-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:network-connection1-uuid"
             },
@@ -413,14 +413,14 @@
                 }
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": "true"
         },
         {
             "@id": "kb:trace-relationship2-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:network-connection3-uuid"
             },
@@ -430,14 +430,14 @@
                 }
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": "true"
         },
         {
             "@id": "kb:trace-relationship3-uuid",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:network-connection3-uuid"
             },
@@ -447,7 +447,7 @@
                 }
             ],
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": "true"

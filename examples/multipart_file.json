@@ -13,7 +13,7 @@
     "@graph": [
         {
             "@id": "kb:relationship0",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:multipart_file"
             },
@@ -22,9 +22,9 @@
             },
             "uco-core:kindOfRelationship": "has-fragment",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
                     "totalFragments": 3
                 }
@@ -32,7 +32,7 @@
         },
         {
             "@id": "kb:relationship1",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:multipart_file"
             },
@@ -41,9 +41,9 @@
             },
             "uco-core:kindOfRelationship": "has-fragment",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
                     "totalFragments": 3
                 }
@@ -51,7 +51,7 @@
         },
         {
             "@id": "kb:relationship2",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:multipart_file"
             },
@@ -60,9 +60,9 @@
             },
             "uco-core:kindOfRelationship": "has-fragment",
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:Fragment",
+                    "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
                     "totalFragments": 3
                 }
@@ -70,10 +70,10 @@
         },
         {
             "@id": "kb:multipart_file",
-            "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -98,10 +98,10 @@
         },
         {
             "@id": "kb:data_piece0",
-            "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.001",
                     "uco-observable:modifiedTime": {
@@ -122,7 +122,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -147,10 +147,10 @@
         },
         {
             "@id": "kb:data_piece1",
-            "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.002",
                     "uco-observable:modifiedTime": {
@@ -171,7 +171,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -196,10 +196,10 @@
         },
         {
             "@id": "kb:data_piece2",
-            "@type": "uco-observable:CyberItem",
-            "uco-core:facets": [
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:File",
+                    "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.003",
                     "uco-observable:modifiedTime": {
@@ -220,7 +220,7 @@
                     }
                 },
                 {
-                    "@type": "uco-observable:ContentData",
+                    "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": "BigEndian",
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
@@ -245,7 +245,7 @@
         },
         {
             "@id": "kb:relationship3",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:data_piece0"
             },
@@ -253,20 +253,20 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.001"
                 }
             ]
         },
         {
             "@id": "kb:relationship4",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:data_piece1"
             },
@@ -274,20 +274,20 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.002"
                 }
             ]
         },
         {
             "@id": "kb:relationship5",
-            "@type": "uco-observable:CyberRelationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:data_piece2"
             },
@@ -295,13 +295,13 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:CyberItemRelationshipEnum",
+                "@type": "uco-observable:ObservableObjectRelationshipEnum",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
-            "uco-core:facets": [
+            "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:PathRelation",
+                    "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.003"
                 }
             ]
