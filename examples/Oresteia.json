@@ -301,7 +301,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -326,7 +326,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -338,7 +338,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -358,7 +358,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -383,7 +383,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -395,7 +395,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -877,7 +877,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
                     },
@@ -930,7 +930,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
                     },
