@@ -10,7 +10,8 @@
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "draft": "http://example.org/draft#",
-        "olo": "http://purl.org/ontology/olo/core#"
+        "olo": "http://purl.org/ontology/olo/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
