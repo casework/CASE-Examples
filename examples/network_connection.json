@@ -85,7 +85,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -130,7 +130,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -147,14 +147,14 @@
             "uco-core:createdBy": {
                 "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T02:28:42.0086110Z"
                     },
@@ -198,7 +198,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -221,7 +221,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -242,7 +242,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -263,7 +263,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -310,7 +310,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
@@ -357,7 +357,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
