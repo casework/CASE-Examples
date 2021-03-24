@@ -6,7 +6,8 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#"
+        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
@@ -14,7 +15,7 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-location:SimpleAddress",
+                    "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Seattle",
                     "uco-location:region": "WA",
                     "uco-location:postalCode": "98052",
@@ -32,14 +33,14 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-location:SimpleAddress",
+                    "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Paris",
                     "uco-location:country": "France",
                     "uco-location:postalCode": "F-75002",
                     "uco-location:street": "38 Bad Guy Headquarters st."
                 },
                 {
-                    "@type": "uco-location:LatLongCoordinates",
+                    "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",
                         "@value": "48.860346"

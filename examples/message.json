@@ -5,7 +5,8 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
@@ -92,6 +93,17 @@
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
+                    "uco-observable:message": [
+                        {
+                            "@id": "kb:message1"
+                        },
+                        {
+                            "@id": "kb:message2"
+                        },
+                        {
+                            "@id": "kb:message3"
+                        }
+                    ],
                     "draft:visibility": "PRIVATE",
                     "messages": {
                         "olo:length": 3,
@@ -135,6 +147,11 @@
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
+                    "uco-observable:message": [
+                        {
+                            "@id": "kb:post1"
+                        }
+                    ],
                     "draft:visibility": "PUBLIC",
                     "messages": {
                         "olo:length": 1,

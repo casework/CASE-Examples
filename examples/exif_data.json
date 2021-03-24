@@ -152,7 +152,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:instrument": {
                         "@id": "kb:camera1"
                     },
@@ -194,7 +194,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:examiner1"
                     },

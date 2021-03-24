@@ -7,7 +7,8 @@
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#"
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
