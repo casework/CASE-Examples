@@ -63,10 +63,7 @@
                     "uco-observable:to": {
                         "@id": "kb:phone_account2"
                     },
-                    "uco-observable:duration": {
-                        "@type": "xsd:long",
-                        "@value": 1862
-                    }
+                    "uco-observable:duration": 1862
                 }
             ]
         }

@@ -165,10 +165,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2009-04-03T03:31:26.0521980Z"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 6337357
-                    }
+                    "uco-observable:sizeInBytes": 6337357
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",

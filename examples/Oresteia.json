@@ -475,10 +475,7 @@
                     "uco-observable:keypadUnlockCode": "1234",
                     "uco-observable:IMEI": "359305065690067",
                     "uco-observable:clockSetting": "2017-06-22T07:36:24.35Z",
-                    "uco-observable:storageCapacityInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 11000000000
-                    }
+                    "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
                     "@type": "uco-observable:MobileAccountFacet",
@@ -666,10 +663,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2017-05-09T07:36:24.35Z"
                     },
-                    "uco-observable:storageCapacityInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 11000000000
-                    }
+                    "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
                     "@type": "draft:iPhoneDevice",
@@ -892,10 +886,7 @@
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:filePath": "C:/evidence/AthensPD-2017220601-01.dd",
                     "uco-observable:isDirectory": false,
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 90080500
-                    }
+                    "uco-observable:sizeInBytes": 90080500
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -912,10 +903,7 @@
                             }
                         }
                     ],
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 9080500
-                    }
+                    "uco-observable:sizeInBytes": 9080500
                 }
             ]
         },
@@ -950,17 +938,11 @@
                     "uco-observable:extension": "db",
                     "uco-observable:fileName": "/data/data/com.android.providers.telephony/mmssms.db",
                     "uco-observable:isDirectory": false,
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 122925
-                    }
+                    "uco-observable:sizeInBytes": 122925
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 122925
-                    },
+                    "uco-observable:sizeInBytes": 122925,
                     "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
                     "uco-observable:hash": [
                         {
@@ -1023,10 +1005,7 @@
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 245235000
-                    },
+                    "uco-observable:sizeInBytes": 245235000,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
