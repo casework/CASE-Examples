@@ -328,7 +328,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:investigator1"
                     },
@@ -378,7 +378,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:examiner1"
                     },
@@ -443,7 +443,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:examiner1"
                     },
@@ -516,7 +516,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:examiner1"
                     },
@@ -584,7 +584,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:examiner2"
                     },
@@ -723,7 +723,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:performer": {
                         "@id": "kb:examiner2"
                     },
