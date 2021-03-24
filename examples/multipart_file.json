@@ -78,10 +78,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 30
-                    },
+                    "uco-observable:sizeInBytes": 30,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -119,10 +116,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 10
-                    }
+                    "uco-observable:sizeInBytes": 10
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -130,10 +124,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 10
-                    },
+                    "uco-observable:sizeInBytes": 10,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -171,10 +162,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 10
-                    }
+                    "uco-observable:sizeInBytes": 10
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -182,10 +170,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 10
-                    },
+                    "uco-observable:sizeInBytes": 10,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -223,10 +208,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 10
-                    }
+                    "uco-observable:sizeInBytes": 10
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -234,10 +216,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 10
-                    },
+                    "uco-observable:sizeInBytes": 10,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {

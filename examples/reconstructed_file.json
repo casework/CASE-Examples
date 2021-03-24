@@ -88,10 +88,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 774
-                    },
+                    "uco-observable:sizeInBytes": 774,
                     "uco-observable:dataPayload": {
                         "@type": "xsd:base64Binary",
                         "@value": "<base 64 encoded data of the file>"
@@ -122,10 +119,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 14
-                    },
+                    "uco-observable:sizeInBytes": 14,
                     "uco-observable:dataPayload": {
                         "@type": "xsd:base64Binary",
                         "@value": "w7/DmMO/w6AAEEpGSUY="
@@ -156,10 +150,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 512
-                    },
+                    "uco-observable:sizeInBytes": 512,
                     "uco-observable:dataPayload": {
                         "@type": "xsd:base64Binary",
                         "@value": "<base 64 encoded data of the file>"
@@ -190,10 +181,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 248
-                    },
+                    "uco-observable:sizeInBytes": 248,
                     "uco-observable:dataPayload": {
                         "@type": "xsd:base64Binary",
                         "@value": "<base 64 encoded data of the file>"
@@ -232,10 +220,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 512
-                    }
+                    "uco-observable:rangeSize": 512
                 }
             ]
         },
@@ -257,10 +242,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45156,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 512
-                    }
+                    "uco-observable:rangeSize": 512
                 }
             ]
         },
@@ -282,10 +264,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 57984,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 248
-                    }
+                    "uco-observable:rangeSize": 248
                 }
             ]
         },
@@ -319,10 +298,7 @@
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 45654000
-                    },
+                    "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",

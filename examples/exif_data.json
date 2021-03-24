@@ -53,10 +53,7 @@
                     "uco-observable:fileName": "IMG_0123.jpg",
                     "uco-observable:filePath": "/sdcard/IMG_0123.jpg",
                     "uco-observable:extension": "jpg",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 35002
-                    }
+                    "uco-observable:sizeInBytes": 35002
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -66,10 +63,7 @@
                     },
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 35000
-                    },
+                    "uco-observable:sizeInBytes": 35000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
