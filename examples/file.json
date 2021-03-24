@@ -18,7 +18,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "29"
@@ -71,7 +74,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:sizeInBytes": {
                         "@type": "xsd:long",
                         "@value": "3500"
