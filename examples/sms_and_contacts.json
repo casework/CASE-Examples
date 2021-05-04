@@ -42,7 +42,6 @@
                 {
                     "@type": "uco-observable:ContactFacet",
                     "rdfs:comment": [
-                        "TODO: Should the contactName property be renamed to 'displayName'?",
                         "TODO: How do we distingish 'Home', 'Work', 'Mobile', etc?",
                         "NOTE: phone_account3 is missing from this because it's a new account found in the SMS logs that was not in the phonebook.",
                         "TODO: How do we represent location information? (example: Home and Work)",
@@ -50,7 +49,8 @@
                     ],
                     "uco-observable:firstName": "John",
                     "uco-observable:lastName": "Doe",
-                    "uco-observable:contactName": "BFF Joe",
+                    "uco-observable:displayName": "John Doe",
+                    "uco-observable:nickname": "BFF Joe",
                     "uco-observable:application": {
                         "@id": "kb:android_phonebook1"
                     },
