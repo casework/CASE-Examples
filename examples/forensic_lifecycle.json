@@ -350,7 +350,7 @@
                 "@id": "kb:phase1"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Mapped_Into"
             },
             "uco-core:isDirectional": true
@@ -411,7 +411,7 @@
                 "@id": "kb:phase2"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Mapped_Into"
             },
             "uco-core:isDirectional": true
@@ -484,7 +484,7 @@
                 "@id": "kb:phase2"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Mapped_Into"
             },
             "uco-core:isDirectional": true
@@ -552,7 +552,7 @@
                 "@id": "kb:phase2"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Mapped_Into"
             },
             "uco-core:isDirectional": true
@@ -691,7 +691,7 @@
                 "@id": "kb:phase3"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:CyberItemRelationshipVocab",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Mapped_Into"
             },
             "uco-core:isDirectional": true

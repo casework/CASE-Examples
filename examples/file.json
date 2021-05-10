@@ -50,7 +50,7 @@
                 "@id": "kb:decoded_attachment"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -182,7 +182,7 @@
                 "@id": "kb:decrypted_blob"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -287,7 +287,7 @@
                 "@id": "kb:sqlite_database"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -362,7 +362,7 @@
                 "@id": "kb:image_partition"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -409,7 +409,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,

@@ -21,10 +21,7 @@
             "uco-core:target": {
                 "@id": "kb:data_piece0"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Has_Fragment"
-            },
+            "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -43,10 +40,7 @@
             "uco-core:target": {
                 "@id": "kb:data_piece1"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Has_Fragment"
-            },
+            "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -65,10 +59,7 @@
             "uco-core:target": {
                 "@id": "kb:data_piece2"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Has_Fragment"
-            },
+            "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -224,7 +215,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -249,7 +240,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -274,7 +265,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,

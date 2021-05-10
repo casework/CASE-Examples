@@ -348,7 +348,7 @@
             "uco-core:target": {
                 "@id": "kb:investigator1-uuid"
             },
-            "rdfs:comment": "TODO: 'Has_Role' is not in uco-observable:ObservableObjectRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Has_Role' is not in uco-vocabulary:ObservableObjectRelationshipVocab.",
             "uco-core:kindOfRelationship": "Has_Role",
             "uco-core:isDirectional": true
         },
@@ -452,7 +452,7 @@
             "uco-core:target": {
                 "@id": "kb:cassandra-device-uuid"
             },
-            "rdfs:comment": "TODO: 'Has_Device' is not in uco-observable:ObservableObjectRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Has_Device' is not in uco-vocabulary:ObservableObjectRelationshipVocab.",
             "uco-core:kindOfRelationship": "Has_Device",
             "uco-core:isDirectional": true
         },
@@ -510,7 +510,7 @@
             "uco-core:target": {
                 "@id": "kb:cassandra-mobileaccount-uuid"
             },
-            "rdfs:comment": "TODO: 'Has_Account' is not in uco-observable:ObservableObjectRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Has_Account' is not in uco-vocabulary:ObservableObjectRelationshipVocab.",
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:startTime": {
                 "@type": "xsd:dateTime",
@@ -538,7 +538,7 @@
             "uco-core:target": {
                 "@id": "kb:argos-palace-uuid"
             },
-            "rdfs:comment": "TODO: 'Located_At' is not in uco-observable:ObservableObjectRelationshipEnum.",
+            "rdfs:comment": "TODO: 'Located_At' is not in uco-vocabulary:ObservableObjectRelationshipVocab.",
             "uco-core:kindOfRelationship": "Located_At",
             "uco-core:startTime": {
                 "@type": "xsd:dateTime",
@@ -991,7 +991,7 @@
             ],
             "rdfs:comment": "TODO: CyberItemRelationshipEnum does not seem to be tied to uco-core:ControlledVocabulary.  ( https://github.com/ucoProject/UCO/issues/146 )",
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -1053,7 +1053,7 @@
                 "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
             },
             "uco-core:kindOfRelationship": {
-                "@type": "uco-observable:ObservableObjectRelationshipEnum",
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
             "uco-core:isDirectional": true,
@@ -1475,7 +1475,7 @@
             "@type": "uco-core:Relationship",
             "rdfs:comment": [
                 "TODO: This Relationship node is confusing to interpret, particularly with :location1 not defined in the document.  Is this supposed to be an investigator interpretation of the location of the depicted corpses?",
-                "TODO: 'Attachment_Of' is not in uco-observable:ObservableObjectRelationshipEnum."
+                "TODO: 'Attachment_Of' is not in uco-vocabulary:ObservableObjectRelationshipVocab."
             ],
             "uco-core:source": {
                 "@id": "kb:location1"
