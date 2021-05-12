@@ -154,7 +154,7 @@
             "uco-core:target": {
                 "@id": "kb:compressed_gzip0"
             },
-            "uco-core:kindOfRelationship": "decompressed-from",
+            "uco-core:kindOfRelationship": "Decompressed_From",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -251,7 +251,7 @@
             "uco-core:target": {
                 "@id": "kb:compressed_gzip1"
             },
-            "uco-core:kindOfRelationship": "decompressed-from",
+            "uco-core:kindOfRelationship": "Decompressed_From",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {

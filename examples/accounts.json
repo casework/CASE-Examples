@@ -38,7 +38,7 @@
                     "@id": "kb:facebook_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
@@ -52,7 +52,7 @@
                     "@id": "kb:google_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
@@ -66,7 +66,7 @@
                     "@id": "kb:email_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
@@ -132,7 +132,7 @@
                     "@id": "kb:email_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "associated-account",
+            "uco-core:kindOfRelationship": "Associated_Account",
             "uco-core:isDirectional": true
         },
         {
@@ -205,7 +205,7 @@
                     "@id": "kb:email_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "associated-account",
+            "uco-core:kindOfRelationship": "Associated_Account",
             "uco-core:isDirectional": true
         },
         {
