@@ -230,7 +230,7 @@
             "uco-core:target": {
                 "@id": "kb:message1"
             },
-            "uco-core:kindOfRelationship": "attachment-of",
+            "uco-core:kindOfRelationship": "Attachment_Of",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -248,7 +248,7 @@
             "uco-core:target": {
                 "@id": "kb:message1"
             },
-            "uco-core:kindOfRelationship": "attachment-of",
+            "uco-core:kindOfRelationship": "Attachment_Of",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -266,7 +266,7 @@
             "uco-core:target": {
                 "@id": "kb:message1"
             },
-            "uco-core:kindOfRelationship": "attachment-of",
+            "uco-core:kindOfRelationship": "Attachment_Of",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {

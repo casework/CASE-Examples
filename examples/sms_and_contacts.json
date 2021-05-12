@@ -82,7 +82,7 @@
                     "@id": "kb:phone_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
@@ -96,7 +96,7 @@
                     "@id": "kb:phone_account2"
                 }
             ],
-            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
@@ -110,7 +110,7 @@
                     "@id": "kb:email_account1"
                 }
             ],
-            "uco-core:kindOfRelationship": "has-account",
+            "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {

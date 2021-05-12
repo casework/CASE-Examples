@@ -20,7 +20,7 @@
             "uco-core:target": {
                 "@id": "kb:data_piece0"
             },
-            "uco-core:kindOfRelationship": "has-fragment",
+            "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -39,7 +39,7 @@
             "uco-core:target": {
                 "@id": "kb:data_piece1"
             },
-            "uco-core:kindOfRelationship": "has-fragment",
+            "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -58,7 +58,7 @@
             "uco-core:target": {
                 "@id": "kb:data_piece2"
             },
-            "uco-core:kindOfRelationship": "has-fragment",
+            "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {

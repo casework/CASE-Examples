@@ -115,7 +115,7 @@
             "uco-core:target": {
                 "@id": "kb:tar_archive_file"
             },
-            "uco-core:kindOfRelationship": "decoded-from",
+            "uco-core:kindOfRelationship": "Decoded_From",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -231,7 +231,7 @@
             "uco-core:target": {
                 "@id": "kb:sqlite_blob"
             },
-            "uco-core:kindOfRelationship": "decrypted-from",
+            "uco-core:kindOfRelationship": "Decrypted_From",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -473,7 +473,7 @@
             "uco-core:target": {
                 "@id": "kb:forensic_lab_computer1"
             },
-            "uco-core:kindOfRelationship": "stored-on",
+            "uco-core:kindOfRelationship": "Stored_On",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -491,7 +491,7 @@
             "uco-core:target": {
                 "@id": "kb:android_device1"
             },
-            "uco-core:kindOfRelationship": "forensic_image_of",
+            "uco-core:kindOfRelationship": "Forensic_Image_Of",
             "uco-core:isDirectional": true
         },
         {
