@@ -16,11 +16,11 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 17
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
+                    "uco-observable:sizeInBytes": 17,
                     "uco-observable:dataPayload": "bmVsc29uQGNyeW53ci5jb20=",
                     "uco-observable:hash": [
                         {
@@ -56,10 +56,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 1600,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 17
-                    }
+                    "uco-observable:rangeSize": 17
                 }
             ]
         },
@@ -69,11 +66,11 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 15
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
+                    "uco-observable:sizeInBytes": 15,
                     "uco-observable:dataPayload": "c3Rya0BrZXliaXQubmV0",
                     "uco-observable:hash": [
                         {
@@ -109,10 +106,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 16095,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 15
-                    }
+                    "uco-observable:rangeSize": 15
                 }
             ]
         },
@@ -122,13 +116,13 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
+                    },
                     "uco-observable:magicNumber": "H4s=",
                     "uco-observable:mimeType": "application/x-compressed",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 17605
-                    },
+                    "uco-observable:sizeInBytes": 17605,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -169,10 +163,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 4598
-                    },
+                    "uco-observable:sizeInBytes": 4598,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -208,10 +199,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 64000,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 45988
-                    }
+                    "uco-observable:rangeSize": 45988
                 }
             ]
         },
@@ -221,10 +209,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 54564465
-                    },
+                    "uco-observable:sizeInBytes": 54564465,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -266,10 +251,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 23564465
-                    },
+                    "uco-observable:sizeInBytes": 23564465,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -305,10 +287,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 946315592,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 23564465
-                    }
+                    "uco-observable:rangeSize": 23564465
                 }
             ]
         },
@@ -318,10 +297,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 2000000000
-                    },
+                    "uco-observable:sizeInBytes": 2000000000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {

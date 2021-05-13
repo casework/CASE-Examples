@@ -282,14 +282,14 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-location:SimpleAddress",
+                    "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Argos",
                     "uco-location:region": "Greece",
                     "uco-location:postalCode": "98052",
                     "uco-location:street": "Palace Blvd"
                 },
                 {
-                    "@type": "uco-location:LatLongCoordinates",
+                    "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": 48.860346,
                     "uco-location:longitude": 2.331199
                 }
@@ -301,18 +301,18 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Aeschylus",
                     "uco-identity:familyName": "Bard"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1954-03-07T15:34:24.02Z"
@@ -326,7 +326,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -338,7 +338,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -358,18 +358,18 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Euripides",
                     "uco-identity:familyName": "Forte"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1956-04-08T16:35:23.35Z"
@@ -383,7 +383,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -395,7 +395,7 @@
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
-            "uco-core:createdTime": {
+            "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-25T12:12:12.12Z"
             },
@@ -413,12 +413,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Cassandra",
                     "uco-identity:familyName": "Troy"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1968-09-25T17:59:43.25Z"
@@ -475,10 +475,7 @@
                     "uco-observable:keypadUnlockCode": "1234",
                     "uco-observable:IMEI": "359305065690067",
                     "uco-observable:clockSetting": "2017-06-22T07:36:24.35Z",
-                    "uco-observable:storageCapacityInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 11000000000
-                    }
+                    "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
                     "@type": "uco-observable:MobileAccountFacet",
@@ -523,7 +520,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-core:Confidence",
+                    "@type": "uco-core:ConfidenceFacet",
                     "rdfs:comment": "TODO This no longer matches the type prescription in UCO.",
                     "uco-core:confidence": "Probably True"
                 }
@@ -551,7 +548,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-core:Confidence",
+                    "@type": "uco-core:ConfidenceFacet",
                     "rdfs:comment": "TODO This no longer matches the type prescription in UCO.",
                     "uco-core:confidence": "Probably True"
                 }
@@ -562,12 +559,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Thyestes",
                     "uco-identity:familyName": "Mycenae"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1964-10-03T14:39:23.15Z"
@@ -614,12 +611,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Electra",
                     "uco-identity:familyName": "Argos"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1998-03-02T14:23:42.23Z"
@@ -666,10 +663,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2017-05-09T07:36:24.35Z"
                     },
-                    "uco-observable:storageCapacityInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 11000000000
-                    }
+                    "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
                     "@type": "draft:iPhoneDevice",
@@ -719,7 +713,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:instrument": {
                         "@id": "kb:athens-warrant1-uuid"
                     },
@@ -762,7 +756,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:instrument": {
                         "@id": "kb:athens-warrant1-uuid"
                     },
@@ -820,7 +814,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:location": {
                         "@id": "kb:argos-palace-uuid"
                     },
@@ -883,7 +877,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
                     },
@@ -892,10 +886,7 @@
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:filePath": "C:/evidence/AthensPD-2017220601-01.dd",
                     "uco-observable:isDirectory": false,
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 90080500
-                    }
+                    "uco-observable:sizeInBytes": 90080500
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -912,10 +903,7 @@
                             }
                         }
                     ],
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 9080500
-                    }
+                    "uco-observable:sizeInBytes": 9080500
                 }
             ]
         },
@@ -942,7 +930,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
                     },
@@ -950,17 +938,11 @@
                     "uco-observable:extension": "db",
                     "uco-observable:fileName": "/data/data/com.android.providers.telephony/mmssms.db",
                     "uco-observable:isDirectory": false,
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 122925
-                    }
+                    "uco-observable:sizeInBytes": 122925
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 122925
-                    },
+                    "uco-observable:sizeInBytes": 122925,
                     "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
                     "uco-observable:hash": [
                         {
@@ -1023,10 +1005,7 @@
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 245235000
-                    },
+                    "uco-observable:sizeInBytes": 245235000,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -1074,7 +1053,7 @@
             "uco-tool:version": "1.5.2_201701013",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-tool:ToolConfigurationType",
+                    "@type": "uco-tool:ToolConfigurationTypeFacet",
                     "uco-tool:configurationSettings": [
                         {
                             "@type": "uco-tool:ConfigurationSettingType",
@@ -1133,7 +1112,7 @@
             "uco-tool:creator": "Joachim Metz",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-tool:ToolConfigurationType",
+                    "@type": "uco-tool:ToolConfigurationTypeFacet",
                     "uco-tool:configurationSettings": [
                         {
                             "@type": "uco-tool:ConfigurationSettingType",
@@ -1163,7 +1142,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:location": {
                         "@id": "kb:argos-palace-uuid"
                     },
@@ -1212,7 +1191,7 @@
             },
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-action:ActionReferences",
+                    "@type": "uco-action:ActionReferencesFacet",
                     "uco-action:location": {
                         "@id": "kb:argos-palace-uuid"
                     },

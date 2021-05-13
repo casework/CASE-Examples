@@ -14,12 +14,12 @@
             "@type": "uco-identity:Identity",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "William",
                     "uco-identity:familyName": "Smith"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1968-09-25T17:59:43.25Z"
@@ -108,12 +108,12 @@
                     }
                 },
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Willy",
                     "uco-identity:familyName": "Smith"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1968-09-25T17:59:43.25Z"
@@ -145,7 +145,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:google_org"
                     },
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     }
@@ -181,12 +181,12 @@
                     }
                 },
                 {
-                    "@type": "uco-identity:SimpleName",
+                    "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "William",
                     "uco-identity:familyName": "Smith"
                 },
                 {
-                    "@type": "uco-identity:BirthInformation",
+                    "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
                         "@value": "1968-09-25T17:59:43.25Z"

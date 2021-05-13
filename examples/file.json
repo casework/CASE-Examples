@@ -18,11 +18,11 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": "29"
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
+                    "uco-observable:sizeInBytes": 29,
                     "uco-observable:dataPayload": "Q0FTRSBpcyBhbiBhd2Vzb21lIG9udG9sb2d5IQ=",
                     "uco-observable:hash": [
                         {
@@ -58,10 +58,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45,
-                    "uco-observable:rangeSize": {
-                        "@type": "xsd:long",
-                        "@value": 29
-                    }
+                    "uco-observable:rangeSize": 29
                 }
             ]
         },
@@ -71,11 +68,11 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": "BigEndian",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": "3500"
+                    "uco-observable:byteOrder": {
+                        "@type": "uco-vocabulary:EndiannessTypeVocab",
+                        "@value": "Big-endian"
                     },
+                    "uco-observable:sizeInBytes": 3500,
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -136,7 +133,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2009-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-01-15T17:59:43.25Z"
                     },
@@ -147,10 +144,7 @@
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 23000
-                    },
+                    "uco-observable:sizeInBytes": 23000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -199,10 +193,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": "23000"
-                    },
+                    "uco-observable:sizeInBytes": 23000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:magicNumber": "NzUgNzMgNzQgNjEgNzI=",
                     "uco-observable:mimeType": "application/x-tar",
@@ -249,10 +240,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": "54000"
-                    },
+                    "uco-observable:sizeInBytes": 54000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -319,21 +307,15 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:createdTime": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 546000
-                    }
+                    "uco-observable:sizeInBytes": 546000
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": 546000
-                    },
+                    "uco-observable:sizeInBytes": 546000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
                     "uco-observable:hash": [
@@ -379,10 +361,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": "45654000"
-                    },
+                    "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -444,10 +423,7 @@
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": {
-                        "@type": "xsd:long",
-                        "@value": "45654000"
-                    },
+                    "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -518,10 +494,7 @@
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
                     "uco-observable:cpuFamily": "Intel Pentium i7",
-                    "uco-observable:totalRam": {
-                        "@type": "xsd:long",
-                        "@value": "4294967296"
-                    }
+                    "uco-observable:totalRam": 4294967296
                 },
                 {
                     "@type": "acme:InventoryComputer",
@@ -555,10 +528,7 @@
                     "uco-observable:processorArchitecture": "Octa-core",
                     "uco-observable:cpuFamily": "Exynos 5410 Octa",
                     "uco-observable:gpuFamily": "Power VR SGX544MP3",
-                    "uco-observable:totalRam": {
-                        "@type": "xsd:long",
-                        "@value": "2147483648"
-                    }
+                    "uco-observable:totalRam": 2147483648
                 }
             ]
         }
