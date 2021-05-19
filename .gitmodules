@@ -4,3 +4,6 @@
 [submodule "dependencies/UCO"]
 	path = dependencies/UCO
 	url = https://github.com/ucoProject/UCO.git
+[submodule "dependencies/UCO-Utility-Pre-0.7.0-Validator"]
+	path = dependencies/UCO-Utility-Pre-0.7.0-Validator
+	url = https://github.com/ucoProject/UCO-Utility-Pre-0.7.0-Validator.git
