@@ -69,6 +69,9 @@ check: \
 	$(MAKE) \
 	  --directory dependencies \
 	  check
+	$(MAKE) \
+	  --directory examples \
+	  check
 
 clean:
 	@rm -f \
