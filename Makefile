@@ -16,7 +16,13 @@ SHELL := /bin/bash
 PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 all: \
+  .dependencies.done.log
+
+.dependencies.done.log: \
   .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+	touch $@
 
 # Submodules are checked for having been cloned ever.  A global git
 # submodule udpate command is not run, to prevent resetting any pointers
@@ -58,8 +64,15 @@ all: \
 	      src
 	touch $@
 
+check: \
+  .dependencies.done.log
+	$(MAKE) \
+	  --directory dependencies \
+	  check
+
 clean:
 	@rm -f \
+	  .dependencies.done.log \
 	  .git_submodule_init.done.log \
 	  .venv.done.log
 	@rm -rf \
