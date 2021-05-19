@@ -28,16 +28,16 @@ all: \
 	  || (git submodule init dependencies/UCO-Utility-Pre-0.7.0-Validator && git submodule update dependencies/UCO-Utility-Pre-0.7.0-Validator)
 	@test -r dependencies/UCO-Utility-Pre-0.7.0-Validator/README.md \
 	  || (echo "ERROR:Makefile:UCO-Utility-Pre-0.7.0-Validator submodule README.md file not found, even though UCO-Utility-Pre-0.7.0-Validator submodule initialized." >&2 ; exit 2)
-	# UCO
-	test -r dependencies/UCO/README.md \
-	  || (git submodule init dependencies/UCO && git submodule update dependencies/UCO)
-	@test -r dependencies/UCO/README.md \
-	  || (echo "ERROR:Makefile:UCO submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
-	# CASE
-	test -r dependencies/CASE/README.md \
-	  || (git submodule init dependencies/CASE && git submodule update dependencies/CASE)
-	@test -r dependencies/CASE/README.md \
-	  || (echo "ERROR:Makefile:CASE submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
+	# UCO (CASE 0.3.0)
+	test -r dependencies/CASE-0.3.0/UCO/README.md \
+	  || (git submodule init dependencies/CASE-0.3.0/UCO && git submodule update dependencies/CASE-0.3.0/UCO)
+	@test -r dependencies/CASE-0.3.0/UCO/README.md \
+	  || (echo "ERROR:Makefile:CASE-0.3.0 UCO submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
+	# CASE (CASE 0.3.0)
+	test -r dependencies/CASE-0.3.0/CASE/README.md \
+	  || (git submodule init dependencies/CASE-0.3.0/CASE && git submodule update dependencies/CASE-0.3.0/CASE)
+	@test -r dependencies/CASE-0.3.0/CASE/README.md \
+	  || (echo "ERROR:Makefile:CASE-0.3.0 CASE submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
 	touch $@
 
 .venv.done.log: \
