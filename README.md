@@ -2,7 +2,7 @@
 
 This repository holds example data illustrating usage of the Cyber-investigation Analysis Standard Expression (CASE) language.
 
-Further illustration can be found at the [CASE Topics gallery](https://caseontology.org/ontology/gallery.html).
+Further illustration can be found at the [CASE narratives gallery](https://caseontology.org/examples/).
 
 
 ## Examples in this repository
