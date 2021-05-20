@@ -13,7 +13,7 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd .. ; pwd)
+top_srcdir := $(shell cd ../../.. ; pwd)
 
 all:
 
