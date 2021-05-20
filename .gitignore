@@ -12,3 +12,7 @@
 # Protege files
 catalog-v001.xml
 .project
+
+# Workflow files
+.*.done.log
+venv
