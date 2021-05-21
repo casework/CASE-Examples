@@ -1,7 +1,7 @@
 # Reconstructed File Example
 
-This example shows how we can use the mechanisms described by [file.md](file.md) and
-[multipart_file.md](multipart_file.md) to define how a file was reconstructed by
+This example shows how we can use the mechanisms described by [*file*](../file/) and
+[*multipart_file*](../multipart_file/) to define how a file was reconstructed by
 data carving software.
 
 The `forensic_action0` object describe how the carving tool was run in order to create

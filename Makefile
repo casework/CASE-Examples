@@ -70,7 +70,7 @@ check: \
 	  --directory dependencies \
 	  check
 	$(MAKE) \
-	  --directory examples \
+	  --directory examples/illustrations/location \
 	  check
 
 clean:
