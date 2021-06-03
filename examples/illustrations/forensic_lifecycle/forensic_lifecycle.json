@@ -3,7 +3,7 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "case-investigation": "https://caseontology.org/ontology/case/investigation#",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
