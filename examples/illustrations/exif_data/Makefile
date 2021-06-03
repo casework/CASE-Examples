@@ -13,42 +13,28 @@
 
 SHELL := /bin/bash
 
-top_srcdir := $(shell cd .. ; pwd)
+top_srcdir := $(shell cd ../../.. ; pwd)
 
-all: \
-  case-0.3.0.pkl \
-  case-0.4.0.pkl
+all:
 
-case-0.3.0.pkl: \
-  $(top_srcdir)/.venv.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && serialize \
-	    -c case-0.3.0 \
-	    -o _$@ \
-	    CASE-0.3.0/
-	mv _$@ $@
-
-case-0.4.0.pkl: \
-  $(top_srcdir)/.venv.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && serialize \
-	    -c case-0.4.0 \
-	    -o _$@ \
-	    CASE-0.4.0/
-	mv _$@ $@
+.PHONY: \
+  check-0.3.0 \
+  check-0.4.0
 
 check: \
-  case-0.3.0.pkl \
-  case-0.4.0.pkl
-	$(MAKE) \
-	  --directory CASE-0.3.0 \
-	  check
-	$(MAKE) \
-	  --directory CASE-0.4.0 \
-	  check
+  check-0.3.0 \
+  check-0.4.0
+
+check-0.3.0: \
+  $(top_srcdir)/.dependencies.done.log
 	source $(top_srcdir)/venv/bin/activate \
-	  && describe \
-	    case-0.3.0.pkl
+	  && validate \
+	    $(top_srcdir)/dependencies/case-0.3.0.pkl \
+	    exif_data.json
+
+check-0.4.0: \
+  $(top_srcdir)/.dependencies.done.log
 	source $(top_srcdir)/venv/bin/activate \
-	  && describe \
-	    case-0.4.0.pkl
+	  && validate \
+	    $(top_srcdir)/dependencies/case-0.4.0.pkl \
+	    exif_data.json

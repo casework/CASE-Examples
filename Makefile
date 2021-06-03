@@ -44,6 +44,16 @@ all: \
 	  || (git submodule init dependencies/CASE-0.3.0/CASE && git submodule update dependencies/CASE-0.3.0/CASE)
 	@test -r dependencies/CASE-0.3.0/CASE/README.md \
 	  || (echo "ERROR:Makefile:CASE-0.3.0 CASE submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
+	# UCO (CASE 0.4.0)
+	test -r dependencies/CASE-0.4.0/UCO/README.md \
+	  || (git submodule init dependencies/CASE-0.4.0/UCO && git submodule update dependencies/CASE-0.4.0/UCO)
+	@test -r dependencies/CASE-0.4.0/UCO/README.md \
+	  || (echo "ERROR:Makefile:CASE-0.4.0 UCO submodule README.md file not found, even though UCO submodule initialized." >&2 ; exit 2)
+	# CASE (CASE 0.4.0)
+	test -r dependencies/CASE-0.4.0/CASE/README.md \
+	  || (git submodule init dependencies/CASE-0.4.0/CASE && git submodule update dependencies/CASE-0.4.0/CASE)
+	@test -r dependencies/CASE-0.4.0/CASE/README.md \
+	  || (echo "ERROR:Makefile:CASE-0.4.0 CASE submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
 	touch $@
 
 .venv.done.log: \
@@ -68,6 +78,9 @@ check: \
   .dependencies.done.log
 	$(MAKE) \
 	  --directory dependencies \
+	  check
+	$(MAKE) \
+	  --directory examples/illustrations/exif_data \
 	  check
 	$(MAKE) \
 	  --directory examples/illustrations/location \
