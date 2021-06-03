@@ -80,6 +80,9 @@ check: \
 	  --directory dependencies \
 	  check
 	$(MAKE) \
+	  --directory examples/illustrations/exif_data \
+	  check
+	$(MAKE) \
 	  --directory examples/illustrations/location \
 	  check
 
