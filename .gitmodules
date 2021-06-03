@@ -1,6 +1,9 @@
-[submodule "dependencies/CASE"]
-	path = dependencies/CASE
+[submodule "dependencies/CASE-0.3.0/CASE"]
+	path = dependencies/CASE-0.3.0/CASE
 	url = https://github.com/casework/CASE.git
-[submodule "dependencies/UCO"]
-	path = dependencies/UCO
+[submodule "dependencies/CASE-0.3.0/UCO"]
+	path = dependencies/CASE-0.3.0/UCO
 	url = https://github.com/ucoProject/UCO.git
+[submodule "dependencies/UCO-Utility-Pre-0.7.0-Validator"]
+	path = dependencies/UCO-Utility-Pre-0.7.0-Validator
+	url = https://github.com/ucoProject/UCO-Utility-Pre-0.7.0-Validator.git

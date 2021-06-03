@@ -39,7 +39,7 @@ represented by a **Relationship** object using one of the special keywords
 (*contained-within*, *decrypted-from*, *decoded-from* or *stored-on*). This object may contain 
 property bundles that provide further detail on how the Trace pointed to by the `source` property is related to the Trace pointed to by the `target` property (e.g., where within the target was the source contained).
 
-For the extraction of a file within a [file system](../glossary.md#file-system) (EXT4, NTFS, TAR, etc)
+For the extraction of a file within a file system (EXT4, NTFS, TAR, etc)
 we use the property bundle **PathRelation**. This property bundle will contain file path
 information needed to extract the file out of the file system.
 
@@ -51,5 +51,3 @@ encoding algorithm used to decode the `target` file.
  
 For the extraction of an embedded section of raw bytes within the `target` file, we
 use the **DataRange** property bundle which provides the offset location and range size within the `target` file.
-
-

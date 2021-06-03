@@ -11,7 +11,7 @@ the [2013 COSE paper](https://github.com/simsong/bulk_extractor/blob/master/doc/
 ```
 
 This example takes advantage of the file mechanisms as described in
-[file.md](file.md) in order to create **Relationship** and **Trace** objects 
+[*file*](../file/) in order to create **Relationship** and **Trace** objects 
 to represent each offset and gzip decompression performed to
 extract out the email addresses. 
 

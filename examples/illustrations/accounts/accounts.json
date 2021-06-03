@@ -124,6 +124,7 @@
         {
             "@id": "kb:associated-account4",
             "@type": "uco-core:Relationship",
+            "rdfs:comment": "It is possible isDirectional should be false.  This is being tracked in UCO OC-135.",
             "uco-core:source": {
                 "@id": "kb:facebook_account1"
             },
@@ -197,6 +198,7 @@
         {
             "@id": "kb:associated-account4",
             "@type": "uco-observable:ObservableRelationship",
+            "rdfs:comment": "It is possible isDirectional should be false.  This is being tracked in UCO OC-135.",
             "uco-core:source": {
                 "@id": "kb:google_account1"
             },
