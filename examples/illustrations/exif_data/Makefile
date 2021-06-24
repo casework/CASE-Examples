@@ -42,7 +42,7 @@ check-0.4.0: \
 	    exif_data.json
 
 clean:
-	@rm \
+	@rm -f \
 	  query-*.md
 
 query-select-files.md: \
