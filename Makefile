@@ -17,6 +17,9 @@ PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null ||
 
 all: \
   .dependencies.done.log
+	$(MAKE) \
+	  --directory examples/illustrations/exif_data
+	touch $@
 
 .dependencies.done.log: \
   .venv.done.log
@@ -90,6 +93,9 @@ check: \
 	  check
 
 clean:
+	@$(MAKE) \
+	  --directory examples/illustrations/exif_data \
+	  clean
 	@rm -f \
 	  .dependencies.done.log \
 	  .git_submodule_init.done.log \
