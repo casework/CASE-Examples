@@ -68,6 +68,9 @@ all: \
 	    pip \
 	    setuptools
 	source venv/bin/activate \
+	  && pip install \
+	      dependencies/CASE-Utilities-Python
+	source venv/bin/activate \
 	  && cd dependencies/UCO-Utility-Pre-0.7.0-Validator \
 	    && pip install \
 	      --editable \
