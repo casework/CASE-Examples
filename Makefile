@@ -37,6 +37,11 @@ all: \
 	  || (git submodule init dependencies/UCO-Utility-Pre-0.7.0-Validator && git submodule update dependencies/UCO-Utility-Pre-0.7.0-Validator)
 	@test -r dependencies/UCO-Utility-Pre-0.7.0-Validator/README.md \
 	  || (echo "ERROR:Makefile:UCO-Utility-Pre-0.7.0-Validator submodule README.md file not found, even though UCO-Utility-Pre-0.7.0-Validator submodule initialized." >&2 ; exit 2)
+	# CASE-Utilities-Python
+	test -r dependencies/CASE-Utilities-Python/README.md \
+	  || (git submodule init dependencies/CASE-Utilities-Python && git submodule update dependencies/CASE-Utilities-Python)
+	test -r dependencies/CASE-Utilities-Python/README.md \
+	  || (echo "ERROR:Makefile:CASE-Utilities-Python submodule README.md file not found, even though CASE-Utilities-Python submodule initialized." >&2 ; exit 2)
 	# UCO (CASE 0.3.0)
 	test -r dependencies/CASE-0.3.0/UCO/README.md \
 	  || (git submodule init dependencies/CASE-0.3.0/UCO && git submodule update dependencies/CASE-0.3.0/UCO)
