@@ -17,6 +17,9 @@ PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null ||
 
 all: \
   .dependencies.done.log
+	$(MAKE) \
+	  --directory examples/illustrations/exif_data
+	touch $@
 
 .dependencies.done.log: \
   .venv.done.log
@@ -34,6 +37,11 @@ all: \
 	  || (git submodule init dependencies/UCO-Utility-Pre-0.7.0-Validator && git submodule update dependencies/UCO-Utility-Pre-0.7.0-Validator)
 	@test -r dependencies/UCO-Utility-Pre-0.7.0-Validator/README.md \
 	  || (echo "ERROR:Makefile:UCO-Utility-Pre-0.7.0-Validator submodule README.md file not found, even though UCO-Utility-Pre-0.7.0-Validator submodule initialized." >&2 ; exit 2)
+	# CASE-Utilities-Python
+	test -r dependencies/CASE-Utilities-Python/README.md \
+	  || (git submodule init dependencies/CASE-Utilities-Python && git submodule update dependencies/CASE-Utilities-Python)
+	test -r dependencies/CASE-Utilities-Python/README.md \
+	  || (echo "ERROR:Makefile:CASE-Utilities-Python submodule README.md file not found, even though CASE-Utilities-Python submodule initialized." >&2 ; exit 2)
 	# UCO (CASE 0.3.0)
 	test -r dependencies/CASE-0.3.0/UCO/README.md \
 	  || (git submodule init dependencies/CASE-0.3.0/UCO && git submodule update dependencies/CASE-0.3.0/UCO)
@@ -68,6 +76,9 @@ all: \
 	    pip \
 	    setuptools
 	source venv/bin/activate \
+	  && pip install \
+	      dependencies/CASE-Utilities-Python
+	source venv/bin/activate \
 	  && cd dependencies/UCO-Utility-Pre-0.7.0-Validator \
 	    && pip install \
 	      --editable \
@@ -87,6 +98,9 @@ check: \
 	  check
 
 clean:
+	@$(MAKE) \
+	  --directory examples/illustrations/exif_data \
+	  clean
 	@rm -f \
 	  .dependencies.done.log \
 	  .git_submodule_init.done.log \
