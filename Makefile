@@ -18,8 +18,7 @@ PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null ||
 all: \
   .dependencies.done.log
 	$(MAKE) \
-	  --directory examples/illustrations/exif_data
-	touch $@
+	  --directory examples/illustrations
 
 .dependencies.done.log: \
   .venv.done.log
@@ -91,15 +90,11 @@ check: \
 	  --directory dependencies \
 	  check
 	$(MAKE) \
-	  --directory examples/illustrations/exif_data \
-	  check
-	$(MAKE) \
-	  --directory examples/illustrations/location \
-	  check
+	  --directory examples/illustrations
 
 clean:
 	@$(MAKE) \
-	  --directory examples/illustrations/exif_data \
+	  --directory examples/illustrations \
 	  clean
 	@rm -f \
 	  .dependencies.done.log \
