@@ -13,6 +13,8 @@ Instead, one of these files should be modified:
 
 After committing changes to any of the files in this directory, run `make`.  If a Git-tracked file differs from a state that is freshly computed, a prompt will be given to review a `diff` output.  If the `diff` looks like it contains expected changes, a `cp` command is provided in the last `make` output line starting `UPDATE:`.
 
+Note that resources backing this illustration are shared among all of the examples in this repository.  So, before `make` will work in this directory, `make` should be run at the repository's top directory.  (The command to run is only "`make`".  Some resources will be downloaded and built, and `make` from there will also do one build-pass over all of the examples.  This should have no effect on the Git-tracked state.)
+
 
 ## Adding JSON snippets or queries
 
