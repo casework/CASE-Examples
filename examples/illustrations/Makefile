@@ -16,6 +16,8 @@ SHELL := /bin/bash
 all:
 	$(MAKE) \
 	  --directory exif_data
+	$(MAKE) \
+	  --directory inference
 
 check:
 	$(MAKE) \
@@ -24,8 +26,14 @@ check:
 	$(MAKE) \
 	  --directory location \
 	  check
+	$(MAKE) \
+	  --directory inference \
+	  check
 
 clean:
+	@$(MAKE) \
+	  --directory inference \
+	  clean
 	@$(MAKE) \
 	  --directory exif_data \
 	  clean

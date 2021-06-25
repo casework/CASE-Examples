@@ -16,6 +16,7 @@ Mapping notes & respective JSON-LD output:
 - [EXIF Data](examples/illustrations/exif_data/exif_data.json)
 - [Files](examples/illustrations/file/file.json) (*[info](examples/illustrations/file/)*)
 - [Forensic Lifecycle](examples/illustrations/forensic_lifecycle/forensic_lifecycle.json)
+- [Inference](examples/illustrations/inference/inference.json) (*[info](examples/illustrations/inference/)*)
 - [Location](examples/illustrations/location/location.json)
 - [Message](examples/illustrations/message/message.json)
 - [Mobile device and SIM card](examples/illustrations/mobile_device_and_sim_card/mobile_device_and_sim_card.json)

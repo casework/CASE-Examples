@@ -1,0 +1,123 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+drafting:Hypothesis
+	a owl:Class ;
+	rdfs:subClassOf uco-core:Assertion ;
+	rdfs:label "Hypothesis"@en ;
+	rdfs:comment "A natural-language claim to explain observable objects."@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:Inference
+	a owl:Class ;
+	rdfs:subClassOf
+		uco-core:UcoObject ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:evidenceEvaluation ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange xsd:float ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:evaluationRationale ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange xsd:string ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:evaluationType ;
+			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			owl:onDataRange xsd:string ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:basisEvidence ;
+			owl:onClass uco-core:UcoObject ;
+			owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:usedMethod ;
+			owl:onClass drafting:Method ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		] ,
+		[
+			a owl:Restriction ;
+			owl:onProperty drafting:hypothesis ;
+			owl:onDataRange xsd:string ;
+			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+		]
+		;
+	rdfs:label "Inference"@en ;
+	rdfs:comment "TODO" ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:Method
+	a owl:Class ;
+	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:label "Method"@en ;
+	rdfs:comment
+		"(TODO - would this relate to Pattern?)"@en ,
+		"An interpretation algorithm or procedure."@en
+		;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:basisEvidence
+	a owl:ObjectProperty ;
+	rdfs:label "basisEvidence"@en ;
+	rdfs:comment "A thing that supports a claim." ;
+	rdfs:range uco-core:UcoObject ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:evaluationRationale
+	a owl:DatatypeProperty ;
+	rdfs:label "evaluationRationale"@en ;
+	rdfs:comment "Explanation of the rationale for an assigned number"@en ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:evaluationType
+	a owl:DatatypeProperty ;
+	rdfs:label "evaluationType"@en ;
+	rdfs:comment "What an assigned number represents such as probability, strength, similarity."@en ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:evidenceEvaluation
+	a owl:DatatypeProperty ;
+	rdfs:label "evidenceEvaluation"@en ;
+	rdfs:comment
+		"(TODO This should probably go into UCO Core.)"@en ,
+		"A number that represents the probability, strength, similarity, etc. of the observations in light of the hypothesis."@en
+		;
+	rdfs:range xsd:float ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:hypothesis
+	a owl:DatatypeProperty ;
+	rdfs:label "hypothesis"@en ;
+	rdfs:comment "A natural-language claim to explain observable objects."@en ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:usedMethod
+	a owl:ObjectProperty ;
+	rdfs:label "usedMethod"@en ;
+	rdfs:comment "TODO" ;
+	rdfs:range drafting:Method ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+

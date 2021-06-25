@@ -1,0 +1,57 @@
+# This software was developed at the National Institute of Standards
+# and Technology by employees of the Federal Government in the course
+# of their official duties. Pursuant to title 17 Section 105 of the
+# United States Code this software is not subject to copyright
+# protection and is in the public domain. NIST assumes no
+# responsibility whatsoever for its use by other parties, and makes
+# no guarantees, expressed or implied, about its quality,
+# reliability, or any other characteristic.
+#
+# We would appreciate acknowledgement if the software is used.
+
+SELECT ?nBasisObject ?lSupports
+WHERE {
+  {
+    SELECT ?nBasisObject ?lSupports
+    WHERE {
+      kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7
+        drafting:basisEvidence ?nBasisObject ;
+        .
+      FILTER NOT EXISTS {
+        kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027
+          drafting:basisEvidence ?nBasisObject ;
+          .
+      }
+      BIND ("A" AS ?lSupports)
+    }
+  }
+  UNION
+  {
+    SELECT ?nBasisObject ?lSupports
+    WHERE {
+      kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027
+        drafting:basisEvidence ?nBasisObject ;
+        .
+      FILTER NOT EXISTS {
+        kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7
+          drafting:basisEvidence ?nBasisObject ;
+          .
+      }
+      BIND ("B" AS ?lSupports)
+    }
+  }
+  UNION
+  {
+    SELECT ?nBasisObject ?lSupports
+    WHERE {
+      kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7
+        drafting:basisEvidence ?nBasisObject ;
+        .
+      kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027
+        drafting:basisEvidence ?nBasisObject ;
+        .
+      BIND ("both" AS ?lSupports)
+    }
+  }
+}
+ORDER BY ?lSupports ?nBasisObject

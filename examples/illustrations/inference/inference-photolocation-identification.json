@@ -1,0 +1,78 @@
+[
+    {
+        "@id": "kb:investigative-action-3d5a8d9-8376-4277-9852-8e6bf9263c55",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "identification",
+        "uco-core:description": "Identify the object in the photograph",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-02T10:12:00.00Z"
+        },
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-action:ActionReferencesFacet",
+                "uco-action:location": {
+                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+                },
+                "uco-action:performer": {
+                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+                },
+                "uco-action:instrument": {
+                    "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+                },
+                "uco-action:environment": {
+                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+                },
+                "uco-action:object": [
+                    {
+                        "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a"
+                    },
+                    {
+                        "@id": "kb:provenance-record-9e555155-a9bc-43ef-95a1-aeb83fb3ca72"
+                    },
+                    {
+                        "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+                    },
+                    {
+                        "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+                    },
+                    {
+                        "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+                    }
+                ],
+                "uco-action:result": [
+                    {
+                        "@id": "kb:provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7"
+                    },
+                    {
+                        "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7",
+        "@type": "drafting:Inference",
+        "drafting:hypothesis": {
+            "@id": "kb:hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68"
+        },
+        "drafting:evaluationType": "probability",
+        "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument.",
+        "drafting:evidenceEvaluation": {
+            "@type": "xsd:float",
+            "@value": "0.9"
+        },
+        "drafting:basisEvidence": [
+            {
+                "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+            },
+            {
+                "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+            },
+            {
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+            }
+        ]
+    }
+]

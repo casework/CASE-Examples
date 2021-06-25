@@ -1,0 +1,136 @@
+[
+    {
+        "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1",
+        "@type": "uco-tool:AnalyticTool"
+    },
+    {
+        "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137",
+        "@type": "uco-observable:File",
+        "uco-core:description": "File recovered by tool AutoAuthenticator, asserted at time of recovery to be an Excel spreadsheet.",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:fileName": "contacts.xlsx"
+            },
+            {
+                "@type": "uco-observable:ContentDataFacet",
+                "rdfs:comment": "(Note that this disagrees with the .xslx file extension.)",
+                "uco-observable:mimeType": "image/jpeg"
+            }
+        ]
+    },
+    {
+        "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037",
+        "@type": "uco-observable:Device"
+    },
+    {
+        "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43",
+        "@type": "uco-identity:Identity"
+    },
+    {
+        "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51",
+        "@type": "drafting:Hypothesis",
+        "rdfs:comment": "(Fully recovered)"
+    },
+    {
+        "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2",
+        "@type": "drafting:Hypothesis",
+        "rdfs:comment": "(Partially recovered)"
+    },
+    {
+        "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402",
+        "@type": "drafting:Hypothesis",
+        "rdfs:comment": "(Only name and metadata recovered)"
+    },
+    {
+        "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0",
+        "@type": "drafting:Hypothesis",
+        "rdfs:comment": "(Only name recovered)"
+    },
+    {
+        "@id": "kb:hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68",
+        "@type": "drafting:Hypothesis"
+    },
+    {
+        "@id": "kb:hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1",
+        "@type": "drafting:Hypothesis"
+    },
+    {
+        "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8",
+        "@type": "uco-location:Location"
+    },
+    {
+        "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b",
+        "@type": "uco-location:Location"
+    },
+    {
+        "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1",
+        "@type": "uco-observable:RasterPicture"
+    },
+    {
+        "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": {
+            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+        }
+    },
+    {
+        "@id": "kb:provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": {
+            "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7"
+        }
+    },
+    {
+        "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        }
+    },
+    {
+        "@id": "kb:provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
+            },
+            {
+                "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
+            },
+            {
+                "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576"
+            },
+            {
+                "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenance-record-9e555155-a9bc-43ef-95a1-aeb83fb3ca72",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+            },
+            {
+                "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": {
+            "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
+            "@value": "Contained_Within"
+        },
+        "uco-core:source": {
+            "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+        },
+        "uco-core:target": {
+            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+        }
+    }
+]
