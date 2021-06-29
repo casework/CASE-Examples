@@ -7,6 +7,7 @@ This illustration includes example investigative questions that require inferenc
  "@id": "inference-uuid",
  "@type": "Inference",
  "hypothesis": "(hypothesis object under consideration)",
+ "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
  "evaluationType": "probability",
  "evidenceEvaluation": 0.95,
  "evidenceRationale": "The observations are compatible with simulated tests of the hypothesized action",
@@ -15,6 +16,8 @@ This illustration includes example investigative questions that require inferenc
 ```
 
 This structure is an updated example of Inference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.
+
+When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
 
 ## State of this illustration
@@ -35,7 +38,7 @@ A total JSON-LD file of the data on this page, plus supplementary data needed to
 * Hypothesis 3: Only `Name and Metadata Recovered`
 * Hypothesis 4: Only `Name Recovered`
 
-The following inferences can be stated in words as "the observations are exceedingly more probable given Assertion 3 (`Only Name and Metadata Recovered`), rather than the other assertions."
+The following inferences can be stated in words as "the observations are exceedingly more probable given Hypothesis 3 (`Only Name and Metadata Recovered`), rather than the other hypotheses."
 
 ```json
 [
@@ -169,6 +172,13 @@ The following inferences can be stated in words as "the observations are exceedi
     }
 ]
 ```
+
+
+### Query - Most probable hypothesis
+
+To ask whether the file is `Fully Recovered` is the wrong question because it does not consider alternatives and raises the risk of confirmation bias.
+
+Rather, the question is Which class/category of file recovery is more supported by the evidence? In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
 
 
 ## Example - Machine learning and image location
