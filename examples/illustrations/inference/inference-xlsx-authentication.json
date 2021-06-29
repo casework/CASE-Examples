@@ -77,6 +77,9 @@
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
     },
     {
@@ -93,6 +96,9 @@
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
     },
     {
@@ -109,6 +115,9 @@
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
     },
     {
@@ -125,6 +134,14 @@
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
+    },
+    {
+        "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
+        "@type": "drafting:Method",
+        "uco-core:description": "File recovery method described in https://doi.org/10.1016/j.diin.2019.06.004"
     }
 ]
