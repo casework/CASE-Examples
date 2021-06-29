@@ -1,0 +1,32 @@
+# This software was developed at the National Institute of Standards
+# and Technology by employees of the Federal Government in the course
+# of their official duties. Pursuant to title 17 Section 105 of the
+# United States Code this software is not subject to copyright
+# protection and is in the public domain. NIST assumes no
+# responsibility whatsoever for its use by other parties, and makes
+# no guarantees, expressed or implied, about its quality,
+# reliability, or any other characteristic.
+#
+# We would appreciate acknowledgement if the software is used.
+
+SELECT ?lStatement ?lEvaluationType ?lEvidenceEvaluation ?lEvaluationRationale
+WHERE {
+  kb:investigative-action-9d3e78d9-8376-4277-9852-8e6bf9267456
+    uco-core:hasFacet/uco-action:result ?nInference ;
+    .
+
+  ?nInference
+    a drafting:Inference ;
+    drafting:hypothesis ?nHypothesis ;
+    drafting:evaluationRationale ?lEvaluationRationale ;
+    drafting:evaluationType ?lEvaluationType ;
+    drafting:evidenceEvaluation ?lEvidenceEvaluation ;
+    .
+
+  ?nHypothesis
+    a drafting:Hypothesis ;
+    uco-core:statement ?lStatement ;
+    .
+}
+# Note - the IRIs' UUID components were picked to sort in a desired presentation order.
+ORDER BY ?nInference

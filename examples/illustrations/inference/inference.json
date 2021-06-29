@@ -47,7 +47,7 @@
         {
             "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51",
             "@type": "drafting:Hypothesis",
-            "rdfs:comment": "(Fully recovered)"
+            "uco-core:statement": "Fully recovered"
         },
         {
             "@id": "kb:hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1",
@@ -56,17 +56,17 @@
         {
             "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2",
             "@type": "drafting:Hypothesis",
-            "rdfs:comment": "(Partially recovered)"
+            "uco-core:statement": "Partially recovered"
         },
         {
             "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402",
             "@type": "drafting:Hypothesis",
-            "rdfs:comment": "(Only name and metadata recovered)"
+            "uco-core:statement": "Only name and metadata recovered"
         },
         {
             "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0",
             "@type": "drafting:Hypothesis",
-            "rdfs:comment": "(Only name recovered)"
+            "uco-core:statement": "Only name recovered"
         },
         {
             "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
@@ -74,7 +74,7 @@
             "drafting:basisEvidence": {
                 "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
             },
-            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
             "drafting:evaluationType": "C-Scale",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:float",
@@ -90,7 +90,7 @@
             "drafting:basisEvidence": {
                 "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
             },
-            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+            "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
             "drafting:evaluationType": "C-Scale",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:float",
@@ -106,7 +106,7 @@
             "drafting:basisEvidence": {
                 "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
             },
-            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+            "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
             "drafting:evaluationType": "C-Scale",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:float",
@@ -122,7 +122,7 @@
             "drafting:basisEvidence": {
                 "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
             },
-            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+            "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
             "drafting:evaluationType": "C-Scale",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:float",

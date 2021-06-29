@@ -49,7 +49,9 @@ The following inferences can be stated in words as "the observations are exceedi
 
 To ask whether the file is `Fully Recovered` is the wrong question because it does not consider alternatives and raises the risk of confirmation bias.
 
-Rather, the question is Which class/category of file recovery is more supported by the evidence? In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
+Rather, the question is "Which class/category of file recovery is more supported by the evidence?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
+
+@QUERY_XLSX_INFERENCES_MD@
 
 
 ## Example - Machine learning and image location
