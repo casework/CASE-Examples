@@ -19,6 +19,7 @@ This structure is an updated example of Inference based on the paper [Standardiz
 
 When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
+
 ## State of this illustration
 
 This illustration has been written in support of a Change Proposal under design and discussion, and hence may change in response to the proposal's evolution.  New ontology concepts are in the file [`drafting.ttl`](drafting.ttl).
@@ -42,6 +43,7 @@ The following inferences can be stated in words as "the observations are exceedi
 ```json
 @INFERENCE_XLSX_AUTHENTICATION_JSON@
 ```
+
 
 ### Query - Most probable hypothesis
 
