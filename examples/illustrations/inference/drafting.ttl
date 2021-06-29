@@ -55,7 +55,7 @@ drafting:Inference
 		]
 		;
 	rdfs:label "Inference"@en ;
-	rdfs:comment "TODO" ;
+	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis." ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
@@ -65,7 +65,7 @@ drafting:Method
 	rdfs:label "Method"@en ;
 	rdfs:comment
 		"(TODO - would this relate to Pattern?)"@en ,
-		"An interpretation algorithm or procedure."@en
+		"A method is an interpretation algorithm or procedure."@en
 		;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
@@ -73,7 +73,7 @@ drafting:Method
 drafting:basisEvidence
 	a owl:ObjectProperty ;
 	rdfs:label "basisEvidence"@en ;
-	rdfs:comment "A thing that supports a claim." ;
+	rdfs:comment "Observed object(s) being evaluated as support for an inference." ;
 	rdfs:range uco-core:UcoObject ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
@@ -89,7 +89,7 @@ drafting:evaluationRationale
 drafting:evaluationType
 	a owl:DatatypeProperty ;
 	rdfs:label "evaluationType"@en ;
-	rdfs:comment "What an assigned number represents such as probability, strength, similarity."@en ;
+	rdfs:comment "What an assigned number represents such as probability, strength, similarity, etc."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
@@ -99,7 +99,7 @@ drafting:evidenceEvaluation
 	rdfs:label "evidenceEvaluation"@en ;
 	rdfs:comment
 		"(TODO This should probably go into UCO Core.)"@en ,
-		"A number that represents the probability, strength, similarity, etc. of the observations in light of the hypothesis."@en
+		"A number that represents the probability, strength, similarity, etc. of the observed object(s) in light of the hypothesis."@en
 		;
 	rdfs:range xsd:float ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
@@ -108,7 +108,7 @@ drafting:evidenceEvaluation
 drafting:hypothesis
 	a owl:DatatypeProperty ;
 	rdfs:label "hypothesis"@en ;
-	rdfs:comment "A natural-language claim to explain observable objects."@en ;
+	rdfs:comment "A proposed explanation made on the basis of initial observations as a starting point for further investigation."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
@@ -116,7 +116,7 @@ drafting:hypothesis
 drafting:usedMethod
 	a owl:ObjectProperty ;
 	rdfs:label "usedMethod"@en ;
-	rdfs:comment "TODO" ;
+	rdfs:comment "The process/algorithm used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
 	rdfs:range drafting:Method ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
