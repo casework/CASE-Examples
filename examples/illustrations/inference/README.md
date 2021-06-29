@@ -113,13 +113,16 @@ The following inferences can be stated in words as "the observations are exceedi
             "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
         },
         "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+        "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
     },
     {
@@ -129,13 +132,16 @@ The following inferences can be stated in words as "the observations are exceedi
             "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
         },
         "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+        "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
     },
     {
@@ -145,13 +151,16 @@ The following inferences can be stated in words as "the observations are exceedi
             "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
         },
         "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+        "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "5.5"
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
     },
     {
@@ -161,14 +170,22 @@ The following inferences can be stated in words as "the observations are exceedi
             "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
         },
         "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type",
+        "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
+    },
+    {
+        "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
+        "@type": "drafting:Method",
+        "uco-core:description": "File recovery method described in https://doi.org/10.1016/j.diin.2019.06.004"
     }
 ]
 ```
@@ -178,8 +195,14 @@ The following inferences can be stated in words as "the observations are exceedi
 
 To ask whether the file is `Fully Recovered` is the wrong question because it does not consider alternatives and raises the risk of confirmation bias.
 
-Rather, the question is Which class/category of file recovery is more supported by the evidence? In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
+Rather, the question is "Which class/category of file recovery is more supported by the evidence?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
 
+|    | ?lStatement                      | ?lEvaluationType   |   ?lEvidenceEvaluation | ?lEvaluationRationale                                                                                                                   |
+|----|----------------------------------|--------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|  0 | Fully recovered                  | C-Scale            |                    0.1 | Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file. |
+|  1 | Partially recovered              | C-Scale            |                    0.1 | No fragment of recovered content could be attributed to this file.                                                                      |
+|  2 | Only name and metadata recovered | C-Scale            |                    5.5 | Filename and metadata were recovered for this file, but no associated content was recovered.                                            |
+|  3 | Only name recovered              | C-Scale            |                    0.1 | Metadata was recovered along with filename, but no associated content was recovered.                                                    |
 
 ## Example - Machine learning and image location
 
