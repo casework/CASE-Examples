@@ -7,7 +7,7 @@ This illustration includes example investigative questions that require inferenc
  "@id": "inference-uuid",
  "@type": "Inference",
  "hypothesis": "(hypothesis object under consideration)",
- "usedMethod": "Referemce to the defined process used to evaluate basisEvidence in light of the hypothesis",
+ "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
  "evaluationType": "probability",
  "evidenceEvaluation": 0.95,
  "evidenceRationale": "The observations are compatible with simulated tests of the hypothesized action",
@@ -47,7 +47,7 @@ The following inferences can be stated in words as "the observations are exceedi
 
 To ask whether the file is `Fully Recovered` is the wrong question because it does not consider alternatives and raises the risk of confirmation bias.
 
-Rather, the question is Which class/category of file recovery is more supported by the evidence? In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability than the others.
+Rather, the question is Which class/category of file recovery is more supported by the evidence? In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
 
 
 ## Example - Machine learning and image location
