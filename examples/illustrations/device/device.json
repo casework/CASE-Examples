@@ -13,7 +13,7 @@
         {
             "@id": "kb:forensic_lab_computer1-uuid",
             "@type": "uco-observable:ObservableObject",
-            "uco-location:Location": [{"kb:forensic_lab1-uuid"}],
+            "location": {"@id": "kb:forensic_lab1-uuid"},
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -31,7 +31,7 @@
                     {
                         "@type": "xsd:dateTime",
                         "@value": "2019-07-10T16:33:42Z"
-}
+                }
                 },
                 {
                     "@type": "uco-observable:ComputerSpecificationFacet",
