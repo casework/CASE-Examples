@@ -38,7 +38,7 @@
                     "uco-observable:IMEI": "35540607448XXXX",
                     "uco-observable:MSISDN": [
                         {
-                            "kb":"mobile-account1-uuid"
+                            "kb:mobile-account1-uuid"
                         }
                     ],
                     "uco-observable:clockSetting": {
