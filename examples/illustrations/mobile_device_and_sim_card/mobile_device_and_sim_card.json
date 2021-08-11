@@ -17,7 +17,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
-                    "uco-observable:deviceType": "iPhone",
+                    "uco-observable:deviceType": "Smart_Phone",
                     "uco-observable:manufacturer": "Apple",
                     "uco-observable:model": "MG472ZD/A",
                     "uco-observable:serialNumber": "F17RN4DXXXXX"
@@ -28,7 +28,7 @@
                     "uco-observable:manufacturer": "Apple",
                     "uco-observable:version": "11.2.6",
                     "uco-observable:installDate": {
-                        "@type": "xsd:dateType",
+                        "@type": "xsd:dateTime",
                         "@value": "2018-04-09T16:33:42Z"
                     }
                 },

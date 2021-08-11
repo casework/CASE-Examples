@@ -661,7 +661,9 @@
                     "uco-observable:keypadUnlockCode": "123789",
                     "uco-observable:IMEI": "359305065690067",
                     "uco-observable:MSISDN": [
-                        { "kb:clytemnestra-mobileaccount-uuid" }
+                        {
+                            "@id": "kb:clytemnestra-mobileaccount-uuid"
+                        }
                     ],
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
