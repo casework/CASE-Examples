@@ -667,7 +667,7 @@
                     ],
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
-                        "@value": " 2017-06-21T06:36:24.35Z"
+                        "@value": "2017-06-21T06:36:24.35Z"
                     },
                     "draft:localeLanguage": "en_GR",
                     "uco-observable:phoneActivationTime": {
