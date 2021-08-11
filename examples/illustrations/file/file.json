@@ -473,9 +473,9 @@
         {
             "@id": "kb:forensic_lab_computer1-uuid",
             "@type": "uco-observable:ObservableObject",
-            "uco-location:Location":[
-                { 
-                    "@id": "kb:forensic_lab1-uuid" 
+            "uco-location:Location": [
+                {
+                    "@id": "kb:forensic_lab1-uuid"
                 }
             ],
             "uco-core:hasFacet": [
