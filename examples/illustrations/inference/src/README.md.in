@@ -1,0 +1,91 @@
+# Inference Examples
+
+This illustration includes example investigative questions that require inference, and sample JSON-LD of *proposed* use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
+
+```json
+{
+ "@id": "inference-uuid",
+ "@type": "Inference",
+ "hypothesis": "(hypothesis object under consideration)",
+ "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
+ "evaluationType": "probability",
+ "evidenceEvaluation": 0.95,
+ "evidenceRationale": "The observations are compatible with simulated tests of the hypothesized action",
+ "basisEvidence": ["(objects forming the basis for inference)"]
+}
+```
+
+This structure is an updated example of Inference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.
+
+When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
+
+
+## State of this illustration
+
+This illustration has been written in support of a Change Proposal under design and discussion, and hence may change in response to the proposal's evolution.  New ontology concepts are in the file [`drafting.ttl`](drafting.ttl).
+
+Notes on how to revise this page are in [`CONTRIBUTE.md`](CONTRIBUTE.md).
+
+A total JSON-LD file of the data on this page, plus supplementary data needed to support queries, is available here: [`inference.json`](inference.json).
+
+
+## Example - Recovery of a xlsx file
+
+*Observations*: A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata, but further authentication is necessary to assess whether the data on disk presented by the tool is the actual original content of the file. Further forensic examination finds that the data on disk presented by the tool is incompatible with the file metadata and expected content type (Microsoft Excel file). 
+
+* Hypothesis 1: The file is `Fully Recovered`
+* Hypothesis 2: The file is `Partially Recovered`
+* Hypothesis 3: Only `Name and Metadata Recovered`
+* Hypothesis 4: Only `Name Recovered`
+
+The following inferences can be stated in words as "the observations are exceedingly more probable given Hypothesis 3 (`Only Name and Metadata Recovered`), rather than the other hypotheses."
+
+```json
+@INFERENCE_XLSX_AUTHENTICATION_JSON@
+```
+
+
+### Query - Most probable hypothesis
+
+To ask whether the file is `Fully Recovered` is the wrong question because it does not consider alternatives and raises the risk of confirmation bias.
+
+Rather, the question is "Which class/category of file recovery is more supported by the evidence?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
+
+@QUERY_XLSX_INFERENCES_MD@
+
+
+## Example - Machine learning and image location
+
+Consider an example of a photograph of the Washington monument from an angle at dusk (fading light). Two machine learning classifiers produce the following assertions:
+
+* *ML1 Hypothesis*: The object in the photograph is the Washington Monument in Washington, DC.
+* *ML2 Hypothesis*: The object in the photograph is Cleopatra's Needle in New York City.
+
+Further forensic analysis is performed of the photograph and its metadata, which reveals that it was taken in Washington DC. Inference assigns a value (e.g., probability, strength) to the observations (photograph content) and analysis outputs (geolocation information) given each Hypothesis:
+
+*Inference 1*: The observations and analysis results are exceedingly more likely given the assertion that the object in the photograph is the Washington Monument in Washington, DC, rather than Cleopatra's Needle in New York City. 
+
+```json
+@INFERENCE_PHOTOLOCATION_IDENTIFICATION_JSON@
+```
+
+However, a skeptic might argue that photographs can be faked or geolocation information can be spoofed, and might make the following Hypothesis and Inference:
+
+* *Skeptic's Hypothesis*: The photograph is fake.
+
+*Skeptic's Inference*: The observations and analysis results are equally probable given the assertion that the object in the photograph is the Washington Monument in Washington, DC or Cleopatra's Needle in New York City. 
+
+```json
+@INFERENCE_PHOTOLOCATION_SKEPTIC_JSON@
+```
+
+If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first inference over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's inference. Furthermore, the first inference could be updated to match the Skeptic's. Therefore, inferences can change as new information becomes available.
+
+
+### Query - Differences in basis evidence
+
+Two inferences are referenced above (`kb:inference-839fcf98...` and `kb:inference-baf0e98e...`).  What differences in basis evidence did the two have?
+
+The following table is the results of [this query](src/query-select-skeptic-difference.sparql).  "Supports A" is support for only the initial analyst's finding, "Supports B" is support for only the skeptic's finding.
+
+@QUERY_SELECT_SKEPTIC_DIFFERENCE_MD@

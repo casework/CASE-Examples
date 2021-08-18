@@ -5,11 +5,11 @@ This page makes some trades from ease of development for the sake of presentatio
 `make` handles compiling the README and its supporting files.  So, to edit the README, **don't edit README.md**.
 
 Instead, one of these files should be modified:
-* [`README.md.in`](README.md.in) - Template file housing the illustration text and data insertion points.  Generated into README.md.  Uses Automake-style substitution patterns (i.e. `@STRING_TO_REPLACE@`), executed in the `Makefile`'s target `.generated-README.md`.
+* [`src/README.md.in`](src/README.md.in) - Template file housing the illustration text and data insertion points.  Generated into README.md.  Uses Automake-style substitution patterns (i.e. `@STRING_TO_REPLACE@`), executed in the `src/Makefile`'s target `generated-README.md`.
   - The `@` string relies on a name scheme for patterns to be substituted - they are expected to be file names, alphabetic characters converted to uppercase, non-alphanumeric characters converted to underscores.
-* `inference-*.json` - snippet JSON file, built into `inference.json`.
-  - [`inference-supplementary.json`](inference-supplementary.json) contains graph data not displayed in the README.
-* `query-*.sparql` - Query files.
+* `src/inference-*.json` - snippet JSON file, built into `inference.json` (like with `README.md`, these are built and copied from `src/generated-inference.json`).
+  - [`src/inference-supplementary.json`](src/inference-supplementary.json) contains graph data not displayed in the README.
+* `src/query-*.sparql` - Query files.
 
 After committing changes to any of the files in this directory, run `make`.  If a Git-tracked file differs from a state that is freshly computed, a prompt will be given to review a `diff` output.  If the `diff` looks like it contains expected changes, a `cp` command is provided in the last `make` output line starting `UPDATE:`.
 

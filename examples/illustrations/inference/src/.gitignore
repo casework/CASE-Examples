@@ -1,0 +1,6 @@
+*.pkl
+*.sed
+generated-*
+.normalized-*
+query-select-skeptic-difference.md
+query-xlsx-inferences.md
