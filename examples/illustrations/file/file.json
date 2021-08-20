@@ -473,11 +473,10 @@
         {
             "@id": "kb:forensic_lab_computer1-uuid",
             "@type": "uco-observable:ObservableObject",
-            "uco-location:Location": [
-                {
-                    "@id": "kb:forensic_lab1-uuid"
-                }
-            ],
+            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
+            "location": {
+                "@id": "kb:forensic_lab1-uuid"
+            },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -508,7 +507,7 @@
         {
             "@id": "kb:android_device1-uuid",
             "@type": "uco-observable:ObservableObject",
-            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
+            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
             "location": {
                 "@id": "kb:forensic_lab1-uuid"
             },
