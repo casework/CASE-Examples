@@ -15,40 +15,12 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd .. ; pwd)
 
-all: \
-  case-0.3.0.pkl \
-  case-0.4.0.pkl
+all:
 
-case-0.3.0.pkl: \
-  $(top_srcdir)/.venv.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && serialize \
-	    -c case-0.3.0 \
-	    -o _$@ \
-	    CASE-0.3.0/
-	mv _$@ $@
-
-case-0.4.0.pkl: \
-  $(top_srcdir)/.venv.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && serialize \
-	    -c case-0.4.0 \
-	    -o _$@ \
-	    CASE-0.4.0/
-	mv _$@ $@
-
-check: \
-  case-0.3.0.pkl \
-  case-0.4.0.pkl
+check:
 	$(MAKE) \
 	  --directory CASE-0.3.0 \
 	  check
 	$(MAKE) \
 	  --directory CASE-0.4.0 \
 	  check
-	source $(top_srcdir)/venv/bin/activate \
-	  && describe \
-	    case-0.3.0.pkl
-	source $(top_srcdir)/venv/bin/activate \
-	  && describe \
-	    case-0.4.0.pkl

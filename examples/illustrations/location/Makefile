@@ -17,24 +17,4 @@ top_srcdir := $(shell cd ../../.. ; pwd)
 
 all:
 
-.PHONY: \
-  check-0.3.0 \
-  check-0.4.0
-
-check: \
-  check-0.3.0 \
-  check-0.4.0
-
-check-0.3.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.3.0.pkl \
-	    location.json
-
-check-0.4.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.4.0.pkl \
-	    location.json
+check:

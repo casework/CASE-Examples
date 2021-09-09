@@ -31,11 +31,6 @@ all: \
 # for someone developing with different submodule pointers.
 .git_submodule_init.done.log: \
   .gitmodules
-	# UCO-Utility-Pre-0.7.0-Validator
-	test -r dependencies/UCO-Utility-Pre-0.7.0-Validator/README.md \
-	  || (git submodule init dependencies/UCO-Utility-Pre-0.7.0-Validator && git submodule update dependencies/UCO-Utility-Pre-0.7.0-Validator)
-	@test -r dependencies/UCO-Utility-Pre-0.7.0-Validator/README.md \
-	  || (echo "ERROR:Makefile:UCO-Utility-Pre-0.7.0-Validator submodule README.md file not found, even though UCO-Utility-Pre-0.7.0-Validator submodule initialized." >&2 ; exit 2)
 	# CASE-Utilities-Python
 	test -r dependencies/CASE-Utilities-Python/README.md \
 	  || (git submodule init dependencies/CASE-Utilities-Python && git submodule update dependencies/CASE-Utilities-Python)
@@ -76,11 +71,6 @@ all: \
 	source venv/bin/activate \
 	  && pip install \
 	      dependencies/CASE-Utilities-Python
-	source venv/bin/activate \
-	  && cd dependencies/UCO-Utility-Pre-0.7.0-Validator \
-	    && pip install \
-	      --editable \
-	      src
 	touch $@
 
 check: \
@@ -89,7 +79,8 @@ check: \
 	  --directory dependencies \
 	  check
 	$(MAKE) \
-	  --directory examples/illustrations
+	  --directory examples/illustrations \
+	  check
 
 clean:
 	@$(MAKE) \
