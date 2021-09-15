@@ -17,6 +17,8 @@ This illustration includes example investigative questions that require inferenc
 
 This structure is an updated example of Inference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.
 
+When making an evidence-based inference, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
+
 When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
 
