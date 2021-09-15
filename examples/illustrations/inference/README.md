@@ -6,12 +6,12 @@ This illustration includes example investigative questions that require inferenc
 {
  "@id": "inference-uuid",
  "@type": "Inference",
+ "basisEvidence": ["(objects forming the basis for inference)",
  "hypothesis": "(hypothesis object under consideration)",
  "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
- "evaluationType": "probability",
  "evidenceEvaluation": 0.95,
- "evidenceRationale": "The observations are compatible with simulated tests of the hypothesized action",
- "basisEvidence": ["(objects forming the basis for inference)"]
+ "evaluationType": "probability",
+ "evaluationRationale": "The observations are supported by simulated tests of the hypothesized action"]
 }
 ```
 
@@ -109,6 +109,9 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
         "@type": "drafting:Inference",
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
         },
@@ -118,9 +121,6 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:float",
             "@value": "0.1"
         },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -128,6 +128,9 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e",
         "@type": "drafting:Inference",
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
         },
@@ -137,9 +140,6 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:float",
             "@value": "0.1"
         },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -147,6 +147,9 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576",
         "@type": "drafting:Inference",
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
         },
@@ -156,9 +159,6 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:float",
             "@value": "5.5"
         },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -166,6 +166,9 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283",
         "@type": "drafting:Inference",
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
         },
@@ -174,9 +177,6 @@ The following inferences can be stated in words as "the observations are exceedi
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.1"
-        },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
         },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
@@ -311,6 +311,9 @@ However, a skeptic might argue that photographs can be faked or geolocation info
             "(This inference is skeptical.)",
             "(In this current state of illustration, this inference has no further supporting evidence.)"
         ],
+        "drafting:basisEvidence": {
+            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1"
         },
@@ -319,9 +322,6 @@ However, a skeptic might argue that photographs can be faked or geolocation info
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.9"
-        },
-        "drafting:basisEvidence": {
-            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
         }
     }
 ]
