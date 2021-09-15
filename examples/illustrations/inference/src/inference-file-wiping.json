@@ -77,7 +77,7 @@
         "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
         "@type": "drafting:Inference",
         "drafting:hypothesis": {
-            "@id": "hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402
+            "@id": "hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
         },
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
