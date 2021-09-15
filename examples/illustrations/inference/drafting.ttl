@@ -64,7 +64,7 @@ drafting:Method
 	rdfs:subClassOf uco-core:UcoObject ;
 	rdfs:label "Method"@en ;
 	rdfs:comment
-		"(TODO - would this relate to Pattern?)"@en ,
+		"(TODO - need to define Method)"@en ,
 		"A method is an interpretation algorithm or procedure."@en
 		;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
