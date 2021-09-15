@@ -74,7 +74,7 @@
         "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
         "@type": "drafting:Inference",
         "drafting:hypothesis": {
-            "@id": "hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402
+            "@id": "hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
         },
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
