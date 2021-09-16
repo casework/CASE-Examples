@@ -13,14 +13,24 @@
 
 SHELL := /bin/bash
 
+.PHONY: \
+  check-exif_data \
+  check-location
+
 all:
 	$(MAKE) \
 	  --directory exif_data
 
-check:
+check: \
+  check-exif_data \
+  check-location
+
+check-exif_data:
 	$(MAKE) \
 	  --directory exif_data \
 	  check
+
+check-location:
 	$(MAKE) \
 	  --directory location \
 	  check
