@@ -89,7 +89,8 @@ check: \
 	  --directory dependencies \
 	  check
 	$(MAKE) \
-	  --directory examples/illustrations
+	  --directory examples/illustrations \
+	  check
 
 clean:
 	@$(MAKE) \
