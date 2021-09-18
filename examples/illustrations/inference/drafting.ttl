@@ -61,11 +61,10 @@ drafting:Inference
 
 drafting:Method
 	a owl:Class ;
-	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:subClassOf uco-action:ActionLifecycle ;
 	rdfs:label "Method"@en ;
 	rdfs:comment
-		"(TODO - need to define Method)"@en ,
-		"A method is an interpretation algorithm or procedure."@en
+		"A method is a form of procedura for accomplishing a specific task."@en
 		;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.

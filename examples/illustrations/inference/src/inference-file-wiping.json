@@ -86,22 +86,22 @@
             "@value": "0.95"
         },
         "drafting:basisEvidence": [
-                    {
-                        "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
-                    },
-                    {
-                        "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
-                    },
-                    {
-                        "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
-                    },
-                    {
-                        "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
-                    },
-                    {
-                        "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
-                    }
-                ],
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            },
+            {
+                "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            }
+        ],
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -119,22 +119,22 @@
             "@value": "0.05"
         },
         "drafting:basisEvidence": [
-                    {
-                        "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
-                    },
-                    {
-                        "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
-                    },
-                    {
-                        "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
-                    },
-                    {
-                        "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
-                    },
-                    {
-                        "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
-                    }
-                ],
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            },
+            {
+                "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            }
+        ],
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }

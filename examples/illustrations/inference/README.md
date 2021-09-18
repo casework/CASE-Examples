@@ -1,6 +1,6 @@
 # Inference Examples
 
-This illustration includes example investigative questions that require inference, and sample JSON-LD of *proposed* use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
+This illustration includes example investigative questions that require inference, and sample JSON-LD of proposed use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
 
 ```json
 {
@@ -9,13 +9,15 @@ This illustration includes example investigative questions that require inferenc
  "basisEvidence": ["(objects forming the basis for inference)",
  "hypothesis": "(hypothesis object under consideration)",
  "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
- "evidenceEvaluation": 0.95,
  "evaluationType": "probability",
- "evaluationRationale": "The observations are supported by simulated tests of the hypothesized action"]
+ "evidenceEvaluation": 0.95,
+ "evaluationRationale": "The observations are compatible with simulated tests of the hypothesized action"]
 }
 ```
 
 This structure is an updated example of Inference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.
+
+When making an evidence-based inference, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
 
 When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
@@ -109,9 +111,6 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
         "@type": "drafting:Inference",
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
         },
@@ -121,6 +120,9 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:float",
             "@value": "0.1"
         },
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -128,9 +130,6 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e",
         "@type": "drafting:Inference",
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
         },
@@ -140,6 +139,9 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:float",
             "@value": "0.1"
         },
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -147,9 +149,6 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576",
         "@type": "drafting:Inference",
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
         },
@@ -159,6 +158,9 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:float",
             "@value": "5.5"
         },
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         }
@@ -166,9 +168,6 @@ The following inferences can be stated in words as "the observations are exceedi
     {
         "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283",
         "@type": "drafting:Inference",
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
         },
@@ -177,6 +176,9 @@ The following inferences can be stated in words as "the observations are exceedi
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.1"
+        },
+        "drafting:basisEvidence": {
+            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
         },
         "drafting:usedMethod": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
@@ -311,9 +313,6 @@ However, a skeptic might argue that photographs can be faked or geolocation info
             "(This inference is skeptical.)",
             "(In this current state of illustration, this inference has no further supporting evidence.)"
         ],
-        "drafting:basisEvidence": {
-            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
-        },
         "drafting:hypothesis": {
             "@id": "kb:hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1"
         },
@@ -322,6 +321,9 @@ However, a skeptic might argue that photographs can be faked or geolocation info
         "drafting:evidenceEvaluation": {
             "@type": "xsd:float",
             "@value": "0.9"
+        },
+        "drafting:basisEvidence": {
+            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
         }
     }
 ]
@@ -341,3 +343,312 @@ The following table is the results of [this query](src/query-select-skeptic-diff
 |  0 | http://example.org/kb/location-9d25eb6e-1077-42a7-b531-1d170d4b585b     | A            |
 |  1 | http://example.org/kb/relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0 | A            |
 |  2 | http://example.org/kb/photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1   | both         |
+## Example - Wiping
+
+*Observations*: Consider an example of a file named “abc.exe” that is a secure erase program which overwrites the content and name of selected files, rendering them unrecoverable. This program has the same hash value of the secure erase program called “sdelete.exe” which is freely available on the Internet. Observed file system patterns on the computer are compatible with  use of “sdelete.exe” (Name overwritten, Zeroed content). Dates in file system metadata of these files corresponding to dates of Registry entries (UserAssist) and Prefetch files recording use of “abc.exe” program.
+
+* Hypothesis 1: File wiping occurred 
+* Hypothesis 2: File wiping did not occur
+
+The following inferences can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
+
+```json
+[
+    {
+        "@id": "kb:investigative-action-9d3e78d9-8376-4277-9852-8e6bf9267456",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "file wiping detection",
+        "uco-core:description": "Detection of secure erase wiping of files on storage media",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
+        },
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-action:ActionReferencesFacet",
+                "uco-action:location": {
+                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+                },
+                "uco-action:performer": {
+                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+                },
+                "uco-action:instrument": {
+                    "@id": "kb:massdeletiondetector-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+                },
+                "uco-action:environment": {
+                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+                },
+                "uco-action:object": [
+                    {
+                        "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41"
+                    },
+                    {
+                        "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+                    },
+                    {
+                        "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+                    },
+                    {
+                        "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
+                    },
+                    {
+                        "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
+                    },
+                    {
+                        "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
+                    },
+                    {
+                        "@id": "kb:hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
+                    },
+                    {
+                        "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
+                    }
+                ],
+                "uco-action:result": [
+                    {
+                        "@id": "kb:provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16"
+                    },
+                    {
+                        "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
+                    },
+                    {
+                        "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402",
+        "@type": "drafting:Hypothesis",
+        "Drafting:statement": "File wiping occurred"
+    },
+    {
+        "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0",
+        "@type": "drafting:Hypothesis",
+        "Drafting:statement": "File wiping did not occur"
+    },
+    {
+        "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
+        "@type": "drafting:Inference",
+        "drafting:hypothesis": {
+            "@id": "hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
+        },
+        "drafting:evaluationType": "Probability",
+        "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
+        "drafting:evidenceEvaluation": {
+            "@type": "xsd:float",
+            "@value": "0.95"
+        },
+        "drafting:basisEvidence": [
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            },
+            {
+                "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            }
+        ],
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
+        }
+    },
+    {
+        "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283",
+        "@type": "drafting:Inference",
+        "drafting:hypothesis": {
+            "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
+        },
+        "drafting:evaluationType": "Probability",
+        "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
+        "drafting:evidenceEvaluation": {
+            "@type": "xsd:float",
+            "@value": "0.05"
+        },
+        "drafting:basisEvidence": [
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:wipedfilename1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:sdelete-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:registry-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            },
+            {
+                "@id": "kb:prefetch-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            }
+        ],
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
+        }
+    },
+    {
+        "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
+        "@type": "drafting:Method",
+        "uco-core:description": "Forensic recovery of metadata for deleted files, Recycle bin records, and experimentation simulating mass deletion."
+    }
+]
+```
+
+## Example - Mass Deletion
+
+*Observations*: All of the previously existing directories that last contained files of interest are now in deleted state on the disks, but were recovered using forensic software. These directories are listed below along with their last accessed timestamp, which indicates when they changed to deleted state. These previously existing directories, and others under the same parent directory, all have last accessed dates on 17 April 2021. Entries in Recycle Bin for these files are dated 17 April 2021.
+
+* Hypothesis 1: A folder and all its contents were deleted on 17 April 2021 
+* Hypothesis 2: A folder and all its contents were not deleted on 17 April 2021
+
+The following inferences can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
+
+```json
+[
+    {
+        "@id": "kb:investigative-action-9d3e78d9-8376-4277-9852-8e6bf9267456",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:name": "mass deletion detection",
+        "uco-core:description": "Detection of mass deletion of files on storage media",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
+        },
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-action:ActionReferencesFacet",
+                "uco-action:location": {
+                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+                },
+                "uco-action:performer": {
+                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+                },
+                "uco-action:instrument": {
+                    "@id": "kb:massdeletiondetector-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+                },
+                "uco-action:environment": {
+                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+                },
+                "uco-action:object": [
+                    {
+                        "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41"
+                    },
+                    {
+                        "@id": "kb:directory1-c3001862-2b68-402d-a3c1-01311f178137"
+                    },
+                    {
+                        "@id": "kb:directory2-c3001862-2b68-402d-a3c1-01311f178137"
+                    },
+                    {
+                        "@id": "kb:rbin1-32c8f595-388d-48fe-989b-4c81053e2c51"
+                    },
+                    {
+                        "@id": "kb:rbin2-b3ef496f-714e-4479-9f82-382ce5d751c2"
+                    },
+                    {
+                        "@id": "kb:hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
+                    },
+                    {
+                        "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
+                    }
+                ],
+                "uco-action:result": [
+                    {
+                        "@id": "kb:provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16"
+                    },
+                    {
+                        "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
+                    },
+                    {
+                        "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402",
+        "@type": "drafting:Hypothesis",
+        "Drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
+    },
+    {
+        "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0",
+        "@type": "drafting:Hypothesis",
+        "Drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
+    },
+    {
+        "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
+        "@type": "drafting:Inference",
+        "drafting:hypothesis": {
+            "@id": "hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
+        },
+        "drafting:evaluationType": "Probability",
+        "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
+        "drafting:evidenceEvaluation": {
+            "@type": "xsd:float",
+            "@value": "0.9"
+        },
+        "drafting:basisEvidence": [
+            {
+                "@id": "kb:directory1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:directory2-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:rbin1-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:rbin2-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            }
+        ],
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
+        }
+    },
+    {
+        "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283",
+        "@type": "drafting:Inference",
+        "drafting:hypothesis": {
+            "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
+        },
+        "drafting:evaluationType": "Probability",
+        "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records",
+        "drafting:evidenceEvaluation": {
+            "@type": "xsd:float",
+            "@value": "0.1"
+        },
+        "drafting:basisEvidence": [
+            {
+                "@id": "kb:directory1-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:directory2-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:rbin1-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:rbin2-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            }
+        ],
+        "drafting:usedMethod": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
+        }
+    },
+    {
+        "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
+        "@type": "drafting:Method",
+        "uco-core:description": "Forensic recovery of metadata for deleted files, Recycle bin records, and experimentation simulating mass deletion."
+    }
+]
+```
+
