@@ -64,7 +64,8 @@ all: \
 	touch $@
 
 .venv.done.log: \
-  .git_submodule_init.done.log
+  .git_submodule_init.done.log \
+  requirements.txt
 	rm -rf venv
 	$(PYTHON3) -m venv \
 	  venv
@@ -76,6 +77,9 @@ all: \
 	source venv/bin/activate \
 	  && pip install \
 	      dependencies/CASE-Utilities-Python
+	source venv/bin/activate \
+	  && pip install \
+	      --requirement requirements.txt
 	source venv/bin/activate \
 	  && cd dependencies/UCO-Utility-Pre-0.7.0-Validator \
 	    && pip install \
@@ -89,7 +93,8 @@ check: \
 	  --directory dependencies \
 	  check
 	$(MAKE) \
-	  --directory examples/illustrations
+	  --directory examples/illustrations \
+	  check
 
 clean:
 	@$(MAKE) \

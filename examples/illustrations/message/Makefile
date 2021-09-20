@@ -13,36 +13,14 @@
 
 SHELL := /bin/bash
 
-.PHONY: \
-  check-exif_data \
-  check-location \
-  check-message
+top_srcdir := $(shell cd ../../.. ; pwd)
 
 all:
-	$(MAKE) \
-	  --directory exif_data
 
 check: \
-  check-exif_data \
-  check-location \
-  check-message
-
-check-exif_data:
-	$(MAKE) \
-	  --directory exif_data \
-	  check
-
-check-location:
-	$(MAKE) \
-	  --directory location \
-	  check
-
-check-message:
-	$(MAKE) \
-	  --directory message \
-	  check
+  $(top_srcdir)/.venv.done.log
+	source $(top_srcdir)/venv/bin/activate \
+	  && pytest \
+	    --verbose
 
 clean:
-	@$(MAKE) \
-	  --directory exif_data \
-	  clean
