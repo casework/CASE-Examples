@@ -6,7 +6,7 @@ This illustration includes example investigative questions that require inferenc
 {
  "@id": "inference-uuid",
  "@type": "Inference",
- "basisEvidence": ["(objects forming the basis for inference)",
+ "basisEvidence": ["(objects forming the basis for inference)"],
  "hypothesis": "(hypothesis object under consideration)",
  "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
  "evaluationType": "probability",
