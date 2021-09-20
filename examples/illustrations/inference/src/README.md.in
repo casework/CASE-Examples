@@ -11,7 +11,7 @@ This illustration includes example investigative questions that require inferenc
  "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
  "evaluationType": "probability",
  "evidenceEvaluation": 0.95,
- "evaluationRationale": "The observations are compatible with simulated tests of the hypothesized action"]
+ "evaluationRationale": "The observations are compatible with simulated tests of the hypothesized action"
 }
 ```
 
