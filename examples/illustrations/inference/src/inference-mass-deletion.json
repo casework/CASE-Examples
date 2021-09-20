@@ -63,12 +63,12 @@
     {
         "@id": "kb:hypothesis1-e125ff00-bb1c-4020-8cc6-2ed6ff963402",
         "@type": "drafting:Hypothesis",
-        "Drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
+        "drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
     },
     {
         "@id": "kb:hypothesis2-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0",
         "@type": "drafting:Hypothesis",
-        "Drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
+        "drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
     },
     {
         "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
