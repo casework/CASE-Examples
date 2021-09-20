@@ -1,12 +1,12 @@
 # Inference Examples
 
-This illustration includes example investigative questions that require inference, and sample JSON-LD of proposed use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
+This illustration includes example investigative questions that require inference, and sample JSON-LD of *proposed* use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
 
 ```json
 {
  "@id": "inference-uuid",
  "@type": "Inference",
- "basisEvidence": ["(objects forming the basis for inference)",
+ "basisEvidence": ["(objects forming the basis for inference)"],
  "hypothesis": "(hypothesis object under consideration)",
  "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
  "evaluationType": "probability",
