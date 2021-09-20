@@ -17,17 +17,19 @@ top_srcdir := $(shell cd ../../../.. ; pwd)
 
 drafting_pkl_sources := $(wildcard ontology/*.ttl)
 
+illustration_name := inference
+illustration_snippets_json := $(wildcard $(illustration_name)-*.json)
 query_sparql_files := $(wildcard query-*.sparql)
 query_md_files := $(foreach query_sparql_file,$(query_sparql_files),$(subst .sparql,.md,$(query_sparql_file)))
 
 generated_readme_sed_sources := \
-  $(wildcard inference-*.json) \
+  $(illustration_snippets_json) \
   $(query_md_files) \
   $(query_sparql_files)
 
 all: \
   generated-README.md \
-  generated-inference.json
+  generated-$(illustration_name).json
 
 .PHONY: \
   normalize
@@ -37,17 +39,18 @@ check: \
 
 check-0.4.0: \
   drafting.pkl \
-  generated-inference.json
+  generated-$(illustration_name).json
 	source $(top_srcdir)/venv/bin/activate \
 	  && validate \
 	    drafting.pkl \
-	    generated-inference.json
+	    generated-$(illustration_name).json
 
 clean:
 	@rm -f \
 	  *.sed \
 	  .normalized-* \
 	  drafting.pkl \
+	  generated-* \
 	  query-*.md
 
 drafting.pkl: \
@@ -67,6 +70,7 @@ generated-README.md: \
 	mv _$@ $@
 
 generated-README.sed: \
+  $(illustration_name)_base.json \
   $(generated_readme_sed_sources)
 	for x in $^ ; do \
           echo "/@$$(echo $${x} | tr '[:lower:]' '[:upper:]' | tr . _ | tr - _)@/r $${x}" ; \
@@ -76,31 +80,28 @@ generated-README.sed: \
 
 # Note the recipe's dependency order matters, due to use of $^.
 # * First dependency is the Python script.
-# * Second dependency is the base graph file that houses the context dictionary and @graph node.
-# * The remainder is the rest of the JSON files to be folded into the whole generated-inference.json.
-generated-inference.json: \
-  inference_json.py \
-  inference-base.json \
-  inference-photolocation-identification.json \
-  inference-photolocation-skeptic.json \
-  inference-supplementary.json \
-  inference-xlsx-authentication.json
+# * Second dependency is the base graph file that houses the context dictionary and @graph node.  For purposes related to generic code, this JSON file uses an underscore in its name, not a hyphen like the other snippets.
+# * The remainder is the rest of the JSON files to be folded into the whole generated-$(illustration_name).json.
+generated-$(illustration_name).json: \
+  $(illustration_name)_json.py \
+  $(illustration_name)_base.json \
+  $(illustration_snippets_json)
 	python3 $^ > _$@
 	mv _$@ $@
 
 normalize:
-	ls inference-*.json \
+	ls $(illustration_name)-*.json \
 	  | while read x; do python3 -m json.tool $$x .normalized-$$x && mv .normalized-$$x $$x ; done
 
 query-%.md: \
   query-%.sparql \
   $(top_srcdir)/.venv.done.log \
   ../drafting.ttl \
-  generated-inference.json
+  generated-$(illustration_name).json
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
 	    _$@ \
 	    $< \
 	    ../drafting.ttl \
-	    generated-inference.json
+	    generated-$(illustration_name).json
 	mv _$@ $@
