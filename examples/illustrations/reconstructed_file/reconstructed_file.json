@@ -423,7 +423,7 @@
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
             "case-investigation:exhibitNumber": "ACME-676553402357-00",
-            "uco-action:object": [
+            "uco-core:object": [
                 {
                     "@id": "kb:relationship0"
                 },
@@ -443,7 +443,7 @@
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Carved data fragments",
             "case-investigation:exhibitNumber": "ACME-676553402357-01",
-            "uco-action:object": [
+            "uco-core:object": [
                 {
                     "@id": "kb:data_piece1"
                 },
@@ -463,7 +463,7 @@
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "JPG Header",
             "case-investigation:exhibitNumber": "ACME-676553402357-02",
-            "uco-action:object": [
+            "uco-core:object": [
                 {
                     "@id": "kb:data_piece0"
                 }
