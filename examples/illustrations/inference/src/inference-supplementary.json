@@ -4,6 +4,10 @@
         "@type": "uco-tool:AnalyticTool"
     },
     {
+        "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845",
+        "@type": "uco-tool:AnalyticTool"
+    },
+    {
         "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137",
         "@type": "uco-observable:File",
         "uco-core:description": "File recovered by tool AutoAuthenticator, asserted at time of recovery to be an Excel spreadsheet.",

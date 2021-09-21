@@ -142,6 +142,7 @@
     {
         "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
         "@type": "drafting:Method",
-        "uco-core:description": "File recovery method described in https://doi.org/10.1016/j.diin.2019.06.004"
+        "rdfs:comment": "This methodology has been found applicable for deleted files, Recycle bin records, and experimentation simulating mass deletion.",
+        "uco-core:description": "Forensic file data and metadata recovery methodology described in https://doi.org/10.1016/j.diin.2019.06.004"
     }
 ]
