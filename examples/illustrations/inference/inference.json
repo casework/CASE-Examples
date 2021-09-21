@@ -93,7 +93,7 @@
             "@type": "drafting:Inference",
             "drafting:basisEvidence": [
                 {
-                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
+                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
                 },
                 {
                     "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
@@ -102,7 +102,7 @@
                     "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
                 },
                 {
-                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
                 }
             ],
             "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
@@ -210,16 +210,16 @@
             "@type": "drafting:Inference",
             "drafting:basisEvidence": [
                 {
-                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                },
-                {
-                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
                 },
                 {
                     "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
                 },
                 {
-                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                },
+                {
+                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
                 }
             ],
             "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
@@ -523,25 +523,25 @@
                     },
                     "uco-action:object": [
                         {
-                            "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
+                            "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
                         },
                         {
-                            "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                        },
-                        {
-                            "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-                        },
-                        {
-                            "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+                            "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
                         },
                         {
                             "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
                         },
                         {
-                            "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+                            "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
                         },
                         {
-                            "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
+                            "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+                        },
+                        {
+                            "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                        },
+                        {
+                            "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
                         }
                     ],
                     "uco-action:performer": {
@@ -589,6 +589,10 @@
             "@type": "uco-observable:RasterPicture"
         },
         {
+            "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8",
+            "@type": "uco-observable:WindowsPrefetch"
+        },
+        {
             "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
@@ -624,6 +628,30 @@
                 },
                 {
                     "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": [
+                {
+                    "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+                },
+                {
+                    "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
+                }
+            ]
+        },
+        {
+            "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": [
+                {
+                    "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
+                },
+                {
+                    "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
                 }
             ]
         },

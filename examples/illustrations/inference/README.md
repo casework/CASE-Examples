@@ -381,25 +381,25 @@ The following inferences can be stated in words as the observations are exceedin
                 },
                 "uco-action:object": [
                     {
-                        "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
+                        "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
                     },
                     {
-                        "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                    },
-                    {
-                        "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-                    },
-                    {
-                        "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+                        "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
                     },
                     {
                         "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
                     },
                     {
-                        "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+                        "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
                     },
                     {
-                        "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
+                        "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+                    },
+                    {
+                        "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                    },
+                    {
+                        "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
                     }
                 ],
                 "uco-action:result": [
@@ -440,7 +440,7 @@ The following inferences can be stated in words as the observations are exceedin
         },
         "drafting:basisEvidence": [
             {
-                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
+                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
             },
             {
                 "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
@@ -449,7 +449,7 @@ The following inferences can be stated in words as the observations are exceedin
                 "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
             },
             {
-                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
             }
         ],
         "drafting:usedMethod": {
@@ -470,16 +470,16 @@ The following inferences can be stated in words as the observations are exceedin
         },
         "drafting:basisEvidence": [
             {
-                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-            },
-            {
-                "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
             },
             {
                 "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
             },
             {
-                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+            },
+            {
+                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
             }
         ],
         "drafting:usedMethod": {
