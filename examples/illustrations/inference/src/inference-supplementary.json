@@ -4,10 +4,6 @@
         "@type": "uco-tool:AnalyticTool"
     },
     {
-        "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845",
-        "@type": "uco-tool:AnalyticTool"
-    },
-    {
         "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137",
         "@type": "uco-observable:File",
         "uco-core:description": "File recovered by tool AutoAuthenticator, asserted at time of recovery to be an Excel spreadsheet.",
@@ -68,8 +64,16 @@
         "@type": "uco-location:Location"
     },
     {
+        "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845",
+        "@type": "uco-tool:AnalyticTool"
+    },
+    {
         "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1",
         "@type": "uco-observable:RasterPicture"
+    },
+    {
+        "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8",
+        "@type": "uco-observable:WindowsPrefetch"
     },
     {
         "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a",
@@ -107,6 +111,30 @@
             },
             {
                 "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+            },
+            {
+                "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
+            },
+            {
+                "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
             }
         ]
     },
