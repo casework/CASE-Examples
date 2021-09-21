@@ -78,15 +78,14 @@ generated-README.sed: \
 	done >> _$@
 	mv _$@ $@
 
-# Note the recipe's dependency order matters, due to use of $^.
-# * First dependency is the Python script.
-# * Second dependency is the base graph file that houses the context dictionary and @graph node.  For purposes related to generic code, this JSON file uses an underscore in its name, not a hyphen like the other snippets.
-# * The remainder is the rest of the JSON files to be folded into the whole generated-$(illustration_name).json.
 generated-$(illustration_name).json: \
   $(illustration_name)_json.py \
   $(illustration_name)_base.json \
   $(illustration_snippets_json)
-	python3 $^ > _$@
+	python3 $(illustration_name)_json.py \
+	  $(illustration_name)_base.json \
+	  $(illustration_snippets_json) \
+	  > _$@
 	mv _$@ $@
 
 normalize:
