@@ -17,7 +17,8 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
-                    "uco-core:name": "iPhone",
+                    "uco-observable:deviceType": "Smart_Phone",
+                    "uco-observable:manufacturer": "Apple",
                     "uco-observable:model": "MG472ZD/A",
                     "uco-observable:serialNumber": "F17RN4DXXXXX"
                 },
@@ -25,24 +26,25 @@
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
                     "uco-observable:manufacturer": "Apple",
-                    "uco-observable:version": "11.2.6"
-                },
-                {
-                    "@type": "iPhoneDevice",
-                    "uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
-                    "ownerName": "Johnsons iPhone"
+                    "uco-observable:version": "11.2.6",
+                    "uco-observable:installDate": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-04-09T16:33:42Z"
+                    }
                 },
                 {
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
-                    "MSISDN": [
+                    "uco-observable:MSISDN": [
                         {
                             "@id": "kb:mobile-account1-uuid"
                         }
                     ],
-                    "uco-observable:clockSetting": "2018-02-24T07:36:24.35Z",
-                    "timezoneSetting": "UTC+01:01 (Europe/Rome)",
+                    "uco-observable:clockSetting": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-02-24T07:36:24.35Z"
+                    },
                     "uco-observable:storageCapacityInBytes": 17179869184
                 },
                 {

@@ -471,15 +471,16 @@
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:forensic_lab_computer1",
+            "@id": "kb:forensic_lab_computer1-uuid",
             "@type": "uco-observable:ObservableObject",
-            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
-            "uco-observable:location": {
-                "@id": "kb:forensic_lab1"
+            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
+            "location": {
+                "@id": "kb:forensic_lab1-uuid"
             },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:deviceType": "Computer",
                     "uco-observable:manufacturer": "Dell",
                     "uco-observable:model": "Inspiron 5000",
                     "uco-observable:serialNumber": "D1234567"
@@ -504,15 +505,16 @@
             ]
         },
         {
-            "@id": "kb:android_device1",
+            "@id": "kb:android_device1-uuid",
             "@type": "uco-observable:ObservableObject",
-            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.",
-            "uco-observable:location": {
-                "@id": "kb:forensic_lab1"
+            "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
+            "location": {
+                "@id": "kb:forensic_lab1-uuid"
             },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:deviceType": "Smart_Phone",
                     "uco-observable:manufacturer": "Samsung",
                     "uco-observable:model": "I9500 Galaxy S4",
                     "uco-observable:serialNumber": "123456SAM"

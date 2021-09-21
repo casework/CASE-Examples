@@ -1,3 +1,5 @@
+#!/usr/bin/make -f
+
 # This software was developed at the National Institute of Standards
 # and Technology by employees of the Federal Government in the course
 # of their official duties. Pursuant to title 17 Section 105 of the
@@ -9,26 +11,16 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-name: Continuous Integration
+SHELL := /bin/bash
 
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+top_srcdir := $(shell cd ../../.. ; pwd)
 
-jobs:
-  build:
+all:
 
-    runs-on: ubuntu-latest
+check: \
+  $(top_srcdir)/.venv.done.log
+	source $(top_srcdir)/venv/bin/activate \
+	  && pytest \
+	    --verbose
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Start from clean state
-      run: make clean
-    - name: Run tests
-      run: make check
+clean:

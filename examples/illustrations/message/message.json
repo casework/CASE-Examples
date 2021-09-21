@@ -192,7 +192,11 @@
                         {
                             "@id": "kb:account4"
                         }
-                    ]
+                    ],
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2010-01-16T16:34:56.25Z"
+                    }
                 }
             ]
         },

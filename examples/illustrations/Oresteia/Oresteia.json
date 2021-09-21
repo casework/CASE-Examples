@@ -462,6 +462,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:deviceType": "Smart_Phone",
                     "uco-observable:manufacturer": "Samsung",
                     "uco-observable:model": "SM-G925F Galaxy S6 Edge",
                     "uco-observable:serialNumber": "FDG344657"
@@ -474,7 +475,10 @@
                     ],
                     "uco-observable:keypadUnlockCode": "1234",
                     "uco-observable:IMEI": "359305065690067",
-                    "uco-observable:clockSetting": "2017-06-22T07:36:24.35Z",
+                    "uco-observable:clockSetting": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-06-22T07:36:24.35Z"
+                    },
                     "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
@@ -656,8 +660,15 @@
                     ],
                     "uco-observable:keypadUnlockCode": "123789",
                     "uco-observable:IMEI": "359305065690067",
-                    "uco-observable:MSISDN": "[clytemnestra-mobileaccount-uuid]",
-                    "uco-observable:clockSetting": "2017-06-21T06:36:24.35Z",
+                    "uco-observable:MSISDN": [
+                        {
+                            "@id": "kb:clytemnestra-mobileaccount-uuid"
+                        }
+                    ],
+                    "uco-observable:clockSetting": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2017-06-21T06:36:24.35Z"
+                    },
                     "draft:localeLanguage": "en_GR",
                     "uco-observable:phoneActivationTime": {
                         "@type": "xsd:dateTime",
@@ -672,7 +683,6 @@
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
-                    "rdfs:comment": "TODO: uco-observable:version doesn't have OS in its domain.  ( https://github.com/ucoProject/UCO/issues/144 )",
                     "uco-core:name": "iOS",
                     "uco-observable:manufacturer": "Apple",
                     "uco-observable:version": "10.3"
@@ -683,7 +693,6 @@
                 },
                 {
                     "@type": "uco-observable:BluetoothAddressFacet",
-                    "rdfs:comment": "TODO: uco-observable:value only applies to IPv4 address.  ( https://github.com/ucoProject/UCO/issues/145 )",
                     "uco-observable:value": "d0:33:11:13:e7:a2"
                 }
             ]
