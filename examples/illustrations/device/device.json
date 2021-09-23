@@ -53,6 +53,11 @@
                     "@type": "acme:InventoryComputer",
                     "acme:name": "DFL-03",
                     "acme:inventoryNumber": "10503"
+                },
+                {
+                    "@type": "uco-observable:DiskFacet",
+                    "uco-observable:diskType": "SDD",
+                    "uco-observable:diskSize": "50Gi"
                 }
             ]
         }
