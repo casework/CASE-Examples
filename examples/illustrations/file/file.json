@@ -133,7 +133,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2009-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:observableCreatedTime": {
+                    "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2009-01-15T17:59:43.25Z"
                     },
@@ -307,7 +307,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "uco-observable:observableCreatedTime": {
+                    "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },

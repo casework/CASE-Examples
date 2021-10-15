@@ -886,7 +886,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:observableCreatedTime": {
+                    "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
                     },
@@ -939,7 +939,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:observableCreatedTime": {
+                    "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T08:12:19.32Z"
                     },
