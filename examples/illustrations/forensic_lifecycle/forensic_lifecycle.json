@@ -637,7 +637,7 @@
                     "uco-observable:arguments": "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log",
                     "uco-observable:pid": 1234,
                     "uco-observable:currentWorkingDirectory": "C:\\exams",
-                    "uco-observable:observableCreatedTime": {
+                    "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-20T17:59:43.25Z"
                     },

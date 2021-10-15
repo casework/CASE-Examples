@@ -146,7 +146,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:google_org"
                     },
-                    "uco-observable:observableCreatedTime": {
+                    "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     }
