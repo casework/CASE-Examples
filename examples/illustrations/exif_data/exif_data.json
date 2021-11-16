@@ -14,7 +14,7 @@
     "@graph": [
         {
             "@id": "kb:camera1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -47,7 +47,7 @@
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
