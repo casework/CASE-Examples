@@ -13,58 +13,44 @@
 
 SHELL := /bin/bash
 
-.PHONY: \
-  all-exif_data \
-  all-location \
-  all-message \
-  check-exif_data \
-  check-location \
-  check-message
+illustration_dirs := \
+  exif_data \
+  location \
+  message
+
+all_targets := $(foreach illustration_dir,$(illustration_dirs),all-$(illustration_dir))
+
+check_targets := $(foreach illustration_dir,$(illustration_dirs),check-$(illustration_dir))
+
+clean_targets := $(foreach illustration_dir,$(illustration_dirs),clean-$(illustration_dir))
 
 all: \
-  all-exif_data \
-  all-location \
-  all-message
+  $(all_targets)
 
-all-exif_data:
-	$(MAKE) \
-	  --directory exif_data
+.PHONY: \
+  all-% \
+  check-% \
+  clean-%
 
-all-location:
-	$(MAKE) \
-	  --directory location
-
-all-message:
-	$(MAKE) \
-	  --directory message
+all-%:
+	export x=$@ \
+	  && $(MAKE) \
+	    --directory $${x/all-}
 
 check: \
-  check-exif_data \
-  check-location \
-  check-message
+  $(check_targets)
 
-check-exif_data:
-	$(MAKE) \
-	  --directory exif_data \
-	  check
+check-%:
+	export x=$@ \
+	  && $(MAKE) \
+	    --directory $${x/check-} \
+	    check
 
-check-location:
-	$(MAKE) \
-	  --directory location \
-	  check
+clean: \
+  $(clean_targets)
 
-check-message:
-	$(MAKE) \
-	  --directory message \
-	  check
-
-clean:
-	@$(MAKE) \
-	  --directory exif_data \
-	  clean
-	@$(MAKE) \
-	  --directory location \
-	  clean
-	@$(MAKE) \
-	  --directory message \
-	  clean
+clean-%:
+	@export x=$@ \
+	  && $(MAKE) \
+	    --directory $${x/clean-} \
+	    clean
