@@ -15,62 +15,39 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../.. ; pwd)
 
-RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
-
-example_name := $(shell basename $$PWD)
+illustrations_srcdir := $(top_srcdir)/examples/illustrations
 
 all: \
-  $(example_name)_validation.ttl \
+  all-review \
   query-select-files.md
 
 .PHONY: \
-  check-0.3.0 \
-  check-0.4.0
+  all-review \
+  check-review \
+  clean-review
 
-$(example_name)_validation.ttl: \
-  $(example_name).json \
-  $(RDF_TOOLKIT_JAR) \
-  $(top_srcdir)/.venv.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_validate \
-	    --format turtle \
-	    --output __$@ \
-	    $< \
-	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
-	test -s __$@
-	java -jar $(RDF_TOOLKIT_JAR) \
-	  --inline-blank-nodes \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
-	mv _$@ $@
+all-review:
+	$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk
 
 check: \
-  $(example_name)_validation.ttl \
-  check-0.3.0 \
-  check-0.4.0 \
+  check-review \
   query-select-files.md
 
-check-0.3.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.3.0.pkl \
-	    exif_data.json
+check-review:
+	$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk \
+	  check
 
-check-0.4.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.4.0.pkl \
-	    exif_data.json
-
-clean:
+clean: \
+  clean-review
 	@rm -f \
-	  $(example_name)_validation.ttl \
 	  query-*.md
+
+clean-review:
+	@$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk \
+	  clean
 
 query-select-files.md: \
   $(top_srcdir)/.venv.done.log \
