@@ -14,9 +14,22 @@
 SHELL := /bin/bash
 
 illustration_dirs := \
+  Oresteia \
+  accounts \
+  bulk_extractor_forensic_path \
+  call_log \
+  device \
   exif_data \
+  file \
+  forensic_lifecycle \
   location \
-  message
+  message \
+  mobile_device_and_sim_card \
+  multipart_file \
+  network_connection \
+  raw_data \
+  reconstructed_file \
+  sms_and_contacts
 
 all_targets := $(foreach illustration_dir,$(illustration_dirs),all-$(illustration_dir))
 
