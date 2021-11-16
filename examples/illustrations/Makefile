@@ -14,13 +14,29 @@
 SHELL := /bin/bash
 
 .PHONY: \
+  all-exif_data \
+  all-location \
+  all-message \
   check-exif_data \
   check-location \
   check-message
 
-all:
+all: \
+  all-exif_data \
+  all-location \
+  all-message
+
+all-exif_data:
 	$(MAKE) \
 	  --directory exif_data
+
+all-location:
+	$(MAKE) \
+	  --directory location
+
+all-message:
+	$(MAKE) \
+	  --directory message
 
 check: \
   check-exif_data \
@@ -45,4 +61,10 @@ check-message:
 clean:
 	@$(MAKE) \
 	  --directory exif_data \
+	  clean
+	@$(MAKE) \
+	  --directory location \
+	  clean
+	@$(MAKE) \
+	  --directory message \
 	  clean

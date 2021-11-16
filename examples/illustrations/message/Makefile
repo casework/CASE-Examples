@@ -15,12 +15,39 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../.. ; pwd)
 
-all:
+RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-0.3.0/CASE/lib/rdf-toolkit.jar
+
+example_name := $(shell basename $$PWD)
+
+all: \
+  $(example_name)_validation.ttl
+
+$(example_name)_validation.ttl: \
+  $(example_name).json \
+  $(RDF_TOOLKIT_JAR) \
+  $(top_srcdir)/.venv.done.log
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --format turtle \
+	    --output __$@ \
+	    $< \
+	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
+	test -s __$@
+	java -jar $(RDF_TOOLKIT_JAR) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
 
 check: \
-  $(top_srcdir)/.venv.done.log
+  $(example_name)_validation.ttl
 	source $(top_srcdir)/venv/bin/activate \
 	  && pytest \
 	    --verbose
 
 clean:
+	@rm -f \
+	  $(example_name)_validation.ttl
