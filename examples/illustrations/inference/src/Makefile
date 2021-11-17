@@ -15,7 +15,7 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../../.. ; pwd)
 
-drafting_pkl_sources := $(wildcard ontology/*.ttl)
+RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-Utilities-Python/dependencies/CASE/lib/rdf-toolkit.jar
 
 illustration_name := inference
 illustration_snippets_json := $(wildcard $(illustration_name)-*.json)
@@ -28,40 +28,44 @@ generated_readme_sed_sources := \
   $(query_sparql_files)
 
 all: \
-  generated-README.md \
-  generated-$(illustration_name).json
+  $(illustration_name)_validation.ttl \
+  generated-README.md
 
 .PHONY: \
   normalize
 
-check: \
-  check-0.4.0
-
-check-0.4.0: \
-  drafting.pkl \
-  generated-$(illustration_name).json
+$(illustration_name)_validation.ttl: \
+  generated-$(illustration_name).json \
+  ../drafting.ttl \
+  $(RDF_TOOLKIT_JAR) \
+  $(top_srcdir)/.venv.done.log
 	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    drafting.pkl \
-	    generated-$(illustration_name).json
+	  && case_validate \
+	    --format turtle \
+	    --ontology-graph ../drafting.ttl \
+	    --output __$@ \
+	    $< \
+	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
+	test -s __$@
+	java -jar $(RDF_TOOLKIT_JAR) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+check: \
+  $(illustration_name)_validation.ttl
 
 clean:
 	@rm -f \
 	  *.sed \
+	  $(illustration_name)_validation.ttl \
 	  .normalized-* \
-	  drafting.pkl \
 	  generated-* \
 	  query-*.md
-
-drafting.pkl: \
-  $(drafting_pkl_sources) \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && serialize \
-	    -c drafting \
-	    -o _$@ \
-	    ontology
-	mv _$@ $@
 
 generated-README.md: \
   README.md.in \
