@@ -51,6 +51,10 @@ all: \
 	  || (git submodule init dependencies/CASE-0.3.0/CASE && git submodule update dependencies/CASE-0.3.0/CASE)
 	@test -r dependencies/CASE-0.3.0/CASE/README.md \
 	  || (echo "ERROR:Makefile:CASE-0.3.0 CASE submodule README.md file not found, even though CASE submodule initialized." >&2 ; exit 2)
+	# Retrieve rdf-toolkit.jar.
+	$(MAKE) \
+	  --directory dependencies/CASE-0.3.0/CASE \
+	  .lib.done.log
 	# UCO (CASE 0.4.0)
 	test -r dependencies/CASE-0.4.0/UCO/README.md \
 	  || (git submodule init dependencies/CASE-0.4.0/UCO && git submodule update dependencies/CASE-0.4.0/UCO)
