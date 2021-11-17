@@ -1,18 +1,3 @@
-[submodule "dependencies/CASE-0.3.0/CASE"]
-	path = dependencies/CASE-0.3.0/CASE
-	url = https://github.com/casework/CASE.git
-[submodule "dependencies/CASE-0.3.0/UCO"]
-	path = dependencies/CASE-0.3.0/UCO
-	url = https://github.com/ucoProject/UCO.git
-[submodule "dependencies/CASE-0.4.0/CASE"]
-	path = dependencies/CASE-0.4.0/CASE
-	url = https://github.com/casework/CASE.git
-[submodule "dependencies/CASE-0.4.0/UCO"]
-	path = dependencies/CASE-0.4.0/UCO
-	url = https://github.com/ucoProject/UCO.git
 [submodule "dependencies/CASE-Utilities-Python"]
 	path = dependencies/CASE-Utilities-Python
 	url = https://github.com/casework/CASE-Utilities-Python
-[submodule "dependencies/UCO-Utility-Pre-0.7.0-Validator"]
-	path = dependencies/UCO-Utility-Pre-0.7.0-Validator
-	url = https://github.com/ucoProject/UCO-Utility-Pre-0.7.0-Validator.git
