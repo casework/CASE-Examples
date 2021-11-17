@@ -73,40 +73,6 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path uco-action:object ;
 			] ;
-			sh:value <http://example.org/kb/directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7> ,
-					<http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ,
-					<http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ,
-					<http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ,
-					<http://example.org/kb/provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d> ,
-					<http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ,
-					<http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ,
-					<http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ,
-					<http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
 			sh:value <http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ;
 		] ,
 		[

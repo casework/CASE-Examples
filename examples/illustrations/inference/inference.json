@@ -17,6 +17,10 @@
             "@type": "uco-tool:AnalyticTool"
         },
         {
+            "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7",
+            "@type": "uco-observable:Directory"
+        },
+        {
             "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137",
             "@type": "uco-observable:File",
             "uco-core:description": "File recovered by tool AutoAuthenticator, asserted at time of recovery to be an Excel spreadsheet.",
