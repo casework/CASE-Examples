@@ -25,10 +25,6 @@ example_name := $(shell basename $$PWD)
 all: \
   $(example_name)_validation.ttl
 
-.PHONY: \
-  check-0.3.0 \
-  check-0.4.0
-
 $(example_name)_validation.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
@@ -50,23 +46,7 @@ $(example_name)_validation.ttl: \
 	mv _$@ $@
 
 check: \
-  $(example_name)_validation.ttl \
-  check-0.3.0 \
-  check-0.4.0
-
-check-0.3.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.3.0.pkl \
-	    $(example_name).json
-
-check-0.4.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.4.0.pkl \
-	    $(example_name).json
+  $(example_name)_validation.ttl
 
 clean:
 	@rm -f \
