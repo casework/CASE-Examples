@@ -26,7 +26,7 @@
     "uco-core:name": "Greek Case 13",
     "uco-core:description": [
         "This illustrative scenario imagines The Oresteia in the age mobile devices for the purpose of demonstrating use of CASE to represent digital investigations into multiple related crimes.",
-        "To reduce repetitive examples in this illustrative scenario, not all Identity objects are explicitly represented here. Instead, each object that is referenced in this scenario uses the associated person's name in the simplified UUID.",
+        "To reduce repetitive examples in this illustrative scenario, not all Person graph-objects are explicitly represented here. Instead, each object that is referenced in this scenario uses the associated person's name in the simplified UUID.",
         "Thyestes is the victim in Crime A, and the offender in Crime B",
         "Clock on Clytemnestra's device is one day and one hour slow (offet -25 hours)",
         "There will be an action for each successful parsing of a file and file objects for each collected file."
@@ -297,7 +297,7 @@
         },
         {
             "@id": "kb:aeschylus-uuid",
-            "@type": "uco-identity:Identity",
+            "@type": "uco-identity:Person",
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
@@ -354,7 +354,7 @@
         },
         {
             "@id": "kb:euripides-uuid",
-            "@type": "uco-identity:Identity",
+            "@type": "uco-identity:Person",
             "uco-core:createdBy": {
                 "@id": "kb:eoghan-uuid"
             },
@@ -410,7 +410,7 @@
         },
         {
             "@id": "kb:cassandra-uuid",
-            "@type": "uco-identity:Identity",
+            "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-identity:SimpleNameFacet",
@@ -560,7 +560,7 @@
         },
         {
             "@id": "kb:thyestes-uuid",
-            "@type": "uco-identity:Identity",
+            "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-identity:SimpleNameFacet",
@@ -612,7 +612,7 @@
         },
         {
             "@id": "kb:electra-uuid",
-            "@type": "uco-identity:Identity",
+            "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-identity:SimpleNameFacet",
@@ -1213,7 +1213,7 @@
                     "uco-action:environment": {
                         "@id": "kb:forensic-computer1-uuid"
                     },
-                    "uco-core:object": [
+                    "uco-action:object": [
                         {
                             "@id": "kb:provenance-record4-uuid"
                         },

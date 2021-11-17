@@ -11,7 +11,7 @@
     "@graph": [
         {
             "@id": "kb:actor1",
-            "@type": "uco-identity:Identity",
+            "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-identity:SimpleNameFacet",

@@ -13,44 +13,58 @@
 
 SHELL := /bin/bash
 
-.PHONY: \
-  check-exif_data \
-  check-location \
-  check-message
+illustration_dirs := \
+  Oresteia \
+  accounts \
+  bulk_extractor_forensic_path \
+  call_log \
+  device \
+  exif_data \
+  file \
+  forensic_lifecycle \
+  inference \
+  location \
+  message \
+  mobile_device_and_sim_card \
+  multipart_file \
+  network_connection \
+  raw_data \
+  reconstructed_file \
+  sms_and_contacts
 
-all:
-	$(MAKE) \
-	  --directory exif_data
-	$(MAKE) \
-	  --directory inference
+all_targets := $(foreach illustration_dir,$(illustration_dirs),all-$(illustration_dir))
+
+check_targets := $(foreach illustration_dir,$(illustration_dirs),check-$(illustration_dir))
+
+clean_targets := $(foreach illustration_dir,$(illustration_dirs),clean-$(illustration_dir))
+
+all: \
+  $(all_targets)
+
+.PHONY: \
+  all-% \
+  check-% \
+  clean-%
+
+all-%:
+	export x=$@ \
+	  && $(MAKE) \
+	    --directory $${x/all-}
 
 check: \
-  check-exif_data \
-  check-location \
-  check-message
+  $(check_targets)
 
-check-exif_data:
-	$(MAKE) \
-	  --directory exif_data \
-	  check
+check-%:
+	export x=$@ \
+	  && $(MAKE) \
+	    --directory $${x/check-} \
+	    check
 
-check-location:
-	$(MAKE) \
-	  --directory location \
-	  check
-	$(MAKE) \
-	  --directory inference \
-	  check
+clean: \
+  $(clean_targets)
 
-check-message:
-	$(MAKE) \
-	  --directory message \
-	  check
-
-clean:
-	@$(MAKE) \
-	  --directory inference \
-	  clean
-	@$(MAKE) \
-	  --directory exif_data \
-	  clean
+clean-%:
+	@export x=$@ \
+	  && $(MAKE) \
+	    --directory $${x/clean-} \
+	    clean

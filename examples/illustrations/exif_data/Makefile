@@ -15,35 +15,39 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../.. ; pwd)
 
+illustrations_srcdir := $(top_srcdir)/examples/illustrations
+
 all: \
+  all-review \
   query-select-files.md
 
 .PHONY: \
-  check-0.3.0 \
-  check-0.4.0
+  all-review \
+  check-review \
+  clean-review
+
+all-review:
+	$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk
 
 check: \
-  check-0.3.0 \
-  check-0.4.0 \
+  check-review \
   query-select-files.md
 
-check-0.3.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.3.0.pkl \
-	    exif_data.json
+check-review:
+	$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk \
+	  check
 
-check-0.4.0: \
-  $(top_srcdir)/.dependencies.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && validate \
-	    $(top_srcdir)/dependencies/case-0.4.0.pkl \
-	    exif_data.json
-
-clean:
+clean: \
+  clean-review
 	@rm -f \
 	  query-*.md
+
+clean-review:
+	@$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk \
+	  clean
 
 query-select-files.md: \
   $(top_srcdir)/.venv.done.log \

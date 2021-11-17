@@ -15,12 +15,32 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../.. ; pwd)
 
-all:
+illustrations_srcdir := $(top_srcdir)/examples/illustrations
+
+all: \
+  all-review
+
+.PHONY: \
+  all-review \
+  check-review \
+  clean-review
+
+all-review:
+	$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk
 
 check: \
-  $(top_srcdir)/.venv.done.log
-	source $(top_srcdir)/venv/bin/activate \
-	  && pytest \
-	    --verbose
+  check-review
 
-clean:
+check-review:
+	$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk \
+	  check
+
+clean: \
+  clean-review
+
+clean-review:
+	@$(MAKE) \
+	  --file $(illustrations_srcdir)/src/review.mk \
+	  clean
