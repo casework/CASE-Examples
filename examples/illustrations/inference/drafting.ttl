@@ -2,6 +2,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix uco-action: <https://unifiedcyberontology.org/ontology/uco/action#> .
 @prefix uco-core: <https://unifiedcyberontology.org/ontology/uco/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -16,43 +17,45 @@ drafting:Hypothesis
 
 drafting:Inference
 	a owl:Class ;
-	rdfs:subClassOf
-		uco-core:UcoObject ,
+	rdfs:subClassOf uco-core:UcoObject ;
+	sh:property
 		[
-			a owl:Restriction ;
-			owl:onProperty drafting:evidenceEvaluation ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-			owl:onDataRange xsd:float ;
+			sh:class drafting:Method ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path drafting:usedMethod ;
 		] ,
 		[
-			a owl:Restriction ;
-			owl:onProperty drafting:evaluationRationale ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-			owl:onDataRange xsd:string ;
+			sh:class uco-core:UcoObject ;
+			owl:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path drafting:basisEvidence ;
 		] ,
 		[
-			a owl:Restriction ;
-			owl:onProperty drafting:evaluationType ;
-			owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-			owl:onDataRange xsd:string ;
+			sh:datatype xsd:decimal ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:evidenceEvaluation ;
 		] ,
 		[
-			a owl:Restriction ;
-			owl:onProperty drafting:basisEvidence ;
-			owl:onClass uco-core:UcoObject ;
-			owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:evaluationRationale ;
 		] ,
 		[
-			a owl:Restriction ;
-			owl:onProperty drafting:usedMethod ;
-			owl:onClass drafting:Method ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:evaluationType ;
 		] ,
 		[
-			a owl:Restriction ;
-			owl:onProperty drafting:hypothesis ;
-			owl:onDataRange xsd:string ;
-			owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:hypothesis ;
 		]
 		;
 	rdfs:label "Inference"@en ;
