@@ -14,7 +14,7 @@
     "@graph": [
         {
             "@id": "kb:chunk_of_data",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -64,7 +64,7 @@
         },
         {
             "@id": "kb:decoded_attachment",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -123,7 +123,7 @@
         },
         {
             "@id": "kb:tar_archive_file",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -189,7 +189,7 @@
         },
         {
             "@id": "kb:decrypted_blob",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -236,7 +236,7 @@
         },
         {
             "@id": "kb:sqlite_blob",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -290,7 +290,7 @@
         },
         {
             "@id": "kb:sqlite_database",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -357,7 +357,8 @@
         },
         {
             "@id": "kb:image_partition",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:FileSystem",
+            "rdfs:comment": "TODO As originally drafted, this was untyped, and left to behave simultaneously like a disk partition and file system via relationship5 and relationship6.  This needs discussion with the community as a modeling issue, as a disk partition and a file system have different behaviors.  The DiskPartitionFacet aspect of relationship6 may need to be applied to another object.",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -401,7 +402,10 @@
         },
         {
             "@id": "kb:android_image",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -472,7 +476,7 @@
         },
         {
             "@id": "kb:forensic_lab_computer1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
             "location": {
                 "@id": "kb:forensic_lab1-uuid"
@@ -506,7 +510,7 @@
         },
         {
             "@id": "kb:android_device1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
             "location": {
                 "@id": "kb:forensic_lab1-uuid"
