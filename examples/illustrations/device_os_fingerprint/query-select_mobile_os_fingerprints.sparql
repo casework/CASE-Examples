@@ -1,0 +1,15 @@
+# Find all mobile device operating system fingerprints, and the devices in the knowledge graph bearing them.
+SELECT ?nDevice ?lFingerprint
+WHERE {
+  ?nDevice
+    a/rdfs:subClassOf* uco-observable:Device ;
+    uco-core:hasFacet ?nSpecializedMobileDeviceFacet ;
+    .
+
+  ?nSpecializedMobileDeviceFacet
+    ?pMobileOSFingerprint ?lFingerprint ;
+    .
+
+  ?pMobileOSFingerprint rdfs:subPropertyOf* drafting:mobileOSFingerprint .
+}
+ORDER BY ?nDevice ?lFingerprint

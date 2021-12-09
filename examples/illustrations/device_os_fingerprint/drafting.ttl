@@ -1,0 +1,100 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix uco-observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+drafting:AndroidDevice
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-observable:Device ;
+	rdfs:label "AndroidDevice"@en ;
+	rdfs:comment "(Class defined for super-property demonstration.  More detail in UCO PR 323.)"@en ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/pull/323> ,
+		<https://unifiedcyberontology.atlassian.net/browse/OC-122>
+		;
+	sh:targetClass drafting:AndroidDevice ;
+	.
+
+drafting:AndroidDeviceFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-core:Facet ;
+	rdfs:label "AndroidDeviceFacet"@en ;
+	rdfs:comment "(Class defined for super-property demonstration.  More detail in UCO PR 323.)"@en ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/pull/323> ,
+		<https://unifiedcyberontology.atlassian.net/browse/OC-122>
+		;
+	sh:property  [
+		sh:datatype xsd:string ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:nodeKind sh:Literal ;
+		sh:path drafting:androidFingerprint ;
+	] ;
+	.
+
+drafting:iOSDevice
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-observable:Device ;
+	rdfs:label "iOSDevice"@en ;
+	rdfs:comment "(Class defined for super-property demonstration.)"@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	sh:targetClass drafting:iOSDevice ;
+	.
+
+drafting:iOSDeviceFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-core:Facet ;
+	rdfs:label "iOSDeviceFacet"@en ;
+	rdfs:comment "(Class defined for super-property demonstration.)"@en ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/pull/323> ,
+		<https://unifiedcyberontology.atlassian.net/browse/OC-122>
+		;
+	sh:property  [
+		sh:datatype xsd:string ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:nodeKind sh:Literal ;
+		sh:path drafting:iOSFingerprint ;
+	] ;
+	.
+
+drafting:androidFingerprint
+	a owl:DatatypeProperty ;
+	rdfs:label "androidFingerprint"@en ;
+	rdfs:comment "TODO"@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	rdfs:subPropertyOf drafting:mobileOSFingerprint ;
+	.
+
+drafting:iOSFingerprint
+	a owl:DatatypeProperty ;
+	rdfs:label "iOSFingerprint"@en ;
+	rdfs:comment "TODO"@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	rdfs:subPropertyOf drafting:mobileOSFingerprint ;
+	.
+
+drafting:mobileOSFingerprint
+	a owl:DatatypeProperty ;
+	rdfs:label "mobileOSFingerprint"@en ;
+	rdfs:comment "Abstract property representing mobile operating system fingerprint."@en ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	.
+

@@ -1,0 +1,39 @@
+{
+    "@context": {
+        "@vocab": "http://example.org/local#",
+        "INTERNAL": "urn:example:internal:",
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:android-device-1",
+            "@type": "drafting:AndroidDevice",
+            "uco-core:hasFacet": {
+                "@type": "drafting:AndroidDeviceFacet",
+                "drafting:androidFingerprint": "Android fingerprint example"
+            }
+        },
+        {
+            "@id": "kb:ios-device-1",
+            "@type": "uco-observable:Device",
+            "uco-core:hasFacet": {
+                "@type": "drafting:iOSDeviceFacet",
+                "drafting:iOSFingerprint": "iOS fingerprint example"
+            }
+        },
+        {
+            "@id": "kb:knockoff-device-1",
+            "@type": "uco-observable:Device",
+            "uco-core:hasFacet": {
+                "@type": [
+                    "uco-core:Facet",
+                    "INTERNAL:KnockOffPhoneDeviceFacet"
+                ],
+                "drafting:mobileOSFingerprint": "Knock-off device OS fingerprint example"
+            }
+        }
+    ]
+}
