@@ -11,7 +11,7 @@
     "@graph": [
         {
             "@id": "kb:device-1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
                 {
