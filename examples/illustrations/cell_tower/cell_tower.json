@@ -1,3 +1,13 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
 { 
 	"@id":"kb:device—1", 
 	"@type":"uco-observable:ObservableObject",
@@ -82,4 +92,6 @@
 	},
 	"uco-core:kindOfRelationship":"Connected_To",
 	"uco-core:isDirectional":true
+}
+    ]
 }
