@@ -45,12 +45,12 @@
 			"not-in-ontology:nid": "",
 			"not-in-ontology:bid": "",
 			"not-in-ontology:sid": ""
-		},
+		}
+	] ,
 		"uco-observable:location":{
 			"@id":"kb:location-01"
-		},
+		}
 		
-	] 
 },
 
 { 
