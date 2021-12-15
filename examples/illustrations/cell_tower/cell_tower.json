@@ -10,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:device-1",
+            "@id": "kb:device-d1664508-1b5c-4ccd-9d88-829e49c7e8f0",
             "@type": "uco-observable:Device",
             "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
@@ -43,7 +43,7 @@
             ]
         },
         {
-            "@id": "kb:cell_tower-1",
+            "@id": "kb:cell-tower-796486ad-a566-4b63-8c25-6eeeb16a6792",
             "@type": "uco-observable:ObservableObject",
             "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
@@ -59,11 +59,11 @@
                 }
             ],
             "uco-observable:location": {
-                "@id": "kb:location-01"
+                "@id": "kb:location-e72f585a-f21a-4f85-b5bf-b47ef25f4880"
             }
         },
         {
-            "@id": "kb:location-01",
+            "@id": "kb:location-e72f585a-f21a-4f85-b5bf-b47ef25f4880",
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
@@ -74,17 +74,17 @@
             ]
         },
         {
-            "@id": "kb:relationship-1",
+            "@id": "kb:relationship-c3963059-47c0-4304-8d80-4658e5d2f7e4",
             "@type": "uco-observable:ObservableRelationship",
             "uco-observable:observableAccessedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-07-29T02:08:45"
             },
             "uco-core:source": {
-                "@id": "kb:device-1"
+                "@id": "kb:device-d1664508-1b5c-4ccd-9d88-829e49c7e8f0"
             },
             "uco-core:target": {
-                "@id": "kb:cell_tower-1"
+                "@id": "kb:cell-tower-796486ad-a566-4b63-8c25-6eeeb16a6792"
             },
             "uco-core:kindOfRelationship": "Connected_To",
             "uco-core:isDirectional": true
