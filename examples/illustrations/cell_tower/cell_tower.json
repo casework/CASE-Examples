@@ -1,1 +1,85 @@
-{}
+{ 
+	"@id":"kb:device—1", 
+	"@type":"uco-observable:ObservableObject",
+	"uco-observable:hasChanged":true,
+	"uco-core:hasFacet":[
+		{
+			"@type":"uco-observable:DeviceFacet",
+			"uco-observable:model":"iPhone X",
+			"uco-observable:serialNumber":"tornadobeth@gmail.com"
+		},
+		{
+			"@type":"uco-observable:MobileDeviceFacet",
+			"uco-observable:IMSI":"310260249043715",
+			"uco-observable:ICCID":"8901260243790437158",
+			"uco-observable:IMEI":"359405082912450"
+		},
+		{
+		"@type":"uco-observable:OperatingSystemFacet",
+		"uco-core:name": "iOS",
+		"uco-observable:manufacturer":"",
+		"uco-observable:version":""
+		},
+		{
+		"@type":"uco-observable:BluetoothAddressFacet",
+		"uco-core:name":"",
+		"uco-observable:addressValue":"D4:A3:3D:B5:F4:6C"
+		},
+ 		{
+		"@type":"uco-observable:WifiAddressFacet",
+		"uco-observable:addressValue":"D4:A3:3D:B5:F4:48"}
+	]
+},
+
+{ 
+	"@id":"kb:cell_tower-1", 
+	"@type":"uco-observable:ObservableObject", 
+	"uco-observable:hasChanged":true,
+	"uco-core:hasFacet":[
+		{
+			"@type":"not-in-ontology:CellTowerFacet", 			
+			"not-in-ontology:mcc": "310",
+			"not-in-ontology:mnc": "",
+			"not-in-ontology:lac": "2953",
+			"not-in-ontology:cid": "187589293",
+			"not-in-ontology:nid": "",
+			"not-in-ontology:bid": "",
+			"not-in-ontology:sid": ""
+		},
+		"uco-observable:location":{
+			"@id":"kb:location-01"
+		},
+		
+	] 
+},
+
+{ 
+	"@id":"kb:location-01", 
+	"@type":"uco-location:Location", 
+	"uco-core:hasFacet":[
+		{
+			"@type":"uco-location:LatLongCoordinatesFacet",
+			"uco-location:latitude": "40.11259078",
+			"uco-location:longitude": "-75.65714263"
+		}
+	]
+},
+
+{ 
+	"@id":"kb:relationship—1", 
+	"@type":"uco-observable:ObservableRelationship",
+	"uco-observable:observableAccessedTime":
+	{
+		"@type":"xsd:dateTime",
+		"@value":"2021-07-29T02:08:45"
+	},
+	
+	"uco-core:source":{
+		"@id":"kb:device—1"
+	},
+	"uco-core:target":{
+		"@id":"kb:cell_tower—1"
+	},
+	"uco-core:kindOfRelationship":"Connected_To",
+	"uco-core:isDirectional":true
+}
