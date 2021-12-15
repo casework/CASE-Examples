@@ -1,5 +1,6 @@
 {
     "@context": {
+        "drafting": "http://example.org/ontology/drafting#",
         "kb": "http://example.org/kb/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -47,14 +48,14 @@
             "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "not-in-ontology:CellTowerFacet",
-                    "not-in-ontology:mcc": "310",
-                    "not-in-ontology:mnc": "",
-                    "not-in-ontology:lac": "2953",
-                    "not-in-ontology:cid": "187589293",
-                    "not-in-ontology:nid": "",
-                    "not-in-ontology:bid": "",
-                    "not-in-ontology:sid": ""
+                    "@type": "drafting:CellTowerFacet",
+                    "drafting:mcc": "310",
+                    "drafting:mnc": "",
+                    "drafting:lac": "2953",
+                    "drafting:cid": "187589293",
+                    "drafting:nid": "",
+                    "drafting:bid": "",
+                    "drafting:sid": ""
                 }
             ],
             "uco-observable:location": {
