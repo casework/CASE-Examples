@@ -22,18 +22,22 @@ RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-Utilities-Python/dependencies
 
 example_name := $(shell basename $$PWD)
 
+drafting_ttl := $(wildcard drafting.ttl)
+
 all: \
   $(example_name)_validation.ttl
 
 $(example_name)_validation.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
+  $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --format turtle \
 	    --output __$@ \
 	    $< \
+	    $(drafting_ttl) \
 	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
 	test -s __$@
 	java -jar $(RDF_TOOLKIT_JAR) \
