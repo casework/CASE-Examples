@@ -20,6 +20,10 @@ all: \
 	$(MAKE) \
 	  --directory examples/illustrations
 
+.PHONY: \
+  check-examples \
+  check-tests
+
 # Submodules are checked for having been cloned ever.  A global git
 # submodule udpate command is not run, to prevent resetting any pointers
 # for someone developing with different submodule pointers.
@@ -58,9 +62,19 @@ all: \
 	touch $@
 
 check: \
+  check-examples \
+  check-tests
+
+check-examples: \
   .venv.done.log
 	$(MAKE) \
 	  --directory examples/illustrations \
+	  check
+
+check-tests: \
+  .venv.done.log
+	$(MAKE) \
+	  --directory tests/owl_inferencing \
 	  check
 
 clean:
