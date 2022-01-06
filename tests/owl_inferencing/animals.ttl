@@ -1,0 +1,91 @@
+
+@prefix ex: <http://example.org/ontology/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/kb>
+	a owl:Ontology ;
+	rdfs:comment "A sample knowledge base."@en ;
+	.
+
+<http://example.org/ontology>
+	a owl:Ontology ;
+	rdfs:comment "An OWL ontology demonstrating inference of classes and property values."@en ;
+	.
+
+ex:Animal
+	a owl:Class ;
+	.
+
+ex:Bird
+	a owl:Class ;
+	owl:equivalentClass [
+		a owl:Class ;
+		owl:intersectionOf (
+			ex:Animal
+			[
+				a owl:Restriction ;
+				owl:cardinality "1"^^xsd:nonNegativeInteger ;
+				owl:hasValue true ;
+				owl:onProperty ex:hasFeathers ;
+			]
+		) ;
+	] ;
+	.
+
+ex:hasFeathers
+	a owl:DatatypeProperty ;
+	rdfs:domain ex:Animal ;
+	rdfs:range xsd:boolean ;
+	.
+
+kb:animal-a
+	a ex:Animal ;
+	rdfs:label "Some animal"@en ;
+	ex:hasFeathers true ;
+	.
+
+kb:animal-b
+	a ex:Bird ;
+	rdfs:label "Some bird"@en ;
+	.
+
+kb:animal-c
+	a ex:Animal ;
+	rdfs:label "Some cat"@en ;
+	ex:hasFeathers false ;
+	.
+
+kb:animal-d
+	a ex:Animal ;
+	rdfs:label "Some dog"@en ;
+	ex:hasFeathers false ;
+	.
+
+kb:animal-eax
+	a ex:Animal ;
+	rdfs:label "Some other animal, indirectly described with an owl:Axiom."@en ;
+	.
+
+kb:animal-enp
+	a ex:Animal ;
+	rdfs:label "Some other animal, indirectly described with an owl:NegativePropertyAssertion."@en ;
+	.
+
+[]
+	a owl:Axiom ;
+	owl:annotatedProperty ex:hasFeathers ;
+	owl:annotatedSource kb:animal-eax ;
+	owl:annotatedTarget true ;
+	.
+
+[]
+	a owl:NegativePropertyAssertion ;
+	owl:assertionProperty ex:hasFeathers ;
+	owl:sourceIndividual kb:animal-enp ;
+	owl:targetValue false ;
+	.
+
