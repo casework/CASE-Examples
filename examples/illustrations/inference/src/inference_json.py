@@ -47,7 +47,7 @@ def main():
                 for item in in_obj:
                     node_id = item.get("@id", "")
                     node_type = item.get("@type", "")
-                    nodes[(node_id, node_type)] = item
+                    nodes[(node_id, tuple(sorted(node_type)))] = item
 
     for key in sorted(nodes.keys()):
         obj["@graph"].append(nodes[key])
