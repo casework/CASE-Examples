@@ -8,15 +8,22 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 drafting:Hypothesis
-	a owl:Class ;
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
 	rdfs:subClassOf uco-core:Assertion ;
 	rdfs:label "Hypothesis"@en ;
 	rdfs:comment "A natural-language claim to explain observable objects."@en ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	sh:targetClass drafting:Hypothesis ;
 	.
 
 drafting:Inference
-	a owl:Class ;
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
 	rdfs:subClassOf uco-core:UcoObject ;
 	sh:property
 		[
@@ -61,16 +68,21 @@ drafting:Inference
 	rdfs:label "Inference"@en ;
 	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis." ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	sh:targetClass drafting:Inference ;
 	.
 
 drafting:Method
-	a owl:Class ;
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
 	rdfs:subClassOf uco-action:ActionLifecycle ;
 	rdfs:label "Method"@en ;
 	rdfs:comment
 		"A method is a form of procedura for accomplishing a specific task."@en
 		;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	sh:targetClass drafting:Method ;
 	.
 
 drafting:basisEvidence
