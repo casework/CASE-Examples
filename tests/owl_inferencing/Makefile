@@ -21,5 +21,5 @@ all:
 check:
 	source $(top_srcdir)/venv/bin/activate \
 	  && pytest \
+	    --override-ini log_cli=true \
 	    --log-level=DEBUG
-	# To see debug output (graph sizes, ground truth sets), run pytest with the additional flag `-o log_cli=true`.
