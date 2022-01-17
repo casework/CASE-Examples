@@ -9,7 +9,8 @@
         "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#"
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": []
 }

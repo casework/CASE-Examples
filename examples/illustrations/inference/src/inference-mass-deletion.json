@@ -79,7 +79,7 @@
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.9"
         },
         "drafting:basisEvidence": [
@@ -109,7 +109,7 @@
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": [

@@ -72,7 +72,7 @@
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
@@ -91,7 +91,7 @@
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
@@ -110,7 +110,7 @@
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "5.5"
         },
         "drafting:basisEvidence": {
@@ -129,7 +129,7 @@
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
