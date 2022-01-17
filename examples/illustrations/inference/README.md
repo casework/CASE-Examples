@@ -117,7 +117,7 @@ The following inferences can be stated in words as "the observations are exceedi
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
@@ -136,7 +136,7 @@ The following inferences can be stated in words as "the observations are exceedi
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
@@ -155,7 +155,7 @@ The following inferences can be stated in words as "the observations are exceedi
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "5.5"
         },
         "drafting:basisEvidence": {
@@ -174,7 +174,7 @@ The following inferences can be stated in words as "the observations are exceedi
         "drafting:evaluationType": "C-Scale",
         "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": {
@@ -281,7 +281,7 @@ Further forensic analysis is performed of the photograph and its metadata, which
         "drafting:evaluationType": "probability",
         "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.9"
         },
         "drafting:basisEvidence": [
@@ -320,7 +320,7 @@ However, a skeptic might argue that photographs can be faked or geolocation info
         "drafting:evaluationType": "probability",
         "drafting:evaluationRationale": "Photograph contents and Exif data can be altered.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.9"
         },
         "drafting:basisEvidence": {
@@ -435,7 +435,7 @@ The following inferences can be stated in words as the observations are exceedin
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.95"
         },
         "drafting:basisEvidence": [
@@ -465,7 +465,7 @@ The following inferences can be stated in words as the observations are exceedin
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.05"
         },
         "drafting:basisEvidence": [
@@ -580,7 +580,7 @@ The following inferences can be stated in words as the observations are exceedin
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.9"
         },
         "drafting:basisEvidence": [
@@ -610,7 +610,7 @@ The following inferences can be stated in words as the observations are exceedin
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.1"
         },
         "drafting:basisEvidence": [
