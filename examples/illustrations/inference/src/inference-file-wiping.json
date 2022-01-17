@@ -79,7 +79,7 @@
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.95"
         },
         "drafting:basisEvidence": [
@@ -109,7 +109,7 @@
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.05"
         },
         "drafting:basisEvidence": [

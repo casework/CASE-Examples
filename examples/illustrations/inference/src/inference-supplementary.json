@@ -8,6 +8,10 @@
         "@type": "uco-observable:Directory"
     },
     {
+        "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403",
+        "@type": "uco-observable:Directory"
+    },
+    {
         "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137",
         "@type": "uco-observable:File",
         "uco-core:description": "File recovered by tool AutoAuthenticator, asserted at time of recovery to be an Excel spreadsheet.",
@@ -94,6 +98,42 @@
         }
     },
     {
+        "@id": "kb:provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
+            },
+            {
+                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
+            },
+            {
+                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
+            },
+            {
+                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
+            }
+        ]
+    },
+    {
+        "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+            },
+            {
+                "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+            },
+            {
+                "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+            },
+            {
+                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
+            }
+        ]
+    },
+    {
         "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41",
         "@type": "case-investigation:ProvenanceRecord",
         "uco-core:object": {
@@ -155,6 +195,14 @@
         ]
     },
     {
+        "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa",
+        "@type": "uco-observable:ObservableObject"
+    },
+    {
+        "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185",
+        "@type": "uco-observable:ObservableObject"
+    },
+    {
         "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:isDirectional": true,
@@ -168,5 +216,20 @@
         "uco-core:target": {
             "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
         }
+    },
+    {
+        "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850",
+        "@type": "uco-observable:ObservableObject"
+    },
+    {
+        "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee",
+        "@type": [
+            "uco-observable:ObservableObject",
+            "uco-tool:Tool"
+        ]
+    },
+    {
+        "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e",
+        "@type": "uco-observable:ObservableObject"
     }
 ]

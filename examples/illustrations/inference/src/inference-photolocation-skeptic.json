@@ -12,7 +12,7 @@
         "drafting:evaluationType": "probability",
         "drafting:evaluationRationale": "Photograph contents and Exif data can be altered.",
         "drafting:evidenceEvaluation": {
-            "@type": "xsd:float",
+            "@type": "xsd:decimal",
             "@value": "0.9"
         },
         "drafting:basisEvidence": {
