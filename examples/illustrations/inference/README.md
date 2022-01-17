@@ -430,7 +430,7 @@ The following inferences can be stated in words as the observations are exceedin
         "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de",
         "@type": "drafting:Inference",
         "drafting:hypothesis": {
-            "@id": "hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+            "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
         },
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
