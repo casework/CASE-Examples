@@ -70,7 +70,7 @@
         },
         {
             "@id": "kb:multipart_file",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -98,7 +98,7 @@
         },
         {
             "@id": "kb:data_piece0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -144,7 +144,7 @@
         },
         {
             "@id": "kb:data_piece1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -190,7 +190,7 @@
         },
         {
             "@id": "kb:data_piece2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",

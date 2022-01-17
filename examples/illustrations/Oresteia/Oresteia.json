@@ -458,7 +458,7 @@
         },
         {
             "@id": "kb:cassandra-device-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -489,7 +489,7 @@
         },
         {
             "@id": "kb:cassandra-mobileaccount-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -642,7 +642,7 @@
         },
         {
             "@id": "kb:clytemnestra-device-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -699,7 +699,7 @@
         },
         {
             "@id": "kb:clytemnestra-mobileaccount-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -882,7 +882,10 @@
         },
         {
             "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -934,7 +937,7 @@
             }
         },
         {
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:File",
             "@id": "kb:cassandra-mobiledevice-mmssms-uuid",
             "uco-core:hasFacet": [
                 {
@@ -995,7 +998,7 @@
         },
         {
             "@id": "kb:cassandra-image-partition6-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:FileSystem",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DiskPartitionFacet",
@@ -1033,7 +1036,7 @@
         },
         {
             "@id": "kb:trace-relationship4-uuid",
-            "@type": "uco-core:Relationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:cassandra-image-partition6-uuid"
             },
