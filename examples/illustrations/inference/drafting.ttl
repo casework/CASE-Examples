@@ -1,4 +1,5 @@
 @prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,25 +8,83 @@
 @prefix uco-core: <https://unifiedcyberontology.org/ontology/uco/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-drafting:Hypothesis
+drafting:AbstractHypothesis
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
-	rdfs:subClassOf uco-core:Assertion ;
-	rdfs:label "Hypothesis"@en ;
-	rdfs:comment "A natural-language claim to explain observable objects."@en ;
+	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:label "AbstractHypothesis"@en ;
+	rdfs:comment "A hypothesis making either an affirmative assertion or a negative assertion.  Defined as an abstract superclass of Hypothesis and NegativeHypothesis."@en ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
-	sh:targetClass drafting:Hypothesis ;
+	sh:targetClass drafting:AbstractHypothesis ;
 	.
 
-drafting:Inference
+drafting:AnalyticAssertion
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf case-investigation:InvestigativeAction ;
+	sh:property [
+		rdfs:comment "An evaluation must use one or more Inferences."@en ;
+		sh:path uco-core:hasFacet ;
+		sh:qualifiedMinCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:property [
+				sh:path uco-action:object ;
+				sh:qualifiedMinCount "1"^^xsd:integer ;
+				sh:qualifiedValueShape [
+					sh:class drafting:AnalyticInference ;
+				] ;
+			] ;
+		] ;
+	] ;
+	sh:targetClass drafting:AnalyticAssertion ;
+	.
+
+drafting:AnalyticEvaluation
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf case-investigation:InvestigativeAction ;
+	sh:property [
+		rdfs:comment "An evaluation must produce one or more Inferences."@en ;
+		sh:path uco-core:hasFacet ;
+		sh:qualifiedMinCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:property [
+				sh:path uco-action:result ;
+				sh:qualifiedMinCount "1"^^xsd:integer ;
+				sh:qualifiedValueShape [
+					sh:class drafting:AnalyticInference ;
+				] ;
+			] ;
+		] ;
+	] ;
+	sh:targetClass drafting:AnalyticAssertion ;
+	.
+
+drafting:AnalyticInference
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
 	rdfs:subClassOf uco-core:UcoObject ;
 	sh:property
+		[
+			sh:minCount "1"^^xsd:integer ;
+			sh:path uco-core:description ;
+		] ,
+		[
+			sh:class drafting:AbstractHypothesis ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path drafting:hasHypothesis ;
+		] ,
 		[
 			sh:class drafting:Method ;
 			sh:maxCount "1"^^xsd:integer ;
@@ -56,19 +115,56 @@ drafting:Inference
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:evaluationType ;
-		] ,
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:hypothesis ;
 		]
 		;
 	rdfs:label "Inference"@en ;
 	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis." ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
-	sh:targetClass drafting:Inference ;
+	sh:targetClass drafting:AnalyticInference ;
+	.
+
+drafting:Hypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		drafting:AbstractHypothesis ,
+		owl:Axiom
+		;
+	rdfs:label "Hypothesis"@en ;
+	sh:property
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path owl:annotatedSource ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:or (
+				[
+					sh:class owl:DatatypeProperty ;
+				]
+				[
+					sh:class owl:ObjectProperty ;
+				]
+				[
+					sh:hasValue rdf:type ;
+				]
+			) ;
+			sh:path owl:annotatedProperty ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path owl:annotatedTarget ;
+		]
+		;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	sh:targetClass drafting:Hypothesis ;
 	.
 
 drafting:Method
@@ -83,6 +179,50 @@ drafting:Method
 		;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	sh:targetClass drafting:Method ;
+	.
+
+drafting:NegativeHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		drafting:AbstractHypothesis ,
+		owl:NegativePropertyAssertion
+		;
+	rdfs:label "NegativeHypothesis"@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	sh:property
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path owl:sourceIndividual ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:or (
+				[
+					sh:class owl:DatatypeProperty ;
+				]
+				[
+					sh:class owl:ObjectProperty ;
+				]
+				[
+					sh:hasValue rdf:type ;
+				]
+			) ;
+			sh:path owl:assertionProperty ;
+		] ,
+		[
+			rdfs:comment: "Absence of targetIndividual will result in negation of all triples with matching sourceIndividual and assertionProperty."@en ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path owl:targetIndividual ;
+		]
+		;
+	sh:targetClass drafting:NegativeHypothesis ;
 	.
 
 drafting:basisEvidence
@@ -120,11 +260,11 @@ drafting:evidenceEvaluation
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
-drafting:hypothesis
-	a owl:DatatypeProperty ;
-	rdfs:label "hypothesis"@en ;
-	rdfs:comment "A proposed explanation made on the basis of initial observations as a starting point for further investigation."@en ;
-	rdfs:range xsd:string ;
+drafting:hasHypothesis
+	a owl:ObjectProperty ;
+	rdfs:label "hasHypothesis"@en ;
+	rdfs:comment "A proposed explanation, represented as an OWL Axiom, made on the basis of initial observations as a starting point for further investigation."@en ;
+	rdfs:range drafting:Hypothesis ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
