@@ -62,7 +62,7 @@
         {
             "@id": "kb:phone_call1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:description": "An example of a basic one way phone call that has clear directionality between a caller (from) and receiver (to).",
+            "uco-core:description": "An example of a two-party, one-way phone call that has clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
@@ -88,7 +88,7 @@
         {
             "@id": "kb:non-directional-phone-call-1",
             "@type": "uco-observable:ObservableObject",
-            "uco-core:description": "An example of a basic one way phone call that has does not clear directionality between a caller (from) and receiver (to).",
+            "uco-core:description": "An example of a two-party, one-way phone call that has does not have clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
