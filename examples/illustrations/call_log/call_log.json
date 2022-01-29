@@ -60,6 +60,23 @@
             ]
         },
         {
+            "@id": "kb:bridge_account1",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIssuer": {
+                        "@id": "kb:Zoom"
+                    },
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@type": "uco-observable:PhoneAccountFacet",
+                    "identifier": "1235550002"
+                }
+            ]
+        },
+        {
             "@id": "kb:phone_call1",
             "@type": "uco-observable:ObservableObject",
             "uco-core:description": "An example of a two-party, one-way phone call that has clear directionality between a caller (from) and receiver (to).",
@@ -151,7 +168,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
-                    "uco-observable:callType": "outgoing",
+                    "uco-observable:callType": "bridge",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
@@ -169,6 +186,9 @@
                         },
                         {
                             "@id": "kb:phone_account3"
+                        },
+                        {
+                            "@id": "kb:bridge_account1"
                         }
                     ],
                     "uco-observable:duration": 1862
