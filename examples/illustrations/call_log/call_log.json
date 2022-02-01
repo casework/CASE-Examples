@@ -38,7 +38,7 @@
                 },
                 {
                     "@type": "uco-observable:PhoneAccountFacet",
-                    "identifier": "1234560000"
+                    "uco-observable:phoneNumber": "1234560000"
                 }
             ]
         },
