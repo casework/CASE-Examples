@@ -19,7 +19,7 @@
         },
         {
             "@id": "kb:phone_account1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -36,7 +36,7 @@
         },
         {
             "@id": "kb:phone_account2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -53,7 +53,7 @@
         },
         {
             "@id": "kb:phone_call1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneCall",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
