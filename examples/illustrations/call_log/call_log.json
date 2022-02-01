@@ -18,7 +18,23 @@
             "@type": "uco-identity:Organization"
         },
         {
+            "@id": "kb:Verizon",
+            "@type": "uco-identity:Organization"
+        },
+        {
+            "@id": "kb:Zoom",
+            "@type": "uco-identity:Organization"
+        },
+        {
+            "@id": "kb:application-79636b28-77c9-4005-b62d-b87a233687ef",
+            "@type": "uco-observable:Application"
+        },
+        {
             "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29",
+            "@type": "uco-observable:Application"
+        },
+        {
+            "@id": "kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108",
             "@type": "uco-observable:Application"
         },
         {
@@ -57,7 +73,7 @@
         },
         {
             "@id": "kb:phone_account3",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -68,13 +84,13 @@
                 },
                 {
                     "@type": "uco-observable:PhoneAccountFacet",
-                    "identifier": "1235550001"
+                    "uco-observable:phoneNumber": "1235550001"
                 }
             ]
         },
         {
             "@id": "kb:bridge_account1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -85,7 +101,7 @@
                 },
                 {
                     "@type": "uco-observable:PhoneAccountFacet",
-                    "identifier": "1235550002"
+                    "uco-observable:phoneNumber": "1235550002"
                 }
             ]
         },
@@ -120,11 +136,14 @@
         },
         {
             "@id": "kb:non-directional-phone-call-1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneCall",
             "uco-core:description": "An example of a two-party, one-way phone call that has does not have clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
+                    "uco-observable:application": {
+                        "@id": "kb:application-79636b28-77c9-4005-b62d-b87a233687ef"
+                    },
                     "uco-observable:callType": "outgoing",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
@@ -148,11 +167,14 @@
         },
         {
             "@id": "kb:multi-participant-phone-call-1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneCall",
             "uco-core:description": "An example of a three-way call phone call that has clear directionality between a caller (from) and two receivers (to).",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
+                    "uco-observable:application": {
+                        "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
+                    },
                     "uco-observable:callType": "outgoing",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
@@ -179,11 +201,14 @@
         },
         {
             "@id": "kb:conference-bridge-phone-call-1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneCall",
             "uco-core:description": "An example of a conference bridge phone call that does not have clear directionality between a caller (from) and receivers (to).",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PhoneCallFacet",
+                    "uco-observable:application": {
+                        "@id": "kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108"
+                    },
                     "uco-observable:callType": "bridge",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
