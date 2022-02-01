@@ -4,10 +4,19 @@
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
+        {
+            "@id": "kb:ATT",
+            "@type": "uco-identity:Organization"
+        },
+        {
+            "@id": "kb:Sprint",
+            "@type": "uco-identity:Organization"
+        },
         {
             "@id": "kb:phone_account1",
             "@type": "uco-observable:ObservableObject",
