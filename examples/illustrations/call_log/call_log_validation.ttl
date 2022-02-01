@@ -1,5 +1,4 @@
 @prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
-@prefix ns1: <http://example.org/local#> .
 @prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,24 +10,6 @@
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:PhoneAccountFacet ;
-				ns1:identifier "1234560000" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ :identifier Literal("1234560000") ; rdf:type uco-observable:PhoneAccountFacet ]->observable:phoneNumber' ;
-			sh:resultPath observable:phoneNumber ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:phoneNumber ;
-			] ;
-		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
