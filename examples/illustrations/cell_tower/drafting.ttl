@@ -1,4 +1,5 @@
-@prefix uco-core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix drafting: <http://example.org/ontology/drafting#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,7 +12,193 @@ drafting:CellTowerFacet
 		sh:NodeShape ,
 		owl:Class
 		;
-	rdfs:subClassOf uco-core:Facet ;
+	rdfs:subClassOf core:Facet ;
 	rdfs:seeAlso <case.atlassian.net/browse/ONT-469> ;
+	rdfs:label "CellTowerFacet"@en ;
+	rdfs:comment "A cell tower facet contains the metadata surrounding the cell tower."@en ;
+	sh:property
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cid ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:lac ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:mcc ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:mnc ;
+		]
+		;
+	sh:targetClass observable:CellTowerFacet ;
 	.
 
+drafting:AntennaAlignmentFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:Facet ;
+	rdfs:seeAlso <case.atlassian.net/browse/ONT-469> ;
+	rdfs:label "AntennaAlignmentFacet"@en ;
+	rdfs:comment "An antenna alignment facet contains the metadata surrounding the cell tower's antenna position."@en ;
+	sh:property
+		[
+			sh:datatype xsd:decimal ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:azimuth ;
+		] ,
+		[
+			sh:datatype xsd:decimal ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:elevation ;
+		] ,
+		[
+			sh:datatype xsd:decimal ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:skew ;
+		]
+		;
+	sh:targetClass observable:AntennaAlignmentFacet ;
+	.
+
+drafting:CapturedTelecommunicationsInformationFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:Facet ;
+	rdfs:seeAlso <case.atlassian.net/browse/ONT-469> ;
+	rdfs:label "CapturedTelecommunicationsInformationFacet"@en ;
+	rdfs:comment "A captured telecommunications information facet represents certain information within captured or intercepted telecommunications data."@en ;
+	sh:property
+		[
+			sh:class observable:ObservableObject
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path drafting:captureCellTower ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path observable:endTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:interceptedCallState ;
+		] ,
+		[
+			sh:class observable:ObservableObject
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:partyDevice ;
+		] ,
+		[
+			sh:class observable:ObservableObject
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:partySubscription ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path observable:startTime ;
+		]
+		;
+	sh:targetClass observable:CapturedTelecommunicationsInformationFacet ;
+	.
+
+drafting:azimuth
+	a owl:DatatypeProperty ;
+	rdfs:label "azimuth"@en ;
+	rdfs:comment "The median rotation in degrees around a vertical axis of the cell antenna sector accessed."@en ;
+	rdfs:range xsd:decimal ;
+	.
+
+drafting:captureCellTower
+	a owl:ObjectProperty ;
+	rdfs:label "captureCellTower"@en ;
+	rdfs:comment "Specifies the cell tower accessed."@en ;
+	rdfs:range observable:ObservableObject ;
+	.
+
+drafting:cid
+	a owl:DatatypeProperty ;
+	rdfs:label "cid"@en ;
+	rdfs:comment "Specifies the global identifier network code of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:elevation
+	a owl:DatatypeProperty ;
+	rdfs:label "elevation"@en ;
+	rdfs:comment "The angle in degrees of the antenna from the local horizontal plane."@en ;
+	rdfs:range xsd:decimal ;
+	.
+
+drafting:interceptedCallState
+	a owl:DatatypeProperty ;
+	rdfs:label "interceptedCallState"@en ;
+	rdfs:comment "State of the call in a Call Detail Record (e.g. idle)."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:lac
+	a owl:DatatypeProperty ;
+	rdfs:label "lac"@en ;
+	rdfs:comment "The Location Area Code (LAC) is a fixed length code (of 2 octets) identifying a location area within a PLMN."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:mcc
+	a owl:DatatypeProperty ;
+	rdfs:label "mcc"@en ;
+	rdfs:comment "The Mobile Country Code (MCC) is a three digit code representing the country of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:mnc
+	a owl:DatatypeProperty ;
+	rdfs:label "mnc"@en ;
+	rdfs:comment "The Mobile Network Code (MNC) is a two or three digit code representing the network of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:partyDevice
+	a owl:ObjectProperty ;
+	rdfs:label "partyDevice"@en ;
+	rdfs:comment "The IMEI of the device connected to the cell tower."@en ;
+	rdfs:range observable:ObservableObject ;
+	.
+
+drafting:partySubscription
+	a owl:ObjectProperty ;
+	rdfs:label "partySubscription"@en ;
+	rdfs:comment "The addresses of the device connected to the cell tower (references IMSI, MSISDN SIP address, 5G supi)."@en ;
+	rdfs:range observable:ObservableObject ;
+	.
+
+drafting:skew
+	a owl:DatatypeProperty ;
+	rdfs:label "skew"@en ;
+	rdfs:comment "The angle in degrees of the radial rotation around its main beam direction."@en ;
+	rdfs:range xsd:decimal ;
+	.
