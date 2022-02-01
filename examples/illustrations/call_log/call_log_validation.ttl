@@ -46,29 +46,6 @@
 				sh:nodeKind sh:Literal ;
 				sh:path observable:accountIdentifier ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:PhoneCallFacet ;
-				observable:callType "outgoing" ;
-				observable:duration "1862"^^xsd:integer ;
-				observable:endTime "2010-01-15T18:30:41.250000+00:00"^^xsd:dateTime ;
-				observable:from <http://example.org/kb/phone_account1> ;
-				observable:startTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-				observable:to <http://example.org/kb/phone_account2> ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:PhoneCallFacet ; uco-observable:callType Literal("outgoing") ; uco-observable:duration Literal("1862", datatype=xsd:integer) ; uco-observable:endTime Literal("2010-01-15T18:30:41.250000+00:00" = 2010-01-15 18:30:41.250000+00:00, datatype=xsd:dateTime) ; uco-observable:from kb:phone_account1 ; uco-observable:startTime Literal("2010-01-15T17:59:43.250000+00:00" = 2010-01-15 17:59:43.250000+00:00, datatype=xsd:dateTime) ; uco-observable:to kb:phone_account2 ]->observable:application' ;
-			sh:resultPath observable:application ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:application ;
-			] ;
 		]
 		;
 	.
