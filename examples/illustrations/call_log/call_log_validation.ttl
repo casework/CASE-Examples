@@ -1,5 +1,3 @@
-@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
-@prefix ns1: <http://example.org/local#> .
 @prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -11,24 +9,6 @@
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:PhoneAccountFacet ;
-				ns1:identifier "1234560000" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ :identifier Literal("1234560000") ; rdf:type uco-observable:PhoneAccountFacet ]->observable:phoneNumber' ;
-			sh:resultPath observable:phoneNumber ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:phoneNumber ;
-			] ;
-		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
@@ -52,25 +32,6 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/ATT> ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath observable:accountIssuer ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:accountIssuer ;
-			] ;
-			sh:value <http://example.org/kb/ATT> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
 				observable:accountIssuer <http://example.org/kb/Sprint> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -84,48 +45,6 @@
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
 				sh:path observable:accountIdentifier ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/Sprint> ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath observable:accountIssuer ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:accountIssuer ;
-			] ;
-			sh:value <http://example.org/kb/Sprint> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:PhoneCallFacet ;
-				observable:callType "outgoing" ;
-				observable:duration "1862"^^xsd:integer ;
-				observable:endTime "2010-01-15T18:30:41.250000+00:00"^^xsd:dateTime ;
-				observable:from <http://example.org/kb/phone_account1> ;
-				observable:startTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
-				observable:to <http://example.org/kb/phone_account2> ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:PhoneCallFacet ; uco-observable:callType Literal("outgoing") ; uco-observable:duration Literal("1862", datatype=xsd:integer) ; uco-observable:endTime Literal("2010-01-15T18:30:41.250000+00:00" = 2010-01-15 18:30:41.250000+00:00, datatype=xsd:dateTime) ; uco-observable:from kb:phone_account1 ; uco-observable:startTime Literal("2010-01-15T17:59:43.250000+00:00" = 2010-01-15 17:59:43.250000+00:00, datatype=xsd:dateTime) ; uco-observable:to kb:phone_account2 ]->observable:application' ;
-			sh:resultPath observable:application ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:application ;
 			] ;
 		]
 		;
