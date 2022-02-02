@@ -13,7 +13,7 @@ drafting:CellTowerFacet
 		owl:Class
 		;
 	rdfs:subClassOf core:Facet ;
-	rdfs:seeAlso <case.atlassian.net/browse/ONT-469> ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	rdfs:label "CellTowerFacet"@en ;
 	rdfs:comment "A cell tower facet contains the metadata surrounding the cell tower."@en ;
 	sh:property
@@ -51,7 +51,7 @@ drafting:AntennaAlignmentFacet
 		sh:NodeShape
 		;
 	rdfs:subClassOf core:Facet ;
-	rdfs:seeAlso <case.atlassian.net/browse/ONT-469> ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	rdfs:label "AntennaAlignmentFacet"@en ;
 	rdfs:comment "An antenna alignment facet contains the metadata surrounding the cell tower's antenna position."@en ;
 	sh:property
@@ -83,7 +83,7 @@ drafting:CapturedTelecommunicationsInformationFacet
 		sh:NodeShape
 		;
 	rdfs:subClassOf core:Facet ;
-	rdfs:seeAlso <case.atlassian.net/browse/ONT-469> ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	rdfs:label "CapturedTelecommunicationsInformationFacet"@en ;
 	rdfs:comment "A captured telecommunications information facet represents certain information within captured or intercepted telecommunications data."@en ;
 	sh:property
