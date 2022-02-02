@@ -1,93 +1,150 @@
 {
-    "@context": {
-        "drafting": "http://example.org/ontology/drafting#",
-        "kb": "http://example.org/kb/",
-        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "xsd": "http://www.w3.org/2001/XMLSchema#"
-    },
-    "@graph": [
+  "@context": {
+    "drafting": "http://example.org/ontology/drafting#",
+    "kb": "http://example.org/kb/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+    "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
+      "@type": "uco-observable:ObservableObject",
+      "uco-core:hasFacet": [
         {
-            "@id": "kb:device-d1664508-1b5c-4ccd-9d88-829e49c7e8f0",
-            "@type": "uco-observable:Device",
-            "uco-observable:hasChanged": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:DeviceFacet",
-                    "uco-observable:model": "iPhone X",
-                    "uco-observable:serialNumber": "tornadobeth@gmail.com"
-                },
-                {
-                    "@type": "uco-observable:MobileDeviceFacet",
-                    "uco-observable:IMSI": "310260249043715",
-                    "uco-observable:ICCID": "8901260243790437158",
-                    "uco-observable:IMEI": "359405082912450"
-                },
-                {
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": "",
-                    "uco-observable:version": ""
-                },
-                {
-                    "@type": "uco-observable:BluetoothAddressFacet",
-                    "uco-core:name": "",
-                    "uco-observable:addressValue": "D4:A3:3D:B5:F4:6C"
-                },
-                {
-                    "@type": "uco-observable:WifiAddressFacet",
-                    "uco-observable:addressValue": "D4:A3:3D:B5:F4:48"
-                }
-            ]
+          "@type": "drafting:CellTowerFacet",
+          "drafting:towerType": "GSM",
+          "drafting:towerMcc": "228",
+          "drafting:towerMnc": "2",
+          "drafting:towerLac": "22100",
+          "drafting:towerNid": "null",
+          "drafting:towerBid": "null",
+          "drafting:towerSid": "null",
+          "drafting:towerCid": "29220952"
         },
         {
-            "@id": "kb:cell-tower-796486ad-a566-4b63-8c25-6eeeb16a6792",
-            "@type": "uco-observable:ObservableObject",
-            "uco-observable:hasChanged": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CellTowerFacet",
-                    "drafting:mcc": "310",
-                    "drafting:mnc": "",
-                    "drafting:lac": "2953",
-                    "drafting:cid": "187589293",
-                    "drafting:nid": "",
-                    "drafting:bid": "",
-                    "drafting:sid": ""
-                }
-            ],
-            "uco-observable:location": {
-                "@id": "kb:location-e72f585a-f21a-4f85-b5bf-b47ef25f4880"
-            }
-        },
-        {
-            "@id": "kb:location-e72f585a-f21a-4f85-b5bf-b47ef25f4880",
-            "@type": "uco-location:Location",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-location:LatLongCoordinatesFacet",
-                    "uco-location:latitude": "40.11259078",
-                    "uco-location:longitude": "-75.65714263"
-                }
-            ]
-        },
-        {
-            "@id": "kb:relationship-c3963059-47c0-4304-8d80-4658e5d2f7e4",
-            "@type": "uco-observable:ObservableRelationship",
-            "uco-observable:observableAccessedTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2021-07-29T02:08:45"
-            },
-            "uco-core:source": {
-                "@id": "kb:device-d1664508-1b5c-4ccd-9d88-829e49c7e8f0"
-            },
-            "uco-core:target": {
-                "@id": "kb:cell-tower-796486ad-a566-4b63-8c25-6eeeb16a6792"
-            },
-            "uco-core:kindOfRelationship": "Connected_To",
-            "uco-core:isDirectional": true
+          "@type": "drafting:AntennaAlignmentFacet",
+          "drafting:azimuth": "45",
+          "drafting:elevation": "5",
+          "drafting:skew": "0"
         }
-    ]
+      ]
+    },
+    {
+      "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
+      "@type": "uco-observable:ObservableObject",
+      "uco-core:hasFacet": [
+        {
+          "@type": "uco-location:LatLongCoordinatesFacet",
+          "uco-location:latitude": "46.522316",
+          "uco-location:longitude": "6.566640"
+        }
+      ]
+    },
+    {
+      "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
+      "@type": "uco-observable:ObservableRelationship",
+      "uco-observable:startTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2016-12-12T09:10:11"
+      },
+      "uco-observable:endTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-06-10T23:08:45"
+      },
+      "uco-core:source": {
+        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+      },
+      "uco-core:target": {
+        "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
+      },
+      "uco-core:kindOfRelationship": "located_at",
+      "uco-core:isDirectional": true
+    },
+    {
+      "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
+      "@type": "uco-observable:ObservableObject",
+      "uco-observable:hasChanged": true,
+      "uco-core:hasFacet": [
+        {
+          "@type": "uco-observable:DeviceFacet",
+          "uco-observable:manufacturer": "Samsung",
+          "uco-observable:model": "SM-G925F",
+          "uco-observable:serialNumber": "RF8H31GS5SF"
+        },
+        {
+          "@type": "uco-observable:MobileDeviceFacet",
+          "uco-observable:IMEI": "356420075722843"
+        },
+        {
+          "@type": "uco-observable:OperatingSystemFacet",
+          "uco-core:name": "Android",
+          "uco-observable:manufacturer": "Samsung",
+          "uco-observable:version": "6.0.1"
+        },
+        {
+          "@type": "uco-observable:BluetoothAddressFacet",
+          "uco-core:name": "",
+          "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
+        },
+        {
+          "@type": "uco-observable:WifiAddressFacet",
+          "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
+        }
+      ]
+    },
+    {
+      "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
+      "@type": "uco-observable:ObservableObject",
+      "uco-core:hasFacet": [
+        {
+          "@type": "uco-observable:SIMCardFacet",
+          "uco-observable:carrier": "Telcom Italia",
+          "uco-observable:ICCID": "89390100002217635543",
+          "uco-observable:IMSI": {
+            "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
+          }
+        }
+      ]
+    },
+    {
+      "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
+      "@type": "uco-observable:ObservableObject",
+      "uco-core:hasFacet": [
+        {
+          "@type": "uco-observable:AccountFacet",
+          "uco-observable:accountType": "Phone",
+          ,
+          "uco-observable:isActive": "true"
+        },
+        {
+          "@type": "uco-observable:MobileAccountFacet",
+          "uco-observable:IMSI": "",
+          "uco-observable:MSISDN": "3662158453"
+        }
+      ]
+    },
+    {
+      "@id": "kb:afc48c35-c65d-41e4-843b-720f1ad23d16",
+      "@type": "uco-observable:ObservableRelationship",
+      "uco-observable:startTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-06-10T15:36:12"
+      },
+      "uco-observable:endTime": {
+        "@type": "xsd:dateTime",
+        "@value": "2018-06-10T15:36:39"
+      },
+      "uco-core:source": {
+        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+      },
+      "uco-core:target": {
+        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+      },
+      "uco-core:kindOfRelationship": "connected_to",
+      "uco-core:isDirectional": true
+    }
+  ]
 }

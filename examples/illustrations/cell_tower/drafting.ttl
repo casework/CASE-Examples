@@ -21,25 +21,25 @@ drafting:CellTowerFacet
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:cid ;
+			sh:path drafting:towerCid ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:lac ;
+			sh:path drafting:towerLac ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:mcc ;
+			sh:path drafting:towerMcc ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:mnc ;
+			sh:path drafting:towerMnc ;
 		]
 		;
 	sh:targetClass observable:CellTowerFacet ;
@@ -140,13 +140,6 @@ drafting:captureCellTower
 	rdfs:range observable:ObservableObject ;
 	.
 
-drafting:cid
-	a owl:DatatypeProperty ;
-	rdfs:label "cid"@en ;
-	rdfs:comment "Specifies the global identifier network code of the cell tower."@en ;
-	rdfs:range xsd:string ;
-	.
-
 drafting:elevation
 	a owl:DatatypeProperty ;
 	rdfs:label "elevation"@en ;
@@ -158,27 +151,6 @@ drafting:interceptedCallState
 	a owl:DatatypeProperty ;
 	rdfs:label "interceptedCallState"@en ;
 	rdfs:comment "State of the call in a Call Detail Record (e.g. idle)."@en ;
-	rdfs:range xsd:string ;
-	.
-
-drafting:lac
-	a owl:DatatypeProperty ;
-	rdfs:label "lac"@en ;
-	rdfs:comment "The Location Area Code (LAC) is a fixed length code (of 2 octets) identifying a location area within a PLMN."@en ;
-	rdfs:range xsd:string ;
-	.
-
-drafting:mcc
-	a owl:DatatypeProperty ;
-	rdfs:label "mcc"@en ;
-	rdfs:comment "The Mobile Country Code (MCC) is a three digit code representing the country of the cell tower."@en ;
-	rdfs:range xsd:string ;
-	.
-
-drafting:mnc
-	a owl:DatatypeProperty ;
-	rdfs:label "mnc"@en ;
-	rdfs:comment "The Mobile Network Code (MNC) is a two or three digit code representing the network of the cell tower."@en ;
 	rdfs:range xsd:string ;
 	.
 
@@ -201,4 +173,60 @@ drafting:skew
 	rdfs:label "skew"@en ;
 	rdfs:comment "The angle in degrees of the radial rotation around its main beam direction."@en ;
 	rdfs:range xsd:decimal ;
+	.
+
+drafting:towerBid
+	a owl:DatatypeProperty ;
+	rdfs:label "towerBid"@en ;
+	rdfs:comment "Specifies the BID segment of the CDMA identifier of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:towerCid
+	a owl:DatatypeProperty ;
+	rdfs:label "towerCid"@en ;
+	rdfs:comment "Specifies the global identifier network code of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+	
+drafting:towerLac
+	a owl:DatatypeProperty ;
+	rdfs:label "towerLac"@en ;
+	rdfs:comment "The Location Area Code (LAC) is a fixed length code (of 2 octets) identifying a location area within a PLMN."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:towerMcc
+	a owl:DatatypeProperty ;
+	rdfs:label "towerMcc"@en ;
+	rdfs:comment "The Mobile Country Code (MCC) is a three digit code representing the country of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:towerMnc
+	a owl:DatatypeProperty ;
+	rdfs:label "towerMnc"@en ;
+	rdfs:comment "The Mobile Network Code (MNC) is a two or three digit code representing the network of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:towerNid
+	a owl:DatatypeProperty ;
+	rdfs:label "towerNid"@en ;
+	rdfs:comment "Specifies the NID segment of the CDMA identifier of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:towerSid
+	a owl:DatatypeProperty ;
+	rdfs:label "towerSid"@en ;
+	rdfs:comment "Specifies the SID segment of the CDMA identifier of the cell tower."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:towerType
+	a owl:DatatypeProperty ;
+	rdfs:label "towerType"@en ;
+	rdfs:comment "Specifies the network type of the cell tower (GSM, CDMA, etc)."@en ;
+	rdfs:range xsd:string ;
 	.
