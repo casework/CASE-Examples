@@ -6,6 +6,8 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
     "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+    "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
+    "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
     "xsd": "http://www.w3.org/2001/XMLSchema#"
   },
   "@graph": [
@@ -38,8 +40,8 @@
       "uco-core:hasFacet": [
         {
           "@type": "uco-location:LatLongCoordinatesFacet",
-          "uco-location:latitude": "46.522316",
-          "uco-location:longitude": "6.566640"
+          "uco-location:latitude": 46.522316,
+          "uco-location:longitude": 6.566640
         }
       ]
     },
@@ -101,11 +103,12 @@
       "uco-core:hasFacet": [
         {
           "@type": "uco-observable:SIMCardFacet",
-          "uco-observable:carrier": "Telcom Italia",
+          "uco-observable:carrier": {
+            "@type": "uco-identity:Identity",
+            "uco-core:name": "Telcom Italia"
+          },
           "uco-observable:ICCID": "89390100002217635543",
-          "uco-observable:IMSI": {
-            "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
-          }
+          "uco-observable:IMSI": "1234567890ABCDEF"
         }
       ]
     },
@@ -115,9 +118,9 @@
       "uco-core:hasFacet": [
         {
           "@type": "uco-observable:AccountFacet",
+          "uco-observable:accountIdentifier": "1235557890",
           "uco-observable:accountType": "Phone",
-          ,
-          "uco-observable:isActive": "true"
+          "uco-observable:isActive": true
         },
         {
           "@type": "uco-observable:MobileAccountFacet",

@@ -88,7 +88,7 @@ drafting:CapturedTelecommunicationsInformationFacet
 	rdfs:comment "A captured telecommunications information facet represents certain information within captured or intercepted telecommunications data."@en ;
 	sh:property
 		[
-			sh:class observable:ObservableObject
+			sh:class observable:ObservableObject ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
@@ -107,12 +107,12 @@ drafting:CapturedTelecommunicationsInformationFacet
 			sh:path drafting:interceptedCallState ;
 		] ,
 		[
-			sh:class observable:ObservableObject
+			sh:class observable:ObservableObject ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:partyDevice ;
 		] ,
 		[
-			sh:class observable:ObservableObject
+			sh:class observable:ObservableObject ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:partySubscription ;
 		] ,
@@ -157,7 +157,7 @@ drafting:interceptedCallState
 drafting:partyDevice
 	a owl:ObjectProperty ;
 	rdfs:label "partyDevice"@en ;
-	rdfs:comment "The IMEI of the device connected to the cell tower."@en ;
+	rdfs:comment "A device connected to the cell tower."@en ;
 	rdfs:range observable:ObservableObject ;
 	.
 
