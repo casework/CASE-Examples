@@ -1,4 +1,3 @@
-@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#> .
 @prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -10,65 +9,25 @@
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
-	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a location:LatLongCoordinatesFacet ;
-				location:latitude "4.652232e+01"^^xsd:double ;
-				location:longitude "6.56664e+00"^^xsd:double ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath location:latitude ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path location:latitude ;
-			] ;
-			sh:value "4.652232e+01"^^xsd:double ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a location:LatLongCoordinatesFacet ;
-				location:latitude "4.652232e+01"^^xsd:double ;
-				location:longitude "6.56664e+00"^^xsd:double ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath location:longitude ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path location:longitude ;
-			] ;
-			sh:value "6.56664e+00"^^xsd:double ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountIdentifier "1235557890" ;
-				observable:accountType "Phone" ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
-			sh:resultPath observable:accountType ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary1:AccountTypeVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountType ;
-			] ;
-			sh:value "Phone" ;
-		]
-		;
+	sh:result [
+		a sh:ValidationResult ;
+		sh:focusNode [
+			a observable:AccountFacet ;
+			observable:accountIdentifier "1235557890" ;
+			observable:accountType "Phone" ;
+			observable:isActive "true"^^xsd:boolean ;
+		] ;
+		sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
+		sh:resultPath observable:accountType ;
+		sh:resultSeverity sh:Violation ;
+		sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+		sh:sourceShape [
+			sh:datatype vocabulary1:AccountTypeVocab ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path observable:accountType ;
+		] ;
+		sh:value "Phone" ;
+	] ;
 	.
 
