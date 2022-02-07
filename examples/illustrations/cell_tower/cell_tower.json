@@ -13,7 +13,7 @@
   "@graph": [
     {
       "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-      "@type": "uco-observable:ObservableObject",
+      "@type": "drafting:CellTower",
       "uco-core:hasFacet": [
         {
           "@type": "drafting:CellTowerFacet",
@@ -33,7 +33,7 @@
     },
     {
       "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
-      "@type": "uco-observable:ObservableObject",
+      "@type": "uco-location:Location",
       "uco-core:hasFacet": [
         {
           "@type": "uco-location:LatLongCoordinatesFacet",
@@ -70,7 +70,7 @@
     },
     {
       "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
-      "@type": "uco-observable:ObservableObject",
+      "@type": "uco-observable:Device",
       "uco-observable:hasChanged": true,
       "uco-core:hasFacet": [
         {
@@ -102,7 +102,7 @@
     },
     {
       "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
-      "@type": "uco-observable:ObservableObject",
+      "@type": "uco-observable:SIMCard",
       "uco-core:hasFacet": [
         {
           "@type": "uco-observable:SIMCardFacet",
@@ -117,7 +117,7 @@
     },
     {
       "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
-      "@type": "uco-observable:ObservableObject",
+      "@type": "uco-observable:MobileAccount",
       "uco-core:hasFacet": [
         {
           "@type": "uco-observable:AccountFacet",

@@ -7,6 +7,17 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+drafting:CellTower
+	a
+		sh:NodeShape ,
+		owl:Class
+		;
+	rdfs:label "CellTowerFacet"@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
+	rdfs:subClassOf observable:ObservableObject ;
+	sh:targetClass drafting:CellTower ;
+	.
+
 drafting:CellTowerFacet
 	a
 		sh:NodeShape ,
@@ -88,7 +99,7 @@ drafting:CapturedTelecommunicationsInformationFacet
 	rdfs:comment "A captured telecommunications information facet represents certain information within captured or intercepted telecommunications data."@en ;
 	sh:property
 		[
-			sh:class observable:ObservableObject ;
+			sh:class drafting:CellTower ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
@@ -137,7 +148,7 @@ drafting:captureCellTower
 	a owl:ObjectProperty ;
 	rdfs:label "captureCellTower"@en ;
 	rdfs:comment "Specifies the cell tower accessed."@en ;
-	rdfs:range observable:ObservableObject ;
+	rdfs:range drafting:CellTower ;
 	.
 
 drafting:elevation
