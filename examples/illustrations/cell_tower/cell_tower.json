@@ -37,8 +37,14 @@
       "uco-core:hasFacet": [
         {
           "@type": "uco-location:LatLongCoordinatesFacet",
-          "uco-location:latitude": 46.522316,
-          "uco-location:longitude": 6.566640
+          "uco-location:latitude": {
+            "@type": "xsd:decimal",
+            "@value": "46.522316"
+          },
+          "uco-location:longitude": {
+            "@type": "xsd:decimal",
+            "@value": "6.566640"
+          }
         }
       ]
     },
