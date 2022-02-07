@@ -65,7 +65,7 @@
       "uco-core:target": {
         "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
       },
-      "uco-core:kindOfRelationship": "located_at",
+      "uco-core:kindOfRelationship": "Located_At",
       "uco-core:isDirectional": true
     },
     {
@@ -149,7 +149,10 @@
       "uco-core:target": {
         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
       },
-      "uco-core:kindOfRelationship": "connected_to",
+      "uco-core:kindOfRelationship": {
+        "@type": "vocabulary:ObservableObjectRelationshipVocab",
+        "@value": "Connected_To"
+      },
       "uco-core:isDirectional": true
     }
   ]
