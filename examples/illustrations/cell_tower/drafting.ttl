@@ -107,7 +107,7 @@ drafting:CapturedTelecommunicationsInformationFacet
 			sh:path drafting:interceptedCallState ;
 		] ,
 		[
-			sh:class observable:ObservableObject ;
+			sh:class observable:Device ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:partyDevice ;
 		] ,
@@ -158,7 +158,7 @@ drafting:partyDevice
 	a owl:ObjectProperty ;
 	rdfs:label "partyDevice"@en ;
 	rdfs:comment "A device connected to the cell tower."@en ;
-	rdfs:range observable:ObservableObject ;
+	rdfs:range observable:Device ;
 	.
 
 drafting:partySubscription
