@@ -107,11 +107,11 @@
         },
         {
             "@id": "kb:phone_call1",
-            "@type": "uco-observable:Call",
+            "@type": "drafting:Call",
             "uco-core:description": "An example of a two-party, one-way phone call that has clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:CallFacet",
+                    "@type": "drafting:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
                     },
@@ -136,11 +136,11 @@
         },
         {
             "@id": "kb:non-directional-phone-call-1",
-            "@type": "uco-observable:Call",
+            "@type": "drafting:Call",
             "uco-core:description": "An example of a two-party, one-way phone call that has does not have clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:CallFacet",
+                    "@type": "drafting:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-79636b28-77c9-4005-b62d-b87a233687ef"
                     },
@@ -167,11 +167,11 @@
         },
         {
             "@id": "kb:multi-participant-phone-call-1",
-            "@type": "uco-observable:Call",
+            "@type": "drafting:Call",
             "uco-core:description": "An example of a three-way call phone call that has clear directionality between a caller (from) and two receivers (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:CallFacet",
+                    "@type": "drafting:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
                     },
@@ -201,11 +201,11 @@
         },
         {
             "@id": "kb:conference-bridge-phone-call-1",
-            "@type": "uco-observable:Call",
+            "@type": "drafting:Call",
             "uco-core:description": "An example of a conference bridge phone call that does not have clear directionality between a caller (from) and receivers (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:CallFacet",
+                    "@type": "drafting:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108"
                     },
@@ -218,7 +218,10 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T18:30:41.25Z"
                     },
-                    "uco-observable:to": [
+                    "uco-observable:to": {
+                        "@id": "kb:bridge_account1"
+                    },
+                    "uco-observable:participant": [
                         {
                             "@id": "kb:phone_account1"
                         },
@@ -227,9 +230,6 @@
                         },
                         {
                             "@id": "kb:phone_account3"
-                        },
-                        {
-                            "@id": "kb:bridge_account1"
                         }
                     ],
                     "uco-observable:duration": 1862
