@@ -13,21 +13,22 @@
   "@graph": [
     {
       "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-      "@type": "drafting:CellTower",
+      "@type": "uco-observable:ObservableObject",
       "uco-core:hasFacet": [
         {
-          "@type": "drafting:CellTowerFacet",
+          "@type": "drafting:CellSiteFacet",
           "drafting:towerType": "GSM",
-          "drafting:towerMcc": "228",
-          "drafting:towerMnc": "2",
-          "drafting:towerLac": "22100",
-          "drafting:towerCid": "29220952"
-        },
+          "drafting:cellSiteCountryCode": "228",
+          "drafting:cellSiteNetworkCode": "2",
+          "drafting:cellSiteLocationAreaCode": "22100",
+          "drafting:cellSiteIdentifier": "29220952",
         {
-          "@type": "drafting:AntennaAlignmentFacet",
-          "drafting:azimuth": "45",
-          "drafting:elevation": "5",
-          "drafting:skew": "0"
+          "@type": "drafting:AntennaFacet",
+          "drafting:azimuthDegrees": "45",
+          "drafting:elevationDegress": "5",
+          "drafting:horizontalBeamWidthDegrees": "110",
+          "drafting:signaleStrength": "20",
+          "drafting:skewDegrees": "10"
         }
       ]
     },
@@ -53,11 +54,11 @@
       "@type": "uco-observable:ObservableRelationship",
       "uco-observable:startTime": {
         "@type": "xsd:dateTime",
-        "@value": "2016-12-12T09:10:11"
+        "@value": "2016-12-12T09:10:11Z"
       },
       "uco-observable:endTime": {
         "@type": "xsd:dateTime",
-        "@value": "2018-06-10T23:08:45"
+        "@value": "2018-06-10T15:36:39Z"
       },
       "uco-core:source": {
         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
@@ -101,6 +102,21 @@
       ]
     },
     {
+      "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
+      "@type": "uco-core:Relationship",
+      "uco-core:source": {
+                "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
+      },
+      "uco-core:target": {
+                "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+      },
+      "uco-core:kindOfRelationship": {
+                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
+                "@value": "Contained_Within"
+      },
+            "uco-core:isDirectional": true
+    },
+    {
       "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
       "@type": "uco-observable:SIMCard",
       "uco-core:hasFacet": [
@@ -111,7 +127,9 @@
             "uco-core:name": "Telcom Italia"
           },
           "uco-observable:ICCID": "89390100002217635543",
-          "uco-observable:IMSI": "1234567890ABCDEF"
+          "uco-observable:IMSI": { 
+						"@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876" 
+			    }
         }
       ]
     },
@@ -127,7 +145,7 @@
         },
         {
           "@type": "uco-observable:MobileAccountFacet",
-          "uco-observable:IMSI": "",
+          "uco-observable:IMSI": "1234567890ABCDEF",
           "uco-observable:MSISDN": "3662158453"
         }
       ]
@@ -137,11 +155,11 @@
       "@type": "uco-observable:ObservableRelationship",
       "uco-observable:startTime": {
         "@type": "xsd:dateTime",
-        "@value": "2018-06-10T15:36:12"
+        "@value": "2018-06-10T15:36:12Z"
       },
       "uco-observable:endTime": {
         "@type": "xsd:dateTime",
-        "@value": "2018-06-10T15:36:39"
+        "@value": "2018-06-10T15:36:39Z"
       },
       "uco-core:source": {
         "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
@@ -154,6 +172,34 @@
         "@value": "Connected_To"
       },
       "uco-core:isDirectional": true
-    }
+    },
+    { 
+    "@id":"kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a", 
+    "@type":"uco-observable:ObservableObject", 
+    "uco-core:hasFacet":[
+      {
+          "@type":"drafting:CapturedTelecommunicationsInformationFacet", 
+          "drafting:captureCellTower": 
+          { 
+						"@id":"kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4" 
+          },
+          "uco-observable:captureStartTime": {
+				    "@type":"xsd:dateTime",
+				    "@value":"2021-07-29T01:23:02Z"
+          },
+          "uco-observable:captureEndTime": {
+				    "@type":"xsd:dateTime",
+				    "@value":"2021-07-30T02:10:50Z"
+          },
+          "drafting:partySubscription": 
+          { 
+						"@id":"kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876" 
+          },
+          "drafting:partyDevice": 
+          { 
+						"@id":"kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789" 
+          },
+          "drafting:interceptedCallState": "idle"
+		}
   ]
 }
