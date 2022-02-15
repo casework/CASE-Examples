@@ -7,17 +7,6 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-drafting:CellSite
-	a
-		sh:NodeShape ,
-		owl:Class
-		;
-	rdfs:label "CellSiteFacet"@en ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
-	rdfs:subClassOf observable:ObservableObject ;
-	sh:targetClass drafting:CellSite ;
-	.
-
 drafting:CellSiteFacet
 	a
 		sh:NodeShape ,
