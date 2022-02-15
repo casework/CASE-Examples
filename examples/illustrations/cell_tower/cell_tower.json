@@ -180,7 +180,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                    "drafting:captureCellTower": {
+                    "drafting:captureCellSite": {
                         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
                     },
                     "uco-observable:captureStartTime": {
