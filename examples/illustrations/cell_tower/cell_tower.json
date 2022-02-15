@@ -1,208 +1,205 @@
 {
-  "@context": {
-    "drafting": "http://example.org/ontology/drafting#",
-    "kb": "http://example.org/kb/",
-    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-    "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-    "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-    "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "@graph": [
-    {
-      "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-      "@type": "uco-observable:ObservableObject",
-      "uco-core:hasFacet": [
-        {
-          "@type": "drafting:CellSiteFacet",
-          "drafting:towerType": "GSM",
-          "drafting:cellSiteCountryCode": "228",
-          "drafting:cellSiteNetworkCode": "2",
-          "drafting:cellSiteLocationAreaCode": "22100",
-          "drafting:cellSiteIdentifier": "29220952"
-        },
-        {
-          "@type": "drafting:AntennaFacet",
-          "drafting:azimuth": "45",
-          "drafting:elevation": "5",
-          "drafting:horizontalBeamWidth": "110",
-          "drafting:signaleStrength": "20",
-          "drafting:skew": "10"
-        }
-      ]
+    "@context": {
+        "drafting": "http://example.org/ontology/drafting#",
+        "kb": "http://example.org/kb/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
+        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
-    {
-      "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
-      "@type": "uco-location:Location",
-      "uco-core:hasFacet": [
+    "@graph": [
         {
-          "@type": "uco-location:LatLongCoordinatesFacet",
-          "uco-location:latitude": {
-            "@type": "xsd:decimal",
-            "@value": "46.522316"
-          },
-          "uco-location:longitude": {
-            "@type": "xsd:decimal",
-            "@value": "6.566640"
-          }
-        }
-      ]
-    },
-    {
-      "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
-      "@type": "uco-observable:ObservableRelationship",
-      "uco-observable:startTime": {
-        "@type": "xsd:dateTime",
-        "@value": "2016-12-12T09:10:11Z"
-      },
-      "uco-observable:endTime": {
-        "@type": "xsd:dateTime",
-        "@value": "2018-06-10T15:36:39Z"
-      },
-      "uco-core:source": {
-        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
-      },
-      "uco-core:target": {
-        "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
-      },
-      "uco-core:kindOfRelationship": "Located_At",
-      "uco-core:isDirectional": true
-    },
-    {
-      "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
-      "@type": "uco-observable:Device",
-      "uco-observable:hasChanged": true,
-      "uco-core:hasFacet": [
-        {
-          "@type": "uco-observable:DeviceFacet",
-          "uco-observable:manufacturer": "Samsung",
-          "uco-observable:model": "SM-G925F",
-          "uco-observable:serialNumber": "RF8H31GS5SF"
+            "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CellSiteFacet",
+                    "drafting:towerType": "GSM",
+                    "drafting:cellSiteCountryCode": "228",
+                    "drafting:cellSiteNetworkCode": "2",
+                    "drafting:cellSiteLocationAreaCode": "22100",
+                    "drafting:cellSiteIdentifier": "29220952"
+                },
+                {
+                    "@type": "drafting:AntennaFacet",
+                    "drafting:azimuth": "45",
+                    "drafting:elevation": "5",
+                    "drafting:horizontalBeamWidth": "110",
+                    "drafting:signaleStrength": "20",
+                    "drafting:skew": "10"
+                }
+            ]
         },
         {
-          "@type": "uco-observable:MobileDeviceFacet",
-          "uco-observable:IMEI": "356420075722843"
+            "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
+            "@type": "uco-location:Location",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-location:LatLongCoordinatesFacet",
+                    "uco-location:latitude": {
+                        "@type": "xsd:decimal",
+                        "@value": "46.522316"
+                    },
+                    "uco-location:longitude": {
+                        "@type": "xsd:decimal",
+                        "@value": "6.566640"
+                    }
+                }
+            ]
         },
         {
-          "@type": "uco-observable:OperatingSystemFacet",
-          "uco-core:name": "Android",
-          "uco-observable:manufacturer": "Samsung",
-          "uco-observable:version": "6.0.1"
+            "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2016-12-12T09:10:11Z"
+            },
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-core:source": {
+                "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+            },
+            "uco-core:target": {
+                "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
+            },
+            "uco-core:kindOfRelationship": "Located_At",
+            "uco-core:isDirectional": true
         },
         {
-          "@type": "uco-observable:BluetoothAddressFacet",
-          "uco-core:name": "",
-          "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
+            "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
+            "@type": "uco-observable:Device",
+            "uco-observable:hasChanged": true,
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:model": "SM-G925F",
+                    "uco-observable:serialNumber": "RF8H31GS5SF"
+                },
+                {
+                    "@type": "uco-observable:MobileDeviceFacet",
+                    "uco-observable:IMEI": "356420075722843"
+                },
+                {
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "uco-core:name": "Android",
+                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:version": "6.0.1"
+                },
+                {
+                    "@type": "uco-observable:BluetoothAddressFacet",
+                    "uco-core:name": "",
+                    "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
+                },
+                {
+                    "@type": "uco-observable:WifiAddressFacet",
+                    "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
+                }
+            ]
         },
         {
-          "@type": "uco-observable:WifiAddressFacet",
-          "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
-        }
-      ]
-    },
-    {
-      "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
-      "@type": "uco-core:Relationship",
-      "uco-core:source": {
+            "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
                 "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
-      },
-      "uco-core:target": {
+            },
+            "uco-core:target": {
                 "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
-      },
-      "uco-core:kindOfRelationship": {
+            },
+            "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
-      },
+            },
             "uco-core:isDirectional": true
-    },
-    {
-      "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
-      "@type": "uco-observable:SIMCard",
-      "uco-core:hasFacet": [
-        {
-          "@type": "uco-observable:SIMCardFacet",
-          "uco-observable:carrier": {
-            "@type": "uco-identity:Identity",
-            "uco-core:name": "Telcom Italia"
-          },
-          "uco-observable:ICCID": "89390100002217635543",
-          "uco-observable:IMSI": { 
-						"@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876" 
-			    }
-        }
-      ]
-    },
-    {
-      "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
-      "@type": "uco-observable:MobileAccount",
-      "uco-core:hasFacet": [
-        {
-          "@type": "uco-observable:AccountFacet",
-          "uco-observable:accountIdentifier": "1235557890",
-          "uco-observable:accountType": "Phone",
-          "uco-observable:isActive": true
         },
         {
-          "@type": "uco-observable:MobileAccountFacet",
-          "uco-observable:IMSI": "1234567890ABCDEF",
-          "uco-observable:MSISDN": "3662158453"
+            "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
+            "@type": "uco-observable:SIMCard",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:SIMCardFacet",
+                    "uco-observable:carrier": {
+                        "@type": "uco-identity:Identity",
+                        "uco-core:name": "Telcom Italia"
+                    },
+                    "uco-observable:ICCID": "89390100002217635543",
+                    "uco-observable:IMSI": {
+                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
+            "@type": "uco-observable:MobileAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIdentifier": "1235557890",
+                    "uco-observable:accountType": "Phone",
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@type": "uco-observable:MobileAccountFacet",
+                    "uco-observable:IMSI": "1234567890ABCDEF",
+                    "uco-observable:MSISDN": "3662158453"
+                }
+            ]
+        },
+        {
+            "@id": "kb:afc48c35-c65d-41e4-843b-720f1ad23d16",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:12Z"
+            },
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-core:source": {
+                "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+            },
+            "uco-core:target": {
+                "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+            },
+            "uco-core:kindOfRelationship": {
+                "@type": "vocabulary:ObservableObjectRelationshipVocab",
+                "@value": "Connected_To"
+            },
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CapturedTelecommunicationsInformationFacet",
+                    "drafting:captureCellTower": {
+                        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+                    },
+                    "uco-observable:captureStartTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2021-07-29T01:23:02Z"
+                    },
+                    "uco-observable:captureEndTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2021-07-30T02:10:50Z"
+                    },
+                    "drafting:partySubscription": {
+                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
+                    },
+                    "drafting:partyDevice": {
+                        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+                    },
+                    "drafting:interceptedCallState": "idle"
+                }
+            ]
         }
-      ]
-    },
-    {
-      "@id": "kb:afc48c35-c65d-41e4-843b-720f1ad23d16",
-      "@type": "uco-observable:ObservableRelationship",
-      "uco-observable:startTime": {
-        "@type": "xsd:dateTime",
-        "@value": "2018-06-10T15:36:12Z"
-      },
-      "uco-observable:endTime": {
-        "@type": "xsd:dateTime",
-        "@value": "2018-06-10T15:36:39Z"
-      },
-      "uco-core:source": {
-        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
-      },
-      "uco-core:target": {
-        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
-      },
-      "uco-core:kindOfRelationship": {
-        "@type": "vocabulary:ObservableObjectRelationshipVocab",
-        "@value": "Connected_To"
-      },
-      "uco-core:isDirectional": true
-    },
-    { 
-    "@id":"kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a", 
-    "@type":"uco-observable:ObservableObject", 
-    "uco-core:hasFacet":[
-      {
-          "@type":"drafting:CapturedTelecommunicationsInformationFacet", 
-          "drafting:captureCellTower": 
-          { 
-						"@id":"kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4" 
-          },
-          "uco-observable:captureStartTime": {
-				    "@type":"xsd:dateTime",
-				    "@value":"2021-07-29T01:23:02Z"
-          },
-          "uco-observable:captureEndTime": {
-				    "@type":"xsd:dateTime",
-				    "@value":"2021-07-30T02:10:50Z"
-          },
-          "drafting:partySubscription": 
-          { 
-						"@id":"kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876" 
-          },
-          "drafting:partyDevice": 
-          { 
-						"@id":"kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789" 
-          },
-          "drafting:interceptedCallState": "idle"
-		}
-      ]
-    }
-  ]
+    ]
 }
