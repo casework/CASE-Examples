@@ -24,11 +24,11 @@
           "drafting:cellSiteIdentifier": "29220952",
         {
           "@type": "drafting:AntennaFacet",
-          "drafting:azimuthDegrees": "45",
-          "drafting:elevationDegress": "5",
-          "drafting:horizontalBeamWidthDegrees": "110",
+          "drafting:azimuth": "45",
+          "drafting:elevation": "5",
+          "drafting:horizontalBeamWidth": "110",
           "drafting:signaleStrength": "20",
-          "drafting:skewDegrees": "10"
+          "drafting:skew": "10"
         }
       ]
     },
