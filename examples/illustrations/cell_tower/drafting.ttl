@@ -75,13 +75,13 @@ drafting:AntennaFacet
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:azimuthDegrees ;
+			sh:path drafting:azimuth ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:elevationDegrees ;
+			sh:path drafting:elevation ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
@@ -93,13 +93,13 @@ drafting:AntennaFacet
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:horizontalBeamWidthDegrees ;
+			sh:path drafting:horizontalBeamWidth ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:skewDegrees ;
+			sh:path drafting:skew ;
 		]
 		;
 	sh:targetClass observable:AntennaFacet ;
@@ -154,9 +154,9 @@ drafting:CapturedTelecommunicationsInformationFacet
 	sh:targetClass observable:CapturedTelecommunicationsInformationFacet ;
 	.
 
-drafting:azimuthDegrees
+drafting:azimuth
 	a owl:DatatypeProperty ;
-	rdfs:label "azimuthDegrees"@en ;
+	rdfs:label "azimuth"@en ;
 	rdfs:comment "The median rotation in degrees around a vertical axis of the cell antenna sector accessed."@en ;
 	rdfs:range xsd:decimal ;
 	.
@@ -168,7 +168,7 @@ drafting:captureCellSite
 	rdfs:range drafting:CellTower ;
 	.
 
-drafting:elevationDegrees
+drafting:elevation
 	a owl:DatatypeProperty ;
 	rdfs:label "elevation"@en ;
 	rdfs:comment "The angle in degrees of the antenna from the local horizontal plane."@en ;
@@ -196,7 +196,7 @@ drafting:partySubscription
 	rdfs:range observable:ObservableObject ;
 	.
 
-drafting:skewDegrees
+drafting:skew
 	a owl:DatatypeProperty ;
 	rdfs:label "skew"@en ;
 	rdfs:comment "The angle in degrees of the radial rotation around its main beam direction."@en ;
@@ -245,9 +245,9 @@ drafting:signalStrength
 	rdfs:range xsd:string ;
 	.
 
-drafting:horizontalBeamWidthDegrees
+drafting:horizontalBeamWidth
 	a owl:DatatypeProperty ;
-	rdfs:label "horizontalBeamWidthDegrees"@en ;
+	rdfs:label "horizontalBeamWidth"@en ;
 	rdfs:comment "The width of the antenna beam in degrees."@en ;
 	rdfs:range xsd:string ;
 	.
