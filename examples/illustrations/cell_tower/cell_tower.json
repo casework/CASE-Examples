@@ -21,7 +21,8 @@
           "drafting:cellSiteCountryCode": "228",
           "drafting:cellSiteNetworkCode": "2",
           "drafting:cellSiteLocationAreaCode": "22100",
-          "drafting:cellSiteIdentifier": "29220952",
+          "drafting:cellSiteIdentifier": "29220952"
+        },
         {
           "@type": "drafting:AntennaFacet",
           "drafting:azimuth": "45",
@@ -201,5 +202,7 @@
           },
           "drafting:interceptedCallState": "idle"
 		}
+      ]
+    }
   ]
 }
