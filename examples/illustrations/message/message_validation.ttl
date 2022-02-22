@@ -16,6 +16,23 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a xsd:string ;
+				observable:url "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
 			sh:resultMessage "Value does not have class core:UcoObject" ;
 			sh:resultPath core:source ;
 			sh:resultSeverity sh:Violation ;
@@ -31,6 +48,23 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/attach_relationship2> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a xsd:string ;
+				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship2> ;
 			sh:resultMessage "Value does not have class core:UcoObject" ;
 			sh:resultPath core:source ;
 			sh:resultSeverity sh:Violation ;
@@ -42,6 +76,23 @@
 				sh:path core:source ;
 			] ;
 			sh:value <http://example.org/kb/attachment_file1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship3> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a xsd:string ;
+				observable:url "http://whatsapp.com/attachments/1.png" ;
+			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -187,108 +238,6 @@
 				sh:path observable:application ;
 			] ;
 			sh:value <http://example.org/kb/application2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/1.png" ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://whatsapp.com/attachments/1.png" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/1.png" ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://whatsapp.com/attachments/1.png" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://whatsapp.com/attachments/thumbnails/1.png" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://whatsapp.com/attachments/thumbnails/1.png" ;
 		] ,
 		[
 			a sh:ValidationResult ;

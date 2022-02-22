@@ -49,6 +49,24 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a xsd:string ;
+				rdfs:comment "TODO: After removing observable:AttachmentFacet, this becomes a literal." ;
+				observable:url "http://www.facebook.com/corpses.jpg" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
 			sh:resultMessage "Value does not have class core:UcoObject" ;
 			sh:resultPath core:source ;
 			sh:resultSeverity sh:Violation ;
@@ -873,42 +891,6 @@
 				sh:path observable:accountType ;
 			] ;
 			sh:value "PhoneAccount" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				rdfs:comment "TODO: uco-observable:Attachment seems ill-defined." ;
-				observable:url "http://www.facebook.com/corpses.jpg" ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://www.facebook.com/corpses.jpg" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				rdfs:comment "TODO: uco-observable:Attachment seems ill-defined." ;
-				observable:url "http://www.facebook.com/corpses.jpg" ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://www.facebook.com/corpses.jpg" ;
 		] ,
 		[
 			a sh:ValidationResult ;

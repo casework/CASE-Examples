@@ -238,7 +238,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:AttachmentFacet",
+                    "@type": "xsd:string",
                     "uco-observable:url": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
                 }
             ]
@@ -256,7 +256,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:AttachmentFacet",
+                    "@type": "xsd:string",
                     "uco-observable:url": "http://whatsapp.com/attachments/thumbnails/1.png"
                 }
             ]
@@ -274,7 +274,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-observable:AttachmentFacet",
+                    "@type": "xsd:string",
                     "uco-observable:url": "http://whatsapp.com/attachments/1.png"
                 }
             ]
