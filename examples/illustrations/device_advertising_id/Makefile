@@ -19,7 +19,7 @@ illustrations_srcdir := $(top_srcdir)/examples/illustrations
 
 all: \
   all-review \
-  query-select_mobile_os_fingerprints.md
+  query-select_advertising_ids.md
 
 .PHONY: \
   all-review \
@@ -32,7 +32,7 @@ all-review:
 
 check: \
   check-review \
-  query-select_mobile_os_fingerprints.md
+  query-select_advertising_ids.md
 
 check-review:
 	$(MAKE) \
@@ -47,16 +47,16 @@ clean-review:
 	  --file $(illustrations_srcdir)/src/review.mk \
 	  clean
 
-query-select_mobile_os_fingerprints.md: \
+query-select_advertising_ids.md: \
   $(top_srcdir)/.venv.done.log \
-  device_os_fingerprint.json \
+  device_advertising_id.json \
   drafting.ttl \
-  query-select_mobile_os_fingerprints.sparql
+  query-select_advertising_ids.sparql
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
 	    --disallow-empty-results \
 	    _$@ \
-	    query-select_mobile_os_fingerprints.sparql \
-	    device_os_fingerprint.json \
+	    query-select_advertising_ids.sparql \
+	    device_advertising_id.json \
 	    drafting.ttl
 	mv _$@ $@

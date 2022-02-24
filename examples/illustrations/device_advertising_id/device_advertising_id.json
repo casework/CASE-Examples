@@ -13,7 +13,7 @@
             "@type": "drafting:AndroidDevice",
             "uco-core:hasFacet": {
                 "@type": "drafting:AndroidDeviceFacet",
-                "drafting:androidFingerprint": "Android fingerprint example"
+                "drafting:androidAdvertisingID": "Android fingerprint example"
             }
         },
         {
@@ -21,7 +21,7 @@
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": {
                 "@type": "drafting:iOSDeviceFacet",
-                "drafting:iOSFingerprint": "iOS fingerprint example"
+                "drafting:iOSAdvertisingID": "iOS fingerprint example"
             }
         },
         {
@@ -32,7 +32,7 @@
                     "uco-core:Facet",
                     "INTERNAL:KnockOffPhoneDeviceFacet"
                 ],
-                "drafting:mobileOSFingerprint": "Knock-off device OS fingerprint example"
+                "drafting:advertisingID": "Knock-off device OS fingerprint example"
             }
         }
     ]

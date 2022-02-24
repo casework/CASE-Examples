@@ -38,7 +38,7 @@ drafting:AndroidDeviceFacet
 		sh:datatype xsd:string ;
 		sh:maxCount "1"^^xsd:integer ;
 		sh:nodeKind sh:Literal ;
-		sh:path drafting:androidFingerprint ;
+		sh:path drafting:androidAdvertisingID ;
 	] ;
 	.
 
@@ -70,31 +70,31 @@ drafting:iOSDeviceFacet
 		sh:datatype xsd:string ;
 		sh:maxCount "1"^^xsd:integer ;
 		sh:nodeKind sh:Literal ;
-		sh:path drafting:iOSFingerprint ;
+		sh:path drafting:iOSAdvertisingID ;
 	] ;
 	.
 
-drafting:androidFingerprint
+drafting:advertisingID
 	a owl:DatatypeProperty ;
-	rdfs:label "androidFingerprint"@en ;
-	rdfs:comment "TODO"@en ;
-	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
-	rdfs:subPropertyOf drafting:mobileOSFingerprint ;
-	.
-
-drafting:iOSFingerprint
-	a owl:DatatypeProperty ;
-	rdfs:label "iOSFingerprint"@en ;
-	rdfs:comment "TODO"@en ;
-	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
-	rdfs:subPropertyOf drafting:mobileOSFingerprint ;
-	.
-
-drafting:mobileOSFingerprint
-	a owl:DatatypeProperty ;
-	rdfs:label "mobileOSFingerprint"@en ;
+	rdfs:label "advertisingID"@en ;
 	rdfs:comment "Abstract property representing mobile operating system fingerprint."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	.
+
+drafting:androidAdvertisingID
+	a owl:DatatypeProperty ;
+	rdfs:label "androidAdvertisingID"@en ;
+	rdfs:comment "TODO"@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	rdfs:subPropertyOf drafting:advertisingID ;
+	.
+
+drafting:iOSAdvertisingID
+	a owl:DatatypeProperty ;
+	rdfs:label "iOSAdvertisingID"@en ;
+	rdfs:comment "TODO"@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/OC-122> ;
+	rdfs:subPropertyOf drafting:advertisingID ;
 	.
 

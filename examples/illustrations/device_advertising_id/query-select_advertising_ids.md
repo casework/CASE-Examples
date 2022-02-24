@@ -1,4 +1,4 @@
-|    | ?nDevice                                | ?lFingerprint                           |
+|    | ?nDevice                                | ?lAdvertisingID                         |
 |----|-----------------------------------------|-----------------------------------------|
 |  0 | http://example.org/kb/android-device-1  | Android fingerprint example             |
 |  1 | http://example.org/kb/ios-device-1      | iOS fingerprint example                 |
