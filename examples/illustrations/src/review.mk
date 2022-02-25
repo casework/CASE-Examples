@@ -22,17 +22,27 @@ RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-Utilities-Python/dependencies
 
 example_name := $(shell basename $$PWD)
 
+# Use a drafting.ttl file in the validation and dependency list, if it is present.
+drafting_ttl := $(wildcard drafting.ttl)
+ifeq ($(drafting_ttl),)
+drafting_validation_flag :=
+else
+drafting_validation_flag := --ontology $(wildcard drafting.ttl)
+endif
+
 all: \
   $(example_name)_validation.ttl
 
 $(example_name)_validation.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
+  $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --format turtle \
+	    $(drafting_validation_flag) \
 	    --output __$@ \
 	    $< \
 	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
