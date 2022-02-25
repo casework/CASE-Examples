@@ -174,9 +174,9 @@ drafting:azimuth
 
 drafting:captureCellSite
 	a owl:ObjectProperty ;
-	rdfs:label "captureCellTower"@en ;
+	rdfs:label "captureCellSite"@en ;
 	rdfs:comment "Specifies the cell site accessed."@en ;
-	rdfs:range drafting:CellTower ;
+	rdfs:range drafting:CellSite ;
 	.
 
 drafting:elevation
