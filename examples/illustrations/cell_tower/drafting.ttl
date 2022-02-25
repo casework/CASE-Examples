@@ -147,7 +147,7 @@ drafting:CapturedTelecommunicationsInformationFacet
 		] ,
 		[
 			sh:class observable:Device ;
-			sh:nodeKind sh:Literal ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path drafting:partyDevice ;
 		] ,
 		[
