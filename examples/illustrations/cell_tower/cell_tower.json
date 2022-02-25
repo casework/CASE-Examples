@@ -13,7 +13,7 @@
     "@graph": [
         {
             "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "drafting:CellSite",
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CellSiteFacet",
@@ -25,11 +25,26 @@
                 },
                 {
                     "@type": "drafting:AntennaFacet",
-                    "drafting:azimuth": "45",
-                    "drafting:elevation": "5",
-                    "drafting:horizontalBeamWidth": "110",
-                    "drafting:signalStrength": "20",
-                    "drafting:skew": "10"
+                    "drafting:azimuth": {
+                        "@type": "xsd:decimal",
+                        "@value": "45"
+                    },
+                    "drafting:elevation": {
+                        "@type": "xsd:decimal",
+                        "@value": "5"
+                    },
+                    "drafting:horizontalBeamWidth": {
+                        "@type": "xsd:decimal",
+                        "@value": "110"
+                    },
+                    "drafting:signalStrength": {
+                        "@type": "xsd:decimal",
+                        "@value": "20"
+                    },
+                    "drafting:skew": {
+                        "@type": "xsd:decimal",
+                        "@value": "10"
+                    }
                 }
             ]
         },
@@ -176,7 +191,7 @@
         },
         {
             "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "drafting:CapturedTelecommunicationsInformation",
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CapturedTelecommunicationsInformationFacet",
