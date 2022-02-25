@@ -32,6 +32,7 @@ $(example_name)_validation.ttl: \
   $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log
+	rm -f __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --format turtle \
