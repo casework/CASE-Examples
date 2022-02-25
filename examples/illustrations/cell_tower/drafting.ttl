@@ -7,6 +7,17 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+drafting:CellSite
+	a
+		sh:NodeShape ,
+		owl:Class
+		;
+	rdfs:subClassOf observable:ObservableObject ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
+	rdfs:label "CellSite"@en ;
+	sh:targetClass drafting:CellSite ;
+	.
+
 drafting:CellSiteFacet
 	a
 		sh:NodeShape ,
@@ -92,6 +103,17 @@ drafting:AntennaFacet
 		]
 		;
 	sh:targetClass observable:AntennaFacet ;
+	.
+
+drafting:CapturedTelecommunicationsInformation
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf observable:ObservableObject ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
+	rdfs:label "CapturedTelecommunicationsInformation"@en ;
+	sh:targetClass drafting:CapturedTelecommunicationsInformation ;
 	.
 
 drafting:CapturedTelecommunicationsInformationFacet
