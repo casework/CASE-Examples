@@ -5,8 +5,8 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [

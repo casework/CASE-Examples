@@ -3,9 +3,9 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
