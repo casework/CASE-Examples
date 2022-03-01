@@ -73,8 +73,14 @@ all: \
 	      --requirement requirements.txt
 	touch $@
 
-check: \
+.dependencies.done.log: \
   .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+	touch $@
+
+check: \
+  .dependencies.done.log
 	$(MAKE) \
 	  --directory examples/illustrations \
 	  check
