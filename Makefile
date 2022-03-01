@@ -30,6 +30,16 @@ all: \
 	  || (git submodule init dependencies/CASE-Utilities-Python && git submodule update dependencies/CASE-Utilities-Python)
 	test -r dependencies/CASE-Utilities-Python/README.md \
 	  || (echo "ERROR:Makefile:CASE-Utilities-Python submodule README.md file not found, even though CASE-Utilities-Python submodule initialized." >&2 ; exit 2)
+	# CASE-develop
+	test -r dependencies/CASE-develop/README.md \
+	  || (git submodule init dependencies/CASE-develop && git submodule update dependencies/CASE-develop)
+	test -r dependencies/CASE-develop/README.md \
+	  || (echo "ERROR:Makefile:CASE-develop submodule README.md file not found, even though CASE-develop submodule initialized." >&2 ; exit 2)
+	# UCO-develop
+	test -r dependencies/UCO-develop/README.md \
+	  || (git submodule init dependencies/UCO-develop && git submodule update dependencies/UCO-develop)
+	test -r dependencies/UCO-develop/README.md \
+	  || (echo "ERROR:Makefile:UCO-develop submodule README.md file not found, even though UCO-develop submodule initialized." >&2 ; exit 2)
 	# UCO-unstable
 	test -r dependencies/UCO-unstable/README.md \
 	  || (git submodule init dependencies/UCO-unstable && git submodule update dependencies/UCO-unstable)
