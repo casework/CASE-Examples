@@ -30,6 +30,11 @@ all: \
 	  || (git submodule init dependencies/CASE-Utilities-Python && git submodule update dependencies/CASE-Utilities-Python)
 	test -r dependencies/CASE-Utilities-Python/README.md \
 	  || (echo "ERROR:Makefile:CASE-Utilities-Python submodule README.md file not found, even though CASE-Utilities-Python submodule initialized." >&2 ; exit 2)
+	# UCO-unstable
+	test -r dependencies/UCO-unstable/README.md \
+	  || (git submodule init dependencies/UCO-unstable && git submodule update dependencies/UCO-unstable)
+	test -r dependencies/UCO-unstable/README.md \
+	  || (echo "ERROR:Makefile:UCO-unstable submodule README.md file not found, even though UCO-unstable submodule initialized." >&2 ; exit 2)
 	# Retrieve rdf-toolkit.jar.
 	cd dependencies/CASE-Utilities-Python \
 	  && git submodule update --init dependencies/CASE
