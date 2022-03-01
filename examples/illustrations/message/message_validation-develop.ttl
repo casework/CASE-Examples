@@ -1,0 +1,358 @@
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
+@prefix ns1: <http://purl.org/ontology/olo/core#> .
+@prefix ns2: <http://example.org/local#> .
+@prefix ns3: <http://example.org/draft#> .
+@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/location1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship2> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/attachment_file1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship3> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/attachment_file2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageThreadFacet ;
+				ns3:visibility "PRIVATE" ;
+				ns2:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:messages [
+					ns1:length "3"^^xsd:integer ;
+					ns1:slot
+						[
+							ns1:index "1"^^xsd:integer ;
+							ns1:item <http://example.org/kb/message1> ;
+						] ,
+						[
+							ns1:index "2"^^xsd:integer ;
+							ns1:item <http://example.org/kb/message2> ;
+						] ,
+						[
+							ns1:index "3"^^xsd:integer ;
+							ns1:item <http://example.org/kb/message3> ;
+						]
+						;
+				] ;
+				observable:displayName "Best Friend Chat!!" ;
+				observable:message
+					<http://example.org/kb/message1> ,
+					<http://example.org/kb/message2> ,
+					<http://example.org/kb/message3>
+					;
+				observable:participant
+					<http://example.org/kb/account1> ,
+					<http://example.org/kb/account2>
+					;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:message ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:message ;
+			] ;
+			sh:value <http://example.org/kb/message2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageThreadFacet ;
+				ns3:visibility "PRIVATE" ;
+				ns2:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:messages [
+					ns1:length "3"^^xsd:integer ;
+					ns1:slot
+						[
+							ns1:index "1"^^xsd:integer ;
+							ns1:item <http://example.org/kb/message1> ;
+						] ,
+						[
+							ns1:index "2"^^xsd:integer ;
+							ns1:item <http://example.org/kb/message2> ;
+						] ,
+						[
+							ns1:index "3"^^xsd:integer ;
+							ns1:item <http://example.org/kb/message3> ;
+						]
+						;
+				] ;
+				observable:displayName "Best Friend Chat!!" ;
+				observable:message
+					<http://example.org/kb/message1> ,
+					<http://example.org/kb/message2> ,
+					<http://example.org/kb/message3>
+					;
+				observable:participant
+					<http://example.org/kb/account1> ,
+					<http://example.org/kb/account2>
+					;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:message ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:message ;
+			] ;
+			sh:value <http://example.org/kb/message3> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ApplicationAccountFacet ;
+				observable:application <http://example.org/kb/application2> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/application2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ApplicationAccountFacet ;
+				observable:application <http://example.org/kb/application2> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/application2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AttachmentFacet ;
+				observable:url "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:url ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:url ;
+			] ;
+			sh:value "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AttachmentFacet ;
+				observable:url "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:url ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:url ;
+			] ;
+			sh:value "http://maps.google.com/maps/@32.5345,-123.4324,11z" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AttachmentFacet ;
+				observable:url "http://whatsapp.com/attachments/1.png" ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:url ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:url ;
+			] ;
+			sh:value "http://whatsapp.com/attachments/1.png" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AttachmentFacet ;
+				observable:url "http://whatsapp.com/attachments/1.png" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:url ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:url ;
+			] ;
+			sh:value "http://whatsapp.com/attachments/1.png" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AttachmentFacet ;
+				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:url ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:url ;
+			] ;
+			sh:value "http://whatsapp.com/attachments/thumbnails/1.png" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AttachmentFacet ;
+				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:url ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:url ;
+			] ;
+			sh:value "http://whatsapp.com/attachments/thumbnails/1.png" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageFacet ;
+				observable:application <http://example.org/kb/application2> ;
+				observable:from <http://example.org/kb/account3> ;
+				observable:messageText "I said some things in a tweet! @sarahsmithtweeter #hashtag" ;
+				observable:sentTime "2010-01-16T16:34:56.250000+00:00"^^xsd:dateTime ;
+				observable:to <http://example.org/kb/account4> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/application2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Android" ;
+				observable:manufacturer "Google" ;
+				observable:version "5.4.3" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Google" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Android" ;
+				observable:manufacturer "Google" ;
+				observable:version "5.4.3" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Google" ;
+		]
+		;
+	.
+
