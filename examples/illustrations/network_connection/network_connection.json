@@ -6,6 +6,7 @@
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
@@ -60,13 +61,22 @@
                     "@id": "kb:trace-relationship3-uuid"
                 }
             ],
-            "uco-core:hasFacet": [
+            "case-investigation:relevantAuthorization": [
                 {
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant3554",
                     "case-investigation:authorizationType": "warrant"
                 }
             ]
+        },
+        {
+            "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
+            "@type": "uco-core:UcoObject",
+            "rdfs:comment": "TODO - It was not documented whether this UcoObject was a person, role, tool, or something else."
+        },
+        {
+            "@id": "kb:investigator1-uuid",
+            "@type": "uco-identity:Person"
         },
         {
             "@id": "kb:pcap-tool-uuid",
@@ -170,7 +180,8 @@
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
-                        "@type": "uco-observable:ObservableObject",
+                        "@type": "uco-observable:URL",
+                        "rdfs:comment": "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case.",
                         "uco-core:hasFacet": {
                             "@type": "uco-observable:URLFacet",
                             "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
@@ -217,7 +228,7 @@
         },
         {
             "@id": "kb:source-host-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -228,7 +239,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:IPv4AddressFacet",
-                    "uco-observable:value": "10.10.10.2"
+                    "uco-observable:addressValue": "10.10.10.2"
                 },
                 {
                     "@type": "uco-observable:DomainNameFacet",
@@ -238,7 +249,7 @@
         },
         {
             "@id": "kb:destination-host-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -249,7 +260,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:IPv4AddressFacet",
-                    "uco-observable:value": "10.10.10.50"
+                    "uco-observable:addressValue": "10.10.10.50"
                 },
                 {
                     "@type": "uco-observable:DomainNameFacet",
@@ -259,7 +270,7 @@
         },
         {
             "@id": "kb:network-connection1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -306,7 +317,7 @@
         },
         {
             "@id": "kb:network-connection2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -353,7 +364,7 @@
         },
         {
             "@id": "kb:network-connection3-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -413,7 +424,7 @@
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
-            "uco-core:isDirectional": "true"
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:trace-relationship2-uuid",
@@ -430,7 +441,7 @@
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
-            "uco-core:isDirectional": "true"
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:trace-relationship3-uuid",
@@ -447,7 +458,7 @@
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
             },
-            "uco-core:isDirectional": "true"
+            "uco-core:isDirectional": true
         }
     ]
 }

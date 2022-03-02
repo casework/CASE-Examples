@@ -4,10 +4,14 @@
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
+        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
+        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
+        "uco-victim": "https://unifiedcyberontology.org/ontology/uco/victim#",
         "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
@@ -468,7 +472,10 @@
                     }
                 },
                 {
-                    "@type": "acme:UFEDArguments",
+                    "@type": [
+                        "acme:UFEDArgumentsFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:aquisitionType": "Logical",
                     "acme:method": "ADB"
                 }
@@ -657,7 +664,10 @@
                     "uco-observable:isHidden": false
                 },
                 {
-                    "@type": "acme:PlasoArguments",
+                    "@type": [
+                        "acme:PlasoArgumentsFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:input": {
                         "@id": "kb:android_image"
                     },
@@ -778,7 +788,10 @@
                     }
                 },
                 {
-                    "@type": "acme:PlasoParserArguments",
+                    "@type": [
+                        "acme:PlasoParserArgumentsFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:parsedFile": {
                         "@id": "kb:message_database"
                     },
@@ -983,6 +996,160 @@
             "uco-core:object": {
                 "@id": "kb:sqlite_blob"
             }
+        },
+        {
+            "@id": "kb:account1",
+            "@type": "uco-observable:Account"
+        },
+        {
+            "@id": "kb:account2",
+            "@type": "uco-observable:Account"
+        },
+        {
+            "@id": "kb:android_image",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ]
+        },
+        {
+            "@id": "kb:attachment_file",
+            "@type": "uco-observable:RasterPicture"
+        },
+        {
+            "@id": "kb:chat_messages_report",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:config_file",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:decoded_blob",
+            "rdfs:comment": "Note that RasterPicture is a subclass of File, which might or might not be appropriate in this example.",
+            "rdfs:seeAlso": {
+                "@id": "https://unifiedcyberontology.atlassian.net/browse/OC-222"
+            },
+            "@type": [
+                "uco-observable:ContentData",
+                "uco-observable:RasterPicture"
+            ]
+        },
+        {
+            "@id": "kb:decrypted_blob",
+            "@type": "uco-observable:ContentData"
+        },
+        {
+            "@id": "kb:device1",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:examiner1",
+            "@type": "uco-identity:Person"
+        },
+        {
+            "@id": "kb:examiner2",
+            "@type": "uco-identity:Person"
+        },
+        {
+            "@id": "kb:fedex_dropoff_location1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:forensic_lab1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:forensic_lab_computer1",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:image_partition",
+            "@type": "uco-observable:DiskPartition"
+        },
+        {
+            "@id": "kb:investigator1",
+            "@type": "uco-identity:Person"
+        },
+        {
+            "@id": "kb:location1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:log_file",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:message_action1",
+            "@type": "uco-observable:Message",
+            "rdfs:comment": "TODO - It was not documented why this ID includes the word 'action'."
+        },
+        {
+            "@id": "kb:message_database",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:message1",
+            "@type": "uco-observable:Message"
+        },
+        {
+            "@id": "kb:os1",
+            "@type": "uco-observable:OperatingSystem"
+        },
+        {
+            "@id": "kb:parser1",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:plaso_storage_file",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:sd_card1",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:sd_card1_image",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ]
+        },
+        {
+            "@id": "kb:sqlite_blob",
+            "@type": "uco-observable:ContentData"
+        },
+        {
+            "@id": "kb:subject1",
+            "@type": "case-investigation:Subject"
+        },
+        {
+            "@id": "kb:thread1",
+            "@type": "uco-observable:MessageThread"
+        },
+        {
+            "@id": "kb:thumbnail_database",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:tool1",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:tool2",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:tool3",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:victim2",
+            "@type": "uco-victim:Victim"
+        },
+        {
+            "@id": "kb:windows_registries_report",
+            "@type": "uco-observable:File"
         }
     ]
 }

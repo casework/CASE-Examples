@@ -12,7 +12,7 @@
     "@graph": [
         {
             "@id": "kb:forensic_lab_computer1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "location": {
                 "@id": "kb:forensic_lab1-uuid"
             },
@@ -50,7 +50,10 @@
                     "uco-observable:addressValue": "192.168.1.145"
                 },
                 {
-                    "@type": "acme:InventoryComputer",
+                    "@type": [
+                        "acme:InventoryComputerFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:name": "DFL-03",
                     "acme:inventoryNumber": "10503"
                 }
