@@ -15,20 +15,6 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/annotation1> ;
-			sh:resultMessage "Less than 1 values on kb:annotation1->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/camera_action1> ;
 			sh:resultMessage "Value does not have class core:Facet" ;
 			sh:resultPath core:hasFacet ;
@@ -66,37 +52,6 @@
 				action:performer <http://example.org/kb/examiner1> ;
 				action:result <http://example.org/kb/annotation1> ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/relationship1> ;
-			sh:resultMessage "Less than 1 values on kb:relationship1->core:isDirectional" ;
-			sh:resultPath core:isDirectional ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:boolean ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:isDirectional ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/relationship1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:target ;
-			] ;
-			sh:value <http://example.org/kb/device_partition3> ;
 		] ,
 		[
 			a sh:ValidationResult ;

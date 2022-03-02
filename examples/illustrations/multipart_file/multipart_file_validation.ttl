@@ -13,22 +13,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/relationship3> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:target ;
-			] ;
-			sh:value <http://example.org/kb/android_image> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/relationship3> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath core:kindOfRelationship ;
 			sh:resultSeverity sh:Violation ;
@@ -44,22 +28,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/relationship4> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:target ;
-			] ;
-			sh:value <http://example.org/kb/android_image> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/relationship4> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath core:kindOfRelationship ;
 			sh:resultSeverity sh:Violation ;
@@ -71,22 +39,6 @@
 				sh:path core:kindOfRelationship ;
 			] ;
 			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/relationship5> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:target ;
-			] ;
-			sh:value <http://example.org/kb/android_image> ;
 		] ,
 		[
 			a sh:ValidationResult ;

@@ -18,36 +18,6 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/destination-host-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/extracted-connections-provenancerecord-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/extraction-action-uuid> ;
 			sh:resultMessage "Value does not have class core:Facet" ;
 			sh:resultPath core:hasFacet ;
@@ -75,21 +45,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/extraction-action-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5->investigation:investigationForm" ;
 			sh:resultPath investigation:investigationForm ;
@@ -102,69 +57,6 @@
 				sh:nodeKind sh:Literal ;
 				sh:path investigation:investigationForm ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a investigation:Authorization ;
-				investigation:authorizationIdentifier "Warrant3554" ;
-				investigation:authorizationType "warrant" ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/network-connection1-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/network-connection2-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/network-connection3-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -213,37 +105,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/source-host-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/investigator1-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/trace-relationship1-uuid> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
-			sh:resultPath core:isDirectional ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:boolean ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:isDirectional ;
-			] ;
-			sh:value "true" ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/trace-relationship1-uuid> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath core:kindOfRelationship ;
@@ -256,22 +117,6 @@
 				sh:path core:kindOfRelationship ;
 			] ;
 			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/trace-relationship2-uuid> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
-			sh:resultPath core:isDirectional ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:boolean ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:isDirectional ;
-			] ;
-			sh:value "true" ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -291,22 +136,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/trace-relationship3-uuid> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
-			sh:resultPath core:isDirectional ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:boolean ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:isDirectional ;
-			] ;
-			sh:value "true" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/trace-relationship3-uuid> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath core:kindOfRelationship ;
 			sh:resultSeverity sh:Violation ;
@@ -318,114 +147,6 @@
 				sh:path core:kindOfRelationship ;
 			] ;
 			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:IPv4AddressFacet ;
-				observable:value "10.10.10.2" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:IPv4AddressFacet ; uco-observable:value Literal("10.10.10.2") ]->observable:addressValue' ;
-			sh:resultPath observable:addressValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:addressValue ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:IPv4AddressFacet ;
-				observable:value "10.10.10.2" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:IPv4AddressFacet ; uco-observable:value Literal("10.10.10.2") ]->observable:addressValue' ;
-			sh:resultPath observable:addressValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:addressValue ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:IPv4AddressFacet ;
-				observable:value "10.10.10.2" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:IPv4AddressFacet ; uco-observable:value Literal("10.10.10.2") ]->observable:addressValue' ;
-			sh:resultPath observable:addressValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:addressValue ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:IPv4AddressFacet ;
-				observable:value "10.10.10.50" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:IPv4AddressFacet ; uco-observable:value Literal("10.10.10.50") ]->observable:addressValue' ;
-			sh:resultPath observable:addressValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:addressValue ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:IPv4AddressFacet ;
-				observable:value "10.10.10.50" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:IPv4AddressFacet ; uco-observable:value Literal("10.10.10.50") ]->observable:addressValue' ;
-			sh:resultPath observable:addressValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:addressValue ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:IPv4AddressFacet ;
-				observable:value "10.10.10.50" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:IPv4AddressFacet ; uco-observable:value Literal("10.10.10.50") ]->observable:addressValue' ;
-			sh:resultPath observable:addressValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:addressValue ;
-			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
