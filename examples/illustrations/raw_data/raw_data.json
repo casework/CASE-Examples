@@ -12,7 +12,13 @@
     "@graph": [
         {
             "@id": "kb:digital_photograph_thumbnail1",
-            "@type": "uco-observable:ObservableObject",
+            "rdfs:seeAlso": {
+               "@id": "https://unifiedcyberontology.atlassian.net/browse/OC-222" 
+            },
+            "@type": [
+                "uco-observable:ContentData",
+                "uco-observable:RasterImage"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -60,7 +66,7 @@
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:RasterImage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",

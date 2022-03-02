@@ -12,7 +12,7 @@
     "@graph": [
         {
             "@id": "kb:extracted_email_address0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -62,7 +62,7 @@
         },
         {
             "@id": "kb:extracted_email_address1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -112,7 +112,7 @@
         },
         {
             "@id": "kb:decompressed_gzip0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -159,7 +159,7 @@
         },
         {
             "@id": "kb:compressed_gzip0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -205,7 +205,7 @@
         },
         {
             "@id": "kb:decompressed_gzip1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -247,7 +247,7 @@
         },
         {
             "@id": "kb:compressed_gzip1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -293,7 +293,10 @@
         },
         {
             "@id": "kb:disk_image",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",

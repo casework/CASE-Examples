@@ -228,7 +228,7 @@
         },
         {
             "@id": "kb:source-host-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -249,7 +249,7 @@
         },
         {
             "@id": "kb:destination-host-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -270,7 +270,7 @@
         },
         {
             "@id": "kb:network-connection1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -317,7 +317,7 @@
         },
         {
             "@id": "kb:network-connection2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },
@@ -364,7 +364,7 @@
         },
         {
             "@id": "kb:network-connection3-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
                 "@id": "kb:investigator1-uuid"
             },

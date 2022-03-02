@@ -14,7 +14,7 @@
     "@graph": [
         {
             "@id": "kb:mobile-device-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileDevice",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -77,7 +77,7 @@
         },
         {
             "@id": "kb:sim-card-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SIMCard",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:SIMCardFacet",
@@ -102,7 +102,7 @@
         },
         {
             "@id": "kb:mobile-account1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -120,7 +120,7 @@
         },
         {
             "@id": "kb:mobile-account2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",

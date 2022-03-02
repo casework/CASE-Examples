@@ -184,7 +184,7 @@
         },
         {
             "@id": "kb:device_partition3",
-            "@type": "uco-observable:ObservableObject"
+            "@type": "uco-observable:DiskPartition"
         },
         {
             "@id": "kb:forensic_lab1",

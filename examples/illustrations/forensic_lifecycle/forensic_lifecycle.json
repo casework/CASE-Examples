@@ -1065,7 +1065,7 @@
         },
         {
             "@id": "kb:image_partition",
-            "@type": "uco-observable:ObservableObject"
+            "@type": "uco-observable:DiskPartition"
         },
         {
             "@id": "kb:investigator1",

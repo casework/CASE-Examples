@@ -12,7 +12,7 @@
     "@graph": [
         {
             "@id": "kb:forensic_lab_computer1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Device",
             "location": {
                 "@id": "kb:forensic_lab1-uuid"
             },

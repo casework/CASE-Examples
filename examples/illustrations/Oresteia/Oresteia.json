@@ -1315,7 +1315,7 @@
         },
         {
             "@id": "kb:sms-message1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1350,7 +1350,7 @@
         },
         {
             "@id": "kb:sms-message2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1385,7 +1385,7 @@
         },
         {
             "@id": "kb:argive-elder1-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1402,7 +1402,7 @@
         },
         {
             "@id": "kb:argive-elder2-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1419,7 +1419,7 @@
         },
         {
             "@id": "kb:argive-elder3-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1436,7 +1436,7 @@
         },
         {
             "@id": "kb:electra-emailaccount-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailAccountFacet",
@@ -1456,7 +1456,7 @@
         },
         {
             "@id": "kb:electra-orestes-email-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailMessageFacet",
