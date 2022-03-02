@@ -1484,7 +1484,7 @@
         },
         {
             "@id": "kb:orestes-selfie-photograph-uuid",
-            "@type": "uco-observable:RasterImage"
+            "@type": "uco-observable:RasterPicture"
         },
         {
             "@id": "kb:annotation3-uuid",
