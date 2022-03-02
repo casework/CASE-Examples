@@ -1,21 +1,30 @@
-@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
 @prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
-@prefix ns1: <http://custompb.acme.org/core#> .
-@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
-@prefix vocabulary1: <https://unifiedcyberontology.org/ontology/uco/vocabulary#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/case1> ;
+			sh:resultMessage "Less than 1 values on kb:case1->core:object" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/case1> ;
@@ -33,1184 +42,297 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:focusNode <http://example.org/kb/provenance_record1> ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record1->core:object" ;
 			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/account1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/account2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/android_image> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/attachment_file> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/chat_messages_report> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/config_file> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/decoded_blob> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/decrypted_blob> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/device1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/examiner1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/examiner2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/fedex_dropoff_location1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/forensic_lab1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/forensic_lab_computer1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/image_partition> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/investigator1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/location1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/log_file> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/message1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/message_action1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/message_database> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/os1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/parser1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/plaso_storage_file> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/sd_card1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/sd_card1_image> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/sqlite_blob> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/subject1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/thread1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/thumbnail_database> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/tool1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/tool2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/tool3> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/victim2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/windows_registries_report> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action1> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:performer <http://example.org/kb/investigator1> ;
-				action:result <http://example.org/kb/provenance_record1> ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action2> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:location <http://example.org/kb/fedex_dropoff_location1> ;
-				action:object <http://example.org/kb/device1> ;
-				action:performer <http://example.org/kb/examiner1> ;
-				action:result
-					<http://example.org/kb/provenance_record2> ,
-					<http://example.org/kb/provenance_record3>
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action3> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a ns1:UFEDArguments ;
-				ns1:aquisitionType "Logical" ;
-				ns1:method "ADB" ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action3> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:environment <http://example.org/kb/forensic_lab_computer1> ;
-				action:instrument <http://example.org/kb/tool1> ;
-				action:location <http://example.org/kb/forensic_lab1> ;
-				action:object <http://example.org/kb/device1> ;
-				action:performer <http://example.org/kb/examiner1> ;
-				action:result <http://example.org/kb/provenance_record4> ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action4> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:environment <http://example.org/kb/forensic_lab_computer1> ;
-				action:instrument <http://example.org/kb/tool2> ;
-				action:location <http://example.org/kb/forensic_lab1> ;
-				action:object <http://example.org/kb/sd_card1> ;
-				action:performer <http://example.org/kb/examiner1> ;
-				action:result <http://example.org/kb/provenance_record5> ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action5> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a ns1:PlasoArguments ;
-				ns1:analysisReport
-					<http://example.org/kb/chat_messages_report> ,
-					<http://example.org/kb/windows_registries_report>
-					;
-				ns1:configFile <http://example.org/kb/config_file> ;
-				ns1:input <http://example.org/kb/android_image> ;
-				ns1:logFile <http://example.org/kb/log_file> ;
-				ns1:storageFile <http://example.org/kb/plaso_storage_file> ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action5> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:environment <http://example.org/kb/forensic_lab_computer1> ;
-				action:instrument <http://example.org/kb/tool3> ;
-				action:location <http://example.org/kb/forensic_lab1> ;
-				action:object
-					<http://example.org/kb/android_image> ,
-					<http://example.org/kb/sd_card1_image>
-					;
-				action:performer <http://example.org/kb/examiner2> ;
-				action:result
-					<http://example.org/kb/forensic_action6> ,
-					<http://example.org/kb/provenance_record10> ,
-					<http://example.org/kb/provenance_record11> ,
-					<http://example.org/kb/provenance_record12> ,
-					<http://example.org/kb/provenance_record6> ,
-					<http://example.org/kb/provenance_record7> ,
-					<http://example.org/kb/provenance_record8> ,
-					<http://example.org/kb/provenance_record9>
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action6> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a ns1:PlasoParserArguments ;
-				ns1:attachmentFile
-					<http://example.org/kb/attachment_file> ,
-					<http://example.org/kb/thumbnail_database>
-					;
-				ns1:fullQueryMatch "true"^^xsd:boolean ;
-				ns1:parsedFile <http://example.org/kb/message_database> ;
-				ns1:query "SELECT sender, recipients, body from MessageTable" ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_action6> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:environment <http://example.org/kb/forensic_lab_computer1> ;
-				action:instrument <http://example.org/kb/parser1> ;
-				action:location <http://example.org/kb/forensic_lab1> ;
-				action:object
-					<http://example.org/kb/provenance_record10> ,
-					<http://example.org/kb/provenance_record11> ,
-					<http://example.org/kb/provenance_record9>
-					;
-				action:performer <http://example.org/kb/examiner2> ;
-				action:result
-					<http://example.org/kb/provenance_record13> ,
-					<http://example.org/kb/provenance_record14> ,
-					<http://example.org/kb/provenance_record15> ,
-					<http://example.org/kb/provenance_record16> ,
-					<http://example.org/kb/provenance_record17> ,
-					<http://example.org/kb/provenance_record18> ,
-					<http://example.org/kb/provenance_record19> ,
-					<http://example.org/kb/provenance_record20> ,
-					<http://example.org/kb/provenance_record21>
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_lifecycle1> ;
-			sh:resultMessage "Less than 1 values on kb:forensic_lifecycle1->action:phase" ;
-			sh:resultPath action:phase ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class action:ArrayOfAction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path action:phase ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase1> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase2> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase3> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase4> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase5> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/provenance_record1> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/device1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record10> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record10->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/message_database> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record11> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record11->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/thumbnail_database> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record12> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record12->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/image_partition> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record13> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record13->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/message_action1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record14> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record14->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/thread1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record15> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record15->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/message1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record16> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record16->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/location1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record17> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record17->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/account1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record18> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record18->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/account2> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record19> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record19->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/decoded_blob> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record2> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record2->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/device1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record20> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record20->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/decrypted_blob> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record21> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record21->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/sqlite_blob> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record3> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record3->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/sd_card1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record4> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record4->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/android_image> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record5> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record5->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/sd_card1_image> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record6> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record6->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/chat_messages_report> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record7> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record7->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/plaso_storage_file> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record8> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record8->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/os1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance_record9> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultMessage "Less than 1 values on kb:provenance_record9->core:object" ;
 			sh:resultPath core:object ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/attachment_file> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:ProcessFacet ;
-				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
-				observable:creatorUser <http://example.org/kb/role4> ;
-				observable:currentWorkingDirectory "C:\\exams" ;
-				observable:environmentVariables [
-					a types:Dictionary ;
-					types:entry [
-						a types:DictionaryEntry ;
-						types:key "PYTHONPATH" ;
-						types:value "C:\\Python27\\Scripts\\python.exe" ;
-					] ;
-				] ;
-				observable:isHidden "false"^^xsd:boolean ;
-				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
-				observable:pid "1234"^^xsd:integer ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:creatorUser ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:creatorUser ;
-			] ;
-			sh:value <http://example.org/kb/role4> ;
 		]
 		;
 	.

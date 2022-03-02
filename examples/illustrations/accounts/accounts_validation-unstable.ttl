@@ -1,11 +1,252 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-account1> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-account2> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-account3> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-account4> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Associated_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-account4> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Associated_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "1235556677@facebook.net" ;
+				observable:accountIssuer <http://example.org/kb/facebook_org> ;
+			] ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath observable:accountIssuer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:accountIssuer ;
+			] ;
+			sh:value <http://example.org/kb/facebook_org> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "willyROX@gmail.com" ;
+				observable:accountIssuer <http://example.org/kb/google_org> ;
+				observable:observableCreatedTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+			] ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath observable:accountIssuer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:accountIssuer ;
+			] ;
+			sh:value <http://example.org/kb/google_org> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ApplicationAccountFacet ;
+				observable:application <http://example.org/kb/application1> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/application1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ApplicationAccountFacet ;
+				observable:application <http://example.org/kb/application2> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/application2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailAccountFacet ;
+				observable:emailAddress <http://example.org/kb/email-address1> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:emailAddress ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:emailAddress ;
+			] ;
+			sh:value <http://example.org/kb/email-address1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailAddressFacet ;
+				observable:value "willyROX@gmail.com" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:EmailAddressFacet ; uco-observable:value Literal("willyROX@gmail.com") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailAddressFacet ;
+				observable:value "willyROX@gmail.com" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:EmailAddressFacet ; uco-observable:value Literal("willyROX@gmail.com") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		]
+		;
 	.
 

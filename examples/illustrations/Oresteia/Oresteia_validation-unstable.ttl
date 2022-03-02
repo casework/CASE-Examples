@@ -1,15 +1,498 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix location: <https://ontology.unifiedcyberontology.org/uco/location/> .
+@prefix ns1: <http://example.org/draft#> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/aeschylus-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/eoghan-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/annotation1-uuid> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action1-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/annotation2-uuid> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action2-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/annotation3-uuid> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/orestes-selfie-photograph-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-device1-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Device" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/associated-emailaccount1-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:AttachmentFacet ;
+				rdfs:comment "TODO: uco-observable:Attachment seems ill-defined." ;
+				observable:url "http://www.facebook.com/corpses.jpg" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/location1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigation-4586742a-710a-454f-bcb8-b60e230ec1b2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action1-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action10-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action2-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action4-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/investigative-action5-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/provenance-record1-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/provenance-record2-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/provenance-record3-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/provenance-record4-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/provenance-record5-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/clytemnestra-device-uuid> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a ns1:iPhoneDevice ;
+				ns1:ownerName "Clytemnestras iPhone" ;
+				ns1:uniqueID "B3858A69A29375E6C706226B3633A3A11EB2A774" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/device-account-relationship1> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Account" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/device-location-relationship1> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Located_At" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/euripides-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/eoghan-uuid> ;
+		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
@@ -98,6 +581,1007 @@
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
 				sh:path investigation:investigationForm ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigator1-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/eoghan-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigator2-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/eoghan-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/orestes-facebookmsg-uuid> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a ns1:FacebookMessage ;
+				observable:body "There lies our country's twofold tyranny, My father's slayers, spoilers of my home." ;
+				observable:from <http://example.org/kb/orestes-facebookaccount-uuid> ;
+				observable:sentTime "2017-06-21T14:44:54.190000+00:00"^^xsd:dateTime ;
+				observable:to <http://example.org/kb/friends> ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship1-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Role" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship2-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Role" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship5-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Role" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship51-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/eoghan-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship51-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Role" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship52-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/eoghan-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/role-relationship52-uuid> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Has_Role" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool1-uuid> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "Zeus" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool1-uuid> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "Zeus" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool2-uuid> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "Joachim Metz" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool2-uuid> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "Joachim Metz" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool3-uuid> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "Joachim Metz" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool3-uuid> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "Joachim Metz" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				rdfs:comment
+					"TODO: MSISDN here may be the wrong type.  Why is a uuid indicated?" ,
+					"TODO: Should clockSetting be a xsd:dateTime?" ,
+					"TODO: clockSetting as a time-point somewhat illustrates the scenario's specified skew of 25 hours, but might need a reference time-point."
+					;
+				ns1:localeLanguage "en_GR" ;
+				observable:IMEI "359305065690067" ;
+				observable:MSISDN <http://example.org/kb/clytemnestra-mobileaccount-uuid> ;
+				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:keypadUnlockCode "123789" ;
+				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:MSISDN ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:MSISDN ;
+			] ;
+			sh:value <http://example.org/kb/clytemnestra-mobileaccount-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				rdfs:comment
+					"TODO: MSISDN here may be the wrong type.  Why is a uuid indicated?" ,
+					"TODO: Should clockSetting be a xsd:dateTime?" ,
+					"TODO: clockSetting as a time-point somewhat illustrates the scenario's specified skew of 25 hours, but might need a reference time-point."
+					;
+				ns1:localeLanguage "en_GR" ;
+				observable:IMEI "359305065690067" ;
+				observable:MSISDN <http://example.org/kb/clytemnestra-mobileaccount-uuid> ;
+				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:keypadUnlockCode "123789" ;
+				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath observable:MSISDN ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:MSISDN ;
+			] ;
+			sh:value <http://example.org/kb/clytemnestra-mobileaccount-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a core:ConfidenceFacet ;
+				rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
+				core:confidence "Probably True" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:nonNegativeInteger" ;
+			sh:resultPath core:confidence ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:nonNegativeInteger ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:confidence ;
+			] ;
+			sh:value "Probably True" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a core:ConfidenceFacet ;
+				rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
+				core:confidence "Probably True" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:nonNegativeInteger" ;
+			sh:resultPath core:confidence ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:nonNegativeInteger ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:confidence ;
+			] ;
+			sh:value "Probably True" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "4.886035e+01"^^xsd:double ;
+				location:longitude "2.331199e+00"^^xsd:double ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
+			sh:resultPath location:latitude ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:decimal ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path location:latitude ;
+			] ;
+			sh:value "4.886035e+01"^^xsd:double ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "4.886035e+01"^^xsd:double ;
+				location:longitude "2.331199e+00"^^xsd:double ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
+			sh:resultPath location:longitude ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:decimal ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path location:longitude ;
+			] ;
+			sh:value "2.331199e+00"^^xsd:double ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath observable:accountIssuer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:accountIssuer ;
+			] ;
+			sh:value <http://example.org/kb/olympus-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath observable:accountIssuer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:accountIssuer ;
+			] ;
+			sh:value <http://example.org/kb/olympus-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath observable:accountIssuer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:accountIssuer ;
+			] ;
+			sh:value <http://example.org/kb/olympus-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "PhoneAccount" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("PhoneAccount") ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "PhoneAccount" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "PhoneAccount" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "PhoneAccount" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("PhoneAccount") ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "PhoneAccount" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:AccountTypeVocab ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
+				sh:path observable:accountType ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "PhoneAccount" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:BluetoothAddressFacet ;
+				observable:value "d0:33:11:13:e7:a2" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:BluetoothAddressFacet ; uco-observable:value Literal("d0:33:11:13:e7:a2") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:BluetoothAddressFacet ;
+				observable:value "d0:33:11:13:e7:a2" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:BluetoothAddressFacet ; uco-observable:value Literal("d0:33:11:13:e7:a2") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:BluetoothAddressFacet ;
+				observable:value "d0:33:11:13:e7:a2" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:BluetoothAddressFacet ; uco-observable:value Literal("d0:33:11:13:e7:a2") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Smart_Phone" ;
+				observable:manufacturer "Samsung" ;
+				observable:model "SM-G925F Galaxy S6 Edge" ;
+				observable:serialNumber "FDG344657" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Smart_Phone" ;
+				observable:manufacturer "Samsung" ;
+				observable:model "SM-G925F Galaxy S6 Edge" ;
+				observable:serialNumber "FDG344657" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "iPhone" ;
+				observable:manufacturer "Apple" ;
+				observable:model "MG552" ;
+				observable:serialNumber "F18Q4LGRG5MD" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "iPhone" ;
+				observable:manufacturer "Apple" ;
+				observable:model "MG552" ;
+				observable:serialNumber "F18Q4LGRG5MD" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailAccountFacet ;
+				observable:emailAddress "electra.pleiade@sevensisters.com" ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:emailAddress ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:emailAddress ;
+			] ;
+			sh:value "electra.pleiade@sevensisters.com" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailAccountFacet ;
+				observable:emailAddress "electra.pleiade@sevensisters.com" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:emailAddress ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:emailAddress ;
+			] ;
+			sh:value "electra.pleiade@sevensisters.com" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailMessageFacet ;
+				observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
+				observable:from <http://example.org/kb/electra-emailaccount-uuid> ;
+				observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
+				observable:receivedTime "2017-06-21T13:44:23.400000+00:00"^^xsd:dateTime ;
+				observable:sentTime "2017-06-21T13:44:22.190000+00:00"^^xsd:dateTime ;
+				observable:subject "Revenge our father" ;
+				observable:to <http://example.org/kb/orestes-emailaccount-uuid> ;
+			] ;
+			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:EmailMessageFacet ; uco-observable:body Literal(\"To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom.\") ; uco-observable:from kb:electra-emailaccount-uuid ; uco-observable:messageID Literal(\"CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com\") ; uco-observable:receivedTime Literal(\"2017-06-21T13:44:23.400000+00:00\" = 2017-06-21 13:44:23.400000+00:00, datatype=xsd:dateTime) ; uco-observable:sentTime Literal(\"2017-06-21T13:44:22.190000+00:00\" = 2017-06-21 13:44:22.190000+00:00, datatype=xsd:dateTime) ; uco-observable:subject Literal(\"Revenge our father\") ; uco-observable:to kb:orestes-emailaccount-uuid ]->observable:isMimeEncoded" ;
+			sh:resultPath observable:isMimeEncoded ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:isMimeEncoded ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailMessageFacet ;
+				observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
+				observable:from <http://example.org/kb/electra-emailaccount-uuid> ;
+				observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
+				observable:receivedTime "2017-06-21T13:44:23.400000+00:00"^^xsd:dateTime ;
+				observable:sentTime "2017-06-21T13:44:22.190000+00:00"^^xsd:dateTime ;
+				observable:subject "Revenge our father" ;
+				observable:to <http://example.org/kb/orestes-emailaccount-uuid> ;
+			] ;
+			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:EmailMessageFacet ; uco-observable:body Literal(\"To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom.\") ; uco-observable:from kb:electra-emailaccount-uuid ; uco-observable:messageID Literal(\"CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com\") ; uco-observable:receivedTime Literal(\"2017-06-21T13:44:23.400000+00:00\" = 2017-06-21 13:44:23.400000+00:00, datatype=xsd:dateTime) ; uco-observable:sentTime Literal(\"2017-06-21T13:44:22.190000+00:00\" = 2017-06-21 13:44:22.190000+00:00, datatype=xsd:dateTime) ; uco-observable:subject Literal(\"Revenge our father\") ; uco-observable:to kb:orestes-emailaccount-uuid ]->observable:isMultipart" ;
+			sh:resultPath observable:isMultipart ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:isMultipart ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailMessageFacet ;
+				observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
+				observable:from <http://example.org/kb/electra-emailaccount-uuid> ;
+				observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
+				observable:receivedTime "2017-06-21T13:44:23.400000+00:00"^^xsd:dateTime ;
+				observable:sentTime "2017-06-21T13:44:22.190000+00:00"^^xsd:dateTime ;
+				observable:subject "Revenge our father" ;
+				observable:to <http://example.org/kb/orestes-emailaccount-uuid> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:to ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:to ;
+			] ;
+			sh:value <http://example.org/kb/orestes-emailaccount-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageFacet ;
+				rdfs:comment
+					"TODO: uco-observable:sentTime only has a domain of uco-observable:EmailMessage." ,
+					"TODO: uco-observable:to only has a domain of uco-observable:PhoneCall."
+					;
+				observable:application <http://example.org/kb/sms-application1> ;
+				observable:from <http://example.org/kb/cassandra-mobileaccount-uuid> ;
+				observable:messageText "A wedded wife, she slays her lord, Helped by another hand!" ;
+				observable:sentTime "2017-06-20T09:34:42.120000+00:00"^^xsd:dateTime ;
+				observable:to
+					<http://example.org/kb/argive-elder1-phoneaccnt-uuid> ,
+					<http://example.org/kb/argive-elder2-phoneaccnt-uuid> ,
+					<http://example.org/kb/argive-elder3-phoneaccnt-uuid>
+					;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/sms-application1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageFacet ;
+				observable:application <http://example.org/kb/sms-application1> ;
+				observable:from <http://example.org/kb/cassandra-mobileaccount-uuid> ;
+				observable:messageText "Low lie the shattered towers whereas they fell, and I--ah burning heart!--shall soon lie low as well." ;
+				observable:sentTime "2017-06-20T09:37:35.130000+00:00"^^xsd:dateTime ;
+				observable:to
+					<http://example.org/kb/argive-elder1-phoneaccnt-uuid> ,
+					<http://example.org/kb/argive-elder2-phoneaccnt-uuid> ,
+					<http://example.org/kb/argive-elder3-phoneaccnt-uuid>
+					;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:application ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:application ;
+			] ;
+			sh:value <http://example.org/kb/sms-application1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "iOS" ;
+				observable:manufacturer "Apple" ;
+				observable:version "10.3" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "iOS" ;
+				observable:manufacturer "Apple" ;
+				observable:version "10.3" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:WifiAddressFacet ;
+				observable:value "d0:33:11:13:e7:a1" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:WifiAddressFacet ; uco-observable:value Literal("d0:33:11:13:e7:a1") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:WifiAddressFacet ;
+				observable:value "d0:33:11:13:e7:a1" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:WifiAddressFacet ; uco-observable:value Literal("d0:33:11:13:e7:a1") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:WifiAddressFacet ;
+				observable:value "d0:33:11:13:e7:a1" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:WifiAddressFacet ; uco-observable:value Literal("d0:33:11:13:e7:a1") ]->observable:addressValue' ;
+			sh:resultPath observable:addressValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:addressValue ;
 			] ;
 		]
 		;

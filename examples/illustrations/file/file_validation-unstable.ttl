@@ -1,11 +1,402 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix ns1: <http://custompb.acme.org/core#> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer1-uuid> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a ns1:InventoryComputer ;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship1> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Decoded_From" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship1> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Decoded_From" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship3> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Decrypted_From" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship3> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Decrypted_From" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship7> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value <http://example.org/kb/forensic_lab_computer1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship7> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Stored_On" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship7> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Stored_On" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value <http://example.org/kb/android_device1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship8> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Forensic_Image_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship8> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Forensic_Image_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer "Dell" ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Dell" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer "Dell" ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Dell" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Smart_Phone" ;
+				observable:manufacturer "Samsung" ;
+				observable:model "I9500 Galaxy S4" ;
+				observable:serialNumber "123456SAM" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Smart_Phone" ;
+				observable:manufacturer "Samsung" ;
+				observable:model "I9500 Galaxy S4" ;
+				observable:serialNumber "123456SAM" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DiskPartitionFacet ;
+				observable:partitionID "3"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:partitionID ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:partitionID ;
+			] ;
+			sh:value "3"^^xsd:integer ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Android" ;
+				observable:manufacturer "Google" ;
+				observable:version "4.2.2" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Google" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Android" ;
+				observable:manufacturer "Google" ;
+				observable:version "4.2.2" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Google" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:manufacturer "Microsoft" ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Microsoft" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:manufacturer "Microsoft" ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Microsoft" ;
+		]
+		;
 	.
 
