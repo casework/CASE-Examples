@@ -323,7 +323,6 @@
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:fullValue": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
             }
-
         }
     ]
 }

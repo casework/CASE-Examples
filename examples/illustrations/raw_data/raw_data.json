@@ -13,7 +13,7 @@
         {
             "@id": "kb:digital_photograph_thumbnail1",
             "rdfs:seeAlso": {
-               "@id": "https://unifiedcyberontology.atlassian.net/browse/OC-222" 
+                "@id": "https://unifiedcyberontology.atlassian.net/browse/OC-222"
             },
             "@type": [
                 "uco-observable:ContentData",
