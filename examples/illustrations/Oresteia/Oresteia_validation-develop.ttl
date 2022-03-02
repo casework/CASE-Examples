@@ -19,36 +19,6 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/annotation3-uuid> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/orestes-selfie-photograph-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/orestes-selfie-photograph-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2->core:object" ;
 			sh:resultPath core:object ;
