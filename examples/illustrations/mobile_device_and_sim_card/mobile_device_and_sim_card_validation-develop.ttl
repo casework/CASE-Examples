@@ -1,0 +1,279 @@
+@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
+@prefix ns1: <http://example.org/local#> .
+@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary1: <https://unifiedcyberontology.org/ontology/uco/vocabulary#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/trace-relationship1-uuid> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:SIMCardFacet ;
+				ns1:IMSI <http://example.org/kb/mobile-account2-uuid> ;
+				observable:ICCID "456673345673436xxx" ;
+				observable:SIMForm "micro" ;
+				observable:SIMType "USIM" ;
+				observable:carrier "Vodafone" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:carrier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:carrier ;
+			] ;
+			sh:value "Vodafone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:SIMCardFacet ;
+				ns1:IMSI <http://example.org/kb/mobile-account2-uuid> ;
+				observable:ICCID "456673345673436xxx" ;
+				observable:SIMForm "micro" ;
+				observable:SIMType "USIM" ;
+				observable:carrier "Vodafone" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:carrier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:carrier ;
+			] ;
+			sh:value "Vodafone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone") ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:AccountTypeVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountType ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone") ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:AccountTypeVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountType ;
+			] ;
+			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Smart_Phone" ;
+				observable:manufacturer "Apple" ;
+				observable:model "MG472ZD/A" ;
+				observable:serialNumber "F17RN4DXXXXX" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Smart_Phone" ;
+				observable:manufacturer "Apple" ;
+				observable:model "MG472ZD/A" ;
+				observable:serialNumber "F17RN4DXXXXX" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "35540607448XXXX" ;
+				observable:MSISDN <http://example.org/kb/mobile-account1-uuid> ;
+				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:keypadUnlockCode "123456" ;
+				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:MSISDN ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:MSISDN ;
+			] ;
+			sh:value <http://example.org/kb/mobile-account1-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "35540607448XXXX" ;
+				observable:MSISDN <http://example.org/kb/mobile-account1-uuid> ;
+				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:keypadUnlockCode "123456" ;
+				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath observable:MSISDN ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:MSISDN ;
+			] ;
+			sh:value <http://example.org/kb/mobile-account1-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "iOS" ;
+				observable:installDate "2018-04-09T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer "Apple" ;
+				observable:version "11.2.6" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "iOS" ;
+				observable:installDate "2018-04-09T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer "Apple" ;
+				observable:version "11.2.6" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Apple" ;
+		]
+		;
+	.
+
