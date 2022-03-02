@@ -12,6 +12,10 @@
     },
     "@graph": [
         {
+            "@id": "kb:android_image",
+            "@type": "uco-observable:Image"
+        },
+        {
             "@id": "kb:relationship0",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {

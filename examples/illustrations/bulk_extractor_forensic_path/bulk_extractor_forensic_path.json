@@ -26,7 +26,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -76,7 +76,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -127,7 +127,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -169,7 +169,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -215,7 +215,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -257,7 +257,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -303,7 +303,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameEnum",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {

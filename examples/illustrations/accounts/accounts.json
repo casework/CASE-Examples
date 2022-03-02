@@ -28,6 +28,24 @@
             ]
         },
         {
+            "@id": "kb:application1",
+            "@type": "uco-observable:Application"
+        },
+        {
+            "@id": "kb:application2",
+            "@type": "uco-observable:Application"
+        },
+        {
+            "@id": "kb:facebook_org",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Google"
+        },
+        {
+            "@id": "kb:google_org",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Google"
+        },
+        {
             "@id": "kb:associated-account1",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
@@ -223,12 +241,12 @@
             ]
         },
         {
-            "@id": "kb:email_address1",
+            "@id": "kb:email-address1",
             "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailAddressFacet",
-                    "uco-observable:value": "willyROX@gmail.com"
+                    "uco-observable:addressValue": "willyROX@gmail.com"
                 }
             ]
         }

@@ -50,7 +50,10 @@
                     "uco-observable:addressValue": "192.168.1.145"
                 },
                 {
-                    "@type": "acme:InventoryComputer",
+                    "@type": [
+                        "acme:InventoryComputerFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:name": "DFL-03",
                     "acme:inventoryNumber": "10503"
                 }

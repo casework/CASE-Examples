@@ -11,6 +11,10 @@
     },
     "@graph": [
         {
+            "@id": "kb:sms_application1",
+            "@type": "uco-observable:Application"
+        },
+        {
             "@id": "kb:sms_message1",
             "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
@@ -120,7 +124,10 @@
                 {
                     "@type": "uco-observable:AccountFacet",
                     "rdfs:comment": "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -135,7 +142,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -150,7 +160,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Email",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Email"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -165,7 +178,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -173,6 +189,10 @@
                     "uco-observable:phoneNumber": "11235557890"
                 }
             ]
+        },
+        {
+            "@id": "kb:os1",
+            "@type": "uco-observable:OperatingSystem"
         },
         {
             "@id": "kb:android_phonebook1",

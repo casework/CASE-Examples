@@ -6,6 +6,7 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -88,9 +89,16 @@
                     ],
                     "uco-observable:SIMType": "USIM",
                     "uco-observable:SIMForm": "micro",
-                    "uco-observable:carrier": "Vodafone"
+                    "uco-observable:carrier": {
+                        "@id": "kb:organization-2f1365d2-dfbc-4817-9822-77e7b4a9ee9f"
+                    }
                 }
             ]
+        },
+        {
+            "@id": "kb:organization-2f1365d2-dfbc-4817-9822-77e7b4a9ee9f",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Vodafone"
         },
         {
             "@id": "kb:mobile-account1-uuid",
@@ -98,7 +106,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -113,7 +124,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {

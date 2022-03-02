@@ -22,11 +22,11 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "MD5"
                             },
                             "uco-types:hashValue": {
-                                "@type": "xsd:hexbinary",
+                                "@type": "xsd:hexBinary",
                                 "@value": "3d137a188c1e82247b815209ce44af2c"
                             }
                         }

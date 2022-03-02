@@ -6,7 +6,9 @@
         "draft": "http://example.org/draft#",
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -34,6 +36,7 @@
             "uco-core:target": {
                 "@id": "kb:device_partition3"
             },
+            "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": {
                 "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
                 "@value": "Contained_Within"
@@ -164,6 +167,30 @@
             ]
         },
         {
+            "@id": "kb:annotator_tool1",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:examiner1",
+            "@type": "uco-identity:Person"
+        },
+        {
+            "@id": "kb:forensic_lab_computer1",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:location1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:device_partition3",
+            "@type": "uco-observable:ObservableObject"
+        },
+        {
+            "@id": "kb:forensic_lab1",
+            "@type": "uco-location:Location"
+        },
+        {
             "@id": "kb:annotation1",
             "@type": "uco-core:Annotation",
             "uco-core:description": "Photo was taken by a Canon digital camera.",
@@ -172,7 +199,7 @@
                 "user_added",
                 "extracted"
             ],
-            "uco-action:object": {
+            "uco-core:object": {
                 "@id": "kb:camera_action1"
             }
         },

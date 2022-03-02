@@ -396,7 +396,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DiskPartitionFacet",
-                    "uco-observable:partitionID": 3
+                    "uco-observable:partitionID": "3"
                 }
             ]
         },
@@ -451,7 +451,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:target": {
-                "@id": "kb:forensic_lab_computer1"
+                "@id": "kb:forensic_lab_computer1-uuid"
             },
             "uco-core:kindOfRelationship": "Stored_On",
             "uco-core:isDirectional": true,
@@ -469,7 +469,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:target": {
-                "@id": "kb:android_device1"
+                "@id": "kb:android_device1-uuid"
             },
             "uco-core:kindOfRelationship": "Forensic_Image_Of",
             "uco-core:isDirectional": true
@@ -502,7 +502,10 @@
                     "uco-observable:totalRam": 4294967296
                 },
                 {
-                    "@type": "acme:InventoryComputer",
+                    "@type": [
+                        "acme:InventoryComputerFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:name": "DFL-03",
                     "acme:inventoryNumber": "10503"
                 }
