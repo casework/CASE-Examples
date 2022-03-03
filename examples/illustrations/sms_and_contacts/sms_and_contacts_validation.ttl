@@ -15,10 +15,10 @@
 			sh:focusNode [
 				a observable:AccountFacet ;
 				rdfs:comment "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)" ;
-				observable:accountType "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:AccountFacet ; rdfs:comment Literal(\"TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)\") ; uco-observable:accountType Literal(\"Phone\" = None, datatype=<uco-vocabulary:AccountTypeVocab>) ; uco-observable:isActive Literal(\"true\" = True, datatype=xsd:boolean) ]->observable:accountIdentifier" ;
+			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:AccountFacet ; rdfs:comment Literal(\"TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)\") ; uco-observable:accountType Literal(\"Phone\" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal(\"true\" = True, datatype=xsd:boolean) ]->observable:accountIdentifier" ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -34,30 +34,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				rdfs:comment "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)" ;
-				observable:accountType "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
+				observable:accountType "Email"^^vocabulary1:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
-			sh:resultPath observable:accountType ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary1:AccountTypeVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountType ;
-			] ;
-			sh:value "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Email"^^<uco-vocabulary:AccountTypeVocab> ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Email" = None, datatype=<uco-vocabulary:AccountTypeVocab>) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Email" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -73,29 +53,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountType "Email"^^<uco-vocabulary:AccountTypeVocab> ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
-			sh:resultPath observable:accountType ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary1:AccountTypeVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountType ;
-			] ;
-			sh:value "Email"^^<uco-vocabulary:AccountTypeVocab> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=<uco-vocabulary:AccountTypeVocab>) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -111,29 +72,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountType "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
-			sh:resultPath observable:accountType ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary1:AccountTypeVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountType ;
-			] ;
-			sh:value "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=<uco-vocabulary:AccountTypeVocab>) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -143,43 +85,6 @@
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
 				sh:path observable:accountIdentifier ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
-			sh:resultPath observable:accountType ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary1:AccountTypeVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountType ;
-			] ;
-			sh:value "Phone"^^<uco-vocabulary:AccountTypeVocab> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:EmailAccountFacet ;
-				observable:value "jdoe@example.com" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:EmailAccountFacet ; uco-observable:value Literal("jdoe@example.com") ]->observable:emailAddress' ;
-			sh:resultPath observable:emailAddress ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:emailAddress ;
 			] ;
 		]
 		;
