@@ -1,3 +1,4 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
@@ -16,63 +17,30 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:focusNode <http://example.org/kb/extraction-action-uuid> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
+				sh:class core:Facet ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path core:hasFacet ;
 			] ;
-			sh:value <http://example.org/kb/extracted-connections-provenancerecord-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+			sh:value [
+				a action:ActionReferencesFacet ;
+				action:instrument <http://example.org/kb/pcap-tool-uuid> ;
+				action:object
+					<http://example.org/kb/pcap-file-uuid> ,
+					<http://example.org/kb/pcap-provenancerecord-uuid>
+					;
+				action:result
+					<http://example.org/kb/extracted-connections-provenancerecord-uuid> ,
+					<http://example.org/kb/network-connection1-uuid> ,
+					<http://example.org/kb/network-connection2-uuid> ,
+					<http://example.org/kb/network-connection3-uuid>
+					;
 			] ;
-			sh:value <http://example.org/kb/extraction-action-uuid> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-			sh:value <http://example.org/kb/pcap-provenancerecord-uuid> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -92,6 +60,21 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/pcap-file-uuid> ;
+			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
+			sh:resultPath core:createdBy ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:IdentityAbstraction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:createdBy ;
+			] ;
+			sh:value <http://example.org/kb/81ee357b-5fc1-5aa8-b932-ff29ace0f65b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/pcap-provenancerecord-uuid> ;
 			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
 			sh:resultPath core:createdBy ;
 			sh:resultSeverity sh:Violation ;
