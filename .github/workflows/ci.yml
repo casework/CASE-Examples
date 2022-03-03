@@ -35,13 +35,14 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
 
-    - name: Start From Clean State
+    - name: Start from clean state
       run: make clean
 
-    - name: Run Tests
+    - name: Run tests
       run: make check
     
-    # Upload the TTL files for easier consumption of in-progress changes, or changes pending release
+    # Upload the TTL files for easier consumption of in-progress change proposals, or those that
+    # have been accepted but are pending release
     - name: Upload TTL Files
       uses: actions/upload-artifact@v2
       with:
