@@ -7,6 +7,7 @@
         "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
+        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",

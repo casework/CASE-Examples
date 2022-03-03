@@ -32,36 +32,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/pcap-file-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/81ee357b-5fc1-5aa8-b932-ff29ace0f65b> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/pcap-provenancerecord-uuid> ;
-			sh:resultMessage "Value does not have class core:IdentityAbstraction" ;
-			sh:resultPath core:createdBy ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:IdentityAbstraction ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:createdBy ;
-			] ;
-			sh:value <http://example.org/kb/81ee357b-5fc1-5aa8-b932-ff29ace0f65b> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/pcap-tool-uuid> ;
 			sh:resultMessage "Value does not have class identity:Identity" ;
 			sh:resultPath tool:creator ;
