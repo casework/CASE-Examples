@@ -63,24 +63,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/attach_relationship1> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a observable:AttachmentFacet ;
-				rdfs:comment "TODO: uco-observable:Attachment seems ill-defined." ;
-				observable:url <http://example.org/kb/url-b6d049be-f210-4f22-ae76-81141d51cb0f> ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/attach_relationship1> ;
 			sh:resultMessage "Value is outside the default relationship vocabularies." ;
 			sh:resultPath core:kindOfRelationship ;
 			sh:resultSeverity sh:Info ;

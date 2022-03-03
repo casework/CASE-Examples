@@ -48,3 +48,8 @@ CASE-unstable.ttl: \
 	    _$@ \
 	    $(case_unstable_ttls)
 	mv _$@ $@
+
+clean:
+	@rm -f \
+	  CASE-develop.ttl \
+	  CASE-unstable.ttl

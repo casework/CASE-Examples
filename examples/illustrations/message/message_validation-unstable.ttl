@@ -15,23 +15,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/attach_relationship1> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a observable:AttachmentFacet ;
-				observable:url <http://example.org/kb/url-e1ca5930-2f59-4cb3-853f-bece3a8f296c> ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/attach_relationship1> ;
 			sh:resultMessage "Value is outside the default relationship vocabularies." ;
 			sh:resultPath core:kindOfRelationship ;
 			sh:resultSeverity sh:Info ;
@@ -70,23 +53,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/attach_relationship2> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/attach_relationship2> ;
 			sh:resultMessage "Value is outside the default relationship vocabularies." ;
 			sh:resultPath core:kindOfRelationship ;
 			sh:resultSeverity sh:Info ;
@@ -121,23 +87,6 @@
 				sh:severity sh:Info ;
 			] ;
 			sh:value "Attachment_Of" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/attach_relationship3> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a observable:AttachmentFacet ;
-				observable:url <http://example.org/kb/url-ad698703-116c-4760-8560-1c5f3e522f05> ;
-			] ;
 		] ,
 		[
 			a sh:ValidationResult ;

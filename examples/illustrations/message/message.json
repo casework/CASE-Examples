@@ -284,7 +284,9 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": "http://whatsapp.com/attachments/thumbnails/1.png"
+                    "uco-observable:url": {
+                        "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee"
+                    }
                 }
             ]
         },
@@ -307,6 +309,14 @@
                     }
                 }
             ]
+        },
+        {
+            "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:URLFacet",
+                "uco-observable:fullValue": "http://whatsapp.com/attachments/thumbnails/1.png"
+            }
         },
         {
             "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05",
