@@ -99,34 +99,29 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:pcap-tool-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:pcap-tool-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:pcap-provenancerecord-uuid"
-                        },
-                        {
-                            "@id": "kb:pcap-file-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:extracted-connections-provenancerecord-uuid"
-                        },
-                        {
-                            "@id": "kb:network-connection1-uuid"
-                        },
-                        {
-                            "@id": "kb:network-connection2-uuid"
-                        },
-                        {
-                            "@id": "kb:network-connection3-uuid"
-                        }
-                    ]
+                    "@id": "kb:pcap-provenancerecord-uuid"
+                },
+                {
+                    "@id": "kb:pcap-file-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:extracted-connections-provenancerecord-uuid"
+                },
+                {
+                    "@id": "kb:network-connection1-uuid"
+                },
+                {
+                    "@id": "kb:network-connection2-uuid"
+                },
+                {
+                    "@id": "kb:network-connection3-uuid"
                 }
             ],
             "uco-action:endTime": {

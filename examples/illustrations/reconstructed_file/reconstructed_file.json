@@ -341,45 +341,40 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:role4"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:carving_tool1"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:role4"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:carving_tool1"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:android_image"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:data_piece1"
-                        },
-                        {
-                            "@id": "kb:data_piece2"
-                        },
-                        {
-                            "@id": "kb:relationship3"
-                        },
-                        {
-                            "@id": "kb:relationship4"
-                        },
-                        {
-                            "@id": "kb:provenance_record2"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:android_image"
                 }
-            ]
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:data_piece1"
+                },
+                {
+                    "@id": "kb:data_piece2"
+                },
+                {
+                    "@id": "kb:relationship3"
+                },
+                {
+                    "@id": "kb:relationship4"
+                },
+                {
+                    "@id": "kb:provenance_record2"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            }
         },
         {
             "@id": "kb:investigative_action2",
@@ -394,51 +389,46 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:role4"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:carving_tool1"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:role4"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:carving_tool1"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:data_piece0"
-                        },
-                        {
-                            "@id": "kb:data_piece1"
-                        },
-                        {
-                            "@id": "kb:data_piece2"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:reconstructed_file"
-                        },
-                        {
-                            "@id": "kb:relationship0"
-                        },
-                        {
-                            "@id": "kb:relationship1"
-                        },
-                        {
-                            "@id": "kb:relationship2"
-                        },
-                        {
-                            "@id": "kb:provenance_record1"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:data_piece0"
+                },
+                {
+                    "@id": "kb:data_piece1"
+                },
+                {
+                    "@id": "kb:data_piece2"
                 }
-            ]
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:reconstructed_file"
+                },
+                {
+                    "@id": "kb:relationship0"
+                },
+                {
+                    "@id": "kb:relationship1"
+                },
+                {
+                    "@id": "kb:relationship2"
+                },
+                {
+                    "@id": "kb:provenance_record1"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            }
         },
         {
             "@id": "kb:provenance_record1",
