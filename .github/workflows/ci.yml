@@ -41,7 +41,7 @@ jobs:
     - name: Run Tests
       run: make check
     
-    # Upload the TTL files for 
+    # Upload the TTL files for easier consumption of in-progress changes, or changes pending release
     - name: Upload TTL Files
       uses: actions/upload-artifact@v2
       with:
