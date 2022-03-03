@@ -149,22 +149,17 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:camera1"
+            },
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:camera1"
-                    },
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:digital_photograph1"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:location1"
-                    }
+                    "@id": "kb:digital_photograph1"
                 }
-            ]
+            ],
+            "uco-action:location": {
+                "@id": "kb:location1"
+            }
         },
         {
             "@id": "kb:annotator_tool1",
@@ -215,28 +210,23 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T18:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner1"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:annotator_tool1"
+            },
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner1"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:annotator_tool1"
-                    },
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:annotation1"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:annotation1"
                 }
-            ]
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            }
         }
     ]
 }
