@@ -91,10 +91,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -112,13 +112,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -138,13 +138,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -157,16 +157,16 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -184,13 +184,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -210,13 +210,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -229,16 +229,16 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -256,13 +256,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -282,13 +282,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -301,16 +301,16 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -328,13 +328,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -354,13 +354,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -373,16 +373,16 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8fabebdaf41b54014f6c3507c44ae160547d05d31bd50d6a12234c5bc4bdb45c"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -400,13 +400,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8fabebdaf41b54014f6c3507c44ae160547d05d31bd50d6a12234c5bc4bdb45c"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -426,13 +426,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "8fabebdaf41b54014f6c3507c44ae160547d05d31bd50d6a12234c5bc4bdb45c"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -445,16 +445,16 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "9a6c11d66829bf429efe5ef4c066d50272394481cc3f8ae8116a006c81dc6cf9"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -472,13 +472,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "9a6c11d66829bf429efe5ef4c066d50272394481cc3f8ae8116a006c81dc6cf9"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -498,13 +498,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "9a6c11d66829bf429efe5ef4c066d50272394481cc3f8ae8116a006c81dc6cf9"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -517,16 +517,16 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"^^xsd:hexBinary ;
 			] ;
-			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-core:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
+			sh:resultMessage 'Node Literal("SHA256" = None, datatype=uco-vocabulary:HashNameEnum) does not conform to one or more shapes in [ sh:datatype vocabulary1:HashNameVocab ] , [ sh:datatype xsd:string ]' ;
 			sh:resultPath types:hashMethod ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:OrConstraintComponent ;
@@ -544,13 +544,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
@@ -570,13 +570,13 @@
 				) ;
 				sh:path types:hashMethod ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a types:Hash ;
-				types:hashMethod "SHA256"^^core:HashNameEnum ;
+				types:hashMethod "SHA256"^^vocabulary1:HashNameEnum ;
 				types:hashValue "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"^^xsd:hexBinary ;
 			] ;
 			sh:resultMessage "Value is outside the default vocabulary HashNameVocab." ;
@@ -589,7 +589,7 @@
 				sh:path types:hashMethod ;
 				sh:severity sh:Info ;
 			] ;
-			sh:value "SHA256"^^core:HashNameEnum ;
+			sh:value "SHA256"^^vocabulary1:HashNameEnum ;
 		]
 		;
 	.

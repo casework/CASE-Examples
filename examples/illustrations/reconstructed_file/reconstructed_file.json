@@ -6,12 +6,31 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
         "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
+        {
+            "@id": "kb:carving_tool1",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:forensic_lab1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:forensic_lab_computer1",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:role4",
+            "@type": "uco-role:Role"
+        },
         {
             "@id": "kb:relationship0",
             "@type": "uco-observable:ObservableRelationship",

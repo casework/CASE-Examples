@@ -6,6 +6,7 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -13,7 +14,7 @@
     "@graph": [
         {
             "@id": "kb:mobile-device-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileDevice",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -76,7 +77,7 @@
         },
         {
             "@id": "kb:sim-card-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SIMCard",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:SIMCardFacet",
@@ -88,17 +89,27 @@
                     ],
                     "uco-observable:SIMType": "USIM",
                     "uco-observable:SIMForm": "micro",
-                    "uco-observable:carrier": "Vodafone"
+                    "uco-observable:carrier": {
+                        "@id": "kb:organization-2f1365d2-dfbc-4817-9822-77e7b4a9ee9f"
+                    }
                 }
             ]
         },
         {
+            "@id": "kb:organization-2f1365d2-dfbc-4817-9822-77e7b4a9ee9f",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Vodafone"
+        },
+        {
             "@id": "kb:mobile-account1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -109,11 +120,14 @@
         },
         {
             "@id": "kb:mobile-account2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {

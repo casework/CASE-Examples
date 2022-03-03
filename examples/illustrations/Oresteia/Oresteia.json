@@ -1,6 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
+        "MobileExtractor": "urn:example:MobileExtractor",
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "draft": "http://example.org/draft#",
@@ -49,6 +50,10 @@
                     "@id": "kb:role-relationship1-uuid"
                 }
             ]
+        },
+        {
+            "@id": "kb:cctv-recording-uuid",
+            "@type": "uco-core:UcoObject"
         },
         {
             "@id": "kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd",
@@ -248,7 +253,7 @@
                     "@id": "kb:attach_relationship1"
                 }
             ],
-            "uco-core:hasFacet": [
+            "case-investigation:relevantAuthorization": [
                 {
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant12345",
@@ -290,10 +295,20 @@
                 },
                 {
                     "@type": "uco-location:LatLongCoordinatesFacet",
-                    "uco-location:latitude": 48.860346,
-                    "uco-location:longitude": 2.331199
+                    "uco-location:latitude": {
+                        "@type": "xsd:decimal",
+                        "@value": 48.860346
+                    },
+                    "uco-location:longitude": {
+                        "@type": "xsd:decimal",
+                        "@value": 2.331199
+                    }
                 }
             ]
+        },
+        {
+            "@id": "kb:eoghan-uuid",
+            "@type": "uco-identity:Person"
         },
         {
             "@id": "kb:aeschylus-uuid",
@@ -493,7 +508,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "PhoneAccount",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -677,7 +695,10 @@
                     "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
-                    "@type": "draft:iPhoneDevice",
+                    "@type": [
+                        "draft:iPhoneDeviceFacet",
+                        "uco-core:Facet"
+                    ],
                     "draft:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
                     "draft:ownerName": "Clytemnestras iPhone"
                 },
@@ -689,11 +710,11 @@
                 },
                 {
                     "@type": "uco-observable:WifiAddressFacet",
-                    "uco-observable:value": "d0:33:11:13:e7:a1"
+                    "uco-observable:addressValue": "d0:33:11:13:e7:a1"
                 },
                 {
                     "@type": "uco-observable:BluetoothAddressFacet",
-                    "uco-observable:value": "d0:33:11:13:e7:a2"
+                    "uco-observable:addressValue": "d0:33:11:13:e7:a2"
                 }
             ]
         },
@@ -703,7 +724,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "PhoneAccount",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -754,6 +778,14 @@
             "uco-core:object": {
                 "@id": "kb:investigative-action1-uuid"
             }
+        },
+        {
+            "@id": "kb:athens-warrant1-uuid",
+            "@type": "uco-core:UcoObject"
+        },
+        {
+            "@id": "kb:athenspd-evidenceroom-uuid",
+            "@type": "uco-location:Location"
         },
         {
             "@id": "kb:investigative-action10-uuid",
@@ -810,6 +842,10 @@
             }
         },
         {
+            "@id": "kb:forensic-computer1-uuid",
+            "@type": "uco-observable:Device"
+        },
+        {
             "@id": "kb:investigative-action2-uuid",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "extracted",
@@ -854,7 +890,10 @@
                     ]
                 },
                 {
-                    "@type": "MobileExtractor:ToolArguments",
+                    "@type": [
+                        "MobileExtractor:ToolArgumentsFacet",
+                        "uco-core:Facet"
+                    ],
                     "draft:aquisitionType": "Physical Extraction",
                     "draft:method": "Boot Loader"
                 }
@@ -1271,8 +1310,12 @@
             ]
         },
         {
+            "@id": "kb:sms-application1",
+            "@type": "uco-observable:Application"
+        },
+        {
             "@id": "kb:sms-message1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1307,7 +1350,7 @@
         },
         {
             "@id": "kb:sms-message2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1337,8 +1380,12 @@
             ]
         },
         {
+            "@id": "kb:olympus-uuid",
+            "@type": "uco-identity:Organization"
+        },
+        {
             "@id": "kb:argive-elder1-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1355,7 +1402,7 @@
         },
         {
             "@id": "kb:argive-elder2-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1372,7 +1419,7 @@
         },
         {
             "@id": "kb:argive-elder3-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1389,17 +1436,27 @@
         },
         {
             "@id": "kb:electra-emailaccount-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailAccountFacet",
-                    "uco-observable:emailAddress": "electra.pleiade@sevensisters.com"
+                    "uco-observable:emailAddress": {
+                        "@id": "kb:email-address-9771a645-94ba-464e-a30d-3537feb637a3"
+                    }
                 }
             ]
         },
         {
+            "@id": "kb:email-address-9771a645-94ba-464e-a30d-3537feb637a3",
+            "@type": "uco-observable:EmailAddress",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:EmailAddressFacet",
+                "uco-observable:addressValue": "electra.pleiade@sevensisters.com"
+            }
+        },
+        {
             "@id": "kb:electra-orestes-email-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailMessageFacet",
@@ -1426,6 +1483,10 @@
             ]
         },
         {
+            "@id": "kb:orestes-selfie-photograph-uuid",
+            "@type": "uco-observable:RasterPicture"
+        },
+        {
             "@id": "kb:annotation3-uuid",
             "@type": "uco-core:Annotation",
             "uco-core:tag": [
@@ -1441,10 +1502,13 @@
         },
         {
             "@id": "kb:orestes-facebookmsg-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
-                    "@type": "draft:FacebookMessage",
+                    "@type": [
+                        "draft:FacebookMessageFacet",
+                        "uco-core:Facet"
+                    ],
                     "uco-observable:from": {
                         "@id": "kb:orestes-facebookaccount-uuid"
                     },
@@ -1460,6 +1524,10 @@
                     }
                 }
             ]
+        },
+        {
+            "@id": "kb:location1",
+            "@type": "uco-location:Location"
         },
         {
             "@id": "kb:attach_relationship1",
@@ -1482,9 +1550,19 @@
                 {
                     "@type": "uco-observable:AttachmentFacet",
                     "rdfs:comment": "TODO: uco-observable:Attachment seems ill-defined.",
-                    "uco-observable:url": "http://www.facebook.com/corpses.jpg"
+                    "uco-observable:url": {
+                        "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f"
+                    }
                 }
             ]
+        },
+        {
+            "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:URLFacet",
+                "uco-observable:fullValue": "http://www.facebook.com/corpses.jpg"
+            }
         }
     ]
 }
