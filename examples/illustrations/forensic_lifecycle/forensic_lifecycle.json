@@ -330,17 +330,12 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T19:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:investigator1"
+            },
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1"
-                    },
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance_record1"
-                        }
-                    ]
+                    "@id": "kb:provenance_record1"
                 }
             ]
         },
@@ -380,30 +375,25 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner1"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner1"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:device1"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance_record2"
-                        },
-                        {
-                            "@id": "kb:provenance_record3"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:fedex_dropoff_location1"
-                    }
+                    "@id": "kb:device1"
                 }
-            ]
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance_record2"
+                },
+                {
+                    "@id": "kb:provenance_record3"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:fedex_dropoff_location1"
+            }
         },
         {
             "@id": "kb:lifecycle_phase2",
@@ -445,32 +435,29 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T19:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner1"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool1"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner1"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool1"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:device1"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance_record4"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
-                },
+                    "@id": "kb:device1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance_record4"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            },
+            "uco-core:hasFacet": [
                 {
                     "@type": [
                         "acme:UFEDArgumentsFacet",
@@ -521,33 +508,28 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-16T19:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner1"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool2"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner1"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool2"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:sd_card1"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance_record5"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:sd_card1"
                 }
-            ]
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance_record5"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            }
         },
         {
             "@id": "kb:lifecycle_phase4",
@@ -589,56 +571,53 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-21T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner2"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool3"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner2"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool3"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:android_image"
-                        },
-                        {
-                            "@id": "kb:sd_card1_image"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance_record6"
-                        },
-                        {
-                            "@id": "kb:provenance_record7"
-                        },
-                        {
-                            "@id": "kb:provenance_record8"
-                        },
-                        {
-                            "@id": "kb:provenance_record9"
-                        },
-                        {
-                            "@id": "kb:provenance_record10"
-                        },
-                        {
-                            "@id": "kb:provenance_record11"
-                        },
-                        {
-                            "@id": "kb:provenance_record12"
-                        },
-                        {
-                            "@id": "kb:forensic_action6"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:android_image"
                 },
+                {
+                    "@id": "kb:sd_card1_image"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance_record6"
+                },
+                {
+                    "@id": "kb:provenance_record7"
+                },
+                {
+                    "@id": "kb:provenance_record8"
+                },
+                {
+                    "@id": "kb:provenance_record9"
+                },
+                {
+                    "@id": "kb:provenance_record10"
+                },
+                {
+                    "@id": "kb:provenance_record11"
+                },
+                {
+                    "@id": "kb:provenance_record12"
+                },
+                {
+                    "@id": "kb:forensic_action6"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            },
+            "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ProcessFacet",
                     "uco-observable:arguments": "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log",
@@ -731,62 +710,59 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-02-16T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner2"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:parser1"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner2"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:parser1"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance_record9"
-                        },
-                        {
-                            "@id": "kb:provenance_record10"
-                        },
-                        {
-                            "@id": "kb:provenance_record11"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance_record13"
-                        },
-                        {
-                            "@id": "kb:provenance_record14"
-                        },
-                        {
-                            "@id": "kb:provenance_record15"
-                        },
-                        {
-                            "@id": "kb:provenance_record16"
-                        },
-                        {
-                            "@id": "kb:provenance_record17"
-                        },
-                        {
-                            "@id": "kb:provenance_record18"
-                        },
-                        {
-                            "@id": "kb:provenance_record19"
-                        },
-                        {
-                            "@id": "kb:provenance_record20"
-                        },
-                        {
-                            "@id": "kb:provenance_record21"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:provenance_record9"
                 },
+                {
+                    "@id": "kb:provenance_record10"
+                },
+                {
+                    "@id": "kb:provenance_record11"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance_record13"
+                },
+                {
+                    "@id": "kb:provenance_record14"
+                },
+                {
+                    "@id": "kb:provenance_record15"
+                },
+                {
+                    "@id": "kb:provenance_record16"
+                },
+                {
+                    "@id": "kb:provenance_record17"
+                },
+                {
+                    "@id": "kb:provenance_record18"
+                },
+                {
+                    "@id": "kb:provenance_record19"
+                },
+                {
+                    "@id": "kb:provenance_record20"
+                },
+                {
+                    "@id": "kb:provenance_record21"
+                }
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            },
+            "uco-core:hasFacet": [
                 {
                     "@type": [
                         "acme:PlasoParserArgumentsFacet",
