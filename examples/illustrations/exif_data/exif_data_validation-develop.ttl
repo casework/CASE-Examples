@@ -1,6 +1,7 @@
 @prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
 @prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
 @prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
+@prefix location: <https://unifiedcyberontology.org/ontology/uco/location#> .
 @prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -16,42 +17,30 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/camera_action1> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:Facet ;
+				sh:class location:Location ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
+				sh:path action:location ;
 			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:instrument <http://example.org/kb/camera1> ;
-				action:location <http://example.org/kb/location1> ;
-				action:result <http://example.org/kb/digital_photograph1> ;
-			] ;
+			sh:value <http://example.org/kb/location1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/forensic_action7> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:Facet ;
+				sh:class location:Location ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:hasFacet ;
+				sh:path action:location ;
 			] ;
-			sh:value [
-				a action:ActionReferencesFacet ;
-				action:environment <http://example.org/kb/forensic_lab_computer1> ;
-				action:instrument <http://example.org/kb/annotator_tool1> ;
-				action:location <http://example.org/kb/forensic_lab1> ;
-				action:performer <http://example.org/kb/examiner1> ;
-				action:result <http://example.org/kb/annotation1> ;
-			] ;
+			sh:value <http://example.org/kb/forensic_lab1> ;
 		] ,
 		[
 			a sh:ValidationResult ;
