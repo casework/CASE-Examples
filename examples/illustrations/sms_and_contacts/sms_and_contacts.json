@@ -7,6 +7,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -168,9 +169,19 @@
                 },
                 {
                     "@type": "uco-observable:EmailAccountFacet",
-                    "uco-observable:value": "jdoe@example.com"
+                    "uco-observable:emailAddress": {
+                        "@id": "kb:email-address-b145c7fe-e666-49b6-82a6-9436459a34fb"
+                    }
                 }
             ]
+        },
+        {
+            "@id": "kb:email-address-b145c7fe-e666-49b6-82a6-9436459a34fb",
+            "@type": "uco-observable:EmailAddress",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:EmailAddressFacet",
+                "uco-observable:addressValue": "jdoe@example.com"
+            }
         },
         {
             "@id": "kb:phone_account3",

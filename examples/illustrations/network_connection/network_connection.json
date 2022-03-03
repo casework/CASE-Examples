@@ -71,8 +71,7 @@
         },
         {
             "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b",
-            "@type": "uco-core:UcoObject",
-            "rdfs:comment": "TODO - It was not documented whether this UcoObject was a person, role, tool, or something else."
+            "@type": "uco-identity:Identity"
         },
         {
             "@id": "kb:investigator1-uuid",
