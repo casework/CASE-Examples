@@ -26,7 +26,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -76,7 +76,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -127,7 +127,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -169,7 +169,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -215,7 +215,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -257,7 +257,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -306,7 +306,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {

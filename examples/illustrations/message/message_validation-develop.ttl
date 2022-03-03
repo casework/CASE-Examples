@@ -14,40 +14,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://whatsapp.com/attachments/thumbnails/1.png" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AttachmentFacet ;
-				observable:url "http://whatsapp.com/attachments/thumbnails/1.png" ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
-			sh:resultPath observable:url ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:url ;
-			] ;
-			sh:value "http://whatsapp.com/attachments/thumbnails/1.png" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
 				a observable:OperatingSystemFacet ;
 				core:name "Android" ;
 				observable:manufacturer "Google" ;
