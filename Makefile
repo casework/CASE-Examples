@@ -16,9 +16,15 @@ SHELL := /bin/bash
 PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 all: \
-  .venv.done.log
+  .dependencies.done.log
 	$(MAKE) \
 	  --directory examples/illustrations
+
+.dependencies.done.log: \
+  .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+	touch $@
 
 # Submodules are checked for having been cloned ever.  A global git
 # submodule udpate command is not run, to prevent resetting any pointers
@@ -73,12 +79,6 @@ all: \
 	      --requirement requirements.txt
 	touch $@
 
-.dependencies.done.log: \
-  .venv.done.log
-	$(MAKE) \
-	  --directory dependencies
-	touch $@
-
 check: \
   .dependencies.done.log
 	$(MAKE) \
@@ -88,6 +88,11 @@ check: \
 clean:
 	@$(MAKE) \
 	  --directory examples/illustrations \
+	  clean
+	@rm -f \
+	  .dependencies.done.log
+	@$(MAKE) \
+	  --directory dependencies \
 	  clean
 	@rm -f \
 	  .git_submodule_init.done.log \
