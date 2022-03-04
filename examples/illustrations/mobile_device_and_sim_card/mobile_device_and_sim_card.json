@@ -19,14 +19,18 @@
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:model": "MG472ZD/A",
                     "uco-observable:serialNumber": "F17RN4DXXXXX"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:version": "11.2.6",
                     "uco-observable:installDate": {
                         "@type": "xsd:dateTime",
@@ -57,6 +61,11 @@
                     "uco-observable:addressValue": "DC:41:5F:44:48:25"
                 }
             ]
+        },
+        {
+            "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Apple"
         },
         {
             "@id": "kb:trace-relationship1-uuid",

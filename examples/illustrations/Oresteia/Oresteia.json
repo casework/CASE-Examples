@@ -472,13 +472,20 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
+        },
+        {
             "@id": "kb:cassandra-device-uuid",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
-                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
                     "uco-observable:model": "SM-G925F Galaxy S6 Edge",
                     "uco-observable:serialNumber": "FDG344657"
                 },
@@ -659,12 +666,19 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Apple"
+        },
+        {
             "@id": "kb:clytemnestra-device-uuid",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:deviceType": "iPhone",
                     "uco-observable:model": "MG552",
                     "uco-observable:serialNumber": "F18Q4LGRG5MD"
@@ -705,7 +719,9 @@
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:version": "10.3"
                 },
                 {
@@ -946,11 +962,18 @@
             ]
         },
         {
+            "@id": "kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Zeus S.A."
+        },
+        {
             "@id": "kb:tool1-uuid",
             "@type": "uco-tool:Tool",
             "uco-core:name": "MobileExtractor",
             "uco-tool:toolType": "Extraction",
-            "uco-tool:creator": "Zeus",
+            "uco-tool:creator": {
+                "@id": "kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4"
+            },
             "uco-tool:version": "5.3"
         },
         {
@@ -1083,11 +1106,18 @@
             ]
         },
         {
+            "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Joachim Metz"
+        },
+        {
             "@id": "kb:tool2-uuid",
             "@type": "uco-tool:Tool",
             "uco-core:name": "Plaso",
             "uco-tool:toolType": "Extraction",
-            "uco-tool:creator": "Joachim Metz",
+            "uco-tool:creator": {
+                "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
+            },
             "uco-tool:version": "1.5.2_201701013",
             "uco-core:hasFacet": [
                 {
@@ -1147,7 +1177,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "sqlite/android_sms",
             "uco-tool:toolType": "Parser",
-            "uco-tool:creator": "Joachim Metz",
+            "uco-tool:creator": {
+                "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
+            },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-tool:ToolConfigurationTypeFacet",

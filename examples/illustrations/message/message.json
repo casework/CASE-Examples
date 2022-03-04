@@ -5,11 +5,17 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
+        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
         "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
         "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
+        {
+            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Google"
+        },
         {
             "@id": "kb:os1",
             "@type": "uco-observable:OperatingSystem",
@@ -17,7 +23,9 @@
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
-                    "uco-observable:manufacturer": "Google",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+                    },
                     "uco-observable:version": "5.4.3"
                 }
             ]
