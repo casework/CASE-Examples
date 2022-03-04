@@ -642,29 +642,6 @@
 				sh:nodeKind sh:Literal ;
 				sh:path observable:isMultipart ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:EmailMessageFacet ;
-				observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
-				observable:from <http://example.org/kb/electra-emailaccount-uuid> ;
-				observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
-				observable:receivedTime "2017-06-21T13:44:23.400000+00:00"^^xsd:dateTime ;
-				observable:sentTime "2017-06-21T13:44:22.190000+00:00"^^xsd:dateTime ;
-				observable:subject "Revenge our father" ;
-				observable:to <http://example.org/kb/orestes-emailaccount-uuid> ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath observable:to ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:to ;
-			] ;
-			sh:value <http://example.org/kb/orestes-emailaccount-uuid> ;
 		]
 		;
 	.
