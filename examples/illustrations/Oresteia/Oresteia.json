@@ -1464,6 +1464,10 @@
             }
         },
         {
+            "@id": "kb:orestes-emailaccount-uuid",
+            "@type": "uco-observable:EmailAccount"
+        },
+        {
             "@id": "kb:electra-orestes-email-uuid",
             "@type": "uco-observable:EmailMessage",
             "uco-core:hasFacet": [
