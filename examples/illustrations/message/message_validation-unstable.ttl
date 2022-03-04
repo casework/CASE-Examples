@@ -1,6 +1,4 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
-@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -125,46 +123,6 @@
 				sh:severity sh:Info ;
 			] ;
 			sh:value "Attachment_Of" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:OperatingSystemFacet ;
-				core:name "Android" ;
-				observable:manufacturer "Google" ;
-				observable:version "5.4.3" ;
-			] ;
-			sh:resultMessage "Value does not have class identity:Identity" ;
-			sh:resultPath observable:manufacturer ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class identity:Identity ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:manufacturer ;
-			] ;
-			sh:value "Google" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:OperatingSystemFacet ;
-				core:name "Android" ;
-				observable:manufacturer "Google" ;
-				observable:version "5.4.3" ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
-			sh:resultPath observable:manufacturer ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class identity:Identity ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path observable:manufacturer ;
-			] ;
-			sh:value "Google" ;
 		]
 		;
 	.

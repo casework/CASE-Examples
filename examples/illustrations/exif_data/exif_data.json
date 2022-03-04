@@ -16,13 +16,20 @@
     },
     "@graph": [
         {
+            "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Canon"
+        },
+        {
             "@id": "kb:camera1",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Camera",
-                    "uco-observable:manufacturer": "Canon",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc"
+                    },
                     "uco-observable:model": "PowerShot SX540",
                     "uco-observable:serialNumber": "DC1234567"
                 }

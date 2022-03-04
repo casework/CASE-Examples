@@ -74,6 +74,10 @@
             "@type": "uco-identity:Identity"
         },
         {
+            "@id": "kb:NetworkAnalyserCorporation",
+            "@type": "uco-identity:Organization"
+        },
+        {
             "@id": "kb:investigator1-uuid",
             "@type": "uco-identity:Person"
         },
