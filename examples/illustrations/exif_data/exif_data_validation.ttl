@@ -1,4 +1,5 @@
 @prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -9,20 +10,64 @@
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
-	sh:result [
-		a sh:ValidationResult ;
-		sh:focusNode <http://example.org/kb/relationship1> ;
-		sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-		sh:resultPath core:kindOfRelationship ;
-		sh:resultSeverity sh:Violation ;
-		sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-		sh:sourceShape [
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path core:kindOfRelationship ;
-		] ;
-		sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
-	] ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship1> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+		]
+		;
 	.
 
