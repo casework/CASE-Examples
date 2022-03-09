@@ -1,28 +1,156 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
-	sh:result [
-		a sh:ValidationResult ;
-		sh:focusNode <http://example.org/kb/case1> ;
-		sh:resultMessage "Less than 1 values on kb:case1->investigation:investigationForm" ;
-		sh:resultPath investigation:investigationForm ;
-		sh:resultSeverity sh:Violation ;
-		sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-		sh:sourceShape [
-			sh:datatype vocab:InvestigationFormVocab ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path investigation:investigationForm ;
-		] ;
-	] ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/case1> ;
+			sh:resultMessage "Less than 1 values on kb:case1->investigation:investigationForm" ;
+			sh:resultPath investigation:investigationForm ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocab:InvestigationFormVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path investigation:investigationForm ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lifecycle1> ;
+			sh:resultMessage "Less than 1 values on kb:forensic_lifecycle1->action:phase" ;
+			sh:resultPath action:phase ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class action:ArrayOfAction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:phase ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/lifecycle_phase1> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/lifecycle_phase2> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/lifecycle_phase3> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/lifecycle_phase4> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/lifecycle_phase5> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role4> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:creatorUser ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:creatorUser ;
+			] ;
+			sh:value <http://example.org/kb/role4> ;
+		]
+		;
 	.
 

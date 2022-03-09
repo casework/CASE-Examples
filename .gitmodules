@@ -10,3 +10,6 @@
 [submodule "dependencies/UCO-develop"]
 	path = dependencies/UCO-develop
 	url = https://github.com/ucoProject/UCO.git
+[submodule "dependencies/CASE-unstable"]
+	path = dependencies/CASE-unstable
+	url = https://github.com/ajnelson-nist/CASE.git

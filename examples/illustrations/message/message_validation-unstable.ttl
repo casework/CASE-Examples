@@ -1,11 +1,129 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship2> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship2> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship3> ;
+			sh:resultMessage "Value is outside the default relationship vocabularies." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is outside the default relationship vocabularies." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:ActionRelationshipTypeVocab ;
+					]
+					[
+						sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+					]
+				) ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship3> ;
+			sh:resultMessage "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype vocabulary1:ObservableObjectRelationshipVocab ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:message "Value is outside the default vocabulary ObservableObjectRelationshipVocab." ;
+				sh:path core:kindOfRelationship ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Attachment_Of" ;
+		]
+		;
 	.
 

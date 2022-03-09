@@ -4,10 +4,10 @@
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
