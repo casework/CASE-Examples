@@ -12,7 +12,6 @@
         "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
         "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
         "uco-victim": "https://unifiedcyberontology.org/ontology/uco/victim#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -353,10 +352,7 @@
             "uco-core:target": {
                 "@id": "kb:phase1"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Mapped_Into"
-            },
+            "uco-core:kindOfRelationship": "Mapped_Into",
             "uco-core:isDirectional": true
         },
         {
@@ -414,10 +410,7 @@
             "uco-core:target": {
                 "@id": "kb:phase2"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Mapped_Into"
-            },
+            "uco-core:kindOfRelationship": "Mapped_Into",
             "uco-core:isDirectional": true
         },
         {
@@ -490,10 +483,7 @@
             "uco-core:target": {
                 "@id": "kb:phase2"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Mapped_Into"
-            },
+            "uco-core:kindOfRelationship": "Mapped_Into",
             "uco-core:isDirectional": true
         },
         {
@@ -558,10 +548,7 @@
             "uco-core:target": {
                 "@id": "kb:phase2"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Mapped_Into"
-            },
+            "uco-core:kindOfRelationship": "Mapped_Into",
             "uco-core:isDirectional": true
         },
         {
@@ -700,10 +687,7 @@
             "uco-core:target": {
                 "@id": "kb:phase3"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Mapped_Into"
-            },
+            "uco-core:kindOfRelationship": "Mapped_Into",
             "uco-core:isDirectional": true
         },
         {

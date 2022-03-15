@@ -38,10 +38,7 @@
                 "@id": "kb:device_partition3"
             },
             "uco-core:isDirectional": true,
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PathRelationFacet",
