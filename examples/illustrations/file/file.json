@@ -334,7 +334,7 @@
             "uco-core:target": {
                 "@id": "kb:image_partition"
             },
-            "uco-core:kindOfRelationship":"Contained_Within",
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
