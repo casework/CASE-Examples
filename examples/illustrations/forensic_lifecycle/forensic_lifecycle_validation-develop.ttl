@@ -1,5 +1,4 @@
 @prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
-@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
@@ -8,7 +7,6 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -44,81 +42,6 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path action:phase ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase1> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase2> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase3> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase4> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/lifecycle_phase5> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Mapped_Into"^^vocabulary1:ObservableObjectRelationshipVocab ;
 		] ,
 		[
 			a sh:ValidationResult ;

@@ -418,10 +418,7 @@
                     "@id": "kb:pcap-file-uuid"
                 }
             ],
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         },
         {
@@ -435,10 +432,7 @@
                     "@id": "kb:pcap-file-uuid"
                 }
             ],
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         },
         {
@@ -452,10 +446,7 @@
                     "@id": "kb:pcap-file-uuid"
                 }
             ],
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         }
     ]
