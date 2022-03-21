@@ -673,16 +673,11 @@
                     "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should clockSetting be a xsd:dateTime?",
-                        "TODO: MSISDN here may be the wrong type.  Why is a uuid indicated?",
                         "TODO: clockSetting as a time-point somewhat illustrates the scenario's specified skew of 25 hours, but might need a reference time-point."
                     ],
                     "uco-observable:keypadUnlockCode": "123789",
                     "uco-observable:IMEI": "359305065690067",
-                    "uco-observable:MSISDN": [
-                        {
-                            "@id": "kb:clytemnestra-mobileaccount-uuid"
-                        }
-                    ],
+                    "uco-observable:MSISDN": "1237471334",
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-21T06:36:24.35Z"
