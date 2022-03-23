@@ -36,11 +36,6 @@
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
-                    "uco-observable:MSISDN": [
-                        {
-                            "@id": "kb:mobile-account1-uuid"
-                        }
-                    ],
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2018-02-24T07:36:24.35Z"
@@ -91,6 +86,18 @@
                     "uco-observable:carrier": "Vodafone"
                 }
             ]
+        },
+        {
+            "@id": "kb:device-account-relationship1",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:mobile-device-uuid"
+            },
+            "uco-core:target": {
+                "@id": "kb:mobile-account1-uuid"
+            },
+            "uco-core:kindOfRelationship": "Has_Account",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:mobile-account1-uuid",
