@@ -1,5 +1,5 @@
-@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,34 +11,6 @@
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/extracted-connections-provenancerecord-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:extracted-connections-provenancerecord-uuid->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
@@ -56,16 +28,20 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/pcap-provenancerecord-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:pcap-provenancerecord-uuid->core:object" ;
-			sh:resultPath core:object ;
+			sh:focusNode [
+				a observable:URLFacet ;
+				observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:URLFacet ; uco-observable:path Literal("E:\\Traffic\\20090402-scenario.pcap") ]->observable:fullValue' ;
+			sh:resultPath observable:fullValue ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:fullValue ;
 			] ;
 		]
 		;
