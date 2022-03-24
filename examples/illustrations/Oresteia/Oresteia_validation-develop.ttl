@@ -1,10 +1,12 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -43,20 +45,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-4586742a-710a-454f-bcb8-b60e230ec1b2> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-4586742a-710a-454f-bcb8-b60e230ec1b2->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-4586742a-710a-454f-bcb8-b60e230ec1b2> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-4586742a-710a-454f-bcb8-b60e230ec1b2->investigation:investigationForm" ;
 			sh:resultPath investigation:investigationForm ;
 			sh:resultSeverity sh:Violation ;
@@ -72,20 +60,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220->investigation:investigationForm" ;
 			sh:resultPath investigation:investigationForm ;
 			sh:resultSeverity sh:Violation ;
@@ -96,20 +70,6 @@
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
 				sh:path investigation:investigationForm ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
 			] ;
 		] ,
 		[
@@ -159,20 +119,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd->investigation:investigationForm" ;
 			sh:resultPath investigation:investigationForm ;
 			sh:resultSeverity sh:Violation ;
@@ -187,72 +133,237 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/provenance-record1-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:provenance-record1-uuid->core:object" ;
-			sh:resultPath core:object ;
+			sh:focusNode [
+				a core:ConfidenceFacet ;
+				rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
+				core:confidence "Probably True" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:nonNegativeInteger" ;
+			sh:resultPath core:confidence ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:nonNegativeInteger ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:confidence ;
+			] ;
+			sh:value "Probably True" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a core:ConfidenceFacet ;
+				rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
+				core:confidence "Probably True" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:nonNegativeInteger" ;
+			sh:resultPath core:confidence ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:nonNegativeInteger ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:confidence ;
+			] ;
+			sh:value "Probably True" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/provenance-record2-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:provenance-record2-uuid->core:object" ;
-			sh:resultPath core:object ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/provenance-record3-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:provenance-record3-uuid->core:object" ;
-			sh:resultPath core:object ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/provenance-record4-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:provenance-record4-uuid->core:object" ;
-			sh:resultPath core:object ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/provenance-record5-uuid> ;
-			sh:resultMessage "Less than 1 values on kb:provenance-record5-uuid->core:object" ;
-			sh:resultPath core:object ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is not member of the vocabulary AccountTypeVocab." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:AccountTypeVocab ;
+						sh:in vocabulary1:AccountTypeVocab-members ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
+				sh:path observable:accountType ;
+			] ;
+			sh:value "Phone"^^vocabulary1:AccountTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accountIdentifier ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
+			sh:resultPath observable:accountType ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:OrConstraintComponent ;
+			sh:sourceShape [
+				sh:message "Value is not member of the vocabulary AccountTypeVocab." ;
+				sh:or (
+					[
+						sh:datatype vocabulary1:AccountTypeVocab ;
+						sh:in vocabulary1:AccountTypeVocab-members ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
+				sh:path observable:accountType ;
+			] ;
+			sh:value "Phone"^^vocabulary1:AccountTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailMessageFacet ;
+				observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
+				observable:from <http://example.org/kb/electra-emailaccount-uuid> ;
+				observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
+				observable:receivedTime "2017-06-21T13:44:23.400000+00:00"^^xsd:dateTime ;
+				observable:sentTime "2017-06-21T13:44:22.190000+00:00"^^xsd:dateTime ;
+				observable:subject "Revenge our father" ;
+				observable:to <http://example.org/kb/orestes-emailaccount-uuid> ;
+			] ;
+			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:EmailMessageFacet ; uco-observable:body Literal(\"To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom.\") ; uco-observable:from kb:electra-emailaccount-uuid ; uco-observable:messageID Literal(\"CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com\") ; uco-observable:receivedTime Literal(\"2017-06-21T13:44:23.400000+00:00\" = 2017-06-21 13:44:23.400000+00:00, datatype=xsd:dateTime) ; uco-observable:sentTime Literal(\"2017-06-21T13:44:22.190000+00:00\" = 2017-06-21 13:44:22.190000+00:00, datatype=xsd:dateTime) ; uco-observable:subject Literal(\"Revenge our father\") ; uco-observable:to kb:orestes-emailaccount-uuid ]->observable:isMimeEncoded" ;
+			sh:resultPath observable:isMimeEncoded ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:isMimeEncoded ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EmailMessageFacet ;
+				observable:body "To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom." ;
+				observable:from <http://example.org/kb/electra-emailaccount-uuid> ;
+				observable:messageID "CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com" ;
+				observable:receivedTime "2017-06-21T13:44:23.400000+00:00"^^xsd:dateTime ;
+				observable:sentTime "2017-06-21T13:44:22.190000+00:00"^^xsd:dateTime ;
+				observable:subject "Revenge our father" ;
+				observable:to <http://example.org/kb/orestes-emailaccount-uuid> ;
+			] ;
+			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:EmailMessageFacet ; uco-observable:body Literal(\"To me, too, grant this boon-dark death to deal unto Aegisthus, and to 'scape my doom.\") ; uco-observable:from kb:electra-emailaccount-uuid ; uco-observable:messageID Literal(\"CAKBqNfyKo+ZXtkz6DUjWpvHy6O82jTbkNA@mail.gmail.com\") ; uco-observable:receivedTime Literal(\"2017-06-21T13:44:23.400000+00:00\" = 2017-06-21 13:44:23.400000+00:00, datatype=xsd:dateTime) ; uco-observable:sentTime Literal(\"2017-06-21T13:44:22.190000+00:00\" = 2017-06-21 13:44:22.190000+00:00, datatype=xsd:dateTime) ; uco-observable:subject Literal(\"Revenge our father\") ; uco-observable:to kb:orestes-emailaccount-uuid ]->observable:isMultipart" ;
+			sh:resultPath observable:isMultipart ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:isMultipart ;
 			] ;
 		]
 		;

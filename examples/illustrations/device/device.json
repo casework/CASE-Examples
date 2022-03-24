@@ -4,12 +4,23 @@
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
+        {
+            "@id": "kb:organization-c240cf37-0556-439b-9a51-1ca41732010d",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Dell"
+        },
+        {
+            "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Microsoft"
+        },
         {
             "@id": "kb:forensic_lab_computer1-uuid",
             "@type": "uco-observable:Device",
@@ -20,14 +31,18 @@
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Computer",
-                    "uco-observable:manufacturer": "Dell",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-c240cf37-0556-439b-9a51-1ca41732010d"
+                    },
                     "uco-observable:model": "Inspiron 5000",
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Windows 7 Ultimate Edition",
-                    "uco-observable:manufacturer": "Microsoft",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
+                    },
                     "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601",
                     "uco-observable:installDate": {
                         "@type": "xsd:dateTime",

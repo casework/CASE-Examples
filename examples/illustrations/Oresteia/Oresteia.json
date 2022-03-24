@@ -7,15 +7,15 @@
         "draft": "http://example.org/draft#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-role": "https://unifiedcyberontology.org/ontology/uco/role#",
-        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd",
@@ -472,13 +472,20 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
+        },
+        {
             "@id": "kb:cassandra-device-uuid",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
-                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
                     "uco-observable:model": "SM-G925F Galaxy S6 Edge",
                     "uco-observable:serialNumber": "FDG344657"
                 },
@@ -659,12 +666,19 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Apple"
+        },
+        {
             "@id": "kb:clytemnestra-device-uuid",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:deviceType": "iPhone",
                     "uco-observable:model": "MG552",
                     "uco-observable:serialNumber": "F18Q4LGRG5MD"
@@ -700,7 +714,9 @@
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:version": "10.3"
                 },
                 {
@@ -739,27 +755,22 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-21T22:36:24.35Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:athens-warrant1-uuid"
+            },
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator2-uuid"
+            },
+            "uco-action:object": [],
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:athens-warrant1-uuid"
-                    },
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator2-uuid"
-                    },
-                    "uco-action:object": [],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record1-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-device-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record1-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-device-uuid"
                 }
             ]
         },
@@ -790,31 +801,26 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T08:01:23.14Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:athens-warrant1-uuid"
+            },
+            "uco-action:location": {
+                "@id": "kb:athenspd-evidenceroom-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:athens-warrant1-uuid"
-                    },
-                    "uco-action:location": {
-                        "@id": "kb:athenspd-evidenceroom-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record1-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-device-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record2-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record1-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-device-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record2-uuid"
                 }
             ]
         },
@@ -852,38 +858,35 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T08:39:19.24Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator1-uuid"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool1-uuid"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1-uuid"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool1-uuid"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic-computer1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record2-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-device-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record3-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record2-uuid"
                 },
+                {
+                    "@id": "kb:cassandra-device-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record3-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
+                }
+            ],
+            "uco-core:hasFacet": [
                 {
                     "@type": [
                         "MobileExtractor:ToolArgumentsFacet",
@@ -954,11 +957,18 @@
             ]
         },
         {
+            "@id": "kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Zeus S.A."
+        },
+        {
             "@id": "kb:tool1-uuid",
             "@type": "uco-tool:Tool",
             "uco-core:name": "MobileExtractor",
             "uco-tool:toolType": "Extraction",
-            "uco-tool:creator": "Zeus",
+            "uco-tool:creator": {
+                "@id": "kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4"
+            },
             "uco-tool:version": "5.3"
         },
         {
@@ -1085,11 +1095,18 @@
             ]
         },
         {
+            "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Joachim Metz"
+        },
+        {
             "@id": "kb:tool2-uuid",
             "@type": "uco-tool:Tool",
             "uco-core:name": "Plaso",
             "uco-tool:toolType": "Extraction",
-            "uco-tool:creator": "Joachim Metz",
+            "uco-tool:creator": {
+                "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
+            },
             "uco-tool:version": "1.5.2_201701013",
             "uco-core:hasFacet": [
                 {
@@ -1149,7 +1166,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "sqlite/android_sms",
             "uco-tool:toolType": "Parser",
-            "uco-tool:creator": "Joachim Metz",
+            "uco-tool:creator": {
+                "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
+            },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-tool:ToolConfigurationTypeFacet",
@@ -1180,40 +1199,35 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T10:31:19.24Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator1-uuid"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool2-uuid"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1-uuid"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool2-uuid"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic-computer1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record3-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:investigative-action5-uuid"
-                        },
-                        {
-                            "@id": "kb:provenance-record4-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record3-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:investigative-action5-uuid"
+                },
+                {
+                    "@id": "kb:provenance-record4-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
                 }
             ]
         },
@@ -1229,49 +1243,44 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T10:31:19.24Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigative-action4-uuid"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool3-uuid"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigative-action4-uuid"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool3-uuid"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic-computer1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record4-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record5-uuid"
-                        },
-                        {
-                            "@id": "kb:sms-message1-uuid"
-                        },
-                        {
-                            "@id": "kb:sms-message2-uuid"
-                        },
-                        {
-                            "@id": "kb:argive-elder1-phoneaccnt-uuid"
-                        },
-                        {
-                            "@id": "kb:argive-elder2-phoneaccnt-uuid"
-                        },
-                        {
-                            "@id": "kb:argive-elder3-phoneaccnt-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record4-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record5-uuid"
+                },
+                {
+                    "@id": "kb:sms-message1-uuid"
+                },
+                {
+                    "@id": "kb:sms-message2-uuid"
+                },
+                {
+                    "@id": "kb:argive-elder1-phoneaccnt-uuid"
+                },
+                {
+                    "@id": "kb:argive-elder2-phoneaccnt-uuid"
+                },
+                {
+                    "@id": "kb:argive-elder3-phoneaccnt-uuid"
                 }
             ]
         },
@@ -1442,6 +1451,10 @@
                 "@type": "uco-observable:EmailAddressFacet",
                 "uco-observable:addressValue": "electra.pleiade@sevensisters.com"
             }
+        },
+        {
+            "@id": "kb:orestes-emailaccount-uuid",
+            "@type": "uco-observable:EmailAccount"
         },
         {
             "@id": "kb:electra-orestes-email-uuid",

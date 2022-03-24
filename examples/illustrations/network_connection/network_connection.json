@@ -4,13 +4,13 @@
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "draft": "http://example.org/draft#",
-        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "kb:bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab",
@@ -74,6 +74,10 @@
             "@type": "uco-identity:Identity"
         },
         {
+            "@id": "kb:NetworkAnalyserCorporation",
+            "@type": "uco-identity:Organization"
+        },
+        {
             "@id": "kb:investigator1-uuid",
             "@type": "uco-identity:Person"
         },
@@ -98,34 +102,29 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:pcap-tool-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:pcap-tool-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:pcap-provenancerecord-uuid"
-                        },
-                        {
-                            "@id": "kb:pcap-file-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:extracted-connections-provenancerecord-uuid"
-                        },
-                        {
-                            "@id": "kb:network-connection1-uuid"
-                        },
-                        {
-                            "@id": "kb:network-connection2-uuid"
-                        },
-                        {
-                            "@id": "kb:network-connection3-uuid"
-                        }
-                    ]
+                    "@id": "kb:pcap-provenancerecord-uuid"
+                },
+                {
+                    "@id": "kb:pcap-file-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:extracted-connections-provenancerecord-uuid"
+                },
+                {
+                    "@id": "kb:network-connection1-uuid"
+                },
+                {
+                    "@id": "kb:network-connection2-uuid"
+                },
+                {
+                    "@id": "kb:network-connection3-uuid"
                 }
             ],
             "uco-action:endTime": {

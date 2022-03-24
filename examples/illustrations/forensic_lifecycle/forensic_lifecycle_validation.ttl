@@ -1,11 +1,11 @@
-@prefix action: <https://unifiedcyberontology.org/ontology/uco/action#> .
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
-@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix types: <https://unifiedcyberontology.org/ontology/uco/types#> .
+@prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
