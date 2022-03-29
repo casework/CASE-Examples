@@ -68,6 +68,11 @@ all: \
 	  .lib.done.log
 	touch $@
 
+.lib.done.log:
+	$(MAKE) \
+	  --directory lib
+	touch $@
+
 .venv.done.log: \
   .git_submodule_init.done.log \
   requirements.txt
