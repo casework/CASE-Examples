@@ -5,10 +5,11 @@
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -49,10 +50,7 @@
             "uco-core:target": {
                 "@id": "kb:decoded_attachment"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -175,10 +173,7 @@
             "uco-core:target": {
                 "@id": "kb:decrypted_blob"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -274,10 +269,7 @@
             "uco-core:target": {
                 "@id": "kb:sqlite_database"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -343,10 +335,7 @@
             "uco-core:target": {
                 "@id": "kb:image_partition"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -388,15 +377,12 @@
             "uco-core:target": {
                 "@id": "kb:android_image"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DiskPartitionFacet",
-                    "uco-observable:partitionID": 3
+                    "uco-observable:partitionID": "3"
                 }
             ]
         },
@@ -451,7 +437,7 @@
                 "@id": "kb:android_image"
             },
             "uco-core:target": {
-                "@id": "kb:forensic_lab_computer1"
+                "@id": "kb:forensic_lab_computer1-uuid"
             },
             "uco-core:kindOfRelationship": "Stored_On",
             "uco-core:isDirectional": true,
@@ -469,10 +455,20 @@
                 "@id": "kb:android_image"
             },
             "uco-core:target": {
-                "@id": "kb:android_device1"
+                "@id": "kb:android_device1-uuid"
             },
             "uco-core:kindOfRelationship": "Forensic_Image_Of",
             "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:organization-c240cf37-0556-439b-9a51-1ca41732010d",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Dell"
+        },
+        {
+            "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Microsoft"
         },
         {
             "@id": "kb:forensic_lab_computer1-uuid",
@@ -485,14 +481,18 @@
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Computer",
-                    "uco-observable:manufacturer": "Dell",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-c240cf37-0556-439b-9a51-1ca41732010d"
+                    },
                     "uco-observable:model": "Inspiron 5000",
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Windows 7 Ultimate Edition",
-                    "uco-observable:manufacturer": "Microsoft",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
+                    },
                     "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
                 },
                 {
@@ -502,11 +502,24 @@
                     "uco-observable:totalRam": 4294967296
                 },
                 {
-                    "@type": "acme:InventoryComputer",
+                    "@type": [
+                        "acme:InventoryComputerFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:name": "DFL-03",
                     "acme:inventoryNumber": "10503"
                 }
             ]
+        },
+        {
+            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Google"
+        },
+        {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
         },
         {
             "@id": "kb:android_device1-uuid",
@@ -519,14 +532,18 @@
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
-                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
                     "uco-observable:model": "I9500 Galaxy S4",
                     "uco-observable:serialNumber": "123456SAM"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
-                    "uco-observable:manufacturer": "Google",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+                    },
                     "uco-observable:version": "4.2.2"
                 },
                 {
