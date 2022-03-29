@@ -71,7 +71,7 @@
         },
         {
             "@id": "kb:reconstructed_file",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -102,7 +102,7 @@
         },
         {
             "@id": "kb:data_piece0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -133,7 +133,7 @@
         },
         {
             "@id": "kb:data_piece1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -164,7 +164,7 @@
         },
         {
             "@id": "kb:data_piece2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -261,7 +261,10 @@
         },
         {
             "@id": "kb:android_image",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
