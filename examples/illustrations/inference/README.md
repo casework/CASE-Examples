@@ -430,7 +430,7 @@ The following inferences can be stated in words as the observations are exceedin
         "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de",
         "@type": "drafting:Inference",
         "drafting:hypothesis": {
-            "@id": "hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+            "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
         },
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
@@ -575,7 +575,7 @@ The following inferences can be stated in words as the observations are exceedin
         "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
         "@type": "drafting:Inference",
         "drafting:hypothesis": {
-            "@id": "hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
+            "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
         },
         "drafting:evaluationType": "Probability",
         "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",

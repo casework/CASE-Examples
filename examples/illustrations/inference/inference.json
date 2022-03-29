@@ -116,7 +116,7 @@
                 "@value": "0.95"
             },
             "drafting:hypothesis": {
-                "@id": "hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+                "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
             },
             "drafting:usedMethod": {
                 "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
@@ -165,7 +165,7 @@
                 "@value": "0.9"
             },
             "drafting:hypothesis": {
-                "@id": "hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
+                "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
             },
             "drafting:usedMethod": {
                 "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
