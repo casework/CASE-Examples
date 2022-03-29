@@ -25,3 +25,17 @@ Mapping notes & respective JSON-LD output:
 - [Raw Data](examples/illustrations/raw_data/raw_data.json)
 - [Reconstructed File](examples/illustrations/reconstructed_file/reconstructed_file.json) (*[info](examples/illustrations/reconstructed_file/)*)
 - [SMS and Contacts](examples/illustrations/sms_and_contacts/sms_and_contacts.json)
+
+
+This project uses [the `pre-commit` tool](https://pre-commit.com/) for linting the JSON files and ensuring consistent formatting. It can be installed with `pip`:
+```bash
+pip install pre-commit
+pre-commit --version
+```
+
+The `pre-commit` tool hooks into Git's commit machinery to run a set of linters and static analyzers over each change. To install `pre-commit` into Git's hooks, run:
+```bash
+pre-commit install
+```
+
+To uninstall `pre-commit`, run either `pre-commit uninstall` or `rm .git/hooks/pre-commit`.
