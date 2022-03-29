@@ -27,7 +27,7 @@ Mapping notes & respective JSON-LD output:
 - [SMS and Contacts](examples/illustrations/sms_and_contacts/sms_and_contacts.json)
 
 
-This project uses [the `pre-commit` tool](https://pre-commit.com/) for linting the JSON files and ensuring consistent formatting. The easiest way to install it is with `pip`:
+This project uses [the `pre-commit` tool](https://pre-commit.com/) for linting the JSON files and ensuring consistent formatting. It can be installed with `pip`:
 ```bash
 pip install pre-commit
 pre-commit --version
@@ -37,3 +37,5 @@ The `pre-commit` tool hooks into Git's commit machinery to run a set of linters 
 ```bash
 pre-commit install
 ```
+
+To uninstall `pre-commit`, run either `pre-commit uninstall` or `rm .git/hooks/pre-commit`.
