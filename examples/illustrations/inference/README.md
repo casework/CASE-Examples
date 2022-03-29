@@ -53,58 +53,53 @@ The following inferences can be stated in words as "the observations are exceedi
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
-        "uco-core:hasFacet": [
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
             {
-                "@type": "uco-action:ActionReferencesFacet",
-                "uco-action:location": {
-                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
-                },
-                "uco-action:performer": {
-                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
-                },
-                "uco-action:instrument": {
-                    "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
-                },
-                "uco-action:environment": {
-                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
-                },
-                "uco-action:object": [
-                    {
-                        "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41"
-                    },
-                    {
-                        "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-                    },
-                    {
-                        "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
-                    },
-                    {
-                        "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
-                    },
-                    {
-                        "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
-                    },
-                    {
-                        "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
-                    }
-                ],
-                "uco-action:result": [
-                    {
-                        "@id": "kb:provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16"
-                    },
-                    {
-                        "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
-                    },
-                    {
-                        "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
-                    },
-                    {
-                        "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576"
-                    },
-                    {
-                        "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
-                    }
-                ]
+                "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41"
+            },
+            {
+                "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
+            },
+            {
+                "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
+            },
+            {
+                "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
+            },
+            {
+                "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16"
+            },
+            {
+                "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
+            },
+            {
+                "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
+            },
+            {
+                "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576"
+            },
+            {
+                "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
             }
         ]
     },
@@ -200,12 +195,8 @@ To ask whether the file is `Fully Recovered` is the wrong question because it do
 
 Rather, the question is "Which class/category of file recovery is more supported by the evidence?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
 
-|    | ?lStatement                      | ?lEvaluationType   |   ?lEvidenceEvaluation | ?lEvaluationRationale                                                                                                                   |
-|----|----------------------------------|--------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-|  0 | Fully recovered                  | C-Scale            |                    0.1 | Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file. |
-|  1 | Partially recovered              | C-Scale            |                    0.1 | No fragment of recovered content could be attributed to this file.                                                                      |
-|  2 | Only name and metadata recovered | C-Scale            |                    5.5 | Filename and metadata were recovered for this file, but no associated content was recovered.                                            |
-|  3 | Only name recovered              | C-Scale            |                    0.1 | Metadata was recovered along with filename, but no associated content was recovered.                                                    |
+| ?lStatement   | ?lEvaluationType   | ?lEvidenceEvaluation   | ?lEvaluationRationale   |
+|---------------|--------------------|------------------------|-------------------------|
 
 ## Example - Machine learning and image location
 
@@ -229,46 +220,41 @@ Further forensic analysis is performed of the photograph and its metadata, which
             "@type": "xsd:dateTime",
             "@value": "2021-05-02T10:12:00.00Z"
         },
-        "uco-core:hasFacet": [
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
             {
-                "@type": "uco-action:ActionReferencesFacet",
-                "uco-action:location": {
-                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
-                },
-                "uco-action:performer": {
-                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
-                },
-                "uco-action:instrument": {
-                    "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
-                },
-                "uco-action:environment": {
-                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
-                },
-                "uco-action:object": [
-                    {
-                        "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a"
-                    },
-                    {
-                        "@id": "kb:provenance-record-9e555155-a9bc-43ef-95a1-aeb83fb3ca72"
-                    },
-                    {
-                        "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
-                    },
-                    {
-                        "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
-                    },
-                    {
-                        "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
-                    }
-                ],
-                "uco-action:result": [
-                    {
-                        "@id": "kb:provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7"
-                    },
-                    {
-                        "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7"
-                    }
-                ]
+                "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a"
+            },
+            {
+                "@id": "kb:provenance-record-9e555155-a9bc-43ef-95a1-aeb83fb3ca72"
+            },
+            {
+                "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+            },
+            {
+                "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+            },
+            {
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7"
+            },
+            {
+                "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7"
             }
         ]
     },
@@ -364,55 +350,50 @@ The following inferences can be stated in words as the observations are exceedin
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
-        "uco-core:hasFacet": [
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
             {
-                "@type": "uco-action:ActionReferencesFacet",
-                "uco-action:location": {
-                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
-                },
-                "uco-action:performer": {
-                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
-                },
-                "uco-action:instrument": {
-                    "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
-                },
-                "uco-action:environment": {
-                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
-                },
-                "uco-action:object": [
-                    {
-                        "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
-                    },
-                    {
-                        "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
-                    },
-                    {
-                        "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
-                    },
-                    {
-                        "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
-                    },
-                    {
-                        "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
-                    },
-                    {
-                        "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-                    },
-                    {
-                        "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                    }
-                ],
-                "uco-action:result": [
-                    {
-                        "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57"
-                    },
-                    {
-                        "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
-                    },
-                    {
-                        "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
-                    }
-                ]
+                "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+            },
+            {
+                "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
+            },
+            {
+                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+            },
+            {
+                "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
+            },
+            {
+                "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+            },
+            {
+                "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+            },
+            {
+                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57"
+            },
+            {
+                "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
+            },
+            {
+                "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
             }
         ]
     },
@@ -509,55 +490,50 @@ The following inferences can be stated in words as the observations are exceedin
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
-        "uco-core:hasFacet": [
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
             {
-                "@type": "uco-action:ActionReferencesFacet",
-                "uco-action:location": {
-                    "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
-                },
-                "uco-action:performer": {
-                    "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
-                },
-                "uco-action:instrument": {
-                    "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
-                },
-                "uco-action:environment": {
-                    "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
-                },
-                "uco-action:object": [
-                    {
-                        "@id": "kb:provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d"
-                    },
-                    {
-                        "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
-                    },
-                    {
-                        "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
-                    },
-                    {
-                        "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
-                    },
-                    {
-                        "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
-                    },
-                    {
-                        "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
-                    },
-                    {
-                        "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca"
-                    }
-                ],
-                "uco-action:result": [
-                    {
-                        "@id": "kb:provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d"
-                    },
-                    {
-                        "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
-                    },
-                    {
-                        "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
-                    }
-                ]
+                "@id": "kb:provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d"
+            },
+            {
+                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
+            },
+            {
+                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
+            },
+            {
+                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
+            },
+            {
+                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
+            },
+            {
+                "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
+            },
+            {
+                "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d"
+            },
+            {
+                "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+            },
+            {
+                "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
             }
         ]
     },
