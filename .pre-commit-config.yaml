@@ -1,0 +1,11 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v2.3.0
+    hooks:
+    -   id: check-json
+    -   id: pretty-format-json
+        args:
+            - --autofix
+            - --indent=4
+            - --no-ensure-ascii
+            - --no-sort-keys
