@@ -15,66 +15,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.95"^^xsd:float ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath drafting:hypothesis ;
 			sh:resultSeverity sh:Violation ;
@@ -103,21 +43,6 @@
 				sh:path drafting:hypothesis ;
 			] ;
 			sh:value <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1c050613-1144-4622-853a-48291f63ef54> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.1"^^xsd:float ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -154,66 +79,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.9"^^xsd:float ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath drafting:hypothesis ;
 			sh:resultSeverity sh:Violation ;
@@ -242,21 +107,6 @@
 				sh:path drafting:hypothesis ;
 			] ;
 			sh:value <http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.1"^^xsd:float ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -293,21 +143,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/inference-3c0014ff-8616-4103-915f-54a69f486576> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "5.5"^^xsd:float ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-3c0014ff-8616-4103-915f-54a69f486576> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath drafting:hypothesis ;
 			sh:resultSeverity sh:Violation ;
@@ -336,66 +171,6 @@
 				sh:path drafting:hypothesis ;
 			] ;
 			sh:value <http://example.org/kb/hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.05"^^xsd:float ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -432,66 +207,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath drafting:basisEvidence ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				owl:minCount "1"^^xsd:integer ;
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:basisEvidence ;
-			] ;
-			sh:value <http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.1"^^xsd:float ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath drafting:hypothesis ;
 			sh:resultSeverity sh:Violation ;
@@ -520,21 +235,6 @@
 				sh:path drafting:hypothesis ;
 			] ;
 			sh:value <http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-4b880bde-9afb-4c60-a277-29f53a0df283> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.1"^^xsd:float ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -586,21 +286,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.9"^^xsd:float ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
 			sh:resultPath drafting:hypothesis ;
 			sh:resultSeverity sh:Violation ;
@@ -644,21 +329,6 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path drafting:usedMethod ;
 			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:evidenceEvaluation ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:evidenceEvaluation ;
-			] ;
-			sh:value "0.9"^^xsd:float ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -721,278 +391,6 @@
 				sh:path uco-core:kindOfRelationship ;
 			] ;
 			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7> ,
-					<http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ,
-					<http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ,
-					<http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ,
-					<http://example.org/kb/provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d> ,
-					<http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ,
-					<http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ,
-					<http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ,
-					<http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7> ,
-					<http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ,
-					<http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ,
-					<http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ,
-					<http://example.org/kb/provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d> ,
-					<http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ,
-					<http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ,
-					<http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ,
-					<http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7> ,
-					<http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ,
-					<http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ,
-					<http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ,
-					<http://example.org/kb/provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d> ,
-					<http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ,
-					<http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ,
-					<http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ,
-					<http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7> ,
-					<http://example.org/kb/directory-d8e55546-6813-40a7-9207-c4b39e5af403> ,
-					<http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ,
-					<http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ,
-					<http://example.org/kb/provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d> ,
-					<http://example.org/kb/rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa> ,
-					<http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ,
-					<http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ,
-					<http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/rbin-bc573937-f0ef-4695-8a12-2217218d4185> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ,
-					<http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ,
-					<http://example.org/kb/prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8> ,
-					<http://example.org/kb/provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c> ,
-					<http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ,
-					<http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ,
-					<http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ,
-					<http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ,
-					<http://example.org/kb/provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ,
-					<http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ,
-					<http://example.org/kb/prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8> ,
-					<http://example.org/kb/provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c> ,
-					<http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ,
-					<http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ,
-					<http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ,
-					<http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ,
-					<http://example.org/kb/provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ,
-					<http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ,
-					<http://example.org/kb/prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8> ,
-					<http://example.org/kb/provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c> ,
-					<http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ,
-					<http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ,
-					<http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ,
-					<http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ,
-					<http://example.org/kb/provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-action:ActionReferencesFacet ;
-				uco-action:environment <http://example.org/kb/forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037> ;
-				uco-action:instrument <http://example.org/kb/massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845> ;
-				uco-action:location <http://example.org/kb/lab-c44e4679-26e3-4585-aaa1-86110db936f8> ;
-				uco-action:object
-					<http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ,
-					<http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ,
-					<http://example.org/kb/prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8> ,
-					<http://example.org/kb/provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c> ,
-					<http://example.org/kb/registry-b38dc916-acc8-40a7-a52d-65f435ec2850> ,
-					<http://example.org/kb/sdelete-30d63040-d606-4636-8aa2-ea16e20365ee> ,
-					<http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e>
-					;
-				uco-action:performer <http://example.org/kb/forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43> ;
-				uco-action:result
-					<http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ,
-					<http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ,
-					<http://example.org/kb/provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57>
-					;
-			] ;
-			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
-			sh:resultPath uco-action:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class uco-core:UcoObject ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path uco-action:object ;
-			] ;
-			sh:value <http://example.org/kb/wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e> ;
 		]
 		;
 	.
