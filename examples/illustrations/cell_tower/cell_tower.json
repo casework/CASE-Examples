@@ -8,6 +8,7 @@
         "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
         "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
         "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
+        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
