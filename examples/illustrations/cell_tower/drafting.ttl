@@ -99,6 +99,12 @@ drafting:AntennaFacet
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
+			sh:path drafting:height ;
+		] ,
+		[
+			sh:datatype xsd:decimal ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
 			sh:path drafting:skew ;
 		]
 		;
@@ -183,6 +189,13 @@ drafting:elevation
 	a owl:DatatypeProperty ;
 	rdfs:label "elevation"@en ;
 	rdfs:comment "The angle in degrees of the antenna from the local horizontal plane."@en ;
+	rdfs:range xsd:decimal ;
+	.
+
+drafting:height
+	a owl:DatatypeProperty ;
+	rdfs:label "height"@en ;
+	rdfs:comment "The height of the antenna in meters from the ground."@en ;
 	rdfs:range xsd:decimal ;
 	.
 
