@@ -90,13 +90,20 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
+        },
+        {
             "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
             "@type": "uco-observable:Device",
             "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
-                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
                     "uco-observable:model": "SM-G925F",
                     "uco-observable:serialNumber": "RF8H31GS5SF"
                 },
@@ -107,7 +114,9 @@
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
-                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
                     "uco-observable:version": "6.0.1"
                 },
                 {
