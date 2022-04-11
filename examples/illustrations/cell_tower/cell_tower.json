@@ -153,9 +153,7 @@
                         "uco-core:name": "Telcom Italia"
                     },
                     "uco-observable:ICCID": "89390100002217635543",
-                    "uco-observable:IMSI": {
-                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
-                    }
+                    "uco-observable:IMSI": "1234567890ABCDEF"
                 }
             ]
         },
