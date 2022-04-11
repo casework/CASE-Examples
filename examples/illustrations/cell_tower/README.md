@@ -39,9 +39,10 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
                     "@type": "drafting:AntennaFacet",
                     "drafting:azimuth": "45",
                     "drafting:elevation": "5",
+                    "drafting:skew": "10",
                     "drafting:horizontalBeamWidth": "110",
                     "drafting:signalStrength": "20",
-                    "drafting:skew": "10"
+                    "drafting:height": "25"
                 }
             ]
         },
