@@ -1,48 +1,18 @@
-@prefix core: <https://unifiedcyberontology.org/ontology/uco/core#> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix drafting: <http://example.org/ontology/drafting#> .
-@prefix identity: <https://unifiedcyberontology.org/ontology/uco/identity#> .
-@prefix observable: <https://unifiedcyberontology.org/ontology/uco/observable#> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix vocabulary1: <https://unifiedcyberontology.org/ontology/uco/vocabulary#> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Contained_Within"^^<uco-vocabulary:ObservableObjectRelationshipVocab> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/afc48c35-c65d-41e4-843b-720f1ad23d16> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
-			] ;
-			sh:value "Connected_To"^^<vocabulary:ObservableObjectRelationshipVocab> ;
-		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
@@ -73,17 +43,97 @@
 				observable:accountType "Phone" ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage "Value is not Literal with datatype vocabulary1:AccountTypeVocab" ;
+			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
 			sh:resultPath observable:accountType ;
-			sh:resultSeverity sh:Violation ;
+			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
 			sh:sourceShape [
 				sh:datatype vocabulary1:AccountTypeVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
+				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
 				sh:path observable:accountType ;
+				sh:severity sh:Info ;
 			] ;
 			sh:value "Phone" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:manufacturer "Samsung" ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:manufacturer "Samsung" ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Android" ;
+				observable:manufacturer "Samsung" ;
+				observable:version "6.0.1" ;
+			] ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Android" ;
+				observable:manufacturer "Samsung" ;
+				observable:version "6.0.1" ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath observable:manufacturer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:manufacturer ;
+			] ;
+			sh:value "Samsung" ;
 		] ,
 		[
 			a sh:ValidationResult ;
