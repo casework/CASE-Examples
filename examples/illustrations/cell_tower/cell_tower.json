@@ -8,7 +8,6 @@
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -131,10 +130,7 @@
             "uco-core:target": {
                 "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         },
         {
@@ -188,10 +184,7 @@
             "uco-core:target": {
                 "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Connected_To"
-            },
+            "uco-core:kindOfRelationship": "Connected_To",
             "uco-core:isDirectional": true
         },
         {
