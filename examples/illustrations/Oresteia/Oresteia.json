@@ -1,20 +1,21 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
+        "MobileExtractor": "urn:example:MobileExtractor",
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "draft": "http://example.org/draft#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-role": "https://unifiedcyberontology.org/ontology/uco/role#",
-        "uco-tool": "https://unifiedcyberontology.org/ontology/uco/tool#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd",
@@ -49,6 +50,10 @@
                     "@id": "kb:role-relationship1-uuid"
                 }
             ]
+        },
+        {
+            "@id": "kb:cctv-recording-uuid",
+            "@type": "uco-core:UcoObject"
         },
         {
             "@id": "kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd",
@@ -248,7 +253,7 @@
                     "@id": "kb:attach_relationship1"
                 }
             ],
-            "uco-core:hasFacet": [
+            "case-investigation:relevantAuthorization": [
                 {
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant12345",
@@ -290,10 +295,20 @@
                 },
                 {
                     "@type": "uco-location:LatLongCoordinatesFacet",
-                    "uco-location:latitude": 48.860346,
-                    "uco-location:longitude": 2.331199
+                    "uco-location:latitude": {
+                        "@type": "xsd:decimal",
+                        "@value": 48.860346
+                    },
+                    "uco-location:longitude": {
+                        "@type": "xsd:decimal",
+                        "@value": 2.331199
+                    }
                 }
             ]
+        },
+        {
+            "@id": "kb:eoghan-uuid",
+            "@type": "uco-identity:Person"
         },
         {
             "@id": "kb:aeschylus-uuid",
@@ -457,13 +472,20 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
+        },
+        {
             "@id": "kb:cassandra-device-uuid",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
-                    "uco-observable:manufacturer": "Samsung",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
                     "uco-observable:model": "SM-G925F Galaxy S6 Edge",
                     "uco-observable:serialNumber": "FDG344657"
                 },
@@ -493,7 +515,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "PhoneAccount",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -641,12 +666,19 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Apple"
+        },
+        {
             "@id": "kb:clytemnestra-device-uuid",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:deviceType": "iPhone",
                     "uco-observable:model": "MG552",
                     "uco-observable:serialNumber": "F18Q4LGRG5MD"
@@ -655,16 +687,11 @@
                     "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should clockSetting be a xsd:dateTime?",
-                        "TODO: MSISDN here may be the wrong type.  Why is a uuid indicated?",
                         "TODO: clockSetting as a time-point somewhat illustrates the scenario's specified skew of 25 hours, but might need a reference time-point."
                     ],
                     "uco-observable:keypadUnlockCode": "123789",
                     "uco-observable:IMEI": "359305065690067",
-                    "uco-observable:MSISDN": [
-                        {
-                            "@id": "kb:clytemnestra-mobileaccount-uuid"
-                        }
-                    ],
+                    "uco-observable:MSISDN": "1237471334",
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-21T06:36:24.35Z"
@@ -677,23 +704,28 @@
                     "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
-                    "@type": "draft:iPhoneDevice",
+                    "@type": [
+                        "draft:iPhoneDeviceFacet",
+                        "uco-core:Facet"
+                    ],
                     "draft:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
                     "draft:ownerName": "Clytemnestras iPhone"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:version": "10.3"
                 },
                 {
                     "@type": "uco-observable:WifiAddressFacet",
-                    "uco-observable:value": "d0:33:11:13:e7:a1"
+                    "uco-observable:addressValue": "d0:33:11:13:e7:a1"
                 },
                 {
                     "@type": "uco-observable:BluetoothAddressFacet",
-                    "uco-observable:value": "d0:33:11:13:e7:a2"
+                    "uco-observable:addressValue": "d0:33:11:13:e7:a2"
                 }
             ]
         },
@@ -703,7 +735,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "PhoneAccount",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -720,27 +755,22 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-21T22:36:24.35Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:athens-warrant1-uuid"
+            },
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator2-uuid"
+            },
+            "uco-action:object": [],
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:athens-warrant1-uuid"
-                    },
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator2-uuid"
-                    },
-                    "uco-action:object": [],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record1-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-device-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record1-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-device-uuid"
                 }
             ]
         },
@@ -756,6 +786,14 @@
             }
         },
         {
+            "@id": "kb:athens-warrant1-uuid",
+            "@type": "uco-core:UcoObject"
+        },
+        {
+            "@id": "kb:athenspd-evidenceroom-uuid",
+            "@type": "uco-location:Location"
+        },
+        {
             "@id": "kb:investigative-action10-uuid",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "transferred",
@@ -763,31 +801,26 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T08:01:23.14Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:athens-warrant1-uuid"
+            },
+            "uco-action:location": {
+                "@id": "kb:athenspd-evidenceroom-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:athens-warrant1-uuid"
-                    },
-                    "uco-action:location": {
-                        "@id": "kb:athenspd-evidenceroom-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record1-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-device-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record2-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record1-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-device-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record2-uuid"
                 }
             ]
         },
@@ -810,6 +843,10 @@
             }
         },
         {
+            "@id": "kb:forensic-computer1-uuid",
+            "@type": "uco-observable:Device"
+        },
+        {
             "@id": "kb:investigative-action2-uuid",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "extracted",
@@ -821,40 +858,40 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T08:39:19.24Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator1-uuid"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool1-uuid"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1-uuid"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool1-uuid"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic-computer1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record2-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-device-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record3-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record2-uuid"
                 },
                 {
-                    "@type": "MobileExtractor:ToolArguments",
+                    "@id": "kb:cassandra-device-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record3-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
+                }
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": [
+                        "MobileExtractor:ToolArgumentsFacet",
+                        "uco-core:Facet"
+                    ],
                     "draft:aquisitionType": "Physical Extraction",
                     "draft:method": "Boot Loader"
                 }
@@ -920,11 +957,18 @@
             ]
         },
         {
+            "@id": "kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Zeus S.A."
+        },
+        {
             "@id": "kb:tool1-uuid",
             "@type": "uco-tool:Tool",
             "uco-core:name": "MobileExtractor",
             "uco-tool:toolType": "Extraction",
-            "uco-tool:creator": "Zeus",
+            "uco-tool:creator": {
+                "@id": "kb:organization-bec38288-8663-436f-96bd-14b0d2422cc4"
+            },
             "uco-tool:version": "5.3"
         },
         {
@@ -984,10 +1028,7 @@
                 }
             ],
             "rdfs:comment": "TODO: CyberItemRelationshipEnum does not seem to be tied to uco-core:ControlledVocabulary.  ( https://github.com/ucoProject/UCO/issues/146 )",
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -1043,10 +1084,7 @@
             "uco-core:target": {
                 "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -1057,11 +1095,18 @@
             ]
         },
         {
+            "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Joachim Metz"
+        },
+        {
             "@id": "kb:tool2-uuid",
             "@type": "uco-tool:Tool",
             "uco-core:name": "Plaso",
             "uco-tool:toolType": "Extraction",
-            "uco-tool:creator": "Joachim Metz",
+            "uco-tool:creator": {
+                "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
+            },
             "uco-tool:version": "1.5.2_201701013",
             "uco-core:hasFacet": [
                 {
@@ -1121,7 +1166,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "sqlite/android_sms",
             "uco-tool:toolType": "Parser",
-            "uco-tool:creator": "Joachim Metz",
+            "uco-tool:creator": {
+                "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
+            },
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-tool:ToolConfigurationTypeFacet",
@@ -1152,40 +1199,35 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T10:31:19.24Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigator1-uuid"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool2-uuid"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigator1-uuid"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool2-uuid"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic-computer1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record3-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:investigative-action5-uuid"
-                        },
-                        {
-                            "@id": "kb:provenance-record4-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record3-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-forensicduplicate-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:investigative-action5-uuid"
+                },
+                {
+                    "@id": "kb:provenance-record4-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
                 }
             ]
         },
@@ -1201,49 +1243,44 @@
                 "@type": "xsd:dateTime",
                 "@value": "2017-06-22T10:31:19.24Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:location": {
+                "@id": "kb:argos-palace-uuid"
+            },
+            "uco-action:performer": {
+                "@id": "kb:investigative-action4-uuid"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:tool3-uuid"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer1-uuid"
+            },
+            "uco-action:object": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:location": {
-                        "@id": "kb:argos-palace-uuid"
-                    },
-                    "uco-action:performer": {
-                        "@id": "kb:investigative-action4-uuid"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:tool3-uuid"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic-computer1-uuid"
-                    },
-                    "uco-action:object": [
-                        {
-                            "@id": "kb:provenance-record4-uuid"
-                        },
-                        {
-                            "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
-                        }
-                    ],
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:provenance-record5-uuid"
-                        },
-                        {
-                            "@id": "kb:sms-message1-uuid"
-                        },
-                        {
-                            "@id": "kb:sms-message2-uuid"
-                        },
-                        {
-                            "@id": "kb:argive-elder1-phoneaccnt-uuid"
-                        },
-                        {
-                            "@id": "kb:argive-elder2-phoneaccnt-uuid"
-                        },
-                        {
-                            "@id": "kb:argive-elder3-phoneaccnt-uuid"
-                        }
-                    ]
+                    "@id": "kb:provenance-record4-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:provenance-record5-uuid"
+                },
+                {
+                    "@id": "kb:sms-message1-uuid"
+                },
+                {
+                    "@id": "kb:sms-message2-uuid"
+                },
+                {
+                    "@id": "kb:argive-elder1-phoneaccnt-uuid"
+                },
+                {
+                    "@id": "kb:argive-elder2-phoneaccnt-uuid"
+                },
+                {
+                    "@id": "kb:argive-elder3-phoneaccnt-uuid"
                 }
             ]
         },
@@ -1271,8 +1308,12 @@
             ]
         },
         {
+            "@id": "kb:sms-application1",
+            "@type": "uco-observable:Application"
+        },
+        {
             "@id": "kb:sms-message1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1307,7 +1348,7 @@
         },
         {
             "@id": "kb:sms-message2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -1337,8 +1378,12 @@
             ]
         },
         {
+            "@id": "kb:olympus-uuid",
+            "@type": "uco-identity:Organization"
+        },
+        {
             "@id": "kb:argive-elder1-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1355,7 +1400,7 @@
         },
         {
             "@id": "kb:argive-elder2-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1372,7 +1417,7 @@
         },
         {
             "@id": "kb:argive-elder3-phoneaccnt-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
@@ -1389,17 +1434,31 @@
         },
         {
             "@id": "kb:electra-emailaccount-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailAccountFacet",
-                    "uco-observable:emailAddress": "electra.pleiade@sevensisters.com"
+                    "uco-observable:emailAddress": {
+                        "@id": "kb:email-address-9771a645-94ba-464e-a30d-3537feb637a3"
+                    }
                 }
             ]
         },
         {
+            "@id": "kb:email-address-9771a645-94ba-464e-a30d-3537feb637a3",
+            "@type": "uco-observable:EmailAddress",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:EmailAddressFacet",
+                "uco-observable:addressValue": "electra.pleiade@sevensisters.com"
+            }
+        },
+        {
+            "@id": "kb:orestes-emailaccount-uuid",
+            "@type": "uco-observable:EmailAccount"
+        },
+        {
             "@id": "kb:electra-orestes-email-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailMessageFacet",
@@ -1426,6 +1485,10 @@
             ]
         },
         {
+            "@id": "kb:orestes-selfie-photograph-uuid",
+            "@type": "uco-observable:RasterPicture"
+        },
+        {
             "@id": "kb:annotation3-uuid",
             "@type": "uco-core:Annotation",
             "uco-core:tag": [
@@ -1441,10 +1504,13 @@
         },
         {
             "@id": "kb:orestes-facebookmsg-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
-                    "@type": "draft:FacebookMessage",
+                    "@type": [
+                        "draft:FacebookMessageFacet",
+                        "uco-core:Facet"
+                    ],
                     "uco-observable:from": {
                         "@id": "kb:orestes-facebookaccount-uuid"
                     },
@@ -1460,6 +1526,10 @@
                     }
                 }
             ]
+        },
+        {
+            "@id": "kb:location1",
+            "@type": "uco-location:Location"
         },
         {
             "@id": "kb:attach_relationship1",
@@ -1482,9 +1552,19 @@
                 {
                     "@type": "uco-observable:AttachmentFacet",
                     "rdfs:comment": "TODO: uco-observable:Attachment seems ill-defined.",
-                    "uco-observable:url": "http://www.facebook.com/corpses.jpg"
+                    "uco-observable:url": {
+                        "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f"
+                    }
                 }
             ]
+        },
+        {
+            "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:URLFacet",
+                "uco-observable:fullValue": "http://www.facebook.com/corpses.jpg"
+            }
         }
     ]
 }

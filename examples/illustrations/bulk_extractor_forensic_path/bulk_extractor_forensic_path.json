@@ -3,16 +3,16 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
             "@id": "kb:extracted_email_address0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -26,7 +26,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -47,10 +47,7 @@
             "uco-core:target": {
                 "@id": "kb:decompressed_gzip0"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -62,7 +59,7 @@
         },
         {
             "@id": "kb:extracted_email_address1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -76,7 +73,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -97,10 +94,7 @@
             "uco-core:target": {
                 "@id": "kb:decompressed_gzip0"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -112,7 +106,7 @@
         },
         {
             "@id": "kb:decompressed_gzip0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -127,7 +121,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -159,7 +153,7 @@
         },
         {
             "@id": "kb:compressed_gzip0",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -169,7 +163,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -190,10 +184,7 @@
             "uco-core:target": {
                 "@id": "kb:decompressed_gzip1"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -205,7 +196,7 @@
         },
         {
             "@id": "kb:decompressed_gzip1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -215,7 +206,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -247,7 +238,7 @@
         },
         {
             "@id": "kb:compressed_gzip1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -257,7 +248,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {
@@ -278,10 +269,7 @@
             "uco-core:target": {
                 "@id": "kb:disk_image"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -293,7 +281,10 @@
         },
         {
             "@id": "kb:disk_image",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -303,7 +294,7 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "SHA256"
                             },
                             "uco-types:hashValue": {

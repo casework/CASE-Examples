@@ -4,14 +4,22 @@
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "draft": "http://example.org/draft#",
-        "uco-action": "https://unifiedcyberontology.org/ontology/uco/action#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
+        {
+            "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Canon"
+        },
         {
             "@id": "kb:camera1",
             "@type": "uco-observable:Device",
@@ -19,7 +27,9 @@
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Camera",
-                    "uco-observable:manufacturer": "Canon",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-f5a0877c-2a58-4280-8f24-c0df39e8badc"
+                    },
                     "uco-observable:model": "PowerShot SX540",
                     "uco-observable:serialNumber": "DC1234567"
                 }
@@ -34,10 +44,8 @@
             "uco-core:target": {
                 "@id": "kb:device_partition3"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:PathRelationFacet",
@@ -146,22 +154,41 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T17:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:instrument": {
+                "@id": "kb:camera1"
+            },
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:instrument": {
-                        "@id": "kb:camera1"
-                    },
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:digital_photograph1"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:location1"
-                    }
+                    "@id": "kb:digital_photograph1"
                 }
-            ]
+            ],
+            "uco-action:location": {
+                "@id": "kb:location1"
+            }
+        },
+        {
+            "@id": "kb:annotator_tool1",
+            "@type": "uco-tool:AnalyticTool"
+        },
+        {
+            "@id": "kb:examiner1",
+            "@type": "uco-identity:Person"
+        },
+        {
+            "@id": "kb:forensic_lab_computer1",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:location1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:device_partition3",
+            "@type": "uco-observable:DiskPartition"
+        },
+        {
+            "@id": "kb:forensic_lab1",
+            "@type": "uco-location:Location"
         },
         {
             "@id": "kb:annotation1",
@@ -172,7 +199,7 @@
                 "user_added",
                 "extracted"
             ],
-            "uco-action:object": {
+            "uco-core:object": {
                 "@id": "kb:camera_action1"
             }
         },
@@ -188,28 +215,23 @@
                 "@type": "xsd:dateTime",
                 "@value": "2010-01-15T18:59:43.25Z"
             },
-            "uco-core:hasFacet": [
+            "uco-action:performer": {
+                "@id": "kb:examiner1"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:annotator_tool1"
+            },
+            "uco-action:result": [
                 {
-                    "@type": "uco-action:ActionReferencesFacet",
-                    "uco-action:performer": {
-                        "@id": "kb:examiner1"
-                    },
-                    "uco-action:instrument": {
-                        "@id": "kb:annotator_tool1"
-                    },
-                    "uco-action:result": [
-                        {
-                            "@id": "kb:annotation1"
-                        }
-                    ],
-                    "uco-action:location": {
-                        "@id": "kb:forensic_lab1"
-                    },
-                    "uco-action:environment": {
-                        "@id": "kb:forensic_lab_computer1"
-                    }
+                    "@id": "kb:annotation1"
                 }
-            ]
+            ],
+            "uco-action:location": {
+                "@id": "kb:forensic_lab1"
+            },
+            "uco-action:environment": {
+                "@id": "kb:forensic_lab_computer1"
+            }
         }
     ]
 }

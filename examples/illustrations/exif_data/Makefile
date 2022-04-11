@@ -49,14 +49,18 @@ clean-review:
 	  --file $(illustrations_srcdir)/src/review.mk \
 	  clean
 
+# TODO - Remove '--built-version none' and CASE-unstable.ttl reference on release of CASE 0.6.0.
 query-select-files.md: \
   $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-unstable.ttl \
   exif_data.json \
   query-select-files.sparql
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
+	    --built-version none \
 	    --disallow-empty-results \
 	    _$@ \
 	    query-select-files.sparql \
-	    exif_data.json
+	    exif_data.json \
+	    $(top_srcdir)/dependencies/CASE-unstable.ttl
 	mv _$@ $@

@@ -5,14 +5,19 @@
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "kb:sms_application1",
+            "@type": "uco-observable:Application"
+        },
+        {
             "@id": "kb:sms_message1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -37,7 +42,7 @@
         },
         {
             "@id": "kb:contact1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Contact",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContactFacet",
@@ -115,12 +120,15 @@
         },
         {
             "@id": "kb:phone_account1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "rdfs:comment": "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -131,11 +139,14 @@
         },
         {
             "@id": "kb:phone_account2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -146,26 +157,42 @@
         },
         {
             "@id": "kb:email_account1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Email",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Email"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
                     "@type": "uco-observable:EmailAccountFacet",
-                    "uco-observable:value": "jdoe@example.com"
+                    "uco-observable:emailAddress": {
+                        "@id": "kb:email-address-b145c7fe-e666-49b6-82a6-9436459a34fb"
+                    }
                 }
             ]
         },
         {
+            "@id": "kb:email-address-b145c7fe-e666-49b6-82a6-9436459a34fb",
+            "@type": "uco-observable:EmailAddress",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:EmailAddressFacet",
+                "uco-observable:addressValue": "jdoe@example.com"
+            }
+        },
+        {
             "@id": "kb:phone_account3",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -175,8 +202,12 @@
             ]
         },
         {
+            "@id": "kb:os1",
+            "@type": "uco-observable:OperatingSystem"
+        },
+        {
             "@id": "kb:android_phonebook1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Application",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationFacet",

@@ -3,16 +3,22 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-types": "https://unifiedcyberontology.org/ontology/uco/types#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
             "@id": "kb:digital_photograph_thumbnail1",
-            "@type": "uco-observable:ObservableObject",
+            "rdfs:seeAlso": {
+                "@id": "https://unifiedcyberontology.atlassian.net/browse/OC-222"
+            },
+            "@type": [
+                "uco-observable:ContentData",
+                "uco-observable:RasterPicture"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",
@@ -22,11 +28,11 @@
                         {
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
-                                "@type": "uco-core:HashNameEnum",
+                                "@type": "uco-vocabulary:HashNameVocab",
                                 "@value": "MD5"
                             },
                             "uco-types:hashValue": {
-                                "@type": "xsd:hexbinary",
+                                "@type": "xsd:hexBinary",
                                 "@value": "3d137a188c1e82247b815209ce44af2c"
                             }
                         }
@@ -45,10 +51,7 @@
             "uco-core:target": {
                 "@id": "kb:digital_photograph1"
             },
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
@@ -60,7 +63,7 @@
         },
         {
             "@id": "kb:digital_photograph1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:RasterPicture",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ContentDataFacet",

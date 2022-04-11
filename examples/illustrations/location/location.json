@@ -5,8 +5,8 @@
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-location": "https://unifiedcyberontology.org/ontology/uco/location#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -22,7 +22,10 @@
                     "uco-location:street": "20341 Whitworth Institute 405 N. Whitworth"
                 },
                 {
-                    "@type": "acme:InternalLocation",
+                    "@type": [
+                        "acme:InternalLocationFacet",
+                        "uco-core:Facet"
+                    ],
                     "acme:floor": 3,
                     "acme:roomNumber": 345
                 }

@@ -27,11 +27,13 @@ drafting_ttl := $(wildcard drafting.ttl)
 ifeq ($(drafting_ttl),)
 drafting_validation_flag :=
 else
-drafting_validation_flag := --ontology $(wildcard drafting.ttl)
+drafting_validation_flag := --ontology-graph $(wildcard drafting.ttl)
 endif
 
 all: \
-  $(example_name)_validation.ttl
+  $(example_name)_validation.ttl \
+  $(example_name)_validation-develop.ttl \
+  $(example_name)_validation-unstable.ttl
 
 $(example_name)_validation.ttl: \
   $(example_name).json \
@@ -57,9 +59,63 @@ $(example_name)_validation.ttl: \
 	rm __$@
 	mv _$@ $@
 
+$(example_name)_validation-develop.ttl: \
+  $(example_name).json \
+  $(RDF_TOOLKIT_JAR) \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-develop.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --built-version none \
+	    --format turtle \
+	    $(drafting_validation_flag) \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
+	    --output __$@ \
+	    $< \
+	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
+	test -s __$@
+	java -jar $(RDF_TOOLKIT_JAR) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
+$(example_name)_validation-unstable.ttl: \
+  $(example_name).json \
+  $(RDF_TOOLKIT_JAR) \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-unstable.ttl
+	rm -f __$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --built-version none \
+	    --format turtle \
+	    $(drafting_validation_flag) \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
+	    --output __$@ \
+	    $< \
+	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
+	test -s __$@
+	java -jar $(RDF_TOOLKIT_JAR) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
+
 check: \
-  $(example_name)_validation.ttl
+  $(example_name)_validation.ttl \
+  $(example_name)_validation-develop.ttl \
+  $(example_name)_validation-unstable.ttl
 
 clean:
 	@rm -f \
-	  $(example_name)_validation.ttl
+	  $(example_name)_validation*.ttl
