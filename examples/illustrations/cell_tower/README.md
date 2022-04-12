@@ -155,9 +155,10 @@ azimuth: 60
 The proposed `CapturedTelecommunicationsInformationFacet` represents the subset of information that is most commonly useful for cyber-investigations:
 
 ```json
+[
         {
             "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "drafting:CapturedTelecommunicationsInformation",
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CapturedTelecommunicationsInformationFacet",
@@ -182,6 +183,7 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
                 }
             ]
         }
+]
 ```
 
 This captured telecommunication information can also answer questions about the activities on a given device during the connection with a Cell Site, including details about the connected device identifier, SIM card identifier, mobile phone number, called phone number, call status, and SMS message text. These details are already covered by other CASE/UCO facets.
