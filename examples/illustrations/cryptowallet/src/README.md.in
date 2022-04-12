@@ -10,17 +10,41 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 
 This illustration includes example investigative questions involving cryptowallets and cryptoaddresses:
 
-The proposed representation of cryptowallets:
+The proposed representation of cryptoaddress is illustrated using the seizure of assets from BitCoin address 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx related to the Silk Road marketplace
+Reference: https://www.justice.gov/usao-ndca/press-release/file/1334771/download
+
+```json
+       {
+            "@id": "kb:1de3-f681-4bc6-a66e-b70a7ecdb3a5",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CryptoAddressFacet",
+                    "drafting:addressValue": "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx",
+                    "drafting:cryptoCurrencyType": "BitCoin",
+                    "drafting:cryptoAddressFormat": "P2PKH",
+                    "drafting:cryptoAddressCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2013-04-09T17:03:36Z"
+                    },
+                    "drafting:cryptoCurrencyCompletedTransactionCount": "260",
+                    "drafting:cryptoCurrencyBalance": {
+                        "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
+                    }
+                }
+            ]
+        }
+```
+
+An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
+Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
 
 ```json
 @CRYPTOWALLET_WALLET_JSON@
 ```
 
-Case Example (Silk Road related address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges)
-Query Bitcoin (https://btc.com/btc/top-address).
-Reference: https://www.google.com/url?q=http://www.kouett.net.eu.org/fci_refs/03/146/0/&sa=D&source=docs&ust=1649713536061842&usg=AOvVaw1-WxHD7En48B9KeEH6wiFz
 
-Relationship between cryptoAddresses and the verified owner.
+The relationship between cryptoAddresses and the verified owner can be represented as follows:
 
 ```json
        {
@@ -37,5 +61,3 @@ Relationship between cryptoAddresses and the verified owner.
         },
 ```
 
-Another Case Example: Seizure of assets related to SilkRoad 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx
-Reference: https://storage.courtlistener.com/recap/gov.uscourts.cand.368440/gov.uscourts.cand.368440.1.0.pdf
