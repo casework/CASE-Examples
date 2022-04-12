@@ -14,7 +14,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoAddressFacet ;
-				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52Z"^^xsd:dateTime ;
+				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
 				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
@@ -22,7 +22,7 @@
 				drafting:cryptoCurrencyType "BitCoin" ;
 				core:addressValue "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A" ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ drafting:cryptoAddressCreatedTime Literal("2013-01-25T18:37:52Z" = None, datatype=<xsd:dateTime>) ; drafting:cryptoAddressFormat Literal("P2PKH") ; drafting:cryptoCurrencyBalance kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567 ; drafting:cryptoCurrencyCompletedTransactionCount Literal("37") ; drafting:cryptoCurrencyTotalReceived kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234 ; drafting:cryptoCurrencyType Literal("BitCoin") ; rdf:type drafting:CryptoAddressFacet ; uco-core:addressValue Literal("127B3qwztPyA67uq63LG8G5izwhFcJ7j4A") ]->drafting:addressValue' ;
+			sh:resultMessage 'Less than 1 values on [ drafting:cryptoAddressCreatedTime Literal("2013-01-25T18:37:52+00:00" = 2013-01-25 18:37:52+00:00, datatype=xsd:dateTime) ; drafting:cryptoAddressFormat Literal("P2PKH") ; drafting:cryptoCurrencyBalance kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567 ; drafting:cryptoCurrencyCompletedTransactionCount Literal("37") ; drafting:cryptoCurrencyTotalReceived kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234 ; drafting:cryptoCurrencyType Literal("BitCoin") ; rdf:type drafting:CryptoAddressFacet ; uco-core:addressValue Literal("127B3qwztPyA67uq63LG8G5izwhFcJ7j4A") ]->drafting:addressValue' ;
 			sh:resultPath drafting:addressValue ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -38,7 +38,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoAddressFacet ;
-				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52Z"^^xsd:dateTime ;
+				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
 				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
@@ -62,7 +62,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoAddressFacet ;
-				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52Z"^^xsd:dateTime ;
+				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
 				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
@@ -86,31 +86,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoAddressFacet ;
-				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52Z"^^xsd:dateTime ;
-				drafting:cryptoAddressFormat "P2PKH" ;
-				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
-				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
-				drafting:cryptoCurrencyTotalReceived <http://example.org/kb/cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234> ;
-				drafting:cryptoCurrencyType "BitCoin" ;
-				core:addressValue "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A" ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype xsd:dateTime" ;
-			sh:resultPath drafting:cryptoAddressCreatedTime ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:dateTime ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:cryptoAddressCreatedTime ;
-			] ;
-			sh:value "2013-01-25T18:37:52Z"^^xsd:dateTime ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a drafting:CryptoAddressFacet ;
-				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52Z"^^xsd:dateTime ;
+				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
 				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
@@ -134,7 +110,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoWalletFacet ;
-				drafting:cryptoWalletCreatedTime "2022-01-25T18:37:52Z"^^xsd:dateTime ;
+				drafting:cryptoWalletCreatedTime "2022-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoWalletIdentifier "73108d1b19" ;
 				drafting:cryptoWalletName "Jane Doe" ;
 				core:cryptoWalletAddress <http://example.org/kb/cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e> ;
@@ -156,7 +132,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoWalletFacet ;
-				drafting:cryptoWalletCreatedTime "2022-01-25T18:37:52Z"^^xsd:dateTime ;
+				drafting:cryptoWalletCreatedTime "2022-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoWalletIdentifier "73108d1b19" ;
 				drafting:cryptoWalletName "Jane Doe" ;
 				core:cryptoWalletAddress <http://example.org/kb/cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e> ;
@@ -172,27 +148,6 @@
 				sh:path drafting:cryptoWalletName ;
 			] ;
 			sh:value "Jane Doe" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a drafting:CryptoWalletFacet ;
-				drafting:cryptoWalletCreatedTime "2022-01-25T18:37:52Z"^^xsd:dateTime ;
-				drafting:cryptoWalletIdentifier "73108d1b19" ;
-				drafting:cryptoWalletName "Jane Doe" ;
-				core:cryptoWalletAddress <http://example.org/kb/cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e> ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype xsd:dateTime" ;
-			sh:resultPath drafting:cryptoWalletCreatedTime ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:dateTime ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:cryptoWalletCreatedTime ;
-			] ;
-			sh:value "2022-01-25T18:37:52Z"^^xsd:dateTime ;
 		]
 		;
 	.
