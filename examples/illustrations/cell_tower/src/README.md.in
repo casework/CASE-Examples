@@ -75,33 +75,7 @@ azimuth: 60
 The proposed `CapturedTelecommunicationsInformationFacet` represents the subset of information that is most commonly useful for cyber-investigations:
 
 ```json
-        {
-            "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-            "@type": "uco-observable:ObservableObject",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                    "drafting:captureCellSite": {
-                        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
-                    },
-                    "uco-observable:captureStartTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2021-07-29T01:23:02Z"
-                    },
-                    "uco-observable:captureEndTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2021-07-30T02:10:50Z"
-                    },
-                    "drafting:partySubscription": {
-                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
-                    },
-                    "drafting:partyDevice": {
-                        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
-                    },
-                    "drafting:interceptedCallState": "idle"
-                }
-            ]
-        }
+@CELL_TOWER_CDR_JSON@
 ```
 
 This captured telecommunication information can also answer questions about the activities on a given device during the connection with a Cell Site, including details about the connected device identifier, SIM card identifier, mobile phone number, called phone number, call status, and SMS message text. These details are already covered by other CASE/UCO facets.
