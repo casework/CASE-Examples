@@ -21,7 +21,7 @@ The proposed representation of cryptowallets:
             {
                 "drafting:cryptoWalletIdentifier": "73108d1b19",
                 "@type": "drafting:CryptoWalletFacet",
-                "uco-core:cryptoWalletAddress": {
+                "drafting:cryptoWalletAddress": {
                     "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e"
                 },
                 "drafting:cryptoWalletName": "Jane Doe",

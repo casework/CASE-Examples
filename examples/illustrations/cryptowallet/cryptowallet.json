@@ -16,6 +16,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CryptoAddressFacet",
+                    "drafting:addressValue": "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A",
                     "drafting:cryptoAddressCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2013-01-25T18:37:52Z"
@@ -28,8 +29,7 @@
                     "drafting:cryptoCurrencyTotalReceived": {
                         "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234"
                     },
-                    "drafting:cryptoCurrencyType": "BitCoin",
-                    "uco-core:addressValue": "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A"
+                    "drafting:cryptoCurrencyType": "BitCoin"
                 }
             ]
         },
@@ -78,15 +78,15 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CryptoWalletFacet",
+                    "drafting:cryptoWalletAddress": {
+                        "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e"
+                    },
                     "drafting:cryptoWalletCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2022-01-25T18:37:52Z"
                     },
                     "drafting:cryptoWalletIdentifier": "73108d1b19",
-                    "drafting:cryptoWalletName": "Jane Doe",
-                    "uco-core:cryptoWalletAddress": {
-                        "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e"
-                    }
+                    "drafting:cryptoWalletName": "Jane Doe"
                 }
             ]
         }
