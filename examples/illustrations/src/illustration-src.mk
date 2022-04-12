@@ -15,8 +15,6 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../../.. ; pwd)
 
-RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-Utilities-Python/dependencies/CASE/lib/rdf-toolkit.jar
-
 illustration_name := $(shell cd .. ; basename $$PWD)
 illustration_snippets_json := $(wildcard $(illustration_name)-*.json)
 query_sparql_files := $(wildcard query-*.sparql)
@@ -28,42 +26,16 @@ generated_readme_sed_sources := \
   $(query_sparql_files)
 
 all: \
-  $(illustration_name)_validation.ttl \
   generated-README.md
 
 .PHONY: \
   normalize
 
-$(illustration_name)_validation.ttl: \
-  generated-$(illustration_name).json \
-  ../drafting.ttl \
-  $(RDF_TOOLKIT_JAR) \
-  $(top_srcdir)/.venv.done.log
-	rm -f __$@
-	source $(top_srcdir)/venv/bin/activate \
-	  && case_validate \
-	    --format turtle \
-	    --ontology-graph ../drafting.ttl \
-	    --output __$@ \
-	    $< \
-	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
-	test -s __$@
-	java -jar $(RDF_TOOLKIT_JAR) \
-	  --inline-blank-nodes \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
-	mv _$@ $@
-
-check: \
-  $(illustration_name)_validation.ttl
+check:
 
 clean:
 	@rm -f \
 	  *.sed \
-	  $(illustration_name)_validation.ttl \
 	  .normalized-* \
 	  generated-* \
 	  query-*.md

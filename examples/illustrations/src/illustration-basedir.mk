@@ -23,6 +23,8 @@ all:
 	  --directory src
 	cp src/generated-README.md README.md
 	cp src/generated-inference.json inference.json
+	$(MAKE) \
+	  --file ../src/illustration-nosrc.mk
 
 check:
 	$(MAKE) \
@@ -31,6 +33,9 @@ check:
 	  generated-inference.json
 	$(MAKE) \
 	  --directory src \
+	  check
+	$(MAKE) \
+	  --file ../src/illustration-nosrc.mk \
 	  check
 	diff \
 	  src/generated-inference.json \
@@ -42,6 +47,9 @@ check:
 	  || (echo "UPDATE:examples/illustrations/inference/Makefile:The generated README.md does not match the Git-tracked README.md.  If the above reported changes look fine, run 'cp src/generated-README.md README.md' to get a file ready to commit to Git." >&2 ; exit 1)
 
 clean:
+	@$(MAKE) \
+	  --file ../src/illustration-nosrc.mk \
+	  clean
 	@$(MAKE) \
 	  --directory src \
 	  clean
