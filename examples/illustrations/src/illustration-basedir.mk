@@ -17,11 +17,19 @@ top_srcdir := $(shell cd ../../.. ; pwd)
 
 illustration_name := $(shell basename $$PWD)
 
+# `diff` is used to determine if a copy operation should happen.
+# If it happens each time, validation files will be regenerated on every
+# `make` call.
 all:
 	$(MAKE) \
 	  --directory src
 	cp src/generated-README.md README.md
-	cp src/generated-$(illustration_name).json $(illustration_name).json
+	diff \
+	  $(illustration_name).json \
+	  src/generated-$(illustration_name).json \
+	  || cp \
+	    src/generated-$(illustration_name).json \
+	    $(illustration_name).json
 	$(MAKE) \
 	  --file ../src/illustration-nosrc.mk
 
