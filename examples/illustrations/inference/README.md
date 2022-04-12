@@ -1,3 +1,11 @@
+<!--
+GENERATED FILE
+
+README.md is generated from a template file, src/README.md.in, and JSON snippets under src/.  If you need to revise narrative text, edit src/README.md.in.  If you need to revise data, please find and revise the containing snippet.  Editing patterns follow the patterns described in the CASE website's CONTRIBUTE.md:
+https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#maintenance-of-generated-files
+-->
+
+
 # Inference Examples
 
 This illustration includes example investigative questions that require inference, and sample JSON-LD of *proposed* use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
