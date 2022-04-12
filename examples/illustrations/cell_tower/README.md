@@ -1,3 +1,11 @@
+<!--
+GENERATED FILE
+
+README.md is generated from a template file, src/README.md.in, and JSON snippets under src/.  If you need to revise narrative text, edit src/README.md.in.  If you need to revise data, please find and revise the containing snippet.  Editing patterns follow the patterns described in the CASE website's CONTRIBUTE.md:
+https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#maintenance-of-generated-files
+-->
+
+
 # Cell site examples
 
 This illustration includes example investigative questions that require cell site information, and sample JSON-LD of using the proposed `CellSiteFacet`, `AntennaFacet`, and `CapturedTelecommunicationsInformationFacet`.
@@ -156,33 +164,33 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
 
 ```json
 [
-        {
-            "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-            "@type": "drafting:CapturedTelecommunicationsInformation",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                    "drafting:captureCellSite": {
-                        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
-                    },
-                    "uco-observable:captureStartTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2021-07-29T01:23:02Z"
-                    },
-                    "uco-observable:captureEndTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2021-07-30T02:10:50Z"
-                    },
-                    "drafting:partySubscription": {
-                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
-                    },
-                    "drafting:partyDevice": {
-                        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
-                    },
-                    "drafting:interceptedCallState": "idle"
-                }
-            ]
-        }
+    {
+        "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
+        "@type": "drafting:CapturedTelecommunicationsInformation",
+        "uco-core:hasFacet": [
+            {
+                "@type": "drafting:CapturedTelecommunicationsInformationFacet",
+                "drafting:captureCellSite": {
+                    "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+                },
+                "uco-observable:captureStartTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2021-07-29T01:23:02Z"
+                },
+                "uco-observable:captureEndTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2021-07-30T02:10:50Z"
+                },
+                "drafting:partySubscription": {
+                    "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
+                },
+                "drafting:partyDevice": {
+                    "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+                },
+                "drafting:interceptedCallState": "idle"
+            }
+        ]
+    }
 ]
 ```
 
