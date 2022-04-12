@@ -25,11 +25,14 @@ generated_readme_sed_sources := \
   $(query_md_files) \
   $(query_sparql_files)
 
+SNIPPET_COMBINER_PY ?= ../../src/generic_snippet_combiner.py
+
 # Use a drafting.ttl file in queries, if it is present.
 drafting_ttl := $(wildcard ../drafting.ttl)
 
 all: \
-  generated-README.md
+  generated-README.md \
+  generated-$(illustration_name).json
 
 check:
 
@@ -55,10 +58,10 @@ generated-README.sed: \
 	mv _$@ $@
 
 generated-$(illustration_name).json: \
-  $(illustration_name)_json.py \
+  $(SNIPPET_COMBINER_PY) \
   $(illustration_name)_base.json \
   $(illustration_snippets_json)
-	python3 $(illustration_name)_json.py \
+	python3 $(SNIPPET_COMBINER_PY) \
 	  $(illustration_name)_base.json \
 	  $(illustration_snippets_json) \
 	  > _$@
