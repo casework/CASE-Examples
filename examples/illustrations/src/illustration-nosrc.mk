@@ -11,7 +11,12 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-# This Makefile contains generic steps each illustration will follow for content review.
+# This Makefile contains generic steps each illustration will follow for
+# content review.  For examples that do not compile their JSON-LD graph
+# or README documentation, this can be included with a Make `include`
+# directive, or by using a Makefile that passes through the typical
+# automatic targets (`all`, `check`, `clean`) as well as building other
+# resources.
 
 SHELL := /bin/bash
 
