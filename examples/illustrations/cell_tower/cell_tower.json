@@ -12,47 +12,6 @@
     },
     "@graph": [
         {
-            "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-            "@type": "drafting:CellSite",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CellSiteFacet",
-                    "drafting:towerType": "GSM",
-                    "drafting:cellSiteCountryCode": "228",
-                    "drafting:cellSiteNetworkCode": "2",
-                    "drafting:cellSiteLocationAreaCode": "22100",
-                    "drafting:cellSiteIdentifier": "29220952"
-                },
-                {
-                    "@type": "drafting:AntennaFacet",
-                    "drafting:azimuth": {
-                        "@type": "xsd:decimal",
-                        "@value": "45"
-                    },
-                    "drafting:elevation": {
-                        "@type": "xsd:decimal",
-                        "@value": "5"
-                    },
-                    "drafting:skew": {
-                        "@type": "xsd:decimal",
-                        "@value": "10"
-                    },
-                    "drafting:horizontalBeamWidth": {
-                        "@type": "xsd:decimal",
-                        "@value": "110"
-                    },
-                    "drafting:signalStrength": {
-                        "@type": "xsd:decimal",
-                        "@value": "20"
-                    },
-                    "drafting:height": {
-                        "@type": "xsd:decimal",
-                        "@value": "25"
-                    }
-                }
-            ]
-        },
-        {
             "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
@@ -72,22 +31,22 @@
         {
             "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-observable:startTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2016-12-12T09:10:11Z"
-            },
-            "uco-observable:endTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2018-06-10T15:36:39Z"
-            },
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Located_At",
             "uco-core:source": {
                 "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
             },
             "uco-core:target": {
                 "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
             },
-            "uco-core:kindOfRelationship": "Located_At",
-            "uco-core:isDirectional": true
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2016-12-12T09:10:11Z"
+            }
         },
         {
             "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
@@ -97,7 +56,6 @@
         {
             "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
             "@type": "uco-observable:Device",
-            "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
@@ -128,19 +86,20 @@
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
                 }
-            ]
+            ],
+            "uco-observable:hasChanged": true
         },
         {
             "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
             "@type": "uco-core:Relationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:source": {
                 "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
             },
             "uco-core:target": {
                 "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
-            },
-            "uco-core:kindOfRelationship": "Contained_Within",
-            "uco-core:isDirectional": true
+            }
         },
         {
             "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
@@ -148,12 +107,12 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:SIMCardFacet",
+                    "uco-observable:ICCID": "89390100002217635543",
+                    "uco-observable:IMSI": "1234567890ABCDEF",
                     "uco-observable:carrier": {
                         "@type": "uco-identity:Identity",
                         "uco-core:name": "Telcom Italia"
-                    },
-                    "uco-observable:ICCID": "89390100002217635543",
-                    "uco-observable:IMSI": "1234567890ABCDEF"
+                    }
                 }
             ]
         },
@@ -177,22 +136,22 @@
         {
             "@id": "kb:afc48c35-c65d-41e4-843b-720f1ad23d16",
             "@type": "uco-observable:ObservableRelationship",
-            "uco-observable:startTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2018-06-10T15:36:12Z"
-            },
-            "uco-observable:endTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2018-06-10T15:36:39Z"
-            },
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Connected_To",
             "uco-core:source": {
                 "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
             },
             "uco-core:target": {
                 "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
             },
-            "uco-core:kindOfRelationship": "Connected_To",
-            "uco-core:isDirectional": true
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:12Z"
+            }
         },
         {
             "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
@@ -203,21 +162,62 @@
                     "drafting:captureCellSite": {
                         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
                     },
-                    "uco-observable:captureStartTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2021-07-29T01:23:02Z"
+                    "drafting:interceptedCallState": "idle",
+                    "drafting:partyDevice": {
+                        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+                    },
+                    "drafting:partySubscription": {
+                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
                     },
                     "uco-observable:captureEndTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-07-30T02:10:50Z"
                     },
-                    "drafting:partySubscription": {
-                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
+                    "uco-observable:captureStartTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2021-07-29T01:23:02Z"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
+            "@type": "drafting:CellSite",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CellSiteFacet",
+                    "drafting:cellSiteCountryCode": "228",
+                    "drafting:cellSiteIdentifier": "29220952",
+                    "drafting:cellSiteLocationAreaCode": "22100",
+                    "drafting:cellSiteNetworkCode": "2",
+                    "drafting:towerType": "GSM"
+                },
+                {
+                    "@type": "drafting:AntennaFacet",
+                    "drafting:azimuth": {
+                        "@type": "xsd:decimal",
+                        "@value": "45"
                     },
-                    "drafting:partyDevice": {
-                        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+                    "drafting:elevation": {
+                        "@type": "xsd:decimal",
+                        "@value": "5"
                     },
-                    "drafting:interceptedCallState": "idle"
+                    "drafting:height": {
+                        "@type": "xsd:decimal",
+                        "@value": "25"
+                    },
+                    "drafting:horizontalBeamWidth": {
+                        "@type": "xsd:decimal",
+                        "@value": "110"
+                    },
+                    "drafting:signalStrength": {
+                        "@type": "xsd:decimal",
+                        "@value": "20"
+                    },
+                    "drafting:skew": {
+                        "@type": "xsd:decimal",
+                        "@value": "10"
+                    }
                 }
             ]
         }
