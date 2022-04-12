@@ -11,36 +11,4 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-SHELL := /bin/bash
-
-top_srcdir := $(shell cd ../../.. ; pwd)
-
-illustrations_srcdir := $(top_srcdir)/examples/illustrations
-
-all: \
-  all-review
-
-.PHONY: \
-  all-review \
-  check-review \
-  clean-review
-
-all-review:
-	$(MAKE) \
-	  --file $(illustrations_srcdir)/src/review.mk
-
-check: \
-  check-review
-
-check-review:
-	$(MAKE) \
-	  --file $(illustrations_srcdir)/src/review.mk \
-	  check
-
-clean: \
-  clean-review
-
-clean-review:
-	@$(MAKE) \
-	  --file $(illustrations_srcdir)/src/review.mk \
-	  clean
+include ../src/illustration-nosrc.mk
