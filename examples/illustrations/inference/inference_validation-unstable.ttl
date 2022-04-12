@@ -1,0 +1,397 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-1c050613-1144-4622-853a-48291f63ef54> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-1c050613-1144-4622-853a-48291f63ef54> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-3c0014ff-8616-4103-915f-54a69f486576> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-3c0014ff-8616-4103-915f-54a69f486576> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-feee4b71-8566-46a3-bc55-74076365acca> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-4b880bde-9afb-4c60-a277-29f53a0df283> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-4b880bde-9afb-4c60-a277-29f53a0df283> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
+			sh:resultMessage "Less than 1 values on kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7->drafting:usedMethod" ;
+			sh:resultPath drafting:usedMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class drafting:Method ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path drafting:usedMethod ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
+			sh:resultMessage "Less than 1 values on kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027->drafting:usedMethod" ;
+			sh:resultPath drafting:usedMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class drafting:Method ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path drafting:usedMethod ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
+			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+			sh:resultPath drafting:hypothesis ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:hypothesis ;
+			] ;
+			sh:value <http://example.org/kb/hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/method-2473b57f-8c7e-4672-99a1-1107bf2cb701> ;
+			sh:resultMessage "Less than 1 values on kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701->action:phase" ;
+			sh:resultPath action:phase ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class action:ArrayOfAction ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:phase ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath core:kindOfRelationship ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:kindOfRelationship ;
+			] ;
+			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
+		]
+		;
+	.
+
