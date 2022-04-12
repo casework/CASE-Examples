@@ -16,7 +16,8 @@ SHELL := /bin/bash
 PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 all: \
-  .dependencies.done.log
+  .dependencies.done.log \
+  .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory examples/illustrations
 
@@ -71,6 +72,28 @@ all: \
 .lib.done.log:
 	$(MAKE) \
 	  --directory lib
+
+# This virtual environment is meant to be built once and then persist, even through 'make clean'.
+# If a recipe is written to remove this flag file, it should first run `pre-commit uninstall`.
+.venv-pre-commit/var/.pre-commit-built.log:
+	rm -rf .venv-pre-commit
+	test -r .pre-commit-config.yaml \
+	  || (echo "ERROR:Makefile:pre-commit is expected to install for this repository, but .pre-commit-config.yaml does not expect to exist." >&2 ; exit 1)
+	$(PYTHON3) -m venv \
+	  .venv-pre-commit
+	source .venv-pre-commit/bin/activate \
+	  && pip install \
+	    --upgrade \
+	    pip \
+	    setuptools \
+	    wheel
+	source .venv-pre-commit/bin/activate \
+	  && pip install \
+	    pre-commit
+	source .venv-pre-commit/bin/activate \
+	  && pre-commit install
+	mkdir -p \
+	  .venv-pre-commit/var
 	touch $@
 
 .venv.done.log: \
@@ -98,7 +121,8 @@ check: \
   check-tests
 
 check-examples: \
-  .dependencies.done.log
+  .dependencies.done.log \
+  .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory examples/illustrations \
 	  check

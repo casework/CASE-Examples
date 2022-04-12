@@ -15,4 +15,5 @@ catalog-v001.xml
 
 # Workflow files
 .*.done.log
+.venv-pre-commit
 venv
