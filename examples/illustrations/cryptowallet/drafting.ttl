@@ -1,12 +1,13 @@
 @prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix drafting-taxonomy: <http://example.org/taxonomy/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix qudt: <http://qudt.org/2.1/schema/qudt/> .
 
 drafting:CryptoCurrencyUnit
@@ -33,7 +34,7 @@ drafting:CryptoAddress
 	rdfs:label "CryptoAddress"@en ;
 	rdfs:comment "A crypto address is an identifier for an account that holds and transacts cryptocurrency."@en ;
 	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
-	sh:targetClass observable:CryptoAddress ;
+	sh:targetClass drafting:CryptoAddress ;
 	.
 
 drafting:CryptoAddressFacet
@@ -41,7 +42,7 @@ drafting:CryptoAddressFacet
 		owl:Class ,
 		sh:NodeShape
 		;
-	rdfs:subClassOf core:Facet ;
+	rdfs:subClassOf uco-core:Facet ;
 	rdfs:label "CryptoAddressFacet"@en ;
 	rdfs:comment "A crypto address facet represents information associated with a crytocurrency address."@en ;
 	sh:property
@@ -116,7 +117,7 @@ drafting:CryptoWalletFacet
                 owl:Class ,
                 sh:NodeShape
                 ;
-        rdfs:subClassOf core:Facet ;
+        rdfs:subClassOf uco-core:Facet ;
         rdfs:label "CryptoWalletFacet"@en ;
         rdfs:comment "A crypto wallet facet represents information associated with a crytocurrency wallet."@en ;
         sh:property
@@ -140,9 +141,9 @@ drafting:CryptoWalletFacet
                         sh:path drafting:cryptoWalletSeed ;
                 ] ,
 		[
-			sh:class observable:ObservableObject ;
+			sh:class uco-observable:ObservableObject ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path observable:cryptoAddress ;
+			sh:path drafting:cryptoAddress ;
 		] ,
                 [
                         sh:datatype xsd:dateTime ;
