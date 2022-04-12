@@ -71,43 +71,45 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
 The location of a Cell Site can change over time when it is moved by a telecommunication provider. Therefore, the location is represented using a `Location` object and a `Relationship` object, which can be time bounded:
 
 ```json
-        {
-            "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
-            "@type": "uco-location:Location",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-location:LatLongCoordinatesFacet",
-                    "uco-location:latitude": {
-                        "@type": "xsd:decimal",
-                        "@value": "46.522316"
-                    },
-                    "uco-location:longitude": {
-                        "@type": "xsd:decimal",
-                        "@value": "6.566640"
-                    }
+[
+    {
+        "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
+        "@type": "uco-location:Location",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-location:LatLongCoordinatesFacet",
+                "uco-location:latitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "46.522316"
+                },
+                "uco-location:longitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "6.566640"
                 }
-            ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-observable:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2016-12-12T09:10:11Z"
         },
-        {
-            "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
-            "@type": "uco-observable:ObservableRelationship",
-            "uco-observable:startTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2016-12-12T09:10:11Z"
-            },
-            "uco-observable:endTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2018-06-10T15:36:39Z"
-            },
-            "uco-core:source": {
-                "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
-            },
-            "uco-core:target": {
-                "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
-            },
-            "uco-core:kindOfRelationship": "Located_At",
-            "uco-core:isDirectional": true
+        "uco-observable:endTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2018-06-10T15:36:39Z"
         },
+        "uco-core:source": {
+            "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+        },
+        "uco-core:target": {
+            "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
+        },
+        "uco-core:kindOfRelationship": "Located_At",
+        "uco-core:isDirectional": true
+    }
+]
 ```
 
 
