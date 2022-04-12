@@ -17,9 +17,6 @@ top_srcdir := $(shell cd ../../.. ; pwd)
 
 all:
 	$(MAKE) \
-	  --directory src \
-	  normalize
-	$(MAKE) \
 	  --directory src
 	cp src/generated-README.md README.md
 	cp src/generated-inference.json inference.json

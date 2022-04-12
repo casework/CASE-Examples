@@ -28,15 +28,11 @@ generated_readme_sed_sources := \
 all: \
   generated-README.md
 
-.PHONY: \
-  normalize
-
 check:
 
 clean:
 	@rm -f \
 	  *.sed \
-	  .normalized-* \
 	  generated-* \
 	  query-*.md
 
@@ -64,10 +60,6 @@ generated-$(illustration_name).json: \
 	  $(illustration_snippets_json) \
 	  > _$@
 	mv _$@ $@
-
-normalize:
-	ls $(illustration_name)-*.json \
-	  | while read x; do python3 -m json.tool $$x .normalized-$$x && mv .normalized-$$x $$x ; done
 
 query-%.md: \
   query-%.sparql \
