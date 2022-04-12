@@ -1,3 +1,11 @@
+<!--
+GENERATED FILE
+
+README.md is generated from a template file, src/README.md.in, and JSON snippets under src/.  If you need to revise narrative text, edit src/README.md.in.  If you need to revise data, please find and revise the containing snippet.  Editing patterns follow the patterns described in the CASE website's CONTRIBUTE.md:
+https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#maintenance-of-generated-files
+-->
+
+
 # Cell site examples
 
 This illustration includes example investigative questions that require cell site information, and sample JSON-LD of using the proposed `CellSiteFacet`, `AntennaFacet`, and `CapturedTelecommunicationsInformationFacet`.
