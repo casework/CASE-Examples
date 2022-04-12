@@ -1,0 +1,93 @@
+{
+    "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
+        "drafting-taxonomy": "http://example.org/taxonomy/drafting/",
+        "kb": "http://example.org/kb/",
+        "qudt": "http://qudt.org/2.1/schema/qudt/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "unit": "http://qudt.org/2.1/vocab/unit/"
+    },
+    "@graph": [
+        {
+            "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CryptoAddressFacet",
+                    "drafting:cryptoAddressCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2013-01-25T18:37:52Z"
+                    },
+                    "drafting:cryptoAddressFormat": "P2PKH",
+                    "drafting:cryptoCurrencyBalance": {
+                        "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567"
+                    },
+                    "drafting:cryptoCurrencyCompletedTransactionCount": "37",
+                    "drafting:cryptoCurrencyTotalReceived": {
+                        "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234"
+                    },
+                    "drafting:cryptoCurrencyType": "BitCoin",
+                    "uco-core:addressValue": "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A"
+                }
+            ]
+        },
+        {
+            "@id": "kb:cryptoaddress-balance-1993548a-a60e-41a8-8cb6-27a74253253f",
+            "@type": "qudt:QuantityValue",
+            "qudt:numericValue": {
+                "@type": "xsd:decimal",
+                "@value": "0.00069789"
+            },
+            "qudt:unit": "drafting:BTC",
+            "rdfs:comment": "The SSN examples include demonstration of a value with temperature unit of measure.",
+            "rdfs:seeAlso": {
+                "@id": "https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures"
+            }
+        },
+        {
+            "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234",
+            "@type": "qudt:QuantityValue",
+            "qudt:numericValue": {
+                "@type": "xsd:decimal",
+                "@value": "20074.05869789"
+            },
+            "qudt:unit": "drafting:BTC",
+            "rdfs:comment": "The SSN examples include demonstration of a value with temperature unit of measure.",
+            "rdfs:seeAlso": {
+                "@id": "https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures"
+            }
+        },
+        {
+            "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567",
+            "@type": "qudt:QuantityValue",
+            "qudt:numericValue": {
+                "@type": "xsd:decimal",
+                "@value": "20074.05800000"
+            },
+            "qudt:unit": "drafting:BTC",
+            "rdfs:comment": "The SSN examples include demonstration of a value with temperature unit of measure.",
+            "rdfs:seeAlso": {
+                "@id": "https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures"
+            }
+        },
+        {
+            "@id": "kb:wallet-426a-0be4-db43-a66e-c43b6edc6b3a",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CryptoWalletFacet",
+                    "drafting:cryptoWalletCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-25T18:37:52Z"
+                    },
+                    "drafting:cryptoWalletIdentifier": "73108d1b19",
+                    "drafting:cryptoWalletName": "Jane Doe",
+                    "uco-core:cryptoWalletAddress": {
+                        "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e"
+                    }
+                }
+            ]
+        }
+    ]
+}
