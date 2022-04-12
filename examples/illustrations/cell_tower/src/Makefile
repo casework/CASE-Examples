@@ -11,4 +11,4 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-include ../src/illustration-basedir.mk
+include ../../src/illustration-src.mk

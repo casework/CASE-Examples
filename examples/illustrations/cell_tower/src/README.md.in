@@ -23,29 +23,7 @@ The primary requirement of this proposal is to represent data showing which cell
 Properties of the Cell Site represented in CASE using the proposed `CellSiteFacet`. The term Cell Site refers to a radio network component that has an antenna with associated properties.
 
 ```json
-        {
-            "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-            "@type": "uco-observable:ObservableObject",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CellSiteFacet",
-                    "drafting:cellSiteType": "GSM",
-                    "drafting:cellSiteCountryCode": "228",
-                    "drafting:cellSiteNetworkCode": "2",
-                    "drafting:cellSiteLocationAreaCode": "22100",
-                    "drafting:cellSiteIdentifier": "29220952"
-                },
-                {
-                    "@type": "drafting:AntennaFacet",
-                    "drafting:azimuth": "45",
-                    "drafting:elevation": "5",
-                    "drafting:skew": "10",
-                    "drafting:horizontalBeamWidth": "110",
-                    "drafting:signalStrength": "20",
-                    "drafting:height": "25"
-                }
-            ]
-        },
+@CELL_TOWER_SITE_JSON@
 ```
 
 The location of a Cell Site can change over time when it is moved by a telecommunication provider. Therefore, the location is represented using a `Location` object and a `Relationship` object, which can be time bounded:
