@@ -47,7 +47,7 @@ drafting:CryptoAddressFacet
 	rdfs:comment "A crypto address facet represents information associated with a crytocurrency address."@en ;
 	sh:property
 		[
-			sh:class xsd:string ;
+			sh:datatype xsd:string ;
 			sh:minCount "1"^^xsd:integer ;
                         sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
@@ -122,20 +122,20 @@ drafting:CryptoWalletFacet
         rdfs:comment "A crypto wallet facet represents information associated with a crytocurrency wallet."@en ;
         sh:property
                 [
-                        sh:class xsd:string ;
+                        sh:datatype xsd:string ;
                         sh:minCount "1"^^xsd:integer ;
                         sh:maxCount "1"^^xsd:integer ;
                         sh:nodeKind sh:Literal ;
                         sh:path drafting:cryptoWalletIdentifier ;
                 ] ,
                 [
-                        sh:class xsd:string ;
+                        sh:datatype xsd:string ;
                         sh:maxCount "1"^^xsd:integer ;
                         sh:nodeKind sh:Literal ;
                         sh:path drafting:cryptoWalletName ;
                 ] ,
                 [
-                        sh:class xsd:string ;
+                        sh:datatype xsd:string ;
                         sh:maxCount "1"^^xsd:integer ;
                         sh:nodeKind sh:Literal ;
                         sh:path drafting:cryptoWalletSeed ;
