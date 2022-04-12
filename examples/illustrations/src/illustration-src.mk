@@ -25,6 +25,9 @@ generated_readme_sed_sources := \
   $(query_md_files) \
   $(query_sparql_files)
 
+# Use a drafting.ttl file in queries, if it is present.
+drafting_ttl := $(wildcard ../drafting.ttl)
+
 all: \
   generated-README.md
 
@@ -63,13 +66,13 @@ generated-$(illustration_name).json: \
 
 query-%.md: \
   query-%.sparql \
+  $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log \
-  ../drafting.ttl \
   generated-$(illustration_name).json
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_sparql_select \
 	    _$@ \
 	    $< \
-	    ../drafting.ttl \
+	    $(drafting_ttl) \
 	    generated-$(illustration_name).json
 	mv _$@ $@
