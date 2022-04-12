@@ -18,35 +18,35 @@ top_srcdir := $(shell cd ../../.. ; pwd)
 illustrations_srcdir := $(top_srcdir)/examples/illustrations
 
 all: \
-  all-review \
+  all-illustration-nosrc \
   query-select-files.md
 
 .PHONY: \
-  all-review \
-  check-review \
-  clean-review
+  all-illustration-nosrc \
+  check-illustration-nosrc \
+  clean-illustration-nosrc
 
-all-review:
+all-illustration-nosrc:
 	$(MAKE) \
-	  --file $(illustrations_srcdir)/src/review.mk
+	  --file $(illustrations_srcdir)/src/illustration-nosrc.mk
 
 check: \
-  check-review \
+  check-illustration-nosrc \
   query-select-files.md
 
-check-review:
+check-illustration-nosrc:
 	$(MAKE) \
-	  --file $(illustrations_srcdir)/src/review.mk \
+	  --file $(illustrations_srcdir)/src/illustration-nosrc.mk \
 	  check
 
 clean: \
-  clean-review
+  clean-illustration-nosrc
 	@rm -f \
 	  query-*.md
 
-clean-review:
+clean-illustration-nosrc:
 	@$(MAKE) \
-	  --file $(illustrations_srcdir)/src/review.mk \
+	  --file $(illustrations_srcdir)/src/illustration-nosrc.mk \
 	  clean
 
 query-select-files.md: \
