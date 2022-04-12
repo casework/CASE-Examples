@@ -1,0 +1,271 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix qudt: <http://qudt.org/2.1/schema/qudt/> .
+
+drafting:CryptoCurrencyUnit
+	a owl:Class ;
+	rdfs:subClassOf qudt:CurrencyUnit ;
+	.
+
+drafting:CryptoWallet
+	a owl:Class ;
+	rdfs:subClassOf uco-observable:ObservableObject ;
+	.
+
+drafting-taxonomy:BTC
+	a drafting:CryptoCurrencyUnit ;
+	rdfs:seeAlso <https://bitcoin.org/> ;
+	.
+
+drafting:CryptoAddress
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-observable:DigitalAddress ;
+	rdfs:label "CryptoAddress"@en ;
+	rdfs:comment "A crypto address is an identifier for an account that holds and transacts cryptocurrency."@en ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+	sh:targetClass observable:CryptoAddress ;
+	.
+
+drafting:CryptoAddressFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:Facet ;
+	rdfs:label "CryptoAddressFacet"@en ;
+	rdfs:comment "A crypto address facet represents information associated with a crytocurrency address."@en ;
+	sh:property
+		[
+			sh:class xsd:string ;
+			sh:minCount "1"^^xsd:integer ;
+                        sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:addressValue ;
+		] ,
+                [
+                        sh:datatype xsd:string ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:Literal ;
+                        sh:path drafting:cryptoCurrencyType ;
+                ] ,
+		[
+			sh:datatype xsd:decimal ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cryptoCurrencyCompletedTransactionCount ;
+		] ,
+                [
+                        sh:datatype xsd:decimal ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:Literal ;
+                        sh:path drafting:cryptoCurrencyPendingTransactionCount ;
+                ] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cryptoAddressFormat ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path uco-observable:displayName ;
+		] ,
+                [
+                        sh:class drafting:CryptoCurrencyUnit ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:BlankNodeOrIRI ;
+                        sh:path drafting:cryptoCurrencyBalance ;
+                ] ,
+                [
+                        sh:class drafting:CryptoCurrencyUnit ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:BlankNodeOrIRI ;
+                        sh:path drafting:cryptoCurrencyTotalSent ;
+                ] ,
+                [
+                        sh:class drafting:CryptoCurrencyUnit ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:BlankNodeOrIRI ;
+                        sh:path drafting:cryptoCurrencyTotalReceived ;
+                ] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cryptoAddressCreatedTime ;
+		]
+		;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+	sh:targetClass drafting:CryptoAddressFacet ;
+	.
+
+drafting:CryptoWalletFacet
+        a
+                owl:Class ,
+                sh:NodeShape
+                ;
+        rdfs:subClassOf core:Facet ;
+        rdfs:label "CryptoWalletFacet"@en ;
+        rdfs:comment "A crypto wallet facet represents information associated with a crytocurrency wallet."@en ;
+        sh:property
+                [
+                        sh:class xsd:string ;
+                        sh:minCount "1"^^xsd:integer ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:Literal ;
+                        sh:path drafting:cryptoWalletIdentifier ;
+                ] ,
+                [
+                        sh:class xsd:string ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:Literal ;
+                        sh:path drafting:cryptoWalletName ;
+                ] ,
+                [
+                        sh:class xsd:string ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:Literal ;
+                        sh:path drafting:cryptoWalletSeed ;
+                ] ,
+		[
+			sh:class observable:ObservableObject ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
+			sh:path observable:cryptoAddress ;
+		] ,
+                [
+                        sh:datatype xsd:dateTime ;
+                        sh:maxCount "1"^^xsd:integer ;
+                        sh:nodeKind sh:Literal ;
+                        sh:path drafting:cryptoWalletCreatedTime ;
+                ]
+                ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        sh:targetClass drafting:CryptoWalletFacet ;
+        .
+
+uco-core:addressValue
+	a owl:DatatypeProperty ;
+	rdfs:label "addressValue"@en ;
+	rdfs:comment "The identifier of the cryptocurrency address." ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+	.
+
+drafting:cryptoCurrencyType
+	a owl:DatatypeProperty ;
+	rdfs:label "cryptoCurrencyType"@en ;
+	rdfs:comment "Name of the type of cryptocurrency in the wallet."@en ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+	.
+
+drafting:cryptoAddressFormat
+	a owl:DatatypeProperty ;
+	rdfs:label "cryptoAddressFormat"@en ;
+	rdfs:comment "Specifies the format of the address, such as P2SH (BASE58)."@en ;
+	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+	.
+
+uco-core:displayName
+        a owl:DatatypeProperty ;
+        rdfs:label "displayName"@en ;
+        rdfs:comment "The name assigned to the cryptocurrency address."@en ;
+        rdfs:range xsd:string ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoCurrencyCompletedTransactionCount
+	a owl:DatatypeProperty ;
+	rdfs:label "cryptoCurrencyCompletedTransactionCount"@en ;
+	rdfs:comment "How many transactions have been completed using the cryptocurrency address."@en ;
+	rdfs:range xsd:float ;
+	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+	.
+
+drafting:cryptoCurrencyPendingTransactionCount
+        a owl:DatatypeProperty ;
+        rdfs:label "cryptoCurrencyPendingTransactionCount"@en ;
+        rdfs:comment "How many transactions are pending for the cryptocurrency address."@en ;
+        rdfs:range xsd:float ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoCurrencyBalance
+        a owl:ObjectProperty ;
+        rdfs:label "cryptoCurrencyBalance"@en ;
+        rdfs:comment "The total amount of cryptocurrency in the cryptocurrency address."@en ;
+        rdfs:range drafting:CryptoCurrencyUnit ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoCurrencyTotalSent
+        a owl:ObjectProperty ;
+        rdfs:label "cryptoCurrencyTotalSent"@en ;
+        rdfs:comment "The total amount of cryptocurrency sent by the cryptocurrency address."@en ;
+        rdfs:range drafting:CryptoCurrencyUnit ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoAddressTotalReceived
+        a owl:ObjectProperty ;
+        rdfs:label "cryptoAddressTotalReceived"@en ;
+        rdfs:comment "The total amount of cryptocurrency received by the cryptocurrency address."@en ;
+        rdfs:range drafting:CryptoCurrencyUnit ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoAddressCreatedTime
+	a owl:DatatypeProperty ;
+	rdfs:label "cryptoAddressCreatedTime"@en ;
+	rdfs:comment "When the cryptocurrency address was created."@en ;
+	rdfs:range xsd:dateTime ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:cryptoWalletIdentifier
+        a owl:DatatypeProperty ;
+        rdfs:label "cryptoWalletIdentifier"@en ;
+        rdfs:comment "The unique identifier of a wallet."@en ;
+        rdfs:range xsd:string ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoWalletName
+        a owl:DatatypeProperty ;
+        rdfs:label "cryptoWalletName"@en ;
+        rdfs:comment "the name assigned to a wallet."@en ;
+        rdfs:range xsd:string ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoWalletSeed
+        a owl:DatatypeProperty ;
+        rdfs:label "cryptoWalletSeed"@en ;
+        rdfs:comment "A series of words for accessing crypto associated with the wallet.."@en ;
+        rdfs:range xsd:string ;
+        rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
+        .
+
+drafting:cryptoWalletCreatedTime
+        a owl:DatatypeProperty ;
+        rdfs:label "cryptoWalletCreatedTime"@en ;
+        rdfs:comment "When the cryptocurrency wallet was created."@en ;
+        rdfs:range xsd:dateTime ;
+        rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+        .
+
+
+
