@@ -16,7 +16,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CryptoAddressFacet",
-                    "uco-core:addressValue": "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A",
+                    "drafting:addressValue": "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A",
                     "drafting:cryptoCurrencyType": "BitCoin",
                     "drafting:cryptoAddressFormat": "P2PKH",
                     "drafting:cryptoAddressCreatedTime": {
