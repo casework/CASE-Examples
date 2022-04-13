@@ -8,7 +8,15 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 
 # Cryptowallet and Cryptoaddress Examples
 
-This illustration includes example investigative questions involving cryptowallets and cryptoaddresses:
+This illustration includes example investigative questions involving cryptowallets and cryptoaddresses.
+
+
+## Disclaimer
+
+Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
+
+
+## Example representations
 
 The proposed representation of cryptowallets:
 

@@ -8,7 +8,15 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 
 # Cryptowallet and Cryptoaddress Examples
 
-This illustration includes example investigative questions involving cryptowallets and cryptoaddresses:
+This illustration includes example investigative questions involving cryptowallets and cryptoaddresses.
+
+
+## Disclaimer
+
+Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
+
+
+## Example representations
 
 The proposed representation of cryptoaddress is illustrated using the seizure of assets from BitCoin address 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx related to the Silk Road marketplace
 Reference: https://www.justice.gov/usao-ndca/press-release/file/1334771/download
