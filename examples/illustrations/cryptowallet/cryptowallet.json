@@ -73,6 +73,26 @@
             }
         },
         {
+            "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+            "@type": "drafting:CryptoAddress",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:CryptoAddressFacet",
+                    "drafting:addressValue": "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx",
+                    "drafting:cryptoAddressCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2013-04-09T17:03:36Z"
+                    },
+                    "drafting:cryptoAddressFormat": "P2PKH",
+                    "drafting:cryptoCurrencyBalance": {
+                        "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
+                    },
+                    "drafting:cryptoCurrencyCompletedTransactionCount": "260",
+                    "drafting:cryptoCurrencyType": "BitCoin"
+                }
+            ]
+        },
+        {
             "@id": "kb:wallet-426a-0be4-db43-a66e-c43b6edc6b3a",
             "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [

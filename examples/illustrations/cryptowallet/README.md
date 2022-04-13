@@ -18,30 +18,36 @@ Participation by NIST in the creation of the documentation of mentioned software
 
 ## Example representations
 
-The proposed representation of cryptoaddress is illustrated using the seizure of assets from BitCoin address 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx related to the Silk Road marketplace
-Reference: https://www.justice.gov/usao-ndca/press-release/file/1334771/download
+The proposed representation of cryptoaddress is illustrated using the seizure of assets from BitCoin address `1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx` related to the Silk Road marketplace.
+
+The seizure is documented here:
+
+* [https://www.justice.gov/usao-ndca/press-release/file/1334771/download](https://www.justice.gov/usao-ndca/press-release/file/1334771/download)
+   - Alternatively available here: [https://storage.courtlistener.com/recap/gov.uscourts.cand.368440/gov.uscourts.cand.368440.1.0.pdf](https://storage.courtlistener.com/recap/gov.uscourts.cand.368440/gov.uscourts.cand.368440.1.0.pdf)
 
 ```json
-       {
-            "@id": "kb:1de3-f681-4bc6-a66e-b70a7ecdb3a5",
-            "@type": "uco-observable:ObservableObject",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CryptoAddressFacet",
-                    "drafting:addressValue": "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx",
-                    "drafting:cryptoCurrencyType": "BitCoin",
-                    "drafting:cryptoAddressFormat": "P2PKH",
-                    "drafting:cryptoAddressCreatedTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2013-04-09T17:03:36Z"
-                    },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": "260",
-                    "drafting:cryptoCurrencyBalance": {
-                        "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
-                    }
+[
+    {
+        "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+        "@type": "drafting:CryptoAddress",
+        "uco-core:hasFacet": [
+            {
+                "@type": "drafting:CryptoAddressFacet",
+                "drafting:addressValue": "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx",
+                "drafting:cryptoCurrencyType": "BitCoin",
+                "drafting:cryptoAddressFormat": "P2PKH",
+                "drafting:cryptoAddressCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2013-04-09T17:03:36Z"
+                },
+                "drafting:cryptoCurrencyCompletedTransactionCount": "260",
+                "drafting:cryptoCurrencyBalance": {
+                    "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
                 }
-            ]
-        }
+            }
+        ]
+    }
+]
 ```
 
 An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
