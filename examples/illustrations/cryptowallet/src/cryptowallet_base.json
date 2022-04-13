@@ -25,7 +25,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2013-01-25T18:37:52Z"
                     },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": "37",
+                    "drafting:cryptoCurrencyCompletedTransactionCount": 37,
                     "drafting:cryptoCurrencyBalance": {
                         "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567"
                     },
