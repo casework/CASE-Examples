@@ -70,11 +70,20 @@ Certain properties of a cryptowallet are frequently-changing features, such as i
 Applying SSN to the Bitcoin address, we assign these class and property descriptions:
 
 * The Bitcoin account, i.e. `drafting:CryptoWallet` is the [feature of interest](https://www.w3.org/TR/vocab-ssn/#SOSAFeatureOfInterest).
-* The account has two [observable properties](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty) (among others) we are interested in measuring - the transaction count, and the balance.
+* The account has four [observable properties](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty) (among others) we are interested in measuring:
+    - the transaction count
+    - the balance
+    - the total amount of cryptocurrency received
+    - the total amount of cryptocurrency sent
+* Those observable properties can be observed either by a passive mean or active mean.
+    - A passive mean could be reviewing a blockchain summarization, as was done above by reviewing two websites.  These would yield `sosa:Observation` objects.
+    - An active mean could be by transacting with the address, updating the address's values.  In SOSA terms, this would be an [actuation](sosa:Actuation).  Because an actuation is also tied to one observable property, a blockchain transaction enacts one actuation per property.
 
-A representation of the account balance being 0.00069789 BTC at the above-noted time would be as follows.  Note that this representation is scoped to only using concepts from the SSN, SOSA, and QUDT namespaces, plus the extension to QUDT of BTC as a subclass (transitively so) of `qudt:CurrencyUnit`.
+One of the behaviors of block chains is their transactions tend to both be publicly listed, and include account balances.  This is true for Bitcoin transactions once added to the public ledger.  Hence, each transaction in this example serves as both passive and active measurement instruments.
 
-The result of the observation is a QUDT `QuantityValue` representing the balance in Bitcoin.
+A representation of the account balance being 0.00069789 BTC at the above-noted time would be as follows.  Note that this representation is scoped to only using concepts from the SSN, SOSA, and QUDT namespaces, plus the extension to QUDT that adds BTC as an instance of `qudt:CurrencyUnit` (or rather, an instance of a subclass of `qudt:CurrencyUnit`, `drafting:CryptoCurrencyUnit`).
+
+Whether the result of an observation or transaction (or actuation), the result includes a QUDT `QuantityValue` representing the balance in Bitcoin.  This `qudt:QuantityValue` will be associated with the `sosa:Observation`.
 
 ```json
 [
@@ -90,10 +99,19 @@ The result of the observation is a QUDT `QuantityValue` representing the balance
 ]
 ```
 
-The observation links the result with `sosa:hasResult`, also linking the ["sensor"](https://www.w3.org/TR/vocab-ssn/#SOSASensor) that made the result with the [property being observed](https://www.w3.org/TR/vocab-ssn/#SOSAobservedProperty).
+Both the observation and actuation link the result with `sosa:hasResult`, also tying in the [property being observed](https://www.w3.org/TR/vocab-ssn/#SOSAobservedProperty), and the ["sensor"](https://www.w3.org/TR/vocab-ssn/#SOSASensor) (for observations) or actuator (for actuations).  The transaction serves as both sensor and actuator.
+
+This snippet shows the transaction enacting a `sosa:Observation`:
 
 ```json
 [
+    {
+        "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c",
+        "@type": "sosa:Sensor",
+        "sosa:madeObservation": {
+            "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17"
+        }
+    },
     {
         "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17",
         "@type": "sosa:Observation",
@@ -110,6 +128,46 @@ The observation links the result with `sosa:hasResult`, also linking the ["senso
             "@type": "xsd:dateTimeStamp",
             "@value": "2022-04-13T12:02:13-05:00"
         }
+    }
+]
+```
+
+This snippet shows the transaction enacting a `sosa:Actuation`:
+
+```json
+[
+    {
+        "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c",
+        "@type": "sosa:Actuator",
+        "sosa:madeActuation": {
+            "@id": "kb:actuation-69144892-bacf-466e-9f06-5e05e55a1e09"
+        }
+    },
+    {
+        "@id": "kb:actuation-69144892-bacf-466e-9f06-5e05e55a1e09",
+        "@type": "sosa:Actuation",
+        "sosa:hasResult": {
+            "@id": "kb:result-a0146036-934c-4cca-833d-3a042fedfe2d"
+        },
+        "sosa:madeByActuator": {
+            "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c"
+        },
+        "sosa:observedProperty": {
+            "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218"
+        },
+        "sosa:resultTime": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2016-01-19T15:45:17Z"
+        }
+    },
+    {
+        "@id": "kb:result-a0146036-934c-4cca-833d-3a042fedfe2d",
+        "@type": "qudt:QuantityValue",
+        "qudt:numericValue": {
+            "@type": "xsd:decimal",
+            "@value": "0.00069789"
+        },
+        "qudt:unit": "drafting-taxonomy:BTC"
     }
 ]
 ```
