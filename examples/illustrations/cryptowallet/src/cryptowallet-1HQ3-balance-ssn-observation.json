@@ -2,9 +2,15 @@
     {
         "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17",
         "@type": "sosa:Observation",
-        "sosa:hasResult": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5",
-        "sosa:madeBySensor": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c",
-        "sosa:observedProperty": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218",
+        "sosa:hasResult": {
+            "@id": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5"
+        },
+        "sosa:madeBySensor": {
+            "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c"
+        },
+        "sosa:observedProperty": {
+            "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218"
+        },
         "sosa:resultTime": {
             "@type": "xsd:dateTimeStamp",
             "@value": "2022-04-13T12:02:13-05:00"
