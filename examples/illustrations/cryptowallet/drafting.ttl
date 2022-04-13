@@ -62,7 +62,7 @@ drafting:CryptoAddressFacet
                         sh:path drafting:cryptoCurrencyType ;
                 ] ,
 		[
-			sh:datatype xsd:decimal ;
+			sh:datatype xsd:integer ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:cryptoCurrencyCompletedTransactionCount ;
@@ -194,7 +194,7 @@ drafting:cryptoCurrencyCompletedTransactionCount
 	a owl:DatatypeProperty ;
 	rdfs:label "cryptoCurrencyCompletedTransactionCount"@en ;
 	rdfs:comment "How many transactions have been completed using the cryptocurrency address."@en ;
-	rdfs:range xsd:float ;
+	rdfs:range xsd:integer ;
 	rdfs:seeAlso <https://github.com/casework/CASE/issues/87> ;
 	.
 
