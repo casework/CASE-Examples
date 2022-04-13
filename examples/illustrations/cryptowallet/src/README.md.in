@@ -65,6 +65,12 @@ The observation links the result with `sosa:hasResult`, also linking the ["senso
 @CRYPTOWALLET_1HQ3_BALANCE_SSN_OBSERVATION_JSON@
 ```
 
+The property being observed is the wallet's balance.  In, SSN, the minimum type declarations needed to link the wallet balance to the `drafting:CryptoWallet` are as follows:
+
+```json
+@CRYPTOWALLET_1HQ3_BALANCE_SSN_FOI_JSON@
+```
+
 An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
 Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
 
