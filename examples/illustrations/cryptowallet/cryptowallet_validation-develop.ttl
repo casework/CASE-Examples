@@ -3,12 +3,28 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/observation-81129ccd-14c5-4686-b632-a0bd0d66fa17> ;
+			sh:resultMessage "Value does not have class sosa:Sensor" ;
+			sh:resultPath sosa:madeBySensor ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				a sh:PropertyShape ;
+				sh:NodeKind sh:IRI ;
+				sh:class sosa:Sensor ;
+				sh:path sosa:madeBySensor ;
+			] ;
+			sh:value "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c" ;
+		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
