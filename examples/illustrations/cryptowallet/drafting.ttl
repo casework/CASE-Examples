@@ -5,6 +5,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix ssn: <http://www.w3.org/ns/ssn/> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -278,6 +279,17 @@ drafting:cryptoWalletCreatedTime
 		sh:path sosa:observedProperty ;
 	] ;
 	sh:targetSubjectsOf sosa:observedProperty ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:class sosa:ObservableProperty ;
+		sh:NodeKind sh:IRI ;
+		sh:path ssn:hasProperty ;
+	] ;
+	sh:targetSubjectsOf ssn:hasProperty ;
 	.
 
 []
