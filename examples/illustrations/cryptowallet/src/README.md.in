@@ -26,26 +26,7 @@ The seizure is documented here:
    - Alternatively available here: [https://storage.courtlistener.com/recap/gov.uscourts.cand.368440/gov.uscourts.cand.368440.1.0.pdf](https://storage.courtlistener.com/recap/gov.uscourts.cand.368440/gov.uscourts.cand.368440.1.0.pdf)
 
 ```json
-       {
-            "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
-            "@type": "drafting:CryptoAddress",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "drafting:CryptoAddressFacet",
-                    "drafting:addressValue": "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx",
-                    "drafting:cryptoCurrencyType": "BitCoin",
-                    "drafting:cryptoAddressFormat": "P2PKH",
-                    "drafting:cryptoAddressCreatedTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2013-04-09T17:03:36Z"
-                    },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": "260",
-                    "drafting:cryptoCurrencyBalance": {
-                        "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
-                    }
-                }
-            ]
-        }
+@CRYPTOWALLET_ADDRESS_1HQ3_JSON@
 ```
 
 An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
