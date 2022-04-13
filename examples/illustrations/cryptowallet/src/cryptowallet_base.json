@@ -4,6 +4,7 @@
         "drafting-taxonomy": "http://example.org/taxonomy/drafting/",
         "kb": "http://example.org/kb/",
         "qudt": "http://qudt.org/2.1/schema/qudt/",
+        "sosa": "http://www.w3.org/ns/sosa/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "unit": "http://qudt.org/2.1/vocab/unit/",

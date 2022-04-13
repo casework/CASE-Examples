@@ -1,0 +1,11 @@
+[
+    {
+        "@id": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5",
+        "@type": "qudt:QuantityValue",
+        "qudt:numericValue": {
+            "@type": "xsd:decimal",
+            "@value": "0.00069789"
+        },
+        "qudt:unit": "drafting-taxonomy:BTC"
+    }
+]
