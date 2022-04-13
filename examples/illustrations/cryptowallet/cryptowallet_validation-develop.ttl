@@ -13,6 +13,21 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/observation-81129ccd-14c5-4686-b632-a0bd0d66fa17> ;
+			sh:resultMessage "Value does not have class sosa:ObservableProperty" ;
+			sh:resultPath sosa:observedProperty ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				a sh:PropertyShape ;
+				sh:NodeKind sh:IRI ;
+				sh:class sosa:ObservableProperty ;
+				sh:path sosa:observedProperty ;
+			] ;
+			sh:value "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/observation-81129ccd-14c5-4686-b632-a0bd0d66fa17> ;
 			sh:resultMessage "Value does not have class sosa:Sensor" ;
 			sh:resultPath sosa:madeBySensor ;
 			sh:resultSeverity sh:Violation ;
