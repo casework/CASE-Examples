@@ -94,7 +94,9 @@ Whether the result of an observation or transaction (or actuation), the result i
             "@type": "xsd:decimal",
             "@value": "0.00069789"
         },
-        "qudt:unit": "drafting-taxonomy:BTC"
+        "qudt:unit": {
+            "@id": "drafting-taxonomy:BTC"
+        }
     }
 ]
 ```
@@ -113,6 +115,10 @@ This snippet shows the transaction enacting a `sosa:Observation`:
         }
     },
     {
+        "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218",
+        "@type": "sosa:ObservableProperty"
+    },
+    {
         "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17",
         "@type": "sosa:Observation",
         "sosa:hasResult": {
@@ -122,11 +128,11 @@ This snippet shows the transaction enacting a `sosa:Observation`:
             "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c"
         },
         "sosa:observedProperty": {
-            "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218"
+            "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"
         },
         "sosa:resultTime": {
             "@type": "xsd:dateTimeStamp",
-            "@value": "2022-04-13T12:02:13-05:00"
+            "@value": "2016-01-19T15:45:17Z"
         }
     }
 ]
@@ -144,30 +150,25 @@ This snippet shows the transaction enacting a `sosa:Actuation`:
         }
     },
     {
+        "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218",
+        "@type": "sosa:ActuatableProperty"
+    },
+    {
         "@id": "kb:actuation-69144892-bacf-466e-9f06-5e05e55a1e09",
         "@type": "sosa:Actuation",
+        "sosa:actsOnProperty": {
+            "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"
+        },
         "sosa:hasResult": {
-            "@id": "kb:result-a0146036-934c-4cca-833d-3a042fedfe2d"
+            "@id": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5"
         },
         "sosa:madeByActuator": {
             "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c"
-        },
-        "sosa:observedProperty": {
-            "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218"
         },
         "sosa:resultTime": {
             "@type": "xsd:dateTimeStamp",
             "@value": "2016-01-19T15:45:17Z"
         }
-    },
-    {
-        "@id": "kb:result-a0146036-934c-4cca-833d-3a042fedfe2d",
-        "@type": "qudt:QuantityValue",
-        "qudt:numericValue": {
-            "@type": "xsd:decimal",
-            "@value": "0.00069789"
-        },
-        "qudt:unit": "drafting-taxonomy:BTC"
     }
 ]
 ```
@@ -180,15 +181,17 @@ The property being observed is the wallet's balance.  In SSN, the minimum type d
         "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
         "@type": "sosa:FeatureOfInterest",
         "ssn:hasProperty": {
-            "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218"
+            "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"
         }
-    },
-    {
-        "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218",
-        "@type": "sosa:ObservableProperty"
     }
 ]
 ```
+
+Altogether, the above render of a cryptowallet and transaction enable this view of the history of balances of this wallet:
+
+|    | ?lAddressValue                     | ?lTransactionEndTime   |   ?lNumericValue | ?lUnitLabel   |
+|----|------------------------------------|------------------------|------------------|---------------|
+|  0 | 1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx | 2016-01-19T15:45:17Z   |       0.00069789 | BTC           |
 
 An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
 Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
