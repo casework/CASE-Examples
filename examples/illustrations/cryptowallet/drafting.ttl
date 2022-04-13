@@ -4,6 +4,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -268,5 +269,14 @@ drafting:cryptoWalletCreatedTime
         rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
         .
 
-
+[]
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:class sosa:Sensor ;
+		sh:NodeKind sh:IRI ;
+		sh:path sosa:madeBySensor ;
+	] ;
+	sh:targetSubjectsOf sosa:madeBySensor ;
+	.
 
