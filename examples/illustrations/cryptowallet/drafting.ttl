@@ -273,6 +273,17 @@ drafting:cryptoWalletCreatedTime
 	a sh:NodeShape ;
 	sh:property [
 		a sh:PropertyShape ;
+		sh:class sosa:ObservableProperty ;
+		sh:NodeKind sh:IRI ;
+		sh:path sosa:observedProperty ;
+	] ;
+	sh:targetSubjectsOf sosa:observedProperty ;
+	.
+
+[]
+	a sh:NodeShape ;
+	sh:property [
+		a sh:PropertyShape ;
 		sh:class sosa:Sensor ;
 		sh:NodeKind sh:IRI ;
 		sh:path sosa:madeBySensor ;
