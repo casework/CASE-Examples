@@ -28,7 +28,7 @@ The seizure is documented here:
 ```json
        {
             "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "drafting:CryptoAddress",
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CryptoAddressFacet",
