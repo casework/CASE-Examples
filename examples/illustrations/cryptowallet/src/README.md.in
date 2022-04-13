@@ -27,7 +27,7 @@ The seizure is documented here:
 
 ```json
        {
-            "@id": "kb:1de3-f681-4bc6-a66e-b70a7ecdb3a5",
+            "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
             "@type": "uco-observable:ObservableObject",
             "uco-core:hasFacet": [
                 {
