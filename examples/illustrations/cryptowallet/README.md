@@ -50,6 +50,64 @@ The seizure is documented here:
 ]
 ```
 
+Observations of that address from two sources yield certain measurements of the account associated with that address, including the count of transactions and the balance in Bitcoin and/or other denominations.
+
+Two address summary pages are here:
+
+* [https://www.blockchain.com/btc/address/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A](https://www.blockchain.com/btc/address/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A)
+* [https://btc.com/btc/address/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A](https://btc.com/btc/address/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A)
+
+At `Wed Apr 13 12:02:13 EDT 2022`, these were the transaction-count and balance, according to the above two presentations of the Bitcoin blockchain:
+
+* 37 transactions
+* 0.00069789 BTC
+
+
+### Representation of address measurements
+
+Certain properties of a cryptowallet are frequently-changing features, such as its transaction count or balance.  The [Semantic Sensor Network (SSN) Ontology](https://www.w3.org/TR/vocab-ssn) provides a vocabulary for measuring *features of interest*.  See [Section 7.3, Quantity Values and Units of Measure](https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures), and/or the ["Apartment 134"](https://www.w3.org/TR/vocab-ssn/#apartment-134) example for full demonstration of measurement.
+
+Applying SSN to the Bitcoin address, we assign these class and property descriptions:
+
+* The Bitcoin account, i.e. `drafting:CryptoWallet` is the [feature of interest](https://www.w3.org/TR/vocab-ssn/#SOSAFeatureOfInterest).
+* The account has two [observable properties](https://www.w3.org/TR/vocab-ssn/#SOSAObservableProperty) (among others) we are interested in measuring - the transaction count, and the balance.
+
+A representation of the account balance being 0.00069789 BTC at the above-noted time would be as follows.  Note that this representation is scoped to only using concepts from the SSN, SOSA, and QUDT namespaces, plus the extension to QUDT of BTC as a subclass (transitively so) of `qudt:CurrencyUnit`.
+
+The result of the observation is a QUDT `QuantityValue` representing the balance in Bitcoin.
+
+```json
+[
+    {
+        "@id": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5",
+        "@type": "qudt:QuantityValue",
+        "qudt:numericValue": {
+            "@type": "xsd:decimal",
+            "@value": "0.00069789"
+        },
+        "qudt:unit": "drafting-taxonomy:BTC"
+    }
+]
+```
+
+The observation links the result with `sosa:hasResult`, also linking the ["sensor"](https://www.w3.org/TR/vocab-ssn/#SOSASensor) that made the result with the [property being observed](https://www.w3.org/TR/vocab-ssn/#SOSAobservedProperty).
+
+```json
+[
+    {
+        "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17",
+        "@type": "sosa:Observation",
+        "sosa:hasResult": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5",
+        "sosa:madeBySensor": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c",
+        "sosa:observedProperty": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218",
+        "sosa:resultTime": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2022-04-13T12:02:13-05:00"
+        }
+    }
+]
+```
+
 An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
 Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
 
