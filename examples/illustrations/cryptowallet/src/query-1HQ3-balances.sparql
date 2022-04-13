@@ -1,0 +1,35 @@
+SELECT DISTINCT ?lAddressValue ?lTransactionEndTime ?lNumericValue ?lUnitLabel
+WHERE {
+  ?nCryptoAddress
+    a drafting:CryptoAddress ;
+    ssn:hasProperty ?nBalanceProperty ;
+    uco-core:hasFacet/drafting:addressValue ?lAddressValue ;
+    .
+
+  {
+    ?nTransaction sosa:madeActuation ?nObservation .
+    ?nObservation sosa:actsOnProperty ?nBalanceProperty .
+  }
+  UNION
+  {
+    ?nTransaction sosa:madeObservation ?nObservation .
+    ?nObservation sosa:observedProperty ?nBalanceProperty .
+  }
+
+  ?nObservation
+    sosa:hasResult ?nResult ;
+    sosa:resultTime ?lTransactionEndTime ;
+    .
+
+  ?nResult
+    a qudt:QuantityValue ;
+    qudt:numericValue ?lNumericValue ;
+    qudt:unit ?nUnit ;
+    .
+
+  ?nUnit
+    a/rdfs:subClassOf* qudt:CurrencyUnit ;
+    rdfs:label ?lUnitLabel ;
+    .
+}
+ORDER BY ?lTransactionEndTime

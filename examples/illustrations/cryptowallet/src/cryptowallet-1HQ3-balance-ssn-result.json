@@ -6,6 +6,8 @@
             "@type": "xsd:decimal",
             "@value": "0.00069789"
         },
-        "qudt:unit": "drafting-taxonomy:BTC"
+        "qudt:unit": {
+            "@id": "drafting-taxonomy:BTC"
+        }
     }
 ]

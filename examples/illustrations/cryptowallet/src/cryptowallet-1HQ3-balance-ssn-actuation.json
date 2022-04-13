@@ -7,16 +7,20 @@
         }
     },
     {
+        "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218",
+        "@type": "sosa:ActuatableProperty"
+    },
+    {
         "@id": "kb:actuation-69144892-bacf-466e-9f06-5e05e55a1e09",
         "@type": "sosa:Actuation",
+        "sosa:actsOnProperty": {
+            "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"
+        },
         "sosa:hasResult": {
             "@id": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5"
         },
         "sosa:madeByActuator": {
             "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c"
-        },
-        "sosa:observedProperty": {
-            "@id": "kb:observable-property-86c3d313-b95c-4a16-b6b5-d737efb82218"
         },
         "sosa:resultTime": {
             "@type": "xsd:dateTimeStamp",

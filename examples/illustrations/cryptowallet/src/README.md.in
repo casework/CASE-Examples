@@ -88,6 +88,11 @@ The property being observed is the wallet's balance.  In SSN, the minimum type d
 @CRYPTOWALLET_1HQ3_BALANCE_SSN_FOI_JSON@
 ```
 
+Altogether, the above render of a cryptowallet and transaction enable this view of the history of balances of this wallet:
+
+@QUERY_1HQ3_BALANCES_MD@
+
+
 An example of cryptowallet and cryptoaddress related to the investigation of the Silk Road marketplace and the BitCoin address 127B3qwztPyA67uq63LG8G5izwhFcJ7j4A associated with Shaun Bridges.
 Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
 

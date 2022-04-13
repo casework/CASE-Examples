@@ -24,6 +24,7 @@ drafting:CryptoWallet
 
 drafting-taxonomy:BTC
 	a drafting:CryptoCurrencyUnit ;
+	rdfs:label "BTC"@en ;
 	rdfs:seeAlso <https://bitcoin.org/> ;
 	.
 
