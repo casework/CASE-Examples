@@ -27,7 +27,7 @@
                     "drafting:cryptoCurrencyBalance": {
                         "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567"
                     },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": "37",
+                    "drafting:cryptoCurrencyCompletedTransactionCount": 37,
                     "drafting:cryptoCurrencyTotalReceived": {
                         "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234"
                     },
@@ -89,7 +89,7 @@
                     "drafting:cryptoCurrencyBalance": {
                         "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
                     },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": "260",
+                    "drafting:cryptoCurrencyCompletedTransactionCount": 260,
                     "drafting:cryptoCurrencyType": "BitCoin"
                 }
             ]

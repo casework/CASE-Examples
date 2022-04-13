@@ -33,7 +33,7 @@
 				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
-				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
+				drafting:cryptoCurrencyCompletedTransactionCount "37"^^xsd:integer ;
 				drafting:cryptoCurrencyTotalReceived <http://example.org/kb/cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234> ;
 				drafting:cryptoCurrencyType "BitCoin" ;
 			] ;
@@ -57,7 +57,7 @@
 				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
-				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
+				drafting:cryptoCurrencyCompletedTransactionCount "37"^^xsd:integer ;
 				drafting:cryptoCurrencyTotalReceived <http://example.org/kb/cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234> ;
 				drafting:cryptoCurrencyType "BitCoin" ;
 			] ;
@@ -77,35 +77,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a drafting:CryptoAddressFacet ;
-				drafting:addressValue "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A" ;
-				drafting:cryptoAddressCreatedTime "2013-01-25T18:37:52+00:00"^^xsd:dateTime ;
-				drafting:cryptoAddressFormat "P2PKH" ;
-				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567> ;
-				drafting:cryptoCurrencyCompletedTransactionCount "37" ;
-				drafting:cryptoCurrencyTotalReceived <http://example.org/kb/cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234> ;
-				drafting:cryptoCurrencyType "BitCoin" ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:cryptoCurrencyCompletedTransactionCount ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:cryptoCurrencyCompletedTransactionCount ;
-			] ;
-			sh:value "37" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a drafting:CryptoAddressFacet ;
 				drafting:addressValue "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx" ;
 				drafting:cryptoAddressCreatedTime "2013-04-09T17:03:36+00:00"^^xsd:dateTime ;
 				drafting:cryptoAddressFormat "P2PKH" ;
 				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850> ;
-				drafting:cryptoCurrencyCompletedTransactionCount "260" ;
+				drafting:cryptoCurrencyCompletedTransactionCount "260"^^xsd:integer ;
 				drafting:cryptoCurrencyType "BitCoin" ;
 			] ;
 			sh:resultMessage "Value does not have class drafting:CryptoCurrencyUnit" ;
@@ -119,29 +95,6 @@
 				sh:path drafting:cryptoCurrencyBalance ;
 			] ;
 			sh:value <http://example.org/kb/cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a drafting:CryptoAddressFacet ;
-				drafting:addressValue "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx" ;
-				drafting:cryptoAddressCreatedTime "2013-04-09T17:03:36+00:00"^^xsd:dateTime ;
-				drafting:cryptoAddressFormat "P2PKH" ;
-				drafting:cryptoCurrencyBalance <http://example.org/kb/cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850> ;
-				drafting:cryptoCurrencyCompletedTransactionCount "260" ;
-				drafting:cryptoCurrencyType "BitCoin" ;
-			] ;
-			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
-			sh:resultPath drafting:cryptoCurrencyCompletedTransactionCount ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:decimal ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:cryptoCurrencyCompletedTransactionCount ;
-			] ;
-			sh:value "260" ;
 		]
 		;
 	.

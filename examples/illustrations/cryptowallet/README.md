@@ -40,7 +40,7 @@ The seizure is documented here:
                     "@type": "xsd:dateTime",
                     "@value": "2013-04-09T17:03:36Z"
                 },
-                "drafting:cryptoCurrencyCompletedTransactionCount": "260",
+                "drafting:cryptoCurrencyCompletedTransactionCount": 260,
                 "drafting:cryptoCurrencyBalance": {
                     "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
                 }
