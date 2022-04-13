@@ -1,5 +1,12 @@
 [
     {
+        "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c",
+        "@type": "sosa:Sensor",
+        "sosa:madeObservation": {
+            "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17"
+        }
+    },
+    {
         "@id": "kb:observation-81129ccd-14c5-4686-b632-a0bd0d66fa17",
         "@type": "sosa:Observation",
         "sosa:hasResult": {
