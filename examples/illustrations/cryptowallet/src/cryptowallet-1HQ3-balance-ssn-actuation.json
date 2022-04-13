@@ -10,7 +10,7 @@
         "@id": "kb:actuation-69144892-bacf-466e-9f06-5e05e55a1e09",
         "@type": "sosa:Actuation",
         "sosa:hasResult": {
-            "@id": "kb:result-a0146036-934c-4cca-833d-3a042fedfe2d"
+            "@id": "kb:result-3ce85104-af5f-42af-8e0a-e0763fdb0dc5"
         },
         "sosa:madeByActuator": {
             "@id": "kb:transaction-cb296982-e0c7-47b5-9bea-334a0e32cb7c"
@@ -22,14 +22,5 @@
             "@type": "xsd:dateTimeStamp",
             "@value": "2016-01-19T15:45:17Z"
         }
-    },
-    {
-        "@id": "kb:result-a0146036-934c-4cca-833d-3a042fedfe2d",
-        "@type": "qudt:QuantityValue",
-        "qudt:numericValue": {
-            "@type": "xsd:decimal",
-            "@value": "0.00069789"
-        },
-        "qudt:unit": "drafting-taxonomy:BTC"
     }
 ]
