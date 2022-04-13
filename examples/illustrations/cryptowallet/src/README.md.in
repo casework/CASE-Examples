@@ -65,7 +65,7 @@ The observation links the result with `sosa:hasResult`, also linking the ["senso
 @CRYPTOWALLET_1HQ3_BALANCE_SSN_OBSERVATION_JSON@
 ```
 
-The property being observed is the wallet's balance.  In, SSN, the minimum type declarations needed to link the wallet balance to the `drafting:CryptoWallet` are as follows:
+The property being observed is the wallet's balance.  In SSN, the minimum type declarations needed to link the wallet balance to the `drafting:CryptoWallet` are as follows:
 
 ```json
 @CRYPTOWALLET_1HQ3_BALANCE_SSN_FOI_JSON@
