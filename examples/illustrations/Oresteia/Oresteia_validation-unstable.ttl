@@ -15,6 +15,24 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/attach_relationship1> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:AttachmentFacet ;
+				rdfs:comment "TODO: uco-observable:Attachment seems ill-defined." ;
+				observable:url <http://example.org/kb/url-b6d049be-f210-4f22-ae76-81141d51cb0f> ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2->core:object" ;
 			sh:resultPath core:object ;
