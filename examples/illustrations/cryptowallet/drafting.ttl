@@ -62,12 +62,6 @@ drafting:CryptoAddressFacet
                         sh:nodeKind sh:Literal ;
                         sh:path drafting:cryptoCurrencyType ;
                 ] ,
-		[
-			sh:datatype xsd:integer ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:cryptoCurrencyCompletedTransactionCount ;
-		] ,
                 [
                         sh:datatype xsd:decimal ;
                         sh:maxCount "1"^^xsd:integer ;
@@ -86,24 +80,6 @@ drafting:CryptoAddressFacet
 			sh:nodeKind sh:Literal ;
 			sh:path uco-observable:displayName ;
 		] ,
-                [
-                        sh:class drafting:CryptoCurrencyUnit ;
-                        sh:maxCount "1"^^xsd:integer ;
-                        sh:nodeKind sh:BlankNodeOrIRI ;
-                        sh:path drafting:cryptoCurrencyBalance ;
-                ] ,
-                [
-                        sh:class drafting:CryptoCurrencyUnit ;
-                        sh:maxCount "1"^^xsd:integer ;
-                        sh:nodeKind sh:BlankNodeOrIRI ;
-                        sh:path drafting:cryptoCurrencyTotalSent ;
-                ] ,
-                [
-                        sh:class drafting:CryptoCurrencyUnit ;
-                        sh:maxCount "1"^^xsd:integer ;
-                        sh:nodeKind sh:BlankNodeOrIRI ;
-                        sh:path drafting:cryptoCurrencyTotalReceived ;
-                ] ,
 		[
 			sh:datatype xsd:dateTime ;
 			sh:maxCount "1"^^xsd:integer ;

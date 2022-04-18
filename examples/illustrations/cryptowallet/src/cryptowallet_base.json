@@ -26,19 +26,14 @@
                         "@type": "xsd:dateTime",
                         "@value": "2013-01-25T18:37:52Z"
                     },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": 37,
-                    "drafting:cryptoCurrencyBalance": {
-                        "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567"
-                    },
-                    "drafting:cryptoCurrencyTotalReceived": {
-                        "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234"
-                    }
+                    "rdfs:comment": "TODO - Turn completed transaction count of 37 into measurement"
                 }
             ]
         },
         {
             "@id": "kb:cryptoaddress-balance-1993548a-a60e-41a8-8cb6-27a74253253f",
             "@type": "qudt:QuantityValue",
+            "rdfs:comment": "TODO - Link as measurement",
             "qudt:numericValue": {
                 "@type": "xsd:decimal",
                 "@value": "0.00069789"
@@ -48,6 +43,7 @@
         {
             "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234",
             "@type": "qudt:QuantityValue",
+            "rdfs:comment": "TODO - Link as measurement",
             "qudt:numericValue": {
                 "@type": "xsd:decimal",
                 "@value": "20074.05869789"
@@ -57,6 +53,7 @@
         {
             "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567",
             "@type": "qudt:QuantityValue",
+            "rdfs:comment": "TODO - Link as measurement",
             "qudt:numericValue": {
                 "@type": "xsd:decimal",
                 "@value": "20074.05800000"
