@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+        "@id": "kb:cryptoaddress-fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
         "@type": "drafting:CryptoAddress",
         "uco-core:hasFacet": [
             {

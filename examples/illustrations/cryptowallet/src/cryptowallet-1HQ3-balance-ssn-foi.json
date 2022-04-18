@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+        "@id": "kb:cryptoaddress-fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
         "@type": "sosa:FeatureOfInterest",
         "ssn:hasProperty": {
             "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"
