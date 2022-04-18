@@ -1,7 +1,7 @@
 [
     {
         "@id": "kb:wallet-426a-0be4-db43-a66e-c43b6edc6b3a",
-        "@type": "uco-observable:ObservableObject",
+        "@type": "drafting:CryptoWallet",
         "uco-core:hasFacet": [
             {
                 "@type": "drafting:CryptoWalletFacet",

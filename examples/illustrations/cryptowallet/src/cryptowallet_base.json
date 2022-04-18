@@ -15,7 +15,7 @@
     "@graph": [
         {
             "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "drafting:CryptoAddress",
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:CryptoAddressFacet",
