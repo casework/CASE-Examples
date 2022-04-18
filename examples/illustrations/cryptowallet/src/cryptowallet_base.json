@@ -14,7 +14,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e",
+            "@id": "kb:cryptoaddress-e3b9060e-c01a-4794-ad88-82f6fd733b30",
             "@type": "drafting:CryptoAddress",
             "uco-core:hasFacet": [
                 {
@@ -31,7 +31,7 @@
             ]
         },
         {
-            "@id": "kb:cryptoaddress-balance-1993548a-a60e-41a8-8cb6-27a74253253f",
+            "@id": "kb:cryptoaddress-balance-10408060-abfe-4c6b-8588-a7a7ced3f036",
             "@type": "qudt:QuantityValue",
             "rdfs:comment": "TODO - Link as measurement",
             "qudt:numericValue": {
@@ -51,7 +51,7 @@
             "qudt:unit": "drafting:BTC"
         },
         {
-            "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567",
+            "@id": "kb:cryptocurrency-sent-eb9e67f2-5865-4c26-b550-7c90c88dd264",
             "@type": "qudt:QuantityValue",
             "rdfs:comment": "TODO - Link as measurement",
             "qudt:numericValue": {
