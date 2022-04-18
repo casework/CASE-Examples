@@ -4,6 +4,7 @@
         "drafting-taxonomy": "http://example.org/taxonomy/drafting/",
         "kb": "http://example.org/kb/",
         "qudt": "http://qudt.org/2.1/schema/qudt/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "sosa": "http://www.w3.org/ns/sosa/",
         "ssn": "http://www.w3.org/ns/ssn/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
