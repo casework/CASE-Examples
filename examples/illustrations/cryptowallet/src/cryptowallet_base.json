@@ -43,11 +43,7 @@
                 "@type": "xsd:decimal",
                 "@value": "0.00069789"
             },
-            "qudt:unit": "drafting:BTC",
-            "rdfs:comment": "The SSN examples include demonstration of a value with temperature unit of measure.",
-            "rdfs:seeAlso": {
-                "@id": "https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures"
-            }
+            "qudt:unit": "drafting:BTC"
         },
         {
             "@id": "kb:cryptocurrency-received-1993548a-a60e-41a8-8cb6-27a742531234",
@@ -56,11 +52,7 @@
                 "@type": "xsd:decimal",
                 "@value": "20074.05869789"
             },
-            "qudt:unit": "drafting:BTC",
-            "rdfs:comment": "The SSN examples include demonstration of a value with temperature unit of measure.",
-            "rdfs:seeAlso": {
-                "@id": "https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures"
-            }
+            "qudt:unit": "drafting:BTC"
         },
         {
             "@id": "kb:cryptocurrency-sent-1993548a-a60e-41a8-8cb6-27a742534567",
@@ -69,11 +61,7 @@
                 "@type": "xsd:decimal",
                 "@value": "20074.05800000"
             },
-            "qudt:unit": "drafting:BTC",
-            "rdfs:comment": "The SSN examples include demonstration of a value with temperature unit of measure.",
-            "rdfs:seeAlso": {
-                "@id": "https://www.w3.org/TR/vocab-ssn/#quantity-values-and-unit-of-measures"
-            }
+            "qudt:unit": "drafting:BTC"
         }
     ]
 }
