@@ -28,7 +28,7 @@ The seizure is documented here:
 ```json
 [
     {
-        "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+        "@id": "kb:cryptoaddress-fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
         "@type": "drafting:CryptoAddress",
         "uco-core:hasFacet": [
             {
@@ -40,10 +40,7 @@ The seizure is documented here:
                     "@type": "xsd:dateTime",
                     "@value": "2013-04-09T17:03:36Z"
                 },
-                "drafting:cryptoCurrencyCompletedTransactionCount": 260,
-                "drafting:cryptoCurrencyBalance": {
-                    "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
-                }
+                "rdfs:comment": "TODO - Turn cryptoCurrencyCompletedTransactionCount of 260 into measurement"
             }
         ]
     }
@@ -178,7 +175,7 @@ The property being observed is the wallet's balance.  In SSN, the minimum type d
 ```json
 [
     {
-        "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+        "@id": "kb:cryptoaddress-fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
         "@type": "sosa:FeatureOfInterest",
         "ssn:hasProperty": {
             "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"

@@ -86,7 +86,7 @@
             "@type": "sosa:ObservableProperty"
         },
         {
-            "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+            "@id": "kb:cryptoaddress-fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
             "@type": "drafting:CryptoAddress",
             "uco-core:hasFacet": [
                 {
@@ -97,16 +97,13 @@
                         "@value": "2013-04-09T17:03:36Z"
                     },
                     "drafting:cryptoAddressFormat": "P2PKH",
-                    "drafting:cryptoCurrencyBalance": {
-                        "@id": "kb:cryptocurrency-sent-9301548a-a60e-41a8-8cb6-27a748639850"
-                    },
-                    "drafting:cryptoCurrencyCompletedTransactionCount": 260,
-                    "drafting:cryptoCurrencyType": "BitCoin"
+                    "drafting:cryptoCurrencyType": "BitCoin",
+                    "rdfs:comment": "TODO - Turn cryptoCurrencyCompletedTransactionCount of 260 into measurement"
                 }
             ]
         },
         {
-            "@id": "kb:fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
+            "@id": "kb:cryptoaddress-fc4ec649-9fe9-4b7a-acbc-0d453d35336f",
             "@type": "sosa:FeatureOfInterest",
             "ssn:hasProperty": {
                 "@id": "kb:balance-86c3d313-b95c-4a16-b6b5-d737efb82218"
