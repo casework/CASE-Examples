@@ -199,15 +199,15 @@ Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
 ```json
 [
     {
-        "@id": "kb:wallet-426a-0be4-db43-a66e-c43b6edc6b3a",
-        "@type": "uco-observable:ObservableObject",
+        "@id": "kb:wallet-ae926768-b80e-4fbd-81c0-fa43508334c2",
+        "@type": "drafting:CryptoWallet",
         "uco-core:hasFacet": [
             {
-                "drafting:cryptoWalletIdentifier": "73108d1b19",
                 "@type": "drafting:CryptoWalletFacet",
                 "drafting:cryptoWalletAddress": {
-                    "@id": "kb:cryptoaddress-9de3-a681-db43-a66e-b70a7ecc4a2e"
+                    "@id": "kb:cryptoaddress-e3b9060e-c01a-4794-ad88-82f6fd733b30"
                 },
+                "drafting:cryptoWalletIdentifier": "73108d1b19",
                 "drafting:cryptoWalletName": "Jane Doe",
                 "drafting:cryptoWalletCreatedTime": {
                     "@type": "xsd:dateTime",
