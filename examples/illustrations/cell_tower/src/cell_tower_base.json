@@ -86,7 +86,6 @@
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "1235557890",
-                    "uco-observable:accountType": "Phone",
                     "uco-observable:isActive": true
                 },
                 {
