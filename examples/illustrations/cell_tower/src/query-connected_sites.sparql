@@ -1,7 +1,7 @@
 SELECT DISTINCT ?lCellSiteIdentifier ?lCellSiteLocationAreaCode
 WHERE
 {
-    ?nCapturedInfo
+  ?nCapturedInfo
     a drafting:CapturedTelecommunicationsInformation ;
     .
 
@@ -19,10 +19,10 @@ WHERE
     a drafting:CellSiteFacet ;
     .
     OPTIONAL {
-        ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
+      ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
     }
     OPTIONAL {
-        ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
+      ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
     }
 
   ?nDevice
