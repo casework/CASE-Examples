@@ -127,10 +127,10 @@ To answer the question "To which Cell Site(s) did a given mobile device with IMS
 
 A SPARQL query can be written as:
 ```sparql
-SELECT DISTINCT ?cellSiteIdentifier ?cellSiteLocationAreaCode
+SELECT DISTINCT ?lCellSiteIdentifier ?lCellSiteLocationAreaCode
 WHERE
 {
-    ?nCapturedInfo
+  ?nCapturedInfo
     a drafting:CapturedTelecommunicationsInformation ;
     .
 
@@ -148,10 +148,10 @@ WHERE
     a drafting:CellSiteFacet ;
     .
     OPTIONAL {
-        ?nCellSiteFacet drafting:cellSiteIdentifier ?cellSiteIdentifier .
+      ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
     }
     OPTIONAL {
-        ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?cellSiteLocationAreaCode .
+      ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
     }
 
   ?nDevice
@@ -174,7 +174,8 @@ WHERE
     a uco-observable:SIMCardFacet ;
     uco-observable:IMSI '1234567890ABCDEF' ;
     .
-}```
+}
+```
 
 | ?cellSiteIdentifier | ?cellSiteLocationAreaCode |
 | --- | --- |
