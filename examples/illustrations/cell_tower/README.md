@@ -123,7 +123,58 @@ The location of a Cell Site can change over time when it is moved by a telecommu
 
 ### Query - To which Cell Sites did the Mobile Device connect
 
-To answer the question "Which Cell Site(s) did a given mobile device connect to during the period of interest?" In this example, the result is the connected Cell Site(s) during the specified time period.
+To answer the question "To which Cell Site(s) did a given mobile device with IMSI '1234567890ABCDEF' connect during the period of interest?" In this example, the result is the connected Cell Site(s) during the specified time period.
+
+A SPARQL query can be written as:
+```sparql
+SELECT DISTINCT ?cellSiteIdentifier ?cellSiteLocationAreaCode
+WHERE
+{
+    ?nCapturedInfo
+    a drafting:CapturedTelecommunicationsInformation ;
+    .
+
+  ?nCapturedTelecomInfoFacet
+    a drafting:CapturedTelecommunicationsInformationFacet ;
+    drafting:captureCellSite ?nCellSite ;
+    .
+
+  ?nCellSite
+    a drafting:CellSite ;
+    uco-core:hasFacet ?nCellSiteFacet ;
+    .
+
+  ?nCellSiteFacet
+    a drafting:CellSiteFacet ;
+    .
+    OPTIONAL {
+        ?nCellSiteFacet drafting:cellSiteIdentifier ?cellSiteIdentifier .
+    }
+    OPTIONAL {
+        ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?cellSiteLocationAreaCode .
+    }
+
+  ?nDevice
+    a uco-observable:Device ;
+    uco-core:hasFacet ?nDeviceFacet ;
+    .
+
+  ?nDeviceSimRelationship
+    a uco-core:Relationship ;
+    uco-core:source ?nSIMCard ;
+    uco-core:target ?nDevice ;
+    .
+
+  ?nSIMCard
+    a uco-observable:SIMCard ;
+    uco-core:hasFacet ?nSIMCardFacet ;
+    .
+
+  ?nSIMCardFacet
+    a uco-observable:SIMCardFacet ;
+    uco-observable:IMSI '1234567890ABCDEF' ;
+    .
+}```
 
 | ?cellSiteIdentifier | ?cellSiteLocationAreaCode |
 | --- | --- |

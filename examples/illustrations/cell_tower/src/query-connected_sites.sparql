@@ -1,0 +1,48 @@
+SELECT DISTINCT ?cellSiteIdentifier ?cellSiteLocationAreaCode
+WHERE
+{
+    ?nCapturedInfo
+    a drafting:CapturedTelecommunicationsInformation ;
+    .
+
+  ?nCapturedTelecomInfoFacet
+    a drafting:CapturedTelecommunicationsInformationFacet ;
+    drafting:captureCellSite ?nCellSite ;
+    .
+
+  ?nCellSite
+    a drafting:CellSite ;
+    uco-core:hasFacet ?nCellSiteFacet ;
+    .
+
+  ?nCellSiteFacet
+    a drafting:CellSiteFacet ;
+    .
+    OPTIONAL {
+        ?nCellSiteFacet drafting:cellSiteIdentifier ?cellSiteIdentifier .
+    }
+    OPTIONAL {
+        ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?cellSiteLocationAreaCode .
+    }
+
+  ?nDevice
+    a uco-observable:Device ;
+    uco-core:hasFacet ?nDeviceFacet ;
+    .
+
+  ?nDeviceSimRelationship
+    a uco-core:Relationship ;
+    uco-core:source ?nSIMCard ;
+    uco-core:target ?nDevice ;
+    .
+
+  ?nSIMCard
+    a uco-observable:SIMCard ;
+    uco-core:hasFacet ?nSIMCardFacet ;
+    .
+
+  ?nSIMCardFacet
+    a uco-observable:SIMCardFacet ;
+    uco-observable:IMSI '1234567890ABCDEF' ;
+    .
+}
