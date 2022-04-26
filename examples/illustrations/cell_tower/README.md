@@ -123,21 +123,25 @@ The location of a Cell Site can change over time when it is moved by a telecommu
 
 ### Query - To which Cell Sites did the Mobile Device connect
 
-To answer the question "To which Cell Site(s) did a given mobile device with IMSI '1234567890ABCDEF' connect during the period of interest?" In this example, the result is the connected Cell Site(s) during the specified time period.
+To answer the question "To which Cell Site(s) did a given mobile device connect during the period of interest, and at what time(s)?" In this example, the result is the connected Cell Site(s) during the specified time period.
 
 A SPARQL query can be written as:
 ```sparql
-SELECT DISTINCT ?lCellSiteIdentifier ?lCellSiteLocationAreaCode
+SELECT DISTINCT ?lCellSiteIdentifier ?lCellSiteLocationAreaCode ?lConnectionStartTime ?lConnectionEndTime
 WHERE
 {
-  ?nCapturedInfo
-    a drafting:CapturedTelecommunicationsInformation ;
+  ?nConnectedRelationship
+    a uco-observable:ObservableRelationship ;
+    uco-core:source kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789 ;
+    uco-core:target ?nCellSite ;
+    uco-core:kindOfRelationship "Connected_To"
     .
-
-  ?nCapturedTelecomInfoFacet
-    a drafting:CapturedTelecommunicationsInformationFacet ;
-    drafting:captureCellSite ?nCellSite ;
-    .
+    OPTIONAL {
+      ?nConnectedRelationship uco-observable:startTime ?lConnectionStartTime .
+    }
+    OPTIONAL {
+      ?nConnectedRelationship uco-observable:startTime ?lConnectionEndTime .
+    }
 
   ?nCellSite
     a drafting:CellSite ;
@@ -153,33 +157,12 @@ WHERE
     OPTIONAL {
       ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
     }
-
-  ?nDevice
-    a uco-observable:Device ;
-    uco-core:hasFacet ?nDeviceFacet ;
-    .
-
-  ?nDeviceSimRelationship
-    a uco-core:Relationship ;
-    uco-core:source ?nSIMCard ;
-    uco-core:target ?nDevice ;
-    .
-
-  ?nSIMCard
-    a uco-observable:SIMCard ;
-    uco-core:hasFacet ?nSIMCardFacet ;
-    .
-
-  ?nSIMCardFacet
-    a uco-observable:SIMCardFacet ;
-    uco-observable:IMSI '1234567890ABCDEF' ;
-    .
 }
 ```
 
-| ?cellSiteIdentifier | ?cellSiteLocationAreaCode |
-| --- | --- |
-| 0 | 29220952 | 22100 |
+|    |   ?lCellSiteIdentifier |   ?lCellSiteLocationAreaCode | ?lConnectionStartTime     | ?lConnectionEndTime       |
+|----|------------------------|------------------------------|---------------------------|---------------------------|
+|  0 |               29220952 |                        22100 | 2018-06-10 15:36:12+00:00 | 2018-06-10 15:36:12+00:00 |
 
 Information represented using the `CellSiteFacet` provides the location of the Cell Site, not the specific location of the connected mobile device. However, this information is necessary for cell site analysts to form an opinion about where the mobile device was most likely located during a time of interest ([Structuring the Evaluation of Location-Related Mobile Device Evidence, DFRWS EU 2020](https://doi.org/10.1016/j.fsidi.2020.300928)).
 

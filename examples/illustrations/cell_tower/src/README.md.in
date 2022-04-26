@@ -43,16 +43,16 @@ The location of a Cell Site can change over time when it is moved by a telecommu
 
 ### Query - To which Cell Sites did the Mobile Device connect
 
-To answer the question "To which Cell Site(s) did a given mobile device with IMSI '1234567890ABCDEF' connect during the period of interest?" In this example, the result is the connected Cell Site(s) during the specified time period.
+To answer the question "To which Cell Site(s) did a given mobile device connect during the period of interest, and at what time(s)?" In this example, the result is the connected Cell Site(s) during the specified time period.
 
 A SPARQL query can be written as:
 ```sparql
 @QUERY_CONNECTED_SITES_SPARQL@
 ```
 
-| ?cellSiteIdentifier | ?cellSiteLocationAreaCode |
-| --- | --- |
-| 0 | 29220952 | 22100 |
+|    |   ?lCellSiteIdentifier |   ?lCellSiteLocationAreaCode | ?lConnectionStartTime     | ?lConnectionEndTime       |
+|----|------------------------|------------------------------|---------------------------|---------------------------|
+|  0 |               29220952 |                        22100 | 2018-06-10 15:36:12+00:00 | 2018-06-10 15:36:12+00:00 |
 
 Information represented using the `CellSiteFacet` provides the location of the Cell Site, not the specific location of the connected mobile device. However, this information is necessary for cell site analysts to form an opinion about where the mobile device was most likely located during a time of interest ([Structuring the Evaluation of Location-Related Mobile Device Evidence, DFRWS EU 2020](https://doi.org/10.1016/j.fsidi.2020.300928)).
 
