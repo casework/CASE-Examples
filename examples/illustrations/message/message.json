@@ -104,11 +104,39 @@
         },
         {
             "@id": "kb:attachment_file1",
-            "@type": "uco-observable:ObservableObject"
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee"
+                    }
+                }
+            ]
         },
         {
             "@id": "kb:attachment_file2",
-            "@type": "uco-observable:ObservableObject"
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:attachment_file3",
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-e1ca5930-2f59-4cb3-853f-bece3a8f296c"
+                    }
+                }
+            ]
         },
         {
             "@id": "kb:message2",
@@ -262,21 +290,13 @@
             "@id": "kb:attach_relationship1",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:location1"
+                "@id": "kb:attachment_file3"
             },
             "uco-core:target": {
                 "@id": "kb:message1"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
-            "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": {
-                        "@id": "kb:url-e1ca5930-2f59-4cb3-853f-bece3a8f296c"
-                    }
-                }
-            ]
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:attach_relationship2",
@@ -288,15 +308,7 @@
                 "@id": "kb:message1"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
-            "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": {
-                        "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee"
-                    }
-                }
-            ]
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:attach_relationship3",
@@ -308,15 +320,19 @@
                 "@id": "kb:message1"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:location_relationship1",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:attachment_file3"
+            },
+            "uco-core:target": {
+                "@id": "kb:location1"
+            },
             "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": {
-                        "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05"
-                    }
-                }
-            ]
+            "rdfs:comment": "TODO: Need to define a portrayal relationship between ObservableObject and a Location."
         },
         {
             "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee",
