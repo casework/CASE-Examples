@@ -1538,7 +1538,7 @@
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
-                        "@id": "kb-url-b6d049be-f210-4f22-ae76-81141d51cb0f"
+                        "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f"
                     }
                 }
             ]
