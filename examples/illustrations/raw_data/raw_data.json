@@ -2,7 +2,9 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
@@ -10,6 +12,14 @@
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
+        {
+            "@id": "drafting:image/jpeg",
+            "@type": "uco-types:IANAMediaType",
+            "rdfs:seeAlso": {
+                "@id": "https://github.com/ucoProject/UCO/Issues/363"
+            },
+            "skos:notation": "image/jpeg"
+        },
         {
             "@id": "kb:digital_photograph_thumbnail1",
             "rdfs:seeAlso": {
@@ -23,7 +33,9 @@
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
-                    "uco-observable:mimeType": "image/jpg",
+                    "uco-observable:mimeType": {
+                        "@id": "drafting:image/jpeg"
+                    },
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -68,7 +80,9 @@
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
-                    "uco-observable:mimeType": "image/jpg"
+                    "uco-observable:mimeType": {
+                        "@id": "drafting:image/jpeg"
+                    }
                 }
             ]
         }

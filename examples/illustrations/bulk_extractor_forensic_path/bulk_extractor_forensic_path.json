@@ -2,7 +2,9 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
@@ -105,6 +107,14 @@
             ]
         },
         {
+            "@id": "drafting:application/x-compressed",
+            "@type": "uco-types:NonIANAMediaType",
+            "rdfs:seeAlso": {
+                "@id": "https://github.com/ucoProject/UCO/Issues/363"
+            },
+            "skos:notation": "application/x-compressed"
+        },
+        {
             "@id": "kb:decompressed_gzip0",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
@@ -115,7 +125,9 @@
                         "@value": "Big-endian"
                     },
                     "uco-observable:magicNumber": "H4s=",
-                    "uco-observable:mimeType": "application/x-compressed",
+                    "uco-observable:mimeType": {
+                        "@id": "drafting:application/x-compressed"
+                    },
                     "uco-observable:sizeInBytes": 17605,
                     "uco-observable:hash": [
                         {

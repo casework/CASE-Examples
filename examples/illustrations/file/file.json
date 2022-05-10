@@ -3,8 +3,9 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
@@ -61,6 +62,14 @@
             ]
         },
         {
+            "@id": "drafting:image/jpeg",
+            "@type": "uco-types:IANAMediaType",
+            "rdfs:seeAlso": {
+                "@id": "https://github.com/ucoProject/UCO/Issues/363"
+            },
+            "skos:notation": "image/jpeg"
+        },
+        {
             "@id": "kb:decoded_attachment",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
@@ -72,7 +81,9 @@
                     },
                     "uco-observable:sizeInBytes": 3500,
                     "uco-observable:magicNumber": "/9j/ww==",
-                    "uco-observable:mimeType": "image/jpg",
+                    "uco-observable:mimeType": {
+                        "@id": "drafting:image/jpeg"
+                    },
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
@@ -183,6 +194,14 @@
             ]
         },
         {
+            "@id": "drafting:application/x-tar",
+            "@type": "uco-types:NonIANAMediaType",
+            "rdfs:seeAlso": {
+                "@id": "https://github.com/ucoProject/UCO/Issues/363"
+            },
+            "skos:notation": "application/x-tar"
+        },
+        {
             "@id": "kb:decrypted_blob",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
@@ -191,7 +210,9 @@
                     "uco-observable:sizeInBytes": 23000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:magicNumber": "NzUgNzMgNzQgNjEgNzI=",
-                    "uco-observable:mimeType": "application/x-tar",
+                    "uco-observable:mimeType": {
+                        "@id": "drafting:application/x-tar"
+                    },
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",

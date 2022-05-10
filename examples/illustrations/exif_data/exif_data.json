@@ -4,6 +4,8 @@
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "draft": "http://example.org/draft#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
@@ -54,6 +56,14 @@
             ]
         },
         {
+            "@id": "drafting:image/jpeg",
+            "@type": "uco-types:IANAMediaType",
+            "rdfs:seeAlso": {
+                "@id": "https://github.com/ucoProject/UCO/Issues/363"
+            },
+            "skos:notation": "image/jpeg"
+        },
+        {
             "@id": "kb:digital_photograph1",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
@@ -72,7 +82,9 @@
                         "@value": "Big-endian"
                     },
                     "uco-observable:magicNumber": "/9j/ww==",
-                    "uco-observable:mimeType": "image/jpg",
+                    "uco-observable:mimeType": {
+                        "@id": "drafting:image/jpeg"
+                    },
                     "uco-observable:sizeInBytes": 35000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
