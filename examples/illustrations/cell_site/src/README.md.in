@@ -31,13 +31,13 @@ The primary requirement of this proposal is to represent data showing which cell
 Properties of the Cell Site represented in CASE using the proposed `CellSiteFacet`. The term Cell Site refers to a radio network component that has an antenna with associated properties.
 
 ```json
-@CELL_TOWER_SITE_JSON@
+@CELL_SITE_SITE_JSON@
 ```
 
 The location of a Cell Site can change over time when it is moved by a telecommunication provider. Therefore, the location is represented using a `Location` object and a `Relationship` object, which can be time bounded:
 
 ```json
-@CELL_TOWER_LOCATION_RELATIONSHIP_JSON@
+@CELL_SITE_LOCATION_RELATIONSHIP_JSON@
 ```
 
 
@@ -89,7 +89,7 @@ azimuth: 60
 The proposed `CapturedTelecommunicationsInformationFacet` represents the subset of information that is most commonly useful for cyber-investigations:
 
 ```json
-@CELL_TOWER_CDR_JSON@
+@CELL_SITE_CDR_JSON@
 ```
 
 This captured telecommunication information can also answer questions about the activities on a given device during the connection with a Cell Site, including details about the connected device identifier, SIM card identifier, mobile phone number, called phone number, call status, and SMS message text. These details are already covered by other CASE/UCO facets.
