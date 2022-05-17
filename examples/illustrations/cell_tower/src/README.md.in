@@ -50,9 +50,10 @@ A SPARQL query can be written as:
 @QUERY_CONNECTED_SITES_SPARQL@
 ```
 
-|    |   ?lCellSiteIdentifier |   ?lCellSiteLocationAreaCode | ?lConnectionStartTime     | ?lConnectionEndTime       |
-|----|------------------------|------------------------------|---------------------------|---------------------------|
-|  0 |               29220952 |                        22100 | 2018-06-10 15:36:12+00:00 | 2018-06-10 15:36:12+00:00 |
+Note this query is tailored to `kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789`, by hard-coding as the object of `uco-core:source`.  The results of this query are:
+
+@QUERY_CONNECTED_SITES_MD@
+
 
 Information represented using the `CellSiteFacet` provides the location of the Cell Site, not the specific location of the connected mobile device. However, this information is necessary for cell site analysts to form an opinion about where the mobile device was most likely located during a time of interest ([Structuring the Evaluation of Location-Related Mobile Device Evidence, DFRWS EU 2020](https://doi.org/10.1016/j.fsidi.2020.300928)).
 
