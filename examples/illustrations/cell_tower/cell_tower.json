@@ -54,7 +54,7 @@
         },
         {
             "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
-            "@type": "uco-core:Relationship",
+            "@type": "uco-observable:ObservableRelationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:source": {
