@@ -9,51 +9,27 @@
 []
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
-	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a drafting:CapturedTelecommunicationsInformationFacet ;
-				drafting:captureCellSite <http://example.org/kb/dc9b8413-f681-4bc6-a66e-b70a7ecde4d4> ;
-				drafting:interceptedCallState "idle" ;
-				drafting:partyDevice <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
-				drafting:partySubscription <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
-				observable:captureEndTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
-				observable:captureStartTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
-			] ;
-			sh:resultMessage "Value does not have class observable:ObservableObject" ;
-			sh:resultPath drafting:partySubscription ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:partySubscription ;
-			] ;
-			sh:value <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a drafting:CapturedTelecommunicationsInformationFacet ;
-				drafting:captureCellSite <http://example.org/kb/dc9b8413-f681-4bc6-a66e-b70a7ecde4d4> ;
-				drafting:interceptedCallState "idle" ;
-				drafting:partyDevice <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
-				drafting:partySubscription <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
-				observable:captureEndTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
-				observable:captureStartTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
-			sh:resultPath drafting:partySubscription ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:ObservableObject ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:partySubscription ;
-			] ;
-			sh:value <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
-		]
-		;
+	sh:result [
+		a sh:ValidationResult ;
+		sh:focusNode [
+			a drafting:CapturedTelecommunicationsInformationFacet ;
+			drafting:captureCellSite <http://example.org/kb/dc9b8413-f681-4bc6-a66e-b70a7ecde4d4> ;
+			drafting:interceptedCallState "idle" ;
+			drafting:partyDevice <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
+			drafting:partySubscription <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
+			observable:captureEndTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
+			observable:captureStartTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
+		] ;
+		sh:resultMessage "Value is not of Node Kind sh:Literal" ;
+		sh:resultPath drafting:partySubscription ;
+		sh:resultSeverity sh:Violation ;
+		sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+		sh:sourceShape [
+			sh:class observable:ObservableObject ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:partySubscription ;
+		] ;
+		sh:value <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
+	] ;
 	.
 
