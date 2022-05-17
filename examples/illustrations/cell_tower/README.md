@@ -140,7 +140,7 @@ WHERE
       ?nConnectedRelationship uco-observable:startTime ?lConnectionStartTime .
     }
     OPTIONAL {
-      ?nConnectedRelationship uco-observable:startTime ?lConnectionEndTime .
+      ?nConnectedRelationship uco-observable:endTime ?lConnectionEndTime .
     }
 
   ?nCellSite
