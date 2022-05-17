@@ -158,7 +158,7 @@ drafting:CapturedTelecommunicationsInformationFacet
 		] ,
 		[
 			sh:class observable:ObservableObject ;
-			sh:nodeKind sh:Literal ;
+			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path drafting:partySubscription ;
 		] ,
 		[
