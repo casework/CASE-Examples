@@ -5,7 +5,7 @@
         "uco-core:hasFacet": [
             {
                 "@type": "drafting:CellSiteFacet",
-                "drafting:towerType": "GSM",
+                "drafting:cellSiteType": "GSM",
                 "drafting:cellSiteCountryCode": "228",
                 "drafting:cellSiteNetworkCode": "2",
                 "drafting:cellSiteLocationAreaCode": "22100",
