@@ -8,11 +8,11 @@
                 "drafting:captureCellSite": {
                     "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
                 },
-                "uco-observable:captureStartTime": {
+                "observable:startTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-29T01:23:02Z"
                 },
-                "uco-observable:captureEndTime": {
+                "observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-30T02:10:50Z"
                 },
