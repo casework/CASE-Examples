@@ -38,7 +38,7 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
         "uco-core:hasFacet": [
             {
                 "@type": "drafting:CellSiteFacet",
-                "drafting:towerType": "GSM",
+                "drafting:cellSiteType": "GSM",
                 "drafting:cellSiteCountryCode": "228",
                 "drafting:cellSiteNetworkCode": "2",
                 "drafting:cellSiteLocationAreaCode": "22100",
@@ -210,11 +210,11 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
                 "drafting:captureCellSite": {
                     "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
                 },
-                "uco-observable:captureStartTime": {
+                "observable:startTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-29T01:23:02Z"
                 },
-                "uco-observable:captureEndTime": {
+                "observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-30T02:10:50Z"
                 },

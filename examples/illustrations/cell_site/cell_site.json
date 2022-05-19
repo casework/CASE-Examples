@@ -131,11 +131,11 @@
                     "drafting:partySubscription": {
                         "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
                     },
-                    "uco-observable:captureEndTime": {
+                    "observable:endTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-07-30T02:10:50Z"
                     },
-                    "uco-observable:captureStartTime": {
+                    "observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-07-29T01:23:02Z"
                     }
@@ -172,7 +172,7 @@
                     "drafting:cellSiteIdentifier": "29220952",
                     "drafting:cellSiteLocationAreaCode": "22100",
                     "drafting:cellSiteNetworkCode": "2",
-                    "drafting:towerType": "GSM"
+                    "drafting:cellSiteType": "GSM"
                 },
                 {
                     "@type": "drafting:AntennaFacet",
