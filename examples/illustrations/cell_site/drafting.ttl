@@ -210,7 +210,7 @@ drafting:cellSiteLocationAreaCode
 drafting:cellSiteNetworkCode
 	a owl:DatatypeProperty ;
 	rdfs:label "cellSiteNetworkCode"@en ;
-	rdfs:comment "The this code identifies the mobile operator of the cell site. For GSM, this is the Mobile Network Code (MNC) and for CMDA this is the network identifier (NID)."@en ;
+	rdfs:comment "This code identifies the mobile operator of the cell site. For GSM, this is the Mobile Network Code (MNC) and for CMDA this is the network identifier (NID)."@en ;
 	rdfs:range xsd:string ;
 	.
 
