@@ -1,65 +1,11 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix drafting: <http://example.org/ontology/drafting#> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-drafting:CellSite
-	a
-		sh:NodeShape ,
-		owl:Class
-		;
-	rdfs:subClassOf observable:ObservableObject ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
-	rdfs:label "CellSite"@en ;
-	sh:targetClass drafting:CellSite ;
-	.
-
-drafting:CellSiteFacet
-	a
-		sh:NodeShape ,
-		owl:Class
-		;
-	rdfs:subClassOf core:Facet ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
-	rdfs:label "CellSiteFacet"@en ;
-	rdfs:comment "A cell site facet contains the metadata surrounding the cell site."@en ;
-	sh:property
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:cellSiteType ;
-		] ,		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:cellSiteIdentifier ;
-		] ,
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:cellSiteLocationAreaCode ;
-		] ,
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:cellSiteCountryCode ;
-		] ,
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:cellSiteNetworkCode ;
-		]
-		;
-	sh:targetClass observable:CellSiteFacet ;
-	.
 
 drafting:AntennaFacet
 	a
@@ -67,9 +13,9 @@ drafting:AntennaFacet
 		sh:NodeShape
 		;
 	rdfs:subClassOf core:Facet ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	rdfs:label "AntennaFacet"@en ;
 	rdfs:comment "An antenna alignment facet contains the metadata surrounding the cell tower's antenna position."@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	sh:property
 		[
 			sh:datatype xsd:decimal ;
@@ -87,7 +33,7 @@ drafting:AntennaFacet
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:signalStrength ;
+			sh:path drafting:height ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
@@ -99,7 +45,7 @@ drafting:AntennaFacet
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:height ;
+			sh:path drafting:signalStrength ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
@@ -117,8 +63,8 @@ drafting:CapturedTelecommunicationsInformation
 		sh:NodeShape
 		;
 	rdfs:subClassOf observable:ObservableObject ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	rdfs:label "CapturedTelecommunicationsInformation"@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	sh:targetClass drafting:CapturedTelecommunicationsInformation ;
 	.
 
@@ -128,9 +74,9 @@ drafting:CapturedTelecommunicationsInformationFacet
 		sh:NodeShape
 		;
 	rdfs:subClassOf core:Facet ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	rdfs:label "CapturedTelecommunicationsInformationFacet"@en ;
 	rdfs:comment "A captured telecommunications information facet represents certain information within captured or intercepted telecommunications data."@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
 	sh:property
 		[
 			sh:class drafting:CellSite ;
@@ -138,18 +84,6 @@ drafting:CapturedTelecommunicationsInformationFacet
 			sh:minCount "1"^^xsd:integer ;
 			sh:nodeKind sh:BlankNodeOrIRI ;
 			sh:path drafting:captureCellSite ;
-		] ,
-		[
-			sh:datatype xsd:dateTime ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path observable:endTime ;
-		] ,
-		[
-			sh:datatype xsd:string ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:nodeKind sh:Literal ;
-			sh:path drafting:interceptedCallState ;
 		] ,
 		[
 			sh:class observable:Device ;
@@ -165,10 +99,77 @@ drafting:CapturedTelecommunicationsInformationFacet
 			sh:datatype xsd:dateTime ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
+			sh:path observable:endTime ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
 			sh:path observable:startTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:interceptedCallState ;
 		]
 		;
 	sh:targetClass observable:CapturedTelecommunicationsInformationFacet ;
+	.
+
+drafting:CellSite
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf observable:ObservableObject ;
+	rdfs:label "CellSite"@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
+	sh:targetClass drafting:CellSite ;
+	.
+
+drafting:CellSiteFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:Facet ;
+	rdfs:label "CellSiteFacet"@en ;
+	rdfs:comment "A cell site facet contains the metadata surrounding the cell site."@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-469> ;
+	sh:property
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cellSiteCountryCode ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cellSiteIdentifier ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cellSiteLocationAreaCode ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cellSiteNetworkCode ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:cellSiteType ;
+		]
+		;
+	sh:targetClass observable:CellSiteFacet ;
 	.
 
 drafting:azimuth
@@ -185,6 +186,41 @@ drafting:captureCellSite
 	rdfs:range drafting:CellSite ;
 	.
 
+drafting:cellSiteCountryCode
+	a owl:DatatypeProperty ;
+	rdfs:label "cellSiteCountryCode"@en ;
+	rdfs:comment "The country code represents the country of the cell site. For GSM, this is the Mobile Country Code (MCC)."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:cellSiteIdentifier
+	a owl:DatatypeProperty ;
+	rdfs:label "cellSiteIdentifier"@en ;
+	rdfs:comment "Specifies the unique number used to identify each Cell Site within a location area code."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:cellSiteLocationAreaCode
+	a owl:DatatypeProperty ;
+	rdfs:label "cellSiteLocationAreaCode"@en ;
+	rdfs:comment "The location area code is a unique number of current location area of the cell site. A location area is a set of cell site that are grouped together to optimize signalling. For GSM, this is the LAC."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:cellSiteNetworkCode
+	a owl:DatatypeProperty ;
+	rdfs:label "cellSiteNetworkCode"@en ;
+	rdfs:comment "The this code identifies the mobile operator of the cell site. For GSM, this is the Mobile Network Code (MNC) and for CMDA this is the network identifier (NID)."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:cellSiteType
+	a owl:DatatypeProperty ;
+	rdfs:label "cellSiteType"@en ;
+	rdfs:comment "Specifies the technology used by the Cell Site (e.g., GSM, CDMA, or LTE)."@en ;
+	rdfs:range xsd:string ;
+	.
+
 drafting:elevation
 	a owl:DatatypeProperty ;
 	rdfs:label "elevation"@en ;
@@ -197,6 +233,13 @@ drafting:height
 	rdfs:label "height"@en ;
 	rdfs:comment "The height of the antenna in meters from the ground."@en ;
 	rdfs:range xsd:decimal ;
+	.
+
+drafting:horizontalBeamWidth
+	a owl:DatatypeProperty ;
+	rdfs:label "horizontalBeamWidth"@en ;
+	rdfs:comment "The width of the antenna beam in degrees."@en ;
+	rdfs:range xsd:string ;
 	.
 
 drafting:interceptedCallState
@@ -220,48 +263,6 @@ drafting:partySubscription
 	rdfs:range observable:ObservableObject ;
 	.
 
-drafting:skew
-	a owl:DatatypeProperty ;
-	rdfs:label "skew"@en ;
-	rdfs:comment "The angle in degrees of the radial rotation around its main beam direction."@en ;
-	rdfs:range xsd:decimal ;
-	.
-
-drafting:cellSiteType
-	a owl:DatatypeProperty ;
-	rdfs:label "cellSiteType"@en ;
-	rdfs:comment "Specifies the technology used by the Cell Site (e.g., GSM, CDMA, or LTE)."@en ;
-	rdfs:range xsd:string ;
-	.
-
-drafting:cellSiteIdentifier
-	a owl:DatatypeProperty ;
-	rdfs:label "cellSiteIdentifier"@en ;
-	rdfs:comment "Specifies the unique number used to identify each Cell Site within a location area code."@en ;
-	rdfs:range xsd:string ;
-	.
-	
-drafting:cellSiteLocationAreaCode
-	a owl:DatatypeProperty ;
-	rdfs:label "cellSiteLocationAreaCode"@en ;
-	rdfs:comment "The location area code is a unique number of current location area of the cell site. A location area is a set of cell site that are grouped together to optimize signalling. For GSM, this is the LAC."@en ;
-	rdfs:range xsd:string ;
-	.
-
-drafting:cellSiteCountryCode
-	a owl:DatatypeProperty ;
-	rdfs:label "cellSiteCountryCode"@en ;
-	rdfs:comment "The country code represents the country of the cell site. For GSM, this is the Mobile Country Code (MCC)."@en ;
-	rdfs:range xsd:string ;
-	.
-
-drafting:cellSiteNetworkCode
-	a owl:DatatypeProperty ;
-	rdfs:label "cellSiteNetworkCode"@en ;
-	rdfs:comment "The this code identifies the mobile operator of the cell site. For GSM, this is the Mobile Network Code (MNC) and for CMDA this is the network identifier (NID)."@en ;
-	rdfs:range xsd:string ;
-	.
-
 drafting:signalStrength
 	a owl:DatatypeProperty ;
 	rdfs:label "signalStrength"@en ;
@@ -269,10 +270,10 @@ drafting:signalStrength
 	rdfs:range xsd:string ;
 	.
 
-drafting:horizontalBeamWidth
+drafting:skew
 	a owl:DatatypeProperty ;
-	rdfs:label "horizontalBeamWidth"@en ;
-	rdfs:comment "The width of the antenna beam in degrees."@en ;
-	rdfs:range xsd:string ;
+	rdfs:label "skew"@en ;
+	rdfs:comment "The angle in degrees of the radial rotation around its main beam direction."@en ;
+	rdfs:range xsd:decimal ;
 	.
 
