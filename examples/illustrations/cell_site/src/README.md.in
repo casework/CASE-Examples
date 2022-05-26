@@ -17,7 +17,7 @@ The importance of standardizing representation of Cell Site information is evide
 
 This illustration has been written in support of a Change Proposal under design and discussion, and hence may change in response to the proposal's evolution. New ontology concepts are in the file [drafting.ttl](drafting.ttl).
 
-A total JSON-LD file of the data on this page, plus supplementary data needed to support queries, is available here: [JSON](cell_tower.json).
+A total JSON-LD file of the data on this page, plus supplementary data needed to support queries, is available here: [JSON](cell_site.json).
 
 
 ## Example - Connected Cell Sites(s)
