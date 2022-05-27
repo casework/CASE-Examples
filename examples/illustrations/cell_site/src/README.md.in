@@ -13,6 +13,11 @@ This illustration includes example investigative questions that require cell sit
 The importance of standardizing representation of Cell Site information is evident from errors in processing location-based mobile device evidence that prompted Danish authorities to review over 10,000 cases ([Flaws in Cellphone Evidence Prompt Review of 10,000 Verdicts in Denmark, New York Times, 20 August 2019](https://www.nytimes.com/2019/08/20/world/europe/denmark-cellphone-data-courts.html)).
 
 
+## Disclaimer
+
+Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
+
+
 ## State of this Illustration
 
 This illustration has been written in support of a Change Proposal under design and discussion, and hence may change in response to the proposal's evolution. New ontology concepts are in the file [drafting.ttl](drafting.ttl).
