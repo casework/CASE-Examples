@@ -13,6 +13,11 @@ This illustration includes example investigative questions that require cell sit
 The importance of standardizing representation of Cell Site information is evident from errors in processing location-based mobile device evidence that prompted Danish authorities to review over 10,000 cases ([Flaws in Cellphone Evidence Prompt Review of 10,000 Verdicts in Denmark, New York Times, 20 August 2019](https://www.nytimes.com/2019/08/20/world/europe/denmark-cellphone-data-courts.html)).
 
 
+## Disclaimer
+
+Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
+
+
 ## State of this Illustration
 
 This illustration has been written in support of a Change Proposal under design and discussion, and hence may change in response to the proposal's evolution. New ontology concepts are in the file [drafting.ttl](drafting.ttl).
@@ -208,7 +213,7 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
             {
                 "@type": "drafting:CapturedTelecommunicationsInformationFacet",
                 "drafting:captureCellSite": {
-                    "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+                    "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
                 },
                 "observable:startTime": {
                     "@type": "xsd:dateTime",
@@ -231,4 +236,125 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
 ]
 ```
 
+(The object referenced in `captureCellSite` is described under "Location review" below.)
+
 This captured telecommunication information can also answer questions about the activities on a given device during the connection with a Cell Site, including details about the connected device identifier, SIM card identifier, mobile phone number, called phone number, call status, and SMS message text. These details are already covered by other CASE/UCO facets.
+
+
+### Location review
+
+Of data available from OpenCellID.org[^1], as accessed on 2022-05-27, this record most closely corresponds to the cell site described in the above `CapturedTelecommunicationsInformation`:
+
+| radio | mcc | net | area | cell | unit | lon | lat | range | samples | changeable | created | updated | averageSignal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GSM | 204 | 16 | 1014 | 13399 | 0 | 4.357681 | 52.039261 | 1000 | 3 | 1 | 1470196482 | 1487008296 | 0 |
+
+From commentary in a [forum post](https://community.opencellid.org/t/documenting-the-columns-in-the-downloadable-cells-database-csv/186/25), "Unique cell identifiers consists of four parts: Mobile Country Code (MCC), Mobile Network Code (MNC), Location Area Code (LAC/ area) and Cell Identification (CI/cellID)."  An example organization chooses to use this information to populate a knowledge base of cell site objects[^2], so they may be reused across multiple `CapturedTelecommunicationsInformation` objects.
+
+```json
+[
+    {
+        "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
+        "@type": "drafting:CellSite",
+        "uco-core:hasFacet": [
+            {
+                "@type": "drafting:CellSiteFacet",
+                "drafting:cellSiteType": "GSM",
+                "drafting:cellSiteCountryCode": "204",
+                "drafting:cellSiteNetworkCode": "16",
+                "drafting:cellSiteLocationAreaCode": "1014",
+                "drafting:cellSiteIdentifier": "13399"
+            }
+        ]
+    }
+]
+```
+
+This example organization chooses a process to associate the OpenCellID recorded location with this cell site.  The record includes a record creation and record update timestamp, which together form a two-member set of times the site was observed.
+
+For both of those times, a `sosa:Observation` object is constructed, to represent that the cell site was observed as a feature of interest at both of those times.  The property[^3] observed was its location.
+
+The result at the time of the record's creation is not known from the current data set (but might be known if the older versions of the data were reviewed), but the result of the update time is in that CSV record, and is linked using `sosa:hasResult`.
+
+Per practice of this example organization, the derivation of the relationship is recorded with `case-investigation:wasDerivedFrom`.  They also record no time bounds on the `ObservableRelationship`, because the source `sosa:Observation` is only believed to have taken place at a single point during the time the relationship existed.
+
+```json
+[
+    {
+        "@id": "kb:observation-009101f6-ba93-4a3d-acb0-455102b5b1e1",
+        "@type": [
+            "uco-core:UcoObject",
+            "sosa:Observation"
+        ],
+        "uco-core:objectCreatedTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2022-05-27T15:30:42Z"
+        },
+        "sosa:hasFeatureOfInterest": {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+        },
+        "sosa:resultTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2016-08-02T23:54:42Z"
+        }
+    },
+    {
+        "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b",
+        "@type": [
+            "uco-core:UcoObject",
+            "sosa:Observation"
+        ],
+        "uco-core:objectCreatedTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2022-05-27T15:30:42Z"
+        },
+        "sosa:hasFeatureOfInterest": {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+        },
+        "sosa:hasResult": {
+            "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
+        },
+        "sosa:resultTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2017-02-13T12:51:36Z"
+        }
+    },
+    {
+        "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee",
+        "@type": "uco-location:Location",
+        "uco-core:description": "Location of cell site, denoted by opencellid.org",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-location:LatLongCoordinatesFacet",
+                "uco-location:latitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "52.039261"
+                },
+                "uco-location:longitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "4.357681"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4",
+        "@type": "uco-observable:ObservableRelationship",
+        "case-investigation:wasDerivedFrom": {
+            "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b"
+        },
+        "uco-core:source": {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+        },
+        "uco-core:target": {
+            "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
+        },
+        "uco-core:kindOfRelationship": "Located_At",
+        "uco-core:isDirectional": true
+    }
+]
+```
+
+[^1]: <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://opencellid.org/images/ccbysa_4.0_80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:cc="https://creativecommons.org/ns#" href="https://opencellid.org" property="cc:attributionName" rel="cc:attributionURL">OpenCelliD Project</span></a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target='_blank'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+[^2]: The example organization has not discussed policy on how to handle matters such as cell sites being retired from service.  Such a policy would be necessary to process that no record is currently found with `cellSiteIdentifier` value `29220952` within their data source.  This is a practice that would be better explored by interested investigative community members.
+[^3]: SOSA defines that a `sosa:Observation` uniquely has one `Property` that is the subject of the measurement.  As OWL ontology data, that property does not necessarily need to be recorded.  By leaving the property absent, we still express that the feature of interest, the cell site, was observed; we just do not say what about it we were observing.  "The property that expresses the location of this object" is not something for which CASE or UCO yet has a clear representation practice, so we omit it in this example.

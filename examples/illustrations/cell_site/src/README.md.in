@@ -97,4 +97,37 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
 @CELL_SITE_CDR_JSON@
 ```
 
+(The object referenced in `captureCellSite` is described under "Location review" below.)
+
 This captured telecommunication information can also answer questions about the activities on a given device during the connection with a Cell Site, including details about the connected device identifier, SIM card identifier, mobile phone number, called phone number, call status, and SMS message text. These details are already covered by other CASE/UCO facets.
+
+
+### Location review
+
+Of data available from OpenCellID.org[^1], as accessed on 2022-05-27, this record most closely corresponds to the cell site described in the above `CapturedTelecommunicationsInformation`:
+
+| radio | mcc | net | area | cell | unit | lon | lat | range | samples | changeable | created | updated | averageSignal |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| GSM | 204 | 16 | 1014 | 13399 | 0 | 4.357681 | 52.039261 | 1000 | 3 | 1 | 1470196482 | 1487008296 | 0 |
+
+From commentary in a [forum post](https://community.opencellid.org/t/documenting-the-columns-in-the-downloadable-cells-database-csv/186/25), "Unique cell identifiers consists of four parts: Mobile Country Code (MCC), Mobile Network Code (MNC), Location Area Code (LAC/ area) and Cell Identification (CI/cellID)."  An example organization chooses to use this information to populate a knowledge base of cell site objects[^2], so they may be reused across multiple `CapturedTelecommunicationsInformation` objects.
+
+```json
+@CELL_SITE_CDR_SITE_JSON@
+```
+
+This example organization chooses a process to associate the OpenCellID recorded location with this cell site.  The record includes a record creation and record update timestamp, which together form a two-member set of times the site was observed.
+
+For both of those times, a `sosa:Observation` object is constructed, to represent that the cell site was observed as a feature of interest at both of those times.  The property[^3] observed was its location.
+
+The result at the time of the record's creation is not known from the current data set (but might be known if the older versions of the data were reviewed), but the result of the update time is in that CSV record, and is linked using `sosa:hasResult`.
+
+Per practice of this example organization, the derivation of the relationship is recorded with `case-investigation:wasDerivedFrom`.  They also record no time bounds on the `ObservableRelationship`, because the source `sosa:Observation` is only believed to have taken place at a single point during the time the relationship existed.
+
+```json
+@CELL_SITE_CDR_SITE_LOCATION_JSON@
+```
+
+[^1]: <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://opencellid.org/images/ccbysa_4.0_80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:cc="https://creativecommons.org/ns#" href="https://opencellid.org" property="cc:attributionName" rel="cc:attributionURL">OpenCelliD Project</span></a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target='_blank'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+[^2]: The example organization has not discussed policy on how to handle matters such as cell sites being retired from service.  Such a policy would be necessary to process that no record is currently found with `cellSiteIdentifier` value `29220952` within their data source.  This is a practice that would be better explored by interested investigative community members.
+[^3]: SOSA defines that a `sosa:Observation` uniquely has one `Property` that is the subject of the measurement.  As OWL ontology data, that property does not necessarily need to be recorded.  By leaving the property absent, we still express that the feature of interest, the cell site, was observed; we just do not say what about it we were observing.  "The property that expresses the location of this object" is not something for which CASE or UCO yet has a clear representation practice, so we omit it in this example.
