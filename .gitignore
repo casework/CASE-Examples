@@ -17,6 +17,7 @@ catalog-v001.xml
 .*.swp
 
 # Workflow files
+*.jar
 .*.done.log
 .venv-pre-commit
 venv
