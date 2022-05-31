@@ -23,8 +23,6 @@ SHELL := /bin/bash
 # The expected execution context is in any sibling directory of this Makefile's directory.
 top_srcdir := $(shell cd ../../.. ; pwd)
 
-RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-Utilities-Python/dependencies/CASE/lib/rdf-toolkit.jar
-
 example_name := $(shell basename $$PWD)
 
 # Use a drafting.ttl file in the validation and dependency list, if it is present.
@@ -42,78 +40,54 @@ all: \
 
 $(example_name)_validation.ttl: \
   $(example_name).json \
-  $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log
-	rm -f __$@
+	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --format turtle \
 	    $(drafting_validation_flag) \
-	    --output __$@ \
+	    --output _$@ \
 	    $< \
 	    $(drafting_ttl) \
 	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
-	test -s __$@
-	java -jar $(RDF_TOOLKIT_JAR) \
-	  --inline-blank-nodes \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
+	test -s _$@
 	mv _$@ $@
 
 $(example_name)_validation-develop.ttl: \
   $(example_name).json \
-  $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-develop.ttl
-	rm -f __$@
+	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --built-version none \
 	    --format turtle \
 	    $(drafting_validation_flag) \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
-	    --output __$@ \
+	    --output _$@ \
 	    $< \
 	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
-	test -s __$@
-	java -jar $(RDF_TOOLKIT_JAR) \
-	  --inline-blank-nodes \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
+	test -s _$@
 	mv _$@ $@
 
 $(example_name)_validation-unstable.ttl: \
   $(example_name).json \
-  $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-unstable.ttl
-	rm -f __$@
+	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --built-version none \
 	    --format turtle \
 	    $(drafting_validation_flag) \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
-	    --output __$@ \
+	    --output _$@ \
 	    $< \
 	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
-	test -s __$@
-	java -jar $(RDF_TOOLKIT_JAR) \
-	  --inline-blank-nodes \
-	  --source __$@ \
-	  --source-format turtle \
-	  --target _$@ \
-	  --target-format turtle
-	rm __$@
+	test -s _$@
 	mv _$@ $@
 
 check: \
