@@ -9,3 +9,9 @@ repos:
             - --indent=4
             - --no-ensure-ascii
             - --no-sort-keys
+-   repo: https://github.com/kchason/rdf-toolkit-action
+    rev: 0.1.2
+    hooks:
+    -   id: rdf-toolkit-normalizer
+        args:
+            - --autofix

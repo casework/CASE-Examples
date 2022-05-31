@@ -57,12 +57,6 @@ all: \
 	  || (git submodule init dependencies/UCO-unstable && git submodule update dependencies/UCO-unstable)
 	test -r dependencies/UCO-unstable/README.md \
 	  || (echo "ERROR:Makefile:UCO-unstable submodule README.md file not found, even though UCO-unstable submodule initialized." >&2 ; exit 2)
-	# Retrieve rdf-toolkit.jar.
-	cd dependencies/CASE-Utilities-Python \
-	  && git submodule update --init dependencies/CASE
-	$(MAKE) \
-	  --directory dependencies/CASE-Utilities-Python/dependencies/CASE \
-	  .lib.done.log
 	touch $@
 
 # This virtual environment is meant to be built once and then persist, even through 'make clean'.
