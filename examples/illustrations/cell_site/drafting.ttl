@@ -86,16 +86,6 @@ drafting:CapturedTelecommunicationsInformationFacet
 			sh:path drafting:captureCellSite ;
 		] ,
 		[
-			sh:class observable:Device ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path drafting:partyDevice ;
-		] ,
-		[
-			sh:class observable:ObservableObject ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path drafting:partySubscription ;
-		] ,
-		[
 			sh:datatype xsd:dateTime ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
@@ -231,7 +221,7 @@ drafting:elevation
 drafting:height
 	a owl:DatatypeProperty ;
 	rdfs:label "height"@en ;
-	rdfs:comment "The height of the antenna in meters from the ground."@en ;
+	rdfs:comment "The height (in meters) of the antenna from the ground."@en ;
 	rdfs:range xsd:decimal ;
 	.
 
@@ -247,20 +237,6 @@ drafting:interceptedCallState
 	rdfs:label "interceptedCallState"@en ;
 	rdfs:comment "State of the call in a Call Detail Record (e.g. idle)."@en ;
 	rdfs:range xsd:string ;
-	.
-
-drafting:partyDevice
-	a owl:ObjectProperty ;
-	rdfs:label "partyDevice"@en ;
-	rdfs:comment "A device connected to the cell tower."@en ;
-	rdfs:range observable:Device ;
-	.
-
-drafting:partySubscription
-	a owl:ObjectProperty ;
-	rdfs:label "partySubscription"@en ;
-	rdfs:comment "The addresses of the device connected to the cell tower (references IMSI, MSISDN SIP address, 5G supi)."@en ;
-	rdfs:range observable:ObservableObject ;
 	.
 
 drafting:signalStrength

@@ -127,12 +127,6 @@
                         "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
                     },
                     "drafting:interceptedCallState": "idle",
-                    "drafting:partyDevice": {
-                        "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
-                    },
-                    "drafting:partySubscription": {
-                        "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876"
-                    },
                     "observable:endTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-07-30T02:10:50Z"
