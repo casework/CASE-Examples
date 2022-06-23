@@ -1,6 +1,3 @@
-[submodule "dependencies/CASE-Utilities-Python"]
-	path = dependencies/CASE-Utilities-Python
-	url = https://github.com/casework/CASE-Utilities-Python
 [submodule "dependencies/UCO-unstable"]
 	path = dependencies/UCO-unstable
 	url = https://github.com/ucoProject/UCO-Archive.git
