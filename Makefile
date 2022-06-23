@@ -53,9 +53,8 @@ all: \
 	test -r dependencies/UCO-unstable/README.md \
 	  || (echo "ERROR:Makefile:UCO-unstable submodule README.md file not found, even though UCO-unstable submodule initialized." >&2 ; exit 2)
 	# Retrieve rdf-toolkit.jar.
-	# TODO - After release of CASE 0.7.0 and UCO 0.9.0, rdf-toolkit.jar references should adjust to UCO-develop.
 	$(MAKE) \
-	  --directory dependencies/CASE-unstable \
+	  --directory dependencies/UCO-develop \
 	  .lib.done.log
 	touch $@
 
