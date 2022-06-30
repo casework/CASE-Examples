@@ -172,20 +172,29 @@
                         "co:size": 3,
                         "co:item": [
                             {
+                                "@id": "kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8",
                                 "@type": "uco-types:ThreadItem",
                                 "co:index": 1,
                                 "co:itemContent": {
                                     "@id": "kb:message1"
+                                },
+                                "uco-types:threadNextItem": {
+                                    "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2"
                                 }
                             },
                             {
+                                "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2",
                                 "@type": "uco-types:ThreadItem",
                                 "co:index": 2,
                                 "co:itemContent": {
                                     "@id": "kb:message2"
+                                },
+                                "uco-types:threadNextItem": {
+                                    "@id": "kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87"
                                 }
                             },
                             {
+                                "@id": "kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87",
                                 "@type": "uco-types:ThreadItem",
                                 "co:index": 3,
                                 "co:itemContent": {
