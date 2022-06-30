@@ -3,11 +3,12 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
-        "olo": "http://purl.org/ontology/olo/core#",
+        "co": "http://purl.org/co/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -166,24 +167,28 @@
                         }
                     ],
                     "draft:visibility": "PRIVATE",
-                    "messages": {
-                        "olo:length": 3,
-                        "olo:slot": [
+                    "uco-observable:messageThread": {
+                        "@type": "uco-types:Thread",
+                        "co:size": 3,
+                        "co:item": [
                             {
-                                "olo:index": 1,
-                                "olo:item": {
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": 1,
+                                "co:itemContent": {
                                     "@id": "kb:message1"
                                 }
                             },
                             {
-                                "olo:index": 2,
-                                "olo:item": {
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": 2,
+                                "co:itemContent": {
                                     "@id": "kb:message2"
                                 }
                             },
                             {
-                                "olo:index": 3,
-                                "olo:item": {
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": 3,
+                                "co:itemContent": {
                                     "@id": "kb:message3"
                                 }
                             }
@@ -214,12 +219,14 @@
                         }
                     ],
                     "draft:visibility": "PUBLIC",
-                    "messages": {
-                        "olo:length": 1,
-                        "olo:slot": [
+                    "uco-observable:messageThread": {
+                        "@type": "uco-types:Thread",
+                        "co:size": 1,
+                        "co:item": [
                             {
-                                "olo:index": 1,
-                                "olo:item": {
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": 1,
+                                "co:itemContent": {
                                     "@id": "kb:post1"
                                 }
                             }
