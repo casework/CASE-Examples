@@ -19,6 +19,7 @@ case_develop_ttls := \
 
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \
+  $(wildcard UCO-unstable/ontology/*/*.ttl) \
   $(wildcard UCO-unstable/ontology/uco/*/*.ttl)
 
 top_srcdir := $(shell cd .. ; pwd)
