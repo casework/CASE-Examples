@@ -11,9 +11,13 @@ These states can be represented using the `UnallocatedRecoverabilityFacet` with 
 * `contentRecoverabilityStatus`: recovered, partially recovered, overwritten, unknown
 
 This representation applies to file systems as well as “file system within a file“ data structures such as SQLite databases and Windows Registry hives.
-For further details and background, see [Standardization of File Recovery Classification and Authentication](https://www.nist.gov/publications/standardization-file-recovery-classification-and-authentication)
+For further details and background, see [Standardization of File Recovery Classification and Authentication](https://www.nist.gov/publications/standardization-file-recovery-classification-and-authentication). Additional recoverability scenarios are available in the initial proposal [Representing Recoverability of Unallocated Files(https://caseontology.org/resources/references/Representing%20Recoverability%20of%20Unallocated%20Files%20using%20CASE%20UCO%2031Jan2018.pdf) with the caveat that examples use an early version of CASE/UCO.
 
 # File System Recoverability
+
+Illustrative examples are provided here to cover conditions commonly encountered when recovering unallocated files. These examples use shared datasets that contain FAT and NTFS file systems, but the representation of unallocated recoverability can be translated to other file systems such as EXT. 
+
+When information is recoverable, it is represented explicitly in these examples. Recoverable metadata are represented using the `FileFacet`, including `fileName` and `filePath`.
 
 Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated files [see NIST website](https://cfreds-archive.nist.gov/dfr-test-images.html), particularly XBIED.txt at file offset 11040 (logical sector 170, physical sector 298):
 
