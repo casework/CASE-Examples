@@ -11,7 +11,7 @@ These states can be represented using the `UnallocatedRecoverabilityFacet` with 
 * `contentRecoverabilityStatus`: recovered, partially recovered, overwritten, unknown
 
 This representation applies to file systems as well as “file system within a file“ data structures such as SQLite databases and Windows Registry hives.
-For further details and background, see [Standardization of File Recovery Classification and Authentication](https://www.nist.gov/publications/standardization-file-recovery-classification-and-authentication). Additional recoverability scenarios are available in the initial proposal [Representing Recoverability of Unallocated Files(https://caseontology.org/resources/references/Representing%20Recoverability%20of%20Unallocated%20Files%20using%20CASE%20UCO%2031Jan2018.pdf) with the caveat that examples use an early version of CASE/UCO.
+For further details and background, see [Standardization of File Recovery Classification and Authentication](https://www.nist.gov/publications/standardization-file-recovery-classification-and-authentication). Additional recoverability scenarios are available in the initial proposal [Representing Recoverability of Unallocated Files](https://caseontology.org/resources/references/Representing%20Recoverability%20of%20Unallocated%20Files%20using%20CASE%20UCO%2031Jan2018.pdf) with the caveat that examples use an early version of CASE/UCO.
 
 # File System Recoverability
 
