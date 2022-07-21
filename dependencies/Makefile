@@ -15,7 +15,8 @@ SHELL := /bin/bash
 
 case_develop_ttls := \
   $(wildcard CASE-develop/ontology/*/*.ttl) \
-  $(wildcard UCO-develop/ontology/*/*.ttl)
+  $(wildcard UCO-develop/ontology/*/*.ttl) \
+  $(wildcard UCO-develop/ontology/uco/*/*.ttl)
 
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \
