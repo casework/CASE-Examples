@@ -155,6 +155,8 @@
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
+                    "draft:visibility": "PRIVATE",
+                    "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
                     "uco-observable:message": [
                         {
                             "@id": "kb:message1"
@@ -166,10 +168,20 @@
                             "@id": "kb:message3"
                         }
                     ],
-                    "draft:visibility": "PRIVATE",
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
                         "co:size": 3,
+                        "co:element": [
+                            {
+                                "@id": "kb:message1"
+                            },
+                            {
+                                "@id": "kb:message2"
+                            },
+                            {
+                                "@id": "kb:message3"
+                            }
+                        ],
                         "co:item": [
                             {
                                 "@id": "kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8",
@@ -222,15 +234,17 @@
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
-                    "uco-observable:message": [
-                        {
-                            "@id": "kb:post1"
-                        }
-                    ],
                     "draft:visibility": "PUBLIC",
+                    "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
+                    "uco-observable:message": {
+                        "@id": "kb:post1"
+                    },
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
                         "co:size": 1,
+                        "co:element": {
+                            "@id": "kb:post1"
+                        },
                         "co:item": [
                             {
                                 "@type": "uco-types:ThreadItem",
