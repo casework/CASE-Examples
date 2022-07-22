@@ -170,7 +170,10 @@
                     ],
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
-                        "co:size": 3,
+                        "co:size": {
+                            "@type": "xsd:nonNegativeInteger",
+                            "@value": "3"
+                        },
                         "co:element": [
                             {
                                 "@id": "kb:message1"
@@ -186,7 +189,10 @@
                             {
                                 "@id": "kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8",
                                 "@type": "uco-types:ThreadItem",
-                                "co:index": 1,
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "1"
+                                },
                                 "co:itemContent": {
                                     "@id": "kb:message1"
                                 },
@@ -197,7 +203,10 @@
                             {
                                 "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2",
                                 "@type": "uco-types:ThreadItem",
-                                "co:index": 2,
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "2"
+                                },
                                 "co:itemContent": {
                                     "@id": "kb:message2"
                                 },
@@ -208,7 +217,10 @@
                             {
                                 "@id": "kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87",
                                 "@type": "uco-types:ThreadItem",
-                                "co:index": 3,
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "3"
+                                },
                                 "co:itemContent": {
                                     "@id": "kb:message3"
                                 }
@@ -241,14 +253,20 @@
                     },
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
-                        "co:size": 1,
+                        "co:size": {
+                            "@type": "xsd:nonNegativeInteger",
+                            "@value": "1"
+                        },
                         "co:element": {
                             "@id": "kb:post1"
                         },
                         "co:item": [
                             {
                                 "@type": "uco-types:ThreadItem",
-                                "co:index": 1,
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "1"
+                                },
                                 "co:itemContent": {
                                     "@id": "kb:post1"
                                 }
