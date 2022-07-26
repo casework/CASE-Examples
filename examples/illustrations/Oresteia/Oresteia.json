@@ -223,6 +223,9 @@
                     "@id": "kb:investigative-action5-uuid"
                 },
                 {
+                    "@id": "kb:investigative-action-relationship-uuid"
+                },
+                {
                     "@id": "kb:provenance-record5-uuid"
                 },
                 {
@@ -976,9 +979,14 @@
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "SMS SQLite database on mobile device used by murder victim Cassandra",
             "case-investigation:exhibitNumber": "AthensPD-2017220601-02-03",
-            "uco-core:object": {
-                "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
-            }
+            "uco-core:object": [
+                {
+                    "@id": "kb:investigative-action-relationship-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
+                }
+            ]
         },
         {
             "@type": "uco-observable:File",
@@ -1221,7 +1229,7 @@
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:investigative-action5-uuid"
+                    "@id": "kb:investigative-action-relationship-uuid"
                 },
                 {
                     "@id": "kb:provenance-record4-uuid"
@@ -1306,6 +1314,20 @@
                     "@id": "kb:argive-elder3-phoneaccnt-uuid"
                 }
             ]
+        },
+        {
+            "@id": "kb:investigative-action-relationship-uuid",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:investigative-action4-uuid"
+            },
+            "uco-core:target": [
+                {
+                    "@id": "kb:investigative-action5-uuid"
+                }
+            ],
+            "uco-core:kindOfRelationship": "Initiated",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:sms-application1",
