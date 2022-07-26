@@ -3,7 +3,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -14,7 +14,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
 			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
@@ -33,7 +33,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
@@ -44,8 +44,8 @@
 				sh:message "Value is not member of the vocabulary AccountTypeVocab." ;
 				sh:or (
 					[
-						sh:datatype vocabulary1:AccountTypeVocab ;
-						sh:in vocabulary1:AccountTypeVocab-members ;
+						sh:datatype vocabulary:AccountTypeVocab ;
+						sh:in vocabulary:AccountTypeVocab-members ;
 					]
 					[
 						sh:datatype xsd:string ;
@@ -53,13 +53,13 @@
 				) ;
 				sh:path observable:accountType ;
 			] ;
-			sh:value "Phone"^^vocabulary1:AccountTypeVocab ;
+			sh:value "Phone"^^vocabulary:AccountTypeVocab ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
 			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
@@ -78,7 +78,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountType "Phone"^^vocabulary1:AccountTypeVocab ;
+				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
 			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
@@ -89,8 +89,8 @@
 				sh:message "Value is not member of the vocabulary AccountTypeVocab." ;
 				sh:or (
 					[
-						sh:datatype vocabulary1:AccountTypeVocab ;
-						sh:in vocabulary1:AccountTypeVocab-members ;
+						sh:datatype vocabulary:AccountTypeVocab ;
+						sh:in vocabulary:AccountTypeVocab-members ;
 					]
 					[
 						sh:datatype xsd:string ;
@@ -98,7 +98,7 @@
 				) ;
 				sh:path observable:accountType ;
 			] ;
-			sh:value "Phone"^^vocabulary1:AccountTypeVocab ;
+			sh:value "Phone"^^vocabulary:AccountTypeVocab ;
 		]
 		;
 	.
