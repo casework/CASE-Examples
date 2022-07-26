@@ -223,6 +223,9 @@
                     "@id": "kb:investigative-action5-uuid"
                 },
                 {
+                    "@id": "kb:investigative-action-relationship-uuid"
+                },
+                {
                     "@id": "kb:provenance-record5-uuid"
                 },
                 {
@@ -1221,9 +1224,6 @@
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:investigative-action5-uuid"
-                },
-                {
                     "@id": "kb:provenance-record4-uuid"
                 },
                 {
@@ -1306,6 +1306,20 @@
                     "@id": "kb:argive-elder3-phoneaccnt-uuid"
                 }
             ]
+        },
+        {
+            "@id": "kb:investigative-action-relationship-uuid",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb: investigative-action4-uuid"
+            },
+            "uco-core:target": [
+                {
+                    "@id": "kb: investigative-action5-uuid"
+                }
+            ],
+            "uco-core:kindOfRelationship": "Initiated",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:sms-application1",
