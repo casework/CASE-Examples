@@ -1317,7 +1317,7 @@
         },
         {
             "@id": "kb:investigative-action-relationship-uuid",
-            "@type": "uco-observable:ObservableRelationship",
+            "@type": "uco-core:Relationship",
             "uco-core:source": {
                 "@id": "kb: investigative-action4-uuid"
             },
