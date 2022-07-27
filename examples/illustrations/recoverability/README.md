@@ -35,9 +35,18 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",
-                "uco-observable:createdTime": "2011-12-25T19:02:22Z",
-                "uco-observable:modifiedTime": "2000-02-29T19:11Z",
-                "uco-observable:accessedTime": "1999-01-02T05:00Z",
+                "uco-observable:createdTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2011-12-25T19:02:22Z"
+                },
+                "uco-observable:modifiedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2000-02-29T19:11Z"
+                },
+                "uco-observable:accessedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "1999-01-02T05:00Z"
+                },
                 "uco-observable:extension": "txt",
                 "uco-observable:fileName": "_BEID.txt",
                 "uco-observable:filePath": "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt",
@@ -70,14 +79,14 @@ This recovered file system entry can be represented using the `observable:Unallo
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",
-                "uco-observable:accessedTime": "null",
+                "uco-observable:accessedTime": null,
                 "uco-observable:extension": "tmp",
                 "uco-observable:fileName": "~badquinn3@gmail.com.ost.tmp",
                 "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": null,
-                "uco-observable:createdTime": "null",
-                "uco-observable:modifiedTime": "null"
+                "uco-observable:createdTime": null,
+                "uco-observable:modifiedTime": null
             },
             {
                 "@type": "uco-observable:UnallocatedRecoverabilityFacet",
