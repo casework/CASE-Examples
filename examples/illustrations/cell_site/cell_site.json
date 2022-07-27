@@ -172,6 +172,10 @@
                 },
                 {
                     "@type": "drafting:AntennaFacet",
+                    "drafting:antennaHeight": {
+                        "@type": "xsd:decimal",
+                        "@value": "25"
+                    },
                     "drafting:azimuth": {
                         "@type": "xsd:decimal",
                         "@value": "45"
@@ -179,10 +183,6 @@
                     "drafting:elevation": {
                         "@type": "xsd:decimal",
                         "@value": "5"
-                    },
-                    "drafting:height": {
-                        "@type": "xsd:decimal",
-                        "@value": "25"
                     },
                     "drafting:horizontalBeamWidth": {
                         "@type": "xsd:decimal",

@@ -71,7 +71,7 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
                     "@type": "xsd:decimal",
                     "@value": "20"
                 },
-                "drafting:height": {
+                "drafting:antennaHeight": {
                     "@type": "xsd:decimal",
                     "@value": "25"
                 }
