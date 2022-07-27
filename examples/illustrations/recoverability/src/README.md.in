@@ -1,3 +1,9 @@
+<!--
+GENERATED FILE  README.md is generated from source files.  Edits to it will be overwritten by automated processes.:
+
+If you need to edit its content, edit src/README.md.in, and then re-run `make` to re-build the file.
+-->
+
 
 # Recoverability Examples
 
