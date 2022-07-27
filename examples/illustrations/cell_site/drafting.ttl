@@ -33,7 +33,7 @@ drafting:AntennaFacet
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:height ;
+			sh:path drafting:antennaHeight ;
 		] ,
 		[
 			sh:datatype xsd:decimal ;
@@ -218,7 +218,7 @@ drafting:elevation
 	rdfs:range xsd:decimal ;
 	.
 
-drafting:height
+drafting:antennaHeight
 	a owl:DatatypeProperty ;
 	rdfs:label "height"@en ;
 	rdfs:comment "The height (in meters) of the antenna from the ground."@en ;
