@@ -9,7 +9,7 @@ If you need to edit its content, edit src/README.md.in, and then re-run `make` t
 
 *A file containing all of the JSON-LD content within this page is here: [`recoverability.json`](recoverability.json).*
 
-*A file containing draft ontology concepts is here: [`drafting.ttl`](drafting.ttl).*
+*A file containing draft ontology concepts is here: [`drafting.ttl`](drafting.ttl).  It is expected to be removed with the completion of [UCO Issue 251](https://github.com/ucoProject/UCO/issues/251).*
 
 There is a requirement to represent the recoverability status of entries in file systems, particularly in digital forensic examinations. 
 For clarity and completeness, it is necessary to represent the recoverability of unallocated filename, metadata, and content.
