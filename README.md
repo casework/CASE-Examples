@@ -25,6 +25,7 @@ Mapping notes & respective JSON-LD output:
 - [Oresteia](examples/illustrations/Oresteia/Oresteia.json) (*[info](examples/illustrations/Oresteia/)*)
 - [Raw Data](examples/illustrations/raw_data/raw_data.json)
 - [Reconstructed File](examples/illustrations/reconstructed_file/reconstructed_file.json) (*[info](examples/illustrations/reconstructed_file/)*)
+- [Recoverability](examples/illustrations/recoverability/recoverability.json) (*[info](examples/illustrations/recoverability/)*)
 - [SMS and Contacts](examples/illustrations/sms_and_contacts/sms_and_contacts.json)
 
 

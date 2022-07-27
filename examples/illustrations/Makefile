@@ -30,6 +30,7 @@ illustration_dirs := \
   network_connection \
   raw_data \
   reconstructed_file \
+  recoverability \
   sms_and_contacts
 
 all_targets := $(foreach illustration_dir,$(illustration_dirs),all-$(illustration_dir))
