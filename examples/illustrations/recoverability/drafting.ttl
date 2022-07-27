@@ -1,0 +1,190 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/drafting>
+	a owl:Ontology ;
+	.
+
+drafting:UnallocatedRecoverabilityFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:Facet ;
+	rdfs:label "UnallocatedRecoverabilityFacet"@en ;
+	rdfs:comment "Recoverability status of name, metadata, and content."@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/ONT-119> ;
+	sh:property
+		[
+			sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+			sh:message "Value is outside the default vocabulary UnallocatedRecoverabilityStatusVocab." ;
+			sh:path drafting:nameRecoverabilityStatus ;
+			sh:severity sh:Info ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:nameRecoverabilityStatus ;
+		] ,
+		[
+			sh:message "Value is not member of the vocabulary UnallocatedRecoverabilityStatusVocab." ;
+			sh:or (
+				[
+					sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+					sh:in (
+						"recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"partially recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"overwritten"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"unknown"^^drafting:UnallocatedRecoverabilityStatusVocab
+					) ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:nameRecoverabilityStatus ;
+		] ,
+		[
+			sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+			sh:message "Value is outside the default vocabulary UnallocatedRecoverabilityStatusVocab." ;
+			sh:path drafting:metadataRecoverabilityStatus ;
+			sh:severity sh:Info ;
+		] ,
+		[
+			sh:message "Value is not member of the vocabulary UnallocatedRecoverabilityStatusVocab." ;
+			sh:or (
+				[
+					sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+					sh:in (
+						"recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"partially recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"overwritten"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"unknown"^^drafting:UnallocatedRecoverabilityStatusVocab
+					) ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:metadataRecoverabilityStatus ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:metadataRecoverabilityStatus ;
+		] ,
+		[
+			sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+			sh:message "Value is outside the default vocabulary UnallocatedRecoverabilityStatusVocab." ;
+			sh:path drafting:contentRecoverabilityStatus ;
+			sh:severity sh:Info ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:contentRecoverabilityStatus ;
+		] ,
+		[
+			sh:message "Value is not member of the vocabulary UnallocatedRecoverabilityStatusVocab." ;
+			sh:or (
+				[
+					sh:datatype drafting:UnallocatedRecoverabilityStatusVocab ;
+					sh:in (
+						"recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"partially recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"overwritten"^^drafting:UnallocatedRecoverabilityStatusVocab
+						"unknown"^^drafting:UnallocatedRecoverabilityStatusVocab
+					) ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:contentRecoverabilityStatus ;
+		]
+		;
+	sh:targetClass drafting:UnallocatedRecoverabilityFacet ;
+	.
+
+
+drafting:contentRecoverabilityStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "contentRecoverabilityStatus"@en ;
+	rdfs:comment "Specifies the recoverability status of the content of an object."@en ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			drafting:UnallocatedRecoverabilityStatusVocab
+			xsd:string
+		) ;
+	] ;
+	.
+
+drafting:metadataRecoverabilityStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "metadataRecoverabilityStatus"@en ;
+	rdfs:comment "Specifies the recoverability status of the metadata of an object."@en ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			drafting:UnallocatedRecoverabilityStatusVocab
+			xsd:string
+		) ;
+	] ;
+	.
+
+drafting:nameRecoverabilityStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "nameRecoverabilityStatus"@en ;
+	rdfs:comment "Specifies the recoverability status of the name of an object."@en ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			drafting:UnallocatedRecoverabilityStatusVocab
+			xsd:string
+		) ;
+	] ;
+	.
+
+drafting:UnallocatedRecoverabilityStatusVocab
+	a rdfs:Datatype ;
+	rdfs:subClassOf rdfs:Resource ;
+	rdfs:label "Unallocated Recoverability Status Vocabulary"@en-US ;
+	rdfs:comment "Defines the vocabulary for unallocated recoverability status of data."@en ;
+	owl:oneOf (
+		"recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+		"partially recovered"^^drafting:UnallocatedRecoverabilityStatusVocab
+		"overwritten"^^drafting:UnallocatedRecoverabilityStatusVocab
+		"unknown"^^drafting:UnallocatedRecoverabilityStatusVocab
+	) ;
+	.
+

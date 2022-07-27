@@ -1,5 +1,6 @@
 {
     "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
         "kb": "http://example.org/kb/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",

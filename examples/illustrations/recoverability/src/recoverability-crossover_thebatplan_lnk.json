@@ -24,10 +24,19 @@
                 }
             },
             {
-                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
-                "uco-observable:nameRecoverabilityStatus": "recovered",
-                "uco-observable:metadataRecoverabilityStatus": "recovered",
-                "uco-observable:contentRecoverabilityStatus": "unknown"
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "unknown"
+                }
             }
         ]
     }
