@@ -96,7 +96,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:extension": "",
                     "uco-observable:fileName": "Thebatplan",
-                    "uco-observable:filePath": "D:\Thebatplan",
+                    "uco-observable:filePath": "D:\\Thebatplan",
                     "uco-observable:isDirectory": false,
                     "uco-observable:sizeInBytes": 1389601,
                     "uco-observable:createdTime": {
