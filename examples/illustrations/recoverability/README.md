@@ -7,6 +7,10 @@ If you need to edit its content, edit src/README.md.in, and then re-run `make` t
 
 # Recoverability Examples
 
+*A file containing all of the JSON-LD content within this page is here: [`recoverability.json`](recoverability.json).*
+
+*A file containing draft ontology concepts is here: [`drafting.ttl`](drafting.ttl).*
+
 There is a requirement to represent the recoverability status of entries in file systems, particularly in digital forensic examinations. 
 For clarity and completeness, it is necessary to represent the recoverability of unallocated filename, metadata, and content.
 
@@ -54,10 +58,19 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
                 "uco-observable:sizeInBytes": 712
             },
             {
-                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
-                "uco-observable:nameRecoverabilityStatus": "recovered",
-                "uco-observable:metadataRecoverabilityStatus": "recovered",
-                "uco-observable:contentRecoverabilityStatus": "recovered"
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                }
             }
         ]
     }
@@ -89,10 +102,19 @@ This recovered file system entry can be represented using the `observable:Unallo
                 "uco-observable:modifiedTime": null
             },
             {
-                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
-                "uco-observable:nameRecoverabilityStatus": "recovered",
-                "uco-observable:metadataRecoverabilityStatus": "unknown",
-                "uco-observable:contentRecoverabilityStatus": "unknown"
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "unknown"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "unknown"
+                }
             }
         ]
     }
@@ -128,10 +150,19 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
                 }
             },
             {
-                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
-                "uco-observable:nameRecoverabilityStatus": "recovered",
-                "uco-observable:metadataRecoverabilityStatus": "recovered",
-                "uco-observable:contentRecoverabilityStatus": "unknown"
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "unknown"
+                }
             }
         ]
     }
@@ -159,10 +190,19 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
                 }
             },
             {
-                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
-                "uco-observable:nameRecoverabilityStatus": "recovered",
-                "uco-observable:metadataRecoverabilityStatus": "recovered",
-                "uco-observable:contentRecoverabilityStatus": "unknown"
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "unknown"
+                }
             }
         ]
     }
@@ -201,10 +241,19 @@ This recovered chat message can be represented using the `observable:Unallocated
                 }
             },
             {
-                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
-                "uco-observable:nameRecoverabilityStatus": "recovered",
-                "uco-observable:metadataRecoverabilityStatus": "recovered",
-                "uco-observable:contentRecoverabilityStatus": "partially recovered"
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "partially recovered"
+                }
             }
         ]
     }
