@@ -5,14 +5,14 @@
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",
-                "uco-observable:accessedTime": "null",
+                "uco-observable:accessedTime": null,
                 "uco-observable:extension": "tmp",
                 "uco-observable:fileName": "~badquinn3@gmail.com.ost.tmp",
                 "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": null,
-                "uco-observable:createdTime": "null",
-                "uco-observable:modifiedTime": "null"
+                "uco-observable:createdTime": null,
+                "uco-observable:modifiedTime": null
             },
             {
                 "@type": "uco-observable:UnallocatedRecoverabilityFacet",
