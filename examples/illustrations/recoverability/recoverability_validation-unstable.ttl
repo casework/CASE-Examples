@@ -1,3 +1,5 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,6 +8,242 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/4026FABD-924D-4138-A6BA-73DF2EB37BCB> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:UnallocatedRecoverabilityFacet ;
+				observable:contentRecoverabilityStatus "unknown" ;
+				observable:metadataRecoverabilityStatus "recovered" ;
+				observable:nameRecoverabilityStatus "recovered" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/665D63BE-93E6-4D3E-8E75-3112BE091E93> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:UnallocatedRecoverabilityFacet ;
+				observable:contentRecoverabilityStatus "unknown" ;
+				observable:metadataRecoverabilityStatus "recovered" ;
+				observable:nameRecoverabilityStatus "recovered" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/BD64BDD9-3DCD-4828-A25B-A72C06E472CD> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:UnallocatedRecoverabilityFacet ;
+				observable:contentRecoverabilityStatus "unknown" ;
+				observable:metadataRecoverabilityStatus "unknown" ;
+				observable:nameRecoverabilityStatus "recovered" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/C01E67F9-ADB5-48BD-B09D-E7326FA8D592> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:UnallocatedRecoverabilityFacet ;
+				observable:contentRecoverabilityStatus "partially recovered" ;
+				observable:metadataRecoverabilityStatus "recovered" ;
+				observable:nameRecoverabilityStatus "recovered" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/CB0354F5-2DBD-4C02-8A6C-011B77125EE2> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:UnallocatedRecoverabilityFacet ;
+				observable:contentRecoverabilityStatus "recovered" ;
+				observable:metadataRecoverabilityStatus "recovered" ;
+				observable:nameRecoverabilityStatus "recovered" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:accessedTime "1999-01-02T05:00Z" ;
+				observable:createdTime "2011-12-25T19:02:22Z" ;
+				observable:extension "txt" ;
+				observable:fileName "_BEID.txt" ;
+				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
+				observable:isDirectory "false"^^xsd:boolean ;
+				observable:modifiedTime "2000-02-29T19:11Z" ;
+				observable:sizeInBytes "712"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:dateTime" ;
+			sh:resultPath observable:accessedTime ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:dateTime ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accessedTime ;
+			] ;
+			sh:value "1999-01-02T05:00Z" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:accessedTime "1999-01-02T05:00Z" ;
+				observable:createdTime "2011-12-25T19:02:22Z" ;
+				observable:extension "txt" ;
+				observable:fileName "_BEID.txt" ;
+				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
+				observable:isDirectory "false"^^xsd:boolean ;
+				observable:modifiedTime "2000-02-29T19:11Z" ;
+				observable:sizeInBytes "712"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:dateTime" ;
+			sh:resultPath observable:modifiedTime ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:dateTime ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:modifiedTime ;
+			] ;
+			sh:value "2000-02-29T19:11Z" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:accessedTime "null" ;
+				observable:createdTime "null" ;
+				observable:extension "tmp" ;
+				observable:fileName "~badquinn3@gmail.com.ost.tmp" ;
+				observable:filePath "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost" ;
+				observable:isDirectory "false"^^xsd:boolean ;
+				observable:modifiedTime "null" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:dateTime" ;
+			sh:resultPath observable:accessedTime ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:dateTime ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:accessedTime ;
+			] ;
+			sh:value "null" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:accessedTime "null" ;
+				observable:createdTime "null" ;
+				observable:extension "tmp" ;
+				observable:fileName "~badquinn3@gmail.com.ost.tmp" ;
+				observable:filePath "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost" ;
+				observable:isDirectory "false"^^xsd:boolean ;
+				observable:modifiedTime "null" ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:dateTime" ;
+			sh:resultPath observable:modifiedTime ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:dateTime ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:modifiedTime ;
+			] ;
+			sh:value "null" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageFacet ;
+				observable:from <http://example.org/kb/e1e34d20-e77c-4087-a87d-d169d7155b8d> ;
+				observable:messageText "Diana sent a location." ;
+				observable:sentTime "2018-12-04T07:52:47+00:00"^^xsd:dateTime ;
+				observable:to <http://example.org/kb/f96cfe21-1149-4a46-acb9-7299152c776b> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:from ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:from ;
+			] ;
+			sh:value <http://example.org/kb/e1e34d20-e77c-4087-a87d-d169d7155b8d> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MessageFacet ;
+				observable:from <http://example.org/kb/e1e34d20-e77c-4087-a87d-d169d7155b8d> ;
+				observable:messageText "Diana sent a location." ;
+				observable:sentTime "2018-12-04T07:52:47+00:00"^^xsd:dateTime ;
+				observable:to <http://example.org/kb/f96cfe21-1149-4a46-acb9-7299152c776b> ;
+			] ;
+			sh:resultMessage "Value does not have class observable:ObservableObject" ;
+			sh:resultPath observable:to ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class observable:ObservableObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path observable:to ;
+			] ;
+			sh:value <http://example.org/kb/f96cfe21-1149-4a46-acb9-7299152c776b> ;
+		]
+		;
 	.
 
