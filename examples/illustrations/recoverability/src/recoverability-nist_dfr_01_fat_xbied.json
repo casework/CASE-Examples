@@ -1,0 +1,25 @@
+[
+    {
+        "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
+        "@type": "uco-observable:ObservableObject",
+        "uco-core:hasFacet": [
+            {
+                "@type": "FileFacet",
+                "createdTime": "2011-12-25T19:02:22Z",
+                "modifiedTime": "2000-02-29T19:11Z",
+                "accessedTime": "1999-01-02T05:00Z",
+                "extension": "txt",
+                "fileName": "_BEID.txt",
+                "filePath": "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt",
+                "isDirectory": false,
+                "sizeInBytes": 712
+            },
+            {
+                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
+                "uco-observable:nameRecoverabilityStatus": "recovered",
+                "uco-observable:metadataRecoverabilityStatus": "recovered",
+                "uco-observable:contentRecoverabilityStatus": "recovered"
+            }
+        ]
+    }
+]

@@ -1,0 +1,30 @@
+[
+    {
+        "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
+        "@type": "uco-observable:ObservableObject",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:MessageFacet",
+                "uco-observable:messageText": "Diana sent a location.",
+                "uco-observable:from": {
+                    "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d"
+                },
+                "uco-observable:to": [
+                    {
+                        "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b"
+                    }
+                ],
+                "uco-observable:sentTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-12-04T07:52:47Z"
+                }
+            },
+            {
+                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
+                "uco-observable:nameRecoverabilityStatus": "recovered",
+                "uco-observable:metadataRecoverabilityStatus": "recovered",
+                "uco-observable:contentRecoverabilityStatus": "partially recovered"
+            }
+        ]
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "@id": "kb:665D63BE-93E6-4D3E-8E75-3112BE091E93",
+        "@type": "uco-observable:ObservableObject",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:extension": "",
+                "uco-observable:fileName": "Thebatplan",
+                "uco-observable:filePath": "D:\\Thebatplan",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 1389601,
+                "uco-observable:createdTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-19T00:29:15Z"
+                },
+                "uco-observable:accessedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-18T22:53:09.595Z"
+                },
+                "uco-observable:modifiedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-18T20:10:48.00Z"
+                }
+            },
+            {
+                "@type": "uco-observable:UnallocatedRecoverabilityFacet",
+                "uco-observable:nameRecoverabilityStatus": "recovered",
+                "uco-observable:metadataRecoverabilityStatus": "recovered",
+                "uco-observable:contentRecoverabilityStatus": "unknown"
+            }
+        ]
+    }
+]
