@@ -4,7 +4,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -15,11 +15,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>"^^xsd:base64Binary ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"^^xsd:hexBinary ;
 				] ;
 				observable:sizeInBytes "512"^^xsd:integer ;
@@ -40,11 +40,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>"^^xsd:base64Binary ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "befb6b14790081e9d79e9b533e227791033e952d04b5f07d577ad65d4806a7a9"^^xsd:hexBinary ;
 				] ;
 				observable:sizeInBytes "248"^^xsd:integer ;
@@ -65,11 +65,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>"^^xsd:base64Binary ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "e5ca3be56f66200a1bb2262e948ac08dbc672bc8033c1ada743787b0c667dea6"^^xsd:hexBinary ;
 				] ;
 				observable:sizeInBytes "774"^^xsd:integer ;
@@ -90,11 +90,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "w7/DmMO/w6AAEEpGSUY="^^xsd:base64Binary ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"^^xsd:hexBinary ;
 				] ;
 				observable:sizeInBytes "14"^^xsd:integer ;

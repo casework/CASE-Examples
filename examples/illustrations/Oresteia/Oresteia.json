@@ -223,6 +223,9 @@
                     "@id": "kb:investigative-action5-uuid"
                 },
                 {
+                    "@id": "kb:investigative-action-relationship-uuid"
+                },
+                {
                     "@id": "kb:provenance-record5-uuid"
                 },
                 {
@@ -976,9 +979,14 @@
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "SMS SQLite database on mobile device used by murder victim Cassandra",
             "case-investigation:exhibitNumber": "AthensPD-2017220601-02-03",
-            "uco-core:object": {
-                "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
-            }
+            "uco-core:object": [
+                {
+                    "@id": "kb:investigative-action-relationship-uuid"
+                },
+                {
+                    "@id": "kb:cassandra-mobiledevice-mmssms-uuid"
+                }
+            ]
         },
         {
             "@type": "uco-observable:File",
@@ -1221,7 +1229,7 @@
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:investigative-action5-uuid"
+                    "@id": "kb:investigative-action-relationship-uuid"
                 },
                 {
                     "@id": "kb:provenance-record4-uuid"
@@ -1306,6 +1314,20 @@
                     "@id": "kb:argive-elder3-phoneaccnt-uuid"
                 }
             ]
+        },
+        {
+            "@id": "kb:investigative-action-relationship-uuid",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:investigative-action4-uuid"
+            },
+            "uco-core:target": [
+                {
+                    "@id": "kb:investigative-action5-uuid"
+                }
+            ],
+            "uco-core:kindOfRelationship": "Initiated",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:sms-application1",
@@ -1532,6 +1554,18 @@
             "@type": "uco-location:Location"
         },
         {
+            "@id": "kb:attachment_file1",
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f"
+                    }
+                }
+            ]
+        },
+        {
             "@id": "kb:attach_relationship1",
             "@type": "uco-core:Relationship",
             "rdfs:comment": [
@@ -1539,7 +1573,7 @@
                 "TODO: 'Attachment_Of' is not in uco-vocabulary:ObservableObjectRelationshipVocab."
             ],
             "uco-core:source": {
-                "@id": "kb:location1"
+                "@id": "kb:attachment_file1"
             },
             "uco-core:target": [
                 {
@@ -1547,16 +1581,19 @@
                 }
             ],
             "uco-core:kindOfRelationship": "Attachment_Of",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:location_relationship1",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:attachment_file1"
+            },
+            "uco-core:target": {
+                "@id": "kb:location1"
+            },
             "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "rdfs:comment": "TODO: uco-observable:Attachment seems ill-defined.",
-                    "uco-observable:url": {
-                        "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f"
-                    }
-                }
-            ]
+            "rdfs:comment": "TODO: Need to define a portrayal relationship between ObservableObject and a Location."
         },
         {
             "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f",

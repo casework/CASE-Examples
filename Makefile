@@ -32,11 +32,6 @@ all: \
 # for someone developing with different submodule pointers.
 .git_submodule_init.done.log: \
   .gitmodules
-	# CASE-Utilities-Python
-	test -r dependencies/CASE-Utilities-Python/README.md \
-	  || (git submodule init dependencies/CASE-Utilities-Python && git submodule update dependencies/CASE-Utilities-Python)
-	test -r dependencies/CASE-Utilities-Python/README.md \
-	  || (echo "ERROR:Makefile:CASE-Utilities-Python submodule README.md file not found, even though CASE-Utilities-Python submodule initialized." >&2 ; exit 2)
 	# CASE-develop
 	test -r dependencies/CASE-develop/README.md \
 	  || (git submodule init dependencies/CASE-develop && git submodule update dependencies/CASE-develop)
@@ -58,10 +53,8 @@ all: \
 	test -r dependencies/UCO-unstable/README.md \
 	  || (echo "ERROR:Makefile:UCO-unstable submodule README.md file not found, even though UCO-unstable submodule initialized." >&2 ; exit 2)
 	# Retrieve rdf-toolkit.jar.
-	cd dependencies/CASE-Utilities-Python \
-	  && git submodule update --init dependencies/CASE
 	$(MAKE) \
-	  --directory dependencies/CASE-Utilities-Python/dependencies/CASE \
+	  --directory dependencies/UCO-develop \
 	  .lib.done.log
 	touch $@
 
@@ -102,10 +95,7 @@ all: \
 	    wheel
 	source venv/bin/activate \
 	  && pip install \
-	      dependencies/CASE-Utilities-Python
-	source venv/bin/activate \
-	  && pip install \
-	      --requirement requirements.txt
+	    --requirement requirements.txt
 	touch $@
 
 check: \
