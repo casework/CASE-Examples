@@ -58,7 +58,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
 Using the [Crossover](https://caseontology.org/examples/crossover/) shared dataset, specifically the Windows computer available here: [Switch Drive](https://drive.switch.ch/index.php/s/0c7BiyQZRKOtMMq)
 The following shows a file system entry that has recoverable filename "~badquinn3@gmail.com.ost.tmp" , but the status of associated metadata and content are unknown.
 
-INSERT IMAGE
+![AutopsyCrossoverDeleted.png](https://files.caseontology.org/CASE-Examples/examples/illustrations/recoverability/AutopsyCrossoverDeleted.png)
 
 This recovered file system entry can be represented using the `observable:UnallocatedRecoverabilityFacet` as follows:
 
@@ -164,7 +164,8 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
 
 SQLite records that are recoverable can also be represented using the `observable:UnallocatedRecoverabilityFacet`. For example, this Facebook messenger chat:
 
-INSERT IMAGE
+![FacebookChat.png](https://files.caseontology.org/CASE-Examples/examples/illustrations/recoverability/FacebookChat.png)
+
 
 This recovered chat message can be represented using the `observable:UnallocatedRecoverabilityFacet`, noting that the sent location does not appear to be recovered, indicating that the content is partially recovered.
 
