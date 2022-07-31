@@ -6,7 +6,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/ontology>
+<http://example.org/ontology/drafting>
 	a owl:Ontology ;
 	rdfs:comment "An example ontology, housing draft concepts that impact multiple examples."@en ;
 	.
