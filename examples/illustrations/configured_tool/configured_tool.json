@@ -7,7 +7,8 @@
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
-        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/"
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
@@ -57,11 +58,11 @@
             "@id": "kb:Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
-            "uco-core:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-12T10:21:00.00Z"
             },
-            "uco-core:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-14T15:58:00.00Z"
             },
@@ -125,11 +126,11 @@
             "@id": "kb:Action-ce95584e-5065-4287-83fd-81df2ac72180",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
-            "uco-core:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-12T10:21:10.00Z"
             },
-            "uco-core:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-14T15:58:12.00Z"
             },
@@ -195,11 +196,11 @@
             "@id": "kb:Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
-            "uco-core:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-12T10:21:10.00Z"
             },
-            "uco-core:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-14T15:58:12.00Z"
             },
@@ -230,11 +231,11 @@
             "@id": "kb:Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
-            "uco-core:startTime": {
+            "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-12T10:31:10.00Z"
             },
-            "uco-core:endTime": {
+            "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2022-05-14T16:12:12.00Z"
             },
