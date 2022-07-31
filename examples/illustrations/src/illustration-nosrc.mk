@@ -27,6 +27,13 @@ RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/UCO-develop/lib/rdf-toolkit.jar
 
 example_name := $(shell basename $$PWD)
 
+top_drafting_ttl := $(wildcard $(top_srcdir)/ontology/drafting.ttl)
+ifeq ($(top_drafting_ttl),)
+top_drafting_validation_flag :=
+else
+top_drafting_validation_flag := --ontology-graph $(top_drafting_ttl)
+endif
+
 # Use a drafting.ttl file in the validation and dependency list, if it is present.
 drafting_ttl := $(wildcard drafting.ttl)
 ifeq ($(drafting_ttl),)
@@ -44,12 +51,14 @@ $(example_name)_validation.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
+  $(top_drafting_ttl) \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
 	    --format turtle \
 	    $(drafting_validation_flag) \
+	    $(top_drafting_validation_flag) \
 	    --output __$@ \
 	    $< \
 	    $(drafting_ttl) \
@@ -68,6 +77,7 @@ $(example_name)_validation-develop.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
+  $(top_drafting_ttl) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-develop.ttl
 	rm -f __$@
@@ -76,6 +86,7 @@ $(example_name)_validation-develop.ttl: \
 	    --built-version none \
 	    --format turtle \
 	    $(drafting_validation_flag) \
+	    $(top_drafting_validation_flag) \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
 	    --output __$@ \
 	    $< \
@@ -94,6 +105,7 @@ $(example_name)_validation-unstable.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
   $(drafting_ttl) \
+  $(top_drafting_ttl) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-unstable.ttl
 	rm -f __$@
@@ -102,6 +114,7 @@ $(example_name)_validation-unstable.ttl: \
 	    --built-version none \
 	    --format turtle \
 	    $(drafting_validation_flag) \
+	    $(top_drafting_validation_flag) \
 	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
 	    --output __$@ \
 	    $< \

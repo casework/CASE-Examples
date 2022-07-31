@@ -23,6 +23,7 @@ all: \
 
 .PHONY: \
   check-examples \
+  check-ontology \
   check-tests
 
 .dependencies.done.log: \
@@ -111,10 +112,17 @@ check: \
   check-tests
 
 check-examples: \
+  check-ontology \
   .dependencies.done.log \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory examples/illustrations \
+	  check
+
+check-ontology: \
+  .git_submodule_init.done.log
+	$(MAKE) \
+	  --directory ontology \
 	  check
 
 check-tests: \
