@@ -4,6 +4,9 @@
         "kb": "http://example.org/kb/",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/"
     },
     "@graph": [
@@ -12,7 +15,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
-            "uco-tool:creator": "hex-rays",
+            "uco-tool:creator": {
+                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+            },
             "uco-tool:version": "7.7"
         },
         {
@@ -20,7 +25,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
-            "uco-tool:creator": "hex-rays",
+            "uco-tool:creator": {
+                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+            },
             "uco-tool:version": "7.7",
             "uco-core:hasFacet": [
                 {
@@ -37,8 +44,13 @@
         {
             "@id": "kb:Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e",
-            "uco-core:target": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+            "uco-core:isDirectional": true,
+            "uco-core:source": {
+                "@id": "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e"
+            },
+            "uco-core:target": {
+                "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+            },
             "uco-core:kindOfRelationship": "Is_Configured_Version_Of"
         },
         {
@@ -81,7 +93,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
-            "uco-tool:creator": "hex-rays",
+            "uco-tool:creator": {
+                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+            },
             "uco-tool:version": "7.7",
             "uco-core:hasFacet": [
                 {
@@ -98,8 +112,13 @@
         {
             "@id": "kb:Relationship-fd59e98c-b31c-48c8-adde-07b5358911da",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
-            "uco-core:target": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+            "uco-core:isDirectional": true,
+            "uco-core:source": {
+                "@id": "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377"
+            },
+            "uco-core:target": {
+                "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+            },
             "uco-core:kindOfRelationship": "Is_Configured_Version_Of"
         },
         {
@@ -142,7 +161,9 @@
             "@type": "uco-tool:Tool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
-            "uco-tool:creator": "hex-rays",
+            "uco-tool:creator": {
+                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+            },
             "uco-tool:version": "7.7",
             "uco-core:hasFacet": [
                 {
@@ -161,8 +182,13 @@
         {
             "@id": "kb:Relationship-529c3413-9706-489c-ad61-e65c989240f4",
             "@type": "uco-core:Relationship",
-            "uco-core:source": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
-            "uco-core:target": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+            "uco-core:isDirectional": true,
+            "uco-core:source": {
+                "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
+            },
+            "uco-core:target": {
+                "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+            },
             "uco-core:kindOfRelationship": "Is_Configured_Version_Of"
         },
         {
@@ -184,7 +210,7 @@
                 "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
-                "@id": "kb:Tool-kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
+                "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
             },
             "uco-action:environment": {
                 "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
@@ -219,7 +245,7 @@
                 "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
-                "@id": "kb:Tool-kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
+                "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
             },
             "uco-action:environment": {
                 "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
@@ -234,6 +260,59 @@
                     "@id": "kb:ProvenanceRecord-0db01c96-f34f-431a-9aff-e1cc4fac9842"
                 }
             ]
+        },
+        {
+            "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7",
+            "@type": "uco-identity:Identity"
+        },
+        {
+            "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa",
+            "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:ProvenanceRecord-0db01c96-f34f-431a-9aff-e1cc4fac9842",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:Software2-bec1d8eb-2db1-444d-9175-b3c60ac47410"
+            }
+        },
+        {
+            "@id": "kb:ProvenanceRecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+            }
+        },
+        {
+            "@id": "kb:ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+            }
+        },
+        {
+            "@id": "kb:ProvenanceRecord-c462c7de-0391-4c88-a17c-1f9607fb0c46",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+            }
+        },
+        {
+            "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:Software2-bec1d8eb-2db1-444d-9175-b3c60ac47410",
+            "@type": "uco-observable:File"
+        },
+        {
+            "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "hex-rays"
         }
     ]
 }
