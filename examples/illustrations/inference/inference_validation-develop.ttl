@@ -5,7 +5,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -390,7 +390,7 @@
 				sh:nodeKind sh:Literal ;
 				sh:path core:kindOfRelationship ;
 			] ;
-			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
+			sh:value "Contained_Within"^^vocabulary:ObservableObjectRelationshipVocab ;
 		]
 		;
 	.
