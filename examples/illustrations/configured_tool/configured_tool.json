@@ -1,4 +1,11 @@
 {
+    "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "kb": "http://example.org/kb/",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/"
+    },
     "@graph": [
         {
             "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
