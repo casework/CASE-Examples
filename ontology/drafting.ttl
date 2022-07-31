@@ -1,3 +1,4 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -5,8 +6,319 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<http://example.org/ontology/drafting>
+<http://example.org/ontology>
 	a owl:Ontology ;
 	rdfs:comment "An example ontology, housing draft concepts that impact multiple examples."@en ;
+	.
+
+drafting:AbstractDatatypeHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf drafting:AbstractHypothesis ;
+	rdfs:label "AbstractDatatypeHypothesis"@en ;
+	rdfs:comment "An AbstractHypothesis, tailored to statements involving OWL DatatypeProperties."@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	owl:disjointWith drafting:AbstractObjectHypothesis ;
+	sh:property
+		[
+			sh:class owl:DatatypeProperty ;
+			sh:path drafting:hypothesisProperty ;
+		] ,
+		[
+			sh:maxCount "0"^^xsd:integer ;
+			sh:path drafting:hypothesisTargetObject ;
+		]
+		;
+	sh:targetClass drafting:AbstractDatatypeHypothesis ;
+	.
+
+drafting:AbstractHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:UcoObject ;
+	rdfs:label "AbstractHypothesis"@en ;
+	rdfs:comment "A hypothesis making either an affirmative supposition or a negative supposition.  Defined as an abstract superclass of Hypothesis and NegativeHypothesis.  The structure of AbstractHypothesis and its child classes mimic owl:Axiom or owl:NegativePropertyAssertion, but differ in one key mechanical matter from OWL: An AbstractHypothesis may identify itself with an IRI, whereas OWL 2 DL requires owl:Axiom and owl:NegativePropertyAssertion to be identified only as blank nodes."@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:property
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path drafting:hypothesisProperty ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:minCount "1"^^xsd:integer ;
+			sh:path drafting:hypothesisSource ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path drafting:hypothesisTargetLiteral ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:path drafting:hypothesisTargetObject ;
+		]
+		;
+	sh:targetClass drafting:AbstractHypothesis ;
+	.
+
+drafting:AbstractObjectHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf drafting:AbstractHypothesis ;
+	rdfs:label "AbstractObjectHypothesis"@en ;
+	rdfs:comment "An AbstractHypothesis, tailored to statements involving OWL ObjectProperties."@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	owl:disjointWith drafting:AbstractDatatypeHypothesis ;
+	sh:property
+		[
+			sh:maxCount "0"^^xsd:integer ;
+			sh:path drafting:hypothesisTargetLiteral ;
+		] ,
+		[
+			sh:or (
+				[
+					sh:class owl:ObjectProperty ;
+				]
+				[
+					sh:hasValue rdf:type ;
+				]
+			) ;
+			sh:path drafting:hypothesisProperty ;
+		]
+		;
+	sh:targetClass drafting:AbstractObjectHypothesis ;
+	.
+
+drafting:DatatypeHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		drafting:AbstractDatatypeHypothesis ,
+		drafting:Hypothesis
+		;
+	rdfs:label "DatatypeHypothesis"@en ;
+	rdfs:comment "A Hypothesis, tailored to statements involving OWL DatatypeProperties."@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:property [
+		sh:minCount "1"^^xsd:integer ;
+		sh:path drafting:hypothesisTargetLiteral ;
+	] ;
+	sh:targetClass drafting:DatatypeHypothesis ;
+	.
+
+drafting:Hypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf drafting:AbstractHypothesis ;
+	rdfs:label "Hypothesis"@en ;
+	rdfs:comment "An affirmative supposition, representing a single unasserted statement (triple) that may become asserted through the process of an AnalyticEvaluation."@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	owl:disjointWith drafting:NegativeHypothesis ;
+	sh:targetClass drafting:Hypothesis ;
+	sh:xone (
+		[
+			sh:property [
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisTargetLiteral ;
+			] ;
+		]
+		[
+			sh:property [
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisTargetObject ;
+			] ;
+		]
+	) ;
+	.
+
+drafting:NegativeDatatypeHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		drafting:AbstractDatatypeHypothesis ,
+		drafting:NegativeHypothesis
+		;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:property [
+		sh:description "Absence of hypothesisTargetLiteral will result in negation of all triples with matching hypothesisSource and hypothesisProperty."@en ;
+		sh:path drafting:hypothesisTargetLiteral ;
+	] ;
+	sh:targetClass drafting:NegativeDatatypeHypothesis ;
+	.
+
+drafting:NegativeHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf drafting:AbstractHypothesis ;
+	rdfs:label "NegativeHypothesis"@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	owl:disjointWith drafting:Hypothesis ;
+	sh:targetClass drafting:NegativeHypothesis ;
+	.
+
+drafting:NegativeObjectHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		drafting:AbstractObjectHypothesis ,
+		drafting:NegativeHypothesis
+		;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:property [
+		sh:description "Absence of hypothesisTargetObject will result in negation of all triples with matching hypothesisSource and hypothesisProperty."@en ;
+		sh:path drafting:hypothesisTargetObject ;
+	] ;
+	sh:targetClass drafting:NegativeObjectHypothesis ;
+	.
+
+drafting:ObjectHypothesis
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf
+		drafting:AbstractObjectHypothesis ,
+		drafting:Hypothesis
+		;
+	rdfs:label "ObjectHypothesis"@en ;
+	rdfs:comment "A Hypothesis, tailored to statements involving OWL ObjectProperties."@en ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:property [
+		sh:minCount "1"^^xsd:integer ;
+		sh:path drafting:hypothesisTargetObject ;
+	] ;
+	sh:targetClass drafting:ObjectHypothesis ;
+	.
+
+drafting:hasHypothesis
+	a owl:ObjectProperty ;
+	rdfs:label "hasHypothesis"@en ;
+	rdfs:comment "A proposed explanation, represented as a concrete AbstractHypothesis subclass, made on the basis of initial observations as a starting point for further investigation."@en ;
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf (
+			drafting:Hypothesis
+			drafting:NegativeHypothesis
+		) ;
+	] ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:hasHypothesis-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:nodeKind sh:IRI ;
+	sh:or (
+		[
+			sh:class drafting:Hypothesis ;
+		]
+		[
+			sh:class drafting:NegativeHypothesis ;
+		]
+	) ;
+	sh:path drafting:hasHypothesis ;
+	sh:targetSubjectsOf drafting:hasHypothesis ;
+	.
+
+drafting:hypothesisProperty
+	a owl:ObjectProperty ;
+	rdfs:domain drafting:AbstractHypothesis ;
+	rdfs:seeAlso
+		owl:annotatedProperty ,
+		<https://cyberontology.atlassian.net/browse/ONT-434>
+		;
+	.
+
+drafting:hypothesisProperty-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:nodeKind sh:IRI ;
+	sh:or (
+		[
+			sh:class owl:AnnotationProperty ;
+		]
+		[
+			sh:class owl:DatatypeProperty ;
+		]
+		[
+			sh:class owl:ObjectProperty ;
+		]
+		[
+			sh:in (
+				rdf:type
+				rdfs:subClassOf
+			) ;
+		]
+	) ;
+	sh:path drafting:hypothesisProperty ;
+	sh:targetSubjectsOf drafting:hypothesisProperty ;
+	.
+
+drafting:hypothesisSource
+	a owl:ObjectProperty ;
+	rdfs:domain drafting:AbstractHypothesis ;
+	rdfs:seeAlso
+		owl:annotatedSource ,
+		<https://cyberontology.atlassian.net/browse/ONT-434>
+		;
+	.
+
+drafting:hypothesisSource-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:nodeKind sh:IRI ;
+	sh:path drafting:hypothesisSource ;
+	sh:targetSubjectsOf drafting:hypothesisSource ;
+	.
+
+drafting:hypothesisTargetLiteral
+	a owl:DatatypeProperty ;
+	rdfs:domain drafting:AbstractDatatypeHypothesis ;
+	rdfs:seeAlso
+		owl:annotatedTarget ,
+		<https://cyberontology.atlassian.net/browse/ONT-434>
+		;
+	.
+
+drafting:hypothesisTargetLiteral-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:nodeKind sh:Literal ;
+	sh:path drafting:hypothesisTargetLiteral ;
+	sh:targetSubjectsOf drafting:hypothesisTargetLiteral ;
+	.
+
+drafting:hypothesisTargetObject
+	a owl:ObjectProperty ;
+	rdfs:domain drafting:AbstractObjectHypothesis ;
+	rdfs:seeAlso
+		owl:annotatedTarget ,
+		<https://cyberontology.atlassian.net/browse/ONT-434>
+		;
+	.
+
+drafting:hypothesisTargetObject-shape
+	a sh:PropertyShape ;
+	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
+	sh:nodeKind sh:IRI ;
+	sh:path drafting:hypothesisTargetObject ;
+	sh:targetSubjectsOf drafting:hypothesisTargetObject ;
 	.
 
