@@ -1,0 +1,705 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix location: <https://ontology.unifiedcyberontology.org/uco/location/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:environment ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:environment ;
+			] ;
+			sh:value <http://example.org/kb/Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
+			] ;
+			sh:value <http://example.org/kb/Tool-kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:object ;
+			] ;
+			sh:value <http://example.org/kb/Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:performer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:performer ;
+			] ;
+			sh:value <http://example.org/kb/Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/ProvenanceRecord-c462c7de-0391-4c88-a17c-1f9607fb0c46> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class location:Location ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:location ;
+			] ;
+			sh:value <http://example.org/kb/9b82c2bc-10f7-47b2-81a8-443a9f458440> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:environment ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:environment ;
+			] ;
+			sh:value <http://example.org/kb/Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
+			] ;
+			sh:value <http://example.org/kb/Tool-kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:object ;
+			] ;
+			sh:value <http://example.org/kb/Software2-bec1d8eb-2db1-444d-9175-b3c60ac47410> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:performer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:performer ;
+			] ;
+			sh:value <http://example.org/kb/Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/ProvenanceRecord-0db01c96-f34f-431a-9aff-e1cc4fac9842> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class location:Location ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:location ;
+			] ;
+			sh:value <http://example.org/kb/9b82c2bc-10f7-47b2-81a8-443a9f458440> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:environment ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:environment ;
+			] ;
+			sh:value <http://example.org/kb/Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:object ;
+			] ;
+			sh:value <http://example.org/kb/Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:performer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:performer ;
+			] ;
+			sh:value <http://example.org/kb/Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118> ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class location:Location ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:location ;
+			] ;
+			sh:value <http://example.org/kb/9b82c2bc-10f7-47b2-81a8-443a9f458440> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-ce95584e-5065-4287-83fd-81df2ac72180> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:environment ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:environment ;
+			] ;
+			sh:value <http://example.org/kb/Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-ce95584e-5065-4287-83fd-81df2ac72180> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:object ;
+			] ;
+			sh:value <http://example.org/kb/Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-ce95584e-5065-4287-83fd-81df2ac72180> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:performer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:performer ;
+			] ;
+			sh:value <http://example.org/kb/Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-ce95584e-5065-4287-83fd-81df2ac72180> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/ProvenanceRecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-ce95584e-5065-4287-83fd-81df2ac72180> ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class location:Location ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:location ;
+			] ;
+			sh:value <http://example.org/kb/9b82c2bc-10f7-47b2-81a8-443a9f458440> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-529c3413-9706-489c-ad61-e65c989240f4> ;
+			sh:resultMessage "Less than 1 values on kb:Relationship-529c3413-9706-489c-ad61-e65c989240f4->core:isDirectional" ;
+			sh:resultPath core:isDirectional ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:isDirectional ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-529c3413-9706-489c-ad61-e65c989240f4> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-529c3413-9706-489c-ad61-e65c989240f4> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-529c3413-9706-489c-ad61-e65c989240f4> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-529c3413-9706-489c-ad61-e65c989240f4> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec> ;
+			sh:resultMessage "Less than 1 values on kb:Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec->core:isDirectional" ;
+			sh:resultPath core:isDirectional ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:isDirectional ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-f32b41f8-2b33-4f0f-9bb4-3a0a0752e3ec> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-fd59e98c-b31c-48c8-adde-07b5358911da> ;
+			sh:resultMessage "Less than 1 values on kb:Relationship-fd59e98c-b31c-48c8-adde-07b5358911da->core:isDirectional" ;
+			sh:resultPath core:isDirectional ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path core:isDirectional ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-fd59e98c-b31c-48c8-adde-07b5358911da> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-fd59e98c-b31c-48c8-adde-07b5358911da> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-fd59e98c-b31c-48c8-adde-07b5358911da> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath core:source ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:source ;
+			] ;
+			sh:value "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Relationship-fd59e98c-b31c-48c8-adde-07b5358911da> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath core:target ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:target ;
+			] ;
+			sh:value "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
+			sh:resultMessage "Value does not have class identity:Identity" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
+			sh:resultMessage "Value is not of Node Kind sh:BlankNodeOrIRI" ;
+			sh:resultPath tool:creator ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:creator ;
+			] ;
+			sh:value "hex-rays" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a tool:ConfigurationSettingType ;
+				tool:itemName "ruleset" ;
+				tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+				tool:itemType "external-ruleset" ;
+			] ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->tool:itemValue' ;
+			sh:resultPath tool:itemValue ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path tool:itemValue ;
+			] ;
+		]
+		;
+	.
+
