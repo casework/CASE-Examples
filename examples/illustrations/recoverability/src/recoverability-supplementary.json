@@ -1,0 +1,10 @@
+[
+    {
+        "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d",
+        "@type": "uco-observable:ObservableObject"
+    },
+    {
+        "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b",
+        "@type": "uco-observable:ObservableObject"
+    }
+]

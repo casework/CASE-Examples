@@ -23,7 +23,7 @@ SHELL := /bin/bash
 # The expected execution context is in any sibling directory of this Makefile's directory.
 top_srcdir := $(shell cd ../../.. ; pwd)
 
-RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/CASE-Utilities-Python/dependencies/CASE/lib/rdf-toolkit.jar
+RDF_TOOLKIT_JAR := $(top_srcdir)/dependencies/UCO-develop/lib/rdf-toolkit.jar
 
 example_name := $(shell basename $$PWD)
 

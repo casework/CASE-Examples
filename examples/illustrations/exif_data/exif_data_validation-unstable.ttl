@@ -6,7 +6,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -26,11 +26,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "/9j/ww==" ;
@@ -52,11 +52,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "/9j/ww==" ;
@@ -74,11 +74,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "/9j/ww==" ;

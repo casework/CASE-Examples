@@ -6,7 +6,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -35,17 +35,17 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash
 					[
 						a types:Hash ;
-						types:hashMethod "MD5"^^vocabulary1:HashNameVocab ;
+						types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
 						types:hashValue "3d137a188c1e82247b815209ce44af2c"^^xsd:hexBinary ;
 					] ,
 					[
 						a types:Hash ;
-						types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+						types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 						types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 					]
 					;
@@ -68,17 +68,17 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash
 					[
 						a types:Hash ;
-						types:hashMethod "MD5"^^vocabulary1:HashNameVocab ;
+						types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
 						types:hashValue "3d137a188c1e82247b815209ce44af2c"^^xsd:hexBinary ;
 					] ,
 					[
 						a types:Hash ;
-						types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+						types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 						types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 					]
 					;
@@ -97,17 +97,17 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash
 					[
 						a types:Hash ;
-						types:hashMethod "MD5"^^vocabulary1:HashNameVocab ;
+						types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
 						types:hashValue "3d137a188c1e82247b815209ce44af2c"^^xsd:hexBinary ;
 					] ,
 					[
 						a types:Hash ;
-						types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+						types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 						types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 					]
 					;
@@ -133,7 +133,7 @@
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "NzUgNzMgNzQgNjEgNzI=" ;
@@ -158,7 +158,7 @@
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "NzUgNzMgNzQgNjEgNzI=" ;
@@ -179,7 +179,7 @@
 				observable:dataPayload "<base 64 encoded data of the file>" ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "NzUgNzMgNzQgNjEgNzI=" ;

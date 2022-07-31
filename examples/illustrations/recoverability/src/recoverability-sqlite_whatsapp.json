@@ -1,0 +1,35 @@
+[
+    {
+        "@id": "kb:4026FABD-924D-4138-A6BA-73DF2EB37BCB",
+        "@type": "uco-observable:ObservableObject",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:extension": "jpg",
+                "uco-observable:fileName": "IMG-20181120-WA0000",
+                "uco-observable:filePath": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 1389601,
+                "uco-observable:createdTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-19T00:29:15Z"
+                }
+            },
+            {
+                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "unknown"
+                }
+            }
+        ]
+    }
+]

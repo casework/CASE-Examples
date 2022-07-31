@@ -6,7 +6,7 @@
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -26,10 +26,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "H4s=" ;
@@ -51,10 +51,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "H4s=" ;
@@ -72,10 +72,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary1:EndiannessTypeVocab ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
 				observable:hash [
 					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary1:HashNameVocab ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
 					types:hashValue "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"^^xsd:hexBinary ;
 				] ;
 				observable:magicNumber "H4s=" ;
