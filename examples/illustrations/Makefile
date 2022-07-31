@@ -18,6 +18,7 @@ illustration_dirs := \
   accounts \
   bulk_extractor_forensic_path \
   call_log \
+  configured_tool \
   device \
   exif_data \
   file \
