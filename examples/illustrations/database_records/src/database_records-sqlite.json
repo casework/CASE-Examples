@@ -13,24 +13,6 @@
         ]
     },
     {
-        "@id": "kb:sqlite-file-1",
-        "@type": "uco-observable:File",
-        "uco-core:hasFacet": [
-            {
-                "@type": "uco-observable:FileFacet",
-                "uco-observable:extension": "sqlite3",
-                "uco-observable:fileName": "my-database",
-                "uco-observable:filePath": "/path/to/my-database.sqlite3",
-                "uco-observable:isDirectory": false,
-                "uco-observable:sizeInBytes": 123456,
-                "uco-observable:createdTime": {
-                    "@type": "xsd:dateTime",
-                    "@value": "2022-01-01T00:00:00Z"
-                }
-            }
-        ]
-    },
-    {
         "@id": "kb:sqlite-record-relationship-1",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
@@ -39,7 +21,7 @@
         "uco-core:target": {
             "@id": "kb:sqlite-file-1"
         },
-        "uco-core:kindOfRelationship": "Derived_From",
+        "uco-core:kindOfRelationship": "Contained_Within",
         "uco-core:isDirectional": true
     }
 ]

@@ -8,6 +8,16 @@
     },
     "@graph": [
         {
+            "@id": "kb:message-1",
+            "@type": "uco-observable:Message",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:MessageFacet",
+                    "uco-observable:messageText": "Hello World"
+                }
+            ]
+        },
+        {
             "@id": "kb:sqlite-file-1",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
@@ -72,7 +82,7 @@
             "@id": "kb:sqlite-record-relationship-1",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:isDirectional": true,
-            "uco-core:kindOfRelationship": "Derived_From",
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:source": {
                 "@id": "kb:sqlite-record-1"
             },

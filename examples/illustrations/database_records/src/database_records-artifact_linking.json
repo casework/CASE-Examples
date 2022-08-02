@@ -1,0 +1,24 @@
+[
+    {
+        "@id": "kb:message-1",
+        "@type": "uco-observable:Message",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:MessageFacet",
+                "uco-observable:messageText": "Hello World"
+            }
+        ]
+    },
+    {
+        "@id": "kb:sqlite-record-relationship-1",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:message-1"
+        },
+        "uco-core:target": {
+            "@id": "kb:sqlite-record-1"
+        },
+        "uco-core:kindOfRelationship": "Derived_From",
+        "uco-core:isDirectional": true
+    }
+]

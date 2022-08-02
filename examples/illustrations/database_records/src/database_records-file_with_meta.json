@@ -1,23 +1,5 @@
 [
     {
-        "@id": "kb:sqlite-file-1",
-        "@type": "uco-observable:File",
-        "uco-core:hasFacet": [
-            {
-                "@type": "uco-observable:FileFacet",
-                "uco-observable:extension": "sqlite3",
-                "uco-observable:fileName": "my-database",
-                "uco-observable:filePath": "/path/to/my-database.sqlite3",
-                "uco-observable:isDirectory": false,
-                "uco-observable:sizeInBytes": 123456,
-                "uco-observable:createdTime": {
-                    "@type": "xsd:dateTime",
-                    "@value": "2022-01-01T00:00:00Z"
-                }
-            }
-        ]
-    },
-    {
         "@id": "kb:sqlite-wal-file-1",
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
