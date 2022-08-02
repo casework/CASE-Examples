@@ -1,0 +1,114 @@
+{
+    "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:sqlite-file-1",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-01T00:00:00Z"
+                    },
+                    "uco-observable:extension": "sqlite3",
+                    "uco-observable:fileName": "my-database",
+                    "uco-observable:filePath": "/path/to/my-database.sqlite3",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 123456
+                }
+            ]
+        },
+        {
+            "@id": "kb:sqlite-journal-file-1",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-01T00:00:00Z"
+                    },
+                    "uco-observable:extension": "sqlite3-journal",
+                    "uco-observable:fileName": "my-database",
+                    "uco-observable:filePath": "/path/to/my-database.sqlite3-journal",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 12345
+                }
+            ]
+        },
+        {
+            "@id": "kb:sqlite-journal-relationship-1",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": false,
+            "uco-core:kindOfRelationship": "Related_To",
+            "uco-core:source": {
+                "@id": "kb:sqlite-journal-file-1"
+            },
+            "uco-core:target": {
+                "@id": "kb:sqlite-file-1"
+            }
+        },
+        {
+            "@id": "kb:sqlite-record-1",
+            "@type": "drafting:DatabaseRecord",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:DatabaseRecordFacet",
+                    "drafting:databaseFieldName": "message_content",
+                    "drafting:databaseFieldValue": "Hello World",
+                    "drafting:databaseRowID": "12345",
+                    "drafting:databaseTable": "messages"
+                }
+            ]
+        },
+        {
+            "@id": "kb:sqlite-record-relationship-1",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Derived_From",
+            "uco-core:source": {
+                "@id": "kb:sqlite-record-1"
+            },
+            "uco-core:target": {
+                "@id": "kb:sqlite-file-1"
+            }
+        },
+        {
+            "@id": "kb:sqlite-wal-file-1",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-01T00:00:00Z"
+                    },
+                    "uco-observable:extension": "sqlite3-wal",
+                    "uco-observable:fileName": "my-database",
+                    "uco-observable:filePath": "/path/to/my-database.sqlite3-wal",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 12345
+                }
+            ]
+        },
+        {
+            "@id": "kb:sqlite-wal-relationship-1",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": false,
+            "uco-core:kindOfRelationship": "Related_To",
+            "uco-core:source": {
+                "@id": "kb:sqlite-wal-file-1"
+            },
+            "uco-core:target": {
+                "@id": "kb:sqlite-file-1"
+            }
+        }
+    ]
+}
