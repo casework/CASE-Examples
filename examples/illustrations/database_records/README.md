@@ -170,4 +170,5 @@ This allows an identified artifact (such as a message) to be linked to a databas
         "uco-core:isDirectional": true
     }
 ]
+
 ```

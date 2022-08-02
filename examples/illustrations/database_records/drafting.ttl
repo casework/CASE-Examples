@@ -35,6 +35,12 @@ drafting:DatabaseRecordFacet
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
+			sh:path drafting:databaseSchema ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
 			sh:path drafting:databaseTable ;
 		] ,
 		[
@@ -70,13 +76,28 @@ drafting:databaseFieldValue
 	a owl:DatatypeProperty ;
 	rdfs:label "databaseFieldValue"@en ;
 	rdfs:comment "The field value of a specified database record."@en ;
-	rdfs:range xsd:string ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			xsd:base64Binary
+			xsd:decimal
+			xsd:integer
+			xsd:string
+		) ;
+	] ;
 	.
 
 drafting:databaseRowID
 	a owl:DatatypeProperty ;
 	rdfs:label "databaseRowID"@en ;
 	rdfs:comment "The unique ID that identifies a database record."@en ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:databaseSchema
+	a owl:DatatypeProperty ;
+	rdfs:label "databaseSchema"@en ;
+	rdfs:comment "The schema that contains the identified database record."@en ;
 	rdfs:range xsd:string ;
 	.
 
