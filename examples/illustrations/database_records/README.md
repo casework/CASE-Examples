@@ -18,7 +18,7 @@ The database file itself can be represented as a `uco-observable:File` object wi
 ```json
 [
     {
-        "@id": "kb:sqlite-file-1",
+        "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb",
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
@@ -45,7 +45,7 @@ If there are supporting files such as WAL or Journal files as defined at [https:
 ```json
 [
     {
-        "@id": "kb:sqlite-wal-file-1",
+        "@id": "kb:sqlite-wal-file-e5598c4e-9d1a-4b14-9142-49900dd6b8e9",
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
@@ -63,19 +63,19 @@ If there are supporting files such as WAL or Journal files as defined at [https:
         ]
     },
     {
-        "@id": "kb:sqlite-wal-relationship-1",
+        "@id": "kb:sqlite-wal-relationship-8a509b23-18bd-4b1f-a77a-4c8ee86b57b3",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
-            "@id": "kb:sqlite-wal-file-1"
+            "@id": "kb:sqlite-wal-file-e5598c4e-9d1a-4b14-9142-49900dd6b8e9"
         },
         "uco-core:target": {
-            "@id": "kb:sqlite-file-1"
+            "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb"
         },
         "uco-core:kindOfRelationship": "Related_To",
         "uco-core:isDirectional": false
     },
     {
-        "@id": "kb:sqlite-journal-file-1",
+        "@id": "kb:sqlite-journal-file-2d52c6fe-1346-4460-9693-b3ea86e721a5",
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
@@ -93,13 +93,13 @@ If there are supporting files such as WAL or Journal files as defined at [https:
         ]
     },
     {
-        "@id": "kb:sqlite-journal-relationship-1",
+        "@id": "kb:sqlite-journal-relationship-8a509b23-18bd-4b1f-a77a-4c8ee86b57b3",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
-            "@id": "kb:sqlite-journal-file-1"
+            "@id": "kb:sqlite-journal-file-2d52c6fe-1346-4460-9693-b3ea86e721a5"
         },
         "uco-core:target": {
-            "@id": "kb:sqlite-file-1"
+            "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb"
         },
         "uco-core:kindOfRelationship": "Related_To",
         "uco-core:isDirectional": false
@@ -114,7 +114,7 @@ The records within the database itself can be represented in newly proposed CASE
 ```json
 [
     {
-        "@id": "kb:sqlite-record-1",
+        "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2",
         "@type": "drafting:DatabaseRecord",
         "uco-core:hasFacet": [
             {
@@ -127,13 +127,13 @@ The records within the database itself can be represented in newly proposed CASE
         ]
     },
     {
-        "@id": "kb:sqlite-record-relationship-1",
+        "@id": "kb:sqlite-record-relationship-3d224418-5401-4670-adac-bd82a3a8f23b",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
-            "@id": "kb:sqlite-record-1"
+            "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2"
         },
         "uco-core:target": {
-            "@id": "kb:sqlite-file-1"
+            "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb"
         },
         "uco-core:kindOfRelationship": "Contained_Within",
         "uco-core:isDirectional": true
@@ -148,7 +148,7 @@ This allows an identified artifact (such as a message) to be linked to a databas
 ```json
 [
     {
-        "@id": "kb:message-1",
+        "@id": "kb:message-1505f33f-9946-4280-89cd-2e72bdff900e",
         "@type": "uco-observable:Message",
         "uco-core:hasFacet": [
             {
@@ -158,13 +158,13 @@ This allows an identified artifact (such as a message) to be linked to a databas
         ]
     },
     {
-        "@id": "kb:sqlite-record-relationship-1",
+        "@id": "kb:sqlite-record-relationship-041ff574-cf81-4e36-b8d6-b120c3802699",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
-            "@id": "kb:message-1"
+            "@id": "kb:message-1505f33f-9946-4280-89cd-2e72bdff900e"
         },
         "uco-core:target": {
-            "@id": "kb:sqlite-record-1"
+            "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2"
         },
         "uco-core:kindOfRelationship": "Derived_From",
         "uco-core:isDirectional": true
