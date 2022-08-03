@@ -19,6 +19,7 @@ drafting:DatabaseRecord
 	rdfs:subClassOf observable:ObservableObject ;
 	rdfs:label "DatabaseRecord"@en ;
 	rdfs:comment "A record and its associated value contained within a relational database."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	sh:targetClass drafting:DatabaseRecord ;
 	.
 
@@ -30,6 +31,7 @@ drafting:DatabaseRecordFacet
 	rdfs:subClassOf core:Facet ;
 	rdfs:label "DatabaseRecordFacet"@en ;
 	rdfs:comment "A database record facet contains properties associated with a specific record value from a relational database."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	sh:property
 		[
 			sh:datatype xsd:string ;
@@ -70,6 +72,7 @@ drafting:databaseFieldName
 	rdfs:label "databaseFieldName"@en ;
 	rdfs:comment "A field name of a database record value being identified."@en ;
 	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
 drafting:databaseFieldValue
@@ -85,6 +88,7 @@ drafting:databaseFieldValue
 			xsd:string
 		) ;
 	] ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
 drafting:databaseRowID
@@ -92,6 +96,7 @@ drafting:databaseRowID
 	rdfs:label "databaseRowID"@en ;
 	rdfs:comment "The unique ID that identifies a database record."@en ;
 	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
 drafting:databaseSchema
@@ -99,6 +104,7 @@ drafting:databaseSchema
 	rdfs:label "databaseSchema"@en ;
 	rdfs:comment "The schema that contains the identified database record."@en ;
 	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
 drafting:databaseTable
@@ -106,4 +112,5 @@ drafting:databaseTable
 	rdfs:label "databaseTable"@en ;
 	rdfs:comment "The table containing a specified database record."@en ;
 	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
