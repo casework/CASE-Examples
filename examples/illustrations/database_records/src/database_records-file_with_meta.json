@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:sqlite-wal-file-1",
+        "@id": "kb:sqlite-wal-file-e5598c4e-9d1a-4b14-9142-49900dd6b8e9",
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
@@ -18,19 +18,19 @@
         ]
     },
     {
-        "@id": "kb:sqlite-wal-relationship-1",
+        "@id": "kb:sqlite-wal-relationship-8a509b23-18bd-4b1f-a77a-4c8ee86b57b3",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
-            "@id": "kb:sqlite-wal-file-1"
+            "@id": "kb:sqlite-wal-file-e5598c4e-9d1a-4b14-9142-49900dd6b8e9"
         },
         "uco-core:target": {
-            "@id": "kb:sqlite-file-1"
+            "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb"
         },
         "uco-core:kindOfRelationship": "Related_To",
         "uco-core:isDirectional": false
     },
     {
-        "@id": "kb:sqlite-journal-file-1",
+        "@id": "kb:sqlite-journal-file-2d52c6fe-1346-4460-9693-b3ea86e721a5",
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
@@ -48,13 +48,13 @@
         ]
     },
     {
-        "@id": "kb:sqlite-journal-relationship-1",
+        "@id": "kb:sqlite-journal-relationship-8a509b23-18bd-4b1f-a77a-4c8ee86b57b3",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:source": {
-            "@id": "kb:sqlite-journal-file-1"
+            "@id": "kb:sqlite-journal-file-2d52c6fe-1346-4460-9693-b3ea86e721a5"
         },
         "uco-core:target": {
-            "@id": "kb:sqlite-file-1"
+            "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb"
         },
         "uco-core:kindOfRelationship": "Related_To",
         "uco-core:isDirectional": false
