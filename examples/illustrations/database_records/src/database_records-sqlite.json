@@ -1,0 +1,27 @@
+[
+    {
+        "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2",
+        "@type": "drafting:DatabaseRecord",
+        "uco-core:hasFacet": [
+            {
+                "@type": "drafting:DatabaseRecordFacet",
+                "drafting:databaseTable": "messages",
+                "drafting:databaseRowID": "12345",
+                "drafting:databaseFieldName": "message_content",
+                "drafting:databaseFieldValue": "Hello World"
+            }
+        ]
+    },
+    {
+        "@id": "kb:sqlite-record-relationship-3d224418-5401-4670-adac-bd82a3a8f23b",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2"
+        },
+        "uco-core:target": {
+            "@id": "kb:sqlite-file-3237feb2-1be5-465b-8da2-4e6c3fb737bb"
+        },
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:isDirectional": true
+    }
+]

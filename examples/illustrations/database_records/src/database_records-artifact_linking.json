@@ -1,0 +1,24 @@
+[
+    {
+        "@id": "kb:message-1505f33f-9946-4280-89cd-2e72bdff900e",
+        "@type": "uco-observable:Message",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:MessageFacet",
+                "uco-observable:messageText": "Hello World"
+            }
+        ]
+    },
+    {
+        "@id": "kb:sqlite-record-relationship-041ff574-cf81-4e36-b8d6-b120c3802699",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:message-1505f33f-9946-4280-89cd-2e72bdff900e"
+        },
+        "uco-core:target": {
+            "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2"
+        },
+        "uco-core:kindOfRelationship": "Derived_From",
+        "uco-core:isDirectional": true
+    }
+]
