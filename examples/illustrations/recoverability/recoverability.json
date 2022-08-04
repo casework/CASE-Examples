@@ -24,17 +24,17 @@
                     "uco-observable:sizeInBytes": 1389601
                 },
                 {
-                    "@type": "drafting:UnallocatedRecoverabilityFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -65,17 +65,17 @@
                     "uco-observable:sizeInBytes": 1389601
                 },
                 {
-                    "@type": "drafting:UnallocatedRecoverabilityFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -97,17 +97,17 @@
                     "uco-observable:sizeInBytes": null
                 },
                 {
-                    "@type": "drafting:UnallocatedRecoverabilityFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -134,17 +134,17 @@
                     ]
                 },
                 {
-                    "@type": "drafting:UnallocatedRecoverabilityFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "partially recovered"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -175,17 +175,17 @@
                     "uco-observable:sizeInBytes": 712
                 },
                 {
-                    "@type": "drafting:UnallocatedRecoverabilityFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
