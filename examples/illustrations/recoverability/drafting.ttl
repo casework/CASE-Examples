@@ -179,7 +179,7 @@ drafting:RecoveredObjectStatusVocab
 	a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:label "Recovered Object Status Vocabulary"@en-US ;
-	rdfs:comment "Defines the vocabulary for unallocated recoverability status of data."@en ;
+	rdfs:comment "Defines the vocabulary for Recovered Object status of data."@en ;
 	owl:oneOf (
 		"recovered"^^drafting:RecoveredObjectStatusVocab
 		"partially recovered"^^drafting:RecoveredObjectStatusVocab
