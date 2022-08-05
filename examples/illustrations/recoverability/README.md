@@ -58,7 +58,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
                 "uco-observable:sizeInBytes": 712
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoverabilityStatus": {
                     "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
                     "@value": "recovered"
@@ -102,7 +102,7 @@ This recovered file system entry can be represented using the `observable:Unallo
                 "uco-observable:modifiedTime": null
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoverabilityStatus": {
                     "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
                     "@value": "recovered"
@@ -150,7 +150,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
                 }
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoverabilityStatus": {
                     "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
                     "@value": "recovered"
@@ -190,7 +190,7 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
                 }
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoverabilityStatus": {
                     "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
                     "@value": "recovered"
@@ -241,7 +241,7 @@ This recovered chat message can be represented using the `observable:Unallocated
                 }
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoverabilityStatus": {
                     "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
                     "@value": "recovered"
