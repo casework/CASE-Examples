@@ -20,7 +20,7 @@
                 }
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
+                "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoverabilityStatus": {
                     "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
                     "@value": "recovered"
