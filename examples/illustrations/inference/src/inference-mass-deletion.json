@@ -1,7 +1,18 @@
 [
     {
-        "@id": "kb:investigative-action-9bb9f420-58b1-4bde-84db-f81de2077513",
+        "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
+    },
+    {
+        "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
+    },
+    {
+        "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
         "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
         "uco-core:startTime": {
@@ -15,15 +26,12 @@
             "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
         },
         "uco-action:instrument": {
-            "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         },
         "uco-action:environment": {
             "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
         },
         "uco-action:object": [
-            {
-                "@id": "kb:provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d"
-            },
             {
                 "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
             },
@@ -38,6 +46,48 @@
             },
             {
                 "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisaction-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+            }
+        ]
+    },
+    {
+        "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
+        "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "mass deletion detection",
+        "uco-core:description": "Detection of mass deletion of files on storage media",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
+        },
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
+            },
+            {
+                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
+            },
+            {
+                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
+            },
+            {
+                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
             },
             {
                 "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca"
@@ -45,84 +95,42 @@
         ],
         "uco-action:result": [
             {
-                "@id": "kb:provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d"
-            },
-            {
-                "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
-            },
-            {
-                "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
+                "@id": "kb:analysisaction-49c8f1db-0301-485e-95f3-d2cf92815323"
             }
         ]
     },
     {
-        "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287",
-        "@type": "drafting:Hypothesis",
-        "drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
+        "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.9"
+            },
+            "drafting:evaluationType": "Probability",
+            "drafting:conclusion": "true",
+            "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files." 
+          }
+       ]
     },
     {
-        "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca",
-        "@type": "drafting:Hypothesis",
-        "drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
+        "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.1"
+            },
+            "drafting:evaluationType": "Probability",
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records." 
+          }
+       ]
     },
-    {
-        "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
-        },
-        "drafting:evaluationType": "Probability",
-        "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.9"
-        },
-        "drafting:basisEvidence": [
-            {
-                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
-            },
-            {
-                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
-            },
-            {
-                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
-            },
-            {
-                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
-            }
-        ],
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
-    },
-    {
-        "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca"
-        },
-        "drafting:evaluationType": "Probability",
-        "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.1"
-        },
-        "drafting:basisEvidence": [
-            {
-                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
-            },
-            {
-                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
-            },
-            {
-                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
-            },
-            {
-                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
-            }
-        ],
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
-    }
 ]
