@@ -6,26 +6,13 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 -->
 
 
-# Inference Examples
+# HypothesisTestResult (a.k.a. AnalyticInference) Examples
 
-This illustration includes example investigative questions that require inference, and sample JSON-LD of *proposed* use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
+This illustration includes cyber-investigation examples that require hypothessis testing and a resulting evidence-based opinion/conclusion. The sample JSON-LD provides *proposed* use of a HypothesisTestResult facet atached to an AnalyticResult object. 
 
-```json
-{
- "@id": "inference-uuid",
- "@type": "Inference",
- "basisEvidence": ["(objects forming the basis for inference)"],
- "hypothesis": "(hypothesis object under consideration)",
- "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
- "evaluationType": "probability",
- "evidenceEvaluation": 0.95,
- "evaluationRationale": "The observations are compatible with simulated tests of the hypothesized action"
-}
-```
+This structure is an updated example of AnalyticInference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are analytic results related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
 
-This structure is an updated example of Inference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are inferences related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
-
-When making an evidence-based inference, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
+When performing evidence-based hypothesis testing, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
 
 When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
@@ -41,14 +28,14 @@ A total JSON-LD file of the data on this page, plus supplementary data needed to
 
 ## Example - Recovery of a xlsx file
 
-*Observations*: A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata, but further authentication is necessary to assess whether the data on disk presented by the tool is the actual original content of the file. Further forensic examination finds that the data on disk presented by the tool is incompatible with the file metadata and expected content type (Microsoft Excel file). 
+*A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata. However, the tool does automatically check whether the recovered content currently stored on disk is the actual original content of the file. Therefore, it is necessary to treat this tool output as a hypothesis, and also assess alternative hypotheses
 
 * Hypothesis 1: The file is `Fully Recovered`
 * Hypothesis 2: The file is `Partially Recovered`
 * Hypothesis 3: Only `Name and Metadata Recovered`
 * Hypothesis 4: Only `Name Recovered`
 
-The following inferences can be stated in words as "the observations are exceedingly more probable given Hypothesis 3 (`Only Name and Metadata Recovered`), rather than the other hypotheses."
+Further analysis finds that the data on disk presented by the tool is incompatible with the file metadata and expected content type (Microsoft Excel file).
 
 ```json
 @INFERENCE_XLSX_AUTHENTICATION_JSON@
