@@ -11,7 +11,6 @@
     },
     {
         "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
-        "@type": "case-investigation:InvestigativeAction",
         "@type": "drafting:AnalysisAction",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
@@ -56,7 +55,6 @@
     },
     {
         "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
-        "@type": "case-investigation:InvestigativeAction",
         "@type": "drafting:AnalysisAction",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
@@ -104,33 +102,33 @@
         "@type": "drafting:AnalyticResult",
         "drafting:originatingAnalysisAction": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:evaluationType": "Probability",
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files." 
-          }
-       ]
+            {
+                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.9"
+                },
+                "drafting:evaluationType": "Probability",
+                "drafting:conclusion": "true",
+                "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323",
         "@type": "drafting:AnalyticResult",
         "drafting:originatingAnalysisAction": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "Probability",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records." 
-          }
-       ]
-    },
+            {
+                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "Probability",
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records."
+            }
+        ]
+    }
 ]
