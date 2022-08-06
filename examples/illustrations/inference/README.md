@@ -6,26 +6,13 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 -->
 
 
-# Inference Examples
+# HypothesisTestResult (a.k.a. AnalyticInference) Examples
 
-This illustration includes example investigative questions that require inference, and sample JSON-LD of *proposed* use of Inference object. The Inference object references the object(s) being evaluated and the hypothesis under consideration:
+This illustration includes cyber-investigation examples that require hypothessis testing and a resulting evidence-based opinion/conclusion. The sample JSON-LD provides *proposed* use of a HypothesisTestResult facet atached to an AnalyticResult object. 
 
-```json
-{
- "@id": "inference-uuid",
- "@type": "Inference",
- "basisEvidence": ["(objects forming the basis for inference)"],
- "hypothesis": "(hypothesis object under consideration)",
- "usedMethod": "Reference to the defined process used to evaluate basisEvidence in light of the hypothesis",
- "evaluationType": "probability",
- "evidenceEvaluation": 0.95,
- "evaluationRationale": "The observations are compatible with simulated tests of the hypothesized action"
-}
-```
+This structure is an updated example of AnalyticInference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are analytic results related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
 
-This structure is an updated example of Inference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are inferences related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
-
-When making an evidence-based inference, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
+When performing evidence-based hypothesis testing, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
 
 When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
@@ -41,22 +28,44 @@ A total JSON-LD file of the data on this page, plus supplementary data needed to
 
 ## Example - Recovery of a xlsx file
 
-*Observations*: A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata, but further authentication is necessary to assess whether the data on disk presented by the tool is the actual original content of the file. Further forensic examination finds that the data on disk presented by the tool is incompatible with the file metadata and expected content type (Microsoft Excel file). 
+*A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata. However, the tool does automatically check whether the recovered content currently stored on disk is the actual original content of the file. Therefore, it is necessary to treat this tool output as a hypothesis, and also assess alternative hypotheses
 
 * Hypothesis 1: The file is `Fully Recovered`
 * Hypothesis 2: The file is `Partially Recovered`
 * Hypothesis 3: Only `Name and Metadata Recovered`
 * Hypothesis 4: Only `Name Recovered`
 
-The following inferences can be stated in words as "the observations are exceedingly more probable given Hypothesis 3 (`Only Name and Metadata Recovered`), rather than the other hypotheses."
+Further analysis finds that the data on disk presented by the tool is incompatible with the file metadata and expected content type (Microsoft Excel file).
 
 ```json
 [
     {
-        "@id": "kb:investigative-action-9d3e78d9-8376-4277-9852-8e6bf9267456",
+        "@id": "kb:hypothesis-18106707-C4F7-4807-8D4F-3376AFD7D33A",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Fully Recovered"
+    },
+    {
+        "@id": "kb:hypothesis-D2129305-B562-44BB-8DE6-A68192050368",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Partially Recovered"
+    },
+    {
+        "@id": "kb:hypothesis-A6D88832-49C4-483D-A1D1-33108EB6860D",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Name and Metadata Recovered"
+    },
+    {
+        "@id": "kb:hypothesis-8D836E71-3394-49DA-9E7B-8ADE534D45A6",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Name Recovered"
+    },
+    {
+        "@id": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
         "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
+        "drafting:isAutomated": "false",
         "uco-core:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
@@ -68,124 +77,203 @@ The following inferences can be stated in words as "the observations are exceedi
             "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
         },
         "uco-action:instrument": {
-            "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         },
         "uco-action:environment": {
             "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
         },
         "uco-action:object": [
             {
-                "@id": "kb:provenance-record-2fceaee2-60da-4192-b4eb-54868cbeaa41"
-            },
-            {
                 "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
             },
             {
-                "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
-            },
-            {
-                "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
-            },
-            {
-                "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
-            },
-            {
-                "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
+                "@id": "kb:hypothesis-18106707-C4F7-4807-8D4F-3376AFD7D33A"
             }
         ],
         "uco-action:result": [
             {
-                "@id": "kb:provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16"
-            },
-            {
-                "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
-            },
-            {
-                "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
-            },
-            {
-                "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576"
-            },
-            {
-                "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+                "@id": "kb:analysisresult-1c050613-1144-4622-853a-48291f63ef54"
             }
         ]
     },
     {
-        "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51"
+        "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "authentication",
+        "uco-core:description": "Authentication of automated file recovery results",
+        "drafting:isAutomated": "false",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
         },
-        "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.1"
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
         },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
         },
-        "drafting:usedMethod": {
+        "uco-action:instrument": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:hypothesis-D2129305-B562-44BB-8DE6-A68192050368"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisresult-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
+            }
+        ]
     },
     {
-        "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2"
+        "@id": "kb:analysisaction-71AF3D6E-6986-4977-A663-D0430FE074CB",
+        "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "authentication",
+        "uco-core:description": "Authentication of automated file recovery results",
+        "drafting:isAutomated": "false",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
         },
-        "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.1"
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
         },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
         },
-        "drafting:usedMethod": {
+        "uco-action:instrument": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:hypothesis-A6D88832-49C4-483D-A1D1-33108EB6860D"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisresult-3c0014ff-8616-4103-915f-54a69f486576"
+            }
+        ]
     },
     {
-        "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-e125ff00-bb1c-4020-8cc6-2ed6ff963402"
+        "@id": "kb:analysisaction-5F487329-6F1F-446C-80B7-13A52D3E0A51",
+        "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "authentication",
+        "uco-core:description": "Authentication of automated file recovery results",
+        "drafting:isAutomated": "false",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
         },
-        "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "5.5"
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
         },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
         },
-        "drafting:usedMethod": {
+        "uco-action:instrument": {
             "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
+            },
+            {
+                "@id": "kb:hypothesis-8D836E71-3394-49DA-9E7B-8ADE534D45A6"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisresult-4b880bde-9afb-4c60-a277-29f53a0df283"
+            }
+        ]
     },
     {
-        "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0"
-        },
-        "drafting:evaluationType": "C-Scale",
-        "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.1"
-        },
-        "drafting:basisEvidence": {
-            "@id": "kb:file-c3001862-2b68-402d-a3c1-01311f178137"
-        },
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        "@id": "kb:analysisresult-1c050613-1144-4622-853a-48291f63ef54",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.1"
+            },
+            "drafting:evaluationType": "C-Scale",
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." 
+          }
+       ]
+    },
+    {
+        "@id": "kb:analysisresult-2aaf35bb-6ca9-4b30-98e4-192552a2468e",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.1"
+            },
+            "drafting:evaluationType": "C-Scale",
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file." 
+          }
+       ]
+    },
+    {
+        "@id": "kb:analysisresult-3c0014ff-8616-4103-915f-54a69f486576",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "5.5"
+            },
+            "drafting:evaluationType": "C-Scale",
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered." 
+          }
+       ]
+    },
+    {
+        "@id": "kb:analysisresult-4b880bde-9afb-4c60-a277-29f53a0df283",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.1"
+            },
+            "drafting:evaluationType": "C-Scale",
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered." 
+          }
+       ]
     },
     {
         "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
@@ -490,8 +578,18 @@ The following inferences can be stated in words as the observations are exceedin
 ```json
 [
     {
-        "@id": "kb:investigative-action-9bb9f420-58b1-4bde-84db-f81de2077513",
-        "@type": "case-investigation:InvestigativeAction",
+        "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
+    },
+    {
+        "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
+    },
+    {
+        "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
+        "@type": "drafting:AnalysisAction",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
         "uco-core:startTime": {
@@ -505,15 +603,12 @@ The following inferences can be stated in words as the observations are exceedin
             "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
         },
         "uco-action:instrument": {
-            "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
         },
         "uco-action:environment": {
             "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
         },
         "uco-action:object": [
-            {
-                "@id": "kb:provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d"
-            },
             {
                 "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
             },
@@ -528,6 +623,47 @@ The following inferences can be stated in words as the observations are exceedin
             },
             {
                 "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisaction-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+            }
+        ]
+    },
+    {
+        "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "mass deletion detection",
+        "uco-core:description": "Detection of mass deletion of files on storage media",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
+        },
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
+            },
+            {
+                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
+            },
+            {
+                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
+            },
+            {
+                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
             },
             {
                 "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca"
@@ -535,85 +671,43 @@ The following inferences can be stated in words as the observations are exceedin
         ],
         "uco-action:result": [
             {
-                "@id": "kb:provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d"
-            },
-            {
-                "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
-            },
-            {
-                "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
+                "@id": "kb:analysisaction-49c8f1db-0301-485e-95f3-d2cf92815323"
             }
         ]
     },
     {
-        "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287",
-        "@type": "drafting:Hypothesis",
-        "drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
-    },
-    {
-        "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca",
-        "@type": "drafting:Hypothesis",
-        "drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
-    },
-    {
-        "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287"
-        },
-        "drafting:evaluationType": "Probability",
-        "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.9"
-        },
-        "drafting:basisEvidence": [
+        "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
+        "uco-core:hasFacet": [
             {
-                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
-            },
-            {
-                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
-            },
-            {
-                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
-            },
-            {
-                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
+                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.9"
+                },
+                "drafting:evaluationType": "Probability",
+                "drafting:conclusion": "true",
+                "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files."
             }
-        ],
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        ]
     },
     {
-        "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca"
-        },
-        "drafting:evaluationType": "Probability",
-        "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.1"
-        },
-        "drafting:basisEvidence": [
+        "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
+        "uco-core:hasFacet": [
             {
-                "@id": "kb:directory-c76adc20-cf43-4d98-87a8-34f7d5eb6ab7"
-            },
-            {
-                "@id": "kb:directory-d8e55546-6813-40a7-9207-c4b39e5af403"
-            },
-            {
-                "@id": "kb:rbin-31ae9f1e-56fe-4238-9d98-ea5396374efa"
-            },
-            {
-                "@id": "kb:rbin-bc573937-f0ef-4695-8a12-2217218d4185"
+                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "Probability",
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records."
             }
-        ],
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        ]
     }
 ]
 ```
