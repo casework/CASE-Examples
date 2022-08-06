@@ -1,10 +1,10 @@
-@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -678,90 +678,90 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
+			sh:resultPath uco-core:object ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:class uco-core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path uco-core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-1c050613-1144-4622-853a-48291f63ef54> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
+			sh:resultPath uco-core:object ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:class uco-core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path uco-core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
+			sh:resultPath uco-core:object ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:class uco-core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path uco-core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-3c0014ff-8616-4103-915f-54a69f486576> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance-record-35ef9e5a-a8e7-49d4-8667-301e0b0f7f16> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
+			sh:resultPath uco-core:object ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:class uco-core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path uco-core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-4b880bde-9afb-4c60-a277-29f53a0df283> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
+			sh:resultPath uco-core:object ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:class uco-core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path uco-core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/provenance-record-3619643e-2435-4944-9f86-9a7bd42cad5d> ;
-			sh:resultMessage "Value does not have class core:UcoObject" ;
-			sh:resultPath core:object ;
+			sh:resultMessage "Value does not have class uco-core:UcoObject" ;
+			sh:resultPath uco-core:object ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:class core:UcoObject ;
+				sh:class uco-core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
+				sh:path uco-core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
 		] ,
@@ -769,14 +769,14 @@
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0> ;
 			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath core:kindOfRelationship ;
+			sh:resultPath uco-core:kindOfRelationship ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
 			sh:sourceShape [
 				sh:datatype xsd:string ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
-				sh:path core:kindOfRelationship ;
+				sh:path uco-core:kindOfRelationship ;
 			] ;
 			sh:value "Contained_Within"^^vocabulary1:ObservableObjectRelationshipVocab ;
 		]

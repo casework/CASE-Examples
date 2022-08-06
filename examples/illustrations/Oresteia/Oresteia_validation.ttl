@@ -1,10 +1,10 @@
-@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
 @prefix vocabulary1: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -13,20 +13,6 @@
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
@@ -40,6 +26,20 @@
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
 				sh:path investigation:investigationForm ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
+			sh:resultMessage "Less than 1 values on kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2->uco-core:object" ;
+			sh:resultPath uco-core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path uco-core:object ;
 			] ;
 		] ,
 		[
@@ -90,20 +90,6 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8> ;
-			sh:resultMessage "Less than 1 values on kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8->core:object" ;
-			sh:resultPath core:object ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:UcoObject ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path core:object ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8->investigation:investigationForm" ;
 			sh:resultPath investigation:investigationForm ;
 			sh:resultSeverity sh:Violation ;
@@ -114,6 +100,20 @@
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
 				sh:path investigation:investigationForm ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8> ;
+			sh:resultMessage "Less than 1 values on kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8->uco-core:object" ;
+			sh:resultPath uco-core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path uco-core:object ;
 			] ;
 		] ,
 		[
@@ -134,12 +134,12 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
-				a core:ConfidenceFacet ;
+				a uco-core:ConfidenceFacet ;
 				rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
-				core:confidence "Probably True" ;
+				uco-core:confidence "Probably True" ;
 			] ;
 			sh:resultMessage "Value is not Literal with datatype xsd:nonNegativeInteger" ;
-			sh:resultPath core:confidence ;
+			sh:resultPath uco-core:confidence ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
 			sh:sourceShape [
@@ -147,19 +147,19 @@
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
-				sh:path core:confidence ;
+				sh:path uco-core:confidence ;
 			] ;
 			sh:value "Probably True" ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
-				a core:ConfidenceFacet ;
+				a uco-core:ConfidenceFacet ;
 				rdfs:comment "TODO This no longer matches the type prescription in UCO." ;
-				core:confidence "Probably True" ;
+				uco-core:confidence "Probably True" ;
 			] ;
 			sh:resultMessage "Value is not Literal with datatype xsd:nonNegativeInteger" ;
-			sh:resultPath core:confidence ;
+			sh:resultPath uco-core:confidence ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
 			sh:sourceShape [
@@ -167,7 +167,7 @@
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
-				sh:path core:confidence ;
+				sh:path uco-core:confidence ;
 			] ;
 			sh:value "Probably True" ;
 		] ,
