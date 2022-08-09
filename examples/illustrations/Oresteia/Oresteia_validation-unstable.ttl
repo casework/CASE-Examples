@@ -10,9 +10,8 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
-	rdf:first "nis"^^vocabulary:AccountTypeVocab ;
+	rdf:first "openid"^^vocabulary:AccountTypeVocab ;
 	rdf:rest (
-		"openid"^^vocabulary:AccountTypeVocab
 		"radius"^^vocabulary:AccountTypeVocab
 		"tacacs"^^vocabulary:AccountTypeVocab
 		"unix"^^vocabulary:AccountTypeVocab
