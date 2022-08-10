@@ -119,10 +119,10 @@ The records within the database itself can be represented in newly proposed CASE
         "uco-core:hasFacet": [
             {
                 "@type": "drafting:DatabaseRecordFacet",
-                "drafting:databaseTable": "messages",
-                "drafting:databaseRowID": "12345",
-                "drafting:databaseFieldName": "message_content",
-                "drafting:databaseFieldValue": "Hello World"
+                "drafting:tableName": "messages",
+                "drafting:recordRowID": "12345",
+                "drafting:recordFieldName": "message_content",
+                "drafting:recordFieldValue": "Hello World"
             }
         ]
     },

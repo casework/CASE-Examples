@@ -71,10 +71,10 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:DatabaseRecordFacet",
-                    "drafting:databaseFieldName": "message_content",
-                    "drafting:databaseFieldValue": "Hello World",
-                    "drafting:databaseRowID": "12345",
-                    "drafting:databaseTable": "messages"
+                    "drafting:recordFieldName": "message_content",
+                    "drafting:recordFieldValue": "Hello World",
+                    "drafting:recordRowID": "12345",
+                    "drafting:tableName": "messages"
                 }
             ]
         },
