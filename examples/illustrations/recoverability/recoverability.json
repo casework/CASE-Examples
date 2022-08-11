@@ -9,7 +9,10 @@
     "@graph": [
         {
             "@id": "kb:4026FABD-924D-4138-A6BA-73DF2EB37BCB",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "drafting:RecoveredObject",
+                "uco-observable:File"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -25,16 +28,16 @@
                 },
                 {
                     "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -42,7 +45,10 @@
         },
         {
             "@id": "kb:665D63BE-93E6-4D3E-8E75-3112BE091E93",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "drafting:RecoveredObject",
+                "uco-observable:File"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -66,16 +72,16 @@
                 },
                 {
                     "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -83,7 +89,10 @@
         },
         {
             "@id": "kb:BD64BDD9-3DCD-4828-A25B-A72C06E472CD",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "drafting:RecoveredObject",
+                "uco-observable:File"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -98,16 +107,16 @@
                 },
                 {
                     "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -115,7 +124,10 @@
         },
         {
             "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "drafting:RecoveredObject",
+                "uco-observable:Message"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -135,16 +147,16 @@
                 },
                 {
                     "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "partially recovered"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -152,7 +164,10 @@
         },
         {
             "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": [
+                "drafting:RecoveredObject",
+                "uco-observable:File"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
@@ -176,16 +191,16 @@
                 },
                 {
                     "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:metadataRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoverabilityStatus": {
-                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
