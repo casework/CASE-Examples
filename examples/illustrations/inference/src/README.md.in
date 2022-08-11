@@ -81,7 +81,7 @@ If there is no indication that the photograph was tampered with, a reasonable de
 
 ### Query - Differences in basis evidence
 
-Two inferences are referenced above (`kb:inference-839fcf98...` and `kb:inference-baf0e98e...`).  What differences in basis evidence did the two have?
+Two hypothesis test results (inferences) are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
 
 The following table is the results of [this query](src/query-select-skeptic-difference.sparql).  "Supports A" is support for only the initial analyst's finding, "Supports B" is support for only the skeptic's finding.
 
