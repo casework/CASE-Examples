@@ -1,7 +1,10 @@
 [
     {
         "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
-        "@type": "uco-observable:ObservableObject",
+        "@type": [
+            "drafting:RecoveredObject",
+            "uco-observable:File"
+        ],
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",

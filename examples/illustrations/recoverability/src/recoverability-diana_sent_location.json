@@ -1,7 +1,10 @@
 [
     {
         "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
-        "@type": "uco-observable:ObservableObject",
+        "@type": [
+            "drafting:RecoveredObject",
+            "uco-observable:Message"
+        ],
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:MessageFacet",
