@@ -213,7 +213,7 @@
                 "@value": "5.5"
             },
             "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
+            "drafting:conclusion": "true",
             "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered." 
           }
        ]
