@@ -173,7 +173,7 @@
         "drafting:originatingAnalysisAction": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
         "uco-core:hasFacet": [
           {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "@type": "drafting:HypothesisTestResultFacet",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:decimal",
                 "@value": "0.1"
@@ -190,7 +190,7 @@
         "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
         "uco-core:hasFacet": [
           {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "@type": "drafting:HypothesisTestResultFacet",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:decimal",
                 "@value": "0.1"
@@ -207,7 +207,7 @@
         "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
         "uco-core:hasFacet": [
           {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "@type": "drafting:HypothesisTestResultFacet",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:decimal",
                 "@value": "5.5"
@@ -224,7 +224,7 @@
         "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
         "uco-core:hasFacet": [
           {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "@type": "drafting:HypothesisTestResultFacet",
             "drafting:evidenceEvaluation": {
                 "@type": "xsd:decimal",
                 "@value": "0.1"
