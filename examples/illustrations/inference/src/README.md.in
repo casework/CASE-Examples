@@ -28,7 +28,7 @@ A total JSON-LD file of the data on this page, plus supplementary data needed to
 
 ## Example - Recovery of a xlsx file
 
-*A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata. However, the tool does automatically check whether the recovered content currently stored on disk is the actual original content of the file. Therefore, it is necessary to treat this tool output as a hypothesis, and also assess alternative hypotheses
+A digital forensic tools presents a non-allocated file named `contacts.xlsx` as recovered with associated metadata. However, the tool does automatically check whether the recovered content currently stored on disk is the actual original content of the file. Therefore, it is necessary to treat this tool output as a hypothesis, and also assess alternative hypotheses
 
 * Hypothesis 1: The file is `Fully Recovered`
 * Hypothesis 2: The file is `Partially Recovered`
