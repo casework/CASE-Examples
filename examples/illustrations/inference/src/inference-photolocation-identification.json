@@ -36,13 +36,13 @@
                 "@id": "kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC"
             },
             {
-                "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+                "@id": "kb:locationDC-9d25eb6e-1077-42a7-b531-1d170d4b585b"
             },
             {
-                "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+                "@id": "kb:relationshipDC-74cb5afd-8bec-4544-a724-bfbf11df29a0"
             },
             {
-                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+                "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
             }
         ],
         "uco-action:result": [
@@ -65,6 +65,65 @@
             "drafting:evaluationType": "probability",
             "drafting:conclusion": "true",
             "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument" 
+          }
+       ]
+    },
+    {
+        "@id": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
+        "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "identification",
+        "uco-core:description": "Identify the object in the photograph",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-02T10:20:00.00Z"
+        },
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:method-A52482A9-185A-41E8-A0D2-F74D9185D178"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948"
+            },
+            {
+                "@id": "kb:locationNY-FB6B63E3-A6D8-453B-9754-D79B9527734D"
+            },
+            {
+                "@id": "kb:relationshipNY-83CC5ECC-4FC1-41FD-846A-544F884C6A85"
+            },
+            {
+                "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisresult-BA5D0146-BA3B-467F-975C-763D85BAFC7D"
+            }
+        ]
+    },
+    {
+        "@id": "kb:analysisresult-BA5D0146-BA3B-467F-975C-763D85BAFC7D",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.1"
+            },
+            "drafting:evaluationType": "probability",
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument" 
           }
        ]
     }
