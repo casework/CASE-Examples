@@ -1,9 +1,21 @@
 [
     {
-        "@id": "kb:investigative-action-9ec40d34-1606-4fb1-94ca-b61f08bfc3eb",
+        "@id": "kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "File wiping occurred"
+    },
+    {
+        "@id": "kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F",
+        "@type": "drafting:Hypothesis",
+        "drafting:statement": "File wiping did not occur"
+    },
+    {
+        "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
         "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
         "uco-core:name": "file wiping detection",
         "uco-core:description": "Detection of secure erase wiping of files on storage media",
+        "drafting-uco-action:isAutomated":"true",
         "uco-core:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
@@ -22,16 +34,10 @@
         },
         "uco-action:object": [
             {
-                "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
-            },
-            {
-                "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
+                "@id": "kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337"
             },
             {
                 "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
-            },
-            {
-                "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
             },
             {
                 "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
@@ -45,69 +51,54 @@
         ],
         "uco-action:result": [
             {
-                "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57"
-            },
-            {
-                "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
-            },
-            {
-                "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
+                "@id": "kb:analyticresult-BE7AF920-532E-4997-9282-9EE448CADF60"
             }
         ]
     },
     {
-        "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2",
-        "@type": "drafting:Hypothesis",
-        "drafting:statement": "File wiping occurred"
+        "@id": "kb:analyticresult-BE7AF920-532E-4997-9282-9EE448CADF60",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evaluationType": "probability",
+              "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.95"
+            },
+            "drafting:conclusion": "true",
+            "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system" 
+          }
+       ]
     },
     {
-        "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7",
-        "@type": "drafting:Hypothesis",
-        "drafting:statement": "File wiping did not occur"
-    },
-    {
-        "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
+        "@id": "kb:analysisaction-DFB676AA-ED89-43AC-B49F-AFF9E835152D",
+        "@type": "case-investigation:InvestigativeAction",
+        "@type": "drafting:AnalysisAction",
+        "uco-core:name": "file wiping detection",
+        "uco-core:description": "Detection of secure erase wiping of files on storage media",
+        "drafting-uco-action:isAutomated":"true",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-01T10:12:00.00Z"
         },
-        "drafting:evaluationType": "Probability",
-        "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.95"
+        "uco-action:location": {
+            "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
         },
-        "drafting:basisEvidence": [
+        "uco-action:performer": {
+            "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+        },
+        "uco-action:environment": {
+            "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+        },
+        "uco-action:object": [
             {
-                "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                "@id": "kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F"
             },
-            {
-                "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-            },
-            {
-                "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
-            },
-            {
-                "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-            }
-        ],
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
-    },
-    {
-        "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718",
-        "@type": "drafting:Inference",
-        "drafting:hypothesis": {
-            "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
-        },
-        "drafting:evaluationType": "Probability",
-        "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
-        "drafting:evidenceEvaluation": {
-            "@type": "xsd:decimal",
-            "@value": "0.05"
-        },
-        "drafting:basisEvidence": [
             {
                 "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
             },
@@ -121,8 +112,27 @@
                 "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
             }
         ],
-        "drafting:usedMethod": {
-            "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-        }
+        "uco-action:result": [
+            {
+                "@id": "kb:analyticresult-0DF747A2-0CCA-415E-A1E3-B7DEF8C18C04"
+            }
+        ]
+    },
+    {
+        "@id": "kb:analyticresult-0DF747A2-0CCA-415E-A1E3-B7DEF8C18C04",
+        "@type": "drafting:AnalyticResult",
+        "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+        "uco-core:hasFacet": [
+          {
+            "@type": "uco-analysis:HypothesisTestResultFacet",
+            "drafting:evaluationType": "probability",
+              "drafting:evidenceEvaluation": {
+                "@type": "xsd:decimal",
+                "@value": "0.05"
+            },
+            "drafting:conclusion": "false",
+            "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system" 
+          }
+       ]
     }
 ]
