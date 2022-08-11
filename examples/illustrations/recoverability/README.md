@@ -62,16 +62,16 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
             },
             {
                 "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:nameRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:metadataRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:contentRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 }
             }
@@ -109,16 +109,16 @@ This recovered file system entry can be represented using the `observable:Unallo
             },
             {
                 "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:nameRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:metadataRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:contentRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
@@ -160,16 +160,16 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
             },
             {
                 "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:nameRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:metadataRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:contentRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
@@ -203,16 +203,16 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
             },
             {
                 "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:nameRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:metadataRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:contentRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
@@ -257,16 +257,16 @@ This recovered chat message can be represented using the `observable:Unallocated
             },
             {
                 "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:nameRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:metadataRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:contentRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "partially recovered"
                 }
             }
