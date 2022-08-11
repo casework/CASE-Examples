@@ -1,7 +1,10 @@
 [
     {
         "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
-        "@type": "uco-observable:ObservableObject",
+        "@type": [
+            "drafting:RecoveredObject",
+            "uco-observable:Message"
+        ],
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:MessageFacet",
@@ -21,16 +24,16 @@
             },
             {
                 "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:nameRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:metadataRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "drafting:contentRecoveredStatus": {
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "partially recovered"
                 }
             }
