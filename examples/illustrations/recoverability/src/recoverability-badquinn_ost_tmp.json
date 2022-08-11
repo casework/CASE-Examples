@@ -20,15 +20,15 @@
             {
                 "@type": "drafting:RecoveredObjectFacet",
                 "drafting:nameRecoveredStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
                 "drafting:metadataRecoveredStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 },
                 "drafting:contentRecoveredStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@type": "drafting:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
