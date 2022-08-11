@@ -60,28 +60,28 @@ Consider an example of a photograph of the Washington monument from an angle at 
 
 Further forensic analysis is performed of the photograph and its metadata, which reveals that it was taken in Washington DC. Inference assigns a value (e.g., probability, strength) to the observations (photograph content) and analysis outputs (geolocation information) given each Hypothesis:
 
-*Inference 1*: The observations and analysis results are exceedingly more likely given the assertion that the object in the photograph is the Washington Monument in Washington, DC, rather than Cleopatra's Needle in New York City. 
+*AnalyticInference 1*: The observations and analysis results are exceedingly more likely given the assertion that the object in the photograph is the Washington Monument in Washington, DC, rather than Cleopatra's Needle in New York City. 
 
 ```json
 @INFERENCE_PHOTOLOCATION_IDENTIFICATION_JSON@
 ```
 
-However, a skeptic might argue that photographs can be faked or geolocation information can be spoofed, and might make the following Hypothesis and Inference:
+However, a skeptic might argue that photographs can be faked or geolocation information can be spoofed, and might make the following Hypothesis and AnalyticInference:
 
 * *Skeptic's Hypothesis*: The photograph is fake.
 
-*Skeptic's Inference*: The observations and analysis results are equally probable given the assertion that the object in the photograph is the Washington Monument in Washington, DC or Cleopatra's Needle in New York City. 
+*Skeptic's AnalyticInference*: The observations and analysis results are equally probable given the assertion that the object in the photograph is the Washington Monument in Washington, DC or Cleopatra's Needle in New York City. 
 
 ```json
 @INFERENCE_PHOTOLOCATION_SKEPTIC_JSON@
 ```
 
-If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first inference over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's inference. Furthermore, the first inference could be updated to match the Skeptic's. Therefore, inferences can change as new information becomes available.
+If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first hypothesis test result over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's hypothesis. Furthermore, the first AnalyticInference could be updated to match the Skeptic's. Therefore, hypothesis test results can change as new information becomes available.
 
 
 ### Query - Differences in basis evidence
 
-Two hypothesis test results (inferences) are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
+Two hypothesis test results (analytic inferences) are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
 
 The following table is the results of [this query](src/query-select-skeptic-difference.sparql).  "Supports A" is support for only the initial analyst's finding, "Supports B" is support for only the skeptic's finding.
 
@@ -94,7 +94,7 @@ The following table is the results of [this query](src/query-select-skeptic-diff
 * Hypothesis 1: File wiping occurred 
 * Hypothesis 2: File wiping did not occur
 
-The following inferences can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
+The following hypothesis test results can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
 
 ```json
 @INFERENCE_FILE_WIPING_JSON@
@@ -107,7 +107,7 @@ The following inferences can be stated in words as the observations are exceedin
 * Hypothesis 1: A folder and all its contents were deleted on 17 April 2021 
 * Hypothesis 2: A folder and all its contents were not deleted on 17 April 2021
 
-The following inferences can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
+The following hypothesis test results can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
 
 ```json
 @INFERENCE_MASS_DELETION_JSON@
