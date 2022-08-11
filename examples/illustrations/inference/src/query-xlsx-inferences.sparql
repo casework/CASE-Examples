@@ -9,24 +9,31 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-SELECT ?lStatement ?lEvaluationType ?lEvidenceEvaluation ?lEvaluationRationale
+SELECT ?lEvaluationType ?lEvidenceEvaluation ?lEvaluationRationale ?lConclusion
 WHERE {
-  kb:investigative-action-9d3e78d9-8376-4277-9852-8e6bf9267456
-    uco-core:hasFacet/uco-action:result ?nInference ;
+#  ?nAnalysisAction
+#    a drafting:AnalysisAction ;
+#    uco-core:hasFacet/uco-action:object ?nHypothesis ;
+#    uco-core:hasFacet/uco-action:result ?nAnalyticResult ;
+#    .
+
+  ?nAnalyticResult
+    a drafting:AnalyticResult ;
+    uco-core:hasFacet ?nHypothesisTestResultFacet ;
     .
 
-  ?nInference
-    a drafting:Inference ;
-    drafting:hypothesis ?nHypothesis ;
+  ?nHypothesisTestResultFacet
+    a drafting:HypothesisTestResultFacet ;
     drafting:evaluationRationale ?lEvaluationRationale ;
     drafting:evaluationType ?lEvaluationType ;
+    drafting:conclusion ?lConclusion ;
     drafting:evidenceEvaluation ?lEvidenceEvaluation ;
     .
 
-  ?nHypothesis
-    a drafting:Hypothesis ;
-    uco-core:statement ?lStatement ;
-    .
+#  ?nHypothesis
+#    a drafting:Hypothesis ;
+#    uco-core:statement ?lStatement ;
+#    .
 }
 # Note - the IRIs' UUID components were picked to sort in a desired presentation order.
-ORDER BY ?nInference
+ORDER BY ?nHypothesisTestResultFacet
