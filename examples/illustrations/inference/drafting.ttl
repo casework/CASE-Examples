@@ -19,26 +19,16 @@ drafting:Hypothesis
 	sh:targetClass drafting:Hypothesis ;
 	.
 
-drafting:Inference
+drafting:HypothesisTestResultFacet
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
-	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:subClassOf core:Facet ;
+	rdfs:label "HypothesisTestResultFacet"@en ;
+	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis."@en ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	sh:property
-		[
-			sh:class drafting:Method ;
-			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path drafting:usedMethod ;
-		] ,
-		[
-			sh:class uco-core:UcoObject ;
-			owl:minCount "1"^^xsd:integer ;
-			sh:nodeKind sh:BlankNodeOrIRI ;
-			sh:path drafting:basisEvidence ;
-		] ,
 		[
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
@@ -58,17 +48,14 @@ drafting:Inference
 			sh:path drafting:evaluationType ;
 		] ,
 		[
-			sh:datatype xsd:string ;
+			sh:datatype xsd:boolean ;
 			sh:maxCount "1"^^xsd:integer ;
-			sh:minCount "1"^^xsd:integer ;
+			sh:minCount "0"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:hypothesis ;
+			sh:path drafting:conclusion ;
 		]
 		;
-	rdfs:label "Inference"@en ;
-	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis." ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
-	sh:targetClass drafting:Inference ;
+	sh:targetClass observable:HypothesisTestResultFacet ;
 	.
 
 drafting:Method
@@ -83,14 +70,6 @@ drafting:Method
 		;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	sh:targetClass drafting:Method ;
-	.
-
-drafting:basisEvidence
-	a owl:ObjectProperty ;
-	rdfs:label "basisEvidence"@en ;
-	rdfs:comment "Observed object(s) being evaluated as support for an inference." ;
-	rdfs:range uco-core:UcoObject ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
 drafting:evaluationRationale
@@ -120,11 +99,11 @@ drafting:evidenceEvaluation
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
-drafting:hypothesis
+drafting:conclusion
 	a owl:DatatypeProperty ;
-	rdfs:label "hypothesis"@en ;
-	rdfs:comment "A proposed explanation made on the basis of initial observations as a starting point for further investigation."@en ;
-	rdfs:range xsd:string ;
+	rdfs:label "conclusion"@en ;
+	rdfs:comment "A decision that is reached regarding the veracity of a hypothesis."@en ;
+	rdfs:range xsd:boolean ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
