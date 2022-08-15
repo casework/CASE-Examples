@@ -1,5 +1,5 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -13,66 +13,59 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "assume-content-type" ;
-				tool:itemType "commandline-argument" ;
-				tool:itemValue "foo" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("assume-content-type") ; uco-tool:itemType Literal("commandline-argument") ; uco-tool:itemValue Literal("foo") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
+			sh:focusNode <http://example.org/kb/Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
 				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
 			] ;
+			sh:value <http://example.org/kb/Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "auto-detect-content-type" ;
-				tool:itemType "commandline-flag" ;
-				tool:itemValue "true" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("auto-detect-content-type") ; uco-tool:itemType Literal("commandline-flag") ; uco-tool:itemValue Literal("true") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
+			sh:focusNode <http://example.org/kb/Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
 				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
 			] ;
+			sh:value <http://example.org/kb/Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "ruleset" ;
-				tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
-				tool:itemType "external-ruleset" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
+			sh:focusNode <http://example.org/kb/Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
 				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
 			] ;
+			sh:value <http://example.org/kb/Tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Action-ce95584e-5065-4287-83fd-81df2ac72180> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
+			] ;
+			sh:value <http://example.org/kb/Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
 		] ,
 		[
 			a sh:ValidationResult ;
