@@ -82,17 +82,17 @@
 				tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
 				tool:itemType "external-ruleset" ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->tool:itemValue' ;
-			sh:resultPath tool:itemValue ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath tool:itemObject ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype xsd:string ;
+				sh:class core:UcoObject ;
 				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path tool:itemValue ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path tool:itemObject ;
 			] ;
+			sh:value <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
 		]
 		;
 	.
