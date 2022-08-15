@@ -32,20 +32,3 @@ drafting:isConfigurationOf
 	rdfs:range uco-tool:Tool ;
 	.
 
-drafting:itemObject
-	a owl:ObjectProperty ;
-	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-	rdfs:range uco-core:UcoObject ;
-	.
-
-uco-tool:ConfigurationSettingType
-	sh:property [
-		rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-		rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-		sh:class uco-core:UcoObject ;
-		sh:maxCount "1"^^xsd:integer ;
-		sh:minCount "1"^^xsd:integer ;
-		sh:path drafting:itemObject ;
-	] ;
-	.
-

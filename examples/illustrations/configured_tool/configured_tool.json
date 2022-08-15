@@ -1,7 +1,6 @@
 {
     "@context": {
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "drafting": "http://example.org/ontology/drafting/",
         "kb": "http://example.org/kb/",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
@@ -24,8 +23,8 @@
         },
         {
             "@id": "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e",
-            "@type": "drafting:ConfiguredTool",
-            "drafting:isConfigurationOf": {
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-tool:isConfigurationOf": {
                 "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
@@ -83,8 +82,8 @@
         },
         {
             "@id": "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
-            "@type": "drafting:ConfiguredTool",
-            "drafting:isConfigurationOf": {
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-tool:isConfigurationOf": {
                 "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
@@ -142,8 +141,8 @@
         },
         {
             "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
-            "@type": "drafting:ConfiguredTool",
-            "drafting:isConfigurationOf": {
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-tool:isConfigurationOf": {
                 "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
