@@ -1,0 +1,45 @@
+<!--
+GENERATED FILE  README.md is generated from source files.  Edits to it will be overwritten by automated processes.:
+
+If you need to edit its content, edit src/README.md.in, and then re-run `make` to re-build the file.
+-->
+
+
+# Database Record Representation
+
+*A file containing all of the JSON-LD content within this page is here: [`database_records.json`](database_records.json).*
+
+*A file containing draft ontology concepts is here: [`drafting.ttl`](drafting.ttl).  It is expected to be removed with the completion of [UCO Issue 415](https://github.com/ucoProject/UCO/issues/415).*
+
+There is a requirement to represent database records and the assocation between their values and identified forensic artifacts. This is primarily scoped to SQLite, but can be generalized to other relational database models.
+
+The database file itself can be represented as a `uco-observable:File` object with associated facets.
+
+```json
+@DATABASE_RECORDS_FILE_LOCATION_JSON@
+
+```
+
+
+If there are supporting files such as WAL or Journal files as defined at [https://www.sqlite.org/tempfiles.html](https://www.sqlite.org/tempfiles.html), they can be related to the primary database file as well.
+
+```json
+@DATABASE_RECORDS_FILE_WITH_META_JSON@
+
+```
+
+
+The records within the database itself can be represented in newly proposed CASE objects as demonstrated below.
+
+```json
+@DATABASE_RECORDS_SQLITE_JSON@
+
+```
+
+
+This allows an identified artifact (such as a message) to be linked to a database record to identify the source of the reported artifact.
+
+```json
+@DATABASE_RECORDS_ARTIFACT_LINKING_JSON@
+
+```
