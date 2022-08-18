@@ -1,0 +1,43 @@
+[
+    {
+        "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
+        "@type": "drafting:CellSite",
+        "uco-core:hasFacet": [
+            {
+                "@type": "drafting:CellSiteFacet",
+                "drafting:cellSiteType": "GSM",
+                "drafting:cellSiteCountryCode": "228",
+                "drafting:cellSiteNetworkCode": "2",
+                "drafting:cellSiteLocationAreaCode": "22100",
+                "drafting:cellSiteIdentifier": "29220952"
+            },
+            {
+                "@type": "drafting:AntennaFacet",
+                "drafting:azimuth": {
+                    "@type": "xsd:decimal",
+                    "@value": "45"
+                },
+                "drafting:elevation": {
+                    "@type": "xsd:decimal",
+                    "@value": "5"
+                },
+                "drafting:skew": {
+                    "@type": "xsd:decimal",
+                    "@value": "10"
+                },
+                "drafting:horizontalBeamWidth": {
+                    "@type": "xsd:decimal",
+                    "@value": "110"
+                },
+                "drafting:signalStrength": {
+                    "@type": "xsd:decimal",
+                    "@value": "20"
+                },
+                "drafting:antennaHeight": {
+                    "@type": "xsd:decimal",
+                    "@value": "25"
+                }
+            }
+        ]
+    }
+]

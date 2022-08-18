@@ -1,0 +1,74 @@
+[
+    {
+        "@id": "kb:observation-009101f6-ba93-4a3d-acb0-455102b5b1e1",
+        "@type": [
+            "uco-core:UcoObject",
+            "sosa:Observation"
+        ],
+        "uco-core:objectCreatedTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2022-05-27T15:30:42Z"
+        },
+        "sosa:hasFeatureOfInterest": {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+        },
+        "sosa:resultTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2016-08-02T23:54:42Z"
+        }
+    },
+    {
+        "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b",
+        "@type": [
+            "uco-core:UcoObject",
+            "sosa:Observation"
+        ],
+        "uco-core:objectCreatedTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2022-05-27T15:30:42Z"
+        },
+        "sosa:hasFeatureOfInterest": {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+        },
+        "sosa:hasResult": {
+            "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
+        },
+        "sosa:resultTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2017-02-13T12:51:36Z"
+        }
+    },
+    {
+        "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee",
+        "@type": "uco-location:Location",
+        "uco-core:description": "Location of cell site, denoted by opencellid.org",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-location:LatLongCoordinatesFacet",
+                "uco-location:latitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "52.039261"
+                },
+                "uco-location:longitude": {
+                    "@type": "xsd:decimal",
+                    "@value": "4.357681"
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4",
+        "@type": "uco-observable:ObservableRelationship",
+        "case-investigation:wasDerivedFrom": {
+            "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b"
+        },
+        "uco-core:source": {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+        },
+        "uco-core:target": {
+            "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
+        },
+        "uco-core:kindOfRelationship": "Located_At",
+        "uco-core:isDirectional": true
+    }
+]

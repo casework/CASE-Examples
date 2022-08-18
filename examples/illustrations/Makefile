@@ -18,6 +18,7 @@ illustration_dirs := \
   accounts \
   bulk_extractor_forensic_path \
   call_log \
+  cell_site \
   configured_tool \
   database_records \
   device \
