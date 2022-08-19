@@ -39,39 +39,39 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
 [
     {
         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-        "@type": "drafting:CellSite",
+        "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CellSiteFacet",
-                "drafting:cellSiteType": "GSM",
-                "drafting:cellSiteCountryCode": "228",
-                "drafting:cellSiteNetworkCode": "2",
-                "drafting:cellSiteLocationAreaCode": "22100",
-                "drafting:cellSiteIdentifier": "29220952"
+                "@type": "uco-observable:CellSiteFacet",
+                "uco-observable:cellSiteType": "GSM",
+                "uco-observable:cellSiteCountryCode": "228",
+                "uco-observable:cellSiteNetworkCode": "2",
+                "uco-observable:cellSiteLocationAreaCode": "22100",
+                "uco-observable:cellSiteIdentifier": "29220952"
             },
             {
-                "@type": "drafting:AntennaFacet",
-                "drafting:azimuth": {
+                "@type": "uco-observable:AntennaFacet",
+                "uco-observable:azimuth": {
                     "@type": "xsd:decimal",
                     "@value": "45"
                 },
-                "drafting:elevation": {
+                "uco-observable:elevation": {
                     "@type": "xsd:decimal",
                     "@value": "5"
                 },
-                "drafting:skew": {
+                "uco-observable:skew": {
                     "@type": "xsd:decimal",
                     "@value": "10"
                 },
-                "drafting:horizontalBeamWidth": {
+                "uco-observable:horizontalBeamWidth": {
                     "@type": "xsd:decimal",
                     "@value": "110"
                 },
-                "drafting:signalStrength": {
+                "uco-observable:signalStrength": {
                     "@type": "xsd:decimal",
                     "@value": "20"
                 },
-                "drafting:antennaHeight": {
+                "uco-observable:antennaHeight": {
                     "@type": "xsd:decimal",
                     "@value": "25"
                 }
@@ -149,18 +149,18 @@ WHERE
     }
 
   ?nCellSite
-    a drafting:CellSite ;
+    a uco-observable:CellSite ;
     uco-core:hasFacet ?nCellSiteFacet ;
     .
 
   ?nCellSiteFacet
-    a drafting:CellSiteFacet ;
+    a uco-observable:CellSiteFacet ;
     .
     OPTIONAL {
-      ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
+      ?nCellSiteFacet uco-observable:cellSiteIdentifier ?lCellSiteIdentifier .
     }
     OPTIONAL {
-      ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
+      ?nCellSiteFacet uco-observable:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
     }
 }
 ```
@@ -208,22 +208,22 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
 [
     {
         "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-        "@type": "drafting:CapturedTelecommunicationsInformation",
+        "@type": "uco-observable:CapturedTelecommunicationsInformation",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                "drafting:captureCellSite": {
+                "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
+                "uco-observable:captureCellSite": {
                     "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
                 },
-                "observable:startTime": {
+                "uco-observable:startTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-29T01:23:02Z"
                 },
-                "observable:endTime": {
+                "uco-observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-30T02:10:50Z"
                 },
-                "drafting:interceptedCallState": "idle"
+                "uco-observable:interceptedCallState": "idle"
             }
         ]
     }
@@ -249,15 +249,15 @@ From commentary in a [forum post](https://community.opencellid.org/t/documenting
 [
     {
         "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
-        "@type": "drafting:CellSite",
+        "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CellSiteFacet",
-                "drafting:cellSiteType": "GSM",
-                "drafting:cellSiteCountryCode": "204",
-                "drafting:cellSiteNetworkCode": "16",
-                "drafting:cellSiteLocationAreaCode": "1014",
-                "drafting:cellSiteIdentifier": "13399"
+                "@type": "uco-observable:CellSiteFacet",
+                "uco-observable:cellSiteType": "GSM",
+                "uco-observable:cellSiteCountryCode": "204",
+                "uco-observable:cellSiteNetworkCode": "16",
+                "uco-observable:cellSiteLocationAreaCode": "1014",
+                "uco-observable:cellSiteIdentifier": "13399"
             }
         ]
     }

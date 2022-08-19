@@ -1,7 +1,6 @@
 {
     "@context": {
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "drafting": "http://example.org/ontology/drafting#",
         "kb": "http://example.org/kb/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -119,19 +118,19 @@
         },
         {
             "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-            "@type": "drafting:CapturedTelecommunicationsInformation",
+            "@type": "uco-observable:CapturedTelecommunicationsInformation",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                    "drafting:captureCellSite": {
+                    "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
+                    "uco-observable:captureCellSite": {
                         "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
                     },
-                    "drafting:interceptedCallState": "idle",
-                    "observable:endTime": {
+                    "uco-observable:endTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-07-30T02:10:50Z"
                     },
-                    "observable:startTime": {
+                    "uco-observable:interceptedCallState": "idle",
+                    "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-07-29T01:23:02Z"
                     }
@@ -160,39 +159,39 @@
         },
         {
             "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-            "@type": "drafting:CellSite",
+            "@type": "uco-observable:CellSite",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CellSiteFacet",
-                    "drafting:cellSiteCountryCode": "228",
-                    "drafting:cellSiteIdentifier": "29220952",
-                    "drafting:cellSiteLocationAreaCode": "22100",
-                    "drafting:cellSiteNetworkCode": "2",
-                    "drafting:cellSiteType": "GSM"
+                    "@type": "uco-observable:CellSiteFacet",
+                    "uco-observable:cellSiteCountryCode": "228",
+                    "uco-observable:cellSiteIdentifier": "29220952",
+                    "uco-observable:cellSiteLocationAreaCode": "22100",
+                    "uco-observable:cellSiteNetworkCode": "2",
+                    "uco-observable:cellSiteType": "GSM"
                 },
                 {
-                    "@type": "drafting:AntennaFacet",
-                    "drafting:antennaHeight": {
+                    "@type": "uco-observable:AntennaFacet",
+                    "uco-observable:antennaHeight": {
                         "@type": "xsd:decimal",
                         "@value": "25"
                     },
-                    "drafting:azimuth": {
+                    "uco-observable:azimuth": {
                         "@type": "xsd:decimal",
                         "@value": "45"
                     },
-                    "drafting:elevation": {
+                    "uco-observable:elevation": {
                         "@type": "xsd:decimal",
                         "@value": "5"
                     },
-                    "drafting:horizontalBeamWidth": {
+                    "uco-observable:horizontalBeamWidth": {
                         "@type": "xsd:decimal",
                         "@value": "110"
                     },
-                    "drafting:signalStrength": {
+                    "uco-observable:signalStrength": {
                         "@type": "xsd:decimal",
                         "@value": "20"
                     },
-                    "drafting:skew": {
+                    "uco-observable:skew": {
                         "@type": "xsd:decimal",
                         "@value": "10"
                     }
@@ -290,15 +289,15 @@
         },
         {
             "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
-            "@type": "drafting:CellSite",
+            "@type": "uco-observable:CellSite",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CellSiteFacet",
-                    "drafting:cellSiteCountryCode": "204",
-                    "drafting:cellSiteIdentifier": "13399",
-                    "drafting:cellSiteLocationAreaCode": "1014",
-                    "drafting:cellSiteNetworkCode": "16",
-                    "drafting:cellSiteType": "GSM"
+                    "@type": "uco-observable:CellSiteFacet",
+                    "uco-observable:cellSiteCountryCode": "204",
+                    "uco-observable:cellSiteIdentifier": "13399",
+                    "uco-observable:cellSiteLocationAreaCode": "1014",
+                    "uco-observable:cellSiteNetworkCode": "16",
+                    "uco-observable:cellSiteType": "GSM"
                 }
             ]
         }
