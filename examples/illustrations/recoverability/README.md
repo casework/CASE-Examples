@@ -36,7 +36,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
     {
         "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
         "@type": [
-            "drafting:RecoveredObject",
+            "uco-observable:RecoveredObject",
             "uco-observable:File"
         ],
         "uco-core:hasFacet": [
@@ -61,17 +61,17 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
                 "uco-observable:sizeInBytes": 712
             },
             {
-                "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 }
             }
@@ -92,7 +92,7 @@ This recovered file system entry can be represented using the `observable:Recove
     {
         "@id": "kb:BD64BDD9-3DCD-4828-A25B-A72C06E472CD",
         "@type": [
-            "drafting:RecoveredObject",
+            "uco-observable:RecoveredObject",
             "uco-observable:File"
         ],
         "uco-core:hasFacet": [
@@ -108,17 +108,17 @@ This recovered file system entry can be represented using the `observable:Recove
                 "uco-observable:modifiedTime": null
             },
             {
-                "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 },
-                "drafting:contentRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
@@ -134,7 +134,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
     {
         "@id": "kb:665D63BE-93E6-4D3E-8E75-3112BE091E93",
         "@type": [
-            "drafting:RecoveredObject",
+            "uco-observable:RecoveredObject",
             "uco-observable:File"
         ],
         "uco-core:hasFacet": [
@@ -159,17 +159,17 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
                 }
             },
             {
-                "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
@@ -185,7 +185,7 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
     {
         "@id": "kb:4026FABD-924D-4138-A6BA-73DF2EB37BCB",
         "@type": [
-            "drafting:RecoveredObject",
+            "uco-observable:RecoveredObject",
             "uco-observable:File"
         ],
         "uco-core:hasFacet": [
@@ -202,17 +202,17 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
                 }
             },
             {
-                "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "unknown"
                 }
             }
@@ -235,7 +235,7 @@ This recovered chat message can be represented using the `observable:RecoveredOb
     {
         "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
         "@type": [
-            "drafting:RecoveredObject",
+            "uco-observable:RecoveredObject",
             "uco-observable:Message"
         ],
         "uco-core:hasFacet": [
@@ -256,17 +256,17 @@ This recovered chat message can be represented using the `observable:RecoveredOb
                 }
             },
             {
-                "@type": "drafting:RecoveredObjectFacet",
-                "drafting:nameRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoveredStatus": {
-                    "@type": "drafting:RecoveredObjectStatusVocab",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "partially recovered"
                 }
             }

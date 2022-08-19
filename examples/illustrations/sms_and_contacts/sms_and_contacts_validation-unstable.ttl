@@ -18,26 +18,6 @@
 				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage "Less than 1 values on [ rdf:type uco-observable:AccountFacet ; rdfs:comment Literal(\"TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)\") ; uco-observable:accountType Literal(\"Phone\" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal(\"true\" = True, datatype=xsd:boolean) ]->observable:accountIdentifier" ;
-			sh:resultPath observable:accountIdentifier ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountIdentifier ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				rdfs:comment "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)" ;
-				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
 			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
 			sh:resultPath observable:accountType ;
 			sh:resultSeverity sh:Violation ;
@@ -65,25 +45,6 @@
 				sh:path observable:accountType ;
 			] ;
 			sh:value "Phone"^^vocabulary:AccountTypeVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Email"^^vocabulary:AccountTypeVocab ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Email" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
-			sh:resultPath observable:accountIdentifier ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountIdentifier ;
-			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -127,25 +88,6 @@
 				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
-			sh:resultPath observable:accountIdentifier ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountIdentifier ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
 			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
 			sh:resultPath observable:accountType ;
 			sh:resultSeverity sh:Violation ;
@@ -173,25 +115,6 @@
 				sh:path observable:accountType ;
 			] ;
 			sh:value "Phone"^^vocabulary:AccountTypeVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:AccountFacet ;
-				observable:accountType "Phone"^^vocabulary:AccountTypeVocab ;
-				observable:isActive "true"^^xsd:boolean ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountType Literal("Phone" = None, datatype=uco-vocabulary:AccountTypeVocab) ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
-			sh:resultPath observable:accountIdentifier ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path observable:accountIdentifier ;
-			] ;
 		] ,
 		[
 			a sh:ValidationResult ;

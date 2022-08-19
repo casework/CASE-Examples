@@ -1,11 +1,111 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/4026FABD-924D-4138-A6BA-73DF2EB37BCB> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:RecoveredObjectFacet ;
+				observable:contentRecoveredStatus "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:metadataRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:nameRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/665D63BE-93E6-4D3E-8E75-3112BE091E93> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:RecoveredObjectFacet ;
+				observable:contentRecoveredStatus "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:metadataRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:nameRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/BD64BDD9-3DCD-4828-A25B-A72C06E472CD> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:RecoveredObjectFacet ;
+				observable:contentRecoveredStatus "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:metadataRecoveredStatus "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:nameRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/C01E67F9-ADB5-48BD-B09D-E7326FA8D592> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:RecoveredObjectFacet ;
+				observable:contentRecoveredStatus "partially recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:metadataRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:nameRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/CB0354F5-2DBD-4C02-8A6C-011B77125EE2> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:RecoveredObjectFacet ;
+				observable:contentRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:metadataRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+				observable:nameRecoveredStatus "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
+			] ;
+		]
+		;
 	.
 
