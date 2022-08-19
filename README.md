@@ -12,6 +12,7 @@ Mapping notes & respective JSON-LD output:
 - [Accounts](examples/illustrations/accounts/accounts.json)
 - [Bulk Extractor Forensic Path](examples/illustrations/bulk_extractor_forensic_path/bulk_extractor_forensic_path.json) (*[info](examples/illustrations/bulk_extractor_forensic_path/)*)
 - [Call Log](examples/illustrations/call_log/call_log.json)
+- [Cell Site](examples/illustrations/cell_site/cell_site.json) ([*info*](examples/illustrations/cell_site/))
 - [Configured Tool](examples/illustrations/configured_tool/configured_tool.json)
 - [Device](examples/illustrations/device/device.json)
 - [EXIF Data](examples/illustrations/exif_data/exif_data.json)
