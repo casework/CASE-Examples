@@ -35,10 +35,17 @@
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
+				sh:or (
+					[
+						sh:datatype vocab:InvestigationFormVocab ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
 				sh:path investigation:investigationForm ;
 			] ;
 		] ,
@@ -50,10 +57,17 @@
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
+				sh:or (
+					[
+						sh:datatype vocab:InvestigationFormVocab ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
 				sh:path investigation:investigationForm ;
 			] ;
 		] ,
@@ -65,10 +79,17 @@
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
+				sh:or (
+					[
+						sh:datatype vocab:InvestigationFormVocab ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
 				sh:path investigation:investigationForm ;
 			] ;
 		] ,
@@ -80,10 +101,17 @@
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
+				sh:or (
+					[
+						sh:datatype vocab:InvestigationFormVocab ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
 				sh:path investigation:investigationForm ;
 			] ;
 		] ,
@@ -109,10 +137,17 @@
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
+				sh:or (
+					[
+						sh:datatype vocab:InvestigationFormVocab ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
 				sh:path investigation:investigationForm ;
 			] ;
 		] ,
@@ -124,10 +159,17 @@
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
 				sh:nodeKind sh:Literal ;
+				sh:or (
+					[
+						sh:datatype vocab:InvestigationFormVocab ;
+					]
+					[
+						sh:datatype xsd:string ;
+					]
+				) ;
 				sh:path investigation:investigationForm ;
 			] ;
 		] ,
