@@ -1,3 +1,4 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -13,6 +14,36 @@
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/tool2-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/tool3-uuid> ;
+		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-2545442b-321c-754d-bcb8-c40d321ce2c2> ;
@@ -89,6 +120,36 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/tool2-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigation-952d677d-6b62-4e53-9bac-1b113d268ac5> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/tool3-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8> ;
 			sh:resultMessage "Less than 1 values on kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8->core:object" ;
 			sh:resultPath core:object ;
@@ -130,6 +191,34 @@
 				sh:nodeKind sh:Literal ;
 				sh:path investigation:investigationForm ;
 			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigative-action4-uuid> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
+			] ;
+			sh:value <http://example.org/kb/tool2-uuid> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/investigative-action5-uuid> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:instrument ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:path action:instrument ;
+			] ;
+			sh:value <http://example.org/kb/tool3-uuid> ;
 		] ,
 		[
 			a sh:ValidationResult ;
