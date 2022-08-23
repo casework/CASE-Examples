@@ -1,0 +1,203 @@
+{
+    "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:4026FABD-924D-4138-A6BA-73DF2EB37BCB",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-19T00:29:15Z"
+                    },
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG-20181120-WA0000",
+                    "uco-observable:filePath": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 1389601
+                },
+                {
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "drafting:metadataRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "drafting:nameRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:665D63BE-93E6-4D3E-8E75-3112BE091E93",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-18T22:53:09.595Z"
+                    },
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-19T00:29:15Z"
+                    },
+                    "uco-observable:extension": "",
+                    "uco-observable:fileName": "Thebatplan",
+                    "uco-observable:filePath": "D:\\Thebatplan",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-18T20:10:48.00Z"
+                    },
+                    "uco-observable:sizeInBytes": 1389601
+                },
+                {
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "drafting:metadataRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "drafting:nameRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:BD64BDD9-3DCD-4828-A25B-A72C06E472CD",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:accessedTime": null,
+                    "uco-observable:createdTime": null,
+                    "uco-observable:extension": "tmp",
+                    "uco-observable:fileName": "~badquinn3@gmail.com.ost.tmp",
+                    "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:modifiedTime": null,
+                    "uco-observable:sizeInBytes": null
+                },
+                {
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "drafting:metadataRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "drafting:nameRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:MessageFacet",
+                    "uco-observable:from": {
+                        "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d"
+                    },
+                    "uco-observable:messageText": "Diana sent a location.",
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-12-04T07:52:47Z"
+                    },
+                    "uco-observable:to": [
+                        {
+                            "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b"
+                        }
+                    ]
+                },
+                {
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "partially recovered"
+                    },
+                    "drafting:metadataRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "drafting:nameRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
+            "@type": "uco-observable:ObservableObject",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "1999-01-02T05:00Z"
+                    },
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2011-12-25T19:02:22Z"
+                    },
+                    "uco-observable:extension": "txt",
+                    "uco-observable:fileName": "_BEID.txt",
+                    "uco-observable:filePath": "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2000-02-29T19:11Z"
+                    },
+                    "uco-observable:sizeInBytes": 712
+                },
+                {
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "drafting:contentRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "drafting:metadataRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "drafting:nameRecoverabilityStatus": {
+                        "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d",
+            "@type": "uco-observable:ObservableObject"
+        },
+        {
+            "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b",
+            "@type": "uco-observable:ObservableObject"
+        }
+    ]
+}

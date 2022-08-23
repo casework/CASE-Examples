@@ -5,27 +5,32 @@
         "acme": "http://custompb.acme.org/core#",
         "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
-        "uco-vocabulary": "https://unifiedcyberontology.org/ontology/uco/vocabulary#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
             "@id": "kb:mobile-device-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileDevice",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:model": "MG472ZD/A",
                     "uco-observable:serialNumber": "F17RN4DXXXXX"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": "Apple",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
                     "uco-observable:version": "11.2.6",
                     "uco-observable:installDate": {
                         "@type": "xsd:dateTime",
@@ -36,11 +41,7 @@
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
-                    "uco-observable:MSISDN": [
-                        {
-                            "@id": "kb:mobile-account1-uuid"
-                        }
-                    ],
+                    "uco-observable:MSISDN": "31618300XXX",
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2018-02-24T07:36:24.35Z"
@@ -58,6 +59,11 @@
             ]
         },
         {
+            "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Apple"
+        },
+        {
             "@id": "kb:trace-relationship1-uuid",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
@@ -68,15 +74,12 @@
                     "@id": "kb:mobile-device-uuid"
                 }
             ],
-            "uco-core:kindOfRelationship": {
-                "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-                "@value": "Contained_Within"
-            },
+            "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         },
         {
             "@id": "kb:sim-card-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:SIMCard",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:SIMCardFacet",
@@ -88,17 +91,27 @@
                     ],
                     "uco-observable:SIMType": "USIM",
                     "uco-observable:SIMForm": "micro",
-                    "uco-observable:carrier": "Vodafone"
+                    "uco-observable:carrier": {
+                        "@id": "kb:organization-2f1365d2-dfbc-4817-9822-77e7b4a9ee9f"
+                    }
                 }
             ]
         },
         {
+            "@id": "kb:organization-2f1365d2-dfbc-4817-9822-77e7b4a9ee9f",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Vodafone"
+        },
+        {
             "@id": "kb:mobile-account1-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {
@@ -109,11 +122,14 @@
         },
         {
             "@id": "kb:mobile-account2-uuid",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": "Phone",
+                    "uco-observable:accountType": {
+                        "@type": "uco-vocabulary:AccountTypeVocab",
+                        "@value": "Phone"
+                    },
                     "uco-observable:isActive": true
                 },
                 {

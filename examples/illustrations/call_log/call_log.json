@@ -3,9 +3,9 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-identity": "https://unifiedcyberontology.org/ontology/uco/identity#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -46,6 +46,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:ATT"
                     },
+                    "uco-observable:accountIdentifier": "1234567890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -63,6 +64,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:Sprint"
                     },
+                    "uco-observable:accountIdentifier": "1234567890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -80,6 +82,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:Verizon"
                     },
+                    "uco-observable:accountIdentifier": "1234567890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -97,6 +100,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:Zoom"
                     },
+                    "uco-observable:accountIdentifier": "1234567890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -107,11 +111,11 @@
         },
         {
             "@id": "kb:phone_call1",
-            "@type": "drafting:Call",
+            "@type": "uco-observable:Call",
             "uco-core:description": "An example of a two-party, one-way phone call that has clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CallFacet",
+                    "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
                     },
@@ -136,11 +140,11 @@
         },
         {
             "@id": "kb:non-directional-phone-call-1",
-            "@type": "drafting:Call",
+            "@type": "uco-observable:Call",
             "uco-core:description": "An example of a two-party, one-way phone call that has does not have clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CallFacet",
+                    "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-79636b28-77c9-4005-b62d-b87a233687ef"
                     },
@@ -167,11 +171,11 @@
         },
         {
             "@id": "kb:multi-participant-phone-call-1",
-            "@type": "drafting:Call",
+            "@type": "uco-observable:Call",
             "uco-core:description": "An example of a three-way call phone call that has clear directionality between a caller (from) and two receivers (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CallFacet",
+                    "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
                     },
@@ -201,11 +205,11 @@
         },
         {
             "@id": "kb:conference-bridge-phone-call-1",
-            "@type": "drafting:Call",
+            "@type": "uco-observable:Call",
             "uco-core:description": "An example of a conference bridge phone call that does not have clear directionality between a caller (from) and receivers (to).",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:CallFacet",
+                    "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108"
                     },

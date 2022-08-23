@@ -3,27 +3,37 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
-        "olo": "http://purl.org/ontology/olo/core#",
-        "uco-core": "https://unifiedcyberontology.org/ontology/uco/core#",
-        "uco-observable": "https://unifiedcyberontology.org/ontology/uco/observable#",
+        "co": "http://purl.org/co/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
+            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Google"
+        },
+        {
             "@id": "kb:os1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:OperatingSystem",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
-                    "uco-observable:manufacturer": "Google",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+                    },
                     "uco-observable:version": "5.4.3"
                 }
             ]
         },
         {
             "@id": "kb:application1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Application",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationFacet",
@@ -38,8 +48,12 @@
             ]
         },
         {
+            "@id": "kb:application2",
+            "@type": "uco-observable:Application"
+        },
+        {
             "@id": "kb:account1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -51,7 +65,7 @@
         },
         {
             "@id": "kb:account2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -63,7 +77,7 @@
         },
         {
             "@id": "kb:account3",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -75,7 +89,7 @@
         },
         {
             "@id": "kb:account4",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
@@ -86,13 +100,63 @@
             ]
         },
         {
+            "@id": "kb:location1",
+            "@type": "uco-location:Location"
+        },
+        {
+            "@id": "kb:attachment_file1",
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:attachment_file2",
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:attachment_file3",
+            "@type": "uco-observable:ContentData",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-e1ca5930-2f59-4cb3-853f-bece3a8f296c"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:message2",
+            "@type": "uco-observable:Message"
+        },
+        {
+            "@id": "kb:message3",
+            "@type": "uco-observable:Message"
+        },
+        {
             "@id": "kb:thread1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MessageThread",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
+                    "draft:visibility": "PRIVATE",
+                    "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
                     "uco-observable:message": [
                         {
                             "@id": "kb:message1"
@@ -104,25 +168,60 @@
                             "@id": "kb:message3"
                         }
                     ],
-                    "draft:visibility": "PRIVATE",
-                    "messages": {
-                        "olo:length": 3,
-                        "olo:slot": [
+                    "uco-observable:messageThread": {
+                        "@type": "uco-types:Thread",
+                        "co:size": {
+                            "@type": "xsd:nonNegativeInteger",
+                            "@value": "3"
+                        },
+                        "co:element": [
                             {
-                                "olo:index": 1,
-                                "olo:item": {
+                                "@id": "kb:message1"
+                            },
+                            {
+                                "@id": "kb:message2"
+                            },
+                            {
+                                "@id": "kb:message3"
+                            }
+                        ],
+                        "co:item": [
+                            {
+                                "@id": "kb:thread-item-32450b5a-bb4d-4c12-9435-ab00b25aa7b8",
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "1"
+                                },
+                                "co:itemContent": {
                                     "@id": "kb:message1"
+                                },
+                                "uco-types:threadNextItem": {
+                                    "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2"
                                 }
                             },
                             {
-                                "olo:index": 2,
-                                "olo:item": {
+                                "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2",
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "2"
+                                },
+                                "co:itemContent": {
                                     "@id": "kb:message2"
+                                },
+                                "uco-types:threadNextItem": {
+                                    "@id": "kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87"
                                 }
                             },
                             {
-                                "olo:index": 3,
-                                "olo:item": {
+                                "@id": "kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87",
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "3"
+                                },
+                                "co:itemContent": {
                                     "@id": "kb:message3"
                                 }
                             }
@@ -141,24 +240,34 @@
         },
         {
             "@id": "kb:thread2",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:MessageThread",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
-                    "uco-observable:message": [
-                        {
-                            "@id": "kb:post1"
-                        }
-                    ],
                     "draft:visibility": "PUBLIC",
-                    "messages": {
-                        "olo:length": 1,
-                        "olo:slot": [
+                    "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
+                    "uco-observable:message": {
+                        "@id": "kb:post1"
+                    },
+                    "uco-observable:messageThread": {
+                        "@type": "uco-types:Thread",
+                        "co:size": {
+                            "@type": "xsd:nonNegativeInteger",
+                            "@value": "1"
+                        },
+                        "co:element": {
+                            "@id": "kb:post1"
+                        },
+                        "co:item": [
                             {
-                                "olo:index": 1,
-                                "olo:item": {
+                                "@type": "uco-types:ThreadItem",
+                                "co:index": {
+                                    "@type": "xsd:positiveInteger",
+                                    "@value": "1"
+                                },
+                                "co:itemContent": {
                                     "@id": "kb:post1"
                                 }
                             }
@@ -177,7 +286,7 @@
         },
         {
             "@id": "kb:post1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -202,7 +311,7 @@
         },
         {
             "@id": "kb:message1",
-            "@type": "uco-observable:ObservableObject",
+            "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
@@ -229,19 +338,13 @@
             "@id": "kb:attach_relationship1",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:location1"
+                "@id": "kb:attachment_file3"
             },
             "uco-core:target": {
                 "@id": "kb:message1"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
-            "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
-                }
-            ]
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:attach_relationship2",
@@ -253,13 +356,7 @@
                 "@id": "kb:message1"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
-            "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": "http://whatsapp.com/attachments/thumbnails/1.png"
-                }
-            ]
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:attach_relationship3",
@@ -271,13 +368,43 @@
                 "@id": "kb:message1"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:location_relationship1",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:attachment_file3"
+            },
+            "uco-core:target": {
+                "@id": "kb:location1"
+            },
             "uco-core:isDirectional": true,
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-observable:AttachmentFacet",
-                    "uco-observable:url": "http://whatsapp.com/attachments/1.png"
-                }
-            ]
+            "rdfs:comment": "TODO: Need to define a portrayal relationship between ObservableObject and a Location."
+        },
+        {
+            "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:URLFacet",
+                "uco-observable:fullValue": "http://whatsapp.com/attachments/thumbnails/1.png"
+            }
+        },
+        {
+            "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:URLFacet",
+                "uco-observable:fullValue": "http://whatsapp.com/attachments/1.png"
+            }
+        },
+        {
+            "@id": "kb:url-e1ca5930-2f59-4cb3-853f-bece3a8f296c",
+            "@type": "uco-observable:URL",
+            "uco-core:hasFacet": {
+                "@type": "uco-observable:URLFacet",
+                "uco-observable:fullValue": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
+            }
         }
     ]
 }

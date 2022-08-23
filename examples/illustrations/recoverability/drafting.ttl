@@ -1,0 +1,190 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology/drafting>
+	a owl:Ontology ;
+	.
+
+drafting:RecoveredObjectFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf core:Facet ;
+	rdfs:label "RecoveredObjectFacet"@en ;
+	rdfs:comment "Recoverability status of name, metadata, and content."@en ;
+	rdfs:seeAlso <https://unifiedcyberontology.atlassian.net/browse/ONT-119> ;
+	sh:property
+		[
+			sh:datatype drafting:RecoveredObjectStatusVocab ;
+			sh:message "Value is outside the default vocabulary RecoveredObjectStatusVocab." ;
+			sh:path drafting:nameRecoveredStatus ;
+			sh:severity sh:Info ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype drafting:RecoveredObjectStatusVocab ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:nameRecoveredStatus ;
+		] ,
+		[
+			sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
+			sh:or (
+				[
+					sh:datatype drafting:RecoveredObjectStatusVocab ;
+					sh:in (
+						"recovered"^^drafting:RecoveredObjectStatusVocab
+						"partially recovered"^^drafting:RecoveredObjectStatusVocab
+						"overwritten"^^drafting:RecoveredObjectStatusVocab
+						"unknown"^^drafting:RecoveredObjectStatusVocab
+					) ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:nameRecoveredStatus ;
+		] ,
+		[
+			sh:datatype drafting:RecoveredObjectStatusVocab ;
+			sh:message "Value is outside the default vocabulary RecoveredObjectStatusVocab." ;
+			sh:path drafting:metadataRecoveredStatus ;
+			sh:severity sh:Info ;
+		] ,
+		[
+			sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
+			sh:or (
+				[
+					sh:datatype drafting:RecoveredObjectStatusVocab ;
+					sh:in (
+						"recovered"^^drafting:RecoveredObjectStatusVocab
+						"partially recovered"^^drafting:RecoveredObjectStatusVocab
+						"overwritten"^^drafting:RecoveredObjectStatusVocab
+						"unknown"^^drafting:RecoveredObjectStatusVocab
+					) ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:metadataRecoveredStatus ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype drafting:RecoveredObjectStatusVocab ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:metadataRecoveredStatus ;
+		] ,
+		[
+			sh:datatype drafting:RecoveredObjectStatusVocab ;
+			sh:message "Value is outside the default vocabulary RecoveredObjectStatusVocab." ;
+			sh:path drafting:contentRecoveredStatus ;
+			sh:severity sh:Info ;
+		] ,
+		[
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype drafting:RecoveredObjectStatusVocab ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:contentRecoveredStatus ;
+		] ,
+		[
+			sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
+			sh:or (
+				[
+					sh:datatype drafting:RecoveredObjectStatusVocab ;
+					sh:in (
+						"recovered"^^drafting:RecoveredObjectStatusVocab
+						"partially recovered"^^drafting:RecoveredObjectStatusVocab
+						"overwritten"^^drafting:RecoveredObjectStatusVocab
+						"unknown"^^drafting:RecoveredObjectStatusVocab
+					) ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:contentRecoveredStatus ;
+		]
+		;
+	sh:targetClass drafting:UnallocatedRecoveredFacet ;
+	.
+
+
+drafting:contentRecoveredStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "contentRecoveredStatus"@en ;
+	rdfs:comment "Specifies the recoverability status of the content of an object."@en ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			drafting:RecoveredObjectStatusVocab
+			xsd:string
+		) ;
+	] ;
+	.
+
+drafting:metadataRecoveredStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "metadataRecoveredStatus"@en ;
+	rdfs:comment "Specifies the recoverability status of the metadata of an object."@en ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			drafting:RecoveredObjectStatusVocab
+			xsd:string
+		) ;
+	] ;
+	.
+
+drafting:nameRecoveredStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "nameRecoveredStatus"@en ;
+	rdfs:comment "Specifies the recoverability status of the name of an object."@en ;
+	rdfs:range [
+		a rdfs:Datatype ;
+		owl:unionOf (
+			drafting:RecoveredObjectStatusVocab
+			xsd:string
+		) ;
+	] ;
+	.
+
+drafting:RecoveredObjectStatusVocab
+	a rdfs:Datatype ;
+	rdfs:subClassOf rdfs:Resource ;
+	rdfs:label "Recovered Object Status Vocabulary"@en-US ;
+	rdfs:comment "Defines the vocabulary for Recovered Object status of data."@en ;
+	owl:oneOf (
+		"recovered"^^drafting:RecoveredObjectStatusVocab
+		"partially recovered"^^drafting:RecoveredObjectStatusVocab
+		"overwritten"^^drafting:RecoveredObjectStatusVocab
+		"unknown"^^drafting:RecoveredObjectStatusVocab
+	) ;
+	.
+

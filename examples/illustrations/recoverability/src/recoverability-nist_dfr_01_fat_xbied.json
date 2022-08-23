@@ -1,0 +1,43 @@
+[
+    {
+        "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
+        "@type": "uco-observable:ObservableObject",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:createdTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2011-12-25T19:02:22Z"
+                },
+                "uco-observable:modifiedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2000-02-29T19:11Z"
+                },
+                "uco-observable:accessedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "1999-01-02T05:00Z"
+                },
+                "uco-observable:extension": "txt",
+                "uco-observable:fileName": "_BEID.txt",
+                "uco-observable:filePath": "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 712
+            },
+            {
+                "@type": "drafting:RecoveredObjectFacet",
+                "drafting:nameRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:metadataRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                },
+                "drafting:contentRecoverabilityStatus": {
+                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                    "@value": "recovered"
+                }
+            }
+        ]
+    }
+]
