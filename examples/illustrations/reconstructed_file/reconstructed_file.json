@@ -16,29 +16,29 @@
     },
     "@graph": [
         {
-            "@id": "kb:carving_tool1",
+            "@id": "kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc",
             "@type": "uco-tool:AnalyticTool"
         },
         {
-            "@id": "kb:forensic_lab1",
+            "@id": "kb:forensiclab-3858ce66-76d5-4dfc-9998-d0da19cbfaf3",
             "@type": "uco-location:Location"
         },
         {
-            "@id": "kb:forensic_lab_computer1",
+            "@id": "kb:forensiccomputer-6c270331-b53a-4536-8ac4-bd1f07f73745",
             "@type": "uco-observable:Device"
         },
         {
-            "@id": "kb:role4",
+            "@id": "kb:role-7e760175-f38a-4d36-a70f-591668769538",
             "@type": "uco-role:Role"
         },
         {
-            "@id": "kb:relationship0",
+            "@id": "kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:reconstructed_file"
+                "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8"
             },
             "uco-core:target": {
-                "@id": "kb:data_piece0"
+                "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
             },
             "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
@@ -51,13 +51,13 @@
             ]
         },
         {
-            "@id": "kb:relationship1",
+            "@id": "kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:reconstructed_file"
+                "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8"
             },
             "uco-core:target": {
-                "@id": "kb:data_piece1"
+                "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
             },
             "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
@@ -70,13 +70,13 @@
             ]
         },
         {
-            "@id": "kb:relationship2",
+            "@id": "kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:reconstructed_file"
+                "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8"
             },
             "uco-core:target": {
-                "@id": "kb:data_piece2"
+                "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
             },
             "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
@@ -89,20 +89,31 @@
             ]
         },
         {
-            "@id": "kb:reconstructed_file",
+            "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
+                {
+                    "@type": "drafting:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "unknown"
+                    }
+                },
                 {
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 774,
-                    "uco-observable:dataPayload": {
-                        "@type": "xsd:base64Binary",
-                        "@value": "<base 64 encoded data of the file>"
-                    },
+                    "uco-observable:sizeInBytes": 1625600,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -112,7 +123,7 @@
                             },
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
-                                "@value": "e5ca3be56f66200a1bb2262e948ac08dbc672bc8033c1ada743787b0c667dea6"
+                                "@value": "fb07a847daf108af066b4cc55f807a3eb694b9b31e27d8146585b7cc08494c70"
                             }
                         }
                     ]
@@ -120,7 +131,7 @@
             ]
         },
         {
-            "@id": "kb:data_piece0",
+            "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -129,11 +140,8 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 14,
-                    "uco-observable:dataPayload": {
-                        "@type": "xsd:base64Binary",
-                        "@value": "w7/DmMO/w6AAEEpGSUY="
-                    },
+                    "uco-observable:sizeInBytes": 635,
+                    "uco-observable:dataPayload": "/9j/4R5+RXhpZg==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -143,7 +151,7 @@
                             },
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
-                                "@value": "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"
+                                "@value": "c7c7fb626c7f15efc407b73f704f990f6b683ad36185018a48202fa9b88369fa"
                             }
                         }
                     ]
@@ -151,7 +159,7 @@
             ]
         },
         {
-            "@id": "kb:data_piece1",
+            "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -160,11 +168,8 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 512,
-                    "uco-observable:dataPayload": {
-                        "@type": "xsd:base64Binary",
-                        "@value": "<base 64 encoded data of the file>"
-                    },
+                    "uco-observable:sizeInBytes": 635,
+                    "uco-observable:dataPayload": "W+ZAudrTwDd8ww==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -174,7 +179,7 @@
                             },
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
-                                "@value": "a2bfbb3fbcfbf372c3a83ac9b9aad3d0aa4fb8bcc807af7aabcccac94a8d4892"
+                                "@value": "903bba8035446dccb9578852704c3936b06b3c9e3731dba988dded71cba4fdc4"
                             }
                         }
                     ]
@@ -182,7 +187,7 @@
             ]
         },
         {
-            "@id": "kb:data_piece2",
+            "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -191,11 +196,8 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 248,
-                    "uco-observable:dataPayload": {
-                        "@type": "xsd:base64Binary",
-                        "@value": "<base 64 encoded data of the file>"
-                    },
+                    "uco-observable:sizeInBytes": 1905,
+                    "uco-observable:dataPayload": "sSGyTg4OWr6s8A==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -205,7 +207,7 @@
                             },
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
-                                "@value": "befb6b14790081e9d79e9b533e227791033e952d04b5f07d577ad65d4806a7a9"
+                                "@value": "0ca956f49d8308da0d133ac43e8d9de7e0fcc3aa922d1997246bec1fd4a63fa8"
                             }
                         }
                     ]
@@ -213,64 +215,64 @@
             ]
         },
         {
-            "@id": "kb:relationship3",
+            "@id": "kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:data_piece1"
+                "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRangeFacet",
-                    "uco-observable:rangeOffset": 45156,
-                    "uco-observable:rangeSize": 512
+                    "uco-observable:rangeOffset": 99597824,
+                    "uco-observable:rangeSize": 325120
                 }
             ]
         },
         {
-            "@id": "kb:relationship4",
+            "@id": "kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:data_piece1"
+                "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRangeFacet",
-                    "uco-observable:rangeOffset": 45156,
-                    "uco-observable:rangeSize": 512
+                    "uco-observable:rangeOffset": 100899328,
+                    "uco-observable:rangeSize": 325120
                 }
             ]
         },
         {
-            "@id": "kb:relationship5",
+            "@id": "kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:data_piece2"
+                "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:DataRangeFacet",
-                    "uco-observable:rangeOffset": 57984,
-                    "uco-observable:rangeSize": 248
+                    "uco-observable:rangeOffset": 99923456,
+                    "uco-observable:rangeSize": 975360
                 }
             ]
         },
         {
-            "@id": "kb:android_image",
+            "@id": "kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac",
             "@type": [
                 "uco-observable:File",
                 "uco-observable:Image"
@@ -278,31 +280,23 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:fileSystemType": "NTFS",
+                    "uco-observable:fileSystemType": "NONE",
                     "uco-observable:isDirectory": false,
-                    "uco-observable:extension": "img",
-                    "uco-observable:fileName": "DFL-20140712-001C.img",
-                    "uco-observable:filePath": "C:/input_devices/DFL-20140712-001C.img",
+                    "uco-observable:extension": "dd",
+                    "uco-observable:fileName": "graphic-disorder_1305121235.dd",
+                    "uco-observable:filePath": "/Users/esc/NIST/graphic-disorder_1305121235.dd",
                     "uco-observable:modifiedTime": {
                         "@type": "xsd:dateTime",
-                        "@value": "2010-01-15T17:59:43.25Z"
+                        "@value": "2013-05-12T17:36:43.25Z"
                     },
-                    "accessedAction": {
+                    "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
-                        "@value": "2010-01-15T17:59:43.25Z"
-                    },
-                    "createdAction": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2010-01-15T17:59:43.25Z"
-                    },
-                    "uco-observable:metadataChangeTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2010-01-15T17:59:43.25Z"
+                        "@value": "2013-05-12T17:36:43.25Z"
                     }
                 },
                 {
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:sizeInBytes": 45654000,
+                    "uco-observable:sizeInBytes": 270865920,
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -312,7 +306,7 @@
                             },
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
-                                "@value": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f"
+                                "@value": "c7e3256e5873df286c803e2cba1a54e6e7c1bc8dfc0891a98e3b3d38c1981dbb"
                             }
                         }
                     ]
@@ -320,155 +314,156 @@
             ]
         },
         {
-            "@id": "kb:investigative_action1",
+            "@id": "kb:investigativeaction1-65b73dc0-8a4b-4be1-92b6-c45bedf1eb49",
             "@type": "case-investigation:InvestigativeAction",
-            "rdfs:comment": "TODO: Determine if it's better to group objects together using provenance records or to have a provenance record for each object.",
+            "rdfs:comment": "Extracting the fragments and their locations within the image file",
             "uco-core:name": "carved",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
-                "@value": "2010-01-20T17:59:43.25Z"
+                "@value": "2013-05-12T17:14:45.10Z"
             },
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
-                "@value": "2010-01-21T17:59:43.25Z"
+                "@value": "2013-05-12T17:36:43.25Z"
             },
             "uco-action:performer": {
-                "@id": "kb:role4"
+                "@id": "kb:role-7e760175-f38a-4d36-a70f-591668769538"
             },
             "uco-action:instrument": {
-                "@id": "kb:carving_tool1"
+                "@id": "kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:android_image"
+                    "@id": "kb:nistimage-05a9a342-6748-4e8b-97e2-6f4ec97e1eac"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:data_piece1"
+                    "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
                 },
                 {
-                    "@id": "kb:data_piece2"
+                    "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
                 },
                 {
-                    "@id": "kb:relationship3"
+                    "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
                 },
                 {
-                    "@id": "kb:relationship4"
+                    "@id": "kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1"
                 },
                 {
-                    "@id": "kb:provenance_record2"
+                    "@id": "kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342"
+                },
+                {
+                    "@id": "kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0"
+                },
+                {
+                    "@id": "kb:provenancerecord1-2eb22784-63ee-46ce-8a59-eb3820431109"
                 }
             ],
             "uco-action:location": {
-                "@id": "kb:forensic_lab1"
+                "@id": "kb:forensiclab-3858ce66-76d5-4dfc-9998-d0da19cbfaf3"
             },
             "uco-action:environment": {
-                "@id": "kb:forensic_lab_computer1"
+                "@id": "kb:forensiccomputer-6c270331-b53a-4536-8ac4-bd1f07f73745"
             }
         },
         {
-            "@id": "kb:investigative_action2",
+            "@id": "kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d",
             "@type": "case-investigation:InvestigativeAction",
             "rdfs:comment": "Start and end times are the same as investigative_action1 because this action was part of the same action that performed the carving.",
             "uco-core:name": "reconstructed",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
-                "@value": "2010-01-20T17:59:43.25Z"
+                "@value": "2013-05-12T17:14:45.10Z"
             },
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
-                "@value": "2010-01-21T17:59:43.25Z"
+                "@value": "2013-05-12T17:36:43.25Z"
             },
             "uco-action:performer": {
-                "@id": "kb:role4"
+                "@id": "kb:role-7e760175-f38a-4d36-a70f-591668769538"
             },
             "uco-action:instrument": {
-                "@id": "kb:carving_tool1"
+                "@id": "kb:tool-a40d8626-82d3-4f10-aa55-12b6553088cc"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:data_piece0"
+                    "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
                 },
                 {
-                    "@id": "kb:data_piece1"
+                    "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
                 },
                 {
-                    "@id": "kb:data_piece2"
+                    "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:reconstructed_file"
+                    "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8"
                 },
                 {
-                    "@id": "kb:relationship0"
+                    "@id": "kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697"
                 },
                 {
-                    "@id": "kb:relationship1"
+                    "@id": "kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070"
                 },
                 {
-                    "@id": "kb:relationship2"
+                    "@id": "kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f"
                 },
                 {
-                    "@id": "kb:provenance_record1"
+                    "@id": "kb:provenancerecord2-ae596806-cbe5-4c4c-8f54-33630f178eeb"
                 }
             ],
             "uco-action:location": {
-                "@id": "kb:forensic_lab1"
+                "@id": "kb:forensiclab-3858ce66-76d5-4dfc-9998-d0da19cbfaf3"
             },
             "uco-action:environment": {
-                "@id": "kb:forensic_lab_computer1"
+                "@id": "kb:forensiccomputer-6c270331-b53a-4536-8ac4-bd1f07f73745"
             }
         },
         {
-            "@id": "kb:provenance_record1",
+            "@id": "kb:provenancerecord2-ae596806-cbe5-4c4c-8f54-33630f178eeb",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
             "case-investigation:exhibitNumber": "ACME-676553402357-00",
             "uco-core:object": [
                 {
-                    "@id": "kb:relationship0"
+                    "@id": "kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697"
                 },
                 {
-                    "@id": "kb:relationship1"
+                    "@id": "kb:relationship1-cb15ce6d-f4ec-4363-8f07-1c44d3076070"
                 },
                 {
-                    "@id": "kb:relationship2"
+                    "@id": "kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f"
                 },
                 {
-                    "@id": "kb:reconstructed_file"
+                    "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8"
                 }
             ]
         },
         {
-            "@id": "kb:provenance_record2",
+            "@id": "kb:provenancerecord1-2eb22784-63ee-46ce-8a59-eb3820431109",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Carved data fragments",
             "case-investigation:exhibitNumber": "ACME-676553402357-01",
             "uco-core:object": [
                 {
-                    "@id": "kb:data_piece1"
+                    "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
                 },
                 {
-                    "@id": "kb:data_piece2"
+                    "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
                 },
                 {
-                    "@id": "kb:relationship3"
+                    "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
                 },
                 {
-                    "@id": "kb:relationship4"
-                }
-            ]
-        },
-        {
-            "@id": "kb:provenance_record3",
-            "@type": "case-investigation:ProvenanceRecord",
-            "uco-core:description": "JPG Header",
-            "case-investigation:exhibitNumber": "ACME-676553402357-02",
-            "uco-core:object": [
+                    "@id": "kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1"
+                },
                 {
-                    "@id": "kb:data_piece0"
+                    "@id": "kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342"
+                },
+                {
+                    "@id": "kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0"
                 }
             ]
         }
