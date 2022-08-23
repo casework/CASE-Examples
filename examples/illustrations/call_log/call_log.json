@@ -46,6 +46,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:ATT"
                     },
+                    "uco-observable:accountIdentifier": "AT123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -63,6 +64,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:Sprint"
                     },
+                    "uco-observable:accountIdentifier": "SP123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -80,6 +82,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:Verizon"
                     },
+                    "uco-observable:accountIdentifier": "VZ123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -97,6 +100,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:Zoom"
                     },
+                    "uco-observable:accountIdentifier": "user@example.org",
                     "uco-observable:isActive": true
                 },
                 {
