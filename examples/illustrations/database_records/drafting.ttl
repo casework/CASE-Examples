@@ -62,6 +62,12 @@ drafting:TableFieldFacet
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:recordFieldValue ;
+		] ,
+		[
+			sh:datatype xsd:boolean ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:recordFieldIsNull ;
 		]
 		;
 	sh:targetClass drafting:DatabaseRecordFacet ;
@@ -72,6 +78,14 @@ drafting:recordFieldName
 	rdfs:label "recordFieldName"@en ;
 	rdfs:comment "A field name of a database record value being identified."@en ;
 	rdfs:range xsd:string ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
+	.
+
+drafting:recordFieldIsNull
+	a owl:DatatypeProperty ;
+	rdfs:label "recordFieldIsNull"@en ;
+	rdfs:comment "Whether the specified database record field is null."@en ;
+	rdfs:range xsd:boolean ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
