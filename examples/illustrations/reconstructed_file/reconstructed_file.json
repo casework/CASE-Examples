@@ -360,7 +360,7 @@
                     "@id": "kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0"
                 },
                 {
-                    "@id": "kb:provenancerecord1-2eb22784-63ee-46ce-8a59-eb3820431109"
+                    "@id": "kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109"
                 }
             ],
             "uco-action:location": {
@@ -371,10 +371,36 @@
             }
         },
         {
+            "@id": "kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:description": "Carved data fragments",
+            "case-investigation:exhibitNumber": "ACME-676553402357-01",
+            "uco-core:object": [
+                {
+                    "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
+                },
+                {
+                    "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
+                },
+                {
+                    "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
+                },
+                {
+                    "@id": "kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1"
+                },
+                {
+                    "@id": "kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342"
+                },
+                {
+                    "@id": "kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0"
+                }
+            ]
+        },
+        {
             "@id": "kb:investigativeaction2-9eadcaa9-4ebe-4e26-a6f0-a87c6ce5940d",
             "@type": "case-investigation:InvestigativeAction",
             "rdfs:comment": "Start and end times are the same as investigative_action1 because this action was part of the same action that performed the carving.",
-            "uco-core:name": "reconstructed",
+            "uco-core:name": "repaired",
             "uco-action:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2013-05-12T17:14:45.10Z"
@@ -398,6 +424,9 @@
                 },
                 {
                     "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
+                },
+                {
+                    "@id": "kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109"
                 }
             ],
             "uco-action:result": [
@@ -414,7 +443,7 @@
                     "@id": "kb:relationship2-d0f3ca63-665c-416b-8b03-b9948db0185f"
                 },
                 {
-                    "@id": "kb:provenancerecord2-ae596806-cbe5-4c4c-8f54-33630f178eeb"
+                    "@id": "kb:provenancerecord1-ae596806-cbe5-4c4c-8f54-33630f178eeb"
                 }
             ],
             "uco-action:location": {
@@ -425,7 +454,7 @@
             }
         },
         {
-            "@id": "kb:provenancerecord2-ae596806-cbe5-4c4c-8f54-33630f178eeb",
+            "@id": "kb:provenancerecord1-ae596806-cbe5-4c4c-8f54-33630f178eeb",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
             "case-investigation:exhibitNumber": "ACME-676553402357-00",
@@ -441,32 +470,6 @@
                 },
                 {
                     "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8"
-                }
-            ]
-        },
-        {
-            "@id": "kb:provenancerecord1-2eb22784-63ee-46ce-8a59-eb3820431109",
-            "@type": "case-investigation:ProvenanceRecord",
-            "uco-core:description": "Carved data fragments",
-            "case-investigation:exhibitNumber": "ACME-676553402357-01",
-            "uco-core:object": [
-                {
-                    "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
-                },
-                {
-                    "@id": "kb:fragment1-8428b15f-f61f-47f8-9659-98b37f3507ad"
-                },
-                {
-                    "@id": "kb:fragment2-08eee8f2-5ee8-4140-8ebd-1a7638adb9f8"
-                },
-                {
-                    "@id": "kb:relationship3-5e3b2d5f-7432-4d0d-99d6-ba0f14577ce1"
-                },
-                {
-                    "@id": "kb:relationship4-b83f1b99-c433-4411-900b-9b5fd76f5342"
-                },
-                {
-                    "@id": "kb:relationship5-e53ff852-eb49-4e1b-bb07-a499ee8f5df0"
                 }
             ]
         }
