@@ -90,20 +90,23 @@
         },
         {
             "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8",
-            "@type": "uco-observable:ContentData",
+            "@type": [
+                "uco-observable:ContentData",
+                "uco-drafting:RecoveredObject"
+            ],    
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:RecoveredObjectFacet",
-                    "uco-observable:contentRecoveredStatus": {
-                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "uco-drafting:contentRecoveredStatus": {
+                        "@type": "uco-drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "uco-observable:metadataRecoveredStatus": {
-                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "uco-drafting:metadataRecoveredStatus": {
+                        "@type": "uco-drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "uco-observable:nameRecoveredStatus": {
-                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "uco-drafting:nameRecoveredStatus": {
+                        "@type": "uco-drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     }
                 },
