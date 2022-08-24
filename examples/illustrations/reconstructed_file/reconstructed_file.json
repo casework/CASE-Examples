@@ -93,7 +93,7 @@
             "@type": [
                 "uco-observable:ContentData",
                 "uco-drafting:RecoveredObject"
-            ],    
+            ],
             "uco-core:hasFacet": [
                 {
                     "@type": "drafting:RecoveredObjectFacet",
@@ -477,4 +477,3 @@
         }
     ]
 }
-
