@@ -98,6 +98,7 @@
                         "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": 1343448,
+                    "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -277,21 +278,21 @@
             "@id": "kb:provenancerecord2-d964656f-ff2b-4a7c-ad6d-c5880ae98594",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Carved data fragments",
-            "case-investigation:exhibitNumber": "ACME-676553402357-01",
+            "case-investigation:exhibitNumber": "ESC-676553402388-02",
             "uco-core:object": [
                 {
                     "@id": "kb:fragment1-ab85beb5-a988-42a9-b207-de93b5b4abd5d"
                 },
                 {
                     "@id": "kb:relationship2-b83f1b99-c433-4411-900b-9b5fd76f5342"
-                },
+                }
             ]
         },
         {
             "@id": "kb:provenancerecord3-84e7f9c8-6a8f-4edd-9763-19f09d4f1ffc",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "JPG Header",
-            "case-investigation:exhibitNumber": "ACME-676553402357-02",
+            "case-investigation:exhibitNumber": "ESC-676553402388-03",
             "uco-core:object": [
                 {
                     "@id": "kb:fragment0-9b7a7c0a-9927-42b9-aa2a-a7dfdb87b9f7"
@@ -356,7 +357,7 @@
             "@id": "kb:provenancerecord1-581043d9-57b1-47b2-a44f-bc36addf2d9d",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
-            "case-investigation:exhibitNumber": "ACME-676553402357-00",
+            "case-investigation:exhibitNumber": "ESC-676553402388-01",
             "uco-core:object": [
                 {
                     "@id": "kb:relationship0-62b63c35-8273-445e-9115-61e51613eb3b"

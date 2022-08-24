@@ -117,6 +117,7 @@
                         "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": 1625600,
+                    "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
                         {
                             "@type": "uco-types:Hash",
@@ -144,6 +145,7 @@
                         "@value": "Big-endian"
                     },
                     "uco-observable:sizeInBytes": 325120,
+                    "uco-observable:mimeType": "image/jpg",
                     "uco-observable:dataPayload": "/9j/4R5+RXhpZg==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
@@ -374,7 +376,7 @@
             "@id": "kb:provenancerecord2-2eb22784-63ee-46ce-8a59-eb3820431109",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Carved data fragments",
-            "case-investigation:exhibitNumber": "ACME-676553402357-01",
+            "case-investigation:exhibitNumber": "ESC-676553402389-02",
             "uco-core:object": [
                 {
                     "@id": "kb:fragment0-b0606dc6-b89b-440e-8344-41cf6bc54f15"
@@ -457,7 +459,7 @@
             "@id": "kb:provenancerecord1-ae596806-cbe5-4c4c-8f54-33630f178eeb",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:description": "Reconstructed JPG File",
-            "case-investigation:exhibitNumber": "ACME-676553402357-00",
+            "case-investigation:exhibitNumber": "ESC-676553402389-01",
             "uco-core:object": [
                 {
                     "@id": "kb:relationship0-1d944e25-c488-41e4-90a3-c3a2cfcd7697"
