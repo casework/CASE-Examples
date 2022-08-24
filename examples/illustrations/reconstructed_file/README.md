@@ -17,3 +17,15 @@ data pieces where extracted from within the [NIST File Carving image files](http
 
 In the `repaired_file` example, the `provenancerecord3` object points to the JPG file header (`data_piece0`) that was added
 by the carving tool in order to repair and render visible the carved fragment.
+
+### Reconstructed File
+
+The reconstructed file can be extracted using dd as follows:
+
+```
+% dd if=graphic-disorder_1305121235.dd bs=512 skip=194527 count=635 > reconstructed_file.jpg
+% dd if=graphic-disorder_1305121235.dd bs=512 skip=197069 count=635 >> reconstructed_file.jpg
+% dd if=graphic-disorder_1305121235.dd bs=1 skip=99923456 count=975001 >> reconstructed_file.jpg
+% shasum -a 256 reconstructed_file 
+ee8b9c17c44e128e9e95d60fe219e95feae53c463b01016a312f8c5b732f21de  reconstructed_file.jpg
+```
