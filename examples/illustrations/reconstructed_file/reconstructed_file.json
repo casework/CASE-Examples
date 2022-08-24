@@ -143,7 +143,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 635,
+                    "uco-observable:sizeInBytes": 325120,
                     "uco-observable:dataPayload": "/9j/4R5+RXhpZg==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
@@ -171,7 +171,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 635,
+                    "uco-observable:sizeInBytes": 325120,
                     "uco-observable:dataPayload": "W+ZAudrTwDd8ww==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
@@ -199,7 +199,7 @@
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
                         "@value": "Big-endian"
                     },
-                    "uco-observable:sizeInBytes": 1905,
+                    "uco-observable:sizeInBytes": 975001,
                     "uco-observable:dataPayload": "sSGyTg4OWr6s8A==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
@@ -270,7 +270,7 @@
                 {
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 99923456,
-                    "uco-observable:rangeSize": 975360
+                    "uco-observable:rangeSize": 975001
                 }
             ]
         },
