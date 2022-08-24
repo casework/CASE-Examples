@@ -21,6 +21,9 @@ all: \
 	$(MAKE) \
 	  --directory examples/illustrations
 
+.PHONY: \
+  download
+
 .dependencies.done.log: \
   .venv.done.log
 	$(MAKE) \
@@ -119,3 +122,7 @@ clean:
 	  .venv.done.log
 	@rm -rf \
 	  venv
+
+download: \
+  .venv-pre-commit/var/.pre-commit-built.log \
+  .venv.done.log

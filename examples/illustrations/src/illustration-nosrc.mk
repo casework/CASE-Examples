@@ -40,6 +40,10 @@ all: \
   $(example_name)_validation-develop.ttl \
   $(example_name)_validation-unstable.ttl
 
+$(RDF_TOOLKIT_JAR):
+	@echo "ERROR:illustration-nosrc.mk:Could not find rdf-toolkit.jar.  Did you run 'make' or 'make download' from the top source directory ($(top_srcdir))?" >&2
+	@test -r $@
+
 $(example_name)_validation.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
