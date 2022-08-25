@@ -10,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:actor1",
+            "@id": "kb:actor1-0058fc60-4b1b-4ad4-ba7e-231d00d40973",
             "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
@@ -28,74 +28,74 @@
             ]
         },
         {
-            "@id": "kb:application1",
+            "@id": "kb:application1-ed4caa32-84c8-4813-b21d-f350e47cba7c",
             "@type": "uco-observable:Application"
         },
         {
-            "@id": "kb:application2",
+            "@id": "kb:application2-db5e8cbe-70e7-4dff-b981-2c5751b7923c",
             "@type": "uco-observable:Application"
         },
         {
-            "@id": "kb:facebook_org",
+            "@id": "kb:facebook_org-84a47032-567a-4580-9b88-f0141abdc7bf",
             "@type": "uco-identity:Organization",
             "uco-core:name": "Google"
         },
         {
-            "@id": "kb:google_org",
+            "@id": "kb:google_org-e2ec4537-c2d4-46c5-b159-6f90e84c2e71",
             "@type": "uco-identity:Organization",
             "uco-core:name": "Google"
         },
         {
-            "@id": "kb:associated-account1",
+            "@id": "kb:associated-account1-40d3bfa5-b808-4cf3-8f3e-4c8ea2d79686",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
-                "@id": "kb:actor1"
+                "@id": "kb:actor1-0058fc60-4b1b-4ad4-ba7e-231d00d40973"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:facebook_account1"
+                    "@id": "kb:facebook_account1-c188af2d-9651-44a8-8d4c-07a1f5f1aa20"
                 }
             ],
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:associated-account2",
+            "@id": "kb:associated-account2-6620a818-7584-4760-a2cf-ff91aa742205",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
-                "@id": "kb:actor1"
+                "@id": "kb:actor1-0058fc60-4b1b-4ad4-ba7e-231d00d40973"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:google_account1"
+                    "@id": "kb:google_account1-f514a133-bca6-488c-a0a3-44c40f9ac766"
                 }
             ],
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:associated-account3",
+            "@id": "kb:associated-account3-db2cb91c-c31d-496e-9802-bb15f24aa8c5",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
-                "@id": "kb:actor1"
+                "@id": "kb:actor1-0058fc60-4b1b-4ad4-ba7e-231d00d40973"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:email_account1"
+                    "@id": "kb:email_account1-e798e18c-0bef-4883-83df-e2710c4bc7e4"
                 }
             ],
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:facebook_account1",
+            "@id": "kb:facebook_account1-c188af2d-9651-44a8-8d4c-07a1f5f1aa20",
             "@type": "uco-observable:DigitalAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "1235556677@facebook.net",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:facebook_org"
+                        "@id": "kb:facebook_org-84a47032-567a-4580-9b88-f0141abdc7bf"
                     }
                 },
                 {
@@ -122,7 +122,7 @@
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application1"
+                        "@id": "kb:application1-ed4caa32-84c8-4813-b21d-f350e47cba7c"
                     }
                 },
                 {
@@ -140,29 +140,29 @@
             ]
         },
         {
-            "@id": "kb:associated-account4",
+            "@id": "kb:associated-account4-419252da-6d0b-4f93-b070-75b9a5bc1cc2",
             "@type": "uco-core:Relationship",
             "rdfs:comment": "It is possible isDirectional should be false.  This is being tracked in UCO OC-135.",
             "uco-core:source": {
-                "@id": "kb:facebook_account1"
+                "@id": "kb:facebook_account1-c188af2d-9651-44a8-8d4c-07a1f5f1aa20"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:email_account1"
+                    "@id": "kb:email_account1-e798e18c-0bef-4883-83df-e2710c4bc7e4"
                 }
             ],
             "uco-core:kindOfRelationship": "Associated_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:google_account1",
+            "@id": "kb:google_account1-f514a133-bca6-488c-a0a3-44c40f9ac766",
             "@type": "uco-observable:DigitalAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "willyROX@gmail.com",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:google_org"
+                        "@id": "kb:google_org-e2ec4537-c2d4-46c5-b159-6f90e84c2e71"
                     },
                     "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
@@ -196,7 +196,7 @@
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application2"
+                        "@id": "kb:application2-db5e8cbe-70e7-4dff-b981-2c5751b7923c"
                     }
                 },
                 {
@@ -214,34 +214,34 @@
             ]
         },
         {
-            "@id": "kb:associated-account4",
+            "@id": "kb:associated-account5-8222be1c-1e4a-4c1d-a631-bb3aa9743971",
             "@type": "uco-observable:ObservableRelationship",
             "rdfs:comment": "It is possible isDirectional should be false.  This is being tracked in UCO OC-135.",
             "uco-core:source": {
-                "@id": "kb:google_account1"
+                "@id": "kb:google_account1-f514a133-bca6-488c-a0a3-44c40f9ac766"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:email_account1"
+                    "@id": "kb:email_account1-e798e18c-0bef-4883-83df-e2710c4bc7e4"
                 }
             ],
             "uco-core:kindOfRelationship": "Associated_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:email_account1",
+            "@id": "kb:email_account1-e798e18c-0bef-4883-83df-e2710c4bc7e4",
             "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:EmailAccountFacet",
                     "uco-observable:emailAddress": {
-                        "@id": "kb:email-address1"
+                        "@id": "kb:email-address1-eeb346b0-470d-402b-b9ce-17134b1c572e"
                     }
                 }
             ]
         },
         {
-            "@id": "kb:email-address1",
+            "@id": "kb:email-address1-eeb346b0-470d-402b-b9ce-17134b1c572e",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
