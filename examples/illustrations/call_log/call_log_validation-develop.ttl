@@ -13,10 +13,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/ATT> ;
+				observable:accountIssuer <http://example.org/kb/att-466a0ea8-b22f-4175-8119-846bec8f7831> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:ATT ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:att-466a0ea8-b22f-4175-8119-846bec8f7831 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -32,10 +32,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/Sprint> ;
+				observable:accountIssuer <http://example.org/kb/sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:Sprint ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -51,10 +51,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/Verizon> ;
+				observable:accountIssuer <http://example.org/kb/verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:Verizon ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -70,10 +70,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/Zoom> ;
+				observable:accountIssuer <http://example.org/kb/zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:Zoom ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;

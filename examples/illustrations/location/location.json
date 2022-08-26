@@ -11,7 +11,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:location1",
+            "@id": "kb:location-4511219e-a924-4ba5-aee7-dfad5a2c9c05",
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "@id": "kb:location2",
+            "@id": "kb:location-b579264d-6e30-4055-bf9b-72390364f224",
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
