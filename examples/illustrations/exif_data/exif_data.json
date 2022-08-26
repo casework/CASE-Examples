@@ -21,7 +21,7 @@
             "uco-core:name": "Canon"
         },
         {
-            "@id": "kb:camera1",
+            "@id": "kb:camera1-a59ca7f2-cf15-4800-9dd3-1a2df40c6f6e",
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
@@ -36,13 +36,13 @@
             ]
         },
         {
-            "@id": "kb:relationship1",
+            "@id": "kb:relationship1-03f0f4a6-661a-46f8-a602-15d9d1b67f32",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:digital_photograph1"
+                "@id": "kb:digital_photograph1-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae"
             },
             "uco-core:target": {
-                "@id": "kb:device_partition3"
+                "@id": "kb:device_partition3-f1a14892-8179-48aa-a74b-e3e434a9c0c1"
             },
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Contained_Within",
@@ -54,7 +54,7 @@
             ]
         },
         {
-            "@id": "kb:digital_photograph1",
+            "@id": "kb:digital_photograph1-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
@@ -147,7 +147,7 @@
             ]
         },
         {
-            "@id": "kb:camera_action1",
+            "@id": "kb:camera_action1-7995f522-6388-463f-855e-e08130477744",
             "@type": "uco-action:Action",
             "uco-core:name": "photo_taken",
             "uco-action:startTime": {
@@ -155,43 +155,43 @@
                 "@value": "2010-01-15T17:59:43.25Z"
             },
             "uco-action:instrument": {
-                "@id": "kb:camera1"
+                "@id": "kb:camera1-a59ca7f2-cf15-4800-9dd3-1a2df40c6f6e"
             },
             "uco-action:result": [
                 {
-                    "@id": "kb:digital_photograph1"
+                    "@id": "kb:digital_photograph1-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae"
                 }
             ],
             "uco-action:location": {
-                "@id": "kb:location1"
+                "@id": "kb:location1-a81948a1-e395-416a-9322-5742866f7020"
             }
         },
         {
-            "@id": "kb:annotator_tool1",
+            "@id": "kb:annotator_tool1-ca41faa8-a59c-4321-b047-4d916f75b1e8",
             "@type": "uco-tool:AnalyticTool"
         },
         {
-            "@id": "kb:examiner1",
+            "@id": "kb:examiner1-88a08acc-dad2-4964-be3b-8b70e11a4f4d",
             "@type": "uco-identity:Person"
         },
         {
-            "@id": "kb:forensic_lab_computer1",
+            "@id": "kb:forensic_lab_computer1-4e95a8d3-066a-4600-8ad0-8b4d0241ce5c",
             "@type": "uco-observable:Device"
         },
         {
-            "@id": "kb:location1",
+            "@id": "kb:location1-a81948a1-e395-416a-9322-5742866f7020",
             "@type": "uco-location:Location"
         },
         {
-            "@id": "kb:device_partition3",
+            "@id": "kb:device_partition3-f1a14892-8179-48aa-a74b-e3e434a9c0c1",
             "@type": "uco-observable:DiskPartition"
         },
         {
-            "@id": "kb:forensic_lab1",
+            "@id": "kb:forensic_lab1-fae4ff1e-7d06-49da-9c89-da37ef612b25",
             "@type": "uco-location:Location"
         },
         {
-            "@id": "kb:annotation1",
+            "@id": "kb:annotation1-b8258799-b465-4182-904b-c0aa73a35b0b",
             "@type": "uco-core:Annotation",
             "uco-core:description": "Photo was taken by a Canon digital camera.",
             "uco-core:tag": [
@@ -200,11 +200,11 @@
                 "extracted"
             ],
             "uco-core:object": {
-                "@id": "kb:camera_action1"
+                "@id": "kb:camera_action1-7995f522-6388-463f-855e-e08130477744"
             }
         },
         {
-            "@id": "kb:forensic_action7",
+            "@id": "kb:forensic_action7-306e44f8-446d-4cff-a2fd-9e54affb1fa3",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "annotated",
             "uco-action:startTime": {
@@ -216,21 +216,21 @@
                 "@value": "2010-01-15T18:59:43.25Z"
             },
             "uco-action:performer": {
-                "@id": "kb:examiner1"
+                "@id": "kb:examiner1-88a08acc-dad2-4964-be3b-8b70e11a4f4d"
             },
             "uco-action:instrument": {
-                "@id": "kb:annotator_tool1"
+                "@id": "kb:annotator_tool1-ca41faa8-a59c-4321-b047-4d916f75b1e8"
             },
             "uco-action:result": [
                 {
-                    "@id": "kb:annotation1"
+                    "@id": "kb:annotation1-b8258799-b465-4182-904b-c0aa73a35b0b"
                 }
             ],
             "uco-action:location": {
-                "@id": "kb:forensic_lab1"
+                "@id": "kb:forensic_lab1-fae4ff1e-7d06-49da-9c89-da37ef612b25"
             },
             "uco-action:environment": {
-                "@id": "kb:forensic_lab_computer1"
+                "@id": "kb:forensic_lab_computer1-4e95a8d3-066a-4600-8ad0-8b4d0241ce5c"
             }
         }
     ]

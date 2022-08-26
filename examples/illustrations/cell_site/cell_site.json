@@ -124,7 +124,7 @@
                 {
                     "@type": "drafting:CapturedTelecommunicationsInformationFacet",
                     "drafting:captureCellSite": {
-                        "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+                        "@id": "kb:cell-cite-204-16-1014-13399-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
                     },
                     "drafting:interceptedCallState": "idle",
                     "observable:endTime": {
@@ -241,7 +241,7 @@
                 "sosa:Observation"
             ],
             "sosa:hasFeatureOfInterest": {
-                "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+                "@id": "kb:cell-cite-204-16-1014-13399-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
             },
             "sosa:resultTime": {
                 "@type": "xsd:dateTime",
@@ -259,7 +259,7 @@
                 "sosa:Observation"
             ],
             "sosa:hasFeatureOfInterest": {
-                "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+                "@id": "kb:cell-cite-204-16-1014-13399-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
             },
             "sosa:hasResult": {
                 "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
@@ -282,14 +282,14 @@
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Located_At",
             "uco-core:source": {
-                "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+                "@id": "kb:cell-cite-204-16-1014-13399-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
             },
             "uco-core:target": {
                 "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
             }
         },
         {
-            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
+            "@id": "kb:cell-cite-204-16-1014-13399-cc0e0667-eadf-4b2e-9618-3f62b1bdae26",
             "@type": "drafting:CellSite",
             "uco-core:hasFacet": [
                 {
