@@ -10,19 +10,19 @@
     },
     "@graph": [
         {
-            "@id": "kb:ATT-466a0ea8-b22f-4175-8119-846bec8f7831",
+            "@id": "kb:att-466a0ea8-b22f-4175-8119-846bec8f7831",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:Sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202",
+            "@id": "kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:Verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12",
+            "@id": "kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:Zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b",
+            "@id": "kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b",
             "@type": "uco-identity:Organization"
         },
         {
@@ -44,7 +44,7 @@
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:ATT-466a0ea8-b22f-4175-8119-846bec8f7831"
+                        "@id": "kb:att-466a0ea8-b22f-4175-8119-846bec8f7831"
                     },
                     "uco-observable:isActive": true
                 },
@@ -61,7 +61,7 @@
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:Sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202"
+                        "@id": "kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202"
                     },
                     "uco-observable:isActive": true
                 },
@@ -78,7 +78,7 @@
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:Verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12"
+                        "@id": "kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12"
                     },
                     "uco-observable:isActive": true
                 },
@@ -95,7 +95,7 @@
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:Zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b"
+                        "@id": "kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b"
                     },
                     "uco-observable:isActive": true
                 },
