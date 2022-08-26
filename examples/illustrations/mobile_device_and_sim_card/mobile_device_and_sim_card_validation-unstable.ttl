@@ -45,16 +45,7 @@
 				sh:or (
 					[
 						sh:datatype vocabulary:AccountTypeVocab ;
-						sh:in (
-							"ldap"^^vocabulary:AccountTypeVocab
-							"nis"^^vocabulary:AccountTypeVocab
-							"openid"^^vocabulary:AccountTypeVocab
-							"radius"^^vocabulary:AccountTypeVocab
-							"tacacs"^^vocabulary:AccountTypeVocab
-							"unix"^^vocabulary:AccountTypeVocab
-							"windows_domain"^^vocabulary:AccountTypeVocab
-							"windows_local"^^vocabulary:AccountTypeVocab
-						) ;
+						sh:in vocabulary:AccountTypeVocab-members ;
 					]
 					[
 						sh:datatype xsd:string ;
@@ -99,16 +90,7 @@
 				sh:or (
 					[
 						sh:datatype vocabulary:AccountTypeVocab ;
-						sh:in (
-							"ldap"^^vocabulary:AccountTypeVocab
-							"nis"^^vocabulary:AccountTypeVocab
-							"openid"^^vocabulary:AccountTypeVocab
-							"radius"^^vocabulary:AccountTypeVocab
-							"tacacs"^^vocabulary:AccountTypeVocab
-							"unix"^^vocabulary:AccountTypeVocab
-							"windows_domain"^^vocabulary:AccountTypeVocab
-							"windows_local"^^vocabulary:AccountTypeVocab
-						) ;
+						sh:in vocabulary:AccountTypeVocab-members ;
 					]
 					[
 						sh:datatype xsd:string ;
