@@ -22,10 +22,10 @@
             "uco-core:name": "Microsoft"
         },
         {
-            "@id": "kb:forensic_lab_computer1-a730c324-49e6-4b12-869e-6addd946545d",
+            "@id": "kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d",
             "@type": "uco-observable:Device",
             "location": {
-                "@id": "kb:forensic_lab1-2514fffb-affc-43be-a3bb-be1dd606eff0"
+                "@id": "kb:forensic_lab-2514fffb-affc-43be-a3bb-be1dd606eff0"
             },
             "uco-core:hasFacet": [
                 {

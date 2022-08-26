@@ -11,7 +11,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:digital_photograph_thumbnail1-a4e05bbf-f533-43a5-abaf-e8907afdc7a0",
+            "@id": "kb:digital_photograph_thumbnail-a4e05bbf-f533-43a5-abaf-e8907afdc7a0",
             "rdfs:seeAlso": {
                 "@id": "https://unifiedcyberontology.atlassian.net/browse/OC-222"
             },
@@ -43,13 +43,13 @@
             ]
         },
         {
-            "@id": "kb:relationship0-e463912d-2ebb-4558-9990-3391eef56c4d",
+            "@id": "kb:relationship-e463912d-2ebb-4558-9990-3391eef56c4d",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:digital_photograph_thumbnail1-a4e05bbf-f533-43a5-abaf-e8907afdc7a0"
+                "@id": "kb:digital_photograph_thumbnail-a4e05bbf-f533-43a5-abaf-e8907afdc7a0"
             },
             "uco-core:target": {
-                "@id": "kb:digital_photograph1-fb36765f-2bd6-4763-9a3a-be32731162ce"
+                "@id": "kb:digital_photograph-fb36765f-2bd6-4763-9a3a-be32731162ce"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -62,7 +62,7 @@
             ]
         },
         {
-            "@id": "kb:digital_photograph1-fb36765f-2bd6-4763-9a3a-be32731162ce",
+            "@id": "kb:digital_photograph-fb36765f-2bd6-4763-9a3a-be32731162ce",
             "@type": "uco-observable:RasterPicture",
             "uco-core:hasFacet": [
                 {

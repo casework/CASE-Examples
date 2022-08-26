@@ -63,7 +63,7 @@
             "uco-core:name": "Apple"
         },
         {
-            "@id": "kb:trace-relationship1-44bc4b9d-680d-499f-9db1-80af07e11bdc",
+            "@id": "kb:trace-relationship-44bc4b9d-680d-499f-9db1-80af07e11bdc",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:sim-card-8b2024b5-1e73-405c-b89f-6e4be86692ef"
@@ -85,7 +85,7 @@
                     "uco-observable:ICCID": "456673345673436xxx",
                     "IMSI": [
                         {
-                            "@id": "kb:mobile-account2-05328472-66de-4290-8c95-0984504e7279"
+                            "@id": "kb:mobile-account-05328472-66de-4290-8c95-0984504e7279"
                         }
                     ],
                     "uco-observable:SIMType": "USIM",
@@ -102,19 +102,19 @@
             "uco-core:name": "Vodafone"
         },
         {
-            "@id": "kb:device-account-relationship1-25eeee57-4d61-49ba-95bf-919277cf9749",
+            "@id": "kb:device-account-relationship-25eeee57-4d61-49ba-95bf-919277cf9749",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
                 "@id": "kb:mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a"
             },
             "uco-core:target": {
-                "@id": "kb:mobile-account1-09da8ec2-8d6c-41e3-8bd9-bfd06a550141"
+                "@id": "kb:mobile-account-09da8ec2-8d6c-41e3-8bd9-bfd06a550141"
             },
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:mobile-account1-09da8ec2-8d6c-41e3-8bd9-bfd06a550141",
+            "@id": "kb:mobile-account-09da8ec2-8d6c-41e3-8bd9-bfd06a550141",
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
@@ -132,7 +132,7 @@
             ]
         },
         {
-            "@id": "kb:mobile-account2-05328472-66de-4290-8c95-0984504e7279",
+            "@id": "kb:mobile-account-05328472-66de-4290-8c95-0984504e7279",
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
