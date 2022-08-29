@@ -1,0 +1,31 @@
+SELECT DISTINCT ?lCellSiteIdentifier ?lCellSiteLocationAreaCode ?lConnectionStartTime ?lConnectionEndTime
+WHERE
+{
+  ?nConnectedRelationship
+    a uco-observable:ObservableRelationship ;
+    uco-core:source kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789 ;
+    uco-core:target ?nCellSite ;
+    uco-core:kindOfRelationship "Connected_To"
+    .
+    OPTIONAL {
+      ?nConnectedRelationship uco-observable:startTime ?lConnectionStartTime .
+    }
+    OPTIONAL {
+      ?nConnectedRelationship uco-observable:endTime ?lConnectionEndTime .
+    }
+
+  ?nCellSite
+    a drafting:CellSite ;
+    uco-core:hasFacet ?nCellSiteFacet ;
+    .
+
+  ?nCellSiteFacet
+    a drafting:CellSiteFacet ;
+    .
+    OPTIONAL {
+      ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
+    }
+    OPTIONAL {
+      ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
+    }
+}

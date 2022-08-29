@@ -1,0 +1,121 @@
+{
+    "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting#",
+        "kb": "http://example.org/kb/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
+        },
+        {
+            "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
+            "@type": "uco-observable:Device",
+            "uco-observable:hasChanged": true,
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
+                    "uco-observable:model": "SM-G925F",
+                    "uco-observable:serialNumber": "RF8H31GS5SF"
+                },
+                {
+                    "@type": "uco-observable:MobileDeviceFacet",
+                    "uco-observable:IMEI": "356420075722843"
+                },
+                {
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "uco-core:name": "Android",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
+                    "uco-observable:version": "6.0.1"
+                },
+                {
+                    "@type": "uco-observable:BluetoothAddressFacet",
+                    "uco-core:name": "",
+                    "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
+                },
+                {
+                    "@type": "uco-observable:WifiAddressFacet",
+                    "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
+                }
+            ]
+        },
+        {
+            "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
+            },
+            "uco-core:target": {
+                "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
+            "@type": "uco-observable:SIMCard",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:SIMCardFacet",
+                    "uco-observable:carrier": {
+                        "@type": "uco-identity:Identity",
+                        "uco-core:name": "Telcom Italia"
+                    },
+                    "uco-observable:ICCID": "89390100002217635543",
+                    "uco-observable:IMSI": "1234567890ABCDEF"
+                }
+            ]
+        },
+        {
+            "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
+            "@type": "uco-observable:MobileAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIdentifier": "1235557890",
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@type": "uco-observable:MobileAccountFacet",
+                    "uco-observable:IMSI": "1234567890ABCDEF",
+                    "uco-observable:MSISDN": "3662158453"
+                }
+            ]
+        },
+        {
+            "@id": "kb:afc48c35-c65d-41e4-843b-720f1ad23d16",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:12Z"
+            },
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-core:source": {
+                "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+            },
+            "uco-core:target": {
+                "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+            },
+            "uco-core:kindOfRelationship": "Connected_To",
+            "uco-core:isDirectional": true
+        }
+    ]
+}

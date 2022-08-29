@@ -1,0 +1,16 @@
+[
+    {
+        "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
+        "@type": "drafting:CellSite",
+        "uco-core:hasFacet": [
+            {
+                "@type": "drafting:CellSiteFacet",
+                "drafting:cellSiteType": "GSM",
+                "drafting:cellSiteCountryCode": "204",
+                "drafting:cellSiteNetworkCode": "16",
+                "drafting:cellSiteLocationAreaCode": "1014",
+                "drafting:cellSiteIdentifier": "13399"
+            }
+        ]
+    }
+]

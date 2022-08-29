@@ -505,10 +505,6 @@
                         "@value": "2017-06-22T07:36:24.35Z"
                     },
                     "uco-observable:storageCapacityInBytes": 11000000000
-                },
-                {
-                    "@type": "uco-observable:MobileAccountFacet",
-                    "uco-observable:MSISDN": "1239275339"
                 }
             ]
         },
@@ -694,7 +690,6 @@
                     ],
                     "uco-observable:keypadUnlockCode": "123789",
                     "uco-observable:IMEI": "359305065690067",
-                    "uco-observable:MSISDN": "1237471334",
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-21T06:36:24.35Z"
@@ -749,6 +744,19 @@
                     "uco-observable:MSISDN": "1237471334"
                 }
             ]
+        },
+        {
+            "@id": "kb:device-account-relationship2",
+            "@type": "uco-core:Relationship",
+            "uco-core:source": {
+                "@id": "kb:clytemnestra-device-uuid"
+            },
+            "uco-core:target": {
+                "@id": "kb:clytemnestra-mobileaccount-uuid"
+            },
+            "rdfs:comment": "TODO: 'Has_Account' is not in uco-vocabulary:ObservableObjectRelationshipVocab.",
+            "uco-core:kindOfRelationship": "Has_Account",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:investigative-action1-uuid",
