@@ -20,7 +20,7 @@ drafting:TableField
 	rdfs:label "TableField"@en ;
 	rdfs:comment "A database table field and its associated value contained within a relational database."@en ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
-	sh:targetClass drafting:DatabaseRecord ;
+	sh:targetClass drafting:TableField ;
 	.
 
 drafting:TableFieldFacet

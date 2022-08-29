@@ -67,10 +67,10 @@
         },
         {
             "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2",
-            "@type": "drafting:DatabaseRecord",
+            "@type": "drafting:TableField",
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:DatabaseRecordFacet",
+                    "@type": "drafting:TableFieldFacet",
                     "drafting:recordFieldName": "message_content",
                     "drafting:recordFieldValue": "Hello World",
                     "drafting:recordRowID": "12345",
