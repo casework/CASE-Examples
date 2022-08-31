@@ -175,10 +175,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:accountIssuer <http://example.org/kb/olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -194,10 +194,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:accountIssuer <http://example.org/kb/olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -213,10 +213,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:accountIssuer <http://example.org/kb/olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;

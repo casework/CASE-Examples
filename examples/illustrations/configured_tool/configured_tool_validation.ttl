@@ -58,10 +58,10 @@
 			sh:focusNode [
 				a uco-tool:ConfigurationSettingType ;
 				uco-tool:itemName "ruleset" ;
-				uco-tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+				uco-tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
 				uco-tool:itemType "external-ruleset" ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->drafting:itemObject' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:file-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->drafting:itemObject' ;
 			sh:resultPath drafting:itemObject ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -79,10 +79,10 @@
 			sh:focusNode [
 				a uco-tool:ConfigurationSettingType ;
 				uco-tool:itemName "ruleset" ;
-				uco-tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+				uco-tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
 				uco-tool:itemType "external-ruleset" ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->uco-tool:itemValue' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:file-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->uco-tool:itemValue' ;
 			sh:resultPath uco-tool:itemValue ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
