@@ -40,6 +40,9 @@ all: \
   $(example_name)_validation-develop.ttl \
   $(example_name)_validation-unstable.ttl
 
+.PHONY: \
+  check-pytest
+
 $(RDF_TOOLKIT_JAR):
 	@echo "ERROR:illustration-nosrc.mk:Could not find rdf-toolkit.jar.  Did you run 'make' or 'make download' from the top source directory ($(top_srcdir))?" >&2
 	@test -r $@
@@ -121,9 +124,21 @@ $(example_name)_validation-unstable.ttl: \
 	mv _$@ $@
 
 check: \
+  check-pytest \
   $(example_name)_validation.ttl \
   $(example_name)_validation-develop.ttl \
   $(example_name)_validation-unstable.ttl
+
+# Run pytest tests only if any are written.
+# (Pytest exits in an error state if called with no tests found.)
+check-pytest: \
+  $(top_srcdir)/.venv.done.log
+	test 0 -eq $$(/bin/ls *_test.py test_*.py 2>/dev/null | wc -l) \
+	  || ( \
+	    source $(top_srcdir)/venv/bin/activate \
+	      && pytest \
+	      --log-level=DEBUG \
+	  )
 
 clean:
 	@rm -f \
