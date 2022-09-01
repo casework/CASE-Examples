@@ -15,8 +15,8 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Less than 1 values on kb:case1->investigation:investigationForm" ;
+			sh:focusNode <http://example.org/kb/case-dfcc4c48-82d9-4cf1-9584-6fcfe7bb4869> ;
+			sh:resultMessage "Less than 1 values on kb:case-dfcc4c48-82d9-4cf1-9584-6fcfe7bb4869->investigation:investigationForm" ;
 			sh:resultPath investigation:investigationForm ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -30,8 +30,8 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_lifecycle1> ;
-			sh:resultMessage "Less than 1 values on kb:forensic_lifecycle1->action:phase" ;
+			sh:focusNode <http://example.org/kb/forensic_lifecycle-d1780ea9-0289-46f4-bebf-25add2120e60> ;
+			sh:resultMessage "Less than 1 values on kb:forensic_lifecycle-d1780ea9-0289-46f4-bebf-25add2120e60->action:phase" ;
 			sh:resultPath action:phase ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -48,7 +48,7 @@
 			sh:focusNode [
 				a observable:ProcessFacet ;
 				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
-				observable:creatorUser <http://example.org/kb/role4> ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
 				observable:currentWorkingDirectory "C:\\exams" ;
 				observable:environmentVariables [
 					a types:Dictionary ;
@@ -72,7 +72,7 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path observable:creatorUser ;
 			] ;
-			sh:value <http://example.org/kb/role4> ;
+			sh:value <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
 		]
 		;
 	.

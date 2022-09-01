@@ -12,25 +12,25 @@
     },
     "@graph": [
         {
-            "@id": "kb:sms_application1",
+            "@id": "kb:sms_application-97fd9144-39d2-4da2-b955-c8ee9df9848b",
             "@type": "uco-observable:Application"
         },
         {
-            "@id": "kb:sms_message1",
+            "@id": "kb:sms_message-3f59e298-ac20-433b-adaa-2c5efe510ba2",
             "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
-                        "@id": "kb:sms_application1"
+                        "@id": "kb:sms_application-97fd9144-39d2-4da2-b955-c8ee9df9848b"
                     },
                     "uco-observable:messageText": "Yo dude! This is my new number.",
                     "uco-observable:from": {
-                        "@id": "kb:phone_account3"
+                        "@id": "kb:phone_account-d7dc7933-024f-4508-9c55-b1124ea3679a"
                     },
                     "uco-observable:to": [
                         {
-                            "@id": "kb:phone_account1"
+                            "@id": "kb:phone_account-78aa6c61-0264-4223-9139-a354d0141341"
                         }
                     ],
                     "uco-observable:sentTime": {
@@ -41,7 +41,7 @@
             ]
         },
         {
-            "@id": "kb:contact1",
+            "@id": "kb:contact-5d61dcc2-fb19-4e49-92a6-d6815bcfe436",
             "@type": "uco-observable:Contact",
             "uco-core:hasFacet": [
                 {
@@ -57,19 +57,19 @@
                     "uco-observable:displayName": "John Doe",
                     "uco-observable:nickname": "BFF Joe",
                     "uco-observable:application": {
-                        "@id": "kb:android_phonebook1"
+                        "@id": "kb:android_phonebook-5907a3f4-3e63-44d1-8501-2a33adfa4b72"
                     },
                     "uco-observable:emailAddress": [
                         {
-                            "@id": "kb:email_account1"
+                            "@id": "kb:email_account-4ddeff5a-dde2-4979-bacc-012e8a33a07c"
                         }
                     ],
                     "phoneNumber": [
                         {
-                            "@id": "kb:phone_account1"
+                            "@id": "kb:phone_account-78aa6c61-0264-4223-9139-a354d0141341"
                         },
                         {
-                            "@id": "kb:phone_account2"
+                            "@id": "kb:phone_account-d0cbccc8-7b89-4a63-95ff-22a3df977b8b"
                         }
                     ],
                     "screenName": []
@@ -77,49 +77,49 @@
             ]
         },
         {
-            "@id": "kb:associated-account1",
+            "@id": "kb:associated-account-2b3cf030-8dbe-445e-9b04-e33fa1825761",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:contact1"
+                "@id": "kb:contact-5d61dcc2-fb19-4e49-92a6-d6815bcfe436"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:phone_account1"
+                    "@id": "kb:phone_account-78aa6c61-0264-4223-9139-a354d0141341"
                 }
             ],
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:associated-account2",
+            "@id": "kb:associated-account-04df1b91-435b-4195-8d21-621a4f40b41c",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:contact1"
+                "@id": "kb:contact-5d61dcc2-fb19-4e49-92a6-d6815bcfe436"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:phone_account2"
+                    "@id": "kb:phone_account-d0cbccc8-7b89-4a63-95ff-22a3df977b8b"
                 }
             ],
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:associated-account3",
+            "@id": "kb:associated-account-b7748cb7-304f-4706-9d88-fef49dc94981",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:contact1"
+                "@id": "kb:contact-5d61dcc2-fb19-4e49-92a6-d6815bcfe436"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:email_account1"
+                    "@id": "kb:email_account-4ddeff5a-dde2-4979-bacc-012e8a33a07c"
                 }
             ],
             "uco-core:kindOfRelationship": "Has_Account",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:phone_account1",
+            "@id": "kb:phone_account-78aa6c61-0264-4223-9139-a354d0141341",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
@@ -138,7 +138,7 @@
             ]
         },
         {
-            "@id": "kb:phone_account2",
+            "@id": "kb:phone_account-d0cbccc8-7b89-4a63-95ff-22a3df977b8b",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
@@ -156,7 +156,7 @@
             ]
         },
         {
-            "@id": "kb:email_account1",
+            "@id": "kb:email_account-4ddeff5a-dde2-4979-bacc-012e8a33a07c",
             "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
@@ -184,7 +184,7 @@
             }
         },
         {
-            "@id": "kb:phone_account3",
+            "@id": "kb:phone_account-d7dc7933-024f-4508-9c55-b1124ea3679a",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
@@ -202,11 +202,11 @@
             ]
         },
         {
-            "@id": "kb:os1",
+            "@id": "kb:os-5b6c1685-c603-4df4-9728-026ebfc78cd5",
             "@type": "uco-observable:OperatingSystem"
         },
         {
-            "@id": "kb:android_phonebook1",
+            "@id": "kb:android_phonebook-5907a3f4-3e63-44d1-8501-2a33adfa4b72",
             "@type": "uco-observable:Application",
             "uco-core:hasFacet": [
                 {
@@ -214,7 +214,7 @@
                     "uco-core:name": "Android Phonebook",
                     "uco-observable:applicationIdentifier": "com.android.providers.telephony",
                     "uco-observable:operatingSystem": {
-                        "@id": "kb:os1"
+                        "@id": "kb:os-5b6c1685-c603-4df4-9728-026ebfc78cd5"
                     },
                     "uco-observable:version": "2.3.4",
                     "uco-observable:numberOfLaunches": 323
