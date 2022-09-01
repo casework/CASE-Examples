@@ -12,7 +12,7 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+			sh:focusNode <http://example.org/kb/tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
 			sh:resultMessage "Value does not have class core:Facet" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -27,14 +27,14 @@
 				tool:configurationSettings [
 					a tool:ConfigurationSettingType ;
 					tool:itemName "ruleset" ;
-					tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+					tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
 					tool:itemType "external-ruleset" ;
 				] ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+			sh:focusNode <http://example.org/kb/tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -49,14 +49,14 @@
 				tool:configurationSettings [
 					a tool:ConfigurationSettingType ;
 					tool:itemName "ruleset" ;
-					tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+					tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
 					tool:itemType "external-ruleset" ;
 				] ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+			sh:focusNode <http://example.org/kb/tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
 			sh:resultMessage "Value does not have class core:Facet" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -78,7 +78,7 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+			sh:focusNode <http://example.org/kb/tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -100,7 +100,7 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
+			sh:focusNode <http://example.org/kb/tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
 			sh:resultMessage "Value does not have class core:Facet" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -122,7 +122,7 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
+			sh:focusNode <http://example.org/kb/tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;

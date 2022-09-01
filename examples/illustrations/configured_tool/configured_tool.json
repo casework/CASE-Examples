@@ -13,7 +13,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+            "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
             "@type": "uco-tool:Tool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
@@ -23,10 +23,10 @@
             "uco-tool:version": "7.7"
         },
         {
-            "@id": "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e",
+            "@id": "kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e",
             "@type": "drafting:ConfiguredTool",
             "drafting:isConfigurationOf": {
-                "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
@@ -47,7 +47,7 @@
             ]
         },
         {
-            "@id": "kb:Action-94446a56-1f78-42e4-a4f4-ec94ad7e9118",
+            "@id": "kb:action-94446a56-1f78-42e4-a4f4-ec94ad7e9118",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
             "uco-action:startTime": {
@@ -62,30 +62,30 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
-                "@id": "kb:Tool-be707329-48fe-4d5d-84f3-7978ba63869e"
+                "@id": "kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e"
             },
             "uco-action:environment": {
-                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b"
+                    "@id": "kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b"
                 }
             ]
         },
         {
-            "@id": "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
+            "@id": "kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
             "@type": "drafting:ConfiguredTool",
             "drafting:isConfigurationOf": {
-                "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
@@ -106,7 +106,7 @@
             ]
         },
         {
-            "@id": "kb:Action-ce95584e-5065-4287-83fd-81df2ac72180",
+            "@id": "kb:action-ce95584e-5065-4287-83fd-81df2ac72180",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
             "uco-action:startTime": {
@@ -121,30 +121,30 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
-                "@id": "kb:Tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377"
+                "@id": "kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377"
             },
             "uco-action:environment": {
-                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:ProvenanceRecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42"
+                    "@id": "kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42"
                 }
             ]
         },
         {
-            "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
+            "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
             "@type": "drafting:ConfiguredTool",
             "drafting:isConfigurationOf": {
-                "@id": "kb:Tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
@@ -159,7 +159,7 @@
                         "@type": "uco-tool:ConfigurationSettingType",
                         "uco-tool:itemName": "ruleset",
                         "uco-tool:itemObject": {
-                            "@id": "kb:File-0fedea11-3c8b-400c-9cdb-593edc146194"
+                            "@id": "kb:file-0fedea11-3c8b-400c-9cdb-593edc146194"
                         },
                         "uco-tool:itemType": "external-ruleset"
                     }
@@ -167,7 +167,7 @@
             ]
         },
         {
-            "@id": "kb:Action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6",
+            "@id": "kb:action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
             "uco-action:startTime": {
@@ -182,27 +182,27 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
-                "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
+                "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
             },
             "uco-action:environment": {
-                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:ProvenanceRecord-c462c7de-0391-4c88-a17c-1f9607fb0c46"
+                    "@id": "kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46"
                 }
             ]
         },
         {
-            "@id": "kb:Action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8",
+            "@id": "kb:action-5f6d3a6e-99ee-48bc-9a65-a7e0ae5d9fb8",
             "@type": "uco-action:Action",
             "uco-core:name": "Reverse engineer software to determine malicious intent",
             "uco-action:startTime": {
@@ -217,22 +217,22 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
-                "@id": "kb:Tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
+                "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
             },
             "uco-action:environment": {
-                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:Software2-bec1d8eb-2db1-444d-9175-b3c60ac47410"
+                    "@id": "kb:software-bec1d8eb-2db1-444d-9175-b3c60ac47410"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:ProvenanceRecord-0db01c96-f34f-431a-9aff-e1cc4fac9842"
+                    "@id": "kb:provenancerecord-0db01c96-f34f-431a-9aff-e1cc4fac9842"
                 }
             ]
         },
@@ -241,47 +241,47 @@
             "@type": "uco-location:Location"
         },
         {
-            "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7",
+            "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7",
             "@type": "uco-identity:Identity"
         },
         {
-            "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa",
+            "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa",
             "@type": "uco-observable:Device"
         },
         {
-            "@id": "kb:ProvenanceRecord-0db01c96-f34f-431a-9aff-e1cc4fac9842",
+            "@id": "kb:provenancerecord-0db01c96-f34f-431a-9aff-e1cc4fac9842",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:Software2-bec1d8eb-2db1-444d-9175-b3c60ac47410"
+                "@id": "kb:software-bec1d8eb-2db1-444d-9175-b3c60ac47410"
             }
         },
         {
-            "@id": "kb:ProvenanceRecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42",
+            "@id": "kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
-            "@id": "kb:ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b",
+            "@id": "kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
-            "@id": "kb:ProvenanceRecord-c462c7de-0391-4c88-a17c-1f9607fb0c46",
+            "@id": "kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
-            "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
+            "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
             "@type": "uco-observable:File"
         },
         {
-            "@id": "kb:Software2-bec1d8eb-2db1-444d-9175-b3c60ac47410",
+            "@id": "kb:software-bec1d8eb-2db1-444d-9175-b3c60ac47410",
             "@type": "uco-observable:File"
         },
         {
