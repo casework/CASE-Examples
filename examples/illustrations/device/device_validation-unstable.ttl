@@ -1,3 +1,6 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix ns1: <http://custompb.acme.org/core#> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,6 +9,541 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a
+					ns1:InventoryComputerFacet ,
+					core:Facet
+					;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:ComputerSpecificationFacet ;
+				observable:biosVersion "E1762IMS.10M" ;
+				observable:cpuFamily "Intel Pentium i7" ;
+				observable:totalRam "4294967296"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer <http://example.org/kb/organization-c240cf37-0556-439b-9a51-1ca41732010d> ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:DomainNameFacet ;
+				observable:isTLD "false"^^xsd:boolean ;
+				observable:value "dfl.local" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:IPv4AddressFacet ;
+				observable:addressValue "192.168.1.145" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:installDate "2019-07-10T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:InventoryComputerFacet ,
+					core:Facet
+					;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a
+					ns1:InventoryComputerFacet ,
+					core:Facet
+					;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:InventoryComputerFacet ,
+					core:Facet
+					;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a
+					ns1:InventoryComputerFacet ,
+					core:Facet
+					;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ComputerSpecificationFacet ;
+				observable:biosVersion "E1762IMS.10M" ;
+				observable:cpuFamily "Intel Pentium i7" ;
+				observable:totalRam "4294967296"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:ComputerSpecificationFacet ;
+				observable:biosVersion "E1762IMS.10M" ;
+				observable:cpuFamily "Intel Pentium i7" ;
+				observable:totalRam "4294967296"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ComputerSpecificationFacet ;
+				observable:biosVersion "E1762IMS.10M" ;
+				observable:cpuFamily "Intel Pentium i7" ;
+				observable:totalRam "4294967296"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:ComputerSpecificationFacet ;
+				observable:biosVersion "E1762IMS.10M" ;
+				observable:cpuFamily "Intel Pentium i7" ;
+				observable:totalRam "4294967296"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer <http://example.org/kb/organization-c240cf37-0556-439b-9a51-1ca41732010d> ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer <http://example.org/kb/organization-c240cf37-0556-439b-9a51-1ca41732010d> ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer <http://example.org/kb/organization-c240cf37-0556-439b-9a51-1ca41732010d> ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:deviceType "Computer" ;
+				observable:manufacturer <http://example.org/kb/organization-c240cf37-0556-439b-9a51-1ca41732010d> ;
+				observable:model "Inspiron 5000" ;
+				observable:serialNumber "D1234567" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DomainNameFacet ;
+				observable:isTLD "false"^^xsd:boolean ;
+				observable:value "dfl.local" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:DomainNameFacet ;
+				observable:isTLD "false"^^xsd:boolean ;
+				observable:value "dfl.local" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DomainNameFacet ;
+				observable:isTLD "false"^^xsd:boolean ;
+				observable:value "dfl.local" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:DomainNameFacet ;
+				observable:isTLD "false"^^xsd:boolean ;
+				observable:value "dfl.local" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:IPv4AddressFacet ;
+				observable:addressValue "192.168.1.145" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:IPv4AddressFacet ;
+				observable:addressValue "192.168.1.145" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:IPv4AddressFacet ;
+				observable:addressValue "192.168.1.145" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:IPv4AddressFacet ;
+				observable:addressValue "192.168.1.145" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:installDate "2019-07-10T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:installDate "2019-07-10T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:installDate "2019-07-10T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:OperatingSystemFacet ;
+				core:name "Windows 7 Ultimate Edition" ;
+				observable:installDate "2019-07-10T16:33:42+00:00"^^xsd:dateTime ;
+				observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
+				observable:version "6.1.7601 Service Pack 1 Build 7601" ;
+			] ;
+		]
+		;
 	.
 

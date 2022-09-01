@@ -153,12 +153,16 @@ drafting:RecoveredObjectStatusVocab
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:label "Recovered Object Status Vocabulary"@en-US ;
 	rdfs:comment "Defines the vocabulary for Recovered Object status of data."@en ;
-	owl:oneOf (
-		"recovered"^^drafting:RecoveredObjectStatusVocab
-		"partially recovered"^^drafting:RecoveredObjectStatusVocab
-		"overwritten"^^drafting:RecoveredObjectStatusVocab
-		"unknown"^^drafting:RecoveredObjectStatusVocab
-	) ;
+	owl:equivalentClass [
+		a owl:Datatype ;
+		owl:onDatatype xsd:string ;
+		owl:oneOf (
+			"recovered"^^drafting:RecoveredObjectStatusVocab
+			"partially recovered"^^drafting:RecoveredObjectStatusVocab
+			"overwritten"^^drafting:RecoveredObjectStatusVocab
+			"unknown"^^drafting:RecoveredObjectStatusVocab
+		) ;
+	] ;
 	.
 
 drafting:contentRecoveredStatus
