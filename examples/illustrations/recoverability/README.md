@@ -34,7 +34,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
 ```json
 [
     {
-        "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
+        "@id": "kb:cb0354f5-2dbd-4c02-8a6c-011b77125ee2",
         "@type": [
             "drafting:RecoveredObject",
             "uco-observable:File"
@@ -90,7 +90,7 @@ This recovered file system entry can be represented using the `observable:Recove
 ```json
 [
     {
-        "@id": "kb:BD64BDD9-3DCD-4828-A25B-A72C06E472CD",
+        "@id": "kb:bd64bdd9-3dcd-4828-a25b-a72c06e472cd",
         "@type": [
             "drafting:RecoveredObject",
             "uco-observable:File"
@@ -132,7 +132,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
 ```json
 [
     {
-        "@id": "kb:665D63BE-93E6-4D3E-8E75-3112BE091E93",
+        "@id": "kb:665d63be-93e6-4d3e-8e75-3112be091e93",
         "@type": [
             "drafting:RecoveredObject",
             "uco-observable:File"
@@ -183,7 +183,7 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
 ```json
 [
     {
-        "@id": "kb:4026FABD-924D-4138-A6BA-73DF2EB37BCB",
+        "@id": "kb:4026fabd-924d-4138-a6ba-73df2eb37bcb",
         "@type": [
             "drafting:RecoveredObject",
             "uco-observable:File"
@@ -233,7 +233,7 @@ This recovered chat message can be represented using the `observable:RecoveredOb
 ```json
 [
     {
-        "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
+        "@id": "kb:c01e67f9-adb5-48bd-b09d-e7326fa8d592",
         "@type": [
             "drafting:RecoveredObject",
             "uco-observable:Message"

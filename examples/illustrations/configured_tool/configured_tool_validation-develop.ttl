@@ -1,5 +1,4 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -13,85 +12,134 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "assume-content-type" ;
-				tool:itemType "commandline-argument" ;
-				tool:itemValue "foo" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("assume-content-type") ; uco-tool:itemType Literal("commandline-argument") ; uco-tool:itemValue Literal("foo") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
+			sh:focusNode <http://example.org/kb/tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a tool:ToolConfigurationTypeFacet ;
+				tool:configurationSettings [
+					a tool:ConfigurationSettingType ;
+					tool:itemName "ruleset" ;
+					tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+					tool:itemType "external-ruleset" ;
+				] ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "auto-detect-content-type" ;
-				tool:itemType "commandline-flag" ;
-				tool:itemValue "true" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("auto-detect-content-type") ; uco-tool:itemType Literal("commandline-flag") ; uco-tool:itemValue Literal("true") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
+			sh:focusNode <http://example.org/kb/tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
 			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a tool:ToolConfigurationTypeFacet ;
+				tool:configurationSettings [
+					a tool:ConfigurationSettingType ;
+					tool:itemName "ruleset" ;
+					tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
+					tool:itemType "external-ruleset" ;
+				] ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "ruleset" ;
-				tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
-				tool:itemType "external-ruleset" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
+			sh:focusNode <http://example.org/kb/tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-				sh:class core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a tool:ToolConfigurationTypeFacet ;
+				tool:configurationSettings [
+					a tool:ConfigurationSettingType ;
+					tool:itemName "auto-detect-content-type" ;
+					tool:itemType "commandline-flag" ;
+					tool:itemValue "true" ;
+				] ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode [
-				a tool:ConfigurationSettingType ;
-				tool:itemName "ruleset" ;
-				tool:itemObject <http://example.org/kb/File-0fedea11-3c8b-400c-9cdb-593edc146194> ;
-				tool:itemType "external-ruleset" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:File-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->tool:itemValue' ;
-			sh:resultPath tool:itemValue ;
+			sh:focusNode <http://example.org/kb/tool-be707329-48fe-4d5d-84f3-7978ba63869e> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path tool:itemValue ;
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a tool:ToolConfigurationTypeFacet ;
+				tool:configurationSettings [
+					a tool:ConfigurationSettingType ;
+					tool:itemName "auto-detect-content-type" ;
+					tool:itemType "commandline-flag" ;
+					tool:itemValue "true" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a tool:ToolConfigurationTypeFacet ;
+				tool:configurationSettings [
+					a tool:ConfigurationSettingType ;
+					tool:itemName "assume-content-type" ;
+					tool:itemType "commandline-argument" ;
+					tool:itemValue "foo" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a tool:ToolConfigurationTypeFacet ;
+				tool:configurationSettings [
+					a tool:ConfigurationSettingType ;
+					tool:itemName "assume-content-type" ;
+					tool:itemType "commandline-argument" ;
+					tool:itemValue "foo" ;
+				] ;
 			] ;
 		]
 		;
