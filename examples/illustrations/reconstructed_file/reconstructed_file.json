@@ -3,6 +3,7 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
@@ -92,21 +93,24 @@
             "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8",
             "@type": [
                 "uco-observable:ContentData",
-                "uco-drafting:RecoveredObject"
+                "drafting:RecoveredObject"
             ],
             "uco-core:hasFacet": [
                 {
-                    "@type": "drafting:RecoveredObjectFacet",
-                    "uco-drafting:contentRecoveredStatus": {
-                        "@type": "uco-drafting:RecoveredObjectStatusVocab",
+                    "@type": [
+                        "drafting:RecoveredObjectFacet",
+                        "uco-core:Facet"
+                    ],
+                    "drafting:contentRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "uco-drafting:metadataRecoveredStatus": {
-                        "@type": "uco-drafting:RecoveredObjectStatusVocab",
+                    "drafting:metadataRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "uco-drafting:nameRecoveredStatus": {
-                        "@type": "uco-drafting:RecoveredObjectStatusVocab",
+                    "drafting:nameRecoveredStatus": {
+                        "@type": "drafting:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     }
                 },
