@@ -1,0 +1,342 @@
+@prefix kb: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix unmapped: <urn:example:unmapped/> .
+@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection>
+	a owl:Ontology ;
+	.
+
+<urn:example:unmapped>
+	a owl:Ontology ;
+	.
+
+kb:ActOfEmailDelivery01
+	a uco-core:UcoThing ;
+	unmapped:precedes kb:ActOfLinkOpening01 ;
+	.
+
+kb:ActOfLinkOpening01
+	a uco-core:UcoThing ;
+	.
+
+kb:ActOfNetworkLogin
+	a uco-core:UcoThing ;
+	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
+	.
+
+kb:ActOfNetworkLogout
+	a uco-core:UcoThing ;
+	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
+	.
+
+kb:ActOfNetworkingSession
+	a uco-core:UcoThing ;
+	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
+	.
+
+kb:ActOfSending02
+	a uco-core:UcoThing ;
+	.
+
+kb:Agent01
+	a uco-core:UcoThing ;
+	rdfs:label "Bob" ;
+	unmapped:bearerOf
+		kb:EndUserRole01 ,
+		kb:TargetRole01
+		;
+	unmapped:controls kb:EmailAccount01 ;
+	unmapped:hasRole kb:EndUserRole01 ;
+	unmapped:operates kb:ComputingDevice01 ;
+	unmapped:participatesIn kb:ActOfLinkOpening01 ;
+	unmapped:uses kb:ComputingDevice01 ;
+	.
+
+kb:Agent02
+	a uco-core:UcoThing ;
+	rdfs:label "Charlie" ;
+	unmapped:hasRole kb:SOCAnalystRole ;
+	.
+
+kb:Agent03
+	a uco-core:UcoThing ;
+	rdfs:label "(Malicious)" ;
+	unmapped:bearerOf kb:ActOfEmailDelivery01 ;
+	unmapped:controls kb:EmailAccount02 ;
+	unmapped:hasRole kb:ThreatActorRole01 ;
+	unmapped:operates kb:ComputingDevice03 ;
+	unmapped:uses kb:ComputingDevice03 ;
+	.
+
+kb:Alert01
+	a uco-core:UcoThing ;
+	unmapped:participatesIn kb:FileFlaggingAct ;
+	.
+
+kb:ComputingDevice01
+	a uco-core:UcoThing ;
+	rdfs:label "Bob's PC" ;
+	unmapped:bearerOf kb:TargetRole02 ;
+	unmapped:hasPart kb:Port01 ;
+	unmapped:hasRole kb:TargetRole02 ;
+	unmapped:isCarrierOf
+		kb:EmailSoftwareProgram01 ,
+		kb:EndpointProtectionSoftware01
+		;
+	unmapped:participatesIn
+		kb:ActOfLinkOpening01 ,
+		kb:MalwareDeliveryAct ,
+		kb:MalwareInstallAct
+		;
+	.
+
+kb:ComputingDevice02
+	a uco-core:UcoThing ;
+	rdfs:label "Initech email server" ;
+	unmapped:participatesIn kb:ActOfEmailDelivery01 ;
+	.
+
+kb:ComputingDevice03
+	a uco-core:UcoThing ;
+	rdfs:label "Malicious Server" ;
+	unmapped:hasPart kb:Webpage01 ;
+	unmapped:participatesIn
+		kb:ActOfEmailDelivery01 ,
+		kb:ComputingDevice03
+		;
+	.
+
+kb:CorporateLoggingTool01
+	a uco-core:UcoThing ;
+	unmapped:bearerOf kb:ReceiverRole01 ;
+	unmapped:participatesIn kb:FileFlaggingAct ;
+	.
+
+kb:DetectionEvent01
+	a uco-core:UcoThing ;
+	unmapped:hasOccurrentPart
+		kb:ActOfSending02 ,
+		kb:EndpointScanAct ,
+		kb:FileFlaggingAct
+		;
+	.
+
+kb:EmailAccount01
+	a uco-core:UcoThing ;
+	.
+
+kb:EmailAccount02
+	a uco-core:UcoThing ;
+	.
+
+kb:EmailMessage01
+	a uco-core:UcoThing ;
+	unmapped:contains kb:URL01 ;
+	unmapped:hasRecipient kb:Agent01 ;
+	unmapped:participatesIn
+		kb:ActOfEmailDelivery01 ,
+		kb:ActOfLinkOpening01
+		;
+	.
+
+kb:EmailSoftwareProgram01
+	a uco-core:UcoThing ;
+	unmapped:contains
+		kb:EmailAccount01 ,
+		kb:EmailMessage01
+		;
+	.
+
+kb:EndUserRole01
+	a uco-core:UcoThing ;
+	.
+
+kb:EndpointProtectionSoftware01
+	a uco-core:UcoThing ;
+	unmapped:bearerOf kb:ScannerRole01 ;
+	unmapped:participatesIn
+		kb:EndpointScanAct ,
+		kb:FileFlaggingAct
+		;
+	.
+
+kb:EndpointScanAct
+	a uco-core:UcoThing ;
+	unmapped:precedes kb:FileFlaggingAct ;
+	.
+
+kb:FileFlaggingAct
+	a uco-core:UcoThing ;
+	unmapped:hasOutput kb:Alert01 ;
+	.
+
+kb:InfectionEvent01
+	a uco-core:UcoThing ;
+	unmapped:hasOccurrentPart
+		kb:MalwareDeliveryAct ,
+		kb:MalwareInstallAct
+		;
+	unmapped:precedes kb:DetectionEvent01 ;
+	.
+
+kb:MaliciousSoftware01
+	a uco-core:UcoThing ;
+	unmapped:participatesIn
+		kb:EndpointScanAct ,
+		kb:InfectionEvent01 ,
+		kb:MalwareDeliveryAct ,
+		kb:MalwareInstallAct
+		;
+	.
+
+kb:MalwareDeliveryAct
+	a uco-core:UcoThing ;
+	unmapped:precedes kb:MalwareInstallAct ;
+	.
+
+kb:MalwareInstallAct
+	a uco-core:UcoThing ;
+	.
+
+kb:Port01
+	a uco-core:UcoThing ;
+	unmapped:isCarrierOf kb:MaliciousSoftware01 ;
+	unmapped:unknown01 kb:MaliciousSoftware01 ;
+	.
+
+kb:ReceiverRole01
+	a uco-core:UcoThing ;
+	unmapped:realizedIn kb:FileFlaggingAct ;
+	.
+
+kb:SOCAnalystRole
+	a uco-core:UcoThing ;
+	.
+
+kb:ScannerRole01
+	a uco-core:UcoThing ;
+	unmapped:realizedIn kb:EndpointScanAct ;
+	.
+
+kb:SpearFishingEvent01
+	a uco-core:UcoThing ;
+	unmapped:hasOccurrentPart
+		kb:ActOfEmailDelivery01 ,
+		kb:ActOfLinkOpening01
+		;
+	unmapped:precedes kb:InfectionEvent01 ;
+	.
+
+kb:TargetRole01
+	a uco-core:UcoThing ;
+	unmapped:realizedIn kb:ActOfLinkOpening01 ;
+	.
+
+kb:TargetRole02
+	a uco-core:UcoThing ;
+	unmapped:realizedIn
+		kb:ActOfLinkOpening01 ,
+		kb:MalwareDeliveryAct
+		;
+	.
+
+kb:TemporalInterval01
+	a uco-core:UcoThing ;
+	rdfs:comment "TODO - What is this meant to envelope?  Just SpearFishingEvent01?" ;
+	.
+
+kb:TemporalInterval02
+	a uco-core:UcoThing ;
+	rdfs:comment "TODO - What is this meant to envelope?  InfectionEvent01 and DetectionEvent01, or just the interval bookended by thoese events?" ;
+	.
+
+kb:TemporalInterval03
+	a uco-core:UcoThing ;
+	rdfs:comment "TODO - What is this meant to envelope?  Just DetectionEvent01?" ;
+	.
+
+kb:ThreatActorRole01
+	a uco-core:UcoThing ;
+	unmapped:realizedIn kb:ActOfEmailDelivery01 ;
+	.
+
+kb:URL01
+	a uco-core:UcoThing ;
+	.
+
+kb:Webpage01
+	a uco-core:UcoThing ;
+	unmapped:designatedBy kb:URL01 ;
+	.
+
+unmapped:bearerOf
+	a owl:ObjectProperty ;
+	.
+
+unmapped:contains
+	a owl:ObjectProperty ;
+	.
+
+unmapped:controls
+	a owl:ObjectProperty ;
+	rdfs:label "controls" ;
+	.
+
+unmapped:designatedBy
+	a owl:ObjectProperty ;
+	.
+
+unmapped:hasOccurrentPart
+	a owl:ObjectProperty ;
+	.
+
+unmapped:hasOutput
+	a owl:ObjectProperty ;
+	.
+
+unmapped:hasPart
+	a owl:ObjectProperty ;
+	.
+
+unmapped:hasRecipient
+	a owl:ObjectProperty ;
+	.
+
+unmapped:hasRole
+	a owl:ObjectProperty ;
+	.
+
+unmapped:isCarrierOf
+	a owl:ObjectProperty ;
+	.
+
+unmapped:operates
+	a owl:ObjectProperty ;
+	.
+
+unmapped:participatesIn
+	a owl:ObjectProperty ;
+	.
+
+unmapped:precedes
+	a owl:ObjectProperty ;
+	.
+
+unmapped:realizedIn
+	a owl:ObjectProperty ;
+	.
+
+unmapped:unknown01
+	a owl:ObjectProperty ;
+	rdfs:label "???" ;
+	rdfs:comment "A relationship known to exist, but whose characterization is unknown at the time of an event of interest." ;
+	.
+
+unmapped:uses
+	a owl:ObjectProperty ;
+	.
+
