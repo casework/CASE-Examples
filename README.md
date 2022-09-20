@@ -28,6 +28,7 @@ Mapping notes & respective JSON-LD output:
 - [Reconstructed File](examples/illustrations/reconstructed_file/reconstructed_file.json) (*[info](examples/illustrations/reconstructed_file/)*)
 - [Recoverability](examples/illustrations/recoverability/recoverability.json) (*[info](examples/illustrations/recoverability/)*)
 - [SMS and Contacts](examples/illustrations/sms_and_contacts/sms_and_contacts.json)
+- [Spear Phishing](examples/illustrations/spear_phishing/spear_phishing.json), scenario drafted by [Open Cybersecurity Alliance](https://github.com/opencybersecurityalliance/oca-ontology) (*[info](examples/illustrations/spear_phishing/)*)
 
 
 This project uses [the `pre-commit` tool](https://pre-commit.com/) for linting the JSON files and ensuring consistent formatting. It can be installed with `pip`:

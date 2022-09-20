@@ -1,0 +1,475 @@
+{
+    "@context": {
+        "kb": "http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "unmapped": "urn:example:unmapped/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection",
+            "@type": "owl:Ontology"
+        },
+        {
+            "@id": "kb:ActOfNetworkLogin",
+            "@type": "uco-core:UcoThing",
+            "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
+        },
+        {
+            "@id": "kb:ActOfNetworkLogout",
+            "@type": "uco-core:UcoThing",
+            "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
+        },
+        {
+            "@id": "kb:ActOfNetworkingSession",
+            "@type": "uco-core:UcoThing",
+            "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
+        },
+        {
+            "@id": "kb:ActOfEmailDelivery01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:precedes": {
+                "@id": "kb:ActOfLinkOpening01"
+            }
+        },
+        {
+            "@id": "kb:ActOfLinkOpening01",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:ActOfSending02",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:Agent01",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "Bob",
+            "unmapped:bearerOf": [
+                {
+                    "@id": "kb:EndUserRole01"
+                },
+                {
+                    "@id": "kb:TargetRole01"
+                }
+            ],
+            "unmapped:controls": {
+                "@id": "kb:EmailAccount01"
+            },
+            "unmapped:hasRole": {
+                "@id": "kb:EndUserRole01"
+            },
+            "unmapped:operates": {
+                "@id": "kb:ComputingDevice01"
+            },
+            "unmapped:uses": {
+                "@id": "kb:ComputingDevice01"
+            },
+            "unmapped:participatesIn": {
+                "@id": "kb:ActOfLinkOpening01"
+            }
+        },
+        {
+            "@id": "kb:Agent02",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "Charlie",
+            "unmapped:hasRole": {
+                "@id": "kb:SOCAnalystRole"
+            }
+        },
+        {
+            "@id": "kb:Agent03",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "(Malicious)",
+            "unmapped:bearerOf": [
+                {
+                    "@id": "kb:ActOfEmailDelivery01"
+                }
+            ],
+            "unmapped:controls": {
+                "@id": "kb:EmailAccount02"
+            },
+            "unmapped:operates": {
+                "@id": "kb:ComputingDevice03"
+            },
+            "unmapped:uses": {
+                "@id": "kb:ComputingDevice03"
+            },
+            "unmapped:hasRole": {
+                "@id": "kb:ThreatActorRole01"
+            }
+        },
+        {
+            "@id": "kb:Alert01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:participatesIn": {
+                "@id": "kb:FileFlaggingAct"
+            }
+        },
+        {
+            "@id": "kb:ComputingDevice01",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "Bob's PC",
+            "unmapped:bearerOf": {
+                "@id": "kb:TargetRole02"
+            },
+            "unmapped:hasPart": {
+                "@id": "kb:Port01"
+            },
+            "unmapped:hasRole": {
+                "@id": "kb:TargetRole02"
+            },
+            "unmapped:isCarrierOf": [
+                {
+                    "@id": "kb:EmailSoftwareProgram01"
+                },
+                {
+                    "@id": "kb:EndpointProtectionSoftware01"
+                }
+            ],
+            "unmapped:participatesIn": [
+                {
+                    "@id": "kb:ActOfLinkOpening01"
+                },
+                {
+                    "@id": "kb:MalwareDeliveryAct"
+                },
+                {
+                    "@id": "kb:MalwareInstallAct"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ComputingDevice02",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "Initech email server",
+            "unmapped:participatesIn": {
+                "@id": "kb:ActOfEmailDelivery01"
+            }
+        },
+        {
+            "@id": "kb:ComputingDevice03",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "Malicious Server",
+            "unmapped:hasPart": {
+                "@id": "kb:Webpage01"
+            },
+            "unmapped:participatesIn": [
+                {
+                    "@id": "kb:ActOfEmailDelivery01"
+                },
+                {
+                    "@id": "kb:ComputingDevice03"
+                }
+            ]
+        },
+        {
+            "@id": "kb:CorporateLoggingTool01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:bearerOf": {
+                "@id": "kb:ReceiverRole01"
+            },
+            "unmapped:participatesIn": {
+                "@id": "kb:FileFlaggingAct"
+            }
+        },
+        {
+            "@id": "kb:DetectionEvent01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:hasOccurrentPart": [
+                {
+                    "@id": "kb:ActOfSending02"
+                },
+                {
+                    "@id": "kb:EndpointScanAct"
+                },
+                {
+                    "@id": "kb:FileFlaggingAct"
+                }
+            ]
+        },
+        {
+            "@id": "kb:EmailAccount01",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:EmailAccount02",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:EmailMessage01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:contains": {
+                "@id": "kb:URL01"
+            },
+            "unmapped:hasRecipient": {
+                "@id": "kb:Agent01"
+            },
+            "unmapped:participatesIn": [
+                {
+                    "@id": "kb:ActOfEmailDelivery01"
+                },
+                {
+                    "@id": "kb:ActOfLinkOpening01"
+                }
+            ]
+        },
+        {
+            "@id": "kb:EmailSoftwareProgram01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:contains": [
+                {
+                    "@id": "kb:EmailAccount01"
+                },
+                {
+                    "@id": "kb:EmailMessage01"
+                }
+            ]
+        },
+        {
+            "@id": "kb:EndUserRole01",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:EndpointProtectionSoftware01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:bearerOf": {
+                "@id": "kb:ScannerRole01"
+            },
+            "unmapped:participatesIn": [
+                {
+                    "@id": "kb:EndpointScanAct"
+                },
+                {
+                    "@id": "kb:FileFlaggingAct"
+                }
+            ]
+        },
+        {
+            "@id": "kb:EndpointScanAct",
+            "@type": "uco-core:UcoThing",
+            "unmapped:precedes": {
+                "@id": "kb:FileFlaggingAct"
+            }
+        },
+        {
+            "@id": "kb:FileFlaggingAct",
+            "@type": "uco-core:UcoThing",
+            "unmapped:hasOutput": {
+                "@id": "kb:Alert01"
+            }
+        },
+        {
+            "@id": "kb:InfectionEvent01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:hasOccurrentPart": [
+                {
+                    "@id": "kb:MalwareDeliveryAct"
+                },
+                {
+                    "@id": "kb:MalwareInstallAct"
+                }
+            ],
+            "unmapped:precedes": {
+                "@id": "kb:DetectionEvent01"
+            }
+        },
+        {
+            "@id": "kb:MaliciousSoftware01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:participatesIn": [
+                {
+                    "@id": "kb:EndpointScanAct"
+                },
+                {
+                    "@id": "kb:InfectionEvent01"
+                },
+                {
+                    "@id": "kb:MalwareDeliveryAct"
+                },
+                {
+                    "@id": "kb:MalwareInstallAct"
+                }
+            ]
+        },
+        {
+            "@id": "kb:MalwareDeliveryAct",
+            "@type": "uco-core:UcoThing",
+            "unmapped:precedes": {
+                "@id": "kb:MalwareInstallAct"
+            }
+        },
+        {
+            "@id": "kb:MalwareInstallAct",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:Port01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:isCarrierOf": {
+                "@id": "kb:MaliciousSoftware01"
+            },
+            "unmapped:unknown01": {
+                "@id": "kb:MaliciousSoftware01"
+            }
+        },
+        {
+            "@id": "kb:ReceiverRole01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:realizedIn": {
+                "@id": "kb:FileFlaggingAct"
+            }
+        },
+        {
+            "@id": "kb:SOCAnalystRole",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:ScannerRole01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:realizedIn": {
+                "@id": "kb:EndpointScanAct"
+            }
+        },
+        {
+            "@id": "kb:SpearFishingEvent01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:hasOccurrentPart": [
+                {
+                    "@id": "kb:ActOfEmailDelivery01"
+                },
+                {
+                    "@id": "kb:ActOfLinkOpening01"
+                }
+            ],
+            "unmapped:precedes": {
+                "@id": "kb:InfectionEvent01"
+            }
+        },
+        {
+            "@id": "kb:TargetRole01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:realizedIn": {
+                "@id": "kb:ActOfLinkOpening01"
+            }
+        },
+        {
+            "@id": "kb:TargetRole02",
+            "@type": "uco-core:UcoThing",
+            "unmapped:realizedIn": [
+                {
+                    "@id": "kb:ActOfLinkOpening01"
+                },
+                {
+                    "@id": "kb:MalwareDeliveryAct"
+                }
+            ]
+        },
+        {
+            "@id": "kb:TemporalInterval01",
+            "@type": "uco-core:UcoThing",
+            "rdfs:comment": "TODO - What is this meant to envelope?  Just SpearFishingEvent01?"
+        },
+        {
+            "@id": "kb:TemporalInterval02",
+            "@type": "uco-core:UcoThing",
+            "rdfs:comment": "TODO - What is this meant to envelope?  InfectionEvent01 and DetectionEvent01, or just the interval bookended by thoese events?"
+        },
+        {
+            "@id": "kb:TemporalInterval03",
+            "@type": "uco-core:UcoThing",
+            "rdfs:comment": "TODO - What is this meant to envelope?  Just DetectionEvent01?"
+        },
+        {
+            "@id": "kb:ThreatActorRole01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:realizedIn": {
+                "@id": "kb:ActOfEmailDelivery01"
+            }
+        },
+        {
+            "@id": "kb:URL01",
+            "@type": "uco-core:UcoThing"
+        },
+        {
+            "@id": "kb:Webpage01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:designatedBy": {
+                "@id": "kb:URL01"
+            }
+        },
+        {
+            "@id": "unmapped:bearerOf",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:contains",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:controls",
+            "@type": "owl:ObjectProperty",
+            "rdfs:label": "controls"
+        },
+        {
+            "@id": "unmapped:designatedBy",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:hasOccurrentPart",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:hasRecipient",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:hasOutput",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:hasPart",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:hasRole",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:isCarrierOf",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:operates",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:participatesIn",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:realizedIn",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:precedes",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:unknown01",
+            "@type": "owl:ObjectProperty",
+            "rdfs:comment": "A relationship known to exist, but whose characterization is unknown at the time of an event of interest.",
+            "rdfs:label": "???"
+        },
+        {
+            "@id": "unmapped:uses",
+            "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "urn:example:unmapped",
+            "@type": "owl:Ontology"
+        }
+    ]
+}
