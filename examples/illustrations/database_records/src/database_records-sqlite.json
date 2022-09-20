@@ -4,6 +4,7 @@
         "@type": "drafting:TableField",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:table-field-facet-e126c09b-3ab1-43be-af05-a33ff9792b0b",
                 "@type": "drafting:TableFieldFacet",
                 "drafting:tableName": "messages",
                 "drafting:recordRowID": "12345",

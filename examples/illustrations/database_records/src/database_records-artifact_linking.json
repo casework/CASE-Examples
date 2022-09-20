@@ -4,6 +4,7 @@
         "@type": "uco-observable:Message",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:message-facet-40bdc2fa-9a19-415d-a438-2968f2fb4f6e",
                 "@type": "uco-observable:MessageFacet",
                 "uco-observable:messageText": "Hello World"
             }
