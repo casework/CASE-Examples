@@ -30,7 +30,7 @@ drafting:TableFieldFacet
 		;
 	rdfs:subClassOf core:Facet ;
 	rdfs:label "TableFieldFacet"@en ;
-	rdfs:comment "A database record facet contains properties associated with a specific table record value from a database."@en ;
+	rdfs:comment "A table field facet contains properties associated with a specific table record value from a database."@en ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	sh:property
 		[
@@ -70,7 +70,7 @@ drafting:TableFieldFacet
 			sh:path drafting:recordFieldIsNull ;
 		]
 		;
-	sh:targetClass drafting:DatabaseRecordFacet ;
+	sh:targetClass drafting:TableFieldFacet ;
 	.
 
 drafting:recordFieldName
