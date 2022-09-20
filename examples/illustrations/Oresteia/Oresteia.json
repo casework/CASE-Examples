@@ -300,11 +300,11 @@
                     "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",
-                        "@value": 48.860346
+                        "@value": "48.860346"
                     },
                     "uco-location:longitude": {
                         "@type": "xsd:decimal",
-                        "@value": 2.331199
+                        "@value": "2.331199"
                     }
                 }
             ]
