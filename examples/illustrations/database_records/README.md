@@ -22,6 +22,7 @@ The database file itself can be represented as a `uco-observable:File` object wi
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-73701edb-01b8-4f56-ad41-4cba706f2d3a",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "sqlite3",
                 "uco-observable:fileName": "my-database",
@@ -49,6 +50,7 @@ If there are supporting files such as WAL or Journal files as defined at [https:
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-8d977b6b-fc0b-462b-8002-838ee5240fbb",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "sqlite3-wal",
                 "uco-observable:fileName": "my-database",
@@ -79,6 +81,7 @@ If there are supporting files such as WAL or Journal files as defined at [https:
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-62965da2-8d7c-4b48-9da8-f7879057addd",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "sqlite3-journal",
                 "uco-observable:fileName": "my-database",
@@ -115,10 +118,11 @@ The records within the database itself can be represented in newly proposed CASE
 [
     {
         "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2",
-        "@type": "drafting:DatabaseRecord",
+        "@type": "drafting:TableField",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:DatabaseRecordFacet",
+                "@id": "kb:table-field-facet-e126c09b-3ab1-43be-af05-a33ff9792b0b",
+                "@type": "drafting:TableFieldFacet",
                 "drafting:tableName": "messages",
                 "drafting:recordRowID": "12345",
                 "drafting:recordFieldName": "message_content",
@@ -152,6 +156,7 @@ This allows an identified artifact (such as a message) to be linked to a databas
         "@type": "uco-observable:Message",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:message-facet-40bdc2fa-9a19-415d-a438-2968f2fb4f6e",
                 "@type": "uco-observable:MessageFacet",
                 "uco-observable:messageText": "Hello World"
             }

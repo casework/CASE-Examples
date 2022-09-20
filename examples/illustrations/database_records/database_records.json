@@ -12,6 +12,7 @@
             "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-facet-40bdc2fa-9a19-415d-a438-2968f2fb4f6e",
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:messageText": "Hello World"
                 }
@@ -22,6 +23,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-73701edb-01b8-4f56-ad41-4cba706f2d3a",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
@@ -40,6 +42,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-62965da2-8d7c-4b48-9da8-f7879057addd",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
@@ -70,6 +73,7 @@
             "@type": "drafting:TableField",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:table-field-facet-e126c09b-3ab1-43be-af05-a33ff9792b0b",
                     "@type": "drafting:TableFieldFacet",
                     "drafting:recordFieldName": "message_content",
                     "drafting:recordFieldValue": "Hello World",
@@ -107,6 +111,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-8d977b6b-fc0b-462b-8002-838ee5240fbb",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:createdTime": {
                         "@type": "xsd:dateTime",
