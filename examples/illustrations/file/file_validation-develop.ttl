@@ -1,6 +1,6 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix ns1: <http://example.org/local#> .
-@prefix ns2: <http://custompb.acme.org/core#> .
+@prefix ns1: <http://custompb.acme.org/core#> .
+@prefix ns2: <http://example.org/local#> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -87,8 +87,8 @@
 			] ;
 			sh:value [
 				a observable:FileFacet ;
-				ns1:accessedAction "2010-01-15T17:59:43.25Z" ;
-				ns1:createdAction "2010-01-15T17:59:43.25Z" ;
+				ns2:accessedAction "2010-01-15T17:59:43.25Z" ;
+				ns2:createdAction "2010-01-15T17:59:43.25Z" ;
 				observable:extension "img" ;
 				observable:fileName "DFL-20140712-001C.img" ;
 				observable:filePath "C:/input_devices/DFL-20140712-001C.img" ;
@@ -216,11 +216,11 @@
 			] ;
 			sh:value [
 				a
-					ns2:InventoryComputerFacet ,
+					ns1:InventoryComputerFacet ,
 					core:Facet
 					;
-				ns2:inventoryNumber "10503" ;
-				ns2:name "DFL-03" ;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
 			] ;
 		] ,
 		[
@@ -602,11 +602,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a
-					ns2:InventoryComputerFacet ,
+					ns1:InventoryComputerFacet ,
 					core:Facet
 					;
-				ns2:inventoryNumber "10503" ;
-				ns2:name "DFL-03" ;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -626,22 +626,22 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a
-					ns2:InventoryComputerFacet ,
+					ns1:InventoryComputerFacet ,
 					core:Facet
 					;
-				ns2:inventoryNumber "10503" ;
-				ns2:name "DFL-03" ;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a
-					ns2:InventoryComputerFacet ,
+					ns1:InventoryComputerFacet ,
 					core:Facet
 					;
-				ns2:inventoryNumber "10503" ;
-				ns2:name "DFL-03" ;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -668,19 +668,19 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a
-					ns2:InventoryComputerFacet ,
+					ns1:InventoryComputerFacet ,
 					core:Facet
 					;
-				ns2:inventoryNumber "10503" ;
-				ns2:name "DFL-03" ;
+				ns1:inventoryNumber "10503" ;
+				ns1:name "DFL-03" ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:FileFacet ;
-				ns1:accessedAction "2010-01-15T17:59:43.25Z" ;
-				ns1:createdAction "2010-01-15T17:59:43.25Z" ;
+				ns2:accessedAction "2010-01-15T17:59:43.25Z" ;
+				ns2:createdAction "2010-01-15T17:59:43.25Z" ;
 				observable:extension "img" ;
 				observable:fileName "DFL-20140712-001C.img" ;
 				observable:filePath "C:/input_devices/DFL-20140712-001C.img" ;
@@ -707,8 +707,8 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:FileFacet ;
-				ns1:accessedAction "2010-01-15T17:59:43.25Z" ;
-				ns1:createdAction "2010-01-15T17:59:43.25Z" ;
+				ns2:accessedAction "2010-01-15T17:59:43.25Z" ;
+				ns2:createdAction "2010-01-15T17:59:43.25Z" ;
 				observable:extension "img" ;
 				observable:fileName "DFL-20140712-001C.img" ;
 				observable:filePath "C:/input_devices/DFL-20140712-001C.img" ;
@@ -722,8 +722,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:FileFacet ;
-				ns1:accessedAction "2010-01-15T17:59:43.25Z" ;
-				ns1:createdAction "2010-01-15T17:59:43.25Z" ;
+				ns2:accessedAction "2010-01-15T17:59:43.25Z" ;
+				ns2:createdAction "2010-01-15T17:59:43.25Z" ;
 				observable:extension "img" ;
 				observable:fileName "DFL-20140712-001C.img" ;
 				observable:filePath "C:/input_devices/DFL-20140712-001C.img" ;
@@ -757,8 +757,8 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:FileFacet ;
-				ns1:accessedAction "2010-01-15T17:59:43.25Z" ;
-				ns1:createdAction "2010-01-15T17:59:43.25Z" ;
+				ns2:accessedAction "2010-01-15T17:59:43.25Z" ;
+				ns2:createdAction "2010-01-15T17:59:43.25Z" ;
 				observable:extension "img" ;
 				observable:fileName "DFL-20140712-001C.img" ;
 				observable:filePath "C:/input_devices/DFL-20140712-001C.img" ;
