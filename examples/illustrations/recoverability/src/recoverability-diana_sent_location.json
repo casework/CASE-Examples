@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:C01E67F9-ADB5-48BD-B09D-E7326FA8D592",
+        "@id": "kb:c01e67f9-adb5-48bd-b09d-e7326fa8d592",
         "@type": [
             "uco-observable:RecoveredObject",
             "uco-observable:Message"

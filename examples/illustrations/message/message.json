@@ -18,7 +18,7 @@
             "uco-core:name": "Google"
         },
         {
-            "@id": "kb:os1",
+            "@id": "kb:os-abf0fe20-6852-4004-82bb-d9e8da06aea6",
             "@type": "uco-observable:OperatingSystem",
             "uco-core:hasFacet": [
                 {
@@ -32,7 +32,7 @@
             ]
         },
         {
-            "@id": "kb:application1",
+            "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4",
             "@type": "uco-observable:Application",
             "uco-core:hasFacet": [
                 {
@@ -41,70 +41,70 @@
                     "uco-observable:applicationIdentifier": "com.whatsapp",
                     "uco-observable:version": "1.23.45",
                     "uco-observable:operatingSystem": {
-                        "@id": "kb:os1"
+                        "@id": "kb:os-abf0fe20-6852-4004-82bb-d9e8da06aea6"
                     },
                     "uco-observable:numberOfLaunches": 34
                 }
             ]
         },
         {
-            "@id": "kb:application2",
+            "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996",
             "@type": "uco-observable:Application"
         },
         {
-            "@id": "kb:account1",
+            "@id": "kb:account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87",
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application1"
+                        "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4"
                     }
                 }
             ]
         },
         {
-            "@id": "kb:account2",
+            "@id": "kb:account-16f128ac-7e5b-4cac-908c-11062488eb06",
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application1"
+                        "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4"
                     }
                 }
             ]
         },
         {
-            "@id": "kb:account3",
+            "@id": "kb:account-8f80b20d-d41f-411a-90ce-460dedabf1c3",
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application2"
+                        "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996"
                     }
                 }
             ]
         },
         {
-            "@id": "kb:account4",
+            "@id": "kb:account-7fb9ef43-fb36-4781-918b-79a5801223e2",
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application2"
+                        "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996"
                     }
                 }
             ]
         },
         {
-            "@id": "kb:location1",
+            "@id": "kb:location-2444e035-46fe-47a0-8068-f07e181a2869",
             "@type": "uco-location:Location"
         },
         {
-            "@id": "kb:attachment_file1",
+            "@id": "kb:attachment_file-95a7973d-403d-4a52-9e79-e68630a79e93",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -116,7 +116,7 @@
             ]
         },
         {
-            "@id": "kb:attachment_file2",
+            "@id": "kb:attachment_file-f822bc08-7bf5-4a5d-9e20-02572db4b40b",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -128,7 +128,7 @@
             ]
         },
         {
-            "@id": "kb:attachment_file3",
+            "@id": "kb:attachment_file-eff14a6a-40e6-46b7-9958-4cbb72f3873c",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -140,15 +140,15 @@
             ]
         },
         {
-            "@id": "kb:message2",
+            "@id": "kb:message-decea264-014d-4da8-9d7f-a63231d2c049",
             "@type": "uco-observable:Message"
         },
         {
-            "@id": "kb:message3",
+            "@id": "kb:message-e809578d-3890-4d21-82ec-afde487b3d7e",
             "@type": "uco-observable:Message"
         },
         {
-            "@id": "kb:thread1",
+            "@id": "kb:thread-4237ff8b-e049-4a56-bcf7-e89ed2797d83",
             "@type": "uco-observable:MessageThread",
             "uco-core:hasFacet": [
                 {
@@ -159,13 +159,13 @@
                     "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
                     "uco-observable:message": [
                         {
-                            "@id": "kb:message1"
+                            "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
                         },
                         {
-                            "@id": "kb:message2"
+                            "@id": "kb:message-decea264-014d-4da8-9d7f-a63231d2c049"
                         },
                         {
-                            "@id": "kb:message3"
+                            "@id": "kb:message-e809578d-3890-4d21-82ec-afde487b3d7e"
                         }
                     ],
                     "uco-observable:messageThread": {
@@ -176,13 +176,13 @@
                         },
                         "co:element": [
                             {
-                                "@id": "kb:message1"
+                                "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
                             },
                             {
-                                "@id": "kb:message2"
+                                "@id": "kb:message-decea264-014d-4da8-9d7f-a63231d2c049"
                             },
                             {
-                                "@id": "kb:message3"
+                                "@id": "kb:message-e809578d-3890-4d21-82ec-afde487b3d7e"
                             }
                         ],
                         "co:item": [
@@ -194,7 +194,7 @@
                                     "@value": "1"
                                 },
                                 "co:itemContent": {
-                                    "@id": "kb:message1"
+                                    "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
                                 },
                                 "uco-types:threadNextItem": {
                                     "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2"
@@ -208,7 +208,7 @@
                                     "@value": "2"
                                 },
                                 "co:itemContent": {
-                                    "@id": "kb:message2"
+                                    "@id": "kb:message-decea264-014d-4da8-9d7f-a63231d2c049"
                                 },
                                 "uco-types:threadNextItem": {
                                     "@id": "kb:thread-item-ffbf758a-b71f-4185-9f0f-9b6cb649da87"
@@ -222,24 +222,24 @@
                                     "@value": "3"
                                 },
                                 "co:itemContent": {
-                                    "@id": "kb:message3"
+                                    "@id": "kb:message-e809578d-3890-4d21-82ec-afde487b3d7e"
                                 }
                             }
                         ]
                     },
                     "uco-observable:participant": [
                         {
-                            "@id": "kb:account1"
+                            "@id": "kb:account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87"
                         },
                         {
-                            "@id": "kb:account2"
+                            "@id": "kb:account-16f128ac-7e5b-4cac-908c-11062488eb06"
                         }
                     ]
                 }
             ]
         },
         {
-            "@id": "kb:thread2",
+            "@id": "kb:thread-64330f59-a10d-4907-93f6-be9fc267834e",
             "@type": "uco-observable:MessageThread",
             "uco-core:hasFacet": [
                 {
@@ -249,7 +249,7 @@
                     "draft:visibility": "PUBLIC",
                     "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
                     "uco-observable:message": {
-                        "@id": "kb:post1"
+                        "@id": "kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331"
                     },
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
@@ -258,7 +258,7 @@
                             "@value": "1"
                         },
                         "co:element": {
-                            "@id": "kb:post1"
+                            "@id": "kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331"
                         },
                         "co:item": [
                             {
@@ -268,38 +268,38 @@
                                     "@value": "1"
                                 },
                                 "co:itemContent": {
-                                    "@id": "kb:post1"
+                                    "@id": "kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331"
                                 }
                             }
                         ]
                     },
                     "uco-observable:participant": [
                         {
-                            "@id": "kb:account3"
+                            "@id": "kb:account-8f80b20d-d41f-411a-90ce-460dedabf1c3"
                         },
                         {
-                            "@id": "kb:account4"
+                            "@id": "kb:account-7fb9ef43-fb36-4781-918b-79a5801223e2"
                         }
                     ]
                 }
             ]
         },
         {
-            "@id": "kb:post1",
+            "@id": "kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331",
             "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application2"
+                        "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996"
                     },
                     "uco-observable:messageText": "I said some things in a tweet! @sarahsmithtweeter #hashtag",
                     "uco-observable:from": {
-                        "@id": "kb:account3"
+                        "@id": "kb:account-8f80b20d-d41f-411a-90ce-460dedabf1c3"
                     },
                     "uco-observable:to": [
                         {
-                            "@id": "kb:account4"
+                            "@id": "kb:account-7fb9ef43-fb36-4781-918b-79a5801223e2"
                         }
                     ],
                     "uco-observable:sentTime": {
@@ -310,21 +310,21 @@
             ]
         },
         {
-            "@id": "kb:message1",
+            "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81",
             "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
-                        "@id": "kb:application1"
+                        "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4"
                     },
                     "uco-observable:messageText": "Hey bud!",
                     "uco-observable:from": {
-                        "@id": "kb:account1"
+                        "@id": "kb:account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87"
                     },
                     "uco-observable:to": [
                         {
-                            "@id": "kb:account2"
+                            "@id": "kb:account-16f128ac-7e5b-4cac-908c-11062488eb06"
                         }
                     ],
                     "uco-observable:sentTime": {
@@ -335,49 +335,49 @@
             ]
         },
         {
-            "@id": "kb:attach_relationship1",
+            "@id": "kb:attach_relationship-1a069342-98f9-4ad3-abd8-772460711cb4",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:attachment_file3"
+                "@id": "kb:attachment_file-eff14a6a-40e6-46b7-9958-4cbb72f3873c"
             },
             "uco-core:target": {
-                "@id": "kb:message1"
+                "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:attach_relationship2",
+            "@id": "kb:attach_relationship-055f593a-fea5-4075-a3dd-6384fac435b0",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:attachment_file1"
+                "@id": "kb:attachment_file-95a7973d-403d-4a52-9e79-e68630a79e93"
             },
             "uco-core:target": {
-                "@id": "kb:message1"
+                "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:attach_relationship3",
+            "@id": "kb:attach_relationship-395c3d4c-51b8-4c8d-ba09-69fe09b5110a",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:attachment_file2"
+                "@id": "kb:attachment_file-f822bc08-7bf5-4a5d-9e20-02572db4b40b"
             },
             "uco-core:target": {
-                "@id": "kb:message1"
+                "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
             },
             "uco-core:kindOfRelationship": "Attachment_Of",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:location_relationship1",
+            "@id": "kb:location_relationship-16630771-c6e5-4b48-8e15-57812c92ddc2",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
-                "@id": "kb:attachment_file3"
+                "@id": "kb:attachment_file-eff14a6a-40e6-46b7-9958-4cbb72f3873c"
             },
             "uco-core:target": {
-                "@id": "kb:location1"
+                "@id": "kb:location-2444e035-46fe-47a0-8068-f07e181a2869"
             },
             "uco-core:isDirectional": true,
             "rdfs:comment": "TODO: Need to define a portrayal relationship between ObservableObject and a Location."

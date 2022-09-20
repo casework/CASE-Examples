@@ -10,19 +10,19 @@
     },
     "@graph": [
         {
-            "@id": "kb:ATT",
+            "@id": "kb:att-466a0ea8-b22f-4175-8119-846bec8f7831",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:Sprint",
+            "@id": "kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:Verizon",
+            "@id": "kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:Zoom",
+            "@id": "kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b",
             "@type": "uco-identity:Organization"
         },
         {
@@ -38,14 +38,15 @@
             "@type": "uco-observable:Application"
         },
         {
-            "@id": "kb:phone_account1",
+            "@id": "kb:phone_account-4e172ed5-7b58-4903-96fe-4558f46820ba",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:ATT"
+                        "@id": "kb:att-466a0ea8-b22f-4175-8119-846bec8f7831"
                     },
+                    "uco-observable:accountIdentifier": "AT123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -55,14 +56,15 @@
             ]
         },
         {
-            "@id": "kb:phone_account2",
+            "@id": "kb:phone_account-86bdc508-1f64-4df3-bc8f-0136976c2e93",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:Sprint"
+                        "@id": "kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202"
                     },
+                    "uco-observable:accountIdentifier": "SP123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -72,14 +74,15 @@
             ]
         },
         {
-            "@id": "kb:phone_account3",
+            "@id": "kb:phone_account-19db8820-3d40-4b38-84cf-abbb26c95128",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:Verizon"
+                        "@id": "kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12"
                     },
+                    "uco-observable:accountIdentifier": "VZ123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -89,14 +92,15 @@
             ]
         },
         {
-            "@id": "kb:bridge_account1",
+            "@id": "kb:bridge_account-2ee6c2f5-11dd-42f4-9345-cdefc1e24889",
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
-                        "@id": "kb:Zoom"
+                        "@id": "kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b"
                     },
+                    "uco-observable:accountIdentifier": "user@example.org",
                     "uco-observable:isActive": true
                 },
                 {
@@ -106,7 +110,7 @@
             ]
         },
         {
-            "@id": "kb:phone_call1",
+            "@id": "kb:phone_call-edacc7ec-4e8e-4de4-ad83-10a892cd3855",
             "@type": "uco-observable:Call",
             "uco-core:description": "An example of a two-party, one-way phone call that has clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
@@ -125,17 +129,17 @@
                         "@value": "2010-01-15T18:30:41.25Z"
                     },
                     "uco-observable:from": {
-                        "@id": "kb:phone_account1"
+                        "@id": "kb:phone_account-4e172ed5-7b58-4903-96fe-4558f46820ba"
                     },
                     "uco-observable:to": {
-                        "@id": "kb:phone_account2"
+                        "@id": "kb:phone_account-86bdc508-1f64-4df3-bc8f-0136976c2e93"
                     },
                     "uco-observable:duration": 1862
                 }
             ]
         },
         {
-            "@id": "kb:non-directional-phone-call-1",
+            "@id": "kb:non-directional-phone-call-d3d321f3-0c47-4ca6-90f7-18697160dcd2",
             "@type": "uco-observable:Call",
             "uco-core:description": "An example of a two-party, one-way phone call that has does not have clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
@@ -155,10 +159,10 @@
                     },
                     "uco-observable:to": [
                         {
-                            "@id": "kb:phone_account1"
+                            "@id": "kb:phone_account-4e172ed5-7b58-4903-96fe-4558f46820ba"
                         },
                         {
-                            "@id": "kb:phone_account2"
+                            "@id": "kb:phone_account-86bdc508-1f64-4df3-bc8f-0136976c2e93"
                         }
                     ],
                     "uco-observable:duration": 1862
@@ -166,7 +170,7 @@
             ]
         },
         {
-            "@id": "kb:multi-participant-phone-call-1",
+            "@id": "kb:multi-participant-phone-call-ce14cf4d-2530-4f8f-9cb6-06f851d1691b",
             "@type": "uco-observable:Call",
             "uco-core:description": "An example of a three-way call phone call that has clear directionality between a caller (from) and two receivers (to).",
             "uco-core:hasFacet": [
@@ -185,14 +189,14 @@
                         "@value": "2010-01-15T18:30:41.25Z"
                     },
                     "uco-observable:from": {
-                        "@id": "kb:phone_account1"
+                        "@id": "kb:phone_account-4e172ed5-7b58-4903-96fe-4558f46820ba"
                     },
                     "uco-observable:to": [
                         {
-                            "@id": "kb:phone_account2"
+                            "@id": "kb:phone_account-86bdc508-1f64-4df3-bc8f-0136976c2e93"
                         },
                         {
-                            "@id": "kb:phone_account3"
+                            "@id": "kb:phone_account-19db8820-3d40-4b38-84cf-abbb26c95128"
                         }
                     ],
                     "uco-observable:duration": 1862
@@ -200,7 +204,7 @@
             ]
         },
         {
-            "@id": "kb:conference-bridge-phone-call-1",
+            "@id": "kb:conference-bridge-phone-call-b3030d8b-ec64-4d88-b136-d4705f657e37",
             "@type": "uco-observable:Call",
             "uco-core:description": "An example of a conference bridge phone call that does not have clear directionality between a caller (from) and receivers (to).",
             "uco-core:hasFacet": [
@@ -220,16 +224,16 @@
                     },
                     "uco-observable:to": [
                         {
-                            "@id": "kb:phone_account1"
+                            "@id": "kb:phone_account-4e172ed5-7b58-4903-96fe-4558f46820ba"
                         },
                         {
-                            "@id": "kb:phone_account2"
+                            "@id": "kb:phone_account-86bdc508-1f64-4df3-bc8f-0136976c2e93"
                         },
                         {
-                            "@id": "kb:phone_account3"
+                            "@id": "kb:phone_account-19db8820-3d40-4b38-84cf-abbb26c95128"
                         },
                         {
-                            "@id": "kb:bridge_account1"
+                            "@id": "kb:bridge_account-2ee6c2f5-11dd-42f4-9345-cdefc1e24889"
                         }
                     ],
                     "uco-observable:duration": 1862

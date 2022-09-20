@@ -27,7 +27,7 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/tool2-uuid> ;
+			sh:value <http://example.org/kb/tool-5316a112-dcd3-4515-a14e-06396126ed98> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -42,7 +42,7 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/tool3-uuid> ;
+			sh:value <http://example.org/kb/tool-e39f1bf1-8abd-4411-bc05-36f03192bc40> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -131,7 +131,7 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/tool2-uuid> ;
+			sh:value <http://example.org/kb/tool-5316a112-dcd3-4515-a14e-06396126ed98> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -146,7 +146,7 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path core:object ;
 			] ;
-			sh:value <http://example.org/kb/tool3-uuid> ;
+			sh:value <http://example.org/kb/tool-e39f1bf1-8abd-4411-bc05-36f03192bc40> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -194,7 +194,7 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigative-action4-uuid> ;
+			sh:focusNode <http://example.org/kb/investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89> ;
 			sh:resultMessage "Value does not have class core:UcoObject" ;
 			sh:resultPath action:instrument ;
 			sh:resultSeverity sh:Violation ;
@@ -204,11 +204,11 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path action:instrument ;
 			] ;
-			sh:value <http://example.org/kb/tool2-uuid> ;
+			sh:value <http://example.org/kb/tool-e39f1bf1-8abd-4411-bc05-36f03192bc40> ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/investigative-action5-uuid> ;
+			sh:focusNode <http://example.org/kb/investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe> ;
 			sh:resultMessage "Value does not have class core:UcoObject" ;
 			sh:resultPath action:instrument ;
 			sh:resultSeverity sh:Violation ;
@@ -218,7 +218,7 @@
 				sh:nodeKind sh:BlankNodeOrIRI ;
 				sh:path action:instrument ;
 			] ;
-			sh:value <http://example.org/kb/tool3-uuid> ;
+			sh:value <http://example.org/kb/tool-5316a112-dcd3-4515-a14e-06396126ed98> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -264,10 +264,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:accountIssuer <http://example.org/kb/olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -283,10 +283,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:accountIssuer <http://example.org/kb/olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -302,10 +302,10 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
-				observable:accountIssuer <http://example.org/kb/olympus-uuid> ;
+				observable:accountIssuer <http://example.org/kb/olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-uuid ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
+			sh:resultMessage 'Less than 1 values on [ rdf:type uco-observable:AccountFacet ; uco-observable:accountIssuer kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985 ; uco-observable:isActive Literal("true" = True, datatype=xsd:boolean) ]->observable:accountIdentifier' ;
 			sh:resultPath observable:accountIdentifier ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;

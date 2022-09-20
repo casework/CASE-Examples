@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:4026FABD-924D-4138-A6BA-73DF2EB37BCB",
+        "@id": "kb:4026fabd-924d-4138-a6ba-73df2eb37bcb",
         "@type": [
             "uco-observable:RecoveredObject",
             "uco-observable:File"

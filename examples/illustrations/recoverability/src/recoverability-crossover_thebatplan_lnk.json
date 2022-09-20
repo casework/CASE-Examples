@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:665D63BE-93E6-4D3E-8E75-3112BE091E93",
+        "@id": "kb:665d63be-93e6-4d3e-8e75-3112be091e93",
         "@type": [
             "uco-observable:RecoveredObject",
             "uco-observable:File"
