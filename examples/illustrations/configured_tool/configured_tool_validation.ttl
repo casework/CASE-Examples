@@ -1,99 +1,11 @@
-@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix uco-tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
-	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-tool:ConfigurationSettingType ;
-				uco-tool:itemName "assume-content-type" ;
-				uco-tool:itemType "commandline-argument" ;
-				uco-tool:itemValue "foo" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("assume-content-type") ; uco-tool:itemType Literal("commandline-argument") ; uco-tool:itemValue Literal("foo") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-				sh:class uco-core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-tool:ConfigurationSettingType ;
-				uco-tool:itemName "auto-detect-content-type" ;
-				uco-tool:itemType "commandline-flag" ;
-				uco-tool:itemValue "true" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("auto-detect-content-type") ; uco-tool:itemType Literal("commandline-flag") ; uco-tool:itemValue Literal("true") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-				sh:class uco-core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-tool:ConfigurationSettingType ;
-				uco-tool:itemName "ruleset" ;
-				uco-tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
-				uco-tool:itemType "external-ruleset" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:file-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->drafting:itemObject' ;
-			sh:resultPath drafting:itemObject ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				rdfs:comment "TODO - This needs to be included in a sh:xone versus uco-tool:itemValue."@en ;
-				rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/405> ;
-				sh:class uco-core:UcoObject ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:itemObject ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a uco-tool:ConfigurationSettingType ;
-				uco-tool:itemName "ruleset" ;
-				uco-tool:itemObject <http://example.org/kb/file-0fedea11-3c8b-400c-9cdb-593edc146194> ;
-				uco-tool:itemType "external-ruleset" ;
-			] ;
-			sh:resultMessage 'Less than 1 values on [ rdf:type uco-tool:ConfigurationSettingType ; uco-tool:itemName Literal("ruleset") ; uco-tool:itemObject kb:file-0fedea11-3c8b-400c-9cdb-593edc146194 ; uco-tool:itemType Literal("external-ruleset") ]->uco-tool:itemValue' ;
-			sh:resultPath uco-tool:itemValue ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path uco-tool:itemValue ;
-			] ;
-		]
-		;
+	sh:conforms "true"^^xsd:boolean ;
 	.
 

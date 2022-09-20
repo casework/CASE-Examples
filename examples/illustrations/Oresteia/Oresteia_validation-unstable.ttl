@@ -1,3 +1,4 @@
+@prefix configuration: <https://ontology.unifiedcyberontology.org/uco/configuration/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
@@ -8,7 +9,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -988,188 +988,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/tool-5316a112-dcd3-4515-a14e-06396126ed98> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:IRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a tool:ToolConfigurationTypeFacet ;
-				tool:configurationSettings
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "command_line_arguments" ;
-						tool:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "debug_mode" ;
-						tool:itemValue "False" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "enabled_parser_names" ;
-						tool:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "filter_expression" ;
-						tool:itemValue "" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "filter_file" ;
-						tool:itemValue "" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "identifier" ;
-						tool:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "parser_filter_expression" ;
-						tool:itemValue "sqlite" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "preferred_encoding" ;
-						tool:itemValue "cp1252" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "preferred_year" ;
-						tool:itemValue "" ;
-					]
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/tool-5316a112-dcd3-4515-a14e-06396126ed98> ;
-			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:IRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a tool:ToolConfigurationTypeFacet ;
-				tool:configurationSettings
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "command_line_arguments" ;
-						tool:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "debug_mode" ;
-						tool:itemValue "False" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "enabled_parser_names" ;
-						tool:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "filter_expression" ;
-						tool:itemValue "" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "filter_file" ;
-						tool:itemValue "" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "identifier" ;
-						tool:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "parser_filter_expression" ;
-						tool:itemValue "sqlite" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "preferred_encoding" ;
-						tool:itemValue "cp1252" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "preferred_year" ;
-						tool:itemValue "" ;
-					]
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/tool-e39f1bf1-8abd-4411-bc05-36f03192bc40> ;
-			sh:resultMessage "Value does not have class core:Facet" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:IRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a tool:ToolConfigurationTypeFacet ;
-				tool:configurationSettings
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "query" ;
-						tool:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "schema_match" ;
-						tool:itemValue "True" ;
-					]
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/tool-e39f1bf1-8abd-4411-bc05-36f03192bc40> ;
-			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
-			sh:resultPath core:hasFacet ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class core:Facet ;
-				sh:nodeKind sh:IRI ;
-				sh:path core:hasFacet ;
-			] ;
-			sh:value [
-				a tool:ToolConfigurationTypeFacet ;
-				tool:configurationSettings
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "query" ;
-						tool:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
-					] ,
-					[
-						a tool:ConfigurationSettingType ;
-						tool:itemName "schema_match" ;
-						tool:itemValue "True" ;
-					]
-					;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/trace-relationship-bd43f037-cf0f-4494-b36d-94f7a1da700c> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
@@ -1619,6 +1437,721 @@
 				a investigation:Authorization ;
 				investigation:authorizationIdentifier "Warrant12345" ;
 				investigation:authorizationType "warrant" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "command_line_arguments" ;
+				configuration:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "command_line_arguments" ;
+				configuration:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "command_line_arguments" ;
+				configuration:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "command_line_arguments" ;
+				configuration:itemValue "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "debug_mode" ;
+				configuration:itemValue "False" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "debug_mode" ;
+				configuration:itemValue "False" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "debug_mode" ;
+				configuration:itemValue "False" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "debug_mode" ;
+				configuration:itemValue "False" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "enabled_parser_names" ;
+				configuration:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "enabled_parser_names" ;
+				configuration:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "enabled_parser_names" ;
+				configuration:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "enabled_parser_names" ;
+				configuration:itemValue "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_expression" ;
+				configuration:itemValue "" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_expression" ;
+				configuration:itemValue "" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_expression" ;
+				configuration:itemValue "" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_expression" ;
+				configuration:itemValue "" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_file" ;
+				configuration:itemValue "" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_file" ;
+				configuration:itemValue "" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_file" ;
+				configuration:itemValue "" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "filter_file" ;
+				configuration:itemValue "" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "identifier" ;
+				configuration:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "identifier" ;
+				configuration:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "identifier" ;
+				configuration:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "identifier" ;
+				configuration:itemValue "624f2636e65e451e8dd7cb044ec44b69" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "parser_filter_expression" ;
+				configuration:itemValue "sqlite" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "parser_filter_expression" ;
+				configuration:itemValue "sqlite" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "parser_filter_expression" ;
+				configuration:itemValue "sqlite" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "parser_filter_expression" ;
+				configuration:itemValue "sqlite" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_encoding" ;
+				configuration:itemValue "cp1252" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_encoding" ;
+				configuration:itemValue "cp1252" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_encoding" ;
+				configuration:itemValue "cp1252" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_encoding" ;
+				configuration:itemValue "cp1252" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_year" ;
+				configuration:itemValue "" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_year" ;
+				configuration:itemValue "" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_year" ;
+				configuration:itemValue "" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "preferred_year" ;
+				configuration:itemValue "" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "query" ;
+				configuration:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "query" ;
+				configuration:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "query" ;
+				configuration:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "query" ;
+				configuration:itemValue "SELECT _id AS id, address, date, read, type, body FROM sms" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "schema_match" ;
+				configuration:itemValue "True" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "schema_match" ;
+				configuration:itemValue "True" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "schema_match" ;
+				configuration:itemValue "True" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "schema_match" ;
+				configuration:itemValue "True" ;
 			] ;
 		] ,
 		[
