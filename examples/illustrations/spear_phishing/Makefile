@@ -12,3 +12,23 @@
 # We would appreciate acknowledgement if the software is used.
 
 include ../src/illustration-nosrc.mk
+
+all: spear_phishing.ttl
+spear_phishing.ttl: \
+  spear_phishing.json \
+  $(RDF_TOOLKIT_JAR) \
+  $(top_srcdir)/.venv.done.log
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $< \
+	    > __$@
+	test -s __$@
+	java -jar $(RDF_TOOLKIT_JAR) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
