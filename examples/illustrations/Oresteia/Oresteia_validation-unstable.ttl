@@ -2489,6 +2489,44 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "48.860346"^^xsd:decimal ;
+				location:longitude "2.331199"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
+			sh:resultPath location:latitude ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:decimal ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path location:latitude ;
+			] ;
+			sh:value "48.860346"^^xsd:decimal ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "48.860346"^^xsd:decimal ;
+				location:longitude "2.331199"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
+			sh:resultPath location:longitude ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:decimal ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path location:longitude ;
+			] ;
+			sh:value "2.331199"^^xsd:decimal ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
 				a location:SimpleAddressFacet ;
 				location:locality "Argos" ;
 				location:postalCode "98052" ;
