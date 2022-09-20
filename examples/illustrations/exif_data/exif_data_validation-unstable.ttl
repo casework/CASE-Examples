@@ -1,10 +1,9 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
 @prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -15,38 +14,168 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode "image/jpg" ;
-			sh:resultMessage "The used mimeType value is not a concept with a skos:notation.  Some consumers of this data expect a string with the MIME 'type/subtype' format to be supplied with skos:notation.  Please either add the skos:notation to your input graph or incorporate the UCO MIME Taxonomy."@en ;
-			sh:resultPath skos:notation ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape observable:mimeType-notation ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:ContentDataFacet ;
-				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
-				observable:dataPayload "<base 64 encoded data of the file>" ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
-					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
-				] ;
-				observable:magicNumber "/9j/ww==" ;
-				observable:mimeType "image/jpg" ;
-				observable:sizeInBytes "35000"^^xsd:integer ;
-			] ;
-			sh:resultMessage "Value does not have class dcterms:FileFormat" ;
-			sh:resultPath observable:mimeType ;
+			sh:focusNode <http://example.org/kb/camera-a59ca7f2-cf15-4800-9dd3-1a2df40c6f6e> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
 			sh:sourceShape [
-				sh:class dcterms:FileFormat ;
+				sh:class core:Facet ;
 				sh:nodeKind sh:IRI ;
-				sh:path observable:mimeType ;
+				sh:path core:hasFacet ;
 			] ;
-			sh:value "image/jpg" ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/digital_photograph-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:ContentDataFacet ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+				observable:dataPayload "<base 64 encoded data of the file>" ;
+				observable:hash [
+					a types:Hash ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+				] ;
+				observable:magicNumber "/9j/ww==" ;
+				observable:mimeType "image/jpg" ;
+				observable:sizeInBytes "35000"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/digital_photograph-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:EXIFFacet ;
+				observable:exifData [
+					a types:ControlledDictionary ;
+					types:entry
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "DateTimeDigitized" ;
+							types:value "2010-01-15T17:59:43.25Z" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Latitude" ;
+							types:value "15.8235" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LatitudeRef" ;
+							types:value "S" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Longitude" ;
+							types:value "47.9941" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LongitudeRef" ;
+							types:value "W" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Make" ;
+							types:value "Canon" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Model" ;
+							types:value "PowerShot SX540" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Orientation" ;
+							types:value "Horizontal (normal)" ;
+						]
+						;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/digital_photograph-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:FileFacet ;
+				observable:extension "jpg" ;
+				observable:fileName "IMG_0123.jpg" ;
+				observable:filePath "/sdcard/IMG_0123.jpg" ;
+				observable:fileSystemType "EXT4" ;
+				observable:sizeInBytes "35002"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/digital_photograph-3a9be7ba-c2b6-4511-b9c4-fabb729bbcae> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:RasterPictureFacet ;
+				observable:bitsPerPixel "2"^^xsd:integer ;
+				observable:pictureHeight "12345"^^xsd:integer ;
+				observable:pictureType "jpg" ;
+				observable:pictureWidth "12345"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/relationship-03f0f4a6-661a-46f8-a602-15d9d1b67f32> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:PathRelationFacet ;
+				observable:path "/sdcard/IMG_0123.jpg" ;
+			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -63,12 +192,87 @@
 				observable:mimeType "image/jpg" ;
 				observable:sizeInBytes "35000"^^xsd:integer ;
 			] ;
-			sh:resultMessage "Value is not an instance of types:MIMEFormat or one of its subclasses.  Please consider using a value having type types:IANAMediaType or types:NonIANAMediaType."@en ;
-			sh:resultPath observable:mimeType ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:ContentDataFacet ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+				observable:dataPayload "<base 64 encoded data of the file>" ;
+				observable:hash [
+					a types:Hash ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+				] ;
+				observable:magicNumber "/9j/ww==" ;
+				observable:mimeType "image/jpg" ;
+				observable:sizeInBytes "35000"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ContentDataFacet ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+				observable:dataPayload "<base 64 encoded data of the file>" ;
+				observable:hash [
+					a types:Hash ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+				] ;
+				observable:magicNumber "/9j/ww==" ;
+				observable:mimeType "image/jpg" ;
+				observable:sizeInBytes "35000"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape observable:mimeType-class-types-MIMEFormat ;
-			sh:value "image/jpg" ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:ContentDataFacet ;
+				observable:byteOrder "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+				observable:dataPayload "<base 64 encoded data of the file>" ;
+				observable:hash [
+					a types:Hash ;
+					types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+					types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+				] ;
+				observable:magicNumber "/9j/ww==" ;
+				observable:mimeType "image/jpg" ;
+				observable:sizeInBytes "35000"^^xsd:integer ;
+			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -86,15 +290,1959 @@
 				observable:sizeInBytes "35000"^^xsd:integer ;
 			] ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
-			sh:resultPath observable:mimeType ;
+			sh:resultPath observable:hash ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
 			sh:sourceShape [
-				sh:class dcterms:FileFormat ;
+				sh:class types:Hash ;
 				sh:nodeKind sh:IRI ;
-				sh:path observable:mimeType ;
+				sh:path observable:hash ;
 			] ;
-			sh:value "image/jpg" ;
+			sh:value [
+				a types:Hash ;
+				types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+				types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:deviceType "Camera" ;
+				observable:manufacturer <http://example.org/kb/organization-f5a0877c-2a58-4280-8f24-c0df39e8badc> ;
+				observable:model "PowerShot SX540" ;
+				observable:serialNumber "DC1234567" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EXIFFacet ;
+				observable:exifData [
+					a types:ControlledDictionary ;
+					types:entry
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "DateTimeDigitized" ;
+							types:value "2010-01-15T17:59:43.25Z" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Latitude" ;
+							types:value "15.8235" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LatitudeRef" ;
+							types:value "S" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Longitude" ;
+							types:value "47.9941" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LongitudeRef" ;
+							types:value "W" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Make" ;
+							types:value "Canon" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Model" ;
+							types:value "PowerShot SX540" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Orientation" ;
+							types:value "Horizontal (normal)" ;
+						]
+						;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:EXIFFacet ;
+				observable:exifData [
+					a types:ControlledDictionary ;
+					types:entry
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "DateTimeDigitized" ;
+							types:value "2010-01-15T17:59:43.25Z" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Latitude" ;
+							types:value "15.8235" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LatitudeRef" ;
+							types:value "S" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Longitude" ;
+							types:value "47.9941" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LongitudeRef" ;
+							types:value "W" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Make" ;
+							types:value "Canon" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Model" ;
+							types:value "PowerShot SX540" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Orientation" ;
+							types:value "Horizontal (normal)" ;
+						]
+						;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EXIFFacet ;
+				observable:exifData [
+					a types:ControlledDictionary ;
+					types:entry
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "DateTimeDigitized" ;
+							types:value "2010-01-15T17:59:43.25Z" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Latitude" ;
+							types:value "15.8235" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LatitudeRef" ;
+							types:value "S" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Longitude" ;
+							types:value "47.9941" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LongitudeRef" ;
+							types:value "W" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Make" ;
+							types:value "Canon" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Model" ;
+							types:value "PowerShot SX540" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Orientation" ;
+							types:value "Horizontal (normal)" ;
+						]
+						;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:EXIFFacet ;
+				observable:exifData [
+					a types:ControlledDictionary ;
+					types:entry
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "DateTimeDigitized" ;
+							types:value "2010-01-15T17:59:43.25Z" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Latitude" ;
+							types:value "15.8235" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LatitudeRef" ;
+							types:value "S" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Longitude" ;
+							types:value "47.9941" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LongitudeRef" ;
+							types:value "W" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Make" ;
+							types:value "Canon" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Model" ;
+							types:value "PowerShot SX540" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Orientation" ;
+							types:value "Horizontal (normal)" ;
+						]
+						;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:EXIFFacet ;
+				observable:exifData [
+					a types:ControlledDictionary ;
+					types:entry
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "DateTimeDigitized" ;
+							types:value "2010-01-15T17:59:43.25Z" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Latitude" ;
+							types:value "15.8235" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LatitudeRef" ;
+							types:value "S" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Longitude" ;
+							types:value "47.9941" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "LongitudeRef" ;
+							types:value "W" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Make" ;
+							types:value "Canon" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Model" ;
+							types:value "PowerShot SX540" ;
+						] ,
+						[
+							a types:ControlledDictionaryEntry ;
+							types:key "Orientation" ;
+							types:value "Horizontal (normal)" ;
+						]
+						;
+				] ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath observable:exifData ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:ControlledDictionary ;
+				sh:nodeKind sh:IRI ;
+				sh:path observable:exifData ;
+			] ;
+			sh:value [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:extension "jpg" ;
+				observable:fileName "IMG_0123.jpg" ;
+				observable:filePath "/sdcard/IMG_0123.jpg" ;
+				observable:fileSystemType "EXT4" ;
+				observable:sizeInBytes "35002"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:FileFacet ;
+				observable:extension "jpg" ;
+				observable:fileName "IMG_0123.jpg" ;
+				observable:filePath "/sdcard/IMG_0123.jpg" ;
+				observable:fileSystemType "EXT4" ;
+				observable:sizeInBytes "35002"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:extension "jpg" ;
+				observable:fileName "IMG_0123.jpg" ;
+				observable:filePath "/sdcard/IMG_0123.jpg" ;
+				observable:fileSystemType "EXT4" ;
+				observable:sizeInBytes "35002"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:FileFacet ;
+				observable:extension "jpg" ;
+				observable:fileName "IMG_0123.jpg" ;
+				observable:filePath "/sdcard/IMG_0123.jpg" ;
+				observable:fileSystemType "EXT4" ;
+				observable:sizeInBytes "35002"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:PathRelationFacet ;
+				observable:path "/sdcard/IMG_0123.jpg" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:PathRelationFacet ;
+				observable:path "/sdcard/IMG_0123.jpg" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:PathRelationFacet ;
+				observable:path "/sdcard/IMG_0123.jpg" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:PathRelationFacet ;
+				observable:path "/sdcard/IMG_0123.jpg" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:RasterPictureFacet ;
+				observable:bitsPerPixel "2"^^xsd:integer ;
+				observable:pictureHeight "12345"^^xsd:integer ;
+				observable:pictureType "jpg" ;
+				observable:pictureWidth "12345"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:RasterPictureFacet ;
+				observable:bitsPerPixel "2"^^xsd:integer ;
+				observable:pictureHeight "12345"^^xsd:integer ;
+				observable:pictureType "jpg" ;
+				observable:pictureWidth "12345"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:RasterPictureFacet ;
+				observable:bitsPerPixel "2"^^xsd:integer ;
+				observable:pictureHeight "12345"^^xsd:integer ;
+				observable:pictureType "jpg" ;
+				observable:pictureWidth "12345"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:RasterPictureFacet ;
+				observable:bitsPerPixel "2"^^xsd:integer ;
+				observable:pictureHeight "12345"^^xsd:integer ;
+				observable:pictureType "jpg" ;
+				observable:pictureWidth "12345"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "DateTimeDigitized" ;
+				types:value "2010-01-15T17:59:43.25Z" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Latitude" ;
+				types:value "15.8235" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "LatitudeRef" ;
+				types:value "S" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Longitude" ;
+				types:value "47.9941" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "LongitudeRef" ;
+				types:value "W" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Make" ;
+				types:value "Canon" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Model" ;
+				types:value "PowerShot SX540" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionary ;
+				types:entry
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "DateTimeDigitized" ;
+						types:value "2010-01-15T17:59:43.25Z" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Latitude" ;
+						types:value "15.8235" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LatitudeRef" ;
+						types:value "S" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Longitude" ;
+						types:value "47.9941" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "LongitudeRef" ;
+						types:value "W" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Make" ;
+						types:value "Canon" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Model" ;
+						types:value "PowerShot SX540" ;
+					] ,
+					[
+						a types:ControlledDictionaryEntry ;
+						types:key "Orientation" ;
+						types:value "Horizontal (normal)" ;
+					]
+					;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Orientation" ;
+				types:value "Horizontal (normal)" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "DateTimeDigitized" ;
+				types:value "2010-01-15T17:59:43.25Z" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "DateTimeDigitized" ;
+				types:value "2010-01-15T17:59:43.25Z" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "DateTimeDigitized" ;
+				types:value "2010-01-15T17:59:43.25Z" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "DateTimeDigitized" ;
+				types:value "2010-01-15T17:59:43.25Z" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Latitude" ;
+				types:value "15.8235" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Latitude" ;
+				types:value "15.8235" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Latitude" ;
+				types:value "15.8235" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Latitude" ;
+				types:value "15.8235" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "LatitudeRef" ;
+				types:value "S" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "LatitudeRef" ;
+				types:value "S" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "LatitudeRef" ;
+				types:value "S" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "LatitudeRef" ;
+				types:value "S" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Longitude" ;
+				types:value "47.9941" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Longitude" ;
+				types:value "47.9941" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Longitude" ;
+				types:value "47.9941" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Longitude" ;
+				types:value "47.9941" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "LongitudeRef" ;
+				types:value "W" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "LongitudeRef" ;
+				types:value "W" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "LongitudeRef" ;
+				types:value "W" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "LongitudeRef" ;
+				types:value "W" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Make" ;
+				types:value "Canon" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Make" ;
+				types:value "Canon" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Make" ;
+				types:value "Canon" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Make" ;
+				types:value "Canon" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Model" ;
+				types:value "PowerShot SX540" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Model" ;
+				types:value "PowerShot SX540" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Model" ;
+				types:value "PowerShot SX540" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Model" ;
+				types:value "PowerShot SX540" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Orientation" ;
+				types:value "Horizontal (normal)" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Orientation" ;
+				types:value "Horizontal (normal)" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:ControlledDictionaryEntry ;
+				types:key "Orientation" ;
+				types:value "Horizontal (normal)" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:ControlledDictionaryEntry ;
+				types:key "Orientation" ;
+				types:value "Horizontal (normal)" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:Hash ;
+				types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+				types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a types:Hash ;
+				types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+				types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:Hash ;
+				types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+				types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:Hash ;
+				types:hashMethod "SHA256"^^vocabulary:HashNameVocab ;
+				types:hashValue "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"^^xsd:hexBinary ;
+			] ;
 		]
 		;
 	.

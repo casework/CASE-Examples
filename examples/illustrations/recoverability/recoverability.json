@@ -1,16 +1,16 @@
 {
     "@context": {
-        "drafting": "http://example.org/ontology/drafting/",
         "kb": "http://example.org/kb/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
         {
             "@id": "kb:4026fabd-924d-4138-a6ba-73df2eb37bcb",
             "@type": [
-                "drafting:RecoveredObject",
+                "uco-observable:RecoveredObject",
                 "uco-observable:File"
             ],
             "uco-core:hasFacet": [
@@ -27,17 +27,17 @@
                     "uco-observable:sizeInBytes": 1389601
                 },
                 {
-                    "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -46,7 +46,7 @@
         {
             "@id": "kb:665d63be-93e6-4d3e-8e75-3112be091e93",
             "@type": [
-                "drafting:RecoveredObject",
+                "uco-observable:RecoveredObject",
                 "uco-observable:File"
             ],
             "uco-core:hasFacet": [
@@ -71,17 +71,17 @@
                     "uco-observable:sizeInBytes": 1389601
                 },
                 {
-                    "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -90,7 +90,7 @@
         {
             "@id": "kb:bd64bdd9-3dcd-4828-a25b-a72c06e472cd",
             "@type": [
-                "drafting:RecoveredObject",
+                "uco-observable:RecoveredObject",
                 "uco-observable:File"
             ],
             "uco-core:hasFacet": [
@@ -106,17 +106,17 @@
                     "uco-observable:sizeInBytes": null
                 },
                 {
-                    "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:metadataRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:nameRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -125,7 +125,7 @@
         {
             "@id": "kb:c01e67f9-adb5-48bd-b09d-e7326fa8d592",
             "@type": [
-                "drafting:RecoveredObject",
+                "uco-observable:RecoveredObject",
                 "uco-observable:Message"
             ],
             "uco-core:hasFacet": [
@@ -146,17 +146,17 @@
                     ]
                 },
                 {
-                    "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "partially recovered"
                     },
-                    "drafting:metadataRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }
@@ -165,7 +165,7 @@
         {
             "@id": "kb:cb0354f5-2dbd-4c02-8a6c-011b77125ee2",
             "@type": [
-                "drafting:RecoveredObject",
+                "uco-observable:RecoveredObject",
                 "uco-observable:File"
             ],
             "uco-core:hasFacet": [
@@ -190,17 +190,17 @@
                     "uco-observable:sizeInBytes": 712
                 },
                 {
-                    "@type": "drafting:RecoveredObjectFacet",
-                    "drafting:contentRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:metadataRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:nameRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     }
                 }

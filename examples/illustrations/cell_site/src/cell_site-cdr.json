@@ -1,22 +1,22 @@
 [
     {
         "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-        "@type": "drafting:CapturedTelecommunicationsInformation",
+        "@type": "uco-observable:CapturedTelecommunicationsInformation",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                "drafting:captureCellSite": {
+                "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
+                "uco-observable:captureCellSite": {
                     "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
                 },
-                "observable:startTime": {
+                "uco-observable:startTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-29T01:23:02Z"
                 },
-                "observable:endTime": {
+                "uco-observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-30T02:10:50Z"
                 },
-                "drafting:interceptedCallState": "idle"
+                "uco-observable:interceptedCallState": "idle"
             }
         ]
     }

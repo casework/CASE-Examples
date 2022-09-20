@@ -1,39 +1,39 @@
 [
     {
         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-        "@type": "drafting:CellSite",
+        "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CellSiteFacet",
-                "drafting:cellSiteType": "GSM",
-                "drafting:cellSiteCountryCode": "228",
-                "drafting:cellSiteNetworkCode": "2",
-                "drafting:cellSiteLocationAreaCode": "22100",
-                "drafting:cellSiteIdentifier": "29220952"
+                "@type": "uco-observable:CellSiteFacet",
+                "uco-observable:cellSiteType": "GSM",
+                "uco-observable:cellSiteCountryCode": "228",
+                "uco-observable:cellSiteNetworkCode": "2",
+                "uco-observable:cellSiteLocationAreaCode": "22100",
+                "uco-observable:cellSiteIdentifier": "29220952"
             },
             {
-                "@type": "drafting:AntennaFacet",
-                "drafting:azimuth": {
+                "@type": "uco-observable:AntennaFacet",
+                "uco-observable:azimuth": {
                     "@type": "xsd:decimal",
                     "@value": "45"
                 },
-                "drafting:elevation": {
+                "uco-observable:elevation": {
                     "@type": "xsd:decimal",
                     "@value": "5"
                 },
-                "drafting:skew": {
+                "uco-observable:skew": {
                     "@type": "xsd:decimal",
                     "@value": "10"
                 },
-                "drafting:horizontalBeamWidth": {
+                "uco-observable:horizontalBeamWidth": {
                     "@type": "xsd:decimal",
                     "@value": "110"
                 },
-                "drafting:signalStrength": {
+                "uco-observable:signalStrength": {
                     "@type": "xsd:decimal",
                     "@value": "20"
                 },
-                "drafting:antennaHeight": {
+                "uco-observable:antennaHeight": {
                     "@type": "xsd:decimal",
                     "@value": "25"
                 }
