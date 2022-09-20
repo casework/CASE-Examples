@@ -1,8 +1,8 @@
 @prefix co: <http://purl.org/co/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix ns1: <http://example.org/local#> .
-@prefix ns2: <rdfs:> .
-@prefix ns3: <http://example.org/draft#> .
+@prefix ns1: <rdfs:> .
+@prefix ns2: <http://example.org/draft#> .
+@prefix ns3: <http://example.org/local#> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -230,8 +230,8 @@
 			] ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:visibility "PRIVATE" ;
+				ns3:identifier "billy~sarah@whatsapp.gs.net" ;
 				observable:displayName "Best Friend Chat!!" ;
 				observable:message
 					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
@@ -273,8 +273,8 @@
 			] ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns2:visibility "PUBLIC" ;
+				ns3:identifier "twitter_public" ;
 				observable:displayName "Argle-bargle" ;
 				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
@@ -349,8 +349,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:visibility "PRIVATE" ;
+				ns3:identifier "billy~sarah@whatsapp.gs.net" ;
 				observable:displayName "Best Friend Chat!!" ;
 				observable:message
 					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
@@ -395,8 +395,8 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:visibility "PRIVATE" ;
+				ns3:identifier "billy~sarah@whatsapp.gs.net" ;
 				observable:displayName "Best Friend Chat!!" ;
 				observable:message
 					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
@@ -428,8 +428,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:visibility "PRIVATE" ;
+				ns3:identifier "billy~sarah@whatsapp.gs.net" ;
 				observable:displayName "Best Friend Chat!!" ;
 				observable:message
 					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
@@ -481,8 +481,8 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:visibility "PRIVATE" ;
+				ns3:identifier "billy~sarah@whatsapp.gs.net" ;
 				observable:displayName "Best Friend Chat!!" ;
 				observable:message
 					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
@@ -514,8 +514,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns2:visibility "PRIVATE" ;
+				ns3:identifier "billy~sarah@whatsapp.gs.net" ;
 				observable:displayName "Best Friend Chat!!" ;
 				observable:message
 					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
@@ -571,8 +571,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns2:visibility "PUBLIC" ;
+				ns3:identifier "twitter_public" ;
 				observable:displayName "Argle-bargle" ;
 				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
@@ -609,8 +609,8 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns2:visibility "PUBLIC" ;
+				ns3:identifier "twitter_public" ;
 				observable:displayName "Argle-bargle" ;
 				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
@@ -634,8 +634,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns2:visibility "PUBLIC" ;
+				ns3:identifier "twitter_public" ;
 				observable:displayName "Argle-bargle" ;
 				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
@@ -679,8 +679,8 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns2:visibility "PUBLIC" ;
+				ns3:identifier "twitter_public" ;
 				observable:displayName "Argle-bargle" ;
 				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
@@ -704,8 +704,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns3:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns2:visibility "PUBLIC" ;
+				ns3:identifier "twitter_public" ;
 				observable:displayName "Argle-bargle" ;
 				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
