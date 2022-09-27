@@ -156,18 +156,6 @@
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
                     "drafting:visibility": "PRIVATE",
-                    "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
-                    "uco-observable:message": [
-                        {
-                            "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
-                        },
-                        {
-                            "@id": "kb:message-decea264-014d-4da8-9d7f-a63231d2c049"
-                        },
-                        {
-                            "@id": "kb:message-e809578d-3890-4d21-82ec-afde487b3d7e"
-                        }
-                    ],
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
                         "co:size": {
@@ -247,10 +235,6 @@
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
                     "drafting:visibility": "PUBLIC",
-                    "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
-                    "uco-observable:message": {
-                        "@id": "kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331"
-                    },
                     "uco-observable:messageThread": {
                         "@type": "uco-types:Thread",
                         "co:size": {
