@@ -1,6 +1,5 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
-@prefix ns1: <rdfs:> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -175,11 +174,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -315,11 +314,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -347,11 +346,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -366,11 +365,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -405,11 +404,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -424,11 +423,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -448,11 +447,11 @@
 			] ;
 			sh:value [
 				a observable:URL ;
+				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				core:hasFacet [
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 			] ;
 		] ,
 		[
@@ -461,11 +460,11 @@
 				a observable:ContentDataFacet ;
 				observable:dataPayloadReferenceURL [
 					a observable:URL ;
+					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 					core:hasFacet [
 						a observable:URLFacet ;
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				] ;
 				observable:hash [
 					a types:Hash ;
@@ -1396,11 +1395,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:URL ;
+				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				core:hasFacet [
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -1420,22 +1419,22 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:URL ;
+				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				core:hasFacet [
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:URL ;
+				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				core:hasFacet [
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -1462,22 +1461,22 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:URL ;
+				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				core:hasFacet [
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:URL ;
+				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 				core:hasFacet [
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-				rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
 			] ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
