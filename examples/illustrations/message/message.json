@@ -4,6 +4,7 @@
         "kb": "http://example.org/kb/",
         "draft": "http://example.org/draft#",
         "co": "http://purl.org/co/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
