@@ -12,7 +12,6 @@
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
         "uco-victim": "https://ontology.unifiedcyberontology.org/uco/victim/",
-        "draft": "http://example.org/draft#",
         "olo": "http://purl.org/ontology/olo/core#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },

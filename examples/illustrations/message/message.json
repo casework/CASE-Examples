@@ -1,9 +1,9 @@
 {
     "@context": {
-        "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
         "co": "http://purl.org/co/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
@@ -155,7 +155,7 @@
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
-                    "draft:visibility": "PRIVATE",
+                    "drafting:visibility": "PRIVATE",
                     "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
                     "uco-observable:message": [
                         {
@@ -246,7 +246,7 @@
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
-                    "draft:visibility": "PUBLIC",
+                    "drafting:visibility": "PUBLIC",
                     "rdfs:comment": "TODO: On release of UCO 0.10.0, remove uco-observable:message.",
                     "uco-observable:message": {
                         "@id": "kb:post-3328fbc7-1f63-4e66-b8fc-e27143a64331"

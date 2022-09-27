@@ -4,7 +4,7 @@
         "MobileExtractor": "urn:example:MobileExtractor",
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
@@ -695,7 +695,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-21T06:36:24.35Z"
                     },
-                    "draft:localeLanguage": "en_GR",
+                    "drafting:localeLanguage": "en_GR",
                     "uco-observable:phoneActivationTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-05-09T07:36:24.35Z"
@@ -704,11 +704,11 @@
                 },
                 {
                     "@type": [
-                        "draft:iPhoneDeviceFacet",
+                        "drafting:iPhoneDeviceFacet",
                         "uco-core:Facet"
                     ],
-                    "draft:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
-                    "draft:ownerName": "Clytemnestras iPhone"
+                    "drafting:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
+                    "drafting:ownerName": "Clytemnestras iPhone"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
@@ -904,8 +904,8 @@
                         "MobileExtractor:ToolArgumentsFacet",
                         "uco-core:Facet"
                     ],
-                    "draft:aquisitionType": "Physical Extraction",
-                    "draft:method": "Boot Loader"
+                    "drafting:aquisitionType": "Physical Extraction",
+                    "drafting:method": "Boot Loader"
                 }
             ]
         },
@@ -1537,7 +1537,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": [
-                        "draft:FacebookMessageFacet",
+                        "drafting:FacebookMessageFacet",
                         "uco-core:Facet"
                     ],
                     "uco-observable:from": {

@@ -3,8 +3,6 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
-        "olo": "http://purl.org/ontology/olo/core#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
