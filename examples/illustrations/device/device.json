@@ -3,7 +3,6 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
