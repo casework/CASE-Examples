@@ -208,7 +208,10 @@
                 {
                     "@id": "kb:ActOfFileFlagging01"
                 }
-            ]
+            ],
+            "unmapped:intervalIn": {
+                "@id": "kb:TemporalInterval03"
+            }
         },
         {
             "@id": "kb:EmailAccount01",
@@ -292,6 +295,9 @@
                     "@id": "kb:ActOfMalwareInstallation01"
                 }
             ],
+            "unmapped:intervalIn": {
+                "@id": "kb:InfectionEvent01"
+            },
             "unmapped:precedes": {
                 "@id": "kb:DetectionEvent01"
             }
@@ -364,6 +370,9 @@
                     "@id": "kb:ActOfLinkOpening01"
                 }
             ],
+            "unmapped:intervalIn": {
+                "@id": "kb:TemporalInterval01"
+            },
             "unmapped:precedes": {
                 "@id": "kb:InfectionEvent01"
             }
@@ -389,18 +398,15 @@
         },
         {
             "@id": "kb:TemporalInterval01",
-            "@type": "uco-core:UcoThing",
-            "rdfs:comment": "TODO - What is this meant to envelope?  Just SpearFishingEvent01?"
+            "@type": "uco-core:UcoThing"
         },
         {
             "@id": "kb:TemporalInterval02",
-            "@type": "uco-core:UcoThing",
-            "rdfs:comment": "TODO - What is this meant to envelope?  InfectionEvent01 and DetectionEvent01, or just the interval bookended by thoese events?"
+            "@type": "uco-core:UcoThing"
         },
         {
             "@id": "kb:TemporalInterval03",
-            "@type": "uco-core:UcoThing",
-            "rdfs:comment": "TODO - What is this meant to envelope?  Just DetectionEvent01?"
+            "@type": "uco-core:UcoThing"
         },
         {
             "@id": "kb:ThreatActorRole01",
@@ -456,6 +462,14 @@
         {
             "@id": "unmapped:hasRole",
             "@type": "owl:ObjectProperty"
+        },
+        {
+            "@id": "unmapped:intervalIn",
+            "@type": "owl:ObjectProperty",
+            "rdfs:comment": "Property name not in drafted documentation; borrowed from W3C Time Ontology.",
+            "rdfs:seeAlso": {
+                "@id": "https://www.w3.org/TR/owl-time/#time:intervalIn"
+            }
         },
         {
             "@id": "unmapped:isCarrierOf",
