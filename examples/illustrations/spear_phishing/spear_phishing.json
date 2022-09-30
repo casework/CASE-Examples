@@ -14,17 +14,17 @@
             "@type": "owl:Ontology"
         },
         {
-            "@id": "kb:ActOfNetworkLogin",
+            "@id": "kb:ActOfNetworkLogin01",
             "@type": "uco-core:UcoThing",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
         },
         {
-            "@id": "kb:ActOfNetworkLogout",
+            "@id": "kb:ActOfNetworkLogout01",
             "@type": "uco-core:UcoThing",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
         },
         {
-            "@id": "kb:ActOfNetworkingSession",
+            "@id": "kb:ActOfNetworkingSession01",
             "@type": "uco-core:UcoThing",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
         },
@@ -105,7 +105,7 @@
             "@id": "kb:Alert01",
             "@type": "uco-core:UcoThing",
             "unmapped:participatesIn": {
-                "@id": "kb:FileFlaggingAct"
+                "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
@@ -134,10 +134,10 @@
                     "@id": "kb:ActOfLinkOpening01"
                 },
                 {
-                    "@id": "kb:MalwareDeliveryAct"
+                    "@id": "kb:ActOfMalwareDelivery01"
                 },
                 {
-                    "@id": "kb:MalwareInstallAct"
+                    "@id": "kb:ActOfMalwareInstallation01"
                 }
             ]
         },
@@ -172,7 +172,7 @@
                 "@id": "kb:ReceiverRole01"
             },
             "unmapped:participatesIn": {
-                "@id": "kb:FileFlaggingAct"
+                "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
@@ -183,10 +183,10 @@
                     "@id": "kb:ActOfSending02"
                 },
                 {
-                    "@id": "kb:EndpointScanAct"
+                    "@id": "kb:ActOfEndpointScan01"
                 },
                 {
-                    "@id": "kb:FileFlaggingAct"
+                    "@id": "kb:ActOfFileFlagging01"
                 }
             ]
         },
@@ -240,22 +240,22 @@
             },
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:EndpointScanAct"
+                    "@id": "kb:ActOfEndpointScan01"
                 },
                 {
-                    "@id": "kb:FileFlaggingAct"
+                    "@id": "kb:ActOfFileFlagging01"
                 }
             ]
         },
         {
-            "@id": "kb:EndpointScanAct",
+            "@id": "kb:ActOfEndpointScan01",
             "@type": "uco-core:UcoThing",
             "unmapped:precedes": {
-                "@id": "kb:FileFlaggingAct"
+                "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
-            "@id": "kb:FileFlaggingAct",
+            "@id": "kb:ActOfFileFlagging01",
             "@type": "uco-core:UcoThing",
             "unmapped:hasOutput": {
                 "@id": "kb:Alert01"
@@ -266,10 +266,10 @@
             "@type": "uco-core:UcoThing",
             "unmapped:hasOccurrentPart": [
                 {
-                    "@id": "kb:MalwareDeliveryAct"
+                    "@id": "kb:ActOfMalwareDelivery01"
                 },
                 {
-                    "@id": "kb:MalwareInstallAct"
+                    "@id": "kb:ActOfMalwareInstallation01"
                 }
             ],
             "unmapped:precedes": {
@@ -281,28 +281,28 @@
             "@type": "uco-core:UcoThing",
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:EndpointScanAct"
+                    "@id": "kb:ActOfEndpointScan01"
                 },
                 {
                     "@id": "kb:InfectionEvent01"
                 },
                 {
-                    "@id": "kb:MalwareDeliveryAct"
+                    "@id": "kb:ActOfMalwareDelivery01"
                 },
                 {
-                    "@id": "kb:MalwareInstallAct"
+                    "@id": "kb:ActOfMalwareInstallation01"
                 }
             ]
         },
         {
-            "@id": "kb:MalwareDeliveryAct",
+            "@id": "kb:ActOfMalwareDelivery01",
             "@type": "uco-core:UcoThing",
             "unmapped:precedes": {
-                "@id": "kb:MalwareInstallAct"
+                "@id": "kb:ActOfMalwareInstallation01"
             }
         },
         {
-            "@id": "kb:MalwareInstallAct",
+            "@id": "kb:ActOfMalwareInstallAct01",
             "@type": "uco-core:UcoThing"
         },
         {
@@ -319,7 +319,7 @@
             "@id": "kb:ReceiverRole01",
             "@type": "uco-core:UcoThing",
             "unmapped:realizedIn": {
-                "@id": "kb:FileFlaggingAct"
+                "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
@@ -330,7 +330,7 @@
             "@id": "kb:ScannerRole01",
             "@type": "uco-core:UcoThing",
             "unmapped:realizedIn": {
-                "@id": "kb:EndpointScanAct"
+                "@id": "kb:ActOfEndpointScan01"
             }
         },
         {
@@ -363,7 +363,7 @@
                     "@id": "kb:ActOfLinkOpening01"
                 },
                 {
-                    "@id": "kb:MalwareDeliveryAct"
+                    "@id": "kb:ActOfMalwareDelivery01"
                 }
             ]
         },
