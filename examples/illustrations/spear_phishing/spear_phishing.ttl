@@ -19,21 +19,40 @@ kb:ActOfEmailDelivery01
 	unmapped:precedes kb:ActOfLinkOpening01 ;
 	.
 
+kb:ActOfEndpointScan01
+	a uco-core:UcoThing ;
+	unmapped:precedes kb:ActOfFileFlagging01 ;
+	.
+
+kb:ActOfFileFlagging01
+	a uco-core:UcoThing ;
+	unmapped:hasOutput kb:Alert01 ;
+	.
+
 kb:ActOfLinkOpening01
 	a uco-core:UcoThing ;
 	.
 
-kb:ActOfNetworkLogin
+kb:ActOfMalwareDelivery01
+	a uco-core:UcoThing ;
+	unmapped:precedes kb:ActOfMalwareInstallation01 ;
+	.
+
+kb:ActOfMalwareInstallAct01
+	a uco-core:UcoThing ;
+	.
+
+kb:ActOfNetworkLogin01
 	a uco-core:UcoThing ;
 	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
 	.
 
-kb:ActOfNetworkLogout
+kb:ActOfNetworkLogout01
 	a uco-core:UcoThing ;
 	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
 	.
 
-kb:ActOfNetworkingSession
+kb:ActOfNetworkingSession01
 	a uco-core:UcoThing ;
 	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
 	.
@@ -74,7 +93,7 @@ kb:Agent03
 
 kb:Alert01
 	a uco-core:UcoThing ;
-	unmapped:participatesIn kb:FileFlaggingAct ;
+	unmapped:participatesIn kb:ActOfFileFlagging01 ;
 	.
 
 kb:ComputingDevice01
@@ -89,8 +108,8 @@ kb:ComputingDevice01
 		;
 	unmapped:participatesIn
 		kb:ActOfLinkOpening01 ,
-		kb:MalwareDeliveryAct ,
-		kb:MalwareInstallAct
+		kb:ActOfMalwareDelivery01 ,
+		kb:ActOfMalwareInstallation01
 		;
 	.
 
@@ -113,15 +132,15 @@ kb:ComputingDevice03
 kb:CorporateLoggingTool01
 	a uco-core:UcoThing ;
 	unmapped:bearerOf kb:ReceiverRole01 ;
-	unmapped:participatesIn kb:FileFlaggingAct ;
+	unmapped:participatesIn kb:ActOfFileFlagging01 ;
 	.
 
 kb:DetectionEvent01
 	a uco-core:UcoThing ;
 	unmapped:hasOccurrentPart
-		kb:ActOfSending02 ,
-		kb:EndpointScanAct ,
-		kb:FileFlaggingAct
+		kb:ActOfEndpointScan01 ,
+		kb:ActOfFileFlagging01 ,
+		kb:ActOfSending02
 		;
 	.
 
@@ -159,26 +178,16 @@ kb:EndpointProtectionSoftware01
 	a uco-core:UcoThing ;
 	unmapped:bearerOf kb:ScannerRole01 ;
 	unmapped:participatesIn
-		kb:EndpointScanAct ,
-		kb:FileFlaggingAct
+		kb:ActOfEndpointScan01 ,
+		kb:ActOfFileFlagging01
 		;
-	.
-
-kb:EndpointScanAct
-	a uco-core:UcoThing ;
-	unmapped:precedes kb:FileFlaggingAct ;
-	.
-
-kb:FileFlaggingAct
-	a uco-core:UcoThing ;
-	unmapped:hasOutput kb:Alert01 ;
 	.
 
 kb:InfectionEvent01
 	a uco-core:UcoThing ;
 	unmapped:hasOccurrentPart
-		kb:MalwareDeliveryAct ,
-		kb:MalwareInstallAct
+		kb:ActOfMalwareDelivery01 ,
+		kb:ActOfMalwareInstallation01
 		;
 	unmapped:precedes kb:DetectionEvent01 ;
 	.
@@ -186,20 +195,11 @@ kb:InfectionEvent01
 kb:MaliciousSoftware01
 	a uco-core:UcoThing ;
 	unmapped:participatesIn
-		kb:EndpointScanAct ,
-		kb:InfectionEvent01 ,
-		kb:MalwareDeliveryAct ,
-		kb:MalwareInstallAct
+		kb:ActOfEndpointScan01 ,
+		kb:ActOfMalwareDelivery01 ,
+		kb:ActOfMalwareInstallation01 ,
+		kb:InfectionEvent01
 		;
-	.
-
-kb:MalwareDeliveryAct
-	a uco-core:UcoThing ;
-	unmapped:precedes kb:MalwareInstallAct ;
-	.
-
-kb:MalwareInstallAct
-	a uco-core:UcoThing ;
 	.
 
 kb:Port01
@@ -210,7 +210,7 @@ kb:Port01
 
 kb:ReceiverRole01
 	a uco-core:UcoThing ;
-	unmapped:realizedIn kb:FileFlaggingAct ;
+	unmapped:realizedIn kb:ActOfFileFlagging01 ;
 	.
 
 kb:SOCAnalystRole
@@ -219,7 +219,7 @@ kb:SOCAnalystRole
 
 kb:ScannerRole01
 	a uco-core:UcoThing ;
-	unmapped:realizedIn kb:EndpointScanAct ;
+	unmapped:realizedIn kb:ActOfEndpointScan01 ;
 	.
 
 kb:SpearFishingEvent01
@@ -240,7 +240,7 @@ kb:TargetRole02
 	a uco-core:UcoThing ;
 	unmapped:realizedIn
 		kb:ActOfLinkOpening01 ,
-		kb:MalwareDeliveryAct
+		kb:ActOfMalwareDelivery01
 		;
 	.
 
