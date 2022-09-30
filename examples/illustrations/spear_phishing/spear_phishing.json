@@ -16,17 +16,17 @@
         {
             "@id": "kb:ActOfNetworkLogin01",
             "@type": "uco-core:UcoThing",
-            "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
+            "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
         },
         {
             "@id": "kb:ActOfNetworkLogout01",
             "@type": "uco-core:UcoThing",
-            "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
+            "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
         },
         {
             "@id": "kb:ActOfNetworkingSession01",
             "@type": "uco-core:UcoThing",
-            "rdfs:comment": "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?"
+            "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
         },
         {
             "@id": "kb:ActOfEmailDelivery01",
@@ -67,9 +67,20 @@
             "unmapped:uses": {
                 "@id": "kb:ComputingDevice01"
             },
-            "unmapped:participatesIn": {
-                "@id": "kb:ActOfLinkOpening01"
-            }
+            "unmapped:participatesIn": [
+                {
+                    "@id": "kb:ActOfLinkOpening01"
+                },
+                {
+                    "@id": "kb:ActOfNetworkLogin01"
+                },
+                {
+                    "@id": "kb:ActOfNetworkLogout01"
+                },
+                {
+                    "@id": "kb:ActOfNetworkingSession01"
+                }
+            ]
         },
         {
             "@id": "kb:Agent02",
@@ -138,6 +149,15 @@
                 },
                 {
                     "@id": "kb:ActOfMalwareInstallation01"
+                },
+                {
+                    "@id": "kb:ActOfNetworkLogin01"
+                },
+                {
+                    "@id": "kb:ActOfNetworkLogout01"
+                },
+                {
+                    "@id": "kb:ActOfNetworkingSession01"
                 }
             ]
         },
