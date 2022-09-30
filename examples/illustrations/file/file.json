@@ -1,9 +1,8 @@
 {
     "@context": {
-        "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
@@ -404,8 +403,8 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "accessedAction": "2010-01-15T17:59:43.25Z",
-                    "createdAction": "2010-01-15T17:59:43.25Z",
+                    "drafting:accessedAction": "2010-01-15T17:59:43.25Z",
+                    "drafting:createdAction": "2010-01-15T17:59:43.25Z",
                     "uco-observable:metadataChangeTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"

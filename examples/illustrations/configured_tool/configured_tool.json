@@ -1,7 +1,6 @@
 {
     "@context": {
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "drafting": "http://example.org/ontology/drafting/",
         "kb": "http://example.org/kb/",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
@@ -24,8 +23,8 @@
         },
         {
             "@id": "kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e",
-            "@type": "drafting:ConfiguredTool",
-            "drafting:isConfigurationOf": {
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-configuration:isConfigurationOf": {
                 "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
@@ -34,17 +33,16 @@
                 "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
             },
             "uco-tool:version": "7.7",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-tool:ToolConfigurationTypeFacet",
-                    "uco-tool:configurationSettings": {
-                        "@type": "uco-tool:ConfigurationSettingType",
-                        "uco-tool:itemName": "auto-detect-content-type",
-                        "uco-tool:itemValue": "true",
-                        "uco-tool:itemType": "commandline-flag"
-                    }
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:configuration-2934ee74-ee7b-481f-8c05-ecce52d58634",
+                "@type": "uco-configuration:Configuration",
+                "uco-tool:configurationSettings": {
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "auto-detect-content-type",
+                    "uco-configuration:itemValue": "true",
+                    "uco-configuration:itemType": "commandline-flag"
                 }
-            ]
+            }
         },
         {
             "@id": "kb:action-94446a56-1f78-42e4-a4f4-ec94ad7e9118",
@@ -83,8 +81,8 @@
         },
         {
             "@id": "kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
-            "@type": "drafting:ConfiguredTool",
-            "drafting:isConfigurationOf": {
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-configuration:isConfigurationOf": {
                 "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
@@ -93,17 +91,16 @@
                 "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
             },
             "uco-tool:version": "7.7",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-tool:ToolConfigurationTypeFacet",
-                    "uco-tool:configurationSettings": {
-                        "@type": "uco-tool:ConfigurationSettingType",
-                        "uco-tool:itemName": "assume-content-type",
-                        "uco-tool:itemValue": "foo",
-                        "uco-tool:itemType": "commandline-argument"
-                    }
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:configuration-472cd37e-8895-498f-848c-583d83bf2a19",
+                "@type": "uco-configuration:Configuration",
+                "uco-tool:configurationSettings": {
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "assume-content-type",
+                    "uco-configuration:itemValue": "foo",
+                    "uco-configuration:itemType": "commandline-argument"
                 }
-            ]
+            }
         },
         {
             "@id": "kb:action-ce95584e-5065-4287-83fd-81df2ac72180",
@@ -142,8 +139,8 @@
         },
         {
             "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
-            "@type": "drafting:ConfiguredTool",
-            "drafting:isConfigurationOf": {
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-configuration:isConfigurationOf": {
                 "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
@@ -152,19 +149,18 @@
                 "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
             },
             "uco-tool:version": "7.7",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-tool:ToolConfigurationTypeFacet",
-                    "uco-tool:configurationSettings": {
-                        "@type": "uco-tool:ConfigurationSettingType",
-                        "uco-tool:itemName": "ruleset",
-                        "uco-tool:itemObject": {
-                            "@id": "kb:file-0fedea11-3c8b-400c-9cdb-593edc146194"
-                        },
-                        "uco-tool:itemType": "external-ruleset"
-                    }
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:configuration-4dafed4a-e369-4755-95fa-f50c40e058cb",
+                "@type": "uco-configuration:Configuration",
+                "uco-tool:configurationSettings": {
+                    "@type": "uco-configuration:ConfigurationEntry",
+                    "uco-configuration:itemName": "ruleset",
+                    "uco-configuration:itemObject": {
+                        "@id": "kb:file-0fedea11-3c8b-400c-9cdb-593edc146194"
+                    },
+                    "uco-configuration:itemType": "external-ruleset"
                 }
-            ]
+            }
         },
         {
             "@id": "kb:action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6",

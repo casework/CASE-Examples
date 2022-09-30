@@ -4,10 +4,11 @@
         "MobileExtractor": "urn:example:MobileExtractor",
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
@@ -300,11 +301,11 @@
                     "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",
-                        "@value": 48.860346
+                        "@value": "48.860346"
                     },
                     "uco-location:longitude": {
                         "@type": "xsd:decimal",
-                        "@value": 2.331199
+                        "@value": "2.331199"
                     }
                 }
             ]
@@ -694,7 +695,7 @@
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-21T06:36:24.35Z"
                     },
-                    "draft:localeLanguage": "en_GR",
+                    "drafting:localeLanguage": "en_GR",
                     "uco-observable:phoneActivationTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-05-09T07:36:24.35Z"
@@ -703,11 +704,11 @@
                 },
                 {
                     "@type": [
-                        "draft:iPhoneDeviceFacet",
+                        "drafting:iPhoneDeviceFacet",
                         "uco-core:Facet"
                     ],
-                    "draft:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
-                    "draft:ownerName": "Clytemnestras iPhone"
+                    "drafting:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774",
+                    "drafting:ownerName": "Clytemnestras iPhone"
                 },
                 {
                     "@type": "uco-observable:OperatingSystemFacet",
@@ -903,8 +904,8 @@
                         "MobileExtractor:ToolArgumentsFacet",
                         "uco-core:Facet"
                     ],
-                    "draft:aquisitionType": "Physical Extraction",
-                    "draft:method": "Boot Loader"
+                    "drafting:aquisitionType": "Physical Extraction",
+                    "drafting:method": "Boot Loader"
                 }
             ]
         },
@@ -1117,91 +1118,89 @@
         },
         {
             "@id": "kb:tool-5316a112-dcd3-4515-a14e-06396126ed98",
-            "@type": "uco-tool:Tool",
+            "@type": "uco-tool:ConfiguredTool",
             "uco-core:name": "Plaso",
             "uco-tool:toolType": "Extraction",
             "uco-tool:creator": {
                 "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
             },
             "uco-tool:version": "1.5.2_201701013",
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-tool:ToolConfigurationTypeFacet",
-                    "uco-tool:configurationSettings": [
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "identifier",
-                            "uco-tool:itemValue": "624f2636e65e451e8dd7cb044ec44b69"
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "filter_file",
-                            "uco-tool:itemValue": ""
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "filter_expression",
-                            "uco-tool:itemValue": ""
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "preferred_encoding",
-                            "uco-tool:itemValue": "cp1252"
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "parser_filter_expression",
-                            "uco-tool:itemValue": "sqlite"
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "preferred_year",
-                            "uco-tool:itemValue": ""
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "enabled_parser_names",
-                            "uco-tool:itemValue": "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook"
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "debug_mode",
-                            "uco-tool:itemValue": "False"
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "command_line_arguments",
-                            "uco-tool:itemValue": "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite"
-                        }
-                    ]
-                }
-            ]
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:configuration-027f22f9-7c28-4f5e-b83c-3b9db187fa11",
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "identifier",
+                        "uco-configuration:itemValue": "624f2636e65e451e8dd7cb044ec44b69"
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "filter_file",
+                        "uco-configuration:itemValue": ""
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "filter_expression",
+                        "uco-configuration:itemValue": ""
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "preferred_encoding",
+                        "uco-configuration:itemValue": "cp1252"
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "parser_filter_expression",
+                        "uco-configuration:itemValue": "sqlite"
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "preferred_year",
+                        "uco-configuration:itemValue": ""
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "enabled_parser_names",
+                        "uco-configuration:itemValue": "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook"
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "debug_mode",
+                        "uco-configuration:itemValue": "False"
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "command_line_arguments",
+                        "uco-configuration:itemValue": "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite"
+                    }
+                ]
+            }
         },
         {
             "@id": "kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40",
-            "@type": "uco-tool:Tool",
+            "@type": "uco-tool:ConfiguredTool",
             "uco-core:name": "sqlite/android_sms",
             "uco-tool:toolType": "Parser",
             "uco-tool:creator": {
                 "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919"
             },
-            "uco-core:hasFacet": [
-                {
-                    "@type": "uco-tool:ToolConfigurationTypeFacet",
-                    "uco-tool:configurationSettings": [
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "query",
-                            "uco-tool:itemValue": "SELECT _id AS id, address, date, read, type, body FROM sms"
-                        },
-                        {
-                            "@type": "uco-tool:ConfigurationSettingType",
-                            "uco-tool:itemName": "schema_match",
-                            "uco-tool:itemValue": "True"
-                        }
-                    ]
-                }
-            ]
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:configuration-2422640a-6b47-46b2-8f34-9f6d80cd8a79",
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "query",
+                        "uco-configuration:itemValue": "SELECT _id AS id, address, date, read, type, body FROM sms"
+                    },
+                    {
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "schema_match",
+                        "uco-configuration:itemValue": "True"
+                    }
+                ]
+            }
         },
         {
             "@id": "kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe",
@@ -1538,7 +1537,7 @@
             "uco-core:hasFacet": [
                 {
                     "@type": [
-                        "draft:FacebookMessageFacet",
+                        "drafting:FacebookMessageFacet",
                         "uco-core:Facet"
                     ],
                     "uco-observable:from": {

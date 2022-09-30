@@ -15,17 +15,17 @@ WHERE
     }
 
   ?nCellSite
-    a drafting:CellSite ;
+    a uco-observable:CellSite ;
     uco-core:hasFacet ?nCellSiteFacet ;
     .
 
   ?nCellSiteFacet
-    a drafting:CellSiteFacet ;
+    a uco-observable:CellSiteFacet ;
     .
     OPTIONAL {
-      ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
+      ?nCellSiteFacet uco-observable:cellSiteIdentifier ?lCellSiteIdentifier .
     }
     OPTIONAL {
-      ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
+      ?nCellSiteFacet uco-observable:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
     }
 }

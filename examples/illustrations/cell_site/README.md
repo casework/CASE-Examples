@@ -12,17 +12,12 @@ This illustration includes example investigative questions that require cell sit
 
 The importance of standardizing representation of Cell Site information is evident from errors in processing location-based mobile device evidence that prompted Danish authorities to review over 10,000 cases ([Flaws in Cellphone Evidence Prompt Review of 10,000 Verdicts in Denmark, New York Times, 20 August 2019](https://www.nytimes.com/2019/08/20/world/europe/denmark-cellphone-data-courts.html)).
 
+A total JSON-LD file of the data on this page, plus supplementary data needed to support queries, is available here: [JSON](cell_site.json).
+
 
 ## Disclaimer
 
 Participation by NIST in the creation of the documentation of mentioned software is not intended to imply a recommendation or endorsement by the National Institute of Standards and Technology, nor is it intended to imply that any specific software is necessarily the best available for the purpose.
-
-
-## State of this Illustration
-
-This illustration has been written in support of a Change Proposal under design and discussion, and hence may change in response to the proposal's evolution. New ontology concepts are in the file [drafting.ttl](drafting.ttl).
-
-A total JSON-LD file of the data on this page, plus supplementary data needed to support queries, is available here: [JSON](cell_site.json).
 
 
 ## Example - Connected Cell Sites(s)
@@ -39,39 +34,39 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
 [
     {
         "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
-        "@type": "drafting:CellSite",
+        "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CellSiteFacet",
-                "drafting:cellSiteType": "GSM",
-                "drafting:cellSiteCountryCode": "228",
-                "drafting:cellSiteNetworkCode": "2",
-                "drafting:cellSiteLocationAreaCode": "22100",
-                "drafting:cellSiteIdentifier": "29220952"
+                "@type": "uco-observable:CellSiteFacet",
+                "uco-observable:cellSiteType": "GSM",
+                "uco-observable:cellSiteCountryCode": "228",
+                "uco-observable:cellSiteNetworkCode": "2",
+                "uco-observable:cellSiteLocationAreaCode": "22100",
+                "uco-observable:cellSiteIdentifier": "29220952"
             },
             {
-                "@type": "drafting:AntennaFacet",
-                "drafting:azimuth": {
+                "@type": "uco-observable:AntennaFacet",
+                "uco-observable:azimuth": {
                     "@type": "xsd:decimal",
                     "@value": "45"
                 },
-                "drafting:elevation": {
+                "uco-observable:elevation": {
                     "@type": "xsd:decimal",
                     "@value": "5"
                 },
-                "drafting:skew": {
+                "uco-observable:skew": {
                     "@type": "xsd:decimal",
                     "@value": "10"
                 },
-                "drafting:horizontalBeamWidth": {
+                "uco-observable:horizontalBeamWidth": {
                     "@type": "xsd:decimal",
                     "@value": "110"
                 },
-                "drafting:signalStrength": {
+                "uco-observable:signalStrength": {
                     "@type": "xsd:decimal",
                     "@value": "20"
                 },
-                "drafting:antennaHeight": {
+                "uco-observable:antennaHeight": {
                     "@type": "xsd:decimal",
                     "@value": "25"
                 }
@@ -149,18 +144,18 @@ WHERE
     }
 
   ?nCellSite
-    a drafting:CellSite ;
+    a uco-observable:CellSite ;
     uco-core:hasFacet ?nCellSiteFacet ;
     .
 
   ?nCellSiteFacet
-    a drafting:CellSiteFacet ;
+    a uco-observable:CellSiteFacet ;
     .
     OPTIONAL {
-      ?nCellSiteFacet drafting:cellSiteIdentifier ?lCellSiteIdentifier .
+      ?nCellSiteFacet uco-observable:cellSiteIdentifier ?lCellSiteIdentifier .
     }
     OPTIONAL {
-      ?nCellSiteFacet drafting:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
+      ?nCellSiteFacet uco-observable:cellSiteLocationAreaCode ?lCellSiteLocationAreaCode .
     }
 }
 ```
@@ -208,22 +203,22 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
 [
     {
         "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
-        "@type": "drafting:CapturedTelecommunicationsInformation",
+        "@type": "uco-observable:CapturedTelecommunicationsInformation",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CapturedTelecommunicationsInformationFacet",
-                "drafting:captureCellSite": {
+                "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
+                "uco-observable:captureCellSite": {
                     "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
                 },
-                "observable:startTime": {
+                "uco-observable:startTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-29T01:23:02Z"
                 },
-                "observable:endTime": {
+                "uco-observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-07-30T02:10:50Z"
                 },
-                "drafting:interceptedCallState": "idle"
+                "uco-observable:interceptedCallState": "idle"
             }
         ]
     }
@@ -249,15 +244,15 @@ From commentary in a [forum post](https://community.opencellid.org/t/documenting
 [
     {
         "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
-        "@type": "drafting:CellSite",
+        "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
-                "@type": "drafting:CellSiteFacet",
-                "drafting:cellSiteType": "GSM",
-                "drafting:cellSiteCountryCode": "204",
-                "drafting:cellSiteNetworkCode": "16",
-                "drafting:cellSiteLocationAreaCode": "1014",
-                "drafting:cellSiteIdentifier": "13399"
+                "@type": "uco-observable:CellSiteFacet",
+                "uco-observable:cellSiteType": "GSM",
+                "uco-observable:cellSiteCountryCode": "204",
+                "uco-observable:cellSiteNetworkCode": "16",
+                "uco-observable:cellSiteLocationAreaCode": "1014",
+                "uco-observable:cellSiteIdentifier": "13399"
             }
         ]
     }

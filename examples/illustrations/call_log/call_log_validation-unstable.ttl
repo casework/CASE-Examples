@@ -24,6 +24,7 @@
 			] ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "user@example.org" ;
 				observable:accountIssuer <http://example.org/kb/zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -137,6 +138,7 @@
 			] ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "VZ123456890" ;
 				observable:accountIssuer <http://example.org/kb/verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -172,6 +174,7 @@
 			] ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "AT123456890" ;
 				observable:accountIssuer <http://example.org/kb/att-466a0ea8-b22f-4175-8119-846bec8f7831> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -207,6 +210,7 @@
 			] ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "SP123456890" ;
 				observable:accountIssuer <http://example.org/kb/sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -255,6 +259,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "AT123456890" ;
 				observable:accountIssuer <http://example.org/kb/att-466a0ea8-b22f-4175-8119-846bec8f7831> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -276,6 +281,7 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "AT123456890" ;
 				observable:accountIssuer <http://example.org/kb/att-466a0ea8-b22f-4175-8119-846bec8f7831> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -284,6 +290,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "AT123456890" ;
 				observable:accountIssuer <http://example.org/kb/att-466a0ea8-b22f-4175-8119-846bec8f7831> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -312,6 +319,7 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "AT123456890" ;
 				observable:accountIssuer <http://example.org/kb/att-466a0ea8-b22f-4175-8119-846bec8f7831> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -320,6 +328,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "SP123456890" ;
 				observable:accountIssuer <http://example.org/kb/sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -341,6 +350,7 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "SP123456890" ;
 				observable:accountIssuer <http://example.org/kb/sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -349,6 +359,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "SP123456890" ;
 				observable:accountIssuer <http://example.org/kb/sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -377,6 +388,7 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "SP123456890" ;
 				observable:accountIssuer <http://example.org/kb/sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -385,6 +397,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "VZ123456890" ;
 				observable:accountIssuer <http://example.org/kb/verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -406,6 +419,7 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "VZ123456890" ;
 				observable:accountIssuer <http://example.org/kb/verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -414,6 +428,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "VZ123456890" ;
 				observable:accountIssuer <http://example.org/kb/verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -442,6 +457,7 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "VZ123456890" ;
 				observable:accountIssuer <http://example.org/kb/verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -450,6 +466,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "user@example.org" ;
 				observable:accountIssuer <http://example.org/kb/zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -471,6 +488,7 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "user@example.org" ;
 				observable:accountIssuer <http://example.org/kb/zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -479,6 +497,7 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "user@example.org" ;
 				observable:accountIssuer <http://example.org/kb/zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;
@@ -507,6 +526,7 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:AccountFacet ;
+				observable:accountIdentifier "user@example.org" ;
 				observable:accountIssuer <http://example.org/kb/zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b> ;
 				observable:isActive "true"^^xsd:boolean ;
 			] ;

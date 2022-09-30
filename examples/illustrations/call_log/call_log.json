@@ -2,7 +2,6 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
-        "draft": "http://example.org/draft#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
@@ -46,6 +45,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:att-466a0ea8-b22f-4175-8119-846bec8f7831"
                     },
+                    "uco-observable:accountIdentifier": "AT123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -63,6 +63,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202"
                     },
+                    "uco-observable:accountIdentifier": "SP123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -80,6 +81,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12"
                     },
+                    "uco-observable:accountIdentifier": "VZ123456890",
                     "uco-observable:isActive": true
                 },
                 {
@@ -97,6 +99,7 @@
                     "uco-observable:accountIssuer": {
                         "@id": "kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b"
                     },
+                    "uco-observable:accountIdentifier": "user@example.org",
                     "uco-observable:isActive": true
                 },
                 {

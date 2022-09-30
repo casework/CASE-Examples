@@ -1,8 +1,6 @@
 @prefix co: <http://purl.org/co/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix ns1: <http://example.org/local#> .
-@prefix ns2: <http://example.org/draft#> .
-@prefix ns3: <rdfs:> .
+@prefix ns1: <http://example.org/ontology/drafting/> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -230,14 +228,8 @@
 			] ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns1:visibility "PRIVATE" ;
 				observable:displayName "Best Friend Chat!!" ;
-				observable:message
-					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
-					<http://example.org/kb/message-decea264-014d-4da8-9d7f-a63231d2c049> ,
-					<http://example.org/kb/message-e809578d-3890-4d21-82ec-afde487b3d7e>
-					;
 				observable:messageThread [
 					a types:Thread ;
 					co:element
@@ -256,7 +248,6 @@
 					<http://example.org/kb/account-16f128ac-7e5b-4cac-908c-11062488eb06> ,
 					<http://example.org/kb/account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 		] ,
 		[
@@ -273,10 +264,8 @@
 			] ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns1:visibility "PUBLIC" ;
 				observable:displayName "Argle-bargle" ;
-				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
 					a types:Thread ;
 					co:element <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
@@ -291,7 +280,6 @@
 					<http://example.org/kb/account-7fb9ef43-fb36-4781-918b-79a5801223e2> ,
 					<http://example.org/kb/account-8f80b20d-d41f-411a-90ce-460dedabf1c3>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 		] ,
 		[
@@ -349,14 +337,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns1:visibility "PRIVATE" ;
 				observable:displayName "Best Friend Chat!!" ;
-				observable:message
-					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
-					<http://example.org/kb/message-decea264-014d-4da8-9d7f-a63231d2c049> ,
-					<http://example.org/kb/message-e809578d-3890-4d21-82ec-afde487b3d7e>
-					;
 				observable:messageThread [
 					a types:Thread ;
 					co:element
@@ -375,7 +357,6 @@
 					<http://example.org/kb/account-16f128ac-7e5b-4cac-908c-11062488eb06> ,
 					<http://example.org/kb/account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -395,14 +376,8 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns1:visibility "PRIVATE" ;
 				observable:displayName "Best Friend Chat!!" ;
-				observable:message
-					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
-					<http://example.org/kb/message-decea264-014d-4da8-9d7f-a63231d2c049> ,
-					<http://example.org/kb/message-e809578d-3890-4d21-82ec-afde487b3d7e>
-					;
 				observable:messageThread [
 					a types:Thread ;
 					co:element
@@ -421,21 +396,14 @@
 					<http://example.org/kb/account-16f128ac-7e5b-4cac-908c-11062488eb06> ,
 					<http://example.org/kb/account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns1:visibility "PRIVATE" ;
 				observable:displayName "Best Friend Chat!!" ;
-				observable:message
-					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
-					<http://example.org/kb/message-decea264-014d-4da8-9d7f-a63231d2c049> ,
-					<http://example.org/kb/message-e809578d-3890-4d21-82ec-afde487b3d7e>
-					;
 				observable:messageThread [
 					a types:Thread ;
 					co:element
@@ -454,7 +422,6 @@
 					<http://example.org/kb/account-16f128ac-7e5b-4cac-908c-11062488eb06> ,
 					<http://example.org/kb/account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -481,14 +448,8 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns1:visibility "PRIVATE" ;
 				observable:displayName "Best Friend Chat!!" ;
-				observable:message
-					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
-					<http://example.org/kb/message-decea264-014d-4da8-9d7f-a63231d2c049> ,
-					<http://example.org/kb/message-e809578d-3890-4d21-82ec-afde487b3d7e>
-					;
 				observable:messageThread [
 					a types:Thread ;
 					co:element
@@ -507,21 +468,14 @@
 					<http://example.org/kb/account-16f128ac-7e5b-4cac-908c-11062488eb06> ,
 					<http://example.org/kb/account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PRIVATE" ;
-				ns1:identifier "billy~sarah@whatsapp.gs.net" ;
+				ns1:visibility "PRIVATE" ;
 				observable:displayName "Best Friend Chat!!" ;
-				observable:message
-					<http://example.org/kb/message-d8330d5a-b8de-4425-9cd8-a37b038afe81> ,
-					<http://example.org/kb/message-decea264-014d-4da8-9d7f-a63231d2c049> ,
-					<http://example.org/kb/message-e809578d-3890-4d21-82ec-afde487b3d7e>
-					;
 				observable:messageThread [
 					a types:Thread ;
 					co:element
@@ -540,7 +494,6 @@
 					<http://example.org/kb/account-16f128ac-7e5b-4cac-908c-11062488eb06> ,
 					<http://example.org/kb/account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath observable:messageThread ;
@@ -571,10 +524,8 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns1:visibility "PUBLIC" ;
 				observable:displayName "Argle-bargle" ;
-				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
 					a types:Thread ;
 					co:element <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
@@ -589,7 +540,6 @@
 					<http://example.org/kb/account-7fb9ef43-fb36-4781-918b-79a5801223e2> ,
 					<http://example.org/kb/account-8f80b20d-d41f-411a-90ce-460dedabf1c3>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -609,10 +559,8 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns1:visibility "PUBLIC" ;
 				observable:displayName "Argle-bargle" ;
-				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
 					a types:Thread ;
 					co:element <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
@@ -627,17 +575,14 @@
 					<http://example.org/kb/account-7fb9ef43-fb36-4781-918b-79a5801223e2> ,
 					<http://example.org/kb/account-8f80b20d-d41f-411a-90ce-460dedabf1c3>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns1:visibility "PUBLIC" ;
 				observable:displayName "Argle-bargle" ;
-				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
 					a types:Thread ;
 					co:element <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
@@ -652,7 +597,6 @@
 					<http://example.org/kb/account-7fb9ef43-fb36-4781-918b-79a5801223e2> ,
 					<http://example.org/kb/account-8f80b20d-d41f-411a-90ce-460dedabf1c3>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -679,10 +623,8 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns1:visibility "PUBLIC" ;
 				observable:displayName "Argle-bargle" ;
-				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
 					a types:Thread ;
 					co:element <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
@@ -697,17 +639,14 @@
 					<http://example.org/kb/account-7fb9ef43-fb36-4781-918b-79a5801223e2> ,
 					<http://example.org/kb/account-8f80b20d-d41f-411a-90ce-460dedabf1c3>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:MessageThreadFacet ;
-				ns2:visibility "PUBLIC" ;
-				ns1:identifier "twitter_public" ;
+				ns1:visibility "PUBLIC" ;
 				observable:displayName "Argle-bargle" ;
-				observable:message <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
 				observable:messageThread [
 					a types:Thread ;
 					co:element <http://example.org/kb/post-3328fbc7-1f63-4e66-b8fc-e27143a64331> ;
@@ -722,7 +661,6 @@
 					<http://example.org/kb/account-7fb9ef43-fb36-4781-918b-79a5801223e2> ,
 					<http://example.org/kb/account-8f80b20d-d41f-411a-90ce-460dedabf1c3>
 					;
-				rdfs:comment "TODO: On release of UCO 0.10.0, remove uco-observable:message." ;
 			] ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath observable:messageThread ;
