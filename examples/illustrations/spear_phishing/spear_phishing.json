@@ -5,6 +5,10 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
+        "uco-victim": "https://ontology.unifiedcyberontology.org/uco/victim/",
         "unmapped": "urn:example:unmapped/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
@@ -15,23 +19,23 @@
         },
         {
             "@id": "kb:ActOfMalwareDelivery01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfMalwareInstallation01"
             }
         },
         {
             "@id": "kb:ActOfMalwareInstallAct01",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:ObservableAction"
         },
         {
             "@id": "kb:ActOfNetworkLogin01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:ObservableAction",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
         },
         {
             "@id": "kb:ActOfNetworkLogout01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:ObservableAction",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
         },
         {
@@ -41,22 +45,22 @@
         },
         {
             "@id": "kb:ActOfEmailDelivery01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfLinkOpening01"
             }
         },
         {
             "@id": "kb:ActOfLinkOpening01",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:ObservableAction"
         },
         {
             "@id": "kb:ActOfSending02",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:ObservableAction"
         },
         {
             "@id": "kb:Agent01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-identity:Person",
             "rdfs:label": "Bob",
             "unmapped:bearerOf": [
                 {
@@ -100,10 +104,10 @@
         },
         {
             "@id": "kb:Agent02",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-identity:Person",
             "rdfs:label": "Charlie",
             "unmapped:hasRole": {
-                "@id": "kb:SOCAnalystRole"
+                "@id": "kb:SOCAnalystRole01"
             },
             "unmapped:uses": {
                 "@id": "kb:ComputingDevice04"
@@ -111,7 +115,7 @@
         },
         {
             "@id": "kb:Agent03",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-identity:Identity",
             "rdfs:label": "(Malicious)",
             "unmapped:bearerOf": [
                 {
@@ -143,7 +147,7 @@
         },
         {
             "@id": "kb:ComputingDevice01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:Computer",
             "rdfs:label": "Bob's PC",
             "unmapped:bearerOf": {
                 "@id": "kb:TargetRole02"
@@ -185,7 +189,7 @@
         },
         {
             "@id": "kb:ComputingDevice02",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:Device",
             "rdfs:label": "Initech email server",
             "unmapped:participatesIn": {
                 "@id": "kb:ActOfEmailDelivery01"
@@ -193,7 +197,7 @@
         },
         {
             "@id": "kb:ComputingDevice03",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:Computer",
             "rdfs:label": "Malicious Server",
             "unmapped:hasPart": {
                 "@id": "kb:Webpage01"
@@ -209,7 +213,7 @@
         },
         {
             "@id": "kb:ComputingDevice04",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:Appliance",
             "rdfs:label": "C2 Server, SIEM?",
             "unmapped:participatesIn": {
                 "@id": "kb:ActOfSending02"
@@ -217,7 +221,7 @@
         },
         {
             "@id": "kb:CorporateLoggingTool01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-tool:AnalyticTool",
             "unmapped:bearerOf": {
                 "@id": "kb:ReceiverRole01"
             },
@@ -245,15 +249,15 @@
         },
         {
             "@id": "kb:EmailAccount01",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:EmailAccount"
         },
         {
             "@id": "kb:EmailAccount02",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:EmailAccount"
         },
         {
             "@id": "kb:EmailMessage01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:EmailMessage",
             "unmapped:contains": {
                 "@id": "kb:URL01"
             },
@@ -271,7 +275,7 @@
         },
         {
             "@id": "kb:EmailSoftwareProgram01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:Software",
             "unmapped:contains": [
                 {
                     "@id": "kb:EmailAccount01"
@@ -283,11 +287,11 @@
         },
         {
             "@id": "kb:EndUserRole01",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-role:Role"
         },
         {
             "@id": "kb:EndpointProtectionSoftware01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:Software",
             "unmapped:bearerOf": {
                 "@id": "kb:ScannerRole01"
             },
@@ -302,14 +306,14 @@
         },
         {
             "@id": "kb:ActOfEndpointScan01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
             "@id": "kb:ActOfFileFlagging01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:ObservableAction",
             "unmapped:hasOutput": {
                 "@id": "kb:Alert01"
             }
@@ -334,7 +338,10 @@
         },
         {
             "@id": "kb:MaliciousSoftware01",
-            "@type": "uco-core:UcoThing",
+            "@type": [
+                "uco-observable:Software",
+                "uco-tool:MalicioiusTool"
+            ],
             "unmapped:participatesIn": [
                 {
                     "@id": "kb:ActOfEndpointScan01"
@@ -352,7 +359,7 @@
         },
         {
             "@id": "kb:NetworkAccount01",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:UserAccount"
         },
         {
             "@id": "kb:Port01",
@@ -366,18 +373,18 @@
         },
         {
             "@id": "kb:ReceiverRole01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-role:Role",
             "unmapped:realizedIn": {
                 "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
-            "@id": "kb:SOCAnalystRole",
-            "@type": "uco-core:UcoThing"
+            "@id": "kb:SOCAnalystRole01",
+            "@type": "uco-role:Role"
         },
         {
             "@id": "kb:ScannerRole01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-role:Role",
             "unmapped:realizedIn": {
                 "@id": "kb:ActOfEndpointScan01"
             }
@@ -402,14 +409,15 @@
         },
         {
             "@id": "kb:TargetRole01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-victim:Victim",
             "unmapped:realizedIn": {
                 "@id": "kb:ActOfLinkOpening01"
             }
         },
         {
             "@id": "kb:TargetRole02",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-role:NeutralRole",
+            "rdfs:comment": "uco-victim:Victim is scoped to persons or organizations, not devices, and thus is inappropriate to apply to Bob's computer.",
             "unmapped:realizedIn": [
                 {
                     "@id": "kb:ActOfLinkOpening01"
@@ -433,18 +441,18 @@
         },
         {
             "@id": "kb:ThreatActorRole01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-role:MaliciousRole",
             "unmapped:realizedIn": {
                 "@id": "kb:ActOfEmailDelivery01"
             }
         },
         {
             "@id": "kb:URL01",
-            "@type": "uco-core:UcoThing"
+            "@type": "uco-observable:URL"
         },
         {
             "@id": "kb:Webpage01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-observable:WebPage",
             "unmapped:designatedBy": {
                 "@id": "kb:URL01"
             }
