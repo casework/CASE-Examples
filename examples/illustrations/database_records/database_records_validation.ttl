@@ -1,3 +1,4 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -6,6 +7,15 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result [
+		a sh:ValidationResult ;
+		sh:focusNode <http://example.org/kb/table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29> ;
+		sh:resultMessage 'Node kb:table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29 does not conform to exactly one shape in [ rdf:type sh:NodeShape ; sh:property [ sh:hasValue Literal("false" = False, datatype=xsd:boolean) ; sh:path drafting:recordFieldIsNull ] ] , [ rdf:type sh:NodeShape ; sh:property [ sh:hasValue Literal("true" = True, datatype=xsd:boolean) ; sh:path drafting:recordFieldIsNull ], [ sh:maxCount Literal("0", datatype=xsd:integer) ; sh:path drafting:recordFieldValue ] ] , [ rdf:type sh:NodeShape ; sh:property [ sh:maxCount Literal("0", datatype=xsd:integer) ; sh:path drafting:recordFieldIsNull ] ]' ;
+		sh:resultSeverity sh:Violation ;
+		sh:sourceConstraintComponent sh:XoneConstraintComponent ;
+		sh:sourceShape drafting:TableFieldFacet ;
+		sh:value <http://example.org/kb/table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29> ;
+	] ;
 	.
 

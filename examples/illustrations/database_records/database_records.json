@@ -69,6 +69,17 @@
             }
         },
         {
+            "@id": "kb:sqlite-record-f150b810-503c-426b-b8f9-0c66325ea3b0",
+            "@type": "drafting:TableField",
+            "uco-core:hasFacet": {
+                "@id": "kb:table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29",
+                "@type": "drafting:TableFieldFacet",
+                "drafting:recordFieldIsNull": true,
+                "drafting:recordFieldValue": 6789,
+                "rdfs:comment": "This node is intended to trigger a SHACL validation issue, and will be migrated to a XFAIL test in UCO."
+            }
+        },
+        {
             "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2",
             "@type": "drafting:TableField",
             "uco-core:hasFacet": [
