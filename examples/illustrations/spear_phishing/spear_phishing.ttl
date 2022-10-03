@@ -44,17 +44,17 @@ kb:ActOfMalwareInstallAct01
 
 kb:ActOfNetworkLogin01
 	a uco-core:UcoThing ;
-	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
+	rdfs:comment "TODO - How does this relate to the spear phishing event?" ;
 	.
 
 kb:ActOfNetworkLogout01
 	a uco-core:UcoThing ;
-	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
+	rdfs:comment "TODO - How does this relate to the spear phishing event?" ;
 	.
 
 kb:ActOfNetworkingSession01
 	a uco-core:UcoThing ;
-	rdfs:comment "TODO - How does this relate to the spear phishing event?  Do Bob and the computer both participate in this act?" ;
+	rdfs:comment "TODO - How does this relate to the spear phishing event?" ;
 	.
 
 kb:ActOfSending02
@@ -71,20 +71,32 @@ kb:Agent01
 	unmapped:controls kb:EmailAccount01 ;
 	unmapped:hasRole kb:EndUserRole01 ;
 	unmapped:operates kb:ComputingDevice01 ;
-	unmapped:participatesIn kb:ActOfLinkOpening01 ;
-	unmapped:uses kb:ComputingDevice01 ;
+	unmapped:participatesIn
+		kb:ActOfLinkOpening01 ,
+		kb:ActOfNetworkLogin01 ,
+		kb:ActOfNetworkLogout01 ,
+		kb:ActOfNetworkingSession01
+		;
+	unmapped:uses
+		kb:ComputingDevice01 ,
+		kb:EmailAccount01
+		;
 	.
 
 kb:Agent02
 	a uco-core:UcoThing ;
 	rdfs:label "Charlie" ;
 	unmapped:hasRole kb:SOCAnalystRole ;
+	unmapped:uses kb:ComputingDevice04 ;
 	.
 
 kb:Agent03
 	a uco-core:UcoThing ;
 	rdfs:label "(Malicious)" ;
-	unmapped:bearerOf kb:ActOfEmailDelivery01 ;
+	unmapped:bearerOf
+		kb:ActOfEmailDelivery01 ,
+		kb:ThreatActorRole01
+		;
 	unmapped:controls kb:EmailAccount02 ;
 	unmapped:hasRole kb:ThreatActorRole01 ;
 	unmapped:operates kb:ComputingDevice03 ;
@@ -109,7 +121,10 @@ kb:ComputingDevice01
 	unmapped:participatesIn
 		kb:ActOfLinkOpening01 ,
 		kb:ActOfMalwareDelivery01 ,
-		kb:ActOfMalwareInstallation01
+		kb:ActOfMalwareInstallation01 ,
+		kb:ActOfNetworkLogin01 ,
+		kb:ActOfNetworkLogout01 ,
+		kb:ActOfNetworkingSession01
 		;
 	.
 
@@ -125,8 +140,14 @@ kb:ComputingDevice03
 	unmapped:hasPart kb:Webpage01 ;
 	unmapped:participatesIn
 		kb:ActOfEmailDelivery01 ,
-		kb:ComputingDevice03
+		kb:ActOfMalwareDelivery01
 		;
+	.
+
+kb:ComputingDevice04
+	a uco-core:UcoThing ;
+	rdfs:label "C2 Server, SIEM?" ;
+	unmapped:participatesIn kb:ActOfSending02 ;
 	.
 
 kb:CorporateLoggingTool01
@@ -142,6 +163,7 @@ kb:DetectionEvent01
 		kb:ActOfFileFlagging01 ,
 		kb:ActOfSending02
 		;
+	unmapped:intervalIn kb:TemporalInterval03 ;
 	.
 
 kb:EmailAccount01
@@ -189,6 +211,7 @@ kb:InfectionEvent01
 		kb:ActOfMalwareDelivery01 ,
 		kb:ActOfMalwareInstallation01
 		;
+	unmapped:intervalIn kb:TemporalInterval02 ;
 	unmapped:precedes kb:DetectionEvent01 ;
 	.
 
@@ -200,6 +223,10 @@ kb:MaliciousSoftware01
 		kb:ActOfMalwareInstallation01 ,
 		kb:InfectionEvent01
 		;
+	.
+
+kb:NetworkAccount01
+	a uco-core:UcoThing ;
 	.
 
 kb:Port01
@@ -228,6 +255,7 @@ kb:SpearFishingEvent01
 		kb:ActOfEmailDelivery01 ,
 		kb:ActOfLinkOpening01
 		;
+	unmapped:intervalIn kb:TemporalInterval01 ;
 	unmapped:precedes kb:InfectionEvent01 ;
 	.
 
@@ -246,17 +274,14 @@ kb:TargetRole02
 
 kb:TemporalInterval01
 	a uco-core:UcoThing ;
-	rdfs:comment "TODO - What is this meant to envelope?  Just SpearFishingEvent01?" ;
 	.
 
 kb:TemporalInterval02
 	a uco-core:UcoThing ;
-	rdfs:comment "TODO - What is this meant to envelope?  InfectionEvent01 and DetectionEvent01, or just the interval bookended by thoese events?" ;
 	.
 
 kb:TemporalInterval03
 	a uco-core:UcoThing ;
-	rdfs:comment "TODO - What is this meant to envelope?  Just DetectionEvent01?" ;
 	.
 
 kb:ThreatActorRole01
@@ -308,6 +333,12 @@ unmapped:hasRecipient
 
 unmapped:hasRole
 	a owl:ObjectProperty ;
+	.
+
+unmapped:intervalIn
+	a owl:ObjectProperty ;
+	rdfs:comment "Property name not in drafted documentation; borrowed from W3C Time Ontology." ;
+	rdfs:seeAlso <https://www.w3.org/TR/owl-time/#time:intervalIn> ;
 	.
 
 unmapped:isCarrierOf
