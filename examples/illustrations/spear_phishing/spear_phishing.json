@@ -14,6 +14,17 @@
             "@type": "owl:Ontology"
         },
         {
+            "@id": "kb:ActOfMalwareDelivery01",
+            "@type": "uco-core:UcoThing",
+            "unmapped:precedes": {
+                "@id": "kb:ActOfMalwareInstallation01"
+            }
+        },
+        {
+            "@id": "kb:ActOfMalwareInstallAct01",
+            "@type": "uco-core:UcoThing"
+        },
+        {
             "@id": "kb:ActOfNetworkLogin01",
             "@type": "uco-core:UcoThing",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
@@ -64,9 +75,6 @@
             "unmapped:operates": {
                 "@id": "kb:ComputingDevice01"
             },
-            "unmapped:uses": {
-                "@id": "kb:ComputingDevice01"
-            },
             "unmapped:participatesIn": [
                 {
                     "@id": "kb:ActOfLinkOpening01"
@@ -80,6 +88,14 @@
                 {
                     "@id": "kb:ActOfNetworkingSession01"
                 }
+            ],
+            "unmapped:uses": [
+                {
+                    "@id": "kb:ComputingDevice01"
+                },
+                {
+                    "@id": "kb:EmailAccount01"
+                }
             ]
         },
         {
@@ -88,6 +104,9 @@
             "rdfs:label": "Charlie",
             "unmapped:hasRole": {
                 "@id": "kb:SOCAnalystRole"
+            },
+            "unmapped:uses": {
+                "@id": "kb:ComputingDevice04"
             }
         },
         {
@@ -97,6 +116,9 @@
             "unmapped:bearerOf": [
                 {
                     "@id": "kb:ActOfEmailDelivery01"
+                },
+                {
+                    "@id": "kb:ThreatActorRole01"
                 }
             ],
             "unmapped:controls": {
@@ -181,9 +203,17 @@
                     "@id": "kb:ActOfEmailDelivery01"
                 },
                 {
-                    "@id": "kb:ComputingDevice03"
+                    "@id": "kb:ActOfMalwareDelivery01"
                 }
             ]
+        },
+        {
+            "@id": "kb:ComputingDevice04",
+            "@type": "uco-core:UcoThing",
+            "rdfs:label": "C2 Server, SIEM?",
+            "unmapped:participatesIn": {
+                "@id": "kb:ActOfSending02"
+            }
         },
         {
             "@id": "kb:CorporateLoggingTool01",
@@ -296,7 +326,7 @@
                 }
             ],
             "unmapped:intervalIn": {
-                "@id": "kb:InfectionEvent01"
+                "@id": "kb:TemporalInterval02"
             },
             "unmapped:precedes": {
                 "@id": "kb:DetectionEvent01"
@@ -321,14 +351,7 @@
             ]
         },
         {
-            "@id": "kb:ActOfMalwareDelivery01",
-            "@type": "uco-core:UcoThing",
-            "unmapped:precedes": {
-                "@id": "kb:ActOfMalwareInstallation01"
-            }
-        },
-        {
-            "@id": "kb:ActOfMalwareInstallAct01",
+            "@id": "kb:NetworkAccount01",
             "@type": "uco-core:UcoThing"
         },
         {

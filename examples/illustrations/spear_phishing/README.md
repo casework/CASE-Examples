@@ -1,6 +1,6 @@
 # Spear Phishing
 
-This directory contains an illustration of the [Open Cybersecurity Alliance "Spear Phishing" Use Case](https://github.com/opencybersecurityalliance/oca-ontology/tree/371180201553d9bf3596b553fe9605014cbfe039/Use%20Case), rendered in CASE and UCO.
+This directory contains an illustration of the [Open Cybersecurity Alliance "Spear Phishing" Use Case](https://github.com/opencybersecurityalliance/oca-ontology/tree/1850684bbbbb954957a630cd283cd5df2dd066f6/Use%20Case), rendered in CASE and UCO.
 
 
 ## Development conventions
