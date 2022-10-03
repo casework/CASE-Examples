@@ -58,9 +58,22 @@ drafting:TableFieldFacet
 			sh:path drafting:recordFieldName ;
 		] ,
 		[
-			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
+			sh:or (
+				[
+					sh:datatype xsd:base64Binary ;
+				]
+				[
+					sh:datatype xsd:decimal ;
+				]
+				[
+					sh:datatype xsd:integer ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
 			sh:path drafting:recordFieldValue ;
 		] ,
 		[
@@ -71,6 +84,35 @@ drafting:TableFieldFacet
 		]
 		;
 	sh:targetClass drafting:TableFieldFacet ;
+	sh:xone (
+		[
+			a sh:NodeShape ;
+			sh:property [
+				sh:hasValue "false"^^xsd:boolean ;
+				sh:path drafting:recordFieldIsNull ;
+			] ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:property
+				[
+					sh:hasValue "true"^^xsd:boolean ;
+					sh:path drafting:recordFieldIsNull ;
+				] ,
+				[
+					sh:maxCount "0"^^xsd:integer ;
+					sh:path drafting:recordFieldValue ;
+				]
+				;
+		]
+		[
+			a sh:NodeShape ;
+			sh:property [
+				sh:maxCount "0"^^xsd:integer ;
+				sh:path drafting:recordFieldIsNull ;
+			] ;
+		]
+	) ;
 	.
 
 drafting:recordFieldName
