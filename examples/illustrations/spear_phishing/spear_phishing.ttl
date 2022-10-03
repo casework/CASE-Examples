@@ -3,6 +3,10 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-role: <https://ontology.unifiedcyberontology.org/uco/role/> .
+@prefix uco-victim: <https://ontology.unifiedcyberontology.org/uco/victim/> .
 @prefix unmapped: <urn:example:unmapped/> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -15,40 +19,40 @@
 	.
 
 kb:ActOfEmailDelivery01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	unmapped:precedes kb:ActOfLinkOpening01 ;
 	.
 
 kb:ActOfEndpointScan01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	unmapped:precedes kb:ActOfFileFlagging01 ;
 	.
 
 kb:ActOfFileFlagging01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	unmapped:hasOutput kb:Alert01 ;
 	.
 
 kb:ActOfLinkOpening01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	.
 
 kb:ActOfMalwareDelivery01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	unmapped:precedes kb:ActOfMalwareInstallation01 ;
 	.
 
 kb:ActOfMalwareInstallAct01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	.
 
 kb:ActOfNetworkLogin01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	rdfs:comment "TODO - How does this relate to the spear phishing event?" ;
 	.
 
 kb:ActOfNetworkLogout01
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	rdfs:comment "TODO - How does this relate to the spear phishing event?" ;
 	.
 
@@ -58,11 +62,11 @@ kb:ActOfNetworkingSession01
 	.
 
 kb:ActOfSending02
-	a uco-core:UcoThing ;
+	a uco-observable:ObservableAction ;
 	.
 
 kb:Agent01
-	a uco-core:UcoThing ;
+	a uco-identity:Person ;
 	rdfs:label "Bob" ;
 	unmapped:bearerOf
 		kb:EndUserRole01 ,
@@ -84,14 +88,14 @@ kb:Agent01
 	.
 
 kb:Agent02
-	a uco-core:UcoThing ;
+	a uco-identity:Person ;
 	rdfs:label "Charlie" ;
-	unmapped:hasRole kb:SOCAnalystRole ;
+	unmapped:hasRole kb:SOCAnalystRole01 ;
 	unmapped:uses kb:ComputingDevice04 ;
 	.
 
 kb:Agent03
-	a uco-core:UcoThing ;
+	a uco-identity:Identity ;
 	rdfs:label "(Malicious)" ;
 	unmapped:bearerOf
 		kb:ActOfEmailDelivery01 ,
@@ -109,7 +113,7 @@ kb:Alert01
 	.
 
 kb:ComputingDevice01
-	a uco-core:UcoThing ;
+	a uco-observable:Computer ;
 	rdfs:label "Bob's PC" ;
 	unmapped:bearerOf kb:TargetRole02 ;
 	unmapped:hasPart kb:Port01 ;
@@ -129,13 +133,13 @@ kb:ComputingDevice01
 	.
 
 kb:ComputingDevice02
-	a uco-core:UcoThing ;
+	a uco-observable:Device ;
 	rdfs:label "Initech email server" ;
 	unmapped:participatesIn kb:ActOfEmailDelivery01 ;
 	.
 
 kb:ComputingDevice03
-	a uco-core:UcoThing ;
+	a uco-observable:Computer ;
 	rdfs:label "Malicious Server" ;
 	unmapped:hasPart kb:Webpage01 ;
 	unmapped:participatesIn
@@ -145,13 +149,13 @@ kb:ComputingDevice03
 	.
 
 kb:ComputingDevice04
-	a uco-core:UcoThing ;
+	a uco-observable:Appliance ;
 	rdfs:label "C2 Server, SIEM?" ;
 	unmapped:participatesIn kb:ActOfSending02 ;
 	.
 
 kb:CorporateLoggingTool01
-	a uco-core:UcoThing ;
+	a <uco-tool:AnalyticTool> ;
 	unmapped:bearerOf kb:ReceiverRole01 ;
 	unmapped:participatesIn kb:ActOfFileFlagging01 ;
 	.
@@ -167,15 +171,15 @@ kb:DetectionEvent01
 	.
 
 kb:EmailAccount01
-	a uco-core:UcoThing ;
+	a uco-observable:EmailAccount ;
 	.
 
 kb:EmailAccount02
-	a uco-core:UcoThing ;
+	a uco-observable:EmailAccount ;
 	.
 
 kb:EmailMessage01
-	a uco-core:UcoThing ;
+	a uco-observable:EmailMessage ;
 	unmapped:contains kb:URL01 ;
 	unmapped:hasRecipient kb:Agent01 ;
 	unmapped:participatesIn
@@ -185,7 +189,7 @@ kb:EmailMessage01
 	.
 
 kb:EmailSoftwareProgram01
-	a uco-core:UcoThing ;
+	a uco-observable:Software ;
 	unmapped:contains
 		kb:EmailAccount01 ,
 		kb:EmailMessage01
@@ -193,11 +197,11 @@ kb:EmailSoftwareProgram01
 	.
 
 kb:EndUserRole01
-	a uco-core:UcoThing ;
+	a uco-role:Role ;
 	.
 
 kb:EndpointProtectionSoftware01
-	a uco-core:UcoThing ;
+	a uco-observable:Software ;
 	unmapped:bearerOf kb:ScannerRole01 ;
 	unmapped:participatesIn
 		kb:ActOfEndpointScan01 ,
@@ -216,7 +220,10 @@ kb:InfectionEvent01
 	.
 
 kb:MaliciousSoftware01
-	a uco-core:UcoThing ;
+	a
+		uco-observable:Software ,
+		<uco-tool:MalicioiusTool>
+		;
 	unmapped:participatesIn
 		kb:ActOfEndpointScan01 ,
 		kb:ActOfMalwareDelivery01 ,
@@ -226,7 +233,7 @@ kb:MaliciousSoftware01
 	.
 
 kb:NetworkAccount01
-	a uco-core:UcoThing ;
+	a uco-observable:UserAccount ;
 	.
 
 kb:Port01
@@ -236,16 +243,16 @@ kb:Port01
 	.
 
 kb:ReceiverRole01
-	a uco-core:UcoThing ;
+	a uco-role:Role ;
 	unmapped:realizedIn kb:ActOfFileFlagging01 ;
 	.
 
-kb:SOCAnalystRole
-	a uco-core:UcoThing ;
+kb:SOCAnalystRole01
+	a uco-role:Role ;
 	.
 
 kb:ScannerRole01
-	a uco-core:UcoThing ;
+	a uco-role:Role ;
 	unmapped:realizedIn kb:ActOfEndpointScan01 ;
 	.
 
@@ -260,12 +267,13 @@ kb:SpearFishingEvent01
 	.
 
 kb:TargetRole01
-	a uco-core:UcoThing ;
+	a uco-victim:Victim ;
 	unmapped:realizedIn kb:ActOfLinkOpening01 ;
 	.
 
 kb:TargetRole02
-	a uco-core:UcoThing ;
+	a uco-role:NeutralRole ;
+	rdfs:comment "uco-victim:Victim is scoped to persons or organizations, not devices, and thus is inappropriate to apply to Bob's computer." ;
 	unmapped:realizedIn
 		kb:ActOfLinkOpening01 ,
 		kb:ActOfMalwareDelivery01
@@ -285,16 +293,16 @@ kb:TemporalInterval03
 	.
 
 kb:ThreatActorRole01
-	a uco-core:UcoThing ;
+	a uco-role:MaliciousRole ;
 	unmapped:realizedIn kb:ActOfEmailDelivery01 ;
 	.
 
 kb:URL01
-	a uco-core:UcoThing ;
+	a uco-observable:URL ;
 	.
 
 kb:Webpage01
-	a uco-core:UcoThing ;
+	a uco-observable:WebPage ;
 	unmapped:designatedBy kb:URL01 ;
 	.
 
