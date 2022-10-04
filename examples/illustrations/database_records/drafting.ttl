@@ -11,73 +11,129 @@
 	a owl:Ontology ;
 	.
 
-drafting:DatabaseRecord
+drafting:TableField
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
 	rdfs:subClassOf observable:ObservableObject ;
-	rdfs:label "DatabaseRecord"@en ;
-	rdfs:comment "A record and its associated value contained within a relational database."@en ;
+	rdfs:label "TableField"@en ;
+	rdfs:comment "A database table field and its associated value contained within a relational database."@en ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
-	sh:targetClass drafting:DatabaseRecord ;
+	sh:targetClass drafting:TableField ;
 	.
 
-drafting:DatabaseRecordFacet
+drafting:TableFieldFacet
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
 	rdfs:subClassOf core:Facet ;
-	rdfs:label "DatabaseRecordFacet"@en ;
-	rdfs:comment "A database record facet contains properties associated with a specific record value from a relational database."@en ;
+	rdfs:label "TableFieldFacet"@en ;
+	rdfs:comment "A table field facet contains properties associated with a specific table record value from a database."@en ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	sh:property
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:databaseSchema ;
+			sh:path drafting:tableSchema ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:databaseTable ;
+			sh:path drafting:tableName ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:databaseRowID ;
+			sh:path drafting:recordRowID ;
 		] ,
 		[
 			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:databaseFieldName ;
+			sh:path drafting:recordFieldName ;
 		] ,
 		[
-			sh:datatype xsd:string ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:databaseFieldValue ;
+			sh:or (
+				[
+					sh:datatype xsd:base64Binary ;
+				]
+				[
+					sh:datatype xsd:decimal ;
+				]
+				[
+					sh:datatype xsd:integer ;
+				]
+				[
+					sh:datatype xsd:string ;
+				]
+			) ;
+			sh:path drafting:recordFieldValue ;
+		] ,
+		[
+			sh:datatype xsd:boolean ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:recordFieldIsNull ;
 		]
 		;
-	sh:targetClass drafting:DatabaseRecordFacet ;
+	sh:targetClass drafting:TableFieldFacet ;
+	sh:xone (
+		[
+			a sh:NodeShape ;
+			sh:property [
+				sh:hasValue "false"^^xsd:boolean ;
+				sh:path drafting:recordFieldIsNull ;
+			] ;
+		]
+		[
+			a sh:NodeShape ;
+			sh:property
+				[
+					sh:hasValue "true"^^xsd:boolean ;
+					sh:path drafting:recordFieldIsNull ;
+				] ,
+				[
+					sh:maxCount "0"^^xsd:integer ;
+					sh:path drafting:recordFieldValue ;
+				]
+				;
+		]
+		[
+			a sh:NodeShape ;
+			sh:property [
+				sh:maxCount "0"^^xsd:integer ;
+				sh:path drafting:recordFieldIsNull ;
+			] ;
+		]
+	) ;
 	.
 
-drafting:databaseFieldName
+drafting:recordFieldName
 	a owl:DatatypeProperty ;
-	rdfs:label "databaseFieldName"@en ;
+	rdfs:label "recordFieldName"@en ;
 	rdfs:comment "A field name of a database record value being identified."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
-drafting:databaseFieldValue
+drafting:recordFieldIsNull
 	a owl:DatatypeProperty ;
-	rdfs:label "databaseFieldValue"@en ;
+	rdfs:label "recordFieldIsNull"@en ;
+	rdfs:comment "Whether the specified database record field is null."@en ;
+	rdfs:range xsd:boolean ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
+	.
+
+drafting:recordFieldValue
+	a owl:DatatypeProperty ;
+	rdfs:label "recordFieldValue"@en ;
 	rdfs:comment "The field value of a specified database record."@en ;
 	rdfs:range [
 		a rdfs:Datatype ;
@@ -91,25 +147,25 @@ drafting:databaseFieldValue
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
-drafting:databaseRowID
+drafting:recordRowID
 	a owl:DatatypeProperty ;
-	rdfs:label "databaseRowID"@en ;
+	rdfs:label "recordRowID"@en ;
 	rdfs:comment "The unique ID that identifies a database record."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
-drafting:databaseSchema
+drafting:tableSchema
 	a owl:DatatypeProperty ;
-	rdfs:label "databaseSchema"@en ;
+	rdfs:label "tableSchema"@en ;
 	rdfs:comment "The schema that contains the identified database record."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;
 	.
 
-drafting:databaseTable
+drafting:tableName
 	a owl:DatatypeProperty ;
-	rdfs:label "databaseTable"@en ;
+	rdfs:label "tableName"@en ;
 	rdfs:comment "The table containing a specified database record."@en ;
 	rdfs:range xsd:string ;
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/415> ;

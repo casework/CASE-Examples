@@ -4,6 +4,7 @@
         "@type": "uco-observable:File",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-73701edb-01b8-4f56-ad41-4cba706f2d3a",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "sqlite3",
                 "uco-observable:fileName": "my-database",
