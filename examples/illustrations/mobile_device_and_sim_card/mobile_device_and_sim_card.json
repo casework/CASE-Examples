@@ -36,14 +36,18 @@
                     }
                 },
                 {
+                    "@id": "uco-observable:storage-medium-facet-e35857c5-3195-4897-b891-f445d19884db",
+                    "@type": "uco-observable:StorageMediumFacet",
+                    "uco-observable:totalStorageCapacityInBytes": 17179869184
+                },
+                {
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2018-02-24T07:36:24.35Z"
-                    },
-                    "uco-observable:storageCapacityInBytes": 17179869184
+                    }
                 },
                 {
                     "@type": "uco-observable:BluetoothAddressFacet",

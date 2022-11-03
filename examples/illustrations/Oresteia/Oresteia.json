@@ -494,6 +494,11 @@
                     "uco-observable:serialNumber": "FDG344657"
                 },
                 {
+                    "@id": "kb:storage-medium-facet-e46fefcb-39c3-482b-864d-27c5b4c6bfcf",
+                    "@type": "uco-observable:StorageMediumFacet",
+                    "uco-observable:totalStorageCapacityInBytes": 11000000000
+                },
+                {
                     "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should uco-observable:clockSetting be a datetime instead of a string?",
@@ -504,8 +509,7 @@
                     "uco-observable:clockSetting": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-06-22T07:36:24.35Z"
-                    },
-                    "uco-observable:storageCapacityInBytes": 11000000000
+                    }
                 }
             ]
         },
@@ -684,6 +688,11 @@
                     "uco-observable:serialNumber": "F18Q4LGRG5MD"
                 },
                 {
+                    "@id": "kb:storage-medium-facet-d9535f4c-3b9a-427e-a399-b122f6250b3d",
+                    "@type": "uco-observable:StorageMediumFacet",
+                    "uco-observable:totalStorageCapacityInBytes": 11000000000
+                },
+                {
                     "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should clockSetting be a xsd:dateTime?",
@@ -699,8 +708,7 @@
                     "uco-observable:phoneActivationTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2017-05-09T07:36:24.35Z"
-                    },
-                    "uco-observable:storageCapacityInBytes": 11000000000
+                    }
                 },
                 {
                     "@type": [
