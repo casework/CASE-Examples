@@ -1130,6 +1130,32 @@
 				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
+			sh:resultMessage "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
+			sh:resultPath observable:storageCapacityInBytes ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "0"^^xsd:integer ;
+				sh:message "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
+				sh:path observable:storageCapacityInBytes ;
+				sh:severity sh:Warning ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				rdfs:comment
+					"TODO: Should clockSetting be a xsd:dateTime?" ,
+					"TODO: clockSetting as a time-point somewhat illustrates the scenario's specified skew of 25 hours, but might need a reference time-point."
+					;
+				ns1:localeLanguage "en_GR" ;
+				observable:IMEI "359305065690067" ;
+				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:keypadUnlockCode "123789" ;
+				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
+			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraint [
@@ -4991,6 +5017,30 @@
 			sh:value [
 				a observable:MobileAccountFacet ;
 				observable:MSISDN "1239275339" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				rdfs:comment
+					"TODO: An earlier version of Oresteia had a timezoneSetting property.  This can apparently now be either uco-observable property 'timezoneDST' or 'timezoneStandard', both a xsd:string type.  Is there an option, such as drawing data from the IANA time zones database, to simplify this?" ,
+					"TODO: Should uco-observable:clockSetting be a datetime instead of a string?"
+					;
+				observable:IMEI "359305065690067" ;
+				observable:clockSetting "2017-06-22T07:36:24.350000+00:00"^^xsd:dateTime ;
+				observable:keypadUnlockCode "1234" ;
+				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
+			sh:resultPath observable:storageCapacityInBytes ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "0"^^xsd:integer ;
+				sh:message "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
+				sh:path observable:storageCapacityInBytes ;
+				sh:severity sh:Warning ;
 			] ;
 		] ,
 		[
