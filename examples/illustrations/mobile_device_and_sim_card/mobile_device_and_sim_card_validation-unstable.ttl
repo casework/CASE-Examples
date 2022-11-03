@@ -136,7 +136,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -737,27 +736,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
-			] ;
-			sh:resultMessage "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
-			sh:resultPath observable:storageCapacityInBytes ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
-				sh:path observable:storageCapacityInBytes ;
-				sh:severity sh:Warning ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:MobileDeviceFacet ;
-				observable:IMEI "35540607448XXXX" ;
-				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
-				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -780,7 +758,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -790,7 +767,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -820,7 +796,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 		] ,
 		[

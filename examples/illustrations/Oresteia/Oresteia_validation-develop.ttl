@@ -250,6 +250,20 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value <http://example.org/kb/storage-medium-facet-e46fefcb-39c3-482b-864d-27c5b4c6bfcf> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -288,7 +302,6 @@
 				observable:IMEI "359305065690067" ;
 				observable:clockSetting "2017-06-22T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "1234" ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -482,6 +495,20 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value <http://example.org/kb/storage-medium-facet-d9535f4c-3b9a-427e-a399-b122f6250b3d> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -502,7 +529,6 @@
 				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123789" ;
 				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -1128,7 +1154,6 @@
 				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123789" ;
 				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -1157,7 +1182,6 @@
 				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123789" ;
 				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -1173,7 +1197,6 @@
 				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123789" ;
 				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -1209,7 +1232,6 @@
 				observable:clockSetting "2017-06-21T06:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123789" ;
 				observable:phoneActivationTime "2017-05-09T07:36:24.350000+00:00"^^xsd:dateTime ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -5004,7 +5026,6 @@
 				observable:IMEI "359305065690067" ;
 				observable:clockSetting "2017-06-22T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "1234" ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -5031,7 +5052,6 @@
 				observable:IMEI "359305065690067" ;
 				observable:clockSetting "2017-06-22T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "1234" ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -5045,7 +5065,6 @@
 				observable:IMEI "359305065690067" ;
 				observable:clockSetting "2017-06-22T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "1234" ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -5079,7 +5098,6 @@
 				observable:IMEI "359305065690067" ;
 				observable:clockSetting "2017-06-22T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "1234" ;
-				observable:storageCapacityInBytes "11000000000"^^xsd:integer ;
 			] ;
 		] ,
 		[

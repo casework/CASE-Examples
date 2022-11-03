@@ -85,6 +85,20 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a> ;
+			sh:resultMessage "Value does not have class core:Facet" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value observable:storage-medium-facet-e35857c5-3195-4897-b891-f445d19884db ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a> ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
@@ -136,7 +150,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -737,7 +750,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -760,7 +772,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 		] ,
 		[
@@ -770,7 +781,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -800,7 +810,6 @@
 				observable:IMEI "35540607448XXXX" ;
 				observable:clockSetting "2018-02-24T07:36:24.350000+00:00"^^xsd:dateTime ;
 				observable:keypadUnlockCode "123456" ;
-				observable:storageCapacityInBytes "17179869184"^^xsd:integer ;
 			] ;
 		] ,
 		[
