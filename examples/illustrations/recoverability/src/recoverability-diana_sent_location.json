@@ -1,0 +1,42 @@
+[
+    {
+        "@id": "kb:c01e67f9-adb5-48bd-b09d-e7326fa8d592",
+        "@type": [
+            "uco-observable:RecoveredObject",
+            "uco-observable:Message"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:MessageFacet",
+                "uco-observable:messageText": "Diana sent a location.",
+                "uco-observable:from": {
+                    "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d"
+                },
+                "uco-observable:to": [
+                    {
+                        "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b"
+                    }
+                ],
+                "uco-observable:sentTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-12-04T07:52:47Z"
+                }
+            },
+            {
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "partially recovered"
+                }
+            }
+        ]
+    }
+]

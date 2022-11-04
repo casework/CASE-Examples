@@ -1,0 +1,46 @@
+[
+    {
+        "@id": "kb:665d63be-93e6-4d3e-8e75-3112be091e93",
+        "@type": [
+            "uco-observable:RecoveredObject",
+            "uco-observable:File"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:extension": "",
+                "uco-observable:fileName": "Thebatplan",
+                "uco-observable:filePath": "D:\\Thebatplan",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": 1389601,
+                "uco-observable:createdTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-19T00:29:15Z"
+                },
+                "uco-observable:accessedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-18T22:53:09.595Z"
+                },
+                "uco-observable:modifiedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2018-11-18T20:10:48.00Z"
+                }
+            },
+            {
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "unknown"
+                }
+            }
+        ]
+    }
+]

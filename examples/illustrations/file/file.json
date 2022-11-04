@@ -1,9 +1,8 @@
 {
     "@context": {
-        "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
@@ -14,7 +13,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:chunk_of_data",
+            "@id": "kb:chunk_of_data-4456c025-6e96-43b3-a2d1-e7b3952a1731",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -42,13 +41,13 @@
             ]
         },
         {
-            "@id": "kb:relationship0",
+            "@id": "kb:relationship-92955c3a-c82a-41c7-ad3b-096d1c0d48ba",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:chunk_of_data"
+                "@id": "kb:chunk_of_data-4456c025-6e96-43b3-a2d1-e7b3952a1731"
             },
             "uco-core:target": {
-                "@id": "kb:decoded_attachment"
+                "@id": "kb:decoded_attachment-b7589f93-79b0-483b-b17d-46f5d9774704"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -61,7 +60,7 @@
             ]
         },
         {
-            "@id": "kb:decoded_attachment",
+            "@id": "kb:decoded_attachment-b7589f93-79b0-483b-b17d-46f5d9774704",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -102,13 +101,13 @@
             ]
         },
         {
-            "@id": "kb:relationship1",
+            "@id": "kb:relationship-345d313f-908f-4f66-954a-016748368312",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:decoded_attachment"
+                "@id": "kb:decoded_attachment-b7589f93-79b0-483b-b17d-46f5d9774704"
             },
             "uco-core:target": {
-                "@id": "kb:tar_archive_file"
+                "@id": "kb:tar_archive_file-2857804a-91d7-4cfb-8929-8448d92bb8de"
             },
             "uco-core:kindOfRelationship": "Decoded_From",
             "uco-core:isDirectional": true,
@@ -120,7 +119,7 @@
             ]
         },
         {
-            "@id": "kb:tar_archive_file",
+            "@id": "kb:tar_archive_file-2857804a-91d7-4cfb-8929-8448d92bb8de",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
@@ -165,13 +164,13 @@
             ]
         },
         {
-            "@id": "kb:relationship2",
+            "@id": "kb:relationship-b22f8a64-21cb-4a77-b3eb-701612b39265",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:tar_archive_file"
+                "@id": "kb:tar_archive_file-2857804a-91d7-4cfb-8929-8448d92bb8de"
             },
             "uco-core:target": {
-                "@id": "kb:decrypted_blob"
+                "@id": "kb:decrypted_blob-cac885bc-f2f3-405d-907a-8b591aeeaf69"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -183,7 +182,7 @@
             ]
         },
         {
-            "@id": "kb:decrypted_blob",
+            "@id": "kb:decrypted_blob-cac885bc-f2f3-405d-907a-8b591aeeaf69",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -209,13 +208,13 @@
             ]
         },
         {
-            "@id": "kb:relationship3",
+            "@id": "kb:relationship-7187406b-78ce-49b4-a684-460a69b009aa",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:decrypted_blob"
+                "@id": "kb:decrypted_blob-cac885bc-f2f3-405d-907a-8b591aeeaf69"
             },
             "uco-core:target": {
-                "@id": "kb:sqlite_blob"
+                "@id": "kb:sqlite_blob-ef2be7d6-f4d0-48e4-bfc9-2e4432cc08a1"
             },
             "uco-core:kindOfRelationship": "Decrypted_From",
             "uco-core:isDirectional": true,
@@ -230,7 +229,7 @@
             ]
         },
         {
-            "@id": "kb:sqlite_blob",
+            "@id": "kb:sqlite_blob-ef2be7d6-f4d0-48e4-bfc9-2e4432cc08a1",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -261,13 +260,13 @@
             ]
         },
         {
-            "@id": "kb:relationship4",
+            "@id": "kb:relationship-697908d0-2927-4a42-b8cc-ded228dcbfc2",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:sqlite_blob"
+                "@id": "kb:sqlite_blob-ef2be7d6-f4d0-48e4-bfc9-2e4432cc08a1"
             },
             "uco-core:target": {
-                "@id": "kb:sqlite_database"
+                "@id": "kb:sqlite_database-0ec9db0f-7dfc-4531-8def-f71505326884"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -281,7 +280,7 @@
             ]
         },
         {
-            "@id": "kb:sqlite_database",
+            "@id": "kb:sqlite_database-0ec9db0f-7dfc-4531-8def-f71505326884",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
@@ -327,13 +326,13 @@
             ]
         },
         {
-            "@id": "kb:relationship5",
+            "@id": "kb:relationship-a9371c5e-0550-40e9-9e13-65afa01da881",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:sqlite_database"
+                "@id": "kb:sqlite_database-0ec9db0f-7dfc-4531-8def-f71505326884"
             },
             "uco-core:target": {
-                "@id": "kb:image_partition"
+                "@id": "kb:image_partition-5a804a74-d146-4ab0-87f8-de09fc041a5e"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -345,7 +344,7 @@
             ]
         },
         {
-            "@id": "kb:image_partition",
+            "@id": "kb:image_partition-5a804a74-d146-4ab0-87f8-de09fc041a5e",
             "@type": "uco-observable:FileSystem",
             "rdfs:comment": "TODO As originally drafted, this was untyped, and left to behave simultaneously like a disk partition and file system via relationship5 and relationship6.  This needs discussion with the community as a modeling issue, as a disk partition and a file system have different behaviors.  The DiskPartitionFacet aspect of relationship6 may need to be applied to another object.",
             "uco-core:hasFacet": [
@@ -369,13 +368,13 @@
             ]
         },
         {
-            "@id": "kb:relationship6",
+            "@id": "kb:relationship-3bacd102-db00-4bcc-8998-e58e4431b959",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:image_partition"
+                "@id": "kb:image_partition-5a804a74-d146-4ab0-87f8-de09fc041a5e"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:android_image-e1837dd8-2275-436e-8694-1bc8124fc4c9"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -387,7 +386,7 @@
             ]
         },
         {
-            "@id": "kb:android_image",
+            "@id": "kb:android_image-e1837dd8-2275-436e-8694-1bc8124fc4c9",
             "@type": [
                 "uco-observable:File",
                 "uco-observable:Image"
@@ -404,8 +403,8 @@
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
                     },
-                    "accessedAction": "2010-01-15T17:59:43.25Z",
-                    "createdAction": "2010-01-15T17:59:43.25Z",
+                    "drafting:accessedAction": "2010-01-15T17:59:43.25Z",
+                    "drafting:createdAction": "2010-01-15T17:59:43.25Z",
                     "uco-observable:metadataChangeTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2010-01-15T17:59:43.25Z"
@@ -431,13 +430,13 @@
             ]
         },
         {
-            "@id": "kb:relationship7",
+            "@id": "kb:relationship-2a1f4ca6-87c0-4fd5-8078-826420c8f45b",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:android_image"
+                "@id": "kb:android_image-e1837dd8-2275-436e-8694-1bc8124fc4c9"
             },
             "uco-core:target": {
-                "@id": "kb:forensic_lab_computer1-uuid"
+                "@id": "kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013"
             },
             "uco-core:kindOfRelationship": "Stored_On",
             "uco-core:isDirectional": true,
@@ -449,13 +448,13 @@
             ]
         },
         {
-            "@id": "kb:relationship8",
+            "@id": "kb:relationship-72f647f2-f071-43c1-bcb8-29236ab333dc",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:android_image"
+                "@id": "kb:android_image-e1837dd8-2275-436e-8694-1bc8124fc4c9"
             },
             "uco-core:target": {
-                "@id": "kb:android_device1-uuid"
+                "@id": "kb:android_device-814c2229-d163-47af-87be-6437b205dde4"
             },
             "uco-core:kindOfRelationship": "Forensic_Image_Of",
             "uco-core:isDirectional": true
@@ -471,11 +470,11 @@
             "uco-core:name": "Microsoft"
         },
         {
-            "@id": "kb:forensic_lab_computer1-uuid",
+            "@id": "kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013",
             "@type": "uco-observable:Device",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
             "location": {
-                "@id": "kb:forensic_lab1-uuid"
+                "@id": "kb:forensic_lab-e30218aa-2b79-43fe-a75a-2262c92ddab1"
             },
             "uco-core:hasFacet": [
                 {
@@ -522,11 +521,11 @@
             "uco-core:name": "Samsung"
         },
         {
-            "@id": "kb:android_device1-uuid",
+            "@id": "kb:android_device-814c2229-d163-47af-87be-6437b205dde4",
             "@type": "uco-observable:Device",
             "rdfs:comment": "TODO: This is an inappropriate placement for the location property (both uco-action:location and uco-observable:location).  Need another way to attach :forensic_lab1.  A Relationship object should be used instead.",
             "location": {
-                "@id": "kb:forensic_lab1-uuid"
+                "@id": "kb:forensic_lab-e30218aa-2b79-43fe-a75a-2262c92ddab1"
             },
             "uco-core:hasFacet": [
                 {

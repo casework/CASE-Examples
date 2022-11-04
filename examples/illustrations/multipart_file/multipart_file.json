@@ -3,7 +3,6 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
@@ -12,17 +11,17 @@
     },
     "@graph": [
         {
-            "@id": "kb:android_image",
+            "@id": "kb:android_image-f4bc6a0e-c782-4a7e-b6cd-a6aa67a7cff7",
             "@type": "uco-observable:Image"
         },
         {
-            "@id": "kb:relationship0",
+            "@id": "kb:relationship-6cc58535-e92e-42c2-8ac2-0102d7365125",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:multipart_file"
+                "@id": "kb:multipart_file-60dd6b9e-bb3b-4b37-8a2a-6256f86c8bfb"
             },
             "uco-core:target": {
-                "@id": "kb:data_piece0"
+                "@id": "kb:data_piece-b236d1f7-b9c6-4bbe-a7bc-38c9fb2e5a6d"
             },
             "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
@@ -35,13 +34,13 @@
             ]
         },
         {
-            "@id": "kb:relationship1",
+            "@id": "kb:relationship-74d9aee6-d317-4eb2-8161-ce69ad0f40db",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:multipart_file"
+                "@id": "kb:multipart_file-60dd6b9e-bb3b-4b37-8a2a-6256f86c8bfb"
             },
             "uco-core:target": {
-                "@id": "kb:data_piece1"
+                "@id": "kb:data_piece-dc4a6e16-10cc-4bc6-b04d-798a49a06f47"
             },
             "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
@@ -54,13 +53,13 @@
             ]
         },
         {
-            "@id": "kb:relationship2",
+            "@id": "kb:relationship-75e3a851-9f4b-4add-8e9d-13817d333577",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:multipart_file"
+                "@id": "kb:multipart_file-60dd6b9e-bb3b-4b37-8a2a-6256f86c8bfb"
             },
             "uco-core:target": {
-                "@id": "kb:data_piece2"
+                "@id": "kb:data_piece-e43f5b78-99ab-4130-8fec-7510a01ffd14"
             },
             "uco-core:kindOfRelationship": "Has_Fragment",
             "uco-core:isDirectional": true,
@@ -73,7 +72,7 @@
             ]
         },
         {
-            "@id": "kb:multipart_file",
+            "@id": "kb:multipart_file-60dd6b9e-bb3b-4b37-8a2a-6256f86c8bfb",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -101,7 +100,7 @@
             ]
         },
         {
-            "@id": "kb:data_piece0",
+            "@id": "kb:data_piece-b236d1f7-b9c6-4bbe-a7bc-38c9fb2e5a6d",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
@@ -147,7 +146,7 @@
             ]
         },
         {
-            "@id": "kb:data_piece1",
+            "@id": "kb:data_piece-dc4a6e16-10cc-4bc6-b04d-798a49a06f47",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
@@ -193,7 +192,7 @@
             ]
         },
         {
-            "@id": "kb:data_piece2",
+            "@id": "kb:data_piece-e43f5b78-99ab-4130-8fec-7510a01ffd14",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
@@ -239,13 +238,13 @@
             ]
         },
         {
-            "@id": "kb:relationship3",
+            "@id": "kb:relationship-e7efd565-d5b6-46ac-9d69-d17c12193fc0",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:data_piece0"
+                "@id": "kb:data_piece-b236d1f7-b9c6-4bbe-a7bc-38c9fb2e5a6d"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:android_image-f4bc6a0e-c782-4a7e-b6cd-a6aa67a7cff7"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -257,13 +256,13 @@
             ]
         },
         {
-            "@id": "kb:relationship4",
+            "@id": "kb:relationship-2f69ddd1-dce5-4c7c-aca9-95f0cb7186bc",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:data_piece1"
+                "@id": "kb:data_piece-dc4a6e16-10cc-4bc6-b04d-798a49a06f47"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:android_image-f4bc6a0e-c782-4a7e-b6cd-a6aa67a7cff7"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -275,13 +274,13 @@
             ]
         },
         {
-            "@id": "kb:relationship5",
+            "@id": "kb:relationship-624cdda4-ea74-4a16-a699-e4e075c0a5b1",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:data_piece2"
+                "@id": "kb:data_piece-e43f5b78-99ab-4130-8fec-7510a01ffd14"
             },
             "uco-core:target": {
-                "@id": "kb:android_image"
+                "@id": "kb:android_image-f4bc6a0e-c782-4a7e-b6cd-a6aa67a7cff7"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,

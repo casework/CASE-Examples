@@ -1,0 +1,37 @@
+[
+    {
+        "@id": "kb:bd64bdd9-3dcd-4828-a25b-a72c06e472cd",
+        "@type": [
+            "uco-observable:RecoveredObject",
+            "uco-observable:File"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-observable:FileFacet",
+                "uco-observable:accessedTime": null,
+                "uco-observable:extension": "tmp",
+                "uco-observable:fileName": "~badquinn3@gmail.com.ost.tmp",
+                "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
+                "uco-observable:isDirectory": false,
+                "uco-observable:sizeInBytes": null,
+                "uco-observable:createdTime": null,
+                "uco-observable:modifiedTime": null
+            },
+            {
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "unknown"
+                },
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "unknown"
+                }
+            }
+        ]
+    }
+]

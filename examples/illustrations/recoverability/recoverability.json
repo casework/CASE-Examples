@@ -1,0 +1,218 @@
+{
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:4026fabd-924d-4138-a6ba-73df2eb37bcb",
+            "@type": [
+                "uco-observable:RecoveredObject",
+                "uco-observable:File"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-19T00:29:15Z"
+                    },
+                    "uco-observable:extension": "jpg",
+                    "uco-observable:fileName": "IMG-20181120-WA0000",
+                    "uco-observable:filePath": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 1389601
+                },
+                {
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:665d63be-93e6-4d3e-8e75-3112be091e93",
+            "@type": [
+                "uco-observable:RecoveredObject",
+                "uco-observable:File"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-18T22:53:09.595Z"
+                    },
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-19T00:29:15Z"
+                    },
+                    "uco-observable:extension": "",
+                    "uco-observable:fileName": "Thebatplan",
+                    "uco-observable:filePath": "D:\\Thebatplan",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-18T20:10:48.00Z"
+                    },
+                    "uco-observable:sizeInBytes": 1389601
+                },
+                {
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:bd64bdd9-3dcd-4828-a25b-a72c06e472cd",
+            "@type": [
+                "uco-observable:RecoveredObject",
+                "uco-observable:File"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:accessedTime": null,
+                    "uco-observable:createdTime": null,
+                    "uco-observable:extension": "tmp",
+                    "uco-observable:fileName": "~badquinn3@gmail.com.ost.tmp",
+                    "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:modifiedTime": null,
+                    "uco-observable:sizeInBytes": null
+                },
+                {
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "unknown"
+                    },
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:c01e67f9-adb5-48bd-b09d-e7326fa8d592",
+            "@type": [
+                "uco-observable:RecoveredObject",
+                "uco-observable:Message"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:MessageFacet",
+                    "uco-observable:from": {
+                        "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d"
+                    },
+                    "uco-observable:messageText": "Diana sent a location.",
+                    "uco-observable:sentTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-12-04T07:52:47Z"
+                    },
+                    "uco-observable:to": [
+                        {
+                            "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b"
+                        }
+                    ]
+                },
+                {
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "partially recovered"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:cb0354f5-2dbd-4c02-8a6c-011b77125ee2",
+            "@type": [
+                "uco-observable:RecoveredObject",
+                "uco-observable:File"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:accessedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "1999-01-02T05:00Z"
+                    },
+                    "uco-observable:createdTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2011-12-25T19:02:22Z"
+                    },
+                    "uco-observable:extension": "txt",
+                    "uco-observable:fileName": "_BEID.txt",
+                    "uco-observable:filePath": "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2000-02-29T19:11Z"
+                    },
+                    "uco-observable:sizeInBytes": 712
+                },
+                {
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:e1e34d20-e77c-4087-a87d-d169d7155b8d",
+            "@type": "uco-observable:ObservableObject"
+        },
+        {
+            "@id": "kb:f96cfe21-1149-4a46-acb9-7299152c776b",
+            "@type": "uco-observable:ObservableObject"
+        }
+    ]
+}

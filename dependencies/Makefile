@@ -15,11 +15,13 @@ SHELL := /bin/bash
 
 case_develop_ttls := \
   $(wildcard CASE-develop/ontology/*/*.ttl) \
-  $(wildcard UCO-develop/ontology/*/*.ttl)
+  $(wildcard UCO-develop/ontology/*/*.ttl) \
+  $(wildcard UCO-develop/ontology/uco/*/*.ttl)
 
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \
-  $(wildcard UCO-unstable/ontology/*/*.ttl)
+  $(wildcard UCO-unstable/ontology/*/*.ttl) \
+  $(wildcard UCO-unstable/ontology/uco/*/*.ttl)
 
 top_srcdir := $(shell cd .. ; pwd)
 
@@ -29,24 +31,24 @@ all: \
 
 CASE-develop.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(case_develop_ttls) \
-  UCO-develop/tests/src/glom_graph.py
+  $(case_develop_ttls)
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
-	  && python3 UCO-develop/tests/src/glom_graph.py \
-	    _$@ \
-	    $(case_develop_ttls)
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(case_develop_ttls) \
+	    > _$@
 	mv _$@ $@
 
 CASE-unstable.ttl: \
   $(top_srcdir)/.venv.done.log \
-  $(case_unstable_ttls) \
-  UCO-unstable/tests/src/glom_graph.py
+  $(case_unstable_ttls)
 	rm -f _$@
 	source $(top_srcdir)/venv/bin/activate \
-	  && python3 UCO-unstable/tests/src/glom_graph.py \
-	    _$@ \
-	    $(case_unstable_ttls)
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(case_unstable_ttls) \
+	    > _$@
 	mv _$@ $@
 
 clean:
