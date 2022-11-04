@@ -32,6 +32,7 @@ The seizure is documented here:
         "@type": "drafting:CryptoAddress",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:crypto-address-facet-744448c8-ea85-4bb6-bfa2-dad437f71fd5",
                 "@type": "drafting:CryptoAddressFacet",
                 "drafting:addressValue": "1HQ3Go3ggs8pFnXuHVHRytPCq5fGG8Hbhx",
                 "drafting:cryptoCurrencyType": "BitCoin",
@@ -200,6 +201,7 @@ Reference: https://btc.com/btc/search/127B3qwztPyA67uq63LG8G5izwhFcJ7j4A:
         "@type": "drafting:CryptoWallet",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:crypto-wallet-facet-e2628662-84fb-427a-8657-3d5d98ce4c6c",
                 "@type": "drafting:CryptoWalletFacet",
                 "drafting:cryptoWalletAddress": {
                     "@id": "kb:cryptoaddress-e3b9060e-c01a-4794-ad88-82f6fd733b30"
