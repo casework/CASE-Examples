@@ -18,6 +18,7 @@
             "@type": "drafting:CryptoAddress",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:crypto-address-facet-bba5b561-1663-46af-a9a8-a6de44234ad9",
                     "@type": "drafting:CryptoAddressFacet",
                     "drafting:addressValue": "127B3qwztPyA67uq63LG8G5izwhFcJ7j4A",
                     "drafting:cryptoCurrencyType": "BitCoin",
