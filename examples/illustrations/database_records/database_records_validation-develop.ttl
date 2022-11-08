@@ -1,4 +1,4 @@
-@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -11,35 +11,34 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29> ;
-			sh:resultMessage 'Node kb:table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29 does not conform to exactly one shape in [ rdf:type sh:NodeShape ; sh:property [ sh:hasValue Literal("false" = False, datatype=xsd:boolean) ; sh:path drafting:recordFieldIsNull ] ] , [ rdf:type sh:NodeShape ; sh:property [ sh:hasValue Literal("true" = True, datatype=xsd:boolean) ; sh:path drafting:recordFieldIsNull ], [ sh:maxCount Literal("0", datatype=xsd:integer) ; sh:path drafting:recordFieldValue ] ] , [ rdf:type sh:NodeShape ; sh:property [ sh:maxCount Literal("0", datatype=xsd:integer) ; sh:path drafting:recordFieldIsNull ] ]' ;
+			sh:focusNode <http://example.org/kb/sqlite-record-relationship-041ff574-cf81-4e36-b8d6-b120c3802699> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:target ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
-			sh:sourceShape drafting:TableFieldFacet ;
-			sh:value <http://example.org/kb/table-field-facet-37182dba-4dbd-4b97-b49e-8038b7fbfd29> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/table-field-facet-46aafb6e-0be4-4412-a938-16c4b5ae5314> ;
-			sh:resultMessage "More than 1 values on kb:table-field-facet-46aafb6e-0be4-4412-a938-16c4b5ae5314->drafting:recordFieldIsNull" ;
-			sh:resultPath drafting:recordFieldIsNull ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype xsd:boolean ;
+				sh:class core:UcoObject ;
 				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:recordFieldIsNull ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:target ;
 			] ;
+			sh:value <http://example.org/kb/sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2> ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/table-field-facet-46aafb6e-0be4-4412-a938-16c4b5ae5314> ;
-			sh:resultMessage 'Node kb:table-field-facet-46aafb6e-0be4-4412-a938-16c4b5ae5314 does not conform to exactly one shape in [ rdf:type sh:NodeShape ; sh:property [ sh:hasValue Literal("false" = False, datatype=xsd:boolean) ; sh:path drafting:recordFieldIsNull ] ] , [ rdf:type sh:NodeShape ; sh:property [ sh:hasValue Literal("true" = True, datatype=xsd:boolean) ; sh:path drafting:recordFieldIsNull ], [ sh:maxCount Literal("0", datatype=xsd:integer) ; sh:path drafting:recordFieldValue ] ] , [ rdf:type sh:NodeShape ; sh:property [ sh:maxCount Literal("0", datatype=xsd:integer) ; sh:path drafting:recordFieldIsNull ] ]' ;
+			sh:focusNode <http://example.org/kb/sqlite-record-relationship-3d224418-5401-4670-adac-bd82a3a8f23b> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:source ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
-			sh:sourceShape drafting:TableFieldFacet ;
-			sh:value <http://example.org/kb/table-field-facet-46aafb6e-0be4-4412-a938-16c4b5ae5314> ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:source ;
+			] ;
+			sh:value <http://example.org/kb/sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2> ;
 		]
 		;
 	.

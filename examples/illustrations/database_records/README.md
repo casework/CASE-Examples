@@ -118,15 +118,15 @@ The records within the database itself can be represented in newly proposed CASE
 [
     {
         "@id": "kb:sqlite-record-fc21b376-98b0-4c07-b802-f855dcdd95b2",
-        "@type": "drafting:TableField",
+        "@type": "uco-observable:TableField",
         "uco-core:hasFacet": [
             {
                 "@id": "kb:table-field-facet-e126c09b-3ab1-43be-af05-a33ff9792b0b",
-                "@type": "drafting:TableFieldFacet",
-                "drafting:tableName": "messages",
-                "drafting:recordRowID": "12345",
-                "drafting:recordFieldName": "message_content",
-                "drafting:recordFieldValue": "Hello World"
+                "@type": "uco-observable:TableFieldFacet",
+                "uco-observable:tableName": "messages",
+                "uco-observable:recordRowID": "12345",
+                "uco-observable:recordFieldName": "message_content",
+                "uco-observable:recordFieldValue": "Hello World"
             }
         ]
     },
