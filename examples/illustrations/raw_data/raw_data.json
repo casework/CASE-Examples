@@ -2,6 +2,7 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
