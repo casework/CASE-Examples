@@ -8,6 +8,7 @@
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-victim": "https://ontology.unifiedcyberontology.org/uco/victim/",
         "unmapped": "urn:example:unmapped/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
@@ -25,7 +26,7 @@
             }
         },
         {
-            "@id": "kb:ActOfMalwareInstallAct01",
+            "@id": "kb:ActOfMalwareInstallation01",
             "@type": "uco-observable:ObservableAction"
         },
         {
@@ -117,19 +118,17 @@
             "@id": "kb:Agent03",
             "@type": "uco-identity:Identity",
             "rdfs:label": "(Malicious)",
-            "unmapped:bearerOf": [
-                {
-                    "@id": "kb:ActOfEmailDelivery01"
-                },
-                {
-                    "@id": "kb:ThreatActorRole01"
-                }
-            ],
+            "unmapped:bearerOf": {
+                "@id": "kb:ThreatActorRole01"
+            },
             "unmapped:controls": {
                 "@id": "kb:EmailAccount02"
             },
             "unmapped:operates": {
                 "@id": "kb:ComputingDevice03"
+            },
+            "unmapped:participatesIn": {
+                "@id": "kb:ActOfEmailDelivery01"
             },
             "unmapped:uses": {
                 "@id": "kb:ComputingDevice03"
@@ -340,7 +339,7 @@
             "@id": "kb:MaliciousSoftware01",
             "@type": [
                 "uco-observable:Software",
-                "uco-tool:MalicioiusTool"
+                "uco-tool:MaliciousTool"
             ],
             "unmapped:participatesIn": [
                 {

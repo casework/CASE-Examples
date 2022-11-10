@@ -6,6 +6,7 @@
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
 @prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix uco-role: <https://ontology.unifiedcyberontology.org/uco/role/> .
+@prefix uco-tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix uco-victim: <https://ontology.unifiedcyberontology.org/uco/victim/> .
 @prefix unmapped: <urn:example:unmapped/> .
 @prefix xs: <http://www.w3.org/2001/XMLSchema#> .
@@ -42,7 +43,7 @@ kb:ActOfMalwareDelivery01
 	unmapped:precedes kb:ActOfMalwareInstallation01 ;
 	.
 
-kb:ActOfMalwareInstallAct01
+kb:ActOfMalwareInstallation01
 	a uco-observable:ObservableAction ;
 	.
 
@@ -97,13 +98,11 @@ kb:Agent02
 kb:Agent03
 	a uco-identity:Identity ;
 	rdfs:label "(Malicious)" ;
-	unmapped:bearerOf
-		kb:ActOfEmailDelivery01 ,
-		kb:ThreatActorRole01
-		;
+	unmapped:bearerOf kb:ThreatActorRole01 ;
 	unmapped:controls kb:EmailAccount02 ;
 	unmapped:hasRole kb:ThreatActorRole01 ;
 	unmapped:operates kb:ComputingDevice03 ;
+	unmapped:participatesIn kb:ActOfEmailDelivery01 ;
 	unmapped:uses kb:ComputingDevice03 ;
 	.
 
@@ -155,7 +154,7 @@ kb:ComputingDevice04
 	.
 
 kb:CorporateLoggingTool01
-	a <uco-tool:AnalyticTool> ;
+	a uco-tool:AnalyticTool ;
 	unmapped:bearerOf kb:ReceiverRole01 ;
 	unmapped:participatesIn kb:ActOfFileFlagging01 ;
 	.
@@ -222,7 +221,7 @@ kb:InfectionEvent01
 kb:MaliciousSoftware01
 	a
 		uco-observable:Software ,
-		<uco-tool:MalicioiusTool>
+		uco-tool:MaliciousTool
 		;
 	unmapped:participatesIn
 		kb:ActOfEndpointScan01 ,

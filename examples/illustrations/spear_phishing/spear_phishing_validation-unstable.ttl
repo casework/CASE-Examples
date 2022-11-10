@@ -181,6 +181,15 @@
 			a sh:ValidationResult ;
 			sh:focusNode ep:Agent03 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:uses ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
@@ -293,6 +302,24 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode ep:ComputingDevice04 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:participatesIn ;
 			sh:resultSeverity sh:Info ;
