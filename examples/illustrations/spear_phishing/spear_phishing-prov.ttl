@@ -15,10 +15,16 @@
 kb:ActOfEmailDelivery01
 	a prov:Activity ;
 	time:intervalBefore kb:ActOfLinkOpening01 ;
+	prov:endedAtTime "2021-09-02T06:32:16.411Z"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:Agent03 ;
 		prov:hadRole kb:ThreatActorRole01 ;
+	] ;
+	prov:qualifiedEnd [
+		a prov:End ;
+		prov:atTime "2021-09-02T06:32:16.411Z"^^xsd:dateTime ;
+		prov:entity kb:EmailMessage01 ;
 	] ;
 	prov:used kb:EmailAccount02 ;
 	prov:wasAssociatedWith
@@ -112,7 +118,7 @@ kb:ActOfMalwareInstallation01
 
 kb:ActOfNetworkLogin01
 	a prov:Activity ;
-	time:intervalMeets kb:ActOfNetworkingSession01 ;
+	prov:endedAtTime "2021-09-02T07:32:16.411Z"^^xsd:dateTime ;
 	prov:used kb:NetworkAccount01 ;
 	prov:wasAssociatedWith
 		kb:Agent01 ,
@@ -122,6 +128,7 @@ kb:ActOfNetworkLogin01
 
 kb:ActOfNetworkLogout01
 	a prov:Activity ;
+	prov:endedAtTime "2021-09-02T11:07:30.658Z"^^xsd:dateTime ;
 	prov:used kb:NetworkAccount01 ;
 	prov:wasAssociatedWith
 		kb:Agent01 ,
