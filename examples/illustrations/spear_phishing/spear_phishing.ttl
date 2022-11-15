@@ -9,7 +9,7 @@
 @prefix uco-tool: <https://ontology.unifiedcyberontology.org/uco/tool/> .
 @prefix uco-victim: <https://ontology.unifiedcyberontology.org/uco/victim/> .
 @prefix unmapped: <urn:example:unmapped/> .
-@prefix xs: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection>
 	a owl:Ontology ;
@@ -231,6 +231,10 @@ kb:MaliciousSoftware01
 		;
 	.
 
+kb:ManagerRole01
+	a uco-role:Role ;
+	.
+
 kb:NetworkAccount01
 	a uco-observable:UserAccount ;
 	.
@@ -303,6 +307,40 @@ kb:URL01
 kb:Webpage01
 	a uco-observable:WebPage ;
 	unmapped:designatedBy kb:URL01 ;
+	.
+
+kb:company-73fe8030-289b-45d3-8637-6078773f914e
+	a uco-identity:Organization ;
+	uco-core:name "Initech" ;
+	.
+
+kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3
+	a uco-identity:Organization ;
+	uco-core:name "Software Engineering Department" ;
+	.
+
+kb:relationship-013c7665-a539-4314-adba-60df1c2f5e12
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Member_Of" ;
+	uco-core:source kb:Agent01 ;
+	uco-core:target kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3 ;
+	.
+
+kb:relationship-65248f06-2c56-4bbb-bb62-0f154831fd86
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Employee_Of" ;
+	uco-core:source kb:Agent01 ;
+	uco-core:target kb:company-73fe8030-289b-45d3-8637-6078773f914e ;
+	.
+
+kb:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0
+	a uco-core:Relationship ;
+	uco-core:isDirectional "true"^^xsd:boolean ;
+	uco-core:kindOfRelationship "Has_Role" ;
+	uco-core:source kb:Agent01 ;
+	uco-core:target kb:ManagerRole01 ;
 	.
 
 unmapped:bearerOf
