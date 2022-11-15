@@ -112,7 +112,7 @@ kb:ActOfMalwareInstallation01
 
 kb:ActOfNetworkLogin01
 	a prov:Activity ;
-	time:meets kb:ActOfNetworkingSession01 ;
+	time:intervalMeets kb:ActOfNetworkingSession01 ;
 	prov:used kb:NetworkAccount01 ;
 	prov:wasAssociatedWith
 		kb:Agent01 ,
@@ -131,7 +131,7 @@ kb:ActOfNetworkLogout01
 
 kb:ActOfNetworkingSession01
 	a prov:Activity ;
-	time:meets kb:ActOfNetworkLogout01 ;
+	time:intervalMeets kb:ActOfNetworkLogout01 ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:Agent01 ;
@@ -241,7 +241,7 @@ kb:CorporateLoggingTool01
 	.
 
 kb:DetectionEvent01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalContains
 		kb:ActOfEndpointScan01 ,
 		kb:ActOfFileFlagging01 ,
@@ -278,7 +278,7 @@ kb:EndpointProtectionSoftware01
 	.
 
 kb:InfectionEvent01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:DetectionEvent01 ;
 	time:intervalContains
 		kb:ActOfMalwareDelivery01 ,
@@ -307,7 +307,7 @@ kb:ScannerRole01
 	.
 
 kb:SpearFishingEvent01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:InfectionEvent01 ;
 	time:intervalContains
 		kb:ActOfEmailDelivery01 ,
@@ -320,19 +320,19 @@ kb:TargetRole01
 	.
 
 kb:TemporalInterval01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:InfectionEvent01 ;
 	time:intervalContains kb:SpearFishingEvent01 ;
 	.
 
 kb:TemporalInterval02
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:DetectionEvent01 ;
 	time:intervalContains kb:InfectionEvent01 ;
 	.
 
 kb:TemporalInterval03
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalContains kb:DetectionEvent01 ;
 	.
 
