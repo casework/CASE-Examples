@@ -357,6 +357,10 @@
             ]
         },
         {
+            "@id": "kb:ManagerRole01",
+            "@type": "uco-role:Role"
+        },
+        {
             "@id": "kb:NetworkAccount01",
             "@type": "uco-observable:UserAccount"
         },
@@ -454,6 +458,52 @@
             "@type": "uco-observable:WebPage",
             "unmapped:designatedBy": {
                 "@id": "kb:URL01"
+            }
+        },
+        {
+            "@id": "kb:company-73fe8030-289b-45d3-8637-6078773f914e",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Initech"
+        },
+        {
+            "@id": "kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Software Engineering Department"
+        },
+        {
+            "@id": "kb:relationship-013c7665-a539-4314-adba-60df1c2f5e12",
+            "@type": "uco-core:Relationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Member_Of",
+            "uco-core:source": {
+                "@id": "kb:Agent01"
+            },
+            "uco-core:target": {
+                "@id": "kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3"
+            }
+        },
+        {
+            "@id": "kb:relationship-65248f06-2c56-4bbb-bb62-0f154831fd86",
+            "@type": "uco-core:Relationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Employee_Of",
+            "uco-core:source": {
+                "@id": "kb:Agent01"
+            },
+            "uco-core:target": {
+                "@id": "kb:company-73fe8030-289b-45d3-8637-6078773f914e"
+            }
+        },
+        {
+            "@id": "kb:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0",
+            "@type": "uco-core:Relationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Role",
+            "uco-core:source": {
+                "@id": "kb:Agent01"
+            },
+            "uco-core:target": {
+                "@id": "kb:ManagerRole01"
             }
         },
         {
