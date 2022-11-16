@@ -240,6 +240,15 @@
 			a sh:ValidationResult ;
 			sh:focusNode ep:ComputingDevice01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:endpointId ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:endpointId-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:hasPart ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
@@ -366,15 +375,6 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:intervalIn-shape ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:EmailMessage01 ;
-			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
-			sh:resultPath unmapped:contains ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape ep:contains-shape ;
 		] ,
 		[
 			a sh:ValidationResult ;

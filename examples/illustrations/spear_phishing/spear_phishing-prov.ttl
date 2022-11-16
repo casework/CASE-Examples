@@ -15,10 +15,16 @@
 kb:ActOfEmailDelivery01
 	a prov:Activity ;
 	time:intervalBefore kb:ActOfLinkOpening01 ;
+	prov:endedAtTime "2021-09-02T06:32:16.411Z"^^xsd:dateTime ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:Agent03 ;
 		prov:hadRole kb:ThreatActorRole01 ;
+	] ;
+	prov:qualifiedEnd [
+		a prov:End ;
+		prov:atTime "2021-09-02T06:32:16.411Z"^^xsd:dateTime ;
+		prov:entity kb:EmailMessage01 ;
 	] ;
 	prov:used kb:EmailAccount02 ;
 	prov:wasAssociatedWith
@@ -112,7 +118,7 @@ kb:ActOfMalwareInstallation01
 
 kb:ActOfNetworkLogin01
 	a prov:Activity ;
-	time:meets kb:ActOfNetworkingSession01 ;
+	prov:endedAtTime "2021-09-02T07:32:16.411Z"^^xsd:dateTime ;
 	prov:used kb:NetworkAccount01 ;
 	prov:wasAssociatedWith
 		kb:Agent01 ,
@@ -122,6 +128,7 @@ kb:ActOfNetworkLogin01
 
 kb:ActOfNetworkLogout01
 	a prov:Activity ;
+	prov:endedAtTime "2021-09-02T11:07:30.658Z"^^xsd:dateTime ;
 	prov:used kb:NetworkAccount01 ;
 	prov:wasAssociatedWith
 		kb:Agent01 ,
@@ -131,7 +138,7 @@ kb:ActOfNetworkLogout01
 
 kb:ActOfNetworkingSession01
 	a prov:Activity ;
-	time:meets kb:ActOfNetworkLogout01 ;
+	time:intervalMeets kb:ActOfNetworkLogout01 ;
 	prov:qualifiedAssociation [
 		a prov:Association ;
 		prov:agent kb:Agent01 ;
@@ -241,7 +248,7 @@ kb:CorporateLoggingTool01
 	.
 
 kb:DetectionEvent01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalContains
 		kb:ActOfEndpointScan01 ,
 		kb:ActOfFileFlagging01 ,
@@ -278,7 +285,7 @@ kb:EndpointProtectionSoftware01
 	.
 
 kb:InfectionEvent01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:DetectionEvent01 ;
 	time:intervalContains
 		kb:ActOfMalwareDelivery01 ,
@@ -307,7 +314,7 @@ kb:ScannerRole01
 	.
 
 kb:SpearFishingEvent01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:InfectionEvent01 ;
 	time:intervalContains
 		kb:ActOfEmailDelivery01 ,
@@ -320,19 +327,19 @@ kb:TargetRole01
 	.
 
 kb:TemporalInterval01
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:InfectionEvent01 ;
 	time:intervalContains kb:SpearFishingEvent01 ;
 	.
 
 kb:TemporalInterval02
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalBefore kb:DetectionEvent01 ;
 	time:intervalContains kb:InfectionEvent01 ;
 	.
 
 kb:TemporalInterval03
-	a time:TemporalInterval ;
+	a time:ProperInterval ;
 	time:intervalContains kb:DetectionEvent01 ;
 	.
 
