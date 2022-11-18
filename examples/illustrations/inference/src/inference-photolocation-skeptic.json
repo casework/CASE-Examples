@@ -1,22 +1,24 @@
 [
     {
         "@id": "kb:analysisresult-5BCEDE9F-760E-46C4-A9DE-74EC0BA5FCDA",
-        "@type": "drafting:AnalyticResult",
+        "@type": "uco-analysis:AnalyticResult",
         "rdfs:comment": [
             "(This inference is skeptical.)",
             "(In this current state of illustration, this inference has no further supporting evidence.)"
         ],
-        "drafting:originatingAnalysisAction": "kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evaluationType": "probability",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:evaluationRationale": "Photograph contents and Exif data can be altered" 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evaluationType": "probability",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.9"
+                },
+                "drafting:evaluationRationale": "Photograph contents and Exif data can be altered"
+            }
+        ]
     }
 ]

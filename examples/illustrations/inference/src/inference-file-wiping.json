@@ -11,12 +11,14 @@
     },
     {
         "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "file wiping detection",
         "uco-core:description": "Detection of secure erase wiping of files on storage media",
-        "drafting-uco-action:isAutomated":"true",
-        "uco-core:startTime": {
+        "drafting:isAutomated": true,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -57,29 +59,33 @@
     },
     {
         "@id": "kb:analyticresult-BE7AF920-532E-4997-9282-9EE448CADF60",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evaluationType": "probability",
-              "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.95"
-            },
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system" 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evaluationType": "probability",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.95"
+                },
+                "drafting:conclusion": "true",
+                "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
+            }
+        ]
     },
     {
         "@id": "kb:analysisaction-DFB676AA-ED89-43AC-B49F-AFF9E835152D",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:AnalysisAction"
+        ],
         "uco-core:name": "file wiping detection",
         "uco-core:description": "Detection of secure erase wiping of files on storage media",
-        "drafting-uco-action:isAutomated":"true",
-        "uco-core:startTime": {
+        "drafting:isAutomated": true,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -120,19 +126,21 @@
     },
     {
         "@id": "kb:analyticresult-0DF747A2-0CCA-415E-A1E3-B7DEF8C18C04",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evaluationType": "probability",
-              "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.05"
-            },
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system" 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evaluationType": "probability",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.05"
+                },
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
+            }
+        ]
     }
 ]

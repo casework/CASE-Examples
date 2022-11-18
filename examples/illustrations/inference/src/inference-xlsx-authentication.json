@@ -21,12 +21,14 @@
     },
     {
         "@id": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -58,12 +60,14 @@
     },
     {
         "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "drafting:AnalysisAction"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -95,12 +99,14 @@
     },
     {
         "@id": "kb:analysisaction-71AF3D6E-6986-4977-A663-D0430FE074CB",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -132,12 +138,14 @@
     },
     {
         "@id": "kb:analysisaction-5F487329-6F1F-446C-80B7-13A52D3E0A51",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -169,71 +177,79 @@
     },
     {
         "@id": "kb:analysisresult-1c050613-1144-4622-853a-48291f63ef54",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-2aaf35bb-6ca9-4b30-98e4-192552a2468e",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file." 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-3c0014ff-8616-4103-915f-54a69f486576",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "5.5"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered." 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "5.5"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": "true",
+                "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-4b880bde-9afb-4c60-a277-29f53a0df283",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered." 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered."
+            }
+        ]
     },
     {
         "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",

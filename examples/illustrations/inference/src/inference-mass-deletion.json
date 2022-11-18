@@ -11,10 +11,10 @@
     },
     {
         "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
-        "@type": "drafting:AnalysisAction",
+        "@type": "uco-analysis:Analysis",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -55,10 +55,10 @@
     },
     {
         "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
-        "@type": "drafting:AnalysisAction",
+        "@type": "uco-analysis:Analysis",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -99,11 +99,13 @@
     },
     {
         "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513"
+        },
         "uco-core:hasFacet": [
             {
-                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
@@ -116,11 +118,13 @@
     },
     {
         "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9"
+        },
         "uco-core:hasFacet": [
             {
-                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"

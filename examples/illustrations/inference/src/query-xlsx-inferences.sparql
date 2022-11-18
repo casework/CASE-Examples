@@ -12,13 +12,13 @@
 SELECT ?lEvaluationType ?lEvidenceEvaluation ?lEvaluationRationale ?lConclusion
 WHERE {
 #  ?nAnalysisAction
-#    a drafting:AnalysisAction ;
+#    a uco-analysis:Analysis ;
 #    uco-core:hasFacet/uco-action:object ?nHypothesis ;
 #    uco-core:hasFacet/uco-action:result ?nAnalyticResult ;
 #    .
 
   ?nAnalyticResult
-    a drafting:AnalyticResult ;
+    a uco-analysis:AnalyticResult ;
     uco-core:hasFacet ?nHypothesisTestResultFacet ;
     .
 

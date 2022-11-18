@@ -11,11 +11,13 @@
     },
     {
         "@id": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "identification",
         "uco-core:description": "Identify the object in the photograph",
-        "uco-core:startTime": {
+        "uco-analysis:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-02T10:12:00.00Z"
         },
@@ -53,28 +55,32 @@
     },
     {
         "@id": "kb:analysisresult-C16CEAB2-F25F-4E04-8227-244CB148B9A1",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:evaluationType": "probability",
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument" 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.9"
+                },
+                "drafting:evaluationType": "probability",
+                "drafting:conclusion": "true",
+                "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument"
+            }
+        ]
     },
     {
         "@id": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "identification",
         "uco-core:description": "Identify the object in the photograph",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-02T10:20:00.00Z"
         },
@@ -112,19 +118,21 @@
     },
     {
         "@id": "kb:analysisresult-BA5D0146-BA3B-467F-975C-763D85BAFC7D",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "probability",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument" 
-          }
-       ]
+            {
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "probability",
+                "drafting:conclusion": "false",
+                "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument"
+            }
+        ]
     }
 ]
