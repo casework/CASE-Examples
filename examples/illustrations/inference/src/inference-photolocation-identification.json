@@ -68,7 +68,7 @@
                     "@value": "0.9"
                 },
                 "drafting:evaluationType": "probability",
-                "drafting:conclusion": "true",
+                "drafting:conclusion": true,
                 "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument"
             }
         ]
@@ -132,7 +132,7 @@
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "probability",
-                "drafting:conclusion": "false",
+                "drafting:conclusion": false,
                 "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument"
             }
         ]

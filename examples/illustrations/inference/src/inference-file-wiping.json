@@ -72,7 +72,7 @@
                     "@type": "xsd:decimal",
                     "@value": "0.95"
                 },
-                "drafting:conclusion": "true",
+                "drafting:conclusion": true,
                 "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
             }
         ]
@@ -140,7 +140,7 @@
                     "@type": "xsd:decimal",
                     "@value": "0.05"
                 },
-                "drafting:conclusion": "false",
+                "drafting:conclusion": false,
                 "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
             }
         ]

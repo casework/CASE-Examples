@@ -190,7 +190,7 @@
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "C-Scale",
-                "drafting:conclusion": "false",
+                "drafting:conclusion": false,
                 "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file."
             }
         ]
@@ -210,7 +210,7 @@
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "C-Scale",
-                "drafting:conclusion": "false",
+                "drafting:conclusion": false,
                 "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file."
             }
         ]
@@ -230,7 +230,7 @@
                     "@value": "5.5"
                 },
                 "drafting:evaluationType": "C-Scale",
-                "drafting:conclusion": "true",
+                "drafting:conclusion": true,
                 "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered."
             }
         ]
@@ -250,7 +250,7 @@
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "C-Scale",
-                "drafting:conclusion": "false",
+                "drafting:conclusion": false,
                 "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered."
             }
         ]
