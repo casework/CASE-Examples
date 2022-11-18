@@ -87,6 +87,8 @@ The following table is the results of [this query](src/query-select-skeptic-diff
 
 @QUERY_SELECT_SKEPTIC_DIFFERENCE_MD@
 
+
+
 ## Example - Wiping
 
 *Observations*: Consider an example of a file named “abc.exe” that is a secure erase program which overwrites the content and name of selected files, rendering them unrecoverable. This program has the same hash value of the secure erase program called “sdelete.exe” which is freely available on the Internet. Observed file system patterns on the computer are compatible with  use of “sdelete.exe” (Name overwritten, Zeroed content). Dates in file system metadata of these files corresponding to dates of Registry entries (UserAssist) and Prefetch files recording use of “abc.exe” program.
