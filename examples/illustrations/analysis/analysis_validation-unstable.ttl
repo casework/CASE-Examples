@@ -1,0 +1,611 @@
+@prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix analysis: <https://ontology.unifiedcyberontology.org/uco/analysis/> .
+@prefix configuration: <https://ontology.unifiedcyberontology.org/uco/configuration/> .
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix location: <https://ontology.unifiedcyberontology.org/uco/location/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:environment ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:environment ;
+			] ;
+			sh:value <http://example.org/kb/Computer-533FA61A-BE79-469E-A05F-1A341848B925> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:object ;
+			] ;
+			sh:value <http://example.org/kb/RasterPicture1-b67308c0-c31b-41a6-805a-10ec526ec8bc> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:performer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:performer ;
+			] ;
+			sh:value <http://example.org/kb/Analyst-13A167EE-D3B5-4AA4-B8BA-83C25F8B8FF4> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/ProvenanceRecord-d628b0f6-686d-4d22-a577-ec737e5947bc> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556> ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class location:Location ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:location ;
+			] ;
+			sh:value <http://example.org/kb/ESC-6FAC81EF-0966-4F05-94BB-2A5D572513CA> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-f365add7-1326-426f-9266-406bdeed86a1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:environment ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:environment ;
+			] ;
+			sh:value <http://example.org/kb/Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-f365add7-1326-426f-9266-406bdeed86a1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:object ;
+			] ;
+			sh:value <http://example.org/kb/Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-f365add7-1326-426f-9266-406bdeed86a1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:performer ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:performer ;
+			] ;
+			sh:value <http://example.org/kb/Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-f365add7-1326-426f-9266-406bdeed86a1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-f365add7-1326-426f-9266-406bdeed86a1> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath action:result ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:result ;
+			] ;
+			sh:value <http://example.org/kb/ProvenanceRecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/Analysis-f365add7-1326-426f-9266-406bdeed86a1> ;
+			sh:resultMessage "Value does not have class location:Location" ;
+			sh:resultPath action:location ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class location:Location ;
+				sh:nodeKind sh:IRI ;
+				sh:path action:location ;
+			] ;
+			sh:value <http://example.org/kb/9b82c2bc-10f7-47b2-81a8-443a9f458440> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a analysis:ArtifactClassification ;
+				analysis:class "money" ;
+				analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a analysis:ArtifactClassification ;
+				analysis:class "money" ;
+				analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a analysis:ArtifactClassification ;
+				analysis:class "money" ;
+				analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a analysis:ArtifactClassification ;
+				analysis:class "money" ;
+				analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a analysis:ArtifactClassification ;
+				analysis:class "money" ;
+				analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:decimal" ;
+			sh:resultPath analysis:classificationConfidence ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:decimal ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path analysis:classificationConfidence ;
+			] ;
+			sh:value "9.97359e-01"^^xsd:double ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a analysis:ArtifactClassificationResultFacet ;
+				analysis:classification [
+					a analysis:ArtifactClassification ;
+					analysis:class "money" ;
+					analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a analysis:ArtifactClassificationResultFacet ;
+				analysis:classification [
+					a analysis:ArtifactClassification ;
+					analysis:class "money" ;
+					analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a analysis:ArtifactClassificationResultFacet ;
+				analysis:classification [
+					a analysis:ArtifactClassification ;
+					analysis:class "money" ;
+					analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a analysis:ArtifactClassificationResultFacet ;
+				analysis:classification [
+					a analysis:ArtifactClassification ;
+					analysis:class "money" ;
+					analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a analysis:ArtifactClassificationResultFacet ;
+				analysis:classification [
+					a analysis:ArtifactClassification ;
+					analysis:class "money" ;
+					analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+				] ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath analysis:classification ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class analysis:ArtifactClassification ;
+				sh:nodeKind sh:IRI ;
+				sh:path analysis:classification ;
+			] ;
+			sh:value [
+				a analysis:ArtifactClassification ;
+				analysis:class "money" ;
+				analysis:classificationConfidence "9.97359e-01"^^xsd:double ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:Configuration ;
+				configuration:configurationEntry
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "TrainingSet" ;
+						configuration:itemValue "0.0.7" ;
+					] ,
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "classifier" ;
+						configuration:itemValue "nfi-forensic" ;
+					]
+					;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:Configuration ;
+				configuration:configurationEntry
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "TrainingSet" ;
+						configuration:itemValue "0.0.7" ;
+					] ,
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "classifier" ;
+						configuration:itemValue "nfi-forensic" ;
+					]
+					;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:Configuration ;
+				configuration:configurationEntry
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "TrainingSet" ;
+						configuration:itemValue "0.0.7" ;
+					] ,
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "classifier" ;
+						configuration:itemValue "nfi-forensic" ;
+					]
+					;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:Configuration ;
+				configuration:configurationEntry
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "TrainingSet" ;
+						configuration:itemValue "0.0.7" ;
+					] ,
+					[
+						a configuration:ConfigurationEntry ;
+						configuration:itemName "classifier" ;
+						configuration:itemValue "nfi-forensic" ;
+					]
+					;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "TrainingSet" ;
+				configuration:itemValue "0.0.7" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "TrainingSet" ;
+				configuration:itemValue "0.0.7" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "TrainingSet" ;
+				configuration:itemValue "0.0.7" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "TrainingSet" ;
+				configuration:itemValue "0.0.7" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "classifier" ;
+				configuration:itemValue "nfi-forensic" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "classifier" ;
+				configuration:itemValue "nfi-forensic" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "classifier" ;
+				configuration:itemValue "nfi-forensic" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a configuration:ConfigurationEntry ;
+				configuration:itemName "classifier" ;
+				configuration:itemValue "nfi-forensic" ;
+			] ;
+		]
+		;
+	.
+
