@@ -14,12 +14,12 @@ WHERE {
   {
     SELECT ?nBasisObject ?lSupports
     WHERE {
-      kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7
-        drafting:basisEvidence ?nBasisObject ;
+      kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9
+        uco-action:object ?nBasisObject ;
         .
       FILTER NOT EXISTS {
-        kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027
-          drafting:basisEvidence ?nBasisObject ;
+        kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50
+          uco-action:object ?nBasisObject ;
           .
       }
       BIND ("A" AS ?lSupports)
@@ -29,12 +29,12 @@ WHERE {
   {
     SELECT ?nBasisObject ?lSupports
     WHERE {
-      kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027
-        drafting:basisEvidence ?nBasisObject ;
+      kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50
+        uco-action:object ?nBasisObject ;
         .
       FILTER NOT EXISTS {
-        kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7
-          drafting:basisEvidence ?nBasisObject ;
+        kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9
+          uco-action:object ?nBasisObject ;
           .
       }
       BIND ("B" AS ?lSupports)
@@ -44,11 +44,11 @@ WHERE {
   {
     SELECT ?nBasisObject ?lSupports
     WHERE {
-      kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7
-        drafting:basisEvidence ?nBasisObject ;
+      kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9
+        uco-action:object ?nBasisObject ;
         .
-      kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027
-        drafting:basisEvidence ?nBasisObject ;
+      kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50
+        uco-action:object ?nBasisObject ;
         .
       BIND ("both" AS ?lSupports)
     }
