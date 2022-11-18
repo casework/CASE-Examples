@@ -80,7 +80,7 @@
         "@id": "kb:analysisaction-DFB676AA-ED89-43AC-B49F-AFF9E835152D",
         "@type": [
             "case-investigation:InvestigativeAction",
-            "uco-analysis:AnalysisAction"
+            "uco-analysis:Analysis"
         ],
         "uco-core:name": "file wiping detection",
         "uco-core:description": "Detection of secure erase wiping of files on storage media",

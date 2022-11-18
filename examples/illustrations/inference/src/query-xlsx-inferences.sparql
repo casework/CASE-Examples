@@ -11,7 +11,7 @@
 
 SELECT ?lEvaluationType ?lEvidenceEvaluation ?lEvaluationRationale ?lConclusion
 WHERE {
-#  ?nAnalysisAction
+#  ?nAnalysis
 #    a uco-analysis:Analysis ;
 #    uco-core:hasFacet/uco-action:object ?nHypothesis ;
 #    uco-core:hasFacet/uco-action:result ?nAnalyticResult ;
