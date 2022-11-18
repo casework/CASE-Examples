@@ -24,7 +24,8 @@ all: \
 .PHONY: \
   check-examples \
   check-ontology \
-  check-tests
+  check-tests \
+  download
 
 .dependencies.done.log: \
   .venv.done.log
@@ -145,3 +146,7 @@ clean:
 	  .venv.done.log
 	@rm -rf \
 	  venv
+
+download: \
+  .venv-pre-commit/var/.pre-commit-built.log \
+  .venv.done.log

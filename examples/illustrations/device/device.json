@@ -3,7 +3,6 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
-        "draft": "http://example.org/draft#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
@@ -22,10 +21,10 @@
             "uco-core:name": "Microsoft"
         },
         {
-            "@id": "kb:forensic_lab_computer1-uuid",
+            "@id": "kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d",
             "@type": "uco-observable:Device",
             "location": {
-                "@id": "kb:forensic_lab1-uuid"
+                "@id": "kb:forensic_lab-2514fffb-affc-43be-a3bb-be1dd606eff0"
             },
             "uco-core:hasFacet": [
                 {

@@ -1,0 +1,305 @@
+{
+    "@context": {
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "kb": "http://example.org/kb/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "sosa": "http://www.w3.org/ns/sosa/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Samsung"
+        },
+        {
+            "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789",
+            "@type": "uco-observable:Device",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:DeviceFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
+                    "uco-observable:model": "SM-G925F",
+                    "uco-observable:serialNumber": "RF8H31GS5SF"
+                },
+                {
+                    "@type": "uco-observable:MobileDeviceFacet",
+                    "uco-observable:IMEI": "356420075722843"
+                },
+                {
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "uco-core:name": "Android",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                    },
+                    "uco-observable:version": "6.0.1"
+                },
+                {
+                    "@type": "uco-observable:BluetoothAddressFacet",
+                    "uco-core:name": "",
+                    "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
+                },
+                {
+                    "@type": "uco-observable:WifiAddressFacet",
+                    "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
+                }
+            ],
+            "uco-observable:hasChanged": true
+        },
+        {
+            "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:source": {
+                "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
+            },
+            "uco-core:target": {
+                "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+            }
+        },
+        {
+            "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
+            "@type": "uco-observable:SIMCard",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:SIMCardFacet",
+                    "uco-observable:ICCID": "89390100002217635543",
+                    "uco-observable:IMSI": "1234567890ABCDEF",
+                    "uco-observable:carrier": {
+                        "@type": "uco-identity:Identity",
+                        "uco-core:name": "Telcom Italia"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
+            "@type": "uco-observable:MobileAccount",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:AccountFacet",
+                    "uco-observable:accountIdentifier": "1235557890",
+                    "uco-observable:isActive": true
+                },
+                {
+                    "@type": "uco-observable:MobileAccountFacet",
+                    "uco-observable:IMSI": "1234567890ABCDEF",
+                    "uco-observable:MSISDN": "3662158453"
+                }
+            ]
+        },
+        {
+            "@id": "kb:afc48c35-c65d-41e4-843b-720f1ad23d16",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Connected_To",
+            "uco-core:source": {
+                "@id": "kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789"
+            },
+            "uco-core:target": {
+                "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+            },
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:12Z"
+            }
+        },
+        {
+            "@id": "kb:9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a",
+            "@type": "uco-observable:CapturedTelecommunicationsInformation",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
+                    "uco-observable:captureCellSite": {
+                        "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+                    },
+                    "uco-observable:endTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2021-07-30T02:10:50Z"
+                    },
+                    "uco-observable:interceptedCallState": "idle",
+                    "uco-observable:startTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2021-07-29T01:23:02Z"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Located_At",
+            "uco-core:source": {
+                "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4"
+            },
+            "uco-core:target": {
+                "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768"
+            },
+            "uco-observable:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2018-06-10T15:36:39Z"
+            },
+            "uco-observable:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2016-12-12T09:10:11Z"
+            }
+        },
+        {
+            "@id": "kb:dc9b8413-f681-4bc6-a66e-b70a7ecde4d4",
+            "@type": "uco-observable:CellSite",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:CellSiteFacet",
+                    "uco-observable:cellSiteCountryCode": "228",
+                    "uco-observable:cellSiteIdentifier": "29220952",
+                    "uco-observable:cellSiteLocationAreaCode": "22100",
+                    "uco-observable:cellSiteNetworkCode": "2",
+                    "uco-observable:cellSiteType": "GSM"
+                },
+                {
+                    "@type": "uco-observable:AntennaFacet",
+                    "uco-observable:antennaHeight": {
+                        "@type": "xsd:decimal",
+                        "@value": "25"
+                    },
+                    "uco-observable:azimuth": {
+                        "@type": "xsd:decimal",
+                        "@value": "45"
+                    },
+                    "uco-observable:elevation": {
+                        "@type": "xsd:decimal",
+                        "@value": "5"
+                    },
+                    "uco-observable:horizontalBeamWidth": {
+                        "@type": "xsd:decimal",
+                        "@value": "110"
+                    },
+                    "uco-observable:signalStrength": {
+                        "@type": "xsd:decimal",
+                        "@value": "20"
+                    },
+                    "uco-observable:skew": {
+                        "@type": "xsd:decimal",
+                        "@value": "10"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:f2e90997-16c9-4822-be30-fa4f36553768",
+            "@type": "uco-location:Location",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-location:LatLongCoordinatesFacet",
+                    "uco-location:latitude": {
+                        "@type": "xsd:decimal",
+                        "@value": "46.522316"
+                    },
+                    "uco-location:longitude": {
+                        "@type": "xsd:decimal",
+                        "@value": "6.566640"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee",
+            "@type": "uco-location:Location",
+            "uco-core:description": "Location of cell site, denoted by opencellid.org",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-location:LatLongCoordinatesFacet",
+                    "uco-location:latitude": {
+                        "@type": "xsd:decimal",
+                        "@value": "52.039261"
+                    },
+                    "uco-location:longitude": {
+                        "@type": "xsd:decimal",
+                        "@value": "4.357681"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:observation-009101f6-ba93-4a3d-acb0-455102b5b1e1",
+            "@type": [
+                "uco-core:UcoObject",
+                "sosa:Observation"
+            ],
+            "sosa:hasFeatureOfInterest": {
+                "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+            },
+            "sosa:resultTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2016-08-02T23:54:42Z"
+            },
+            "uco-core:objectCreatedTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2022-05-27T15:30:42Z"
+            }
+        },
+        {
+            "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b",
+            "@type": [
+                "uco-core:UcoObject",
+                "sosa:Observation"
+            ],
+            "sosa:hasFeatureOfInterest": {
+                "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+            },
+            "sosa:hasResult": {
+                "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
+            },
+            "sosa:resultTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2017-02-13T12:51:36Z"
+            },
+            "uco-core:objectCreatedTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2022-05-27T15:30:42Z"
+            }
+        },
+        {
+            "@id": "kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4",
+            "@type": "uco-observable:ObservableRelationship",
+            "case-investigation:wasDerivedFrom": {
+                "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b"
+            },
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Located_At",
+            "uco-core:source": {
+                "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
+            },
+            "uco-core:target": {
+                "@id": "kb:location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee"
+            }
+        },
+        {
+            "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399",
+            "@type": "uco-observable:CellSite",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-observable:CellSiteFacet",
+                    "uco-observable:cellSiteCountryCode": "204",
+                    "uco-observable:cellSiteIdentifier": "13399",
+                    "uco-observable:cellSiteLocationAreaCode": "1014",
+                    "uco-observable:cellSiteNetworkCode": "16",
+                    "uco-observable:cellSiteType": "GSM"
+                }
+            ]
+        }
+    ]
+}

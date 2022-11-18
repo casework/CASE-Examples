@@ -1,0 +1,1402 @@
+@prefix identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix location: <https://ontology.unifiedcyberontology.org/uco/location/> .
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2> ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value <http://example.org/kb/2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:BluetoothAddressFacet ;
+				uco-core:name "" ;
+				observable:addressValue "D8:C4:E9:7C:2E:F8" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "356420075722843" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:OperatingSystemFacet ;
+				uco-core:name "Android" ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:version "6.0.1" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/3fef85a7-3fb4-4170-ba4d-fc69e2de4789> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:WifiAddressFacet ;
+				observable:addressValue "AC:5F:3E:73:E3:78" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "1235557890" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/4b3cdcbd-6a31-462f-be9b-1ca2944c8876> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:MobileAccountFacet ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:MSISDN "3662158453" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:SIMCardFacet ;
+				observable:ICCID "89390100002217635543" ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:carrier [
+					a identity:Identity ;
+					uco-core:name "Telcom Italia" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/9dcd8413-f681-4bc6-a66e-b70a7ecd3e4a> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:CapturedTelecommunicationsInformationFacet ;
+				observable:captureCellSite <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+				observable:endTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
+				observable:interceptedCallState "idle" ;
+				observable:startTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/dc9b8413-f681-4bc6-a66e-b70a7ecde4d4> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:AntennaFacet ;
+				observable:antennaHeight "25.0"^^xsd:decimal ;
+				observable:azimuth "45.0"^^xsd:decimal ;
+				observable:elevation "5.0"^^xsd:decimal ;
+				observable:horizontalBeamWidth "110.0"^^xsd:decimal ;
+				observable:signalStrength "20.0"^^xsd:decimal ;
+				observable:skew "10.0"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/dc9b8413-f681-4bc6-a66e-b70a7ecde4d4> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "228" ;
+				observable:cellSiteIdentifier "29220952" ;
+				observable:cellSiteLocationAreaCode "22100" ;
+				observable:cellSiteNetworkCode "2" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/f2e90997-16c9-4822-be30-fa4f36553768> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "46.522316"^^xsd:decimal ;
+				location:longitude "6.566640"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/location-403d0147-f7ff-4f3e-aa43-19a988e8a3ee> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "52.039261"^^xsd:decimal ;
+				location:longitude "4.357681"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "204" ;
+				observable:cellSiteIdentifier "13399" ;
+				observable:cellSiteLocationAreaCode "1014" ;
+				observable:cellSiteNetworkCode "16" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a identity:Identity ;
+				uco-core:name "Telcom Italia" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a identity:Identity ;
+				uco-core:name "Telcom Italia" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a identity:Identity ;
+				uco-core:name "Telcom Italia" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a identity:Identity ;
+				uco-core:name "Telcom Italia" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "46.522316"^^xsd:decimal ;
+				location:longitude "6.566640"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "46.522316"^^xsd:decimal ;
+				location:longitude "6.566640"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "46.522316"^^xsd:decimal ;
+				location:longitude "6.566640"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "46.522316"^^xsd:decimal ;
+				location:longitude "6.566640"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "52.039261"^^xsd:decimal ;
+				location:longitude "4.357681"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "52.039261"^^xsd:decimal ;
+				location:longitude "4.357681"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "52.039261"^^xsd:decimal ;
+				location:longitude "4.357681"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a location:LatLongCoordinatesFacet ;
+				location:latitude "52.039261"^^xsd:decimal ;
+				location:longitude "4.357681"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "1235557890" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "1235557890" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "1235557890" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:AccountFacet ;
+				observable:accountIdentifier "1235557890" ;
+				observable:isActive "true"^^xsd:boolean ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AntennaFacet ;
+				observable:antennaHeight "25.0"^^xsd:decimal ;
+				observable:azimuth "45.0"^^xsd:decimal ;
+				observable:elevation "5.0"^^xsd:decimal ;
+				observable:horizontalBeamWidth "110.0"^^xsd:decimal ;
+				observable:signalStrength "20.0"^^xsd:decimal ;
+				observable:skew "10.0"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:AntennaFacet ;
+				observable:antennaHeight "25.0"^^xsd:decimal ;
+				observable:azimuth "45.0"^^xsd:decimal ;
+				observable:elevation "5.0"^^xsd:decimal ;
+				observable:horizontalBeamWidth "110.0"^^xsd:decimal ;
+				observable:signalStrength "20.0"^^xsd:decimal ;
+				observable:skew "10.0"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:AntennaFacet ;
+				observable:antennaHeight "25.0"^^xsd:decimal ;
+				observable:azimuth "45.0"^^xsd:decimal ;
+				observable:elevation "5.0"^^xsd:decimal ;
+				observable:horizontalBeamWidth "110.0"^^xsd:decimal ;
+				observable:signalStrength "20.0"^^xsd:decimal ;
+				observable:skew "10.0"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:AntennaFacet ;
+				observable:antennaHeight "25.0"^^xsd:decimal ;
+				observable:azimuth "45.0"^^xsd:decimal ;
+				observable:elevation "5.0"^^xsd:decimal ;
+				observable:horizontalBeamWidth "110.0"^^xsd:decimal ;
+				observable:signalStrength "20.0"^^xsd:decimal ;
+				observable:skew "10.0"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:BluetoothAddressFacet ;
+				uco-core:name "" ;
+				observable:addressValue "D8:C4:E9:7C:2E:F8" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:BluetoothAddressFacet ;
+				uco-core:name "" ;
+				observable:addressValue "D8:C4:E9:7C:2E:F8" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:BluetoothAddressFacet ;
+				uco-core:name "" ;
+				observable:addressValue "D8:C4:E9:7C:2E:F8" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:BluetoothAddressFacet ;
+				uco-core:name "" ;
+				observable:addressValue "D8:C4:E9:7C:2E:F8" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:CapturedTelecommunicationsInformationFacet ;
+				observable:captureCellSite <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+				observable:endTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
+				observable:interceptedCallState "idle" ;
+				observable:startTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:CapturedTelecommunicationsInformationFacet ;
+				observable:captureCellSite <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+				observable:endTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
+				observable:interceptedCallState "idle" ;
+				observable:startTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:CapturedTelecommunicationsInformationFacet ;
+				observable:captureCellSite <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+				observable:endTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
+				observable:interceptedCallState "idle" ;
+				observable:startTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:CapturedTelecommunicationsInformationFacet ;
+				observable:captureCellSite <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+				observable:endTime "2021-07-30T02:10:50+00:00"^^xsd:dateTime ;
+				observable:interceptedCallState "idle" ;
+				observable:startTime "2021-07-29T01:23:02+00:00"^^xsd:dateTime ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "204" ;
+				observable:cellSiteIdentifier "13399" ;
+				observable:cellSiteLocationAreaCode "1014" ;
+				observable:cellSiteNetworkCode "16" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "204" ;
+				observable:cellSiteIdentifier "13399" ;
+				observable:cellSiteLocationAreaCode "1014" ;
+				observable:cellSiteNetworkCode "16" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "204" ;
+				observable:cellSiteIdentifier "13399" ;
+				observable:cellSiteLocationAreaCode "1014" ;
+				observable:cellSiteNetworkCode "16" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "204" ;
+				observable:cellSiteIdentifier "13399" ;
+				observable:cellSiteLocationAreaCode "1014" ;
+				observable:cellSiteNetworkCode "16" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "228" ;
+				observable:cellSiteIdentifier "29220952" ;
+				observable:cellSiteLocationAreaCode "22100" ;
+				observable:cellSiteNetworkCode "2" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "228" ;
+				observable:cellSiteIdentifier "29220952" ;
+				observable:cellSiteLocationAreaCode "22100" ;
+				observable:cellSiteNetworkCode "2" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "228" ;
+				observable:cellSiteIdentifier "29220952" ;
+				observable:cellSiteLocationAreaCode "22100" ;
+				observable:cellSiteNetworkCode "2" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:CellSiteFacet ;
+				observable:cellSiteCountryCode "228" ;
+				observable:cellSiteIdentifier "29220952" ;
+				observable:cellSiteLocationAreaCode "22100" ;
+				observable:cellSiteNetworkCode "2" ;
+				observable:cellSiteType "GSM" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:DeviceFacet ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:DeviceFacet ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:model "SM-G925F" ;
+				observable:serialNumber "RF8H31GS5SF" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileAccountFacet ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:MSISDN "3662158453" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:MobileAccountFacet ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:MSISDN "3662158453" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileAccountFacet ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:MSISDN "3662158453" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:MobileAccountFacet ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:MSISDN "3662158453" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "356420075722843" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "356420075722843" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "356420075722843" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:MobileDeviceFacet ;
+				observable:IMEI "356420075722843" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				uco-core:name "Android" ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:version "6.0.1" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:OperatingSystemFacet ;
+				uco-core:name "Android" ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:version "6.0.1" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:OperatingSystemFacet ;
+				uco-core:name "Android" ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:version "6.0.1" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:OperatingSystemFacet ;
+				uco-core:name "Android" ;
+				observable:manufacturer <http://example.org/kb/organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec> ;
+				observable:version "6.0.1" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:SIMCardFacet ;
+				observable:ICCID "89390100002217635543" ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:carrier [
+					a identity:Identity ;
+					uco-core:name "Telcom Italia" ;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:SIMCardFacet ;
+				observable:ICCID "89390100002217635543" ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:carrier [
+					a identity:Identity ;
+					uco-core:name "Telcom Italia" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:SIMCardFacet ;
+				observable:ICCID "89390100002217635543" ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:carrier [
+					a identity:Identity ;
+					uco-core:name "Telcom Italia" ;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:SIMCardFacet ;
+				observable:ICCID "89390100002217635543" ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:carrier [
+					a identity:Identity ;
+					uco-core:name "Telcom Italia" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:SIMCardFacet ;
+				observable:ICCID "89390100002217635543" ;
+				observable:IMSI "1234567890ABCDEF" ;
+				observable:carrier [
+					a identity:Identity ;
+					uco-core:name "Telcom Italia" ;
+				] ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath observable:carrier ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class identity:Identity ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path observable:carrier ;
+			] ;
+			sh:value [
+				a identity:Identity ;
+				uco-core:name "Telcom Italia" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:WifiAddressFacet ;
+				observable:addressValue "AC:5F:3E:73:E3:78" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:WifiAddressFacet ;
+				observable:addressValue "AC:5F:3E:73:E3:78" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:WifiAddressFacet ;
+				observable:addressValue "AC:5F:3E:73:E3:78" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:WifiAddressFacet ;
+				observable:addressValue "AC:5F:3E:73:E3:78" ;
+			] ;
+		]
+		;
+	.
+

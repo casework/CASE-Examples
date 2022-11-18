@@ -1,12 +1,12 @@
 @prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
-@prefix investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix ns1: <http://custompb.acme.org/core#> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocab: <https://ontology.caseontology.org/case/vocabulary/> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -15,23 +15,112 @@
 	sh:result
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/case1> ;
-			sh:resultMessage "Less than 1 values on kb:case1->investigation:investigationForm" ;
-			sh:resultPath investigation:investigationForm ;
+			sh:focusNode <http://example.org/kb/forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
 			sh:sourceShape [
-				sh:datatype vocab:InvestigationFormVocab ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path investigation:investigationForm ;
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a
+					ns1:PlasoParserArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:attachmentFile
+					<http://example.org/kb/attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced> ,
+					<http://example.org/kb/thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689>
+					;
+				ns1:fullQueryMatch "true"^^xsd:boolean ;
+				ns1:parsedFile <http://example.org/kb/message_database-60459e4c-5730-4551-b621-2d6a7baaae14> ;
+				ns1:query "SELECT sender, recipients, body from MessageTable" ;
 			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/forensic_lifecycle1> ;
-			sh:resultMessage "Less than 1 values on kb:forensic_lifecycle1->action:phase" ;
+			sh:focusNode <http://example.org/kb/forensic_action-636d8a19-6863-4995-a3ce-d5508f90e138> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a
+					ns1:UFEDArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:aquisitionType "Logical" ;
+				ns1:method "ADB" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a
+					ns1:PlasoArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:analysisReport
+					<http://example.org/kb/chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78> ,
+					<http://example.org/kb/windows_registries_report-a725764c-787d-4afd-a398-52d8296a1c4f>
+					;
+				ns1:configFile <http://example.org/kb/config_file-f4285bf6-b64b-45c4-a041-978ea42ef680> ;
+				ns1:input <http://example.org/kb/android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3> ;
+				ns1:logFile <http://example.org/kb/log_file-9e264e76-b177-46b5-8790-139a586b5ef2> ;
+				ns1:storageFile <http://example.org/kb/plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38> ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath uco-core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class uco-core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path uco-core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/forensic_lifecycle-d1780ea9-0289-46f4-bebf-25add2120e60> ;
+			sh:resultMessage "Less than 1 values on kb:forensic_lifecycle-d1780ea9-0289-46f4-bebf-25add2120e60->action:phase" ;
 			sh:resultPath action:phase ;
 			sh:resultSeverity sh:Violation ;
 			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
@@ -39,8 +128,283 @@
 				sh:class action:ArrayOfAction ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path action:phase ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:PlasoArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:analysisReport
+					<http://example.org/kb/chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78> ,
+					<http://example.org/kb/windows_registries_report-a725764c-787d-4afd-a398-52d8296a1c4f>
+					;
+				ns1:configFile <http://example.org/kb/config_file-f4285bf6-b64b-45c4-a041-978ea42ef680> ;
+				ns1:input <http://example.org/kb/android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3> ;
+				ns1:logFile <http://example.org/kb/log_file-9e264e76-b177-46b5-8790-139a586b5ef2> ;
+				ns1:storageFile <http://example.org/kb/plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38> ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a
+					ns1:PlasoArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:analysisReport
+					<http://example.org/kb/chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78> ,
+					<http://example.org/kb/windows_registries_report-a725764c-787d-4afd-a398-52d8296a1c4f>
+					;
+				ns1:configFile <http://example.org/kb/config_file-f4285bf6-b64b-45c4-a041-978ea42ef680> ;
+				ns1:input <http://example.org/kb/android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3> ;
+				ns1:logFile <http://example.org/kb/log_file-9e264e76-b177-46b5-8790-139a586b5ef2> ;
+				ns1:storageFile <http://example.org/kb/plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38> ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:PlasoArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:analysisReport
+					<http://example.org/kb/chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78> ,
+					<http://example.org/kb/windows_registries_report-a725764c-787d-4afd-a398-52d8296a1c4f>
+					;
+				ns1:configFile <http://example.org/kb/config_file-f4285bf6-b64b-45c4-a041-978ea42ef680> ;
+				ns1:input <http://example.org/kb/android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3> ;
+				ns1:logFile <http://example.org/kb/log_file-9e264e76-b177-46b5-8790-139a586b5ef2> ;
+				ns1:storageFile <http://example.org/kb/plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38> ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a
+					ns1:PlasoArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:analysisReport
+					<http://example.org/kb/chat_messages_report-79724ae8-9663-4551-9e45-cb90f03a4e78> ,
+					<http://example.org/kb/windows_registries_report-a725764c-787d-4afd-a398-52d8296a1c4f>
+					;
+				ns1:configFile <http://example.org/kb/config_file-f4285bf6-b64b-45c4-a041-978ea42ef680> ;
+				ns1:input <http://example.org/kb/android_image-e0c0a2e7-f653-4d0f-860c-d8d8bdb18cb3> ;
+				ns1:logFile <http://example.org/kb/log_file-9e264e76-b177-46b5-8790-139a586b5ef2> ;
+				ns1:storageFile <http://example.org/kb/plaso_storage_file-0d919e70-615e-4805-942a-389ab9045b38> ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:UFEDArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:aquisitionType "Logical" ;
+				ns1:method "ADB" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a
+					ns1:UFEDArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:aquisitionType "Logical" ;
+				ns1:method "ADB" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:UFEDArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:aquisitionType "Logical" ;
+				ns1:method "ADB" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a
+					ns1:UFEDArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:aquisitionType "Logical" ;
+				ns1:method "ADB" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:PlasoParserArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:attachmentFile
+					<http://example.org/kb/attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced> ,
+					<http://example.org/kb/thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689>
+					;
+				ns1:fullQueryMatch "true"^^xsd:boolean ;
+				ns1:parsedFile <http://example.org/kb/message_database-60459e4c-5730-4551-b621-2d6a7baaae14> ;
+				ns1:query "SELECT sender, recipients, body from MessageTable" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a
+					ns1:PlasoParserArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:attachmentFile
+					<http://example.org/kb/attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced> ,
+					<http://example.org/kb/thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689>
+					;
+				ns1:fullQueryMatch "true"^^xsd:boolean ;
+				ns1:parsedFile <http://example.org/kb/message_database-60459e4c-5730-4551-b621-2d6a7baaae14> ;
+				ns1:query "SELECT sender, recipients, body from MessageTable" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a
+					ns1:PlasoParserArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:attachmentFile
+					<http://example.org/kb/attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced> ,
+					<http://example.org/kb/thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689>
+					;
+				ns1:fullQueryMatch "true"^^xsd:boolean ;
+				ns1:parsedFile <http://example.org/kb/message_database-60459e4c-5730-4551-b621-2d6a7baaae14> ;
+				ns1:query "SELECT sender, recipients, body from MessageTable" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a
+					ns1:PlasoParserArgumentsFacet ,
+					uco-core:Facet
+					;
+				ns1:attachmentFile
+					<http://example.org/kb/attachment_file-1bdf8420-9620-4ab7-bb85-18d255878ced> ,
+					<http://example.org/kb/thumbnail_database-4f3193c3-c03c-400d-8e50-659d49d31689>
+					;
+				ns1:fullQueryMatch "true"^^xsd:boolean ;
+				ns1:parsedFile <http://example.org/kb/message_database-60459e4c-5730-4551-b621-2d6a7baaae14> ;
+				ns1:query "SELECT sender, recipients, body from MessageTable" ;
 			] ;
 		] ,
 		[
@@ -48,7 +412,120 @@
 			sh:focusNode [
 				a observable:ProcessFacet ;
 				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
-				observable:creatorUser <http://example.org/kb/role4> ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
 				observable:currentWorkingDirectory "C:\\exams" ;
 				observable:environmentVariables [
 					a types:Dictionary ;
@@ -69,10 +546,216 @@
 			sh:sourceShape [
 				sh:class observable:ObservableObject ;
 				sh:maxCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path observable:creatorUser ;
 			] ;
-			sh:value <http://example.org/kb/role4> ;
+			sh:value <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ProcessFacet ;
+				observable:arguments "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log" ;
+				observable:creatorUser <http://example.org/kb/role-0a7850bf-516e-4b29-8e73-9d6ae368d334> ;
+				observable:currentWorkingDirectory "C:\\exams" ;
+				observable:environmentVariables [
+					a types:Dictionary ;
+					types:entry [
+						a types:DictionaryEntry ;
+						types:key "PYTHONPATH" ;
+						types:value "C:\\Python27\\Scripts\\python.exe" ;
+					] ;
+				] ;
+				observable:isHidden "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2010-01-20T17:59:43.250000+00:00"^^xsd:dateTime ;
+				observable:pid "1234"^^xsd:integer ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath observable:environmentVariables ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:Dictionary ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path observable:environmentVariables ;
+			] ;
+			sh:value [
+				a types:Dictionary ;
+				types:entry [
+					a types:DictionaryEntry ;
+					types:key "PYTHONPATH" ;
+					types:value "C:\\Python27\\Scripts\\python.exe" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:Dictionary ;
+				types:entry [
+					a types:DictionaryEntry ;
+					types:key "PYTHONPATH" ;
+					types:value "C:\\Python27\\Scripts\\python.exe" ;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a types:Dictionary ;
+				types:entry [
+					a types:DictionaryEntry ;
+					types:key "PYTHONPATH" ;
+					types:value "C:\\Python27\\Scripts\\python.exe" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:Dictionary ;
+				types:entry [
+					a types:DictionaryEntry ;
+					types:key "PYTHONPATH" ;
+					types:value "C:\\Python27\\Scripts\\python.exe" ;
+				] ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:Dictionary ;
+				types:entry [
+					a types:DictionaryEntry ;
+					types:key "PYTHONPATH" ;
+					types:value "C:\\Python27\\Scripts\\python.exe" ;
+				] ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:Dictionary ;
+				types:entry [
+					a types:DictionaryEntry ;
+					types:key "PYTHONPATH" ;
+					types:value "C:\\Python27\\Scripts\\python.exe" ;
+				] ;
+			] ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath types:entry ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class types:DictionaryEntry ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path types:entry ;
+			] ;
+			sh:value [
+				a types:DictionaryEntry ;
+				types:key "PYTHONPATH" ;
+				types:value "C:\\Python27\\Scripts\\python.exe" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:DictionaryEntry ;
+				types:key "PYTHONPATH" ;
+				types:value "C:\\Python27\\Scripts\\python.exe" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing ;
+			sh:value [
+				a types:DictionaryEntry ;
+				types:key "PYTHONPATH" ;
+				types:value "C:\\Python27\\Scripts\\python.exe" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a types:DictionaryEntry ;
+				types:key "PYTHONPATH" ;
+				types:value "C:\\Python27\\Scripts\\python.exe" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape uco-core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a types:DictionaryEntry ;
+				types:key "PYTHONPATH" ;
+				types:value "C:\\Python27\\Scripts\\python.exe" ;
+			] ;
 		]
 		;
 	.

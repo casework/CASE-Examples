@@ -14,6 +14,51 @@
     },
     "@graph": [
         {
+            "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+            "@type": "drafting:AnalysisAction",
+            "drafting-uco-action:isAutomated": "true",
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+            },
+            "uco-action:location": {
+                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337"
+                },
+                {
+                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                },
+                {
+                    "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+                },
+                {
+                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                },
+                {
+                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
+                }
+            ],
+            "uco-action:performer": {
+                "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:analyticresult-BE7AF920-532E-4997-9282-9EE448CADF60"
+                }
+            ],
+            "uco-core:description": "Detection of secure erase wiping of files on storage media",
+            "uco-core:name": "file wiping detection",
+            "uco-core:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-05-01T10:12:00.00Z"
+            }
+        },
+        {
             "@id": "kb:analysisaction-5F487329-6F1F-446C-80B7-13A52D3E0A51",
             "@type": "drafting:AnalysisAction",
             "drafting:isAutomated": "false",
@@ -166,6 +211,47 @@
             }
         },
         {
+            "@id": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9",
+            "@type": "drafting:AnalysisAction",
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:method-A52482A9-185A-41E8-A0D2-F74D9185D178"
+            },
+            "uco-action:location": {
+                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC"
+                },
+                {
+                    "@id": "kb:locationDC-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+                },
+                {
+                    "@id": "kb:relationshipDC-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+                },
+                {
+                    "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+                }
+            ],
+            "uco-action:performer": {
+                "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:analysisresult-C16CEAB2-F25F-4E04-8227-244CB148B9A1"
+                }
+            ],
+            "uco-core:description": "Identify the object in the photograph",
+            "uco-core:name": "identification",
+            "uco-core:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-05-02T10:12:00.00Z"
+            }
+        },
+        {
             "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
             "@type": "drafting:AnalysisAction",
             "uco-action:environment": {
@@ -246,12 +332,98 @@
             }
         },
         {
+            "@id": "kb:analysisaction-DFB676AA-ED89-43AC-B49F-AFF9E835152D",
+            "@type": "drafting:AnalysisAction",
+            "drafting-uco-action:isAutomated": "true",
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
+            },
+            "uco-action:location": {
+                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F"
+                },
+                {
+                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
+                },
+                {
+                    "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
+                },
+                {
+                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
+                },
+                {
+                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
+                }
+            ],
+            "uco-action:performer": {
+                "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:analyticresult-0DF747A2-0CCA-415E-A1E3-B7DEF8C18C04"
+                }
+            ],
+            "uco-core:description": "Detection of secure erase wiping of files on storage media",
+            "uco-core:name": "file wiping detection",
+            "uco-core:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-05-01T10:12:00.00Z"
+            }
+        },
+        {
+            "@id": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
+            "@type": "drafting:AnalysisAction",
+            "uco-action:environment": {
+                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:method-A52482A9-185A-41E8-A0D2-F74D9185D178"
+            },
+            "uco-action:location": {
+                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948"
+                },
+                {
+                    "@id": "kb:locationNY-FB6B63E3-A6D8-453B-9754-D79B9527734D"
+                },
+                {
+                    "@id": "kb:relationshipNY-83CC5ECC-4FC1-41FD-846A-544F884C6A85"
+                },
+                {
+                    "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+                }
+            ],
+            "uco-action:performer": {
+                "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:analysisresult-BA5D0146-BA3B-467F-975C-763D85BAFC7D"
+                }
+            ],
+            "uco-core:description": "Identify the object in the photograph",
+            "uco-core:name": "identification",
+            "uco-core:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-05-02T10:20:00.00Z"
+            }
+        },
+        {
             "@id": "kb:analysisresult-1c050613-1144-4622-853a-48291f63ef54",
             "@type": "drafting:AnalyticResult",
             "drafting:originatingAnalysisAction": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "@type": "drafting:HypothesisTestResultFacet",
                     "drafting:conclusion": "false",
                     "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
                     "drafting:evaluationType": "C-Scale",
@@ -285,7 +457,7 @@
             "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "@type": "drafting:HypothesisTestResultFacet",
                     "drafting:conclusion": "false",
                     "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
                     "drafting:evaluationType": "C-Scale",
@@ -302,8 +474,8 @@
             "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-analysis:HypothesisTestResultFacet",
-                    "drafting:conclusion": "false",
+                    "@type": "drafting:HypothesisTestResultFacet",
+                    "drafting:conclusion": "true",
                     "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
                     "drafting:evaluationType": "C-Scale",
                     "drafting:evidenceEvaluation": {
@@ -336,13 +508,101 @@
             "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
             "uco-core:hasFacet": [
                 {
-                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "@type": "drafting:HypothesisTestResultFacet",
                     "drafting:conclusion": "false",
                     "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
                     "drafting:evaluationType": "C-Scale",
                     "drafting:evidenceEvaluation": {
                         "@type": "xsd:decimal",
                         "@value": "0.1"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:analysisresult-5BCEDE9F-760E-46C4-A9DE-74EC0BA5FCDA",
+            "@type": "drafting:AnalyticResult",
+            "drafting:originatingAnalysisAction": "kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50",
+            "rdfs:comment": [
+                "(This inference is skeptical.)",
+                "(In this current state of illustration, this inference has no further supporting evidence.)"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "drafting:evaluationRationale": "Photograph contents and Exif data can be altered",
+                    "drafting:evaluationType": "probability",
+                    "drafting:evidenceEvaluation": {
+                        "@type": "xsd:decimal",
+                        "@value": "0.9"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:analysisresult-BA5D0146-BA3B-467F-975C-763D85BAFC7D",
+            "@type": "drafting:AnalyticResult",
+            "drafting:originatingAnalysisAction": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "drafting:conclusion": "false",
+                    "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument",
+                    "drafting:evaluationType": "probability",
+                    "drafting:evidenceEvaluation": {
+                        "@type": "xsd:decimal",
+                        "@value": "0.1"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:analysisresult-C16CEAB2-F25F-4E04-8227-244CB148B9A1",
+            "@type": "drafting:AnalyticResult",
+            "drafting:originatingAnalysisAction": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "drafting:conclusion": "true",
+                    "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument",
+                    "drafting:evaluationType": "probability",
+                    "drafting:evidenceEvaluation": {
+                        "@type": "xsd:decimal",
+                        "@value": "0.9"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:analyticresult-0DF747A2-0CCA-415E-A1E3-B7DEF8C18C04",
+            "@type": "drafting:AnalyticResult",
+            "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "drafting:conclusion": "false",
+                    "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system",
+                    "drafting:evaluationType": "probability",
+                    "drafting:evidenceEvaluation": {
+                        "@type": "xsd:decimal",
+                        "@value": "0.05"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:analyticresult-BE7AF920-532E-4997-9282-9EE448CADF60",
+            "@type": "drafting:AnalyticResult",
+            "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+            "uco-core:hasFacet": [
+                {
+                    "@type": "uco-analysis:HypothesisTestResultFacet",
+                    "drafting:conclusion": "true",
+                    "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system",
+                    "drafting:evaluationType": "probability",
+                    "drafting:evidenceEvaluation": {
+                        "@type": "xsd:decimal",
+                        "@value": "0.95"
                     }
                 }
             ]
@@ -398,6 +658,16 @@
             "uco-core:statement": "Fully recovered"
         },
         {
+            "@id": "kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC",
+            "@type": "drafting:Hypothesis",
+            "drafting:statement": "Photograph depicts the Washington Monument in Washington DC"
+        },
+        {
+            "@id": "kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F",
+            "@type": "drafting:Hypothesis",
+            "drafting:statement": "File wiping did not occur"
+        },
+        {
             "@id": "kb:hypothesis-8D836E71-3394-49DA-9E7B-8ADE534D45A6",
             "@type": "drafting:Hypothesis",
             "drafting:statement": "Name Recovered"
@@ -412,9 +682,19 @@
             "drafting:statement": "Name and Metadata Recovered"
         },
         {
+            "@id": "kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337",
+            "@type": "drafting:Hypothesis",
+            "drafting:statement": "File wiping occurred"
+        },
+        {
             "@id": "kb:hypothesis-D2129305-B562-44BB-8DE6-A68192050368",
             "@type": "drafting:Hypothesis",
             "drafting:statement": "Partially Recovered"
+        },
+        {
+            "@id": "kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948",
+            "@type": "drafting:Hypothesis",
+            "drafting:statement": "Photograph depicts Cleopatra's Needle in New York City"
         },
         {
             "@id": "kb:hypothesis-b3ef496f-714e-4479-9f82-382ce5d751c2",
@@ -427,19 +707,9 @@
             "uco-core:statement": "Only name and metadata recovered"
         },
         {
-            "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2",
-            "@type": "drafting:Hypothesis",
-            "drafting:statement": "File wiping occurred"
-        },
-        {
             "@id": "kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287",
             "@type": "drafting:Hypothesis",
             "drafting:statement": "Multiple folders and all their contents were deleted on 17 April 2021."
-        },
-        {
-            "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7",
-            "@type": "drafting:Hypothesis",
-            "drafting:statement": "File wiping did not occur"
         },
         {
             "@id": "kb:hypothesis-fa7bb4d5-e9eb-4a5f-aa1f-e6af19f2eaa0",
@@ -450,213 +720,6 @@
             "@id": "kb:hypothesis-feee4b71-8566-46a3-bc55-74076365acca",
             "@type": "drafting:Hypothesis",
             "drafting:statement": "Folders and all their contents were not deleted on 17 April 2021."
-        },
-        {
-            "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de",
-            "@type": "drafting:Inference",
-            "drafting:basisEvidence": [
-                {
-                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
-                },
-                {
-                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-                },
-                {
-                    "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
-                },
-                {
-                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                }
-            ],
-            "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
-            "drafting:evaluationType": "Probability",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.95"
-            },
-            "drafting:hypothesis": {
-                "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
-            },
-            "drafting:usedMethod": {
-                "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-            }
-        },
-        {
-            "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718",
-            "@type": "drafting:Inference",
-            "drafting:basisEvidence": [
-                {
-                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
-                },
-                {
-                    "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
-                },
-                {
-                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-                },
-                {
-                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                }
-            ],
-            "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system.",
-            "drafting:evaluationType": "Probability",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.05"
-            },
-            "drafting:hypothesis": {
-                "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
-            },
-            "drafting:usedMethod": {
-                "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701"
-            }
-        },
-        {
-            "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7",
-            "@type": "drafting:Inference",
-            "drafting:basisEvidence": [
-                {
-                    "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
-                },
-                {
-                    "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
-                },
-                {
-                    "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
-                }
-            ],
-            "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument.",
-            "drafting:evaluationType": "probability",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:hypothesis": {
-                "@id": "kb:hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68"
-            }
-        },
-        {
-            "@id": "kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027",
-            "@type": "drafting:Inference",
-            "drafting:basisEvidence": {
-                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
-            },
-            "drafting:evaluationRationale": "Photograph contents and Exif data can be altered.",
-            "drafting:evaluationType": "probability",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:hypothesis": {
-                "@id": "kb:hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1"
-            },
-            "rdfs:comment": [
-                "(This inference is skeptical.)",
-                "(In this current state of illustration, this inference has no further supporting evidence.)"
-            ]
-        },
-        {
-            "@id": "kb:investigative-action-3d5a8d9-8376-4277-9852-8e6bf9263c55",
-            "@type": "case-investigation:InvestigativeAction",
-            "uco-action:environment": {
-                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
-            },
-            "uco-action:instrument": {
-                "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1"
-            },
-            "uco-action:location": {
-                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
-            },
-            "uco-action:object": [
-                {
-                    "@id": "kb:provenance-record-0cd1ceaf-9d35-42fa-abe6-8f4e237e027a"
-                },
-                {
-                    "@id": "kb:provenance-record-9e555155-a9bc-43ef-95a1-aeb83fb3ca72"
-                },
-                {
-                    "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
-                },
-                {
-                    "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
-                },
-                {
-                    "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
-                }
-            ],
-            "uco-action:performer": {
-                "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
-            },
-            "uco-action:result": [
-                {
-                    "@id": "kb:provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7"
-                },
-                {
-                    "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7"
-                }
-            ],
-            "uco-core:description": "Identify the object in the photograph",
-            "uco-core:name": "identification",
-            "uco-core:startTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2021-05-02T10:12:00.00Z"
-            }
-        },
-        {
-            "@id": "kb:investigative-action-9ec40d34-1606-4fb1-94ca-b61f08bfc3eb",
-            "@type": "case-investigation:InvestigativeAction",
-            "uco-action:environment": {
-                "@id": "kb:forensic-computer-2132063b-7753-4b51-b146-827e9a1d5037"
-            },
-            "uco-action:instrument": {
-                "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845"
-            },
-            "uco-action:location": {
-                "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8"
-            },
-            "uco-action:object": [
-                {
-                    "@id": "kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2"
-                },
-                {
-                    "@id": "kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7"
-                },
-                {
-                    "@id": "kb:prefetch-b7671bf3-d6b2-4491-9cee-5817805004e8"
-                },
-                {
-                    "@id": "kb:provenance-record-2dacb20f-02d3-4f13-b072-8227d625292c"
-                },
-                {
-                    "@id": "kb:registry-b38dc916-acc8-40a7-a52d-65f435ec2850"
-                },
-                {
-                    "@id": "kb:sdelete-30d63040-d606-4636-8aa2-ea16e20365ee"
-                },
-                {
-                    "@id": "kb:wipedfilename-c322412e-9dd1-4989-8a3f-1a08006d629e"
-                }
-            ],
-            "uco-action:performer": {
-                "@id": "kb:forensic-practitioner-09fb01ce-999e-4521-bd3f-f7be69a63a43"
-            },
-            "uco-action:result": [
-                {
-                    "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57"
-                },
-                {
-                    "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
-                },
-                {
-                    "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
-                }
-            ],
-            "uco-core:description": "Detection of secure erase wiping of files on storage media",
-            "uco-core:name": "file wiping detection",
-            "uco-core:startTime": {
-                "@type": "xsd:dateTime",
-                "@value": "2021-05-01T10:12:00.00Z"
-            }
         },
         {
             "@id": "kb:lab-c44e4679-26e3-4585-aaa1-86110db936f8",

@@ -1,0 +1,7 @@
+@prefix acme: <http://custompb.acme.org/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+[]
+	rdfs:comment "This drafting.ttl file is provided to define the 'acme:' prefix in a manner that carries forward to the SHACL validation report."@en ;
+	.
+

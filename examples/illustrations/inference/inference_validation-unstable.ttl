@@ -1,6 +1,5 @@
 @prefix action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix ns1: <rdfs:> .
 @prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
@@ -8,7 +7,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -16,6 +14,41 @@
 	a sh:ValidationReport ;
 	sh:conforms "false"^^xsd:boolean ;
 	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/file-c3001862-2b68-402d-a3c1-01311f178137> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:ContentDataFacet ;
+				observable:mimeType "image/jpeg" ;
+				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/file-c3001862-2b68-402d-a3c1-01311f178137> ;
+			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
+			sh:resultPath core:hasFacet ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:Facet ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:hasFacet ;
+			] ;
+			sh:value [
+				a observable:FileFacet ;
+				observable:fileName "contacts.xlsx" ;
+			] ;
+		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/hypothesis-18106707-C4F7-4807-8D4F-3376AFD7D33A> ;
@@ -120,6 +153,76 @@
 			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
 			sh:sourceShape drafting:Hypothesis ;
 			sh:value <http://example.org/kb/hypothesis-32c8f595-388d-48fe-989b-4c81053e2c51> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC->drafting:hypothesisProperty" ;
+			sh:resultPath drafting:hypothesisProperty ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisProperty ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC->drafting:hypothesisSource" ;
+			sh:resultPath drafting:hypothesisSource ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisSource ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC> ;
+			sh:resultMessage 'Node kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC does not conform to exactly one shape in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetLiteral ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetObject ] ]' ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
+			sh:sourceShape drafting:Hypothesis ;
+			sh:value <http://example.org/kb/hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F->drafting:hypothesisProperty" ;
+			sh:resultPath drafting:hypothesisProperty ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisProperty ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F->drafting:hypothesisSource" ;
+			sh:resultPath drafting:hypothesisSource ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisSource ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F> ;
+			sh:resultMessage 'Node kb:hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F does not conform to exactly one shape in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetLiteral ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetObject ] ]' ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
+			sh:sourceShape drafting:Hypothesis ;
+			sh:value <http://example.org/kb/hypothesis-55CB7EAF-933F-44C0-A266-55D5CB196C3F> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -228,6 +331,41 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337->drafting:hypothesisProperty" ;
+			sh:resultPath drafting:hypothesisProperty ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisProperty ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337->drafting:hypothesisSource" ;
+			sh:resultPath drafting:hypothesisSource ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisSource ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337> ;
+			sh:resultMessage 'Node kb:hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337 does not conform to exactly one shape in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetLiteral ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetObject ] ]' ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
+			sh:sourceShape drafting:Hypothesis ;
+			sh:value <http://example.org/kb/hypothesis-C2AF7986-39C1-4B80-836B-3B8B6817D337> ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/hypothesis-D2129305-B562-44BB-8DE6-A68192050368> ;
 			sh:resultMessage "Less than 1 values on kb:hypothesis-D2129305-B562-44BB-8DE6-A68192050368->drafting:hypothesisProperty" ;
 			sh:resultPath drafting:hypothesisProperty ;
@@ -260,6 +398,41 @@
 			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
 			sh:sourceShape drafting:Hypothesis ;
 			sh:value <http://example.org/kb/hypothesis-D2129305-B562-44BB-8DE6-A68192050368> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948->drafting:hypothesisProperty" ;
+			sh:resultPath drafting:hypothesisProperty ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisProperty ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948> ;
+			sh:resultMessage "Less than 1 values on kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948->drafting:hypothesisSource" ;
+			sh:resultPath drafting:hypothesisSource ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
+			sh:sourceShape [
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path drafting:hypothesisSource ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948> ;
+			sh:resultMessage 'Node kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948 does not conform to exactly one shape in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetLiteral ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetObject ] ]' ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
+			sh:sourceShape drafting:Hypothesis ;
+			sh:value <http://example.org/kb/hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -333,41 +506,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-			sh:resultMessage "Less than 1 values on kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2->drafting:hypothesisProperty" ;
-			sh:resultPath drafting:hypothesisProperty ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:hypothesisProperty ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-			sh:resultMessage "Less than 1 values on kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2->drafting:hypothesisSource" ;
-			sh:resultPath drafting:hypothesisSource ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:hypothesisSource ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-			sh:resultMessage 'Node kb:hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2 does not conform to exactly one shape in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetLiteral ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetObject ] ]' ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
-			sh:sourceShape drafting:Hypothesis ;
-			sh:value <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ;
 			sh:resultMessage "Less than 1 values on kb:hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287->drafting:hypothesisProperty" ;
 			sh:resultPath drafting:hypothesisProperty ;
@@ -400,41 +538,6 @@
 			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
 			sh:sourceShape drafting:Hypothesis ;
 			sh:value <http://example.org/kb/hypothesis-ecf366ee-b3cd-42ba-a263-1531c6a5a287> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
-			sh:resultMessage "Less than 1 values on kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7->drafting:hypothesisProperty" ;
-			sh:resultPath drafting:hypothesisProperty ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:hypothesisProperty ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
-			sh:resultMessage "Less than 1 values on kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7->drafting:hypothesisSource" ;
-			sh:resultPath drafting:hypothesisSource ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:path drafting:hypothesisSource ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
-			sh:resultMessage 'Node kb:hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7 does not conform to exactly one shape in [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetLiteral ] ] , [ sh:property [ sh:minCount Literal("1", datatype=xsd:integer) ; sh:path drafting:hypothesisTargetObject ] ]' ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:XoneConstraintComponent ;
-			sh:sourceShape drafting:Hypothesis ;
-			sh:value <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -508,164 +611,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
-			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-e304bcf3-b220-4102-9b75-c4e5c15225c2> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
-			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-f0381f46-ad10-4c0a-a72c-7233f09ca7c7> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
-			sh:resultMessage "Less than 1 values on kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7->drafting:usedMethod" ;
-			sh:resultPath drafting:usedMethod ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class drafting:Method ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:usedMethod ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
-			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-2fc331cc-25ad-47a4-a9c1-d11132b4ea68> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
-			sh:resultMessage "Less than 1 values on kb:inference-baf0e98e-94da-4de4-af12-c5cac897d027->drafting:usedMethod" ;
-			sh:resultPath drafting:usedMethod ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape [
-				sh:class drafting:Method ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
-				sh:path drafting:usedMethod ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/inference-baf0e98e-94da-4de4-af12-c5cac897d027> ;
-			sh:resultMessage "Value is not of Node Kind sh:Literal" ;
-			sh:resultPath drafting:hypothesis ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path drafting:hypothesis ;
-			] ;
-			sh:value <http://example.org/kb/hypothesis-901bc2b4-5878-4c4d-aad9-59f30a4ce5e1> ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/method-2473b57f-8c7e-4672-99a1-1107bf2cb701> ;
 			sh:resultMessage "Less than 1 values on kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701->action:phase" ;
 			sh:resultPath action:phase ;
@@ -675,9 +620,24 @@
 				sh:class action:ArrayOfAction ;
 				sh:maxCount "1"^^xsd:integer ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path action:phase ;
 			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -689,7 +649,7 @@
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-1c050613-1144-4622-853a-48291f63ef54> ;
@@ -704,7 +664,7 @@
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e> ;
@@ -719,7 +679,7 @@
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-3c0014ff-8616-4103-915f-54a69f486576> ;
@@ -734,7 +694,7 @@
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-4b880bde-9afb-4c60-a277-29f53a0df283> ;
@@ -749,7 +709,7 @@
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0> ;
@@ -764,10 +724,40 @@
 			sh:sourceShape [
 				sh:class core:UcoObject ;
 				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:BlankNodeOrIRI ;
+				sh:nodeKind sh:IRI ;
 				sh:path core:object ;
 			] ;
 			sh:value <http://example.org/kb/inference-49c8f1db-0301-485e-95f3-d2cf92815323> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/inference-1a06b278-1434-4a8f-887b-ea32448032de> ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57> ;
+			sh:resultMessage "Value does not have class core:UcoObject" ;
+			sh:resultPath core:object ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
+			sh:sourceShape [
+				sh:class core:UcoObject ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:IRI ;
+				sh:path core:object ;
+			] ;
+			sh:value <http://example.org/kb/inference-491c1ef4-6542-450e-b8b0-a021142d2718> ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -786,44 +776,383 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode "image/jpeg" ;
-			sh:resultMessage "The used mimeType value is not a concept with a skos:notation.  Some consumers of this data expect a string with the MIME 'type/subtype' format to be supplied with skos:notation.  Please either add the skos:notation to your input graph or incorporate the UCO MIME Taxonomy."@en ;
-			sh:resultPath skos:notation ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MinCountConstraintComponent ;
-			sh:sourceShape observable:mimeType-notation ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode [
-				a observable:ContentDataFacet ;
-				observable:mimeType "image/jpeg" ;
-				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Metadata was recovered along with filename, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
 			] ;
-			sh:resultMessage "Value does not have class dcterms:FileFormat" ;
-			sh:resultPath observable:mimeType ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class dcterms:FileFormat ;
-				sh:nodeKind sh:IRI ;
-				sh:path observable:mimeType ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
 			] ;
-			sh:value "image/jpeg" ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Metadata was recovered along with filename, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode [
-				a observable:ContentDataFacet ;
-				observable:mimeType "image/jpeg" ;
-				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Metadata was recovered along with filename, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
 			] ;
-			sh:resultMessage "Value is not an instance of types:MIMEFormat or one of its subclasses.  Please consider using a value having type types:IANAMediaType or types:NonIANAMediaType."@en ;
-			sh:resultPath observable:mimeType ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape observable:mimeType-class-types-MIMEFormat ;
-			sh:value "image/jpeg" ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Metadata was recovered along with filename, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Metadata was recovered along with filename, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
+			sh:resultPath drafting:conclusion ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "0"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:conclusion ;
+			] ;
+			sh:value "false" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "No fragment of recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "No fragment of recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "No fragment of recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "No fragment of recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "No fragment of recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
+			sh:resultPath drafting:conclusion ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "0"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:conclusion ;
+			] ;
+			sh:value "false" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "false" ;
+				drafting:evaluationRationale "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "0.1"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
+			sh:resultPath drafting:conclusion ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "0"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:conclusion ;
+			] ;
+			sh:value "false" ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "true" ;
+				drafting:evaluationRationale "Filename and metadata were recovered for this file, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "5.5"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "true" ;
+				drafting:evaluationRationale "Filename and metadata were recovered for this file, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "5.5"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "true" ;
+				drafting:evaluationRationale "Filename and metadata were recovered for this file, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "5.5"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "true" ;
+				drafting:evaluationRationale "Filename and metadata were recovered for this file, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "5.5"^^xsd:decimal ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a drafting:HypothesisTestResultFacet ;
+				drafting:conclusion "true" ;
+				drafting:evaluationRationale "Filename and metadata were recovered for this file, but no associated content was recovered." ;
+				drafting:evaluationType "C-Scale" ;
+				drafting:evidenceEvaluation "5.5"^^xsd:decimal ;
+			] ;
+			sh:resultMessage "Value is not Literal with datatype xsd:boolean" ;
+			sh:resultPath drafting:conclusion ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:boolean ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "0"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path drafting:conclusion ;
+			] ;
+			sh:value "true" ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -832,16 +1161,124 @@
 				observable:mimeType "image/jpeg" ;
 				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
 			] ;
-			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
-			sh:resultPath observable:mimeType ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class dcterms:FileFormat ;
-				sh:nodeKind sh:IRI ;
-				sh:path observable:mimeType ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
 			] ;
-			sh:value "image/jpeg" ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:ContentDataFacet ;
+				observable:mimeType "image/jpeg" ;
+				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:ContentDataFacet ;
+				observable:mimeType "image/jpeg" ;
+				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:ContentDataFacet ;
+				observable:mimeType "image/jpeg" ;
+				rdfs:comment "(Note that this disagrees with the .xslx file extension.)" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:fileName "contacts.xlsx" ;
+			] ;
+			sh:resultMessage "UcoThings are required to not be blank nodes." ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "UcoThings are required to not be blank nodes."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER isBlank ($this)
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing ;
+			sh:value [
+				a observable:FileFacet ;
+				observable:fileName "contacts.xlsx" ;
+			] ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode [
+				a observable:FileFacet ;
+				observable:fileName "contacts.xlsx" ;
+			] ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value [
+				a observable:FileFacet ;
+				observable:fileName "contacts.xlsx" ;
+			] ;
 		]
 		;
 	.

@@ -3,7 +3,7 @@
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
-        "draft": "http://example.org/draft#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
@@ -28,37 +28,37 @@
             "uco-core:description": "Network traffic of media theft",
             "uco-core:object": [
                 {
-                    "@id": "kb:pcap-tool-uuid"
+                    "@id": "kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b"
                 },
                 {
-                    "@id": "kb:extraction-action-uuid"
+                    "@id": "kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6"
                 },
                 {
-                    "@id": "kb:pcap-provenancerecord-uuid"
+                    "@id": "kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe"
                 },
                 {
-                    "@id": "kb:source-host-uuid"
+                    "@id": "kb:source-host-e44d685c-56fe-417c-a898-a2af0026268e"
                 },
                 {
-                    "@id": "kb:destination-host-uuid"
+                    "@id": "kb:destination-host-e7857c18-9d8a-4257-9eac-b75d5a5bf8f0"
                 },
                 {
-                    "@id": "kb:network-connection1-uuid"
+                    "@id": "kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60"
                 },
                 {
-                    "@id": "kb:network-connection2-uuid"
+                    "@id": "kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d"
                 },
                 {
-                    "@id": "kb:network-connection3-uuid"
+                    "@id": "kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18"
                 },
                 {
-                    "@id": "kb:trace-relationship1-uuid"
+                    "@id": "kb:trace-relationship-06cb4a8f-8008-417b-931c-8b99b362ff65"
                 },
                 {
-                    "@id": "kb:trace-relationship2-uuid"
+                    "@id": "kb:trace-relationship-05b345df-b1e9-4243-9eee-39270f95b7dd"
                 },
                 {
-                    "@id": "kb:trace-relationship3-uuid"
+                    "@id": "kb:trace-relationship-341136bd-b9e6-4e82-b02f-6693f1c06f7c"
                 }
             ],
             "case-investigation:relevantAuthorization": [
@@ -74,57 +74,57 @@
             "@type": "uco-identity:Identity"
         },
         {
-            "@id": "kb:NetworkAnalyserCorporation",
+            "@id": "kb:networkanalysercorporation-8d8345fe-5a20-4780-bd8e-c00b24a45e7e",
             "@type": "uco-identity:Organization"
         },
         {
-            "@id": "kb:investigator1-uuid",
+            "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357",
             "@type": "uco-identity:Person"
         },
         {
-            "@id": "kb:pcap-tool-uuid",
+            "@id": "kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b",
             "@type": "uco-tool:Tool",
             "uco-core:name": "PCAP Analyser",
             "uco-tool:creator": {
-                "@id": "kb:NetworkAnalyserCorporation"
+                "@id": "kb:networkanalysercorporation-8d8345fe-5a20-4780-bd8e-c00b24a45e7e"
             },
             "uco-tool:toolType": "PCAP Parser",
             "uco-tool:version": "2.5.0.0"
         },
         {
-            "@id": "kb:extraction-action-uuid",
+            "@id": "kb:extraction-action-a1c7e92a-5b0b-4156-8816-b337c66341f6",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "extracted",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2017-09-29T11:47:54.2889922Z"
             },
             "uco-action:instrument": {
-                "@id": "kb:pcap-tool-uuid"
+                "@id": "kb:pcap-tool-d0b89e51-773c-41e0-94bb-1cebe5b6683b"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:pcap-provenancerecord-uuid"
+                    "@id": "kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe"
                 },
                 {
-                    "@id": "kb:pcap-file-uuid"
+                    "@id": "kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:extracted-connections-provenancerecord-uuid"
+                    "@id": "kb:extracted-connections-provenancerecord-55d66280-aa96-4806-a60f-303acdc0c078"
                 },
                 {
-                    "@id": "kb:network-connection1-uuid"
+                    "@id": "kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60"
                 },
                 {
-                    "@id": "kb:network-connection2-uuid"
+                    "@id": "kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d"
                 },
                 {
-                    "@id": "kb:network-connection3-uuid"
+                    "@id": "kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18"
                 }
             ],
             "uco-action:endTime": {
@@ -133,7 +133,7 @@
             }
         },
         {
-            "@id": "kb:pcap-provenancerecord-uuid",
+            "@id": "kb:pcap-provenancerecord-b668b007-76cc-4d1b-859e-6ae051d36abe",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:createdBy": {
                 "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b"
@@ -145,12 +145,12 @@
             "uco-core:description": "Parsed packet capture files",
             "uco-core:object": [
                 {
-                    "@id": "kb:pcap-file-uuid"
+                    "@id": "kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1"
                 }
             ]
         },
         {
-            "@id": "kb:pcap-file-uuid",
+            "@id": "kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1",
             "@type": "uco-observable:File",
             "uco-core:createdBy": {
                 "@id": "kb:81ee357b-5fc1-5aa8-b932-ff29ace0f65b"
@@ -202,10 +202,10 @@
             ]
         },
         {
-            "@id": "kb:extracted-connections-provenancerecord-uuid",
+            "@id": "kb:extracted-connections-provenancerecord-55d66280-aa96-4806-a60f-303acdc0c078",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
@@ -214,21 +214,21 @@
             "uco-core:description": "Network connections and files parsed with PCAParser",
             "uco-core:object": [
                 {
-                    "@id": "kb:network-connection1-uuid"
+                    "@id": "kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60"
                 },
                 {
-                    "@id": "kb:network-connection2-uuid"
+                    "@id": "kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d"
                 },
                 {
-                    "@id": "kb:network-connection3-uuid"
+                    "@id": "kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18"
                 }
             ]
         },
         {
-            "@id": "kb:source-host-uuid",
+            "@id": "kb:source-host-e44d685c-56fe-417c-a898-a2af0026268e",
             "@type": "uco-observable:Device",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
@@ -246,10 +246,10 @@
             ]
         },
         {
-            "@id": "kb:destination-host-uuid",
+            "@id": "kb:destination-host-e7857c18-9d8a-4257-9eac-b75d5a5bf8f0",
             "@type": "uco-observable:Device",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
@@ -267,10 +267,10 @@
             ]
         },
         {
-            "@id": "kb:network-connection1-uuid",
+            "@id": "kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60",
             "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
@@ -288,11 +288,11 @@
                         "@value": "2009-04-03T02:29:25.6365510Z"
                     },
                     "uco-observable:dst": {
-                        "@id": "kb:destination-host-uuid"
+                        "@id": "kb:destination-host-e7857c18-9d8a-4257-9eac-b75d5a5bf8f0"
                     },
                     "uco-observable:destinationPort": 139,
                     "uco-observable:src": {
-                        "@id": "kb:source-host-uuid"
+                        "@id": "kb:source-host-e44d685c-56fe-417c-a898-a2af0026268e"
                     },
                     "uco-observable:sourcePort": 52960,
                     "uco-observable:protocols": {
@@ -314,10 +314,10 @@
             ]
         },
         {
-            "@id": "kb:network-connection2-uuid",
+            "@id": "kb:network-connection-66f723eb-81bd-439c-a106-949805005d8d",
             "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
@@ -335,11 +335,11 @@
                         "@value": "2009-04-03T02:29:25.6369450Z"
                     },
                     "uco-observable:dst": {
-                        "@id": "kb:destination-host-uuid"
+                        "@id": "kb:destination-host-e7857c18-9d8a-4257-9eac-b75d5a5bf8f0"
                     },
                     "uco-observable:destinationPort": 139,
                     "uco-observable:src": {
-                        "@id": "kb:source-host-uuid"
+                        "@id": "kb:source-host-e44d685c-56fe-417c-a898-a2af0026268e"
                     },
                     "uco-observable:sourcePort": 52961,
                     "uco-observable:protocols": {
@@ -361,10 +361,10 @@
             ]
         },
         {
-            "@id": "kb:network-connection3-uuid",
+            "@id": "kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18",
             "@type": "uco-observable:NetworkConnection",
             "uco-core:createdBy": {
-                "@id": "kb:investigator1-uuid"
+                "@id": "kb:investigator-b132f44d-6417-46b6-8158-b8e03d948357"
             },
             "uco-core:objectCreatedTime": {
                 "@type": "xsd:dateTime",
@@ -382,11 +382,11 @@
                         "@value": "2009-04-03T02:29:25.6475500Z"
                     },
                     "uco-observable:dst": {
-                        "@id": "kb:destination-host-uuid"
+                        "@id": "kb:destination-host-e7857c18-9d8a-4257-9eac-b75d5a5bf8f0"
                     },
                     "uco-observable:destinationPort": 139,
                     "uco-observable:src": {
-                        "@id": "kb:source-host-uuid"
+                        "@id": "kb:source-host-e44d685c-56fe-417c-a898-a2af0026268e"
                     },
                     "uco-observable:sourcePort": 52962,
                     "uco-observable:protocols": {
@@ -408,42 +408,42 @@
             ]
         },
         {
-            "@id": "kb:trace-relationship1-uuid",
+            "@id": "kb:trace-relationship-06cb4a8f-8008-417b-931c-8b99b362ff65",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:network-connection1-uuid"
+                "@id": "kb:network-connection-6e4d3336-ce04-4c29-bf52-8afd00051e60"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:pcap-file-uuid"
+                    "@id": "kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1"
                 }
             ],
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:trace-relationship2-uuid",
+            "@id": "kb:trace-relationship-05b345df-b1e9-4243-9eee-39270f95b7dd",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:network-connection3-uuid"
+                "@id": "kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:pcap-file-uuid"
+                    "@id": "kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1"
                 }
             ],
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true
         },
         {
-            "@id": "kb:trace-relationship3-uuid",
+            "@id": "kb:trace-relationship-341136bd-b9e6-4e82-b02f-6693f1c06f7c",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:network-connection3-uuid"
+                "@id": "kb:network-connection-676b4464-05d2-4cc5-bdd9-13bb8c79ff18"
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:pcap-file-uuid"
+                    "@id": "kb:pcap-file-2200b4e1-3974-4e37-961b-d817079bc9e1"
                 }
             ],
             "uco-core:kindOfRelationship": "Contained_Within",

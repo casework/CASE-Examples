@@ -24,7 +24,7 @@ drafting:HypothesisTestResultFacet
 		owl:Class ,
 		sh:NodeShape
 		;
-	rdfs:subClassOf core:Facet ;
+	rdfs:subClassOf uco-core:Facet ;
 	rdfs:label "HypothesisTestResultFacet"@en ;
 	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis."@en ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
@@ -55,7 +55,7 @@ drafting:HypothesisTestResultFacet
 			sh:path drafting:conclusion ;
 		]
 		;
-	sh:targetClass observable:HypothesisTestResultFacet ;
+	sh:targetClass drafting:HypothesisTestResultFacet ;
 	.
 
 drafting:Method

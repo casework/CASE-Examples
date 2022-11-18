@@ -2,7 +2,6 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
-        "draft": "http://example.org/draft#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
@@ -11,7 +10,7 @@
     },
     "@graph": [
         {
-            "@id": "kb:extracted_email_address0",
+            "@id": "kb:extracted_email_address-8a042a47-e34b-46e3-b5a2-0fac4fd66aa7",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
@@ -39,13 +38,13 @@
             ]
         },
         {
-            "@id": "kb:relationship0",
+            "@id": "kb:relationship-c8007a4a-46b3-4fbb-8b67-7a14b9e65694",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:extracted_email_address0"
+                "@id": "kb:extracted_email_address-8a042a47-e34b-46e3-b5a2-0fac4fd66aa7"
             },
             "uco-core:target": {
-                "@id": "kb:decompressed_gzip0"
+                "@id": "kb:decompressed_gzip-95bfe9c0-1473-41e0-a2b4-22dd2d28bd8b"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -58,7 +57,7 @@
             ]
         },
         {
-            "@id": "kb:extracted_email_address1",
+            "@id": "kb:extracted_email_address-416ecb32-ecb1-4e23-a5b4-836c07a1de4e",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
@@ -86,13 +85,13 @@
             ]
         },
         {
-            "@id": "kb:relationship1",
+            "@id": "kb:relationship-21bf5cd2-2365-420d-8175-a87fd722e790",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:extracted_email_address1"
+                "@id": "kb:extracted_email_address-416ecb32-ecb1-4e23-a5b4-836c07a1de4e"
             },
             "uco-core:target": {
-                "@id": "kb:decompressed_gzip0"
+                "@id": "kb:decompressed_gzip-95bfe9c0-1473-41e0-a2b4-22dd2d28bd8b"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -105,7 +104,7 @@
             ]
         },
         {
-            "@id": "kb:decompressed_gzip0",
+            "@id": "kb:decompressed_gzip-95bfe9c0-1473-41e0-a2b4-22dd2d28bd8b",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -134,13 +133,13 @@
             ]
         },
         {
-            "@id": "kb:relationship3",
+            "@id": "kb:relationship-a99e82ff-3908-41ea-b5db-71858d651476",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:decompressed_gzip0"
+                "@id": "kb:decompressed_gzip-95bfe9c0-1473-41e0-a2b4-22dd2d28bd8b"
             },
             "uco-core:target": {
-                "@id": "kb:compressed_gzip0"
+                "@id": "kb:compressed_gzip-56ce1a82-7965-4a50-8feb-7524e03fba04"
             },
             "uco-core:kindOfRelationship": "Decompressed_From",
             "uco-core:isDirectional": true,
@@ -152,7 +151,7 @@
             ]
         },
         {
-            "@id": "kb:compressed_gzip0",
+            "@id": "kb:compressed_gzip-56ce1a82-7965-4a50-8feb-7524e03fba04",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -176,13 +175,13 @@
             ]
         },
         {
-            "@id": "kb:relationship4",
+            "@id": "kb:relationship-58b547f5-65a5-4275-84d7-32a234f4aba0",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:compressed_gzip0"
+                "@id": "kb:compressed_gzip-56ce1a82-7965-4a50-8feb-7524e03fba04"
             },
             "uco-core:target": {
-                "@id": "kb:decompressed_gzip1"
+                "@id": "kb:decompressed_gzip-93aef5ce-40a5-4bd4-8a4f-56f885d27695"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -195,7 +194,7 @@
             ]
         },
         {
-            "@id": "kb:decompressed_gzip1",
+            "@id": "kb:decompressed_gzip-93aef5ce-40a5-4bd4-8a4f-56f885d27695",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -219,13 +218,13 @@
             ]
         },
         {
-            "@id": "kb:relationship5",
+            "@id": "kb:relationship-c128681a-49ab-4b98-8535-e338132a795d",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:decompressed_gzip1"
+                "@id": "kb:decompressed_gzip-93aef5ce-40a5-4bd4-8a4f-56f885d27695"
             },
             "uco-core:target": {
-                "@id": "kb:compressed_gzip1"
+                "@id": "kb:compressed_gzip-e17babc0-dabb-45d1-8202-0f02518c2a89"
             },
             "uco-core:kindOfRelationship": "Decompressed_From",
             "uco-core:isDirectional": true,
@@ -237,7 +236,7 @@
             ]
         },
         {
-            "@id": "kb:compressed_gzip1",
+            "@id": "kb:compressed_gzip-e17babc0-dabb-45d1-8202-0f02518c2a89",
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
@@ -261,13 +260,13 @@
             ]
         },
         {
-            "@id": "kb:relationship6",
+            "@id": "kb:relationship-4b3f030f-c214-48a8-9832-c302994d1874",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:compressed_gzip1"
+                "@id": "kb:compressed_gzip-e17babc0-dabb-45d1-8202-0f02518c2a89"
             },
             "uco-core:target": {
-                "@id": "kb:disk_image"
+                "@id": "kb:disk_image-f654431a-ee73-4c9f-8ebb-e689df534f6c"
             },
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:isDirectional": true,
@@ -280,7 +279,7 @@
             ]
         },
         {
-            "@id": "kb:disk_image",
+            "@id": "kb:disk_image-f654431a-ee73-4c9f-8ebb-e689df534f6c",
             "@type": [
                 "uco-observable:File",
                 "uco-observable:Image"

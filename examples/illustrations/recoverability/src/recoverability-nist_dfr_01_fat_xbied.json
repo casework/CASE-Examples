@@ -1,7 +1,10 @@
 [
     {
-        "@id": "kb:CB0354F5-2DBD-4C02-8A6C-011B77125EE2",
-        "@type": "uco-observable:ObservableObject",
+        "@id": "kb:cb0354f5-2dbd-4c02-8a6c-011b77125ee2",
+        "@type": [
+            "uco-observable:RecoveredObject",
+            "uco-observable:File"
+        ],
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",
@@ -24,17 +27,17 @@
                 "uco-observable:sizeInBytes": 712
             },
             {
-                "@type": "drafting:UnallocatedRecoverabilityFacet",
-                "drafting:nameRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:metadataRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 },
-                "drafting:contentRecoverabilityStatus": {
-                    "@type": "drafting:UnallocatedRecoverabilityStatusVocab",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                     "@value": "recovered"
                 }
             }
