@@ -71,7 +71,13 @@
     },
     {
         "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b",
-        "@type": "uco-location:Location"
+        "@type": "uco-location:Location",
+        "rdfs:label": "Washington, D.C."
+    },
+    {
+        "@id": "kb:location-fb6b63e3-a6d8-453b-9754-d79b9527734d",
+        "@type": "uco-location:Location",
+        "rdfs:label": "New York"
     },
     {
         "@id": "kb:massdeletiondetector-841ee50b-2f39-4b4c-baf0-9022219b0845",
@@ -215,6 +221,18 @@
         "uco-core:kindOfRelationship": "Contained_Within",
         "uco-core:source": {
             "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+        },
+        "uco-core:target": {
+            "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+        }
+    },
+    {
+        "@id": "kb:relationship-83cc5ecc-4fc1-41fd-846a-544f884c6a85",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:location-fb6b63e3-a6d8-453b-9754-d79b9527734d"
         },
         "uco-core:target": {
             "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
