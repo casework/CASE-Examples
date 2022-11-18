@@ -7,18 +7,6 @@
 @prefix uco-pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-drafting:Hypothesis
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf uco-core:Assertion ;
-	rdfs:label "Hypothesis"@en ;
-	rdfs:comment "A natural-language claim to explain observable objects."@en ;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
-	sh:targetClass drafting:Hypothesis ;
-	.
-
 drafting:HypothesisTestResultFacet
 	a
 		owl:Class ,
