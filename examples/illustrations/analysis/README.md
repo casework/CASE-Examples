@@ -63,8 +63,10 @@ This example illustrates manual software malware analysis within the Cyber Threa
     },
     {
         "@id": "kb:AnalyticResult-67fb2d95-dc94-4833-a270-582c37feb879",
-        "@type": "analysis:AnalyticResult",
-        "uco-analysis:originatingAnalysis": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:Analysis-f365add7-1326-426f-9266-406bdeed86a1"
+        },
         "uco-core:statement": "Software exhibits malicious intent"
     }
 ]
@@ -96,14 +98,17 @@ This example illustrates multimedia classification
         "uco-tool:version": "1.0",
         "uco-configuration:usesConfiguration": [
             {
+                "@id": "kb:configuration-3d49f77f-9332-47c2-aa9f-d4b8bb1d5f9c",
                 "@type": "uco-configuration:Configuration",
                 "uco-configuration:configurationEntry": [
                     {
+                        "@id": "kb:configuration-entry-9de0c74d-b009-4228-ac09-19692eba1559",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "classifier",
                         "uco-configuration:itemValue": "nfi-forensic"
                     },
                     {
+                        "@id": "kb:configuration-entry-caa1090c-9ef4-4ea9-86ff-375eb5c8ebfd",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "TrainingSet",
                         "uco-configuration:itemValue": "0.0.7"
@@ -153,16 +158,23 @@ This example illustrates multimedia classification
     },
     {
         "@id": "kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B",
-        "@type": "analysis:AnalyticResult",
-        "uco-analysis:originatingAnalysis": "kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556"
+        },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:artifact-classification-result-facet-61a3c100-7614-4699-8ef2-1ec140018ced",
                 "@type": "uco-analysis:ArtifactClassificationResultFacet",
                 "uco-analysis:classification": [
                     {
+                        "@id": "kb:artifact-classification-74e83eb2-e011-4af1-ad41-b7e915264c68",
                         "@type": "uco-analysis:ArtifactClassification",
                         "uco-analysis:class": "money",
-                        "uco-analysis:classificationConfidence": 0.997359037
+                        "uco-analysis:classificationConfidence": {
+                            "@type": "xsd:decimal",
+                            "@value": "0.997359037"
+                        }
                     }
                 ]
             }
