@@ -62,7 +62,7 @@
         "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
         "@type": [
             "case-investigation:InvestigativeAction",
-            "drafting:Analysis"
+            "uco-analysis:Analysis"
         ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
