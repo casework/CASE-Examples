@@ -17,7 +17,7 @@
         ],
         "uco-core:name": "identification",
         "uco-core:description": "Identify the object in the photograph",
-        "uco-analysis:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-02T10:12:00.00Z"
         },
