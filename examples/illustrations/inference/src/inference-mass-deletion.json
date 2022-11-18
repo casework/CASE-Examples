@@ -49,7 +49,7 @@
         ],
         "uco-action:result": [
             {
-                "@id": "kb:analysisaction-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+                "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
             }
         ]
     },
@@ -93,7 +93,7 @@
         ],
         "uco-action:result": [
             {
-                "@id": "kb:analysisaction-49c8f1db-0301-485e-95f3-d2cf92815323"
+                "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323"
             }
         ]
     },

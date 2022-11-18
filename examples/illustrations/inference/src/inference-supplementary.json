@@ -76,6 +76,10 @@
         "@type": "uco-tool:AnalyticTool"
     },
     {
+        "@id": "kb:method-A52482A9-185A-41E8-A0D2-F74D9185D178",
+        "@type": "drafting:Method"
+    },
+    {
         "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1",
         "@type": "uco-observable:RasterPicture"
     },
@@ -163,10 +167,10 @@
         "@type": "case-investigation:ProvenanceRecord",
         "uco-core:object": [
             {
-                "@id": "kb:inference-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+                "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
             },
             {
-                "@id": "kb:inference-49c8f1db-0301-485e-95f3-d2cf92815323"
+                "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323"
             }
         ]
     },

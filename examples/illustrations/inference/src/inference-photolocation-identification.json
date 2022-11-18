@@ -38,13 +38,13 @@
                 "@id": "kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC"
             },
             {
-                "@id": "kb:locationDC-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+                "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
             },
             {
-                "@id": "kb:relationshipDC-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+                "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
             },
             {
-                "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
             }
         ],
         "uco-action:result": [
@@ -107,7 +107,7 @@
                 "@id": "kb:relationshipNY-83CC5ECC-4FC1-41FD-846A-544F884C6A85"
             },
             {
-                "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
             }
         ],
         "uco-action:result": [
