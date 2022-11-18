@@ -212,10 +212,7 @@
         "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0",
         "@type": "uco-observable:ObservableRelationship",
         "uco-core:isDirectional": true,
-        "uco-core:kindOfRelationship": {
-            "@type": "uco-vocabulary:ObservableObjectRelationshipVocab",
-            "@value": "Contained_Within"
-        },
+        "uco-core:kindOfRelationship": "Contained_Within",
         "uco-core:source": {
             "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
         },
