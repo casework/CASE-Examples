@@ -1,5 +1,29 @@
 [
     {
+        "@id": "kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
+        "uco-core:name": "authentication",
+        "uco-core:description": "Identify the object in the photograph",
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2021-05-03T10:12:00.00Z"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:analysisresult-5BCEDE9F-760E-46C4-A9DE-74EC0BA5FCDA"
+            }
+        ]
+    },
+    {
         "@id": "kb:autoauthenticator-83715215-c5fc-4231-99ff-29a3c51cb5f1",
         "@type": "uco-tool:AnalyticTool"
     },
