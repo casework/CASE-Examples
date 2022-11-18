@@ -6,26 +6,29 @@
     },
     {
         "@id": "kb:AnalyticTool-DAE5EE58-E5ED-4588-93BE-CDEC6FAA9C6A",
-        "@type": "uco-tool:AnalyticTool",
+        "@type": [
+            "uco-tool:AnalyticTool",
+            "uco-tool:ConfiguredTool"
+        ],
         "uco-core:name": "Hansken",
         "uco-tool:toolType": "DFaaS",
         "uco-tool:creator": {
             "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
         },
         "uco-tool:version": "1.0",
-        "uco-core:hasFacet": [
+        "uco-configuration:usesConfiguration": [
             {
-                "@type": "uco-tool:ToolConfigurationTypeFacet",
-                "uco-tool:configurationSettings": [
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
                     {
-                        "@type": "uco-tool:ConfigurationSettingType",
-                        "uco-tool:itemName": "classifier",
-                        "uco-tool:itemValue": "nfi-forensic"
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "classifier",
+                        "uco-configuration:itemValue": "nfi-forensic"
                     },
                     {
-                        "@type": "uco-tool:ConfigurationSettingType",
-                        "uco-tool:itemName": "TrainingSet",
-                        "uco-tool:itemValue": "0.0.7"
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "TrainingSet",
+                        "uco-configuration:itemValue": "0.0.7"
                     }
                 ]
             }
@@ -43,7 +46,7 @@
             "@type": "xsd:dateTime",
             "@value": "2022-05-10T09:54:00.00Z"
         },
-        "uco-action:isAutomated": true,
+        "drafting:isAutomated": true,
         "uco-action:location": {
             "@id": "kb:ESC-6FAC81EF-0966-4F05-94BB-2A5D572513CA"
         },
