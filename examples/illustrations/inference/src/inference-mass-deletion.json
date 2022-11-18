@@ -105,6 +105,7 @@
         },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:hypothesis-test-result-facet-443f07d4-50be-42e1-906c-1d1e4551a32d",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
@@ -124,6 +125,7 @@
         },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:hypothesis-test-result-facet-5dae0b2b-9120-443e-b8be-329a8f0d7bd1",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",

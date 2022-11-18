@@ -183,6 +183,7 @@
         },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:hypothesis-test-result-facet-bfe8b5bd-538b-41d9-96fd-2452d349f500",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
@@ -202,6 +203,7 @@
         },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:hypothesis-test-result-facet-ca2d4732-c740-43eb-a871-e1ec31910511",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
@@ -221,6 +223,7 @@
         },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:hypothesis-test-result-facet-d00368ad-405f-4d57-83c9-2b1ecfc767c9",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
@@ -240,6 +243,7 @@
         },
         "uco-core:hasFacet": [
             {
+                "@id": "kb:hypothesis-test-result-facet-6f17672c-8eed-4131-8449-b530facdb380",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",

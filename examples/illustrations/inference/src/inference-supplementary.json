@@ -17,10 +17,12 @@
         "uco-core:description": "File recovered by tool AutoAuthenticator, asserted at time of recovery to be an Excel spreadsheet.",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-b3f81f55-a896-4314-98f4-5165bbe4cc81",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:fileName": "contacts.xlsx"
             },
             {
+                "@id": "kb:content-data-facet-90a3b1a7-372a-46eb-a564-c371fca24cb2",
                 "@type": "uco-observable:ContentDataFacet",
                 "rdfs:comment": "(Note that this disagrees with the .xslx file extension.)",
                 "uco-observable:mimeType": "image/jpeg"
