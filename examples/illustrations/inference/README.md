@@ -61,12 +61,14 @@ Further analysis finds that the data on disk presented by the tool is incompatib
     },
     {
         "@id": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -98,12 +100,14 @@ Further analysis finds that the data on disk presented by the tool is incompatib
     },
     {
         "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -135,12 +139,14 @@ Further analysis finds that the data on disk presented by the tool is incompatib
     },
     {
         "@id": "kb:analysisaction-71AF3D6E-6986-4977-A663-D0430FE074CB",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -172,12 +178,14 @@ Further analysis finds that the data on disk presented by the tool is incompatib
     },
     {
         "@id": "kb:analysisaction-5F487329-6F1F-446C-80B7-13A52D3E0A51",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "authentication",
         "uco-core:description": "Authentication of automated file recovery results",
-        "drafting:isAutomated": "false",
-        "uco-core:startTime": {
+        "drafting:isAutomated": false,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -209,71 +217,83 @@ Further analysis finds that the data on disk presented by the tool is incompatib
     },
     {
         "@id": "kb:analysisresult-1c050613-1144-4622-853a-48291f63ef54",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-9d3e78d9-8376-4277-9852-8e6bf9267456"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file." 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-bfe8b5bd-538b-41d9-96fd-2452d349f500",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": false,
+                "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-2aaf35bb-6ca9-4b30-98e4-192552a2468e",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file." 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-ca2d4732-c740-43eb-a871-e1ec31910511",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": false,
+                "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-3c0014ff-8616-4103-915f-54a69f486576",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "5.5"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered." 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-d00368ad-405f-4d57-83c9-2b1ecfc767c9",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "5.5"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": true,
+                "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered."
+            }
+        ]
     },
     {
         "@id": "kb:analysisresult-4b880bde-9afb-4c60-a277-29f53a0df283",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-DE007954-40FE-4F87-A0A7-BD67FB1F6E96"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "drafting:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "C-Scale",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered." 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-6f17672c-8eed-4131-8449-b530facdb380",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "C-Scale",
+                "drafting:conclusion": false,
+                "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered."
+            }
+        ]
     },
     {
         "@id": "kb:method-2473b57f-8c7e-4672-99a1-1107bf2cb701",
@@ -291,12 +311,18 @@ To ask whether the file is `Fully Recovered` is the wrong question because it do
 
 Rather, the question is "Which class/category of file recovery is more supported by the evidence?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
 
-|    | ?lEvaluationType   |   ?lEvidenceEvaluation | ?lEvaluationRationale                                                                                                                   | ?lConclusion   |
-|----|--------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|----------------|
-|  0 | C-Scale            |                    0.1 | No fragment of recovered content could be attributed to this file.                                                                      | false          |
-|  1 | C-Scale            |                    5.5 | Filename and metadata were recovered for this file, but no associated content was recovered.                                            | true           |
-|  2 | C-Scale            |                    0.1 | Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file. | false          |
-|  3 | C-Scale            |                    0.1 | Metadata was recovered along with filename, but no associated content was recovered.                                                    | false          |
+|    | ?lEvaluationType   |   ?lEvidenceEvaluation | ?lEvaluationRationale                                                                                                                                                                                                                    | ?lConclusion   |
+|----|--------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
+|  0 | probability        |                   0.95 | Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system                                                                                                                           | True           |
+|  1 | probability        |                   0.05 | Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system                                                                               | False          |
+|  2 | Probability        |                   0.9  | Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files. | True           |
+|  3 | Probability        |                   0.1  | Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records.                                                                                                                 | False          |
+|  4 | probability        |                   0.9  | Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument                                                                                          | True           |
+|  5 | C-Scale            |                   0.1  | Metadata was recovered along with filename, but no associated content was recovered.                                                                                                                                                     | False          |
+|  6 | probability        |                   0.1  | Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument                                                                                | False          |
+|  7 | C-Scale            |                   0.1  | Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.                                                                                                  | False          |
+|  8 | C-Scale            |                   0.1  | No fragment of recovered content could be attributed to this file.                                                                                                                                                                       | False          |
+|  9 | C-Scale            |                   5.5  | Filename and metadata were recovered for this file, but no associated content was recovered.                                                                                                                                             | True           |
 
 ## Example - Machine learning and image location
 
@@ -323,11 +349,13 @@ Further forensic analysis is performed of the photograph and its metadata, which
     },
     {
         "@id": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "identification",
         "uco-core:description": "Identify the object in the photograph",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-02T10:12:00.00Z"
         },
@@ -348,13 +376,13 @@ Further forensic analysis is performed of the photograph and its metadata, which
                 "@id": "kb:hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC"
             },
             {
-                "@id": "kb:locationDC-9d25eb6e-1077-42a7-b531-1d170d4b585b"
+                "@id": "kb:location-9d25eb6e-1077-42a7-b531-1d170d4b585b"
             },
             {
-                "@id": "kb:relationshipDC-74cb5afd-8bec-4544-a724-bfbf11df29a0"
+                "@id": "kb:relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0"
             },
             {
-                "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
             }
         ],
         "uco-action:result": [
@@ -365,28 +393,33 @@ Further forensic analysis is performed of the photograph and its metadata, which
     },
     {
         "@id": "kb:analysisresult-C16CEAB2-F25F-4E04-8227-244CB148B9A1",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-B615357B-F1B5-40B0-BA97-368DC6C817B9"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:evaluationType": "probability",
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument" 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-6082b0d8-d661-49da-b7cb-a203f8d6f395",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.9"
+                },
+                "drafting:evaluationType": "probability",
+                "drafting:conclusion": true,
+                "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument"
+            }
+        ]
     },
     {
         "@id": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "identification",
         "uco-core:description": "Identify the object in the photograph",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-02T10:20:00.00Z"
         },
@@ -407,13 +440,13 @@ Further forensic analysis is performed of the photograph and its metadata, which
                 "@id": "kb:hypothesis-DFA763B2-5EB6-4320-9674-BC591C693948"
             },
             {
-                "@id": "kb:locationNY-FB6B63E3-A6D8-453B-9754-D79B9527734D"
+                "@id": "kb:location-fb6b63e3-a6d8-453b-9754-d79b9527734d"
             },
             {
-                "@id": "kb:relationshipNY-83CC5ECC-4FC1-41FD-846A-544F884C6A85"
+                "@id": "kb:relationship-83cc5ecc-4fc1-41fd-846a-544f884c6a85"
             },
             {
-                "@id": "kb:photograph-CC3FB8C7-26E7-4F71-889F-FAF75187E8F9"
+                "@id": "kb:photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1"
             }
         ],
         "uco-action:result": [
@@ -424,20 +457,23 @@ Further forensic analysis is performed of the photograph and its metadata, which
     },
     {
         "@id": "kb:analysisresult-BA5D0146-BA3B-467F-975C-763D85BAFC7D",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-F7CD9C61-1830-4158-8B15-8158C0E59082"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.1"
-            },
-            "drafting:evaluationType": "probability",
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument" 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-859da12a-ca33-405a-aaeb-9b478960d10a",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.1"
+                },
+                "drafting:evaluationType": "probability",
+                "drafting:conclusion": false,
+                "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument"
+            }
+        ]
     }
 ]
 ```
@@ -452,23 +488,26 @@ However, a skeptic might argue that photographs can be faked or geolocation info
 [
     {
         "@id": "kb:analysisresult-5BCEDE9F-760E-46C4-A9DE-74EC0BA5FCDA",
-        "@type": "drafting:AnalyticResult",
+        "@type": "uco-analysis:AnalyticResult",
         "rdfs:comment": [
             "(This inference is skeptical.)",
             "(In this current state of illustration, this inference has no further supporting evidence.)"
         ],
-        "drafting:originatingAnalysisAction": "kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-242CBB2B-9DCB-451B-994F-E70770F1BC50"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evaluationType": "probability",
-            "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.9"
-            },
-            "drafting:evaluationRationale": "Photograph contents and Exif data can be altered" 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evaluationType": "probability",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.9"
+                },
+                "drafting:evaluationRationale": "Photograph contents and Exif data can be altered"
+            }
+        ]
     }
 ]
 ```
@@ -482,8 +521,14 @@ Two hypothesis test results (analytic inferences) are referenced above (`kb:anal
 
 The following table is the results of [this query](src/query-select-skeptic-difference.sparql).  "Supports A" is support for only the initial analyst's finding, "Supports B" is support for only the skeptic's finding.
 
-| ?nBasisObject   | ?lSupports   |
-|-----------------|--------------|
+|    | ?nBasisObject                                                           | ?lSupports   |
+|----|-------------------------------------------------------------------------|--------------|
+|  0 | http://example.org/kb/hypothesis-382C613C-8E69-4F11-A54B-B5416FBC42BC   | A            |
+|  1 | http://example.org/kb/location-9d25eb6e-1077-42a7-b531-1d170d4b585b     | A            |
+|  2 | http://example.org/kb/relationship-74cb5afd-8bec-4544-a724-bfbf11df29a0 | A            |
+|  3 | http://example.org/kb/photograph-2808aaa6-f53c-4e89-b0a9-2e47677489b1   | both         |
+
+
 ## Example - Wiping
 
 *Observations*: Consider an example of a file named “abc.exe” that is a secure erase program which overwrites the content and name of selected files, rendering them unrecoverable. This program has the same hash value of the secure erase program called “sdelete.exe” which is freely available on the Internet. Observed file system patterns on the computer are compatible with  use of “sdelete.exe” (Name overwritten, Zeroed content). Dates in file system metadata of these files corresponding to dates of Registry entries (UserAssist) and Prefetch files recording use of “abc.exe” program.
@@ -507,12 +552,14 @@ The following hypothesis test results can be stated in words as the observations
     },
     {
         "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "file wiping detection",
         "uco-core:description": "Detection of secure erase wiping of files on storage media",
-        "drafting-uco-action:isAutomated":"true",
-        "uco-core:startTime": {
+        "drafting:isAutomated": true,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -553,29 +600,34 @@ The following hypothesis test results can be stated in words as the observations
     },
     {
         "@id": "kb:analyticresult-BE7AF920-532E-4997-9282-9EE448CADF60",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evaluationType": "probability",
-              "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.95"
-            },
-            "drafting:conclusion": "true",
-            "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system" 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-14f1ed75-3a3d-4430-9173-e76679914ba2",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evaluationType": "probability",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.95"
+                },
+                "drafting:conclusion": true,
+                "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
+            }
+        ]
     },
     {
         "@id": "kb:analysisaction-DFB676AA-ED89-43AC-B49F-AFF9E835152D",
-        "@type": "case-investigation:InvestigativeAction",
-        "@type": "drafting:AnalysisAction",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
         "uco-core:name": "file wiping detection",
         "uco-core:description": "Detection of secure erase wiping of files on storage media",
-        "drafting-uco-action:isAutomated":"true",
-        "uco-core:startTime": {
+        "drafting:isAutomated": true,
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -616,20 +668,23 @@ The following hypothesis test results can be stated in words as the observations
     },
     {
         "@id": "kb:analyticresult-0DF747A2-0CCA-415E-A1E3-B7DEF8C18C04",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-321E1116-F203-41E4-9D66-86C96B0B9C34"
+        },
         "uco-core:hasFacet": [
-          {
-            "@type": "uco-analysis:HypothesisTestResultFacet",
-            "drafting:evaluationType": "probability",
-              "drafting:evidenceEvaluation": {
-                "@type": "xsd:decimal",
-                "@value": "0.05"
-            },
-            "drafting:conclusion": "false",
-            "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system" 
-          }
-       ]
+            {
+                "@id": "kb:hypothesis-test-result-facet-273dc533-e496-4349-9d4b-febbe7ba1a6c",
+                "@type": "drafting:HypothesisTestResultFacet",
+                "drafting:evaluationType": "probability",
+                "drafting:evidenceEvaluation": {
+                    "@type": "xsd:decimal",
+                    "@value": "0.05"
+                },
+                "drafting:conclusion": false,
+                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
+            }
+        ]
     }
 ]
 ```
@@ -657,10 +712,10 @@ The following hypothesis test results can be stated in words as the observations
     },
     {
         "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
-        "@type": "drafting:AnalysisAction",
+        "@type": "uco-analysis:Analysis",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -695,16 +750,16 @@ The following hypothesis test results can be stated in words as the observations
         ],
         "uco-action:result": [
             {
-                "@id": "kb:analysisaction-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
+                "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0"
             }
         ]
     },
     {
         "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
-        "@type": "drafting:AnalysisAction",
+        "@type": "uco-analysis:Analysis",
         "uco-core:name": "mass deletion detection",
         "uco-core:description": "Detection of mass deletion of files on storage media",
-        "uco-core:startTime": {
+        "uco-action:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2021-05-01T10:12:00.00Z"
         },
@@ -739,40 +794,46 @@ The following hypothesis test results can be stated in words as the observations
         ],
         "uco-action:result": [
             {
-                "@id": "kb:analysisaction-49c8f1db-0301-485e-95f3-d2cf92815323"
+                "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323"
             }
         ]
     },
     {
         "@id": "kb:analysisresult-1ccab5f9-8b02-4046-9ade-a2310b5c91c0",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-9bb9f420-58b1-4bde-84db-f81de2077513"
+        },
         "uco-core:hasFacet": [
             {
-                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "@id": "kb:hypothesis-test-result-facet-443f07d4-50be-42e1-906c-1d1e4551a32d",
+                "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
                 },
                 "drafting:evaluationType": "Probability",
-                "drafting:conclusion": "true",
+                "drafting:conclusion": true,
                 "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files."
             }
         ]
     },
     {
         "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323",
-        "@type": "drafting:AnalyticResult",
-        "drafting:originatingAnalysisAction": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:analysisaction-BB624906-2C39-423E-B60F-6991C1D1B2B9"
+        },
         "uco-core:hasFacet": [
             {
-                "@type": "uco-analysis:HypothesisTestResultFacet",
+                "@id": "kb:hypothesis-test-result-facet-5dae0b2b-9120-443e-b8be-329a8f0d7bd1",
+                "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "Probability",
-                "drafting:conclusion": "false",
+                "drafting:conclusion": false,
                 "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records."
             }
         ]
