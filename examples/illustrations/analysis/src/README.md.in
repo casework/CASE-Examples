@@ -1,0 +1,19 @@
+These examples were drafted as part of introducing the Analysis namespace in [UCO Issue 400](https://github.com/ucoProject/UCO/issues/400).
+
+
+## Malware analysis
+
+This example illustrates manual software malware analysis within the Cyber Threat Intelligence application domain.
+
+```json
+@ANALYSIS_MANUAL_MALWARE_JSON@
+```
+
+
+## Multimedia classification
+
+This example illustrates multimedia classification
+
+```json
+@ANALYSIS_MULTIMEDIA_CLASSIFICATION_JSON@
+```

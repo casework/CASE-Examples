@@ -1,0 +1,90 @@
+[
+    {
+        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "NFI"
+    },
+    {
+        "@id": "kb:AnalyticTool-DAE5EE58-E5ED-4588-93BE-CDEC6FAA9C6A",
+        "@type": "uco-tool:AnalyticTool",
+        "uco-core:name": "Hansken",
+        "uco-tool:toolType": "DFaaS",
+        "uco-tool:creator": {
+            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+        },
+        "uco-tool:version": "1.0",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-tool:ToolConfigurationTypeFacet",
+                "uco-tool:configurationSettings": [
+                    {
+                        "@type": "uco-tool:ConfigurationSettingType",
+                        "uco-tool:itemName": "classifier",
+                        "uco-tool:itemValue": "nfi-forensic"
+                    },
+                    {
+                        "@type": "uco-tool:ConfigurationSettingType",
+                        "uco-tool:itemName": "TrainingSet",
+                        "uco-tool:itemValue": "0.0.7"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "@id": "kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556",
+        "@type": "uco-analysis:Analysis",
+        "uco-core:name": "compute string similarity",
+        "uco-core:startTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2022-05-10T08:49:00.00Z"
+        },
+        "uco-core:endTime": {
+            "@type": "xsd:dateTime",
+            "@value": "2022-05-10T09:54:00.00Z"
+        },
+        "uco-action:isAutomated": true,
+        "uco-action:location": {
+            "@id": "kb:ESC-6FAC81EF-0966-4F05-94BB-2A5D572513CA"
+        },
+        "uco-action:performer": {
+            "@id": "kb:Analyst-13A167EE-D3B5-4AA4-B8BA-83C25F8B8FF4"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:AnalyticTool-DAE5EE58-E5ED-4588-93BE-CDEC6FAA9C6A"
+        },
+        "uco-action:environment": {
+            "@id": "kb:Computer-533FA61A-BE79-469E-A05F-1A341848B925"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:RasterPicture1-b67308c0-c31b-41a6-805a-10ec526ec8bc"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:ProvenanceRecord-d628b0f6-686d-4d22-a577-ec737e5947bc"
+            },
+            {
+                "@id": "kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B"
+            }
+        ]
+    },
+    {
+        "@id": "kb:AnalyticResult-3205CB19-0820-4009-B70B-646DBD19598B",
+        "@type": "analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": "kb:Analysis-7cd51fa7-63ee-4f40-a482-9ce8333c7556",
+        "uco-core:hasFacet": [
+            {
+                "@type": "uco-analysis:ArtifactClassificationResultFacet",
+                "uco-analysis:classification": [
+                    {
+                        "@type": "uco-analysis:ArtifactClassification",
+                        "uco-analysis:class": "money",
+                        "uco-analysis:classificationConfidence": 0.997359037
+                    }
+                ]
+            }
+        ]
+    }
+]
