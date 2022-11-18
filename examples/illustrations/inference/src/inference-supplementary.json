@@ -103,13 +103,6 @@
         }
     },
     {
-        "@id": "kb:provenance-record-1a609160-fe75-4908-8a0e-ab323a9b1fb7",
-        "@type": "case-investigation:ProvenanceRecord",
-        "uco-core:object": {
-            "@id": "kb:inference-839fcf98-b2f2-47ef-8dd0-d85d395a9ac7"
-        }
-    },
-    {
         "@id": "kb:provenance-record-2579e024-ca98-4a22-a520-a22786d5a85d",
         "@type": "case-investigation:ProvenanceRecord",
         "uco-core:object": [
@@ -157,16 +150,16 @@
         "@type": "case-investigation:ProvenanceRecord",
         "uco-core:object": [
             {
-                "@id": "kb:inference-1c050613-1144-4622-853a-48291f63ef54"
+                "@id": "kb:analysisresult-1c050613-1144-4622-853a-48291f63ef54"
             },
             {
-                "@id": "kb:inference-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
+                "@id": "kb:analysisresult-2aaf35bb-6ca9-4b30-98e4-192552a2468e"
             },
             {
-                "@id": "kb:inference-3c0014ff-8616-4103-915f-54a69f486576"
+                "@id": "kb:analysisresult-3c0014ff-8616-4103-915f-54a69f486576"
             },
             {
-                "@id": "kb:inference-4b880bde-9afb-4c60-a277-29f53a0df283"
+                "@id": "kb:analysisresult-4b880bde-9afb-4c60-a277-29f53a0df283"
             }
         ]
     },
@@ -179,18 +172,6 @@
             },
             {
                 "@id": "kb:analysisresult-49c8f1db-0301-485e-95f3-d2cf92815323"
-            }
-        ]
-    },
-    {
-        "@id": "kb:provenance-record-3c0930fb-5992-4b3d-b728-baad0e55ec57",
-        "@type": "case-investigation:ProvenanceRecord",
-        "uco-core:object": [
-            {
-                "@id": "kb:inference-1a06b278-1434-4a8f-887b-ea32448032de"
-            },
-            {
-                "@id": "kb:inference-491c1ef4-6542-450e-b8b0-a021142d2718"
             }
         ]
     },
