@@ -29,7 +29,7 @@ The database file itself can be represented as a `uco-observable:File` object wi
                 "uco-observable:filePath": "/path/to/my-database.sqlite3",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 123456,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2022-01-01T00:00:00Z"
                 }
@@ -57,7 +57,7 @@ If there are supporting files such as WAL or Journal files as defined at [https:
                 "uco-observable:filePath": "/path/to/my-database.sqlite3-wal",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 12345,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2022-01-01T00:00:00Z"
                 }
@@ -88,7 +88,7 @@ If there are supporting files such as WAL or Journal files as defined at [https:
                 "uco-observable:filePath": "/path/to/my-database.sqlite3-journal",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 12345,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2022-01-01T00:00:00Z"
                 }

@@ -26,14 +26,14 @@
                 {
                     "@id": "kb:file-facet-73701edb-01b8-4f56-ad41-4cba706f2d3a",
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2022-01-01T00:00:00Z"
-                    },
                     "uco-observable:extension": "sqlite3",
                     "uco-observable:fileName": "my-database",
                     "uco-observable:filePath": "/path/to/my-database.sqlite3",
                     "uco-observable:isDirectory": false,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-01T00:00:00Z"
+                    },
                     "uco-observable:sizeInBytes": 123456
                 }
             ]
@@ -45,14 +45,14 @@
                 {
                     "@id": "kb:file-facet-62965da2-8d7c-4b48-9da8-f7879057addd",
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2022-01-01T00:00:00Z"
-                    },
                     "uco-observable:extension": "sqlite3-journal",
                     "uco-observable:fileName": "my-database",
                     "uco-observable:filePath": "/path/to/my-database.sqlite3-journal",
                     "uco-observable:isDirectory": false,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-01T00:00:00Z"
+                    },
                     "uco-observable:sizeInBytes": 12345
                 }
             ]
@@ -114,14 +114,14 @@
                 {
                     "@id": "kb:file-facet-8d977b6b-fc0b-462b-8002-838ee5240fbb",
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2022-01-01T00:00:00Z"
-                    },
                     "uco-observable:extension": "sqlite3-wal",
                     "uco-observable:fileName": "my-database",
                     "uco-observable:filePath": "/path/to/my-database.sqlite3-wal",
                     "uco-observable:isDirectory": false,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2022-01-01T00:00:00Z"
+                    },
                     "uco-observable:sizeInBytes": 12345
                 }
             ]
