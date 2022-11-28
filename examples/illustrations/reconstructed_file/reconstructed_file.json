@@ -124,6 +124,7 @@
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-a6e58409-9013-51a9-846b-64aa0741ebca",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -153,6 +154,7 @@
                     "uco-observable:dataPayload": "/9j/4R5+RXhpZg==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-e811bf31-b1a6-58f9-bc2c-e58f4b7f9779",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -181,6 +183,7 @@
                     "uco-observable:dataPayload": "W+ZAudrTwDd8ww==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-c44c6e67-bbef-5d15-b478-d5f7de058b53",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -209,6 +212,7 @@
                     "uco-observable:dataPayload": "sSGyTg4OWr6s8A==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-34a09d83-3604-5225-9fce-549743f997be",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -308,6 +312,7 @@
                     "uco-observable:sizeInBytes": 270865920,
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-2baba81a-8973-585b-b484-fde3c4b5b5fb",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",

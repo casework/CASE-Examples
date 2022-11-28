@@ -6,7 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -180,11 +179,7 @@
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
 				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
+				observable:hash <http://example.org/kb/hash-aba102b6-d835-595f-9ff5-3fa77204056a> ;
 			] ;
 		] ,
 		[
@@ -320,11 +315,7 @@
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
 				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
+				observable:hash <http://example.org/kb/hash-aba102b6-d835-595f-9ff5-3fa77204056a> ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
 			sh:resultSeverity sh:Violation ;
@@ -352,11 +343,7 @@
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
 				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
+				observable:hash <http://example.org/kb/hash-aba102b6-d835-595f-9ff5-3fa77204056a> ;
 			] ;
 		] ,
 		[
@@ -371,11 +358,7 @@
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
 				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
+				observable:hash <http://example.org/kb/hash-aba102b6-d835-595f-9ff5-3fa77204056a> ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
 			sh:resultSeverity sh:Info ;
@@ -410,11 +393,7 @@
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
 				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
+				observable:hash <http://example.org/kb/hash-aba102b6-d835-595f-9ff5-3fa77204056a> ;
 			] ;
 		] ,
 		[
@@ -429,11 +408,7 @@
 						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 					] ;
 				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
+				observable:hash <http://example.org/kb/hash-aba102b6-d835-595f-9ff5-3fa77204056a> ;
 			] ;
 			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
 			sh:resultPath observable:dataPayloadReferenceURL ;
@@ -452,39 +427,6 @@
 					a observable:URLFacet ;
 					observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
 				] ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a observable:ContentDataFacet ;
-				observable:dataPayloadReferenceURL [
-					a observable:URL ;
-					rdfs:comment "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case." ;
-					core:hasFacet [
-						a observable:URLFacet ;
-						observable:path "E:\\Traffic\\20090402-scenario.pcap" ;
-					] ;
-				] ;
-				observable:hash [
-					a types:Hash ;
-					types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-					types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-				] ;
-			] ;
-			sh:resultMessage "Value is not of Node Kind sh:IRI" ;
-			sh:resultPath observable:hash ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:NodeKindConstraintComponent ;
-			sh:sourceShape [
-				sh:class types:Hash ;
-				sh:nodeKind sh:IRI ;
-				sh:path observable:hash ;
-			] ;
-			sh:value [
-				a types:Hash ;
-				types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-				types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
 			] ;
 		] ,
 		[
@@ -2454,71 +2396,6 @@
 				a types:ControlledDictionaryEntry ;
 				types:key "Transport Layer" ;
 				types:value "TCP" ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a types:Hash ;
-				types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-				types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-			] ;
-			sh:resultMessage "UcoThings are required to not be blank nodes." ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraint [
-				a sh:SPARQLConstraint ;
-				sh:message "UcoThings are required to not be blank nodes."@en ;
-				sh:select """
-			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
-			SELECT $this
-			WHERE {
-			        $this a/rdfs:subClassOf* uco-core:UcoThing .
-			        FILTER isBlank ($this)
-			}
-		""" ;
-			] ;
-			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-			sh:sourceShape core:UcoThing ;
-			sh:value [
-				a types:Hash ;
-				types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-				types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode [
-				a types:Hash ;
-				types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-				types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
-			] ;
-			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraint [
-				a sh:SPARQLConstraint ;
-				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
-				sh:message "UcoThings are suggested to end with a UUID."@en ;
-				sh:select '''
-			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
-			SELECT $this
-			WHERE {
-			        $this a/rdfs:subClassOf* uco-core:UcoThing .
-			        FILTER (
-			                ! REGEX (
-			                        STR($this),
-			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
-			                        "i"
-			                )
-			        )
-			}
-		''' ;
-			] ;
-			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-			sh:sourceShape core:UcoThing-identifier-regex-shape ;
-			sh:value [
-				a types:Hash ;
-				types:hashMethod "MD5"^^vocabulary:HashNameVocab ;
-				types:hashValue "dd7558b16eae4d582d7b4608e85d862a"^^xsd:hexBinary ;
 			] ;
 		]
 		;

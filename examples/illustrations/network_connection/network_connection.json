@@ -187,6 +187,7 @@
                     },
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-aba102b6-d835-595f-9ff5-3fa77204056a",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
