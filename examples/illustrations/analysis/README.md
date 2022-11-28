@@ -75,7 +75,7 @@ This example illustrates manual software malware analysis within the Cyber Threa
 
 ## Multimedia classification
 
-This example illustrates multimedia classification
+This example illustrates multimedia classification.
 
 ```json
 [
