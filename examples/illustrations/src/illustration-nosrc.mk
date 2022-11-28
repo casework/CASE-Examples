@@ -59,9 +59,8 @@ $(example_name)_validation.ttl: \
 	    --format turtle \
 	    $(drafting_validation_flag) \
 	    --output __$@ \
-	    $< \
 	    $(drafting_ttl) \
-	    ; rc=$$? ; test 0 -eq $$rc -o 1 -eq $$rc
+	    $<
 	test -s __$@
 	java -jar $(RDF_TOOLKIT_JAR) \
 	  --inline-blank-nodes \
