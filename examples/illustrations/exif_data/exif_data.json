@@ -76,6 +76,7 @@
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-77fbf31d-c4f0-51bd-b04e-c50d13312fba",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
