@@ -26,6 +26,7 @@
                     "uco-observable:dataPayload": "Q0FTRSBpcyBhbiBhd2Vzb21lIG9udG9sb2d5IQ=",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-fbd39b90-551d-5a80-8f3d-70e91c5fe472",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -75,6 +76,7 @@
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-29cbd7b8-e404-55f0-b667-c1762b73cdcd",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -86,6 +88,7 @@
                             }
                         },
                         {
+                            "@id": "kb:hash-7a2f290f-2944-5520-816a-85f722e64525",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -145,6 +148,7 @@
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-47323085-5f5a-5252-82b3-347183525558",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -193,6 +197,7 @@
                     "uco-observable:mimeType": "application/x-tar",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-9c9f1145-243a-58d6-b420-bd38101cb511",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -238,6 +243,7 @@
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-84b82467-019e-53cf-a1e6-e8a394379916",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -311,6 +317,7 @@
                     "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-c492a39d-88e4-51f1-9f80-31524494f877",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -353,6 +360,7 @@
                     "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-ecccf09c-feb3-5feb-89bc-c7ab13b54605",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -415,6 +423,7 @@
                     "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-7c6c42be-0c5b-592f-91a2-c509af290369",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",

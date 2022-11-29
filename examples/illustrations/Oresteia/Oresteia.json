@@ -953,6 +953,7 @@
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -1019,6 +1020,7 @@
                     "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-c6cc7dd6-1bf9-5454-9653-37caff09411d",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -1078,6 +1080,7 @@
                     "uco-observable:sizeInBytes": 245235000,
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-1a6175e1-cef7-5ee3-8703-22f5f7a43603",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",

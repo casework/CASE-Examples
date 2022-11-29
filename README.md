@@ -10,6 +10,7 @@ Further illustration can be found at the [CASE narratives gallery](https://caseo
 Mapping notes & respective JSON-LD output:
 
 - [Accounts](examples/illustrations/accounts/accounts.json)
+- [Analysis](examples/illustrations/analysis/analysis.json) ([*info*](examples/illustrations/analysis/))
 - [Bulk Extractor Forensic Path](examples/illustrations/bulk_extractor_forensic_path/bulk_extractor_forensic_path.json) (*[info](examples/illustrations/bulk_extractor_forensic_path/)*)
 - [Call Log](examples/illustrations/call_log/call_log.json)
 - [Cell Site](examples/illustrations/cell_site/cell_site.json) ([*info*](examples/illustrations/cell_site/))

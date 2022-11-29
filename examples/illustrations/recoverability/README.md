@@ -42,7 +42,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2011-12-25T19:02:22Z"
                 },
@@ -104,7 +104,7 @@ This recovered file system entry can be represented using the `observable:Recove
                 "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": null,
-                "uco-observable:createdTime": null,
+                "uco-observable:observableCreatedTime": null,
                 "uco-observable:modifiedTime": null
             },
             {
@@ -145,7 +145,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
                 "uco-observable:filePath": "D:\\Thebatplan",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 1389601,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2018-11-19T00:29:15Z"
                 },
@@ -196,7 +196,7 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
                 "uco-observable:filePath": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 1389601,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2018-11-19T00:29:15Z"
                 }

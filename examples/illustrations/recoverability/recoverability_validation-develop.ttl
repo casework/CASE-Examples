@@ -25,11 +25,11 @@
 			] ;
 			sh:value [
 				a observable:FileFacet ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "jpg" ;
 				observable:fileName "IMG-20181120-WA0000" ;
 				observable:filePath "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg" ;
 				observable:isDirectory "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 		] ,
@@ -67,12 +67,12 @@
 			sh:value [
 				a observable:FileFacet ;
 				observable:accessedTime "2018-11-18T22:53:09.595000+00:00"^^xsd:dateTime ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "" ;
 				observable:fileName "Thebatplan" ;
 				observable:filePath "D:\\Thebatplan" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2018-11-18T20:10:48+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 		] ,
@@ -188,12 +188,12 @@
 			sh:value [
 				a observable:FileFacet ;
 				observable:accessedTime "1999-01-02T05:00:00+00:00"^^xsd:dateTime ;
-				observable:createdTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:extension "txt" ;
 				observable:fileName "_BEID.txt" ;
 				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2000-02-29T19:11:00+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "712"^^xsd:integer ;
 			] ;
 		] ,
@@ -221,12 +221,12 @@
 			sh:focusNode [
 				a observable:FileFacet ;
 				observable:accessedTime "1999-01-02T05:00:00+00:00"^^xsd:dateTime ;
-				observable:createdTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:extension "txt" ;
 				observable:fileName "_BEID.txt" ;
 				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2000-02-29T19:11:00+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "712"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
@@ -248,12 +248,12 @@
 			sh:value [
 				a observable:FileFacet ;
 				observable:accessedTime "1999-01-02T05:00:00+00:00"^^xsd:dateTime ;
-				observable:createdTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:extension "txt" ;
 				observable:fileName "_BEID.txt" ;
 				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2000-02-29T19:11:00+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "712"^^xsd:integer ;
 			] ;
 		] ,
@@ -262,12 +262,12 @@
 			sh:focusNode [
 				a observable:FileFacet ;
 				observable:accessedTime "1999-01-02T05:00:00+00:00"^^xsd:dateTime ;
-				observable:createdTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:extension "txt" ;
 				observable:fileName "_BEID.txt" ;
 				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2000-02-29T19:11:00+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "712"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
@@ -296,12 +296,12 @@
 			sh:value [
 				a observable:FileFacet ;
 				observable:accessedTime "1999-01-02T05:00:00+00:00"^^xsd:dateTime ;
-				observable:createdTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:extension "txt" ;
 				observable:fileName "_BEID.txt" ;
 				observable:filePath "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2000-02-29T19:11:00+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2011-12-25T19:02:22+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "712"^^xsd:integer ;
 			] ;
 		] ,
@@ -310,12 +310,12 @@
 			sh:focusNode [
 				a observable:FileFacet ;
 				observable:accessedTime "2018-11-18T22:53:09.595000+00:00"^^xsd:dateTime ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "" ;
 				observable:fileName "Thebatplan" ;
 				observable:filePath "D:\\Thebatplan" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2018-11-18T20:10:48+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
@@ -337,12 +337,12 @@
 			sh:value [
 				a observable:FileFacet ;
 				observable:accessedTime "2018-11-18T22:53:09.595000+00:00"^^xsd:dateTime ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "" ;
 				observable:fileName "Thebatplan" ;
 				observable:filePath "D:\\Thebatplan" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2018-11-18T20:10:48+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 		] ,
@@ -351,12 +351,12 @@
 			sh:focusNode [
 				a observable:FileFacet ;
 				observable:accessedTime "2018-11-18T22:53:09.595000+00:00"^^xsd:dateTime ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "" ;
 				observable:fileName "Thebatplan" ;
 				observable:filePath "D:\\Thebatplan" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2018-11-18T20:10:48+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
@@ -385,12 +385,12 @@
 			sh:value [
 				a observable:FileFacet ;
 				observable:accessedTime "2018-11-18T22:53:09.595000+00:00"^^xsd:dateTime ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "" ;
 				observable:fileName "Thebatplan" ;
 				observable:filePath "D:\\Thebatplan" ;
 				observable:isDirectory "false"^^xsd:boolean ;
 				observable:modifiedTime "2018-11-18T20:10:48+00:00"^^xsd:dateTime ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 		] ,
@@ -398,11 +398,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:FileFacet ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "jpg" ;
 				observable:fileName "IMG-20181120-WA0000" ;
 				observable:filePath "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg" ;
 				observable:isDirectory "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are required to not be blank nodes." ;
@@ -423,11 +423,11 @@
 			sh:sourceShape core:UcoThing ;
 			sh:value [
 				a observable:FileFacet ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "jpg" ;
 				observable:fileName "IMG-20181120-WA0000" ;
 				observable:filePath "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg" ;
 				observable:isDirectory "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 		] ,
@@ -435,11 +435,11 @@
 			a sh:ValidationResult ;
 			sh:focusNode [
 				a observable:FileFacet ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "jpg" ;
 				observable:fileName "IMG-20181120-WA0000" ;
 				observable:filePath "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg" ;
 				observable:isDirectory "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
@@ -467,11 +467,11 @@
 			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value [
 				a observable:FileFacet ;
-				observable:createdTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:extension "jpg" ;
 				observable:fileName "IMG-20181120-WA0000" ;
 				observable:filePath "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg" ;
 				observable:isDirectory "false"^^xsd:boolean ;
+				observable:observableCreatedTime "2018-11-19T00:29:15+00:00"^^xsd:dateTime ;
 				observable:sizeInBytes "1389601"^^xsd:integer ;
 			] ;
 		] ,

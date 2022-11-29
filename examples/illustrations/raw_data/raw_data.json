@@ -2,6 +2,7 @@
     "@context": {
         "@vocab": "http://example.org/local#",
         "kb": "http://example.org/kb/",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
@@ -25,6 +26,7 @@
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
                         {
+                            "@id": "kb:hash-29cbd7b8-e404-55f0-b667-c1762b73cdcd",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
