@@ -13,7 +13,7 @@
                 "uco-observable:filePath": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 1389601,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2018-11-19T00:29:15Z"
                 }

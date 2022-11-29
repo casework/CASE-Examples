@@ -8,7 +8,7 @@
         "uco-core:hasFacet": [
             {
                 "@type": "uco-observable:FileFacet",
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2011-12-25T19:02:22Z"
                 },
