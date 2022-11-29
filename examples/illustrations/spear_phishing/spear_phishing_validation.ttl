@@ -8,7 +8,7 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
+	sh:conforms "true"^^xsd:boolean ;
 	sh:result
 		[
 			a sh:ValidationResult ;
@@ -181,6 +181,15 @@
 			a sh:ValidationResult ;
 			sh:focusNode ep:Agent03 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:uses ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
@@ -226,6 +235,15 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:endpointId ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:endpointId-shape ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -301,6 +319,24 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:DetectionEvent01 ;
 			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
 			sh:resultSeverity sh:Info ;
@@ -339,15 +375,6 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:intervalIn-shape ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:EmailMessage01 ;
-			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
-			sh:resultPath unmapped:contains ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape ep:contains-shape ;
 		] ,
 		[
 			a sh:ValidationResult ;

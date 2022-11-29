@@ -48,6 +48,15 @@ ep:designatedBy-shape
 	sh:targetClass uco-core:UcoThing ;
 	.
 
+ep:endpointId-shape
+	a sh:PropertyShape ;
+	sh:message "This property is unmapped and intended to be replaced."@en ;
+	sh:maxCount 0 ;
+	sh:path unmapped:endpointId ;
+	sh:severity sh:Info ;
+	sh:targetSubjectsOf unmapped:endpointId ;
+	.
+
 ep:hasOccurrentPart-shape
 	a sh:PropertyShape ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;

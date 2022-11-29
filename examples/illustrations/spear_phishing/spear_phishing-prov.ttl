@@ -1,0 +1,362 @@
+@prefix kb: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-role: <https://ontology.unifiedcyberontology.org/uco/role/> .
+@prefix uco-victim: <https://ontology.unifiedcyberontology.org/uco/victim/> .
+@prefix unmapped: <urn:example:unmapped/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:ActOfEmailDelivery01
+	a prov:Activity ;
+	time:intervalBefore kb:ActOfLinkOpening01 ;
+	prov:endedAtTime "2021-09-02T06:32:16.411Z"^^xsd:dateTime ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:Agent03 ;
+		prov:hadRole kb:ThreatActorRole01 ;
+	] ;
+	prov:qualifiedEnd [
+		a prov:End ;
+		prov:atTime "2021-09-02T06:32:16.411Z"^^xsd:dateTime ;
+		prov:entity kb:EmailMessage01 ;
+	] ;
+	prov:used kb:EmailAccount02 ;
+	prov:wasAssociatedWith
+		kb:Agent03 ,
+		kb:ComputingDevice02 ,
+		kb:ComputingDevice03
+		;
+	.
+
+kb:ActOfEndpointScan01
+	a prov:Activity ;
+	time:intervalBefore kb:ActOfFileFlagging01 ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:EndpointProtectionSoftware01 ;
+		prov:hadRole kb:ScannerRole01 ;
+	] ;
+	prov:wasAssociatedWith
+		kb:EndpointProtectionSoftware01 ,
+		kb:MaliciousSoftware01
+		;
+	prov:wasInformedBy kb:ActOfMalwareInstallation01 ;
+	.
+
+kb:ActOfFileFlagging01
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:CorporateLoggingTool01 ;
+		prov:hadRole kb:ReceiverRole01 ;
+	] ;
+	prov:wasAssociatedWith
+		kb:CorporateLoggingTool01 ,
+		kb:EndpointProtectionSoftware01
+		;
+	prov:wasInformedBy kb:ActOfEndpointScan01 ;
+	.
+
+kb:ActOfLinkOpening01
+	a prov:Activity ;
+	prov:qualifiedAssociation
+		[
+			a prov:Association ;
+			prov:agent kb:Agent01 ;
+			prov:hadRole kb:TargetRole01 ;
+		] ,
+		[
+			a prov:Association ;
+			prov:agent kb:ComputingDevice01 ;
+			prov:hadRole kb:TargetRole02 ;
+		]
+		;
+	prov:used
+		kb:EmailAccount01 ,
+		kb:EmailMessage01 ,
+		kb:URL01
+		;
+	prov:wasAssociatedWith
+		kb:Agent01 ,
+		kb:ComputingDevice01 ,
+		kb:EmailSoftwareProgram01
+		;
+	prov:wasInformedBy kb:ActOfEmailDelivery01 ;
+	.
+
+kb:ActOfMalwareDelivery01
+	a prov:Activity ;
+	time:intervalBefore kb:ActOfMalwareInstallation01 ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:ComputingDevice01 ;
+		prov:hadRole kb:TargetRole02 ;
+	] ;
+	prov:used kb:Webpage01 ;
+	prov:wasAssociatedWith
+		kb:ComputingDevice01 ,
+		kb:ComputingDevice03 ,
+		kb:MaliciousSoftware01
+		;
+	prov:wasInformedBy kb:ActOfLinkOpening01 ;
+	.
+
+kb:ActOfMalwareInstallation01
+	a prov:Activity ;
+	prov:wasAssociatedWith
+		kb:ComputingDevice01 ,
+		kb:MaliciousSoftware01
+		;
+	prov:wasInformedBy kb:ActOfMalwareDelivery01 ;
+	.
+
+kb:ActOfNetworkLogin01
+	a prov:Activity ;
+	prov:endedAtTime "2021-09-02T07:32:16.411Z"^^xsd:dateTime ;
+	prov:used kb:NetworkAccount01 ;
+	prov:wasAssociatedWith
+		kb:Agent01 ,
+		kb:ComputingDevice01
+		;
+	.
+
+kb:ActOfNetworkLogout01
+	a prov:Activity ;
+	prov:endedAtTime "2021-09-02T11:07:30.658Z"^^xsd:dateTime ;
+	prov:used kb:NetworkAccount01 ;
+	prov:wasAssociatedWith
+		kb:Agent01 ,
+		kb:ComputingDevice01
+		;
+	.
+
+kb:ActOfNetworkingSession01
+	a prov:Activity ;
+	time:intervalMeets kb:ActOfNetworkLogout01 ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:Agent01 ;
+		prov:hadRole kb:EndUserRole01 ;
+	] ;
+	prov:qualifiedEnd [
+		a prov:End ;
+		prov:hadActivity kb:ActOfNetworkLogout01 ;
+	] ;
+	prov:qualifiedStart [
+		a prov:Start ;
+		prov:hadActivity kb:ActOfNetworkLogin01 ;
+	] ;
+	prov:used
+		kb:ComputingDevice01 ,
+		kb:NetworkAccount01
+		;
+	prov:wasAssociatedWith kb:Agent01 ;
+	.
+
+kb:ActOfSending02
+	a prov:Activity ;
+	prov:qualifiedAssociation [
+		a prov:Association ;
+		prov:agent kb:Agent02 ;
+		prov:hadRole kb:SOCAnalystRole01 ;
+	] ;
+	prov:wasAssociatedWith
+		kb:Agent02 ,
+		kb:ComputingDevice04
+		;
+	.
+
+kb:Agent01
+	a prov:Person ;
+	.
+
+kb:Agent02
+	a prov:Person ;
+	.
+
+kb:Agent03
+	a prov:Agent ;
+	.
+
+kb:Alert01
+	a prov:Entity ;
+	prov:wasGeneratedBy kb:ActOfFileFlagging01 ;
+	.
+
+kb:ComputingDevice01
+	a
+		prov:Entity ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:Agent01 ;
+	prov:qualifiedDelegation
+		[
+			a prov:Delegation ;
+			prov:activity kb:ActOfLinkOpening01 ;
+			prov:agent kb:Agent01 ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:activity kb:ActOfNetworkLogin01 ;
+			prov:agent kb:Agent01 ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:activity kb:ActOfNetworkLogout01 ;
+			prov:agent kb:Agent01 ;
+		] ,
+		[
+			a prov:Delegation ;
+			prov:activity kb:ActOfNetworkingSession01 ;
+			prov:agent kb:Agent01 ;
+		]
+		;
+	.
+
+kb:ComputingDevice02
+	a prov:SoftwareAgent ;
+	.
+
+kb:ComputingDevice03
+	a prov:SoftwareAgent ;
+	prov:actedOnBehalfOf kb:Agent03 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:Agent03 ;
+		prov:hadActivity kb:ActOfEmailDelivery01 ;
+	] ;
+	.
+
+kb:ComputingDevice04
+	a prov:SoftwareAgent ;
+	prov:actedOnBehalfOf kb:Agent02 ;
+	prov:qualifiedDelegation [
+		a prov:Delegation ;
+		prov:agent kb:Agent02 ;
+		prov:hadActivity kb:ActOfSending02 ;
+	] ;
+	.
+
+kb:CorporateLoggingTool01
+	a prov:SoftwareAgent ;
+	.
+
+kb:DetectionEvent01
+	a time:ProperInterval ;
+	time:intervalContains
+		kb:ActOfEndpointScan01 ,
+		kb:ActOfFileFlagging01 ,
+		kb:ActOfSending02
+		;
+	.
+
+kb:EmailAccount01
+	a prov:Entity ;
+	.
+
+kb:EmailAccount02
+	a prov:Entity ;
+	.
+
+kb:EmailMessage01
+	a prov:Entity ;
+	prov:wasGeneratedBy kb:ActOfEmailDelivery01 ;
+	.
+
+kb:EmailSoftwareProgram01
+	a prov:SoftwareAgent ;
+	.
+
+kb:EndUserRole01
+	a prov:Role ;
+	.
+
+kb:EndpointProtectionSoftware01
+	a
+		prov:Entity ,
+		prov:SoftwareAgent
+		;
+	.
+
+kb:InfectionEvent01
+	a time:ProperInterval ;
+	time:intervalBefore kb:DetectionEvent01 ;
+	time:intervalContains
+		kb:ActOfMalwareDelivery01 ,
+		kb:ActOfMalwareInstallation01
+		;
+	.
+
+kb:MaliciousSoftware01
+	a prov:SoftwareAgent ;
+	.
+
+kb:NetworkAccount01
+	a prov:Entity ;
+	.
+
+kb:ReceiverRole01
+	a prov:Role ;
+	.
+
+kb:SOCAnalystRole01
+	a prov:Role ;
+	.
+
+kb:ScannerRole01
+	a prov:Role ;
+	.
+
+kb:SpearFishingEvent01
+	a time:ProperInterval ;
+	time:intervalBefore kb:InfectionEvent01 ;
+	time:intervalContains
+		kb:ActOfEmailDelivery01 ,
+		kb:ActOfLinkOpening01
+		;
+	.
+
+kb:TargetRole01
+	a prov:Role ;
+	.
+
+kb:TemporalInterval01
+	a time:ProperInterval ;
+	time:intervalBefore kb:InfectionEvent01 ;
+	time:intervalContains kb:SpearFishingEvent01 ;
+	.
+
+kb:TemporalInterval02
+	a time:ProperInterval ;
+	time:intervalBefore kb:DetectionEvent01 ;
+	time:intervalContains kb:InfectionEvent01 ;
+	.
+
+kb:TemporalInterval03
+	a time:ProperInterval ;
+	time:intervalContains kb:DetectionEvent01 ;
+	.
+
+kb:ThreatActorRole01
+	a prov:Role ;
+	.
+
+kb:URL01
+	a prov:Entity ;
+	prov:qualifiedQuotation [
+		a prov:Quotation ;
+		prov:entity kb:EmailMessage01 ;
+	] ;
+	prov:wasQuotedFrom kb:EmailMessage01 ;
+	.
+
+kb:Webpage01
+	a prov:Entity ;
+	.
+
