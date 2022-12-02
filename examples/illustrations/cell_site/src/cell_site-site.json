@@ -4,6 +4,7 @@
         "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:cell-site-facet-fcfa96c3-3824-4132-a156-8ac857800c05",
                 "@type": "uco-observable:CellSiteFacet",
                 "uco-observable:cellSiteType": "GSM",
                 "uco-observable:cellSiteCountryCode": "228",
@@ -12,6 +13,7 @@
                 "uco-observable:cellSiteIdentifier": "29220952"
             },
             {
+                "@id": "kb:antenna-facet-749dc5c5-f3f2-4e9b-b53c-89bfaf177d76",
                 "@type": "uco-observable:AntennaFacet",
                 "uco-observable:azimuth": {
                     "@type": "xsd:decimal",

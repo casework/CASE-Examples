@@ -21,6 +21,7 @@
             ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-ea321cde-5d25-47ad-8d4d-aae14769f3dd",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
                     "uco-observable:mimeType": "image/jpg",
@@ -56,6 +57,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-1d806e56-ea69-4de0-8d9d-46681a164d87",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 224,
                     "uco-observable:rangeSize": 2878
@@ -67,6 +69,7 @@
             "@type": "uco-observable:RasterPicture",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-ebf4528b-daa9-4450-b206-1c9a3eb3b2a8",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:magicNumber": "/9j/4AAQSkZ",
                     "uco-observable:mimeType": "image/jpg"

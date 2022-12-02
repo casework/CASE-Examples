@@ -15,6 +15,7 @@
             "@type": "uco-observable:MobileDevice",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-35a12fef-aa85-49bd-a5fc-6ef4f2015bcd",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
                     "uco-observable:manufacturer": {
@@ -24,6 +25,7 @@
                     "uco-observable:serialNumber": "F17RN4DXXXXX"
                 },
                 {
+                    "@id": "kb:operating-system-facet-48f9672f-c16c-4137-b9cd-1e99bd368335",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
                     "uco-observable:manufacturer": {
@@ -36,6 +38,7 @@
                     }
                 },
                 {
+                    "@id": "kb:mobile-device-facet-78f46f74-0ae8-49b2-b126-7cf5221a52ad",
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:keypadUnlockCode": "123456",
                     "uco-observable:IMEI": "35540607448XXXX",
@@ -46,10 +49,12 @@
                     "uco-observable:storageCapacityInBytes": 17179869184
                 },
                 {
+                    "@id": "kb:bluetooth-address-facet-8cfbe309-22e5-4e0f-a5b3-139a6e2cae29",
                     "@type": "uco-observable:BluetoothAddressFacet",
                     "uco-observable:addressValue": "DC:41:5F:44:48:24"
                 },
                 {
+                    "@id": "kb:wifi-address-facet-f61c5fbb-289c-4e2c-bd70-130e3beb6b6f",
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "DC:41:5F:44:48:25"
                 }
@@ -79,6 +84,7 @@
             "@type": "uco-observable:SIMCard",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:sim-card-facet-1d69df5c-1fb1-42e2-a2bd-7cb6892d3bca",
                     "@type": "uco-observable:SIMCardFacet",
                     "uco-observable:ICCID": "456673345673436xxx",
                     "IMSI": [
@@ -113,17 +119,18 @@
         },
         {
             "@id": "kb:mobile-account-09da8ec2-8d6c-41e3-8bd9-bfd06a550141",
-            "@type": "uco-observable:MobileAccount",
+            "@type": [
+                "uco-observable:MobileAccount",
+                "uco-observable:PhoneAccount"
+            ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-92296c12-75e2-44ee-b410-3645976743a5",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:mobile-account-facet-ee734f74-d13d-462a-bc97-d4721f413e85",
                     "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:MSISDN": "31618300XXX"
                 }
@@ -131,17 +138,18 @@
         },
         {
             "@id": "kb:mobile-account-05328472-66de-4290-8c95-0984504e7279",
-            "@type": "uco-observable:MobileAccount",
+            "@type": [
+                "uco-observable:MobileAccount",
+                "uco-observable:PhoneAccount"
+            ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-ff744d24-9364-4846-bccb-de8cca662008",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:mobile-account-facet-ea6c32b6-772d-4502-88ed-e62473b64ee1",
                     "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:IMSI": "12345678910112"
                 }

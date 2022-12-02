@@ -44,6 +44,7 @@
         "uco-core:description": "Location of cell site, denoted by opencellid.org",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:lat-long-coordinates-facet-1358314d-5a94-44de-8dad-242a7c412663",
                 "@type": "uco-location:LatLongCoordinatesFacet",
                 "uco-location:latitude": {
                     "@type": "xsd:decimal",

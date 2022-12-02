@@ -7,6 +7,7 @@
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-4783de40-fcad-4e9b-9090-5c5cb4871a93",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "",
                 "uco-observable:fileName": "Thebatplan",
@@ -27,6 +28,7 @@
                 }
             },
             {
+                "@id": "kb:recovered-object-facet-65fd4337-734a-4350-ab0c-18d8098b8b0e",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",

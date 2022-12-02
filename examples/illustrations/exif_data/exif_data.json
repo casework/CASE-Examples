@@ -24,6 +24,7 @@
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-0779141a-5cc9-40cd-b5bd-4eff2c741ee0",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Camera",
                     "uco-observable:manufacturer": {
@@ -47,6 +48,7 @@
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-01ee833e-c420-430e-a327-61ca00d8b0f5",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/sdcard/IMG_0123.jpg"
                 }
@@ -57,6 +59,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-9437313e-a4c8-4ca8-91d0-fc66fb8d7a22",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:fileName": "IMG_0123.jpg",
@@ -65,6 +68,7 @@
                     "uco-observable:sizeInBytes": 35002
                 },
                 {
+                    "@id": "kb:content-data-facet-79503339-556a-4e23-ae5c-c2c948bde088",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -90,6 +94,7 @@
                     ]
                 },
                 {
+                    "@id": "kb:raster-picture-facet-b48cfb7a-d031-4fbc-aab1-502f1d4da666",
                     "@type": "uco-observable:RasterPictureFacet",
                     "uco-observable:pictureType": "jpg",
                     "uco-observable:pictureHeight": 12345,
@@ -97,46 +102,56 @@
                     "uco-observable:bitsPerPixel": 2
                 },
                 {
+                    "@id": "kb:exif-facet-1300f099-895a-47e8-9f75-a834ccbf139c",
                     "@type": "uco-observable:EXIFFacet",
                     "uco-observable:exifData": {
+                        "@id": "kb:controlled-dictionary-cb0dc97a-f2ff-4520-8038-0ca94849a3fe",
                         "@type": "uco-types:ControlledDictionary",
                         "uco-types:entry": [
                             {
+                                "@id": "kb:controlled-dictionary-entry-79ad3a10-570b-4f7d-b5ca-d4f82f4c539f",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Make",
                                 "uco-types:value": "Canon"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-7343a36d-e22c-40be-81ce-fcdf98c5f427",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Model",
                                 "uco-types:value": "PowerShot SX540"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-b1c3ea5e-43fc-4f5f-baaf-35848a1cb242",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Orientation",
                                 "uco-types:value": "Horizontal (normal)"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-37870d9b-c0df-429b-ab80-a088d961c1df",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "DateTimeDigitized",
                                 "uco-types:value": "2010-01-15T17:59:43.25Z"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-640bfc6f-4c3f-4088-a5f8-40b7f1646438",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Latitude",
                                 "uco-types:value": "15.8235"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-85fb5748-9601-4808-a52a-758c0c16a7f7",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "LatitudeRef",
                                 "uco-types:value": "S"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-4540680f-145d-4bc2-b098-3b677180b189",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Longitude",
                                 "uco-types:value": "47.9941"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-fb017a04-42f4-4774-a323-f39e8f25433a",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "LongitudeRef",
                                 "uco-types:value": "W"

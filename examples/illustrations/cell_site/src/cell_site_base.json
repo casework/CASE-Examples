@@ -23,6 +23,7 @@
             "uco-observable:hasChanged": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-7c021140-6220-49e8-bbea-704bf1160763",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": {
                         "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
@@ -31,10 +32,12 @@
                     "uco-observable:serialNumber": "RF8H31GS5SF"
                 },
                 {
+                    "@id": "kb:mobile-device-facet-1be55ed0-1177-4466-8417-208c714afd15",
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:IMEI": "356420075722843"
                 },
                 {
+                    "@id": "kb:operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
                     "uco-observable:manufacturer": {
@@ -43,18 +46,20 @@
                     "uco-observable:version": "6.0.1"
                 },
                 {
+                    "@id": "kb:bluetooth-address-facet-1206416f-2397-49e9-9606-3ce78b1ea0fd",
                     "@type": "uco-observable:BluetoothAddressFacet",
                     "uco-core:name": "",
                     "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
                 },
                 {
+                    "@id": "kb:wifi-address-facet-d389ff9d-cdfe-44d9-b1c5-2b39ffdb802f",
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
                 }
             ]
         },
         {
-            "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
+            "@id": "kb:2ca4e1c6-9d27-4ba3-fe34-6da3c591b5e2",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
                 "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
@@ -66,14 +71,19 @@
             "uco-core:isDirectional": true
         },
         {
+            "@id": "kb:organization-telcom-italia-d10330bf-8e9e-45cd-bf1a-ec9c964c270d",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Telcom Italia"
+        },
+        {
             "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
             "@type": "uco-observable:SIMCard",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:sim-card-facet-71cfa085-9bd8-4fe1-a2ab-c7dbae50606e",
                     "@type": "uco-observable:SIMCardFacet",
                     "uco-observable:carrier": {
-                        "@type": "uco-identity:Identity",
-                        "uco-core:name": "Telcom Italia"
+                        "@id": "kb:organization-telcom-italia-d10330bf-8e9e-45cd-bf1a-ec9c964c270d"
                     },
                     "uco-observable:ICCID": "89390100002217635543",
                     "uco-observable:IMSI": "1234567890ABCDEF"
@@ -85,11 +95,13 @@
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-175f01e3-3672-4c9b-9c3e-2274ced7530d",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "1235557890",
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:mobile-account-facet-35bde336-98f5-4869-a2d0-723981a46e1a",
                     "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:IMSI": "1234567890ABCDEF",
                     "uco-observable:MSISDN": "3662158453"

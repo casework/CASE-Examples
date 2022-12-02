@@ -13,6 +13,7 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-address-facet-59334948-00b9-4370-85b0-4dc8e07f5384",
                     "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Seattle",
                     "uco-location:region": "WA",
@@ -20,6 +21,7 @@
                     "uco-location:street": "20341 Whitworth Institute 405 N. Whitworth"
                 },
                 {
+                    "@id": "kb:acme-internal-location-facet-41fb3158-bbab-404d-97e4-ac61debb71f3",
                     "@type": [
                         "acme:InternalLocationFacet",
                         "uco-core:Facet"
@@ -34,6 +36,7 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-address-facet-258f169e-1e9c-4936-ba65-eed0f0c60788",
                     "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Paris",
                     "uco-location:country": "France",
@@ -41,6 +44,7 @@
                     "uco-location:street": "38 Bad Guy Headquarters st."
                 },
                 {
+                    "@id": "kb:lat-long-coordinates-facet-36126f9c-0273-48fe-ad4d-6a4e2848458f",
                     "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",

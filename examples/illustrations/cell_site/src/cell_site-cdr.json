@@ -4,6 +4,7 @@
         "@type": "uco-observable:CapturedTelecommunicationsInformation",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be",
                 "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
                 "uco-observable:captureCellSite": {
                     "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"

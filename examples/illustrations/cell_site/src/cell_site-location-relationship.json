@@ -4,6 +4,7 @@
         "@type": "uco-location:Location",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:lat-long-coordinates-facet-3dfdf206-2284-4a03-812f-d1ab9d40a606",
                 "@type": "uco-location:LatLongCoordinatesFacet",
                 "uco-location:latitude": {
                     "@type": "xsd:decimal",

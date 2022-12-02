@@ -7,6 +7,7 @@
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-8ce65705-90ab-4934-abb3-67d9c84d81a0",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "jpg",
                 "uco-observable:fileName": "IMG-20181120-WA0000",
@@ -19,6 +20,7 @@
                 }
             },
             {
+                "@id": "kb:recovered-object-facet-95c7b098-ab46-4867-b050-6b095a7bd1b8",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",

@@ -18,6 +18,7 @@
             "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-facet-b6e547d9-d3cf-4c79-8696-eb46f504d8bd",
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
                         "@id": "kb:sms_application-97fd9144-39d2-4da2-b955-c8ee9df9848b"
@@ -43,6 +44,7 @@
             "@type": "uco-observable:Contact",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:contact-facet-f8a19e18-08d8-4cbf-a50f-611c9105a83a",
                     "@type": "uco-observable:ContactFacet",
                     "rdfs:comment": [
                         "TODO: How do we distingish 'Home', 'Work', 'Mobile', etc?",
@@ -62,7 +64,7 @@
                             "@id": "kb:email_account-4ddeff5a-dde2-4979-bacc-012e8a33a07c"
                         }
                     ],
-                    "phoneNumber": [
+                    "uco-observable:phoneNumber": [
                         {
                             "@id": "kb:phone_account-78aa6c61-0264-4223-9139-a354d0141341"
                         },
@@ -70,7 +72,7 @@
                             "@id": "kb:phone_account-d0cbccc8-7b89-4a63-95ff-22a3df977b8b"
                         }
                     ],
-                    "screenName": []
+                    "uco-observable:screenName": []
                 }
             ]
         },
@@ -121,15 +123,12 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-5f0e540d-1347-4f7f-8631-6342142ebb65",
                     "@type": "uco-observable:AccountFacet",
-                    "rdfs:comment": "TODO: Is the accountType necessary? We know its phone account due to the existence of 'PhoneAccount' (duck type model and all that)",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-7912b52d-036a-4184-b45e-0aaae64350be",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237771337"
                 }
@@ -140,14 +139,12 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-b4fccd58-4168-4b5c-a750-20ef7a0e328e",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-3f6191fb-f923-4445-9095-cd439da3f0df",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1234560000"
                 }
@@ -158,14 +155,12 @@
             "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-df177238-6350-4676-b80c-1a5ca6f2b35f",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Email"
-                    },
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:email-account-facet-d0748846-14d8-4b7f-8987-c5f9449cb053",
                     "@type": "uco-observable:EmailAccountFacet",
                     "uco-observable:emailAddress": {
                         "@id": "kb:email-address-b145c7fe-e666-49b6-82a6-9436459a34fb"
@@ -177,6 +172,7 @@
             "@id": "kb:email-address-b145c7fe-e666-49b6-82a6-9436459a34fb",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": {
+                "@id": "kb:email-address-facet-10e41ea6-2e2e-45dc-8278-116ca251a726",
                 "@type": "uco-observable:EmailAddressFacet",
                 "uco-observable:addressValue": "jdoe@example.com"
             }
@@ -186,14 +182,12 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-9601e7fc-24f3-4d30-b98d-70df4d9b7ec7",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-c90ddbd3-cb99-478d-ad94-a41b32415b63",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "11235557890"
                 }
@@ -208,6 +202,7 @@
             "@type": "uco-observable:Application",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:application-facet-2d0fc498-fb73-481a-a996-99fe941b1fd5",
                     "@type": "uco-observable:ApplicationFacet",
                     "uco-core:name": "Android Phonebook",
                     "uco-observable:applicationIdentifier": "com.android.providers.telephony",

@@ -45,6 +45,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:fragment-facet-fc5b651d-5913-4ae7-aedc-a16e7249a1fa",
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
                     "uco-observable:totalFragments": 3
@@ -64,6 +65,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:fragment-facet-1f681316-2991-4231-b702-9aeb222f3099",
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
                     "uco-observable:totalFragments": 3
@@ -83,6 +85,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:fragment-facet-9adbdf33-c7a8-43d6-953a-a576c097f2b5",
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
                     "uco-observable:totalFragments": 3
@@ -93,28 +96,27 @@
             "@id": "kb:file-5c53068f-0843-4f51-8a2c-0a81a8ff86f8",
             "@type": [
                 "uco-observable:ContentData",
-                "drafting:RecoveredObject"
+                "uco-observable:RecoveredObject"
             ],
             "uco-core:hasFacet": [
                 {
-                    "@type": [
-                        "drafting:RecoveredObjectFacet",
-                        "uco-core:Facet"
-                    ],
-                    "drafting:contentRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "@id": "kb:recovered-object-facet-cb087927-5970-4361-a958-5343e81b189d",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "recovered"
                     },
-                    "drafting:metadataRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     },
-                    "drafting:nameRecoveredStatus": {
-                        "@type": "drafting:RecoveredObjectStatusVocab",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
                         "@value": "unknown"
                     }
                 },
                 {
+                    "@id": "kb:content-data-facet-3839294c-0007-4518-8598-1f5d6c7a8000",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -144,6 +146,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-3f04b6a9-91f1-461a-ab37-154a47254268",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -174,6 +177,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-f75c76c3-a0b1-4f9e-be2b-997178bfcc98",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -203,6 +207,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-0aa4e6e1-63d4-41ec-b0f6-2820f8717fa6",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -240,6 +245,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-6bdd2fc0-46e6-4e3b-b766-f062016f9e4c",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 99597824,
                     "uco-observable:rangeSize": 325120
@@ -259,6 +265,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-ae9be334-88bb-444c-87c1-3dfdc59eb233",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 100899328,
                     "uco-observable:rangeSize": 325120
@@ -278,6 +285,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-61745bae-5bda-403a-89dd-cf97e0eace93",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 99923456,
                     "uco-observable:rangeSize": 975001
@@ -292,6 +300,7 @@
             ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-2c2c6544-19b7-4f10-993b-6ae4113231b6",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NONE",
                     "uco-observable:isDirectory": false,
@@ -308,6 +317,7 @@
                     }
                 },
                 {
+                    "@id": "kb:content-data-facet-978bed51-680c-4d3c-b1e4-831a8cbf92d9",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 270865920,
                     "uco-observable:hash": [
