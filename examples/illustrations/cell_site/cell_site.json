@@ -22,6 +22,7 @@
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-7c021140-6220-49e8-bbea-704bf1160763",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": {
                         "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
@@ -30,10 +31,12 @@
                     "uco-observable:serialNumber": "RF8H31GS5SF"
                 },
                 {
+                    "@id": "kb:mobile-device-facet-1be55ed0-1177-4466-8417-208c714afd15",
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:IMEI": "356420075722843"
                 },
                 {
+                    "@id": "kb:operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
                     "uco-observable:manufacturer": {
@@ -42,11 +45,13 @@
                     "uco-observable:version": "6.0.1"
                 },
                 {
+                    "@id": "kb:bluetooth-address-facet-1206416f-2397-49e9-9606-3ce78b1ea0fd",
                     "@type": "uco-observable:BluetoothAddressFacet",
                     "uco-core:name": "",
                     "uco-observable:addressValue": "D8:C4:E9:7C:2E:F8"
                 },
                 {
+                    "@id": "kb:wifi-address-facet-d389ff9d-cdfe-44d9-b1c5-2b39ffdb802f",
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "AC:5F:3E:73:E3:78"
                 }
@@ -54,7 +59,7 @@
             "uco-observable:hasChanged": true
         },
         {
-            "@id": "kb:2ca4e1c6-9d27-7ba3-fe34-6da3c591b5e2",
+            "@id": "kb:2ca4e1c6-9d27-4ba3-fe34-6da3c591b5e2",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Contained_Within",
@@ -66,16 +71,21 @@
             }
         },
         {
+            "@id": "kb:organization-telcom-italia-d10330bf-8e9e-45cd-bf1a-ec9c964c270d",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Telcom Italia"
+        },
+        {
             "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a",
             "@type": "uco-observable:SIMCard",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:sim-card-facet-71cfa085-9bd8-4fe1-a2ab-c7dbae50606e",
                     "@type": "uco-observable:SIMCardFacet",
                     "uco-observable:ICCID": "89390100002217635543",
                     "uco-observable:IMSI": "1234567890ABCDEF",
                     "uco-observable:carrier": {
-                        "@type": "uco-identity:Identity",
-                        "uco-core:name": "Telcom Italia"
+                        "@id": "kb:organization-telcom-italia-d10330bf-8e9e-45cd-bf1a-ec9c964c270d"
                     }
                 }
             ]
@@ -85,11 +95,13 @@
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-175f01e3-3672-4c9b-9c3e-2274ced7530d",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "1235557890",
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:mobile-account-facet-35bde336-98f5-4869-a2d0-723981a46e1a",
                     "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:IMSI": "1234567890ABCDEF",
                     "uco-observable:MSISDN": "3662158453"
@@ -121,6 +133,7 @@
             "@type": "uco-observable:CapturedTelecommunicationsInformation",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be",
                     "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
                     "uco-observable:captureCellSite": {
                         "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
@@ -162,6 +175,7 @@
             "@type": "uco-observable:CellSite",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:cell-site-facet-fcfa96c3-3824-4132-a156-8ac857800c05",
                     "@type": "uco-observable:CellSiteFacet",
                     "uco-observable:cellSiteCountryCode": "228",
                     "uco-observable:cellSiteIdentifier": "29220952",
@@ -170,6 +184,7 @@
                     "uco-observable:cellSiteType": "GSM"
                 },
                 {
+                    "@id": "kb:antenna-facet-749dc5c5-f3f2-4e9b-b53c-89bfaf177d76",
                     "@type": "uco-observable:AntennaFacet",
                     "uco-observable:antennaHeight": {
                         "@type": "xsd:decimal",
@@ -203,6 +218,7 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:lat-long-coordinates-facet-3dfdf206-2284-4a03-812f-d1ab9d40a606",
                     "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",
@@ -221,6 +237,7 @@
             "uco-core:description": "Location of cell site, denoted by opencellid.org",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:lat-long-coordinates-facet-1358314d-5a94-44de-8dad-242a7c412663",
                     "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",
@@ -292,6 +309,7 @@
             "@type": "uco-observable:CellSite",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:cell-site-facet-dbfd0a9c-69f5-452b-a0c3-a3655d162cb3",
                     "@type": "uco-observable:CellSiteFacet",
                     "uco-observable:cellSiteCountryCode": "204",
                     "uco-observable:cellSiteIdentifier": "13399",
