@@ -3,6 +3,7 @@
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
         "kb": "http://example.org/kb/",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
@@ -36,7 +37,8 @@
             "uco-configuration:usesConfiguration": {
                 "@id": "kb:configuration-2934ee74-ee7b-481f-8c05-ecce52d58634",
                 "@type": "uco-configuration:Configuration",
-                "uco-tool:configurationSettings": {
+                "uco-configuration:configurationEntry": {
+                    "@id": "kb:configuration-entry-f38377a2-f556-4b89-97a6-e3bdb113c586",
                     "@type": "uco-configuration:ConfigurationEntry",
                     "uco-configuration:itemName": "auto-detect-content-type",
                     "uco-configuration:itemValue": "true",
@@ -94,7 +96,8 @@
             "uco-configuration:usesConfiguration": {
                 "@id": "kb:configuration-472cd37e-8895-498f-848c-583d83bf2a19",
                 "@type": "uco-configuration:Configuration",
-                "uco-tool:configurationSettings": {
+                "uco-configuration:configurationEntry": {
+                    "@id": "kb:configuration-entry-bf96a51a-aaed-46ce-aa6f-27755be53063",
                     "@type": "uco-configuration:ConfigurationEntry",
                     "uco-configuration:itemName": "assume-content-type",
                     "uco-configuration:itemValue": "foo",
@@ -152,7 +155,8 @@
             "uco-configuration:usesConfiguration": {
                 "@id": "kb:configuration-4dafed4a-e369-4755-95fa-f50c40e058cb",
                 "@type": "uco-configuration:Configuration",
-                "uco-tool:configurationSettings": {
+                "uco-configuration:configurationEntry": {
+                    "@id": "kb:configuration-entry-b7eab34a-a208-494e-b570-2760ac71fee9",
                     "@type": "uco-configuration:ConfigurationEntry",
                     "uco-configuration:itemName": "ruleset",
                     "uco-configuration:itemObject": {
@@ -161,6 +165,10 @@
                     "uco-configuration:itemType": "external-ruleset"
                 }
             }
+        },
+        {
+            "@id": "kb:file-0fedea11-3c8b-400c-9cdb-593edc146194",
+            "@type": "uco-observable:File"
         },
         {
             "@id": "kb:action-1a8cd716-c0c6-42d4-955f-19b2b9f0e3e6",

@@ -16,14 +16,14 @@
             "uco-core:hasFacet": [
                 {
                     "@type": "uco-observable:FileFacet",
-                    "uco-observable:createdTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2018-11-19T00:29:15Z"
-                    },
                     "uco-observable:extension": "jpg",
                     "uco-observable:fileName": "IMG-20181120-WA0000",
                     "uco-observable:filePath": "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/Sent/IMG-20181120-WA0000.jpg",
                     "uco-observable:isDirectory": false,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-19T00:29:15Z"
+                    },
                     "uco-observable:sizeInBytes": 1389601
                 },
                 {
@@ -56,10 +56,6 @@
                         "@type": "xsd:dateTime",
                         "@value": "2018-11-18T22:53:09.595Z"
                     },
-                    "uco-observable:createdTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2018-11-19T00:29:15Z"
-                    },
                     "uco-observable:extension": "",
                     "uco-observable:fileName": "Thebatplan",
                     "uco-observable:filePath": "D:\\Thebatplan",
@@ -67,6 +63,10 @@
                     "uco-observable:modifiedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2018-11-18T20:10:48.00Z"
+                    },
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-11-19T00:29:15Z"
                     },
                     "uco-observable:sizeInBytes": 1389601
                 },
@@ -97,12 +97,12 @@
                 {
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:accessedTime": null,
-                    "uco-observable:createdTime": null,
                     "uco-observable:extension": "tmp",
                     "uco-observable:fileName": "~badquinn3@gmail.com.ost.tmp",
                     "uco-observable:filePath": "/Users/Harley Quinn/AppData/Local/Microsoft/Outlook/badquinn3@gmail.com.ost",
                     "uco-observable:isDirectory": false,
                     "uco-observable:modifiedTime": null,
+                    "uco-observable:observableCreatedTime": null,
                     "uco-observable:sizeInBytes": null
                 },
                 {
@@ -175,10 +175,6 @@
                         "@type": "xsd:dateTime",
                         "@value": "1999-01-02T05:00Z"
                     },
-                    "uco-observable:createdTime": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2011-12-25T19:02:22Z"
-                    },
                     "uco-observable:extension": "txt",
                     "uco-observable:fileName": "_BEID.txt",
                     "uco-observable:filePath": "/img_dfr-01-fat.dd/vol_vol2/_BEID.txt",
@@ -186,6 +182,10 @@
                     "uco-observable:modifiedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2000-02-29T19:11Z"
+                    },
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2011-12-25T19:02:22Z"
                     },
                     "uco-observable:sizeInBytes": 712
                 },

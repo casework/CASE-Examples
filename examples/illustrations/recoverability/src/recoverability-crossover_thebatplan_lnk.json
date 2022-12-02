@@ -13,7 +13,7 @@
                 "uco-observable:filePath": "D:\\Thebatplan",
                 "uco-observable:isDirectory": false,
                 "uco-observable:sizeInBytes": 1389601,
-                "uco-observable:createdTime": {
+                "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2018-11-19T00:29:15Z"
                 },
