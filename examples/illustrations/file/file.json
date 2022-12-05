@@ -17,6 +17,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-fa1faab5-f212-4ab5-ae09-6937ca06e847",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -54,6 +55,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-97ab79cb-e716-401d-92fc-acd47c83fda5",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 45,
                     "uco-observable:rangeSize": 29
@@ -65,6 +67,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-51084177-f4e8-4955-8475-52dc4222e4be",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -116,6 +119,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:encoded-stream-facet-ee2f95a0-a608-42eb-8474-020d079a88d4",
                     "@type": "uco-observable:EncodedStreamFacet",
                     "uco-observable:encodingMethod": "BASE64"
                 }
@@ -126,6 +130,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-b6f0471c-7833-4998-ae73-6038d2d8da95",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "TAR",
                     "uco-observable:filePath": "/some/files/in/archive/attachment.jpg",
@@ -143,6 +148,7 @@
                     }
                 },
                 {
+                    "@id": "kb:content-data-facet-feb2ec56-f2ac-4ff8-889c-d8b2d0c64d2c",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 23000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -162,6 +168,7 @@
                     ]
                 },
                 {
+                    "@id": "kb:encoded-stream-facet-4449a465-f561-4e32-9716-4853757985ea",
                     "@type": "uco-observable:EncodedStreamFacet",
                     "uco-observable:encodingMethod": "BASE64"
                 }
@@ -180,6 +187,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-4fbcece4-afd5-4cd6-b70e-aab77f930b00",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/some/files/in/archive/attachment.jpg"
                 }
@@ -190,6 +198,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-ec13f329-7f33-41a5-aca3-22019d668950",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 23000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -225,6 +234,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:encrypted-stream-facet-ac696809-eeeb-4e9d-85b7-ed27599a938f",
                     "@type": "uco-observable:EncryptedStreamFacet",
                     "uco-observable:encryptionMethod": "AES",
                     "uco-observable:encryptionMode": "CBC",
@@ -238,6 +248,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-9d15f189-6faf-4825-a045-8c984be0e2e4",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 54000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -257,6 +268,7 @@
                     ]
                 },
                 {
+                    "@id": "kb:encrypted-stream-facet-6bb30cdc-3c59-44e5-ac4c-6fb88b965b77",
                     "@type": "uco-observable:EncryptedStreamFacet",
                     "uco-observable:encryptionMethod": "AES",
                     "uco-observable:encryptionMode": "CBC",
@@ -278,6 +290,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:sqlite-blob-facet-885911a8-12a0-4347-b70b-76adf1f4b2b0",
                     "@type": "uco-observable:SQLiteBlobFacet",
                     "uco-observable:tableName": "AttachmentTable",
                     "uco-observable:columnName": "data",
@@ -290,6 +303,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-ce987ef1-8378-4c10-9f98-8dd2691e2994",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:isDirectory": false,
@@ -311,6 +325,7 @@
                     "uco-observable:sizeInBytes": 546000
                 },
                 {
+                    "@id": "kb:content-data-facet-5ec323e3-8de0-44ed-8ca7-42be06f2a1a6",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 546000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -345,6 +360,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-a410ff4b-21f3-4089-b56c-dac6a5c53882",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/com.whatsapp/cache/messages.db"
                 }
@@ -356,6 +372,7 @@
             "rdfs:comment": "TODO As originally drafted, this was untyped, and left to behave simultaneously like a disk partition and file system via relationship5 and relationship6.  This needs discussion with the community as a modeling issue, as a disk partition and a file system have different behaviors.  The DiskPartitionFacet aspect of relationship6 may need to be applied to another object.",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-fae119ae-8eec-4e40-883a-1b6a57b6ee32",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
@@ -388,6 +405,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:disk-partition-facet-13433f3c-7423-4774-98c2-26dbb5b9dd19",
                     "@type": "uco-observable:DiskPartitionFacet",
                     "uco-observable:partitionID": "3"
                 }
@@ -401,6 +419,7 @@
             ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-74364a99-f70e-472d-b5b1-10f7d8179046",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "NTFS",
                     "uco-observable:isDirectory": false,
@@ -419,6 +438,7 @@
                     }
                 },
                 {
+                    "@id": "kb:content-data-facet-0cf56465-5000-427e-951c-96c89c98cdb8",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 45654000,
                     "uco-observable:hash": [
@@ -451,6 +471,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-f7a19ef0-9e0f-4c01-b108-9914d72eebf3",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "C:/input_devices/DFL-20140712-001C.img"
                 }
@@ -487,6 +508,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-4bb6a55f-5d2a-41b9-a07c-6b46c89731df",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Computer",
                     "uco-observable:manufacturer": {
@@ -496,6 +518,7 @@
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
+                    "@id": "kb:operating-system-facet-83153006-3432-4538-a0d7-871a6e879d76",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Windows 7 Ultimate Edition",
                     "uco-observable:manufacturer": {
@@ -504,12 +527,14 @@
                     "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
                 },
                 {
+                    "@id": "kb:computer-specification-facet-fd3be213-cb78-4130-8888-323a259f3509",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
                     "uco-observable:cpuFamily": "Intel Pentium i7",
                     "uco-observable:totalRam": 4294967296
                 },
                 {
+                    "@id": "kb:acme-inventory-computer-facet-274c8bf5-48b7-4056-9740-d31efa217bf5",
                     "@type": [
                         "acme:InventoryComputerFacet",
                         "uco-core:Facet"
@@ -538,6 +563,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-03594fea-dda3-49a7-97c3-b0004910d668",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
                     "uco-observable:manufacturer": {
@@ -547,6 +573,7 @@
                     "uco-observable:serialNumber": "123456SAM"
                 },
                 {
+                    "@id": "kb:operating-system-facet-f1c16acb-44f7-4728-8f5e-72bcc0f3f3f8",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
                     "uco-observable:manufacturer": {
@@ -555,6 +582,7 @@
                     "uco-observable:version": "4.2.2"
                 },
                 {
+                    "@id": "kb:computer-specification-facet-0f10db33-9374-467c-bb2d-04172ab05a34",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:processorArchitecture": "Octa-core",
                     "uco-observable:cpuFamily": "Exynos 5410 Octa",

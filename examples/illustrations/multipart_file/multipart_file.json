@@ -27,6 +27,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:fragment-facet-a703a10c-e18b-4388-9702-a8b251522553",
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 0,
                     "totalFragments": 3
@@ -46,6 +47,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:fragment-facet-3a3220f1-e434-4f21-b462-acff3f8b91c4",
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 1,
                     "totalFragments": 3
@@ -65,6 +67,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:fragment-facet-5d237f35-8496-4b87-9053-08725d0b2d7d",
                     "@type": "uco-observable:FragmentFacet",
                     "uco-observable:fragmentIndex": 2,
                     "totalFragments": 3
@@ -76,6 +79,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-f56b996f-e398-46f3-83ac-ecf88d3a3518",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -105,6 +109,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-9d8fe5e6-a4c0-4e56-bcee-5835049a5959",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.001",
@@ -123,6 +128,7 @@
                     "uco-observable:sizeInBytes": 10
                 },
                 {
+                    "@id": "kb:content-data-facet-863b5f55-20cb-467c-9b67-df9664fe89ac",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -152,6 +158,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-36334066-5d9f-4cc0-8ebe-d905832896ff",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.002",
@@ -170,6 +177,7 @@
                     "uco-observable:sizeInBytes": 10
                 },
                 {
+                    "@id": "kb:content-data-facet-db0f82a0-2e07-48d4-ab91-2fc1056b59e3",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -199,6 +207,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-6600c140-c71e-4e9c-9f99-2671655d66e1",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileSystemType": "EXT4",
                     "uco-observable:filePath": "/data/data/multipart_file.003",
@@ -217,6 +226,7 @@
                     "uco-observable:sizeInBytes": 10
                 },
                 {
+                    "@id": "kb:content-data-facet-42c807ed-5499-4eb5-b823-953a272eb712",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -254,6 +264,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-57fbecac-5b82-452a-9653-5c9fbcd1e7a6",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.001"
                 }
@@ -272,6 +283,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-387e0314-0709-4cf8-9895-e63bc495b644",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.002"
                 }
@@ -290,6 +302,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-21b9bc05-4ec9-4581-9b67-2fd17c816384",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/multipart_file.003"
                 }

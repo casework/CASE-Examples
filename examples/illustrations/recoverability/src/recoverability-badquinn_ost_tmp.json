@@ -7,6 +7,7 @@
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-ebb15653-ea33-43f4-995e-b8ab9a1e6378",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:accessedTime": null,
                 "uco-observable:extension": "tmp",
@@ -18,6 +19,7 @@
                 "uco-observable:modifiedTime": null
             },
             {
+                "@id": "kb:recovered-object-facet-b95a915a-d4f4-4dd7-8367-b11dce27c9cc",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",

@@ -22,6 +22,7 @@
             "@type": "uco-observable:OperatingSystem",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Android",
                     "uco-observable:manufacturer": {
@@ -36,6 +37,7 @@
             "@type": "uco-observable:Application",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:application-facet-d3237eac-1805-43b2-8ff2-58f7c71f0ac6",
                     "@type": "uco-observable:ApplicationFacet",
                     "uco-core:name": "WhatsApp",
                     "uco-observable:applicationIdentifier": "com.whatsapp",
@@ -56,6 +58,7 @@
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:application-account-facet-69065426-9ff9-482b-92ad-adcc1ac6b196",
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4"
@@ -68,6 +71,7 @@
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:application-account-facet-27374774-5574-4dfa-9fff-19746d364b92",
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4"
@@ -80,6 +84,7 @@
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:application-account-facet-23edbdf6-269b-4a30-8cba-d083ef180f52",
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996"
@@ -92,6 +97,7 @@
             "@type": "uco-observable:ApplicationAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:application-account-facet-7d7a92f2-c654-4116-abb9-bdf9e8eb5b32",
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996"
@@ -108,6 +114,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-fd08116c-1eec-492e-a20d-73c3de6e93fd",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
                         "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee"
@@ -120,6 +127,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-b672fcde-bf45-44d8-b654-84a93c5c5103",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
                         "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05"
@@ -132,6 +140,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-a2b32f3f-4212-449f-b719-c54dcf9ecb46",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
                         "@id": "kb:url-e1ca5930-2f59-4cb3-853f-bece3a8f296c"
@@ -152,11 +161,13 @@
             "@type": "uco-observable:MessageThread",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-thread-facet-33f68c51-0737-4716-8b2d-7612cd78a99b",
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
                     "uco-observable:displayName": "Best Friend Chat!!",
                     "drafting:visibility": "PRIVATE",
                     "uco-observable:messageThread": {
+                        "@id": "kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e",
                         "@type": "uco-types:Thread",
                         "co:size": {
                             "@type": "xsd:nonNegativeInteger",
@@ -231,11 +242,13 @@
             "@type": "uco-observable:MessageThread",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-thread-facet-38d3fc48-8519-40c5-98f3-d4ad4d42a867",
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
                     "uco-observable:displayName": "Argle-bargle",
                     "drafting:visibility": "PUBLIC",
                     "uco-observable:messageThread": {
+                        "@id": "kb:thread-f8ebd1db-ce49-495e-850a-7b44187cb128",
                         "@type": "uco-types:Thread",
                         "co:size": {
                             "@type": "xsd:nonNegativeInteger",
@@ -246,6 +259,7 @@
                         },
                         "co:item": [
                             {
+                                "@id": "kb:thread-item-5a835734-1c84-441f-80e5-8df4ffa005b9",
                                 "@type": "uco-types:ThreadItem",
                                 "co:index": {
                                     "@type": "xsd:positiveInteger",
@@ -273,6 +287,7 @@
             "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-facet-e3505bcc-eb14-4b9f-9395-81942b51ff86",
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996"
@@ -298,6 +313,7 @@
             "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-facet-3d81eebf-669f-4876-a9e4-6b62afaa08ec",
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4"
@@ -370,6 +386,7 @@
             "@id": "kb:url-a23f55d3-a7e4-46bf-a1bb-da7741465bee",
             "@type": "uco-observable:URL",
             "uco-core:hasFacet": {
+                "@id": "kb:url-facet-1a6af70f-c9c0-4e47-8a71-79e7cc7d220b",
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:fullValue": "http://whatsapp.com/attachments/thumbnails/1.png"
             }
@@ -378,6 +395,7 @@
             "@id": "kb:url-ad698703-116c-4760-8560-1c5f3e522f05",
             "@type": "uco-observable:URL",
             "uco-core:hasFacet": {
+                "@id": "kb:url-facet-44be137c-0289-41fa-a809-8d25bb7c9c74",
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:fullValue": "http://whatsapp.com/attachments/1.png"
             }
@@ -386,6 +404,7 @@
             "@id": "kb:url-e1ca5930-2f59-4cb3-853f-bece3a8f296c",
             "@type": "uco-observable:URL",
             "uco-core:hasFacet": {
+                "@id": "kb:url-facet-fd37a528-b375-4215-96c1-cf81709ef561",
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:fullValue": "http://maps.google.com/maps/@32.5345,-123.4324,11z"
             }

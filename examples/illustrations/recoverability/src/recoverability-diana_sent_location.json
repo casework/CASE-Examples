@@ -7,6 +7,7 @@
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:message-facet-1cd126fc-e556-4460-9c1e-37c2ed553367",
                 "@type": "uco-observable:MessageFacet",
                 "uco-observable:messageText": "Diana sent a location.",
                 "uco-observable:from": {
@@ -23,6 +24,7 @@
                 }
             },
             {
+                "@id": "kb:recovered-object-facet-1dc5e3f4-4951-44ff-b9f3-14bd63684b29",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",

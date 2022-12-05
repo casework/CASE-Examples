@@ -14,6 +14,7 @@
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-ccebaca3-4485-46d8-bdf2-d2905a08d0c9",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -51,6 +52,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-e32acbee-abfe-4739-9ddb-7e60cbb82ec7",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 1600,
                     "uco-observable:rangeSize": 17
@@ -62,6 +64,7 @@
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-fa866136-c537-4b25-a481-364c7859f8f0",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -99,6 +102,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-dae28d94-d202-43d9-96e7-62c32ee26a9f",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 16095,
                     "uco-observable:rangeSize": 15
@@ -110,6 +114,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-ed051828-45e7-47b3-82ca-be5b9a88d5f7",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:byteOrder": {
                         "@type": "uco-vocabulary:EndiannessTypeVocab",
@@ -148,6 +153,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:compressed-stream-facet-87861bfc-a11c-4b26-a6ec-0216df139202",
                     "@type": "uco-observable:CompressedStreamFacet",
                     "uco-observable:compressionMethod": "GZIP"
                 }
@@ -158,6 +164,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-6e51c0f0-8a00-4b71-8315-f413638cc9ad",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 4598,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -191,6 +198,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-a2eed443-4b4b-4998-97d5-091b67753b9f",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 64000,
                     "uco-observable:rangeSize": 45988
@@ -202,6 +210,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-60001b4f-081e-4b2d-a1a1-bf7664f3df58",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 54564465,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -235,6 +244,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:compressed-stream-facet-c3131617-2a09-4f11-b051-8cd80dbf9139",
                     "@type": "uco-observable:CompressedStreamFacet",
                     "uco-observable:compressionMethod": "GZIP"
                 }
@@ -245,6 +255,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-a9e59f58-4ed3-40f4-8500-6b9d27cf72a1",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 23564465,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
@@ -278,6 +289,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-9dcf3fa6-492d-42ed-8b64-d0c9159e0725",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 946315592,
                     "uco-observable:rangeSize": 23564465
@@ -292,6 +304,7 @@
             ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-9aa48d1c-4c01-4c7d-a70e-9609eeb9eb59",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 2000000000,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",

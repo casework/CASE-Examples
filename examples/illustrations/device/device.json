@@ -28,6 +28,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-9355901e-5dca-48b1-b463-7a239e25ee39",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Computer",
                     "uco-observable:manufacturer": {
@@ -37,6 +38,7 @@
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
+                    "@id": "kb:operating-system-facet-429e8d0f-4974-421b-a01e-2b54437e4287",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "Windows 7 Ultimate Edition",
                     "uco-observable:manufacturer": {
@@ -49,21 +51,25 @@
                     }
                 },
                 {
+                    "@id": "kb:computer-specification-facet-d02adab1-cbaa-4ec5-b98c-4fe128e7281f",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
                     "uco-observable:cpuFamily": "Intel Pentium i7",
                     "uco-observable:totalRam": 4294967296
                 },
                 {
+                    "@id": "kb:domain-name-facet-fd503093-f17c-435f-b9ca-05ab97201b22",
                     "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "dfl.local",
                     "uco-observable:isTLD": false
                 },
                 {
+                    "@id": "kb:ipv4-address-facet-55d9ed1a-3016-445d-96dc-e4919a43f33d",
                     "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:addressValue": "192.168.1.145"
                 },
                 {
+                    "@id": "kb:acme-inventory-computer-facet-f34d5828-7f40-44b2-8531-6ce3a8d34467",
                     "@type": [
                         "acme:InventoryComputerFacet",
                         "uco-core:Facet"

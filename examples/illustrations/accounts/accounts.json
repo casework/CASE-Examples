@@ -13,11 +13,13 @@
             "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-name-facet-6551977d-8b9f-4bbf-aa22-03f2060fcfe2",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "William",
                     "uco-identity:familyName": "Smith"
                 },
                 {
+                    "@id": "kb:birth-information-facet-bc40e098-aa4a-4916-9e20-f685c40f7042",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -91,6 +93,7 @@
             "@type": "uco-observable:DigitalAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-65da2605-26aa-4766-8aee-f7f2e7af4283",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "1235556677@facebook.net",
                     "uco-observable:accountIssuer": {
@@ -98,6 +101,7 @@
                     }
                 },
                 {
+                    "@id": "kb:digital-account-facet-869af028-c0f6-43e1-8241-00153b319ebf",
                     "@type": "uco-observable:DigitalAccountFacet",
                     "uco-observable:accountLogin": "xXWillyRocksXx",
                     "uco-observable:firstLoginTime": {
@@ -111,6 +115,7 @@
                     "uco-observable:displayName": "WILLY THE KID"
                 },
                 {
+                    "@id": "kb:account-authentication-facet-be0d4cad-e416-4d4d-a768-bc812f2e67d4",
                     "@type": "uco-observable:AccountAuthenticationFacet",
                     "uco-observable:password": "123secretpassword456",
                     "uco-observable:passwordLastChanged": {
@@ -119,17 +124,20 @@
                     }
                 },
                 {
+                    "@id": "kb:application-account-facet-53e26426-7624-479c-a6fb-c2dc5369d3a7",
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-ed4caa32-84c8-4813-b21d-f350e47cba7c"
                     }
                 },
                 {
+                    "@id": "kb:simple-name-facet-44246636-78dd-4526-8ca1-ddd68547c347",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Willy",
                     "uco-identity:familyName": "Smith"
                 },
                 {
+                    "@id": "kb:birth-information-facet-fa262757-3f6d-407d-ac9a-0a75610b42da",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -158,6 +166,7 @@
             "@type": "uco-observable:DigitalAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-079d0eb2-2abb-4a95-93f2-fd986cdef690",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIdentifier": "willyROX@gmail.com",
                     "uco-observable:accountIssuer": {
@@ -169,6 +178,7 @@
                     }
                 },
                 {
+                    "@id": "kb:digital-account-facet-5b0086a4-30e0-4d68-a493-e16d2eef1ae2",
                     "@type": "uco-observable:DigitalAccountFacet",
                     "uco-observable:accountLogin": [
                         "willyROX",
@@ -185,6 +195,7 @@
                     "uco-observable:displayName": "William Smith"
                 },
                 {
+                    "@id": "kb:account-authentication-facet-3b07f0ff-57eb-47ee-887e-6c7ba1273a60",
                     "@type": "uco-observable:AccountAuthenticationFacet",
                     "uco-observable:password": "1337_P@ZZW0RD",
                     "uco-observable:passwordLastChanged": {
@@ -193,17 +204,20 @@
                     }
                 },
                 {
+                    "@id": "kb:application-account-facet-5aba3eb5-412f-4de4-991c-409f5f9362d7",
                     "@type": "uco-observable:ApplicationAccountFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-db5e8cbe-70e7-4dff-b981-2c5751b7923c"
                     }
                 },
                 {
+                    "@id": "kb:simple-name-facet-1591ac32-0eb9-4f0e-8977-2c1a6260ad96",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "William",
                     "uco-identity:familyName": "Smith"
                 },
                 {
+                    "@id": "kb:birth-information-facet-38ea2fea-ab9b-4a72-bab9-2c461af1bad7",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -232,6 +246,7 @@
             "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:email-account-facet-e4a9c9f2-b7aa-4bd2-ae0d-b24453b6af01",
                     "@type": "uco-observable:EmailAccountFacet",
                     "uco-observable:emailAddress": {
                         "@id": "kb:email-address-eeb346b0-470d-402b-b9ce-17134b1c572e"
@@ -244,6 +259,7 @@
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:email-address-facet-1bf221d7-6015-4fef-854e-abde33db0752",
                     "@type": "uco-observable:EmailAddressFacet",
                     "uco-observable:addressValue": "willyROX@gmail.com"
                 }

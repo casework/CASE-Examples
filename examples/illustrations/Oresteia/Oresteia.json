@@ -86,15 +86,23 @@
             "uco-core:name": "Crime C",
             "case-investigation:focus": "Murder",
             "uco-core:description": "In Mycenae, Aegisthus killed Atreus (Agamemnon's father)",
-            "uco-core:object": []
+            "uco-core:object": [
+                {
+                    "@id": "kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d"
+                }
+            ]
         },
         {
-            "@id": "kb:investigation-2545442b-321c-754d-bcb8-c40d321ce2c2",
+            "@id": "kb:investigation-2545442b-321c-454d-bcb8-c40d321ce2c2",
             "@type": "case-investigation:Investigation",
             "uco-core:name": "Crime D",
             "case-investigation:focus": "Murder",
             "uco-core:description": "In Aulis, Agamemnon killed his daughter Iphigenia as a sacrifice to the gods",
-            "uco-core:object": []
+            "uco-core:object": [
+                {
+                    "@id": "kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c"
+                }
+            ]
         },
         {
             "@id": "kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5",
@@ -259,6 +267,7 @@
             ],
             "case-investigation:relevantAuthorization": [
                 {
+                    "@id": "kb:authorization-c892195c-ad31-4b8b-822a-044ce917d41e",
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant12345",
                     "case-investigation:authorizationType": "warrant"
@@ -291,6 +300,7 @@
             "@type": "uco-location:Location",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-address-facet-d058c1da-4849-4366-aadb-20b3831479dd",
                     "@type": "uco-location:SimpleAddressFacet",
                     "uco-location:locality": "Argos",
                     "uco-location:region": "Greece",
@@ -298,6 +308,7 @@
                     "uco-location:street": "Palace Blvd"
                 },
                 {
+                    "@id": "kb:lat-long-coordinates-facet-9127b3cd-d1a7-4cb5-af5f-02cdaf7d3b49",
                     "@type": "uco-location:LatLongCoordinatesFacet",
                     "uco-location:latitude": {
                         "@type": "xsd:decimal",
@@ -326,11 +337,13 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-name-facet-76b66c2c-ecf2-4d38-8a0b-7b9246e55497",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Aeschylus",
                     "uco-identity:familyName": "Bard"
                 },
                 {
+                    "@id": "kb:birth-information-facet-69b14a0f-1bc9-4f26-ad71-7d8aaefee533",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -383,11 +396,13 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-name-facet-f703755d-2cb3-4012-bca9-2a0055d19aab",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Euripides",
                     "uco-identity:familyName": "Forte"
                 },
                 {
+                    "@id": "kb:birth-information-facet-2689d276-9604-413b-9902-dade84652d49",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -432,11 +447,13 @@
             "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-name-facet-1d1a723e-9e08-4848-a3a7-bf342116a1b3",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Cassandra",
                     "uco-identity:familyName": "Troy"
                 },
                 {
+                    "@id": "kb:birth-information-facet-596a2fd4-be28-4d30-929c-1ed39cd8320f",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -485,6 +502,7 @@
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-44d60ce6-83c7-4fb3-a719-d3ac5d8c72ec",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:deviceType": "Smart_Phone",
                     "uco-observable:manufacturer": {
@@ -494,6 +512,7 @@
                     "uco-observable:serialNumber": "FDG344657"
                 },
                 {
+                    "@id": "kb:mobile-device-facet-58869778-4749-4504-a6b9-c534b5c37987",
                     "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should uco-observable:clockSetting be a datetime instead of a string?",
@@ -514,14 +533,13 @@
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-5f3e4a6d-4cf1-41fa-a948-759a08db3ab7",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
+                    "uco-observable:accountType": "Phone",
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:mobile-account-facet-46218b35-7bb0-4dfe-8db7-6696b0ff3fd4",
                     "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:MSISDN": "1239275339"
                 }
@@ -549,9 +567,13 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:confidence-facet-ec250955-d2d7-41d8-a5f1-b6e88d775afc",
                     "@type": "uco-core:ConfidenceFacet",
-                    "rdfs:comment": "TODO This no longer matches the type prescription in UCO.",
-                    "uco-core:confidence": "Probably True"
+                    "rdfs:comment": "TODO uco-core:confidence was formerly 'Probably True'; review if this is appropriate C-Score map.",
+                    "uco-core:confidence": {
+                        "@type": "xsd:nonNegativeInteger",
+                        "@value": "70"
+                    }
                 }
             ]
         },
@@ -577,9 +599,13 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:confidence-facet-6b23600f-4a7a-4692-a2e0-70c0fb8ea08b",
                     "@type": "uco-core:ConfidenceFacet",
-                    "rdfs:comment": "TODO This no longer matches the type prescription in UCO.",
-                    "uco-core:confidence": "Probably True"
+                    "rdfs:comment": "TODO uco-core:confidence was formerly 'Probably True'; review if this is appropriate C-Score map.",
+                    "uco-core:confidence": {
+                        "@type": "xsd:nonNegativeInteger",
+                        "@value": "70"
+                    }
                 }
             ]
         },
@@ -588,11 +614,13 @@
             "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-name-facet-b8890477-df16-4bf8-b016-d690eba262b0",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Thyestes",
                     "uco-identity:familyName": "Mycenae"
                 },
                 {
+                    "@id": "kb:birth-information-facet-3814ae87-4805-46b4-bdb0-fecb7a63b0b9",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -640,11 +668,13 @@
             "@type": "uco-identity:Person",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:simple-name-facet-af488914-99c7-4be1-b79a-50e946eac061",
                     "@type": "uco-identity:SimpleNameFacet",
                     "uco-identity:givenName": "Electra",
                     "uco-identity:familyName": "Argos"
                 },
                 {
+                    "@id": "kb:birth-information-facet-fe121de0-c76d-4b28-9d1b-9725f61c7101",
                     "@type": "uco-identity:BirthInformationFacet",
                     "uco-identity:birthdate": {
                         "@type": "xsd:dateTime",
@@ -675,6 +705,7 @@
             "@type": "uco-observable:Device",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:device-facet-d51543d2-f019-44da-8f9d-504c2a996fbb",
                     "@type": "uco-observable:DeviceFacet",
                     "uco-observable:manufacturer": {
                         "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
@@ -684,6 +715,7 @@
                     "uco-observable:serialNumber": "F18Q4LGRG5MD"
                 },
                 {
+                    "@id": "kb:mobile-device-facet-56924df2-1ddd-4f44-bddb-24e8d498ffac",
                     "@type": "uco-observable:MobileDeviceFacet",
                     "rdfs:comment": [
                         "TODO: Should clockSetting be a xsd:dateTime?",
@@ -703,6 +735,7 @@
                     "uco-observable:storageCapacityInBytes": 11000000000
                 },
                 {
+                    "@id": "kb:iphone-device-facet-5c6faa58-be86-45b0-83af-fe7e51a54bb9",
                     "@type": [
                         "drafting:iPhoneDeviceFacet",
                         "uco-core:Facet"
@@ -711,6 +744,7 @@
                     "drafting:ownerName": "Clytemnestras iPhone"
                 },
                 {
+                    "@id": "kb:operating-system-facet-ad90e7e5-c692-4c59-87c6-d36c463ff1b0",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-core:name": "iOS",
                     "uco-observable:manufacturer": {
@@ -719,10 +753,12 @@
                     "uco-observable:version": "10.3"
                 },
                 {
+                    "@id": "kb:wifi-address-facet-00ec20e0-4af9-45c0-9246-7a87e8c47f3d",
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "d0:33:11:13:e7:a1"
                 },
                 {
+                    "@id": "kb:bluetooth-address-facet-42cfe7a2-57a3-4051-9e98-907a560c96e5",
                     "@type": "uco-observable:BluetoothAddressFacet",
                     "uco-observable:addressValue": "d0:33:11:13:e7:a2"
                 }
@@ -733,14 +769,13 @@
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-265c4daa-b473-43d3-a186-77ff2da9ac70",
                     "@type": "uco-observable:AccountFacet",
-                    "uco-observable:accountType": {
-                        "@type": "uco-vocabulary:AccountTypeVocab",
-                        "@value": "Phone"
-                    },
+                    "uco-observable:accountType": "Phone",
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:mobile-account-facet-6044c56e-7f30-4028-9bba-90ac1cd02b00",
                     "@type": "uco-observable:MobileAccountFacet",
                     "uco-observable:MSISDN": "1237471334"
                 }
@@ -900,6 +935,7 @@
             ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:mobile-extractor-tool-arguments-facet-273f1bdd-e01d-4557-8f44-ee49fb1c4205",
                     "@type": [
                         "MobileExtractor:ToolArgumentsFacet",
                         "uco-core:Facet"
@@ -937,6 +973,7 @@
             ],
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-c151869e-5566-4d02-9b08-12bb5bfa8673",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
@@ -950,6 +987,7 @@
                     "uco-observable:sizeInBytes": 90080500
                 },
                 {
+                    "@id": "kb:content-data-facet-450ccf72-abde-4af7-9fdd-0f3bd72e8bde",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:hash": [
                         {
@@ -1003,6 +1041,7 @@
             "@id": "kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-40d7e104-c114-42bb-a9c5-a2f23abe341f",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
@@ -1015,6 +1054,7 @@
                     "uco-observable:sizeInBytes": 122925
                 },
                 {
+                    "@id": "kb:content-data-facet-c7857a36-1fd1-4aa4-b192-d3a40d680761",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 122925,
                     "uco-observable:magicNumber": "U1FMaXRlIGZvcm1hdCAzAA==",
@@ -1051,6 +1091,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:path-relation-facet-e2b6ac26-1a61-428d-a237-e70eba50ffc9",
                     "@type": "uco-observable:PathRelationFacet",
                     "uco-observable:path": "/data/data/com.android.providers.telephony/mmssms.db"
                 }
@@ -1061,6 +1102,7 @@
             "@type": "uco-observable:FileSystem",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:disk-partition-facet-1adea3d7-80be-4fcb-8e78-38a50404b487",
                     "@type": "uco-observable:DiskPartitionFacet",
                     "rdfs:comment": [
                         "TODO: partitionOffset should be in bytes.  Nothing in this example specifies the sector size of the device's storage.",
@@ -1072,10 +1114,12 @@
                     "uco-observable:partitionLength": 245235063
                 },
                 {
+                    "@id": "kb:file-system-facet-ea298510-c4b6-4c66-b1e6-4c5e57875d3c",
                     "@type": "uco-observable:FileSystemFacet",
                     "uco-observable:fileSystemType": "EXT3"
                 },
                 {
+                    "@id": "kb:content-data-facet-327b9496-09b9-4331-8e06-db1dd5b159e1",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:sizeInBytes": 245235000,
                     "uco-observable:hash": [
@@ -1108,6 +1152,7 @@
             "uco-core:isDirectional": true,
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:data-range-facet-5c250680-cc8b-40d5-a6e9-8adb878b8ff7",
                     "@type": "uco-observable:DataRangeFacet",
                     "uco-observable:rangeOffset": 234909233,
                     "uco-observable:rangeSize": 120000000000
@@ -1133,46 +1178,55 @@
                 "@type": "uco-configuration:Configuration",
                 "uco-configuration:configurationEntry": [
                     {
+                        "@id": "kb:configuration-entry-781652eb-f047-4a94-9bcc-2415effa87c4",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "identifier",
                         "uco-configuration:itemValue": "624f2636e65e451e8dd7cb044ec44b69"
                     },
                     {
+                        "@id": "kb:configuration-entry-37f096da-d75a-4d29-ad41-f3502e682204",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "filter_file",
                         "uco-configuration:itemValue": ""
                     },
                     {
+                        "@id": "kb:configuration-entry-d7aa2227-5d97-4bf4-8ba6-9b39d66afe3f",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "filter_expression",
                         "uco-configuration:itemValue": ""
                     },
                     {
+                        "@id": "kb:configuration-entry-f941670b-160a-4222-96b3-d83ed6ef65ab",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "preferred_encoding",
                         "uco-configuration:itemValue": "cp1252"
                     },
                     {
+                        "@id": "kb:configuration-entry-4719fa5f-049f-470c-98a5-1431d07e3788",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "parser_filter_expression",
                         "uco-configuration:itemValue": "sqlite"
                     },
                     {
+                        "@id": "kb:configuration-entry-745aa640-306e-45e6-8ed0-80c819b4ae6a",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "preferred_year",
                         "uco-configuration:itemValue": ""
                     },
                     {
+                        "@id": "kb:configuration-entry-987fbe8d-9608-49bb-9520-df00736b2f19",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "enabled_parser_names",
                         "uco-configuration:itemValue": "sqlite, sqlite/twitter_ios, sqlite/kik_messenger, sqlite/android_sms, sqlite/android_gmail, sqlite/android_facebook"
                     },
                     {
+                        "@id": "kb:configuration-entry-9262f0e4-ea16-4740-8d4c-b3766855b817",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "debug_mode",
                         "uco-configuration:itemValue": "False"
                     },
                     {
+                        "@id": "kb:configuration-entry-26f6388e-1255-41c7-82d1-173b7255067f",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "command_line_arguments",
                         "uco-configuration:itemValue": "C:/Python27/Scripts/log2timeline.py C:/evidence/AthensPD-2017220601-01.dd.plaso C:/evidence/AthensPD-2017220601-01.dd --no-dependencies-check --parsers sqlite"
@@ -1193,11 +1247,13 @@
                 "@type": "uco-configuration:Configuration",
                 "uco-configuration:configurationEntry": [
                     {
+                        "@id": "kb:configuration-entry-1ad7ffe1-a344-44d3-ab21-cc584fa8758d",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "query",
                         "uco-configuration:itemValue": "SELECT _id AS id, address, date, read, type, body FROM sms"
                     },
                     {
+                        "@id": "kb:configuration-entry-6fcd25d0-87e3-4404-b91a-e366dd949855",
                         "@type": "uco-configuration:ConfigurationEntry",
                         "uco-configuration:itemName": "schema_match",
                         "uco-configuration:itemValue": "True"
@@ -1348,6 +1404,7 @@
             "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-facet-d7f56c9e-e755-4968-a484-1eec8c85d69c",
                     "@type": "uco-observable:MessageFacet",
                     "rdfs:comment": [
                         "TODO: uco-observable:to only has a domain of uco-observable:PhoneCall.",
@@ -1383,6 +1440,7 @@
             "@type": "uco-observable:SMSMessage",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:message-facet-7d71b845-e742-4f3c-a8c9-e79fcd91e884",
                     "@type": "uco-observable:MessageFacet",
                     "uco-observable:application": {
                         "@id": "kb:sms-application-4e98e83c-4d9e-48da-ac3a-9bc42b7a545e"
@@ -1418,6 +1476,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-42079f9c-0e7e-4db2-891a-f416938dc8c7",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985"
@@ -1425,6 +1484,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-5d7a8aed-0cc6-43be-9fe6-b81595b4ddf6",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237771337"
                 }
@@ -1435,6 +1495,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-6f025352-00b8-4cc3-9ccf-0397ad77d707",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985"
@@ -1442,6 +1503,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-b7363056-9a47-40aa-a28c-5911c361bbc4",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237772341"
                 }
@@ -1452,6 +1514,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-b3745483-b24f-4cfe-9cf5-19b21a6d11f5",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:olympus-1a5ab0ca-55bc-458e-a3f2-8204db807985"
@@ -1459,6 +1522,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-e14cf6e1-6ff2-4c2e-9d57-0a81c136ec3a",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1237775121"
                 }
@@ -1469,6 +1533,7 @@
             "@type": "uco-observable:EmailAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:email-account-facet-6b5634f8-bd1b-4b91-b628-e78e212d53ea",
                     "@type": "uco-observable:EmailAccountFacet",
                     "uco-observable:emailAddress": {
                         "@id": "kb:email-address-9771a645-94ba-464e-a30d-3537feb637a3"
@@ -1480,6 +1545,7 @@
             "@id": "kb:email-address-9771a645-94ba-464e-a30d-3537feb637a3",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": {
+                "@id": "kb:email-address-facet-159d008d-63f9-45f3-aaa1-0b127041756c",
                 "@type": "uco-observable:EmailAddressFacet",
                 "uco-observable:addressValue": "electra.pleiade@sevensisters.com"
             }
@@ -1493,6 +1559,7 @@
             "@type": "uco-observable:EmailMessage",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:email-message-facet-02240694-317a-4a18-afde-2e8789515de9",
                     "@type": "uco-observable:EmailMessageFacet",
                     "uco-observable:to": [
                         {
@@ -1539,6 +1606,7 @@
             "@type": "uco-observable:Message",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:facebook-message-facet-38750d00-e46a-4b7b-afa6-6c93b05cd1ae",
                     "@type": [
                         "drafting:FacebookMessageFacet",
                         "uco-core:Facet"
@@ -1568,6 +1636,7 @@
             "@type": "uco-observable:ContentData",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:content-data-facet-cc6bbd1d-ed93-4bf3-bd98-d8d0e68a25f7",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
                         "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f"
@@ -1609,9 +1678,20 @@
             "@id": "kb:url-b6d049be-f210-4f22-ae76-81141d51cb0f",
             "@type": "uco-observable:URL",
             "uco-core:hasFacet": {
+                "@id": "kb:url-facet-5761da46-c2a4-4cea-946d-523536054aef",
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:fullValue": "http://www.facebook.com/corpses.jpg"
             }
+        },
+        {
+            "@id": "kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Aegisthus"
+        },
+        {
+            "@id": "kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Agamemnon"
         }
     ]
 }

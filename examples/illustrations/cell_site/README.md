@@ -37,6 +37,7 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
         "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:cell-site-facet-fcfa96c3-3824-4132-a156-8ac857800c05",
                 "@type": "uco-observable:CellSiteFacet",
                 "uco-observable:cellSiteType": "GSM",
                 "uco-observable:cellSiteCountryCode": "228",
@@ -45,6 +46,7 @@ Properties of the Cell Site represented in CASE using the proposed `CellSiteFace
                 "uco-observable:cellSiteIdentifier": "29220952"
             },
             {
+                "@id": "kb:antenna-facet-749dc5c5-f3f2-4e9b-b53c-89bfaf177d76",
                 "@type": "uco-observable:AntennaFacet",
                 "uco-observable:azimuth": {
                     "@type": "xsd:decimal",
@@ -85,6 +87,7 @@ The location of a Cell Site can change over time when it is moved by a telecommu
         "@type": "uco-location:Location",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:lat-long-coordinates-facet-3dfdf206-2284-4a03-812f-d1ab9d40a606",
                 "@type": "uco-location:LatLongCoordinatesFacet",
                 "uco-location:latitude": {
                     "@type": "xsd:decimal",
@@ -206,6 +209,7 @@ The proposed `CapturedTelecommunicationsInformationFacet` represents the subset 
         "@type": "uco-observable:CapturedTelecommunicationsInformation",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:captured-telecommunications-information-facet-efa35d55-1d2d-4e47-ae38-97ccad1945be",
                 "@type": "uco-observable:CapturedTelecommunicationsInformationFacet",
                 "uco-observable:captureCellSite": {
                     "@id": "urn:example:cell-site-kb:cell-cite-204-16-1014-13399"
@@ -247,6 +251,7 @@ From commentary in a [forum post](https://community.opencellid.org/t/documenting
         "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:cell-site-facet-dbfd0a9c-69f5-452b-a0c3-a3655d162cb3",
                 "@type": "uco-observable:CellSiteFacet",
                 "uco-observable:cellSiteType": "GSM",
                 "uco-observable:cellSiteCountryCode": "204",
@@ -314,6 +319,7 @@ Per practice of this example organization, the derivation of the relationship is
         "uco-core:description": "Location of cell site, denoted by opencellid.org",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:lat-long-coordinates-facet-1358314d-5a94-44de-8dad-242a7c412663",
                 "@type": "uco-location:LatLongCoordinatesFacet",
                 "uco-location:latitude": {
                     "@type": "xsd:decimal",

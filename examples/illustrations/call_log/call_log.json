@@ -41,6 +41,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-03ee9e1a-3bfc-4aa9-b040-ec420293c595",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:att-466a0ea8-b22f-4175-8119-846bec8f7831"
@@ -49,6 +50,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-34a688bd-59bd-4786-ba0b-226ac437607d",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1235551337"
                 }
@@ -59,6 +61,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-4d4de5bf-85a1-4c47-9697-4f748d23416b",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:sprint-68503a2e-6ec3-422a-8ef4-9f57f2aad202"
@@ -67,6 +70,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-51d0ee2e-6152-4e81-b0cd-0291a1dbf245",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1234560000"
                 }
@@ -77,6 +81,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-386414cf-6a2b-48e0-8f84-0dfb18fbd88f",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:verizon-47a7bc5c-f4a7-4fe3-a700-82bcfaf07a12"
@@ -85,6 +90,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-b7b600a5-044b-4fad-bc5c-24c6f16fa816",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1235550001"
                 }
@@ -95,6 +101,7 @@
             "@type": "uco-observable:PhoneAccount",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:account-facet-9a8815dc-e0fd-4da4-85e1-a53089c24083",
                     "@type": "uco-observable:AccountFacet",
                     "uco-observable:accountIssuer": {
                         "@id": "kb:zoom-b5a12ff2-91ac-42d1-9741-7db20e50bc0b"
@@ -103,6 +110,7 @@
                     "uco-observable:isActive": true
                 },
                 {
+                    "@id": "kb:phone-account-facet-67afa12a-e21a-45f4-8829-6f407d6cc1d2",
                     "@type": "uco-observable:PhoneAccountFacet",
                     "uco-observable:phoneNumber": "1235550002"
                 }
@@ -114,6 +122,7 @@
             "uco-core:description": "An example of a two-party, one-way phone call that has clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:call-facet-c93c0dc7-4a01-4145-9c1c-839b743fba64",
                     "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
@@ -143,6 +152,7 @@
             "uco-core:description": "An example of a two-party, one-way phone call that has does not have clear directionality between a caller (from) and receiver (to).",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:call-facet-727322ad-0ef6-4b0b-811c-0f50203d3c73",
                     "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-79636b28-77c9-4005-b62d-b87a233687ef"
@@ -174,6 +184,7 @@
             "uco-core:description": "An example of a three-way call phone call that has clear directionality between a caller (from) and two receivers (to).",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:call-facet-5add2a7a-0f44-42dd-a21c-7f60a8862b40",
                     "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-a5378ee2-32e0-40ba-b31c-3a5c110e7a29"
@@ -208,6 +219,7 @@
             "uco-core:description": "An example of a conference bridge phone call that does not have clear directionality between a caller (from) and receivers (to).",
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:call-facet-90ea0dbd-da68-4b90-91b1-f273e29ffc15",
                     "@type": "uco-observable:CallFacet",
                     "uco-observable:application": {
                         "@id": "kb:application-b01d8144-5fa9-44e9-a5f9-668d433b6108"

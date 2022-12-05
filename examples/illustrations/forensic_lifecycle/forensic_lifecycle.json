@@ -1,6 +1,7 @@
 {
     "@context": {
         "@vocab": "http://example.org/local#",
+        "co": "http://purl.org/co/",
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
@@ -13,7 +14,6 @@
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
         "uco-victim": "https://ontology.unifiedcyberontology.org/uco/victim/",
-        "olo": "http://purl.org/ontology/olo/core#",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -21,35 +21,123 @@
             "@id": "kb:forensic_lifecycle-d1780ea9-0289-46f4-bebf-25add2120e60",
             "@type": "uco-action:ActionLifecycle",
             "uco-core:description": "Describes the forensic lifecycle.",
-            "olo:length": 5,
-            "olo:slot": [
+            "uco-action:phase": {
+                "@id": "kb:array-of-action-7bfb7e0e-0607-4733-82f1-bbf13a2112bf"
+            }
+        },
+        {
+            "@id": "kb:array-of-action-7bfb7e0e-0607-4733-82f1-bbf13a2112bf",
+            "@type": [
+                "uco-action:ArrayOfAction",
+                "co:List"
+            ],
+            "rdfs:comment": "TODO - Propose defining ArrayOfAction as subclass of co:List; or, deprecate and set qualified shapes on uco-action:phase.  Deprecate action:action, replacing with co:element.  Define types:ListItem, similar to types:ThreadItem.",
+            "uco-action:action": [
                 {
-                    "olo:index": 1,
-                    "olo:item": {
+                    "@id": "kb:phase-42cf3a99-f609-443a-9ed1-c71a81335f76"
+                },
+                {
+                    "@id": "kb:phase-23d8e393-b6d4-4446-aee5-3ff3c94cd4ed"
+                },
+                {
+                    "@id": "kb:phase-fa076a4f-2fd6-4832-9caa-72d6c3a55333"
+                },
+                {
+                    "@id": "kb:phase-2c08ce87-7660-440f-9e75-dfb0a5d1858f"
+                },
+                {
+                    "@id": "kb:phase-2d0c2aff-0af8-4199-98f4-88f700eff427"
+                }
+            ],
+            "co:element": [
+                {
+                    "@id": "kb:phase-42cf3a99-f609-443a-9ed1-c71a81335f76"
+                },
+                {
+                    "@id": "kb:phase-23d8e393-b6d4-4446-aee5-3ff3c94cd4ed"
+                },
+                {
+                    "@id": "kb:phase-fa076a4f-2fd6-4832-9caa-72d6c3a55333"
+                },
+                {
+                    "@id": "kb:phase-2c08ce87-7660-440f-9e75-dfb0a5d1858f"
+                },
+                {
+                    "@id": "kb:phase-2d0c2aff-0af8-4199-98f4-88f700eff427"
+                }
+            ],
+            "co:size": {
+                "@type": "xsd:nonNegativeInteger",
+                "@value": "5"
+            },
+            "co:item": [
+                {
+                    "@id": "kb:list-item-bed033ed-e2c3-43c9-a74d-3a242502f58d",
+                    "@type": [
+                        "co:ListItem",
+                        "uco-core:UcoInherentCharacterizationThing"
+                    ],
+                    "co:index": {
+                        "@type": "xsd:positiveInteger",
+                        "@value": "1"
+                    },
+                    "co:itemContent": {
                         "@id": "kb:phase-42cf3a99-f609-443a-9ed1-c71a81335f76"
                     }
                 },
                 {
-                    "olo:index": 2,
-                    "olo:item": {
+                    "@id": "kb:list-item-01ad3a0c-1102-44f4-8433-1b89f6eb52aa",
+                    "@type": [
+                        "co:ListItem",
+                        "uco-core:UcoInherentCharacterizationThing"
+                    ],
+                    "co:index": {
+                        "@type": "xsd:positiveInteger",
+                        "@value": "2"
+                    },
+                    "co:itemContent": {
                         "@id": "kb:phase-23d8e393-b6d4-4446-aee5-3ff3c94cd4ed"
                     }
                 },
                 {
-                    "olo:index": 3,
-                    "olo:item": {
+                    "@id": "kb:list-item-6f344a10-edf4-4914-ae96-3ae59b69d058",
+                    "@type": [
+                        "co:ListItem",
+                        "uco-core:UcoInherentCharacterizationThing"
+                    ],
+                    "co:index": {
+                        "@type": "xsd:positiveInteger",
+                        "@value": "3"
+                    },
+                    "co:itemContent": {
                         "@id": "kb:phase-fa076a4f-2fd6-4832-9caa-72d6c3a55333"
                     }
                 },
                 {
-                    "olo:index": 4,
-                    "olo:item": {
+                    "@id": "kb:list-item-f70efc71-ae31-4b18-ac7a-7a6439d99dd9",
+                    "@type": [
+                        "co:ListItem",
+                        "uco-core:UcoInherentCharacterizationThing"
+                    ],
+                    "co:index": {
+                        "@type": "xsd:positiveInteger",
+                        "@value": "4"
+                    },
+                    "co:itemContent": {
                         "@id": "kb:phase-2c08ce87-7660-440f-9e75-dfb0a5d1858f"
                     }
                 },
                 {
-                    "olo:index": 5,
-                    "olo:item": {
+                    "@id": "kb:list-item-2022e71d-368a-414d-89b4-f3d8ca48d6ec",
+                    "@type": [
+                        "co:ListItem",
+                        "uco-core:UcoInherentCharacterizationThing"
+                    ],
+                    "co:index": {
+                        "@type": "xsd:positiveInteger",
+                        "@value": "5"
+                    },
+                    "co:itemContent": {
                         "@id": "kb:phase-2d0c2aff-0af8-4199-98f4-88f700eff427"
                     }
                 }
@@ -452,6 +540,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:acme-ufed-arguments-facet-df0c6ff5-575b-49da-a932-74ba6c13f641",
                     "@type": [
                         "acme:UFEDArgumentsFacet",
                         "uco-core:Facet"
@@ -606,6 +695,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:process-facet-1c427e8c-2f64-43f8-a8aa-d1472a27a446",
                     "@type": "uco-observable:ProcessFacet",
                     "uco-observable:arguments": "log2timeline C:\\exams\\inbox\\case-123.img C:\\exams\\output\\case-123 --config C:\\plaso\\config.cfg --analysis chat_messages,windows_registries --output xlsx,pstorage --parsers sqlite/android_whatsapp,plist --log C:\\exams\\output\\case-123.log",
                     "uco-observable:pid": 1234,
@@ -615,12 +705,14 @@
                         "@value": "2010-01-20T17:59:43.25Z"
                     },
                     "uco-observable:creatorUser": {
-                        "@id": "kb:role-0a7850bf-516e-4b29-8e73-9d6ae368d334"
+                        "@id": "kb:account-0a7850bf-516e-4b29-8e73-9d6ae368d334"
                     },
                     "uco-observable:environmentVariables": {
+                        "@id": "kb:dictionary-438ebc39-e2dd-4c15-ab99-1b677ae95d4a",
                         "@type": "uco-types:Dictionary",
                         "uco-types:entry": [
                             {
+                                "@id": "kb:dictionary-entry-f370a4ec-d673-41e9-be18-44d8866c82b4",
                                 "@type": "uco-types:DictionaryEntry",
                                 "uco-types:key": "PYTHONPATH",
                                 "uco-types:value": "C:\\Python27\\Scripts\\python.exe"
@@ -630,6 +722,7 @@
                     "uco-observable:isHidden": false
                 },
                 {
+                    "@id": "kb:acme-plaso-arguments-facet-4c984b16-2062-4c23-83ba-e3aa1c205a8a",
                     "@type": [
                         "acme:PlasoArgumentsFacet",
                         "uco-core:Facet"
@@ -748,6 +841,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:acme-plaso-parser-arguments-facet-c3024253-d369-46c5-a8bd-e1463d6037d0",
                     "@type": [
                         "acme:PlasoParserArgumentsFacet",
                         "uco-core:Facet"
@@ -1067,6 +1161,10 @@
         {
             "@id": "kb:sd_card-590667ed-4763-4e5b-967a-2300368211b8",
             "@type": "uco-observable:Device"
+        },
+        {
+            "@id": "kb:account-0a7850bf-516e-4b29-8e73-9d6ae368d334",
+            "@type": "uco-observable:DigitalAccount"
         },
         {
             "@id": "kb:sd_card1_image-d4bdbf25-bd6f-43d5-950d-092c8c82f183",

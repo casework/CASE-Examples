@@ -63,6 +63,7 @@
             ],
             "case-investigation:relevantAuthorization": [
                 {
+                    "@id": "kb:authorization-21d20f22-2b6f-4297-9e9a-ba06b6b4cecc",
                     "@type": "case-investigation:Authorization",
                     "case-investigation:authorizationIdentifier": "Warrant3554",
                     "case-investigation:authorizationType": "warrant"
@@ -161,6 +162,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:file-facet-1fb5e261-7667-439c-b4b3-7f248c4c9728",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
@@ -176,11 +178,14 @@
                     "uco-observable:sizeInBytes": 6337357
                 },
                 {
+                    "@id": "kb:content-data-facet-c9e3ddf6-d2be-4226-906f-8e51f44c86f2",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:dataPayloadReferenceURL": {
+                        "@id": "kb:url-c5fd04f6-3d81-4a97-96f5-2a75635f81c7",
                         "@type": "uco-observable:URL",
                         "rdfs:comment": "TODO - Discussion needs to be held on whether this being a URL should mean the URLFacet must use a scheme - 'file://' in this case.",
                         "uco-core:hasFacet": {
+                            "@id": "kb:url-facet-a6238b37-cad9-4909-a621-3062ed8c44e7",
                             "@type": "uco-observable:URLFacet",
                             "uco-observable:path": "E:\\Traffic\\20090402-scenario.pcap"
                         }
@@ -237,10 +242,12 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:ipv4-address-facet-9ba4b5e8-ddf0-48ed-bb5d-62c756f124d2",
                     "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:addressValue": "10.10.10.2"
                 },
                 {
+                    "@id": "kb:domain-name-facet-4881e798-04e4-4945-ba15-fe6d95b19b7c",
                     "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "EOGHANMACBOOK"
                 }
@@ -258,10 +265,12 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:ipv4-address-facet-06a95483-ff66-4fb8-b4c6-31453cf84654",
                     "@type": "uco-observable:IPv4AddressFacet",
                     "uco-observable:addressValue": "10.10.10.50"
                 },
                 {
+                    "@id": "kb:domain-name-facet-b378139e-dac1-4b47-874d-312d195a2348",
                     "@type": "uco-observable:DomainNameFacet",
                     "uco-observable:value": "JHL-IDNOLHYSVIA"
                 }
@@ -279,6 +288,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:network-connection-facet-432355be-a143-4090-9a41-b176f31bb63a",
                     "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
@@ -297,14 +307,17 @@
                     },
                     "uco-observable:sourcePort": 52960,
                     "uco-observable:protocols": {
+                        "@id": "kb:controlled-dictionary-10940c9b-aedb-4d33-b594-179b2b761529",
                         "@type": "uco-types:ControlledDictionary",
                         "uco-types:entry": [
                             {
+                                "@id": "kb:controlled-dictionary-entry-a2d2dd50-71c5-4dd3-8c08-d9e99c71dba0",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Transport Layer",
                                 "uco-types:value": "TCP"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-f03b7029-e8c1-4e9a-8cac-746bafc73ed0",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Session Layer",
                                 "uco-types:value": "NETBIOSSESSIONSERVICE "
@@ -326,6 +339,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:network-connection-facet-f6b13cbb-ed93-41a0-ad25-c8a0cd8f13a8",
                     "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
@@ -344,14 +358,17 @@
                     },
                     "uco-observable:sourcePort": 52961,
                     "uco-observable:protocols": {
+                        "@id": "kb:controlled-dictionary-5f4e4320-7002-4b1a-9fb9-4ddb870fb455",
                         "@type": "uco-types:ControlledDictionary",
                         "uco-types:entry": [
                             {
+                                "@id": "kb:controlled-dictionary-entry-a1cf6fcb-852d-4a42-9727-39d401e914ac",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Transport Layer",
                                 "uco-types:value": "TCP"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-02d05415-6d5c-4ba3-a287-4dc4bfc0d4a7",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Session Layer",
                                 "uco-types:value": "NETBIOSSESSIONSERVICE "
@@ -373,6 +390,7 @@
             },
             "uco-core:hasFacet": [
                 {
+                    "@id": "kb:network-connection-facet-9b6f6ebd-5262-44e7-a011-6f616e751322",
                     "@type": "uco-observable:NetworkConnectionFacet",
                     "uco-observable:startTime": {
                         "@type": "xsd:dateTime",
@@ -391,14 +409,17 @@
                     },
                     "uco-observable:sourcePort": 52962,
                     "uco-observable:protocols": {
+                        "@id": "kb:controlled-dictionary-9a9e770b-8138-4c98-b5a5-5052d44bbd42",
                         "@type": "uco-types:ControlledDictionary",
                         "uco-types:entry": [
                             {
+                                "@id": "kb:controlled-dictionary-entry-073a5e89-9743-4610-bf17-b987490037d1",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Transport Layer",
                                 "uco-types:value": "TCP"
                             },
                             {
+                                "@id": "kb:controlled-dictionary-entry-80988183-c068-4fd7-836b-bd280acc0e8d",
                                 "@type": "uco-types:ControlledDictionaryEntry",
                                 "uco-types:key": "Session Layer",
                                 "uco-types:value": "NETBIOSSESSIONSERVICE "

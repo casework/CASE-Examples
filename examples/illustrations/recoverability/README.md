@@ -41,6 +41,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-41e9483b-8b13-42d6-a05b-431b78906a05",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
@@ -61,6 +62,7 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
                 "uco-observable:sizeInBytes": 712
             },
             {
+                "@id": "kb:recovered-object-facet-cdb678d8-f75c-4997-a975-59966d8c5530",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
@@ -97,6 +99,7 @@ This recovered file system entry can be represented using the `observable:Recove
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-ebb15653-ea33-43f4-995e-b8ab9a1e6378",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:accessedTime": null,
                 "uco-observable:extension": "tmp",
@@ -108,6 +111,7 @@ This recovered file system entry can be represented using the `observable:Recove
                 "uco-observable:modifiedTime": null
             },
             {
+                "@id": "kb:recovered-object-facet-b95a915a-d4f4-4dd7-8367-b11dce27c9cc",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
@@ -139,6 +143,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-4783de40-fcad-4e9b-9090-5c5cb4871a93",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "",
                 "uco-observable:fileName": "Thebatplan",
@@ -159,6 +164,7 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
                 }
             },
             {
+                "@id": "kb:recovered-object-facet-65fd4337-734a-4350-ab0c-18d8098b8b0e",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
@@ -190,6 +196,7 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:file-facet-8ce65705-90ab-4934-abb3-67d9c84d81a0",
                 "@type": "uco-observable:FileFacet",
                 "uco-observable:extension": "jpg",
                 "uco-observable:fileName": "IMG-20181120-WA0000",
@@ -202,6 +209,7 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
                 }
             },
             {
+                "@id": "kb:recovered-object-facet-95c7b098-ab46-4867-b050-6b095a7bd1b8",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
@@ -240,6 +248,7 @@ This recovered chat message can be represented using the `observable:RecoveredOb
         ],
         "uco-core:hasFacet": [
             {
+                "@id": "kb:message-facet-1cd126fc-e556-4460-9c1e-37c2ed553367",
                 "@type": "uco-observable:MessageFacet",
                 "uco-observable:messageText": "Diana sent a location.",
                 "uco-observable:from": {
@@ -256,6 +265,7 @@ This recovered chat message can be represented using the `observable:RecoveredOb
                 }
             },
             {
+                "@id": "kb:recovered-object-facet-1dc5e3f4-4951-44ff-b9f3-14bd63684b29",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:nameRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",

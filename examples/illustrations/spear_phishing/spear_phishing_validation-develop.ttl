@@ -1,3 +1,4 @@
+@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix ep: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -21,12 +22,68 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfEmailDelivery01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfEmailDelivery01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ActOfEndpointScan01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:precedes ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfEndpointScan01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfEndpointScan01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -39,12 +96,180 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfFileFlagging01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfFileFlagging01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfLinkOpening01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfLinkOpening01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ActOfMalwareDelivery01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:precedes ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfMalwareDelivery01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfMalwareDelivery01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfMalwareInstallation01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfMalwareInstallation01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfNetworkLogin01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfNetworkLogin01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfNetworkLogout01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfNetworkLogout01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -71,6 +296,62 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfNetworkingSession01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfNetworkingSession01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfSending02 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ActOfSending02 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:Agent01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:bearerOf ;
@@ -125,6 +406,34 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:Agent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:Agent02 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:hasRole ;
@@ -140,6 +449,34 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:uses-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent02 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:Agent02 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -194,6 +531,34 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:uses-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:Agent03 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -226,6 +591,34 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Alert01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:Alert01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -283,12 +676,68 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ComputingDevice01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ComputingDevice02 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:participatesIn ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice02 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ComputingDevice02 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -310,12 +759,68 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice03 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ComputingDevice03 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ComputingDevice04 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:participatesIn ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice04 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ComputingDevice04 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -334,6 +839,34 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:CorporateLoggingTool01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -378,6 +911,90 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:DetectionEvent01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:DetectionEvent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EmailAccount01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:EmailAccount01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EmailAccount02 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:EmailAccount02 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:EmailMessage01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:hasRecipient ;
@@ -396,12 +1013,96 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:EmailMessage01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:EmailMessage01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:EmailSoftwareProgram01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:contains ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:contains-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EmailSoftwareProgram01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:EmailSoftwareProgram01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EndUserRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:EndUserRole01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -420,6 +1121,34 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EndpointProtectionSoftware01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:EndpointProtectionSoftware01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -473,12 +1202,124 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:InfectionEvent01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:InfectionEvent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:MaliciousSoftware01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:participatesIn ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:MaliciousSoftware01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:MaliciousSoftware01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ManagerRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ManagerRole01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:NetworkAccount01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:NetworkAccount01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -523,6 +1364,34 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:Port01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:Port01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ReceiverRole01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:realizedIn ;
@@ -532,12 +1401,96 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ReceiverRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ReceiverRole01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:SOCAnalystRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:SOCAnalystRole01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ScannerRole01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:realizedIn ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ScannerRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ScannerRole01 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -591,6 +1544,34 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:SpearFishingEvent01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:SpearFishingEvent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:TargetRole01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:realizedIn ;
@@ -600,12 +1581,68 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:TargetRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:TargetRole01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:TargetRole02 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:realizedIn ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TargetRole02 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:TargetRole02 ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -628,6 +1665,34 @@
 			] ;
 			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
 			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:TemporalInterval01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TemporalInterval01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
 			sh:value ep:TemporalInterval01 ;
 		] ,
 		[
@@ -655,6 +1720,34 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:TemporalInterval02 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:TemporalInterval02 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:TemporalInterval03 ;
 			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
 			sh:resultSeverity sh:Info ;
@@ -678,6 +1771,34 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:TemporalInterval03 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:TemporalInterval03 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:ThreatActorRole01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:realizedIn ;
@@ -687,12 +1808,96 @@
 		] ,
 		[
 			a sh:ValidationResult ;
+			sh:focusNode ep:ThreatActorRole01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:ThreatActorRole01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:URL01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:URL01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
 			sh:focusNode ep:Webpage01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:designatedBy ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:designatedBy-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Webpage01 ;
+			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+				sh:message "UcoThings are suggested to end with a UUID."@en ;
+				sh:select '''
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+			        $this a/rdfs:subClassOf* uco-core:UcoThing .
+			        FILTER (
+			                ! REGEX (
+			                        STR($this),
+			                        "[0-9a-f]{8}-[0-9a-f]{4}-[0-5][0-9a-f]{3}-[0-9a-f]{4}-[0-9a-f]{12}$",
+			                        "i"
+			                )
+			        )
+			}
+		''' ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape core:UcoThing-identifier-regex-shape ;
+			sh:value ep:Webpage01 ;
 		]
 		;
 	.

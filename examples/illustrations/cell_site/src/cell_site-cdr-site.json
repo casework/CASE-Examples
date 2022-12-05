@@ -4,6 +4,7 @@
         "@type": "uco-observable:CellSite",
         "uco-core:hasFacet": [
             {
+                "@id": "kb:cell-site-facet-dbfd0a9c-69f5-452b-a0c3-a3655d162cb3",
                 "@type": "uco-observable:CellSiteFacet",
                 "uco-observable:cellSiteType": "GSM",
                 "uco-observable:cellSiteCountryCode": "204",
