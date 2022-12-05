@@ -687,7 +687,7 @@
                     "@id": "kb:provenance_record-5c8060e6-cb05-4dac-91ee-657568f429bf"
                 },
                 {
-                    "@id": "kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889"
+                    "@id": "kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc"
                 }
             ],
             "uco-action:location": {
@@ -956,10 +956,22 @@
             }
         },
         {
+            "@id": "kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc",
+            "@type": "uco-core:Relationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Initiated",
+            "uco-core:source": {
+                "@id": "kb:forensic_action-7c0cf2d0-f447-4b11-bc77-2e85e2362d44"
+            },
+            "uco-core:target": {
+                "@id": "kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889"
+            }
+        },
+        {
             "@id": "kb:provenance_record-5c8060e6-cb05-4dac-91ee-657568f429bf",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889"
+                "@id": "kb:relationship-c6b043ef-98e9-4ec2-bc71-3a90a8faddcc"
             }
         },
         {
