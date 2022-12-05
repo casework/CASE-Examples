@@ -684,6 +684,9 @@
                     "@id": "kb:provenance_record-3eb9c278-376d-4184-98b6-3a82e99b1ad1"
                 },
                 {
+                    "@id": "kb:provenance_record-5c8060e6-cb05-4dac-91ee-657568f429bf"
+                },
+                {
                     "@id": "kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889"
                 }
             ],
@@ -950,6 +953,13 @@
             "case-investigation:exhibitNumber": "DFL-20140712-0022",
             "uco-core:object": {
                 "@id": "kb:message_database-60459e4c-5730-4551-b621-2d6a7baaae14"
+            }
+        },
+        {
+            "@id": "kb:provenance_record-5c8060e6-cb05-4dac-91ee-657568f429bf",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:forensic_action-1123b9f7-07d3-40e6-836c-87fa6b3a8889"
             }
         },
         {
