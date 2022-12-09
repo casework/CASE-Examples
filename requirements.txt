@@ -1,2 +1,2 @@
-case-utils >=0.8.0,<0.9.0
+case-utils >=0.9.0,<0.10.0
 pytest
