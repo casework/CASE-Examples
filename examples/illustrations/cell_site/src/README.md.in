@@ -54,7 +54,6 @@ Note this query is tailored to `kb:3fef85a7-3fb4-4170-ba4d-fc69e2de4789`, by har
 
 @QUERY_CONNECTED_SITES_MD@
 
-
 Information represented using the `CellSiteFacet` provides the location of the Cell Site, not the specific location of the connected mobile device. However, this information is necessary for cell site analysts to form an opinion about where the mobile device was most likely located during a time of interest ([Structuring the Evaluation of Location-Related Mobile Device Evidence, DFRWS EU 2020](https://doi.org/10.1016/j.fsidi.2020.300928)).
 
 Mistakes in analysing Cell Site information can result from incorrect location or cell identification information, as well as misinterpreted timestamps (e.g., incorrect timezone).
