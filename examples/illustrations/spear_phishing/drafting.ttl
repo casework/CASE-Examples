@@ -7,6 +7,11 @@
 @prefix unmapped: <urn:example:unmapped/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+uco-core:UcoThing-identifier-regex-shape
+	rdfs:comment "Deactivated for comparison with another mapping of this illustration."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
+	.
+
 ep:bearerOf-shape
 	a sh:PropertyShape ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
