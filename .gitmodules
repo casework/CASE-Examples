@@ -10,3 +10,6 @@
 [submodule "dependencies/CASE-unstable"]
 	path = dependencies/CASE-unstable
 	url = https://github.com/casework/CASE-Archive.git
+[submodule "dependencies/CASE-unstable-2.0.0"]
+	path = dependencies/CASE-unstable-2.0.0
+	url = https://github.com/casework/CASE-Archive.git

@@ -45,6 +45,12 @@ all: \
 	  || (git submodule init dependencies/CASE-unstable && git submodule update dependencies/CASE-unstable)
 	test -r dependencies/CASE-unstable/README.md \
 	  || (echo "ERROR:Makefile:CASE-unstable submodule README.md file not found, even though CASE-unstable submodule initialized." >&2 ; exit 2)
+	# CASE-unstable-2.0.0
+	test -r dependencies/CASE-unstable-2.0.0/README.md \
+	  || git submodule update --init dependencies/CASE-unstable-2.0.0
+	$(MAKE) \
+	  --directory dependencies/CASE-unstable-2.0.0 \
+	  .git_submodule_init.done.log
 	# UCO-develop
 	test -r dependencies/UCO-develop/README.md \
 	  || (git submodule init dependencies/UCO-develop && git submodule update dependencies/UCO-develop)
