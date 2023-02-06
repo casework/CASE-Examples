@@ -41,10 +41,7 @@ drafting:AbstractHypothesis
 		;
 	rdfs:subClassOf uco-core:UcoObject ;
 	rdfs:label "AbstractHypothesis"@en ;
-	rdfs:comment
-		"A hypothesis making either an affirmative supposition or a negative supposition.  Defined as an abstract superclass of Hypothesis and NegativeHypothesis.  The structure of AbstractHypothesis and its child classes mimic owl:Axiom or owl:NegativePropertyAssertion, but differ in one key mechanical matter from OWL: An AbstractHypothesis may identify itself with an IRI, whereas OWL 2 DL requires owl:Axiom and owl:NegativePropertyAssertion to be identified only as blank nodes."@en ,
-		"TODO - Reconcile this class hierarchy with rdf:Statement (RDF 1.1 XML Syntax, Section 7.3) and its usability within OWL 2."@en
-		;
+	rdfs:comment "A hypothesis making either an affirmative supposition or a negative supposition.  Defined as an abstract superclass of Hypothesis and NegativeHypothesis.  The structure of AbstractHypothesis and its child classes mimic owl:Axiom or owl:NegativePropertyAssertion, but differ in one key mechanical matter from OWL: An AbstractHypothesis may identify itself with an IRI, whereas OWL 2 DL requires owl:Axiom and owl:NegativePropertyAssertion to be identified only as blank nodes.  This may also seem similar to rdf:Statement (RDF 1.1 XML Syntax, Section 7.3).  rdf:Statement is inapplicable for reification in OWL 2 DL due to the necessarily unrestricted nature of rdf:object (which would act as both an OWL Object Property and OWL Datatype Property, violating OWL 2 DL's disjointedness between those two sets of properties)."@en ;
 	rdfs:seeAlso
 		<https://cyberontology.atlassian.net/browse/ONT-434> ,
 		<https://www.w3.org/TR/rdf-syntax-grammar/#section-Reification>
