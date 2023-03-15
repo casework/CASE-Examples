@@ -8,7 +8,7 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
+	sh:conforms "true"^^xsd:boolean ;
 	sh:result
 		[
 			a sh:ValidationResult ;
@@ -39,34 +39,6 @@
 				sh:severity sh:Info ;
 			] ;
 			sh:value "Phone" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/mobile-device-facet-56924df2-1ddd-4f44-bddb-24e8d498ffac> ;
-			sh:resultMessage "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
-			sh:resultPath observable:storageCapacityInBytes ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
-				sh:path observable:storageCapacityInBytes ;
-				sh:severity sh:Warning ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/mobile-device-facet-58869778-4749-4504-a6b9-c534b5c37987> ;
-			sh:resultMessage "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
-			sh:resultPath observable:storageCapacityInBytes ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "Deprecation notice: the value referenced by observable:storageCapacityInBytes will be required to be stored in observable:totalStorageCapacityInBytes in UCO 2.0.0."@en ;
-				sh:path observable:storageCapacityInBytes ;
-				sh:severity sh:Warning ;
-			] ;
 		]
 		;
 	.
