@@ -20,8 +20,8 @@ case_develop_ttls := \
 
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \
-  $(wildcard UCO-unstable/ontology/*/*.ttl) \
-  $(wildcard UCO-unstable/ontology/uco/*/*.ttl)
+  $(wildcard CASE-unstable/dependencies/UCO/ontology/*/*.ttl) \
+  $(wildcard CASE-unstable/dependencies/UCO/ontology/uco/*/*.ttl)
 
 case_unstable_next_major_ttls := \
   $(wildcard CASE-unstable-2.0.0/ontology/*/*.ttl) \
