@@ -1,9 +1,6 @@
 [submodule "dependencies/CASE-develop"]
 	path = dependencies/CASE-develop
 	url = https://github.com/casework/CASE.git
-[submodule "dependencies/UCO-develop"]
-	path = dependencies/UCO-develop
-	url = https://github.com/ucoProject/UCO.git
 [submodule "dependencies/CASE-unstable"]
 	path = dependencies/CASE-unstable
 	url = https://github.com/casework/CASE-Archive.git
