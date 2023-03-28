@@ -43,6 +43,12 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-develop \
 	  .git_submodule_init.done.log
+	# CASE-develop-2.0.0
+	test -r dependencies/CASE-develop-2.0.0/README.md \
+	  || git submodule update --init dependencies/CASE-develop-2.0.0
+	$(MAKE) \
+	  --directory dependencies/CASE-develop-2.0.0 \
+	  .git_submodule_init.done.log
 	# CASE-unstable
 	test -r dependencies/CASE-unstable/README.md \
 	  || (git submodule init dependencies/CASE-unstable && git submodule update dependencies/CASE-unstable)

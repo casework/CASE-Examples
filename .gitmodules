@@ -1,6 +1,9 @@
 [submodule "dependencies/CASE-develop"]
 	path = dependencies/CASE-develop
 	url = https://github.com/casework/CASE.git
+[submodule "dependencies/CASE-develop-2.0.0"]
+	path = dependencies/CASE-develop-2.0.0
+	url = https://github.com/casework/CASE.git
 [submodule "dependencies/CASE-unstable"]
 	path = dependencies/CASE-unstable
 	url = https://github.com/casework/CASE-Archive.git
