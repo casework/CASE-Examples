@@ -20,14 +20,20 @@ case_develop_ttls := \
 
 case_unstable_ttls := \
   $(wildcard CASE-unstable/ontology/*/*.ttl) \
-  $(wildcard UCO-unstable/ontology/*/*.ttl) \
-  $(wildcard UCO-unstable/ontology/uco/*/*.ttl)
+  $(wildcard CASE-unstable/dependencies/UCO/ontology/*/*.ttl) \
+  $(wildcard CASE-unstable/dependencies/UCO/ontology/uco/*/*.ttl)
+
+case_unstable_next_major_ttls := \
+  $(wildcard CASE-unstable-2.0.0/ontology/*/*.ttl) \
+  $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/*/*.ttl) \
+  $(wildcard CASE-unstable-2.0.0/dependencies/UCO/ontology/uco/*/*.ttl)
 
 top_srcdir := $(shell cd .. ; pwd)
 
 all: \
   CASE-develop.ttl \
-  CASE-unstable.ttl
+  CASE-unstable.ttl \
+  CASE-unstable-2.0.0.ttl
 
 CASE-develop.ttl: \
   $(top_srcdir)/.venv.done.log \
@@ -51,7 +57,19 @@ CASE-unstable.ttl: \
 	    > _$@
 	mv _$@ $@
 
+CASE-unstable-2.0.0.ttl: \
+  $(top_srcdir)/.venv.done.log \
+  $(case_unstable_next_major_ttls)
+	rm -f _$@
+	source $(top_srcdir)/venv/bin/activate \
+	  && rdfpipe \
+	    --output-format turtle \
+	    $(case_unstable_next_major_ttls) \
+	    > _$@
+	mv _$@ $@
+
 clean:
 	@rm -f \
 	  CASE-develop.ttl \
-	  CASE-unstable.ttl
+	  CASE-unstable.ttl \
+	  CASE-unstable-2.0.0.ttl
