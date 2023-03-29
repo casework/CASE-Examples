@@ -1,0 +1,699 @@
+@prefix ep: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix unmapped: <urn:example:unmapped/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[]
+	a sh:ValidationReport ;
+	sh:conforms "true"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfEmailDelivery01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:precedes ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfEndpointScan01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:precedes ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfFileFlagging01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasOutput ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasOutput-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfMalwareDelivery01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:precedes ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ActOfNetworkingSession01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:ActOfNetworkingSession01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:controls ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:controls-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasRole ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasRole-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:operates ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:operates-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:uses ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:uses-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent02 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasRole ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasRole-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent02 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:uses ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:uses-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:controls ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:controls-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasRole ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasRole-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:operates ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:operates-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Agent03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:uses ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:uses-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Alert01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:Alert01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Alert01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:endpointId ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:endpointId-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasPart ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasPart-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasRole ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasRole-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:isCarrierOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:isCarrierOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice02 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasPart ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasPart-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice03 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ComputingDevice04 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:CorporateLoggingTool01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:DetectionEvent01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:DetectionEvent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:DetectionEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasOccurrentPart ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasOccurrentPart-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:DetectionEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:intervalIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:intervalIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EmailMessage01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasRecipient ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasRecipient-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EmailMessage01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EmailSoftwareProgram01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:contains ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:contains-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EndpointProtectionSoftware01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:bearerOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:bearerOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:EndpointProtectionSoftware01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:InfectionEvent01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:InfectionEvent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:InfectionEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasOccurrentPart ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasOccurrentPart-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:InfectionEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:intervalIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:intervalIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:InfectionEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:precedes ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:MaliciousSoftware01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:participatesIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:participatesIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Port01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:Port01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Port01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:isCarrierOf ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:isCarrierOf-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Port01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:unknown01 ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:unknown01-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ReceiverRole01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:realizedIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ScannerRole01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:realizedIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:SpearFishingEvent01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:SpearFishingEvent01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:SpearFishingEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:hasOccurrentPart ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:hasOccurrentPart-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:SpearFishingEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:intervalIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:intervalIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:SpearFishingEvent01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:precedes ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:precedes-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TargetRole01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:realizedIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TargetRole02 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:realizedIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TemporalInterval01 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:TemporalInterval01 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TemporalInterval02 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:TemporalInterval02 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:TemporalInterval03 ;
+			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraint [
+				a sh:SPARQLConstraint ;
+				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
+				sh:select """
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this
+			WHERE {
+				FILTER NOT EXISTS {
+					$this a ?nClass .
+					?nClass rdfs:subClassOf+ uco-core:UcoThing .
+				}
+			}
+		""" ;
+			] ;
+			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+			sh:sourceShape ep:subclass-shape ;
+			sh:value ep:TemporalInterval03 ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:ThreatActorRole01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:realizedIn ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:realizedIn-shape ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode ep:Webpage01 ;
+			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
+			sh:resultPath unmapped:designatedBy ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
+			sh:sourceShape ep:designatedBy-shape ;
+		]
+		;
+	.
+
