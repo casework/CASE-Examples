@@ -22,6 +22,9 @@ all: \
 	  --directory examples/illustrations
 
 .PHONY: \
+  check-supply-chain \
+  check-supply-chain-pre-commit \
+  check-supply-chain-submodules \
   download
 
 .dependencies.done.log: \
@@ -115,6 +118,28 @@ check: \
 	$(MAKE) \
 	  --directory examples/illustrations \
 	  check
+
+# This target's dependencies potentially modify the working directory's Git state, so it is intentionally not a dependency of check.
+check-supply-chain: \
+  check-supply-chain-pre-commit \
+  check-supply-chain-submodules
+
+check-supply-chain-pre-commit: \
+  .venv-pre-commit/var/.pre-commit-built.log
+	source .venv-pre-commit/bin/activate \
+	  && pre-commit autoupdate
+	git diff \
+	  --exit-code \
+	  .pre-commit-config.yaml
+
+check-supply-chain-submodules: \
+  .git_submodule_init.done.log
+	git submodule update \
+	  --remote
+	git diff \
+	  --exit-code \
+	  --ignore-submodules=dirty \
+	  dependencies
 
 clean:
 	@$(MAKE) \
