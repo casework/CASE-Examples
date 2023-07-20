@@ -17,6 +17,7 @@ Mapping notes & respective JSON-LD output:
 - [Configured Tool](examples/illustrations/configured_tool/configured_tool.json)
 - [Device](examples/illustrations/device/device.json)
 - [EXIF Data](examples/illustrations/exif_data/exif_data.json)
+- [Event](examples/illustrations/event/event.json)
 - [Files](examples/illustrations/file/file.json) (*[info](examples/illustrations/file/)*)
 - [Forensic Lifecycle](examples/illustrations/forensic_lifecycle/forensic_lifecycle.json)
 - [Location](examples/illustrations/location/location.json)
