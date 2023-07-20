@@ -50,13 +50,13 @@
         },
         {
             "@id": "kb:dictionary-entry-7b56fc43-beb8-4331-9af2-e6e16e4fb90c",
-            "@type": "types:Dictionary",
+            "@type": "types:DictionaryEntry",
             "types:key": "mfa-enabled",
             "types:value": "false"
         },
         {
             "@id": "kb:dictionary-entry-3facf519-da01-4ee7-81a1-ab2f954b6c8e",
-            "@type": "types:Dictionary",
+            "@type": "types:DictionaryEntry",
             "types:key": "credential-entry-mode",
             "types:value": "manual"
         },
