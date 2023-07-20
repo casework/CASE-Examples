@@ -28,7 +28,7 @@ drafting:Event
 			sh:path drafting:eventAttribute ;
 		] ,
 		[
-			sh:datatype xsd:string ;
+			sh:datatype xsd:dateTime ;
 			sh:nodeKind sh:Literal ;
 			sh:path uco-core:endTime ;
 		] ,
@@ -38,7 +38,7 @@ drafting:Event
 			sh:path drafting:eventType ;
 		] ,
 		[
-			sh:datatype xsd:string ;
+			sh:datatype xsd:dateTime ;
 			sh:nodeKind sh:Literal ;
 			sh:path uco-core:startTime ;
 		]
