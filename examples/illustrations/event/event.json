@@ -1,5 +1,14 @@
 {
-    "graph": [
+    "@context": {
+        "kb": "http://example.org/kb/",
+        "action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "types": "https://ontology.unifiedcyberontology.org/uco/types/"
+    },
+    "@graph": [
         {
             "@id": "kb:event-d4a5a009-7b4d-445d-8d06-9dc85f263b3e",
             "@type": "core:Event",
