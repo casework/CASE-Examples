@@ -1,0 +1,147 @@
+{
+    "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
+        "kb": "http://example.org/kb/",
+        "action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:event-d4a5a009-7b4d-445d-8d06-9dc85f263b3e",
+            "@type": "drafting:Event",
+            "core:name": "user logged in",
+            "drafting:eventType": "Authentication",
+            "core:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-07-15T17:59:43.25Z"
+            },
+            "core:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-07-15T17:59:45.33Z"
+            },
+            "drafting:eventContext": [
+                {
+                    "@id": "kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc"
+                },
+                {
+                    "@id": "kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb"
+                }
+            ],
+            "drafting:eventAttribute": {
+                "@id": "kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e"
+            }
+        },
+        {
+            "@id": "kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e",
+            "@type": "types:Dictionary",
+            "types:entry": [
+                {
+                    "@id": "kb:dictionary-entry-7b56fc43-beb8-4331-9af2-e6e16e4fb90c"
+                },
+                {
+                    "@id": "kb:dictionary-entry-3facf519-da01-4ee7-81a1-ab2f954b6c8e"
+                }
+            ]
+        },
+        {
+            "@id": "kb:dictionary-entry-7b56fc43-beb8-4331-9af2-e6e16e4fb90c",
+            "@type": "types:DictionaryEntry",
+            "types:key": "mfa-enabled",
+            "types:value": "false"
+        },
+        {
+            "@id": "kb:dictionary-entry-3facf519-da01-4ee7-81a1-ab2f954b6c8e",
+            "@type": "types:DictionaryEntry",
+            "types:key": "credential-entry-mode",
+            "types:value": "manual"
+        },
+        {
+            "@id": "kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc",
+            "@type": "action:Action",
+            "core:name": "submit-login-request",
+            "action:performer": {
+                "@id": "kb:person-e3b1df7c-bb3b-49fe-bc1d-0203c9dff86a"
+            },
+            "action:instrument": {
+                "@id": "kb:application-account-e7f100bb-6367-4363-9416-b7ae73af2be9"
+            },
+            "action:object": {
+                "@id": "kb:online-service-a3cfc0e0-26a7-4b6a-8be8-aaa65db3dedb"
+            },
+            "action:location": {
+                "@id": "kb:location-ebafeec7-de26-4107-b2c0-bde4c248dcce"
+            },
+            "action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-07-15T17:59:43.25Z"
+            }
+        },
+        {
+            "@id": "kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb",
+            "@type": "action:Action",
+            "core:name": "authenticate-credentials",
+            "action:performer": {
+                "@id": "kb:online-service-a3cfc0e0-26a7-4b6a-8be8-aaa65db3dedb"
+            },
+            "action:instrument": {
+                "@id": "kb:application-account-e7f100bb-6367-4363-9416-b7ae73af2be9"
+            },
+            "action:result": {
+                "@id": "kb:event-d4a5a009-7b4d-445d-8d06-9dc85f263b3e"
+            },
+            "action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-07-15T17:59:45.33Z"
+            }
+        },
+        {
+            "@id": "kb:online-service-a3cfc0e0-26a7-4b6a-8be8-aaa65db3dedb",
+            "@type": "observable:OnlineService",
+            "name": "Facebook"
+        },
+        {
+            "@id": "kb:application-account-e7f100bb-6367-4363-9416-b7ae73af2be9",
+            "@type": "observable:ApplicationAccount",
+            "hasFacet": [
+                {
+                    "@id": "kb:account-facet-57a3351a-5043-4d57-8fdf-ebe0deac708a",
+                    "@type": "observable:AccountFacet",
+                    "observable:accountType": "online-service",
+                    "observable:owner": {
+                        "@id": "kb:person-e3b1df7c-bb3b-49fe-bc1d-0203c9dff86a"
+                    }
+                },
+                {
+                    "@id": "kb:application-account-facet-f9d6b37f-0c24-4450-a08e-78f77b60ef16",
+                    "@type": "observable:ApplicationAccountFacet",
+                    "observable:application": {
+                        "@id": "kb:online-service-a3cfc0e0-26a7-4b6a-8be8-aaa65db3dedb"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:person-e3b1df7c-bb3b-49fe-bc1d-0203c9dff86a",
+            "@type": "identity:Person",
+            "core:name": "John Smith"
+        },
+        {
+            "@id": "kb:location-ebafeec7-de26-4107-b2c0-bde4c248dcce",
+            "@type": "location:Location",
+            "hasFacet": [
+                {
+                    "@id": "kb:simple-address-facet-3ab0674c-9bbc-40a9-9050-8b9b94b6bf29",
+                    "@type": "location:SimpleAddressFacet",
+                    "location:locality": "Detroit",
+                    "location:region": "Michigan",
+                    "location:country": "USA"
+                }
+            ]
+        }
+    ]
+}

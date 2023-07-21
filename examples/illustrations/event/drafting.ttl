@@ -1,0 +1,72 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+drafting:Event
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:label "Event"@en ;
+	rdfs:comment "An Event is a noteworthy occurrence (something that happens or might happen)."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/541> ;
+	sh:property
+		[
+			sh:class uco-core:UcoObject ;
+			sh:nodeKind sh:IRI ;
+			sh:path drafting:eventContext ;
+		] ,
+		[
+			sh:class uco-types:Dictionary ;
+			sh:nodeKind sh:IRI ;
+			sh:path drafting:eventAttribute ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:nodeKind sh:Literal ;
+			sh:path uco-core:endTime ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:eventType ;
+		] ,
+		[
+			sh:datatype xsd:dateTime ;
+			sh:nodeKind sh:Literal ;
+			sh:path uco-core:startTime ;
+		]
+		;
+	sh:targetClass drafting:Event ;
+	.
+
+drafting:eventAttribute
+	a owl:ObjectProperty ;
+	rdfs:label "Event Attribute"@en ;
+	rdfs:comment "An event attribute specifies an ad-hoc attribute/value for an event."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/541> ;
+	rdfs:range uco-types:Dictionary ;
+	.
+
+drafting:eventContext
+	a owl:ObjectProperty ;
+	rdfs:label "Event Context"@en ;
+	rdfs:comment "An event context describes the association of actions and objects relating to an event."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/541> ;
+	rdfs:range uco-core:UcoObject ;
+	.
+
+drafting:eventType
+	a owl:DatatypeProperty ;
+	rdfs:label "Event Type"@en ;
+	rdfs:comment "An event type specifies a classification type for the event."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/541> ;
+	rdfs:range xsd:string ;
+	.
+
