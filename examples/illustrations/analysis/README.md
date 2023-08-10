@@ -8,7 +8,7 @@ This example illustrates manual software malware analysis within the Cyber Threa
 ```json
 [
     {
-        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+        "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae",
         "@type": "uco-identity:Organization",
         "uco-core:name": "hex-rays"
     },
@@ -18,7 +18,7 @@ This example illustrates manual software malware analysis within the Cyber Threa
         "uco-core:name": "IDA Pro",
         "uco-tool:toolType": "binary code analysis tool",
         "uco-tool:creator": {
-            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+            "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
         },
         "uco-tool:version": "7.7"
     },
@@ -80,7 +80,7 @@ This example illustrates multimedia classification.
 ```json
 [
     {
-        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
+        "@id": "kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f",
         "@type": "uco-identity:Organization",
         "uco-core:name": "NFI"
     },
@@ -93,7 +93,7 @@ This example illustrates multimedia classification.
         "uco-core:name": "Hansken",
         "uco-tool:toolType": "DFaaS",
         "uco-tool:creator": {
-            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+            "@id": "kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f"
         },
         "uco-tool:version": "1.0",
         "uco-configuration:usesConfiguration": [
