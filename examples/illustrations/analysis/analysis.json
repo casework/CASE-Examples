@@ -142,7 +142,7 @@
             "@type": "uco-tool:AnalyticTool",
             "uco-core:name": "IDA Pro",
             "uco-tool:creator": {
-                "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:version": "7.7"
@@ -175,7 +175,7 @@
             ],
             "uco-core:name": "Hansken",
             "uco-tool:creator": {
-                "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+                "@id": "kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f"
             },
             "uco-tool:toolType": "DFaaS",
             "uco-tool:version": "1.0"
@@ -215,14 +215,14 @@
             "@type": "uco-observable:Software"
         },
         {
-            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
-            "@type": "uco-identity:Organization",
-            "uco-core:name": "NFI"
-        },
-        {
-            "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec",
+            "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae",
             "@type": "uco-identity:Organization",
             "uco-core:name": "hex-rays"
+        },
+        {
+            "@id": "kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "NFI"
         }
     ]
 }

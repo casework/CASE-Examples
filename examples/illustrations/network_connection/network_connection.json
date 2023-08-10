@@ -21,7 +21,7 @@
     ],
     "uco-core:object": [
         {
-            "@id": "kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5",
+            "@id": "kb:investigation-6d58da47-0879-47f0-a1c8-d233dc4f090c",
             "@type": "case-investigation:Investigation",
             "uco-core:name": "NetTheft1234",
             "case-investigation:focus": "Media Theft",

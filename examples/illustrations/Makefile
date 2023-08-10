@@ -37,6 +37,9 @@ all-%:
 
 check: \
   $(check_targets)
+	$(MAKE) \
+	  --file postvisit.mk \
+	  check
 
 check-%:
 	export x=$@ \
@@ -46,6 +49,9 @@ check-%:
 
 clean: \
   $(clean_targets)
+	@$(MAKE) \
+	  --file postvisit.mk \
+	  clean
 
 clean-%:
 	@export x=$@ \
