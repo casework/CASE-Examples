@@ -1,3 +1,5 @@
+all-drafting.ttl
 generated-*.md
 generated-*.sed
 generated-*.json
+kb.ttl
