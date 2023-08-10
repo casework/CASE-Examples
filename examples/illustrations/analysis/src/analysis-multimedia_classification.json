@@ -1,6 +1,6 @@
 [
     {
-        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
+        "@id": "kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f",
         "@type": "uco-identity:Organization",
         "uco-core:name": "NFI"
     },
@@ -13,7 +13,7 @@
         "uco-core:name": "Hansken",
         "uco-tool:toolType": "DFaaS",
         "uco-tool:creator": {
-            "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+            "@id": "kb:organization-db3e6578-ae0a-4e5c-8bfc-d4470774f20f"
         },
         "uco-tool:version": "1.0",
         "uco-configuration:usesConfiguration": [
