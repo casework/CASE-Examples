@@ -32,7 +32,7 @@ drafting_ttl := $(wildcard drafting.ttl)
 ifeq ($(drafting_ttl),)
 drafting_validation_flag :=
 else
-drafting_validation_flag := --ontology-graph $(wildcard drafting.ttl)
+drafting_validation_flag := --ontology-graph $(wildcard drafting.ttl) --review-tbox
 endif
 
 all: \
