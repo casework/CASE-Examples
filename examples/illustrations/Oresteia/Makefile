@@ -11,4 +11,6 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+RENDER_PROV := yes
+
 include ../src/illustration-nosrc.mk
