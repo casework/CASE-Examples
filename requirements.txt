@@ -1,2 +1,1 @@
-case-utils >=0.13.0,<0.14.0
-pytest
+case-prov[testing] >=0.9.0,<0.10.0

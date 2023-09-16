@@ -1,0 +1,1093 @@
+@prefix case-investigation: <https://ontology.caseontology.org/case/investigation/> .
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:Association-0c97ffab-0909-5eb2-8b52-d52f2879bae0
+	a prov:Association ;
+	prov:agent kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ;
+	.
+
+kb:Association-0df2f94e-bb9d-5599-a1ed-2eaf44e90df5
+	a prov:Association ;
+	prov:agent kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Association-2228a6b8-554e-57f5-8226-0b0cd8645cf0
+	a prov:Association ;
+	prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	.
+
+kb:Association-2ca84988-683a-5569-89d0-dee587239926
+	a prov:Association ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Association-4ab5ae74-b085-53e1-b980-ece73a42376e
+	a prov:Association ;
+	prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	.
+
+kb:Association-5ecb28c6-404d-55e9-aec1-58424da43208
+	a prov:Association ;
+	prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	.
+
+kb:Association-6430009b-6070-519e-8594-1281e7ec9de9
+	a prov:Association ;
+	prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	.
+
+kb:Association-a22d902f-ac05-5650-a208-c29f7f72e4a1
+	a prov:Association ;
+	prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	.
+
+kb:Association-e4c16bb6-df57-51bc-ba9e-27017b95d8d0
+	a prov:Association ;
+	prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	.
+
+kb:Association-febd5ee2-962f-5d27-bf00-d63348af8524
+	a prov:Association ;
+	prov:agent kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	.
+
+kb:Attribution-0904ef87-77e8-569f-9b4e-d2398ccc9d2b
+	a prov:Attribution ;
+	prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	.
+
+kb:Attribution-11bca697-cb65-5f21-891f-b3ec29aff3cc
+	a prov:Attribution ;
+	prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	.
+
+kb:Attribution-1de75a56-1319-5c0e-9dd3-3043bf2a8e3a
+	a prov:Attribution ;
+	prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	.
+
+kb:Attribution-254654a1-3c8b-56ef-940b-9a8b5d0c71de
+	a prov:Attribution ;
+	prov:agent kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	.
+
+kb:Attribution-2fcefdcf-e617-5e93-b725-6d2e3c9df63f
+	a prov:Attribution ;
+	prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	.
+
+kb:Attribution-35f3b9c6-c41a-5a65-949e-bd93c82153b3
+	a prov:Attribution ;
+	prov:agent kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	.
+
+kb:Attribution-64a60e3e-de0a-5d55-a823-2b3e1d40c3f0
+	a prov:Attribution ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Attribution-749811f2-2ac6-5860-8ff1-cff32a19eb9e
+	a prov:Attribution ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Attribution-abb893c6-3392-5268-85f7-95989a5187b6
+	a prov:Attribution ;
+	prov:agent kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	.
+
+kb:Attribution-d7b00cfd-3e11-5aec-8f58-f763f6e95eb2
+	a prov:Attribution ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Attribution-e40f267e-39fd-51de-b98f-2cd9d696c4b2
+	a prov:Attribution ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Attribution-e98486f9-45f8-5bd5-a32b-df4aa861af7f
+	a prov:Attribution ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Attribution-f00494aa-f783-5078-9063-37a65d7d06df
+	a prov:Attribution ;
+	prov:agent kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	.
+
+kb:Attribution-f9a75931-41fd-5450-a475-57a3db2d87e9
+	a prov:Attribution ;
+	prov:agent kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	.
+
+kb:Communication-7217300b-916e-51b2-853a-13d8cd8f0ff5
+	a prov:Communication ;
+	prov:activity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:Communication-9271d35c-c8e5-5263-92bc-4e367c6c4fdb
+	a prov:Communication ;
+	prov:activity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	.
+
+kb:Communication-9c965852-7261-5552-a8b6-f9d65b25c727
+	a prov:Communication ;
+	prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Communication-ecb60a09-3b20-50ab-9b2a-35d10df12ecc
+	a prov:Communication ;
+	prov:activity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Delegation-3137b151-1e5d-5f89-9725-19032f4ccc92
+	a prov:Delegation ;
+	prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	prov:hadActivity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	.
+
+kb:Delegation-3ee90c46-916f-5561-8145-a38fd9e18b11
+	a prov:Delegation ;
+	prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Delegation-84155f56-7bbe-53c5-9551-11a719485f44
+	a prov:Delegation ;
+	prov:agent kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Delegation-8c520501-d2e5-507b-aa67-0fbc1a2648ee
+	a prov:Delegation ;
+	prov:agent kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ;
+	prov:hadActivity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:Delegation-f5fcb80d-0e23-5fec-bc06-3f52245ce831
+	a prov:Delegation ;
+	prov:agent kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-01f7b9a6-0395-5585-8850-e0f8e8a83c3e
+	a prov:Derivation ;
+	prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Derivation-0616ac4e-f0b4-50e3-a870-4fed8af64206
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-0c404c01-f971-5177-b642-d67e3678ec2d
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-0e1df3a6-4500-59f6-89f5-f448783fcb24
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-32af9e73-c2ee-5114-b2df-4bf1b674f129
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:Derivation-33601ad6-3c54-5cf2-b5cd-207a486b95f8
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-362e35a7-be90-5910-8a50-fa161b916ae6
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-5667fc21-4a5e-5d0e-b5d7-501f8b4f06c9
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-59ff73d7-b3e3-5208-810c-0b6cfe95d09e
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-64c2e41b-e7dd-5ddc-a4ce-dbf92073efa2
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-65c37f20-55ec-553f-bb87-25cb5e80d4ed
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-6d9c9f33-59bb-540c-ae9c-64e09f0c7898
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-8f8aab5b-6a89-55de-9f36-e4a255bc9d22
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792 ;
+	prov:hadActivity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	.
+
+kb:Derivation-8f90dce3-4d15-5db4-bc3b-bec21fd8b24c
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:Derivation-91886425-6a78-514c-80e2-18d613196887
+	a prov:Derivation ;
+	prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	prov:hadActivity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	.
+
+kb:Derivation-9ad814f8-0c3d-5d8c-aa33-2126da260778
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-9e98e4f3-5d67-5f06-ad95-8b9709f43f27
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+	prov:hadActivity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Derivation-a013a4c4-451a-535b-a23c-fd9156a2ddf2
+	a prov:Derivation ;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-b0c7d94c-fad0-543e-983e-3ebb23811d3d
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ;
+	prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Derivation-b3e85a69-ba39-5bd9-bcd9-f982b92656db
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ;
+	prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Derivation-cb92db76-5580-50e8-be5d-5a5f6cf2e8bb
+	a prov:Derivation ;
+	prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	prov:hadActivity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Derivation-cda6c303-6fcf-5a00-8542-ca4dd617d9d9
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-f363ffe0-143d-5597-847e-865c7319a204
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-f485a6ca-5e37-55d9-bf73-a9cb64cfd73f
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-f4af4892-c9ae-582c-9116-790180dd5fae
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Derivation-fb855a28-8315-5e0d-833e-158b20069579
+	a prov:Derivation ;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	prov:hadActivity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:End-23328962-f49d-5769-b82d-bef9369856ac
+	a
+		time:Instant ,
+		prov:End
+		;
+	time:inXSDDateTimeStamp "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-8def7942-680e-5e5a-bd9e-a0c2e035f52b
+	a
+		time:Instant ,
+		prov:End
+		;
+	time:inXSDDateTimeStamp "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+	.
+
+kb:End-982645b4-3739-5fd9-8c9d-fb6555922622
+	a
+		time:Instant ,
+		prov:End
+		;
+	time:inXSDDateTimeStamp "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-03511c1a-6cb9-50cd-8b2b-797ee45f81e6
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Generation-18faccd3-0cff-55dd-aa70-f1406bf7d298
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-ef04837a-e283-59e2-9b1a-4e02641921d0 ;
+	prov:activity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:Generation-3e4d9090-ac3e-5448-920e-21a5dc928a4f
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Generation-3ed569b4-a465-58e9-9d64-dcd159248724
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-80a9d30e-a191-5d6b-917e-0eba6bd598bf ;
+	prov:activity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Generation-4153d8ac-330b-5461-87c5-68c117db0051
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-1b61ad97-02c5-5990-a343-7b23b5fe4d9f ;
+	prov:activity kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:Generation-4c651bae-875e-5d2c-b6c5-a9ccc4f16130
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before
+		kb:Usage-bebfe3c7-1d1b-519c-9744-a1bc44e54767 ,
+		kb:Usage-da5821a2-b62c-5f94-b85d-e6857cb0bff9
+		;
+	prov:activity kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:Generation-4cebe0bc-5c5c-5dc8-b7d6-3fb4b7a0abef
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Generation-532b67a9-0af0-5b13-b3c5-943bb4c3c111
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Generation-583a181e-d8e2-5a36-b681-cb1b451ab8a7
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Generation-6a650ddc-c9c9-536e-98cc-cf8cda1d8bb5
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Generation-877affbc-21eb-54be-bd9f-adb8a8cfaae3
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-71e24ab9-9d59-5f90-a5c0-c154021e2210 ;
+	prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Generation-d86540f7-302f-5342-84f7-1d3a88aa1f31
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-5ab8edd6-2a84-5483-9eaa-9fc1f7fb7657 ;
+	prov:activity kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:Generation-de6f3df8-d4cb-5afe-b1a3-83d70e52f146
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	time:before kb:Usage-652af62a-975f-50b7-be89-e64c7669f5e0 ;
+	prov:activity kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	.
+
+kb:Generation-e8cfb211-8bb0-5f7d-ba23-d6c180f82ab6
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:Start-374045d8-e8c6-59fc-bf64-650ed2e63e93
+	a
+		time:Instant ,
+		prov:Start
+		;
+	time:inXSDDateTimeStamp "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-9e0e52fc-16d6-5536-ab0c-d9728e2f35b8
+	a
+		time:Instant ,
+		prov:Start
+		;
+	time:inXSDDateTimeStamp "2017-06-21T22:36:24.350000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-21T22:36:24.350000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-a2131571-c0fa-5fd0-97d6-777208d72098
+	a
+		time:Instant ,
+		prov:Start
+		;
+	time:inXSDDateTimeStamp "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-b80b4d9a-9047-557c-b253-de62930afbc0
+	a
+		time:Instant ,
+		prov:Start
+		;
+	time:inXSDDateTimeStamp "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Start-e4a6a525-e2d0-5cea-a868-cf883f517ea5
+	a
+		time:Instant ,
+		prov:Start
+		;
+	time:inXSDDateTimeStamp "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-1b61ad97-02c5-5990-a343-7b23b5fe4d9f
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+	.
+
+kb:Usage-5ab8edd6-2a84-5483-9eaa-9fc1f7fb7657
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b ;
+	.
+
+kb:Usage-652af62a-975f-50b7-be89-e64c7669f5e0
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181 ;
+	.
+
+kb:Usage-71e24ab9-9d59-5f90-a5c0-c154021e2210
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ;
+	.
+
+kb:Usage-797768e2-6f2c-533e-a8c4-0b41e8e7e1ad
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:Usage-80a9d30e-a191-5d6b-917e-0eba6bd598bf
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137 ;
+	.
+
+kb:Usage-bebfe3c7-1d1b-519c-9744-a1bc44e54767
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	.
+
+kb:Usage-da5821a2-b62c-5f94-b85d-e6857cb0bff9
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	.
+
+kb:Usage-ef04837a-e283-59e2-9b1a-4e02641921d0
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792 ;
+	.
+
+kb:aeschylus-1ab8a80e-39fb-4209-9781-b10bdbc5d0c2
+	a prov:Person ;
+	.
+
+kb:argive-elder1-phoneaccnt-10ecce02-71b9-4623-8fbc-1f2914c79362
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-f9a75931-41fd-5450-a475-57a3db2d87e9 ;
+	prov:qualifiedDerivation
+		kb:Derivation-0e1df3a6-4500-59f6-89f5-f448783fcb24 ,
+		kb:Derivation-59ff73d7-b3e3-5208-810c-0b6cfe95d09e
+		;
+	prov:qualifiedGeneration kb:Generation-e8cfb211-8bb0-5f7d-ba23-d6c180f82ab6 ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:argive-elder2-phoneaccnt-7d296cea-00aa-4f42-b357-281a64df01e6
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-e98486f9-45f8-5bd5-a32b-df4aa861af7f ;
+	prov:qualifiedDerivation
+		kb:Derivation-6d9c9f33-59bb-540c-ae9c-64e09f0c7898 ,
+		kb:Derivation-fb855a28-8315-5e0d-833e-158b20069579
+		;
+	prov:qualifiedGeneration kb:Generation-583a181e-d8e2-5a36-b681-cb1b451ab8a7 ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:argive-elder3-phoneaccnt-93b32564-9b02-497e-a58f-1b4f1c03c41e
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-64a60e3e-de0a-5d55-a823-2b3e1d40c3f0 ;
+	prov:qualifiedDerivation
+		kb:Derivation-362e35a7-be90-5910-8a50-fa161b916ae6 ,
+		kb:Derivation-f363ffe0-143d-5597-847e-865c7319a204
+		;
+	prov:qualifiedGeneration kb:Generation-3e4d9090-ac3e-5448-920e-21a5dc928a4f ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf
+		kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196 ,
+		kb:investigator-72986b46-69f5-4767-878c-d4894be9069e
+		;
+	prov:qualifiedDelegation
+		kb:Delegation-3137b151-1e5d-5f89-9725-19032f4ccc92 ,
+		kb:Delegation-8c520501-d2e5-507b-aa67-0fbc1a2648ee
+		;
+	.
+
+kb:cassandra-1b38d28a-f88f-471f-8f83-16877dedacc0
+	a prov:Person ;
+	.
+
+kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-2fcefdcf-e617-5e93-b725-6d2e3c9df63f ;
+	prov:qualifiedDerivation kb:Derivation-32af9e73-c2ee-5114-b2df-4bf1b674f129 ;
+	prov:qualifiedGeneration kb:Generation-4c651bae-875e-5d2c-b6c5-a9ccc4f16130 ;
+	prov:wasAttributedTo kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	.
+
+kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-254654a1-3c8b-56ef-940b-9a8b5d0c71de ;
+	prov:qualifiedDerivation
+		kb:Derivation-01f7b9a6-0395-5585-8850-e0f8e8a83c3e ,
+		kb:Derivation-b3e85a69-ba39-5bd9-bcd9-f982b92656db
+		;
+	prov:qualifiedGeneration kb:Generation-4153d8ac-330b-5461-87c5-68c117db0051 ;
+	prov:wasAttributedTo kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	prov:wasDerivedFrom
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
+		;
+	prov:wasGeneratedBy kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	.
+
+kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-0904ef87-77e8-569f-9b4e-d2398ccc9d2b ;
+	prov:qualifiedDerivation
+		kb:Derivation-0c404c01-f971-5177-b642-d67e3678ec2d ,
+		kb:Derivation-9e98e4f3-5d67-5f06-ad95-8b9709f43f27
+		;
+	prov:qualifiedGeneration kb:Generation-877affbc-21eb-54be-bd9f-adb8a8cfaae3 ;
+	prov:wasAttributedTo kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
+		;
+	prov:wasGeneratedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:electra-a960648e-c88e-4728-9853-7b7f06de8caa
+	a prov:Person ;
+	.
+
+kb:euripides-3696c710-161f-47af-9ae8-61b178611773
+	a prov:Person ;
+	.
+
+kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95
+	a
+		time:ProperInterval ,
+		prov:Activity
+		;
+	time:hasBeginning kb:Start-9e0e52fc-16d6-5536-ab0c-d9728e2f35b8 ;
+	time:inside
+		kb:Generation-18faccd3-0cff-55dd-aa70-f1406bf7d298 ,
+		kb:Generation-4c651bae-875e-5d2c-b6c5-a9ccc4f16130 ,
+		kb:Usage-797768e2-6f2c-533e-a8c4-0b41e8e7e1ad
+		;
+	prov:qualifiedAssociation
+		kb:Association-0c97ffab-0909-5eb2-8b52-d52f2879bae0 ,
+		kb:Association-6430009b-6070-519e-8594-1281e7ec9de9
+		;
+	prov:qualifiedStart kb:Start-9e0e52fc-16d6-5536-ab0c-d9728e2f35b8 ;
+	prov:qualifiedUsage kb:Usage-797768e2-6f2c-533e-a8c4-0b41e8e7e1ad ;
+	prov:startedAtTime "2017-06-21T22:36:24.350000+00:00"^^xsd:dateTime ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	uco-core:name "preserved" ;
+	.
+
+kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89
+	a
+		time:ProperInterval ,
+		prov:Activity
+		;
+	time:hasBeginning kb:Start-a2131571-c0fa-5fd0-97d6-777208d72098 ;
+	time:hasEnd kb:End-8def7942-680e-5e5a-bd9e-a0c2e035f52b ;
+	time:inside
+		kb:Generation-03511c1a-6cb9-50cd-8b2b-797ee45f81e6 ,
+		kb:Generation-3e4d9090-ac3e-5448-920e-21a5dc928a4f ,
+		kb:Generation-532b67a9-0af0-5b13-b3c5-943bb4c3c111 ,
+		kb:Generation-583a181e-d8e2-5a36-b681-cb1b451ab8a7 ,
+		kb:Generation-6a650ddc-c9c9-536e-98cc-cf8cda1d8bb5 ,
+		kb:Generation-e8cfb211-8bb0-5f7d-ba23-d6c180f82ab6 ,
+		kb:Usage-5ab8edd6-2a84-5483-9eaa-9fc1f7fb7657 ,
+		kb:Usage-71e24ab9-9d59-5f90-a5c0-c154021e2210
+		;
+	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation
+		kb:Association-0df2f94e-bb9d-5599-a1ed-2eaf44e90df5 ,
+		kb:Association-2ca84988-683a-5569-89d0-dee587239926
+		;
+	prov:qualifiedCommunication kb:Communication-9c965852-7261-5552-a8b6-f9d65b25c727 ;
+	prov:qualifiedEnd kb:End-8def7942-680e-5e5a-bd9e-a0c2e035f52b ;
+	prov:qualifiedStart kb:Start-a2131571-c0fa-5fd0-97d6-777208d72098 ;
+	prov:qualifiedUsage
+		kb:Usage-5ab8edd6-2a84-5483-9eaa-9fc1f7fb7657 ,
+		kb:Usage-71e24ab9-9d59-5f90-a5c0-c154021e2210
+		;
+	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasAssociatedWith kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasInformedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	uco-core:name "parsed" ;
+	.
+
+kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997
+	a
+		time:ProperInterval ,
+		prov:Activity
+		;
+	time:hasBeginning kb:Start-e4a6a525-e2d0-5cea-a868-cf883f517ea5 ;
+	time:hasEnd kb:End-23328962-f49d-5769-b82d-bef9369856ac ;
+	time:inside
+		kb:Generation-3ed569b4-a465-58e9-9d64-dcd159248724 ,
+		kb:Generation-4153d8ac-330b-5461-87c5-68c117db0051 ,
+		kb:Usage-652af62a-975f-50b7-be89-e64c7669f5e0 ,
+		kb:Usage-da5821a2-b62c-5f94-b85d-e6857cb0bff9
+		;
+	prov:endedAtTime "2017-06-22T08:39:19.240000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation
+		kb:Association-4ab5ae74-b085-53e1-b980-ece73a42376e ,
+		kb:Association-febd5ee2-962f-5d27-bf00-d63348af8524
+		;
+	prov:qualifiedCommunication kb:Communication-9271d35c-c8e5-5263-92bc-4e367c6c4fdb ;
+	prov:qualifiedEnd kb:End-23328962-f49d-5769-b82d-bef9369856ac ;
+	prov:qualifiedStart kb:Start-e4a6a525-e2d0-5cea-a868-cf883f517ea5 ;
+	prov:qualifiedUsage
+		kb:Usage-652af62a-975f-50b7-be89-e64c7669f5e0 ,
+		kb:Usage-da5821a2-b62c-5f94-b85d-e6857cb0bff9
+		;
+	prov:startedAtTime "2017-06-22T08:12:19.320000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
+		;
+	prov:wasAssociatedWith kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	prov:wasInformedBy kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	uco-core:name "extracted" ;
+	.
+
+kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62
+	a
+		time:ProperInterval ,
+		prov:Activity
+		;
+	time:hasBeginning kb:Start-b80b4d9a-9047-557c-b253-de62930afbc0 ;
+	time:inside
+		kb:Generation-de6f3df8-d4cb-5afe-b1a3-83d70e52f146 ,
+		kb:Usage-bebfe3c7-1d1b-519c-9744-a1bc44e54767 ,
+		kb:Usage-ef04837a-e283-59e2-9b1a-4e02641921d0
+		;
+	prov:qualifiedAssociation
+		kb:Association-2228a6b8-554e-57f5-8226-0b0cd8645cf0 ,
+		kb:Association-e4c16bb6-df57-51bc-ba9e-27017b95d8d0
+		;
+	prov:qualifiedCommunication kb:Communication-7217300b-916e-51b2-853a-13d8cd8f0ff5 ;
+	prov:qualifiedStart kb:Start-b80b4d9a-9047-557c-b253-de62930afbc0 ;
+	prov:qualifiedUsage
+		kb:Usage-bebfe3c7-1d1b-519c-9744-a1bc44e54767 ,
+		kb:Usage-ef04837a-e283-59e2-9b1a-4e02641921d0
+		;
+	prov:startedAtTime "2017-06-22T08:01:23.140000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792
+		;
+	prov:wasAssociatedWith kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	prov:wasInformedBy kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	uco-core:name "transferred" ;
+	.
+
+kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe
+	a
+		time:ProperInterval ,
+		prov:Activity ,
+		prov:Agent
+		;
+	time:hasBeginning kb:Start-374045d8-e8c6-59fc-bf64-650ed2e63e93 ;
+	time:hasEnd kb:End-982645b4-3739-5fd9-8c9d-fb6555922622 ;
+	time:inside
+		kb:Generation-4cebe0bc-5c5c-5dc8-b7d6-3fb4b7a0abef ,
+		kb:Generation-877affbc-21eb-54be-bd9f-adb8a8cfaae3 ,
+		kb:Generation-d86540f7-302f-5342-84f7-1d3a88aa1f31 ,
+		kb:Usage-1b61ad97-02c5-5990-a343-7b23b5fe4d9f ,
+		kb:Usage-80a9d30e-a191-5d6b-917e-0eba6bd598bf
+		;
+	prov:endedAtTime "2017-06-22T10:31:19.240000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation
+		kb:Association-5ecb28c6-404d-55e9-aec1-58424da43208 ,
+		kb:Association-a22d902f-ac05-5650-a208-c29f7f72e4a1
+		;
+	prov:qualifiedCommunication kb:Communication-ecb60a09-3b20-50ab-9b2a-35d10df12ecc ;
+	prov:qualifiedEnd kb:End-982645b4-3739-5fd9-8c9d-fb6555922622 ;
+	prov:qualifiedStart kb:Start-374045d8-e8c6-59fc-bf64-650ed2e63e93 ;
+	prov:qualifiedUsage
+		kb:Usage-1b61ad97-02c5-5990-a343-7b23b5fe4d9f ,
+		kb:Usage-80a9d30e-a191-5d6b-917e-0eba6bd598bf
+		;
+	prov:startedAtTime "2017-06-22T09:57:23.640000+00:00"^^xsd:dateTime ;
+	prov:used
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
+		;
+	prov:wasAssociatedWith kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	prov:wasInformedBy kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	uco-core:name "extracted" ;
+	.
+
+kb:investigative-action-relationship-97b9d9ac-deeb-45ea-8f81-6acda53c9b3e
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-35f3b9c6-c41a-5a65-949e-bd93c82153b3 ;
+	prov:qualifiedDerivation
+		kb:Derivation-33601ad6-3c54-5cf2-b5cd-207a486b95f8 ,
+		kb:Derivation-64c2e41b-e7dd-5ddc-a4ce-dbf92073efa2
+		;
+	prov:qualifiedGeneration kb:Generation-4cebe0bc-5c5c-5dc8-b7d6-3fb4b7a0abef ;
+	prov:wasAttributedTo kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
+		;
+	prov:wasGeneratedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	.
+
+kb:investigator-6f465841-07f4-40a6-b9ac-7b069a7cf196
+	a prov:Agent ;
+	uco-core:name "Investigator" ;
+	.
+
+kb:investigator-72986b46-69f5-4767-878c-d4894be9069e
+	a prov:Agent ;
+	uco-core:name "Investigator" ;
+	.
+
+kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	prov:qualifiedAttribution kb:Attribution-f00494aa-f783-5078-9063-37a65d7d06df ;
+	prov:qualifiedDerivation kb:Derivation-8f90dce3-4d15-5db4-bc3b-bec21fd8b24c ;
+	prov:qualifiedGeneration kb:Generation-18faccd3-0cff-55dd-aa70-f1406bf7d298 ;
+	prov:wasAttributedTo kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95 ;
+	case-investigation:exhibitNumber "ArgosPD-20170622-001A" ;
+	uco-core:description "Mobile device used by murder victim Cassandra" ;
+	.
+
+kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ;
+	prov:qualifiedAttribution kb:Attribution-1de75a56-1319-5c0e-9dd3-3043bf2a8e3a ;
+	prov:qualifiedDerivation
+		kb:Derivation-8f8aab5b-6a89-55de-9f36-e4a255bc9d22 ,
+		kb:Derivation-91886425-6a78-514c-80e2-18d613196887
+		;
+	prov:qualifiedGeneration kb:Generation-de6f3df8-d4cb-5afe-b1a3-83d70e52f146 ;
+	prov:wasAttributedTo kb:athens-warrant-3a0c2e90-d6ad-412d-a4d2-e0997e640305 ;
+	prov:wasDerivedFrom
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-4fc5478b-b6f3-440c-9d09-d7f8363c6792
+		;
+	prov:wasGeneratedBy kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62 ;
+	case-investigation:exhibitNumber "AthensPD-2017220601" ;
+	uco-core:description "Android smartphone seized by Argos PD" ;
+	.
+
+kb:provenance-record-9a1b4927-15e7-4985-8bd6-734c160d1503
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:argive-elder1-phoneaccnt-10ecce02-71b9-4623-8fbc-1f2914c79362 ,
+		kb:argive-elder2-phoneaccnt-7d296cea-00aa-4f42-b357-281a64df01e6 ,
+		kb:argive-elder3-phoneaccnt-93b32564-9b02-497e-a58f-1b4f1c03c41e ,
+		kb:sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6 ,
+		kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba
+		;
+	prov:qualifiedAttribution kb:Attribution-749811f2-2ac6-5860-8ff1-cff32a19eb9e ;
+	prov:qualifiedDerivation
+		kb:Derivation-5667fc21-4a5e-5d0e-b5d7-501f8b4f06c9 ,
+		kb:Derivation-cda6c303-6fcf-5a00-8542-ca4dd617d9d9
+		;
+	prov:qualifiedGeneration kb:Generation-532b67a9-0af0-5b13-b3c5-943bb4c3c111 ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	case-investigation:exhibitNumber "ArgosPD-20170622-001A-100" ;
+	uco-core:description "Parsed messages from mobile device used by murder victim Cassandra" ;
+	.
+
+kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ;
+	prov:qualifiedAttribution kb:Attribution-abb893c6-3392-5268-85f7-95989a5187b6 ;
+	prov:qualifiedDerivation
+		kb:Derivation-b0c7d94c-fad0-543e-983e-3ebb23811d3d ,
+		kb:Derivation-cb92db76-5580-50e8-be5d-5a5f6cf2e8bb
+		;
+	prov:qualifiedGeneration kb:Generation-3ed569b4-a465-58e9-9d64-dcd159248724 ;
+	prov:wasAttributedTo kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6 ;
+	prov:wasDerivedFrom
+		kb:cassandra-device-d2ac1471-2d0f-4032-8cca-53d317600cba ,
+		kb:provenance-record-728090d9-6a05-42e5-9b7e-d4bb1ff5a181
+		;
+	prov:wasGeneratedBy kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997 ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02" ;
+	uco-core:description "Forensic duplicate of mobile device used by murder victim Cassandra" ;
+	.
+
+kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:investigative-action-relationship-97b9d9ac-deeb-45ea-8f81-6acda53c9b3e
+		;
+	prov:qualifiedAttribution kb:Attribution-11bca697-cb65-5f21-891f-b3ec29aff3cc ;
+	prov:qualifiedDerivation
+		kb:Derivation-0616ac4e-f0b4-50e3-a870-4fed8af64206 ,
+		kb:Derivation-65c37f20-55ec-553f-bb87-25cb5e80d4ed
+		;
+	prov:qualifiedGeneration kb:Generation-d86540f7-302f-5342-84f7-1d3a88aa1f31 ;
+	prov:wasAttributedTo kb:tool-5316a112-dcd3-4515-a14e-06396126ed98 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536 ,
+		kb:provenance-record-bfea7cae-055e-46d9-8549-22ad27328137
+		;
+	prov:wasGeneratedBy kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	case-investigation:exhibitNumber "AthensPD-2017220601-02-03" ;
+	uco-core:description "SMS SQLite database on mobile device used by murder victim Cassandra" ;
+	.
+
+kb:sms-message-4e9bfb9e-c4b4-4ebd-a7b0-a49eba0811a6
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-d7b00cfd-3e11-5aec-8f58-f763f6e95eb2 ;
+	prov:qualifiedDerivation
+		kb:Derivation-9ad814f8-0c3d-5d8c-aa33-2126da260778 ,
+		kb:Derivation-f485a6ca-5e37-55d9-bf73-a9cb64cfd73f
+		;
+	prov:qualifiedGeneration kb:Generation-6a650ddc-c9c9-536e-98cc-cf8cda1d8bb5 ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-e40f267e-39fd-51de-b98f-2cd9d696c4b2 ;
+	prov:qualifiedDerivation
+		kb:Derivation-a013a4c4-451a-535b-a23c-fd9156a2ddf2 ,
+		kb:Derivation-f4af4892-c9ae-582c-9116-790180dd5fae
+		;
+	prov:qualifiedGeneration kb:Generation-03511c1a-6cb9-50cd-8b2b-797ee45f81e6 ;
+	prov:wasAttributedTo kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40 ;
+	prov:wasDerivedFrom
+		kb:cassandra-mobiledevice-mmssms-1ab55cb8-581d-4ebc-99e4-4db8d4261535 ,
+		kb:provenance-record-dcbca583-84c5-4d29-a232-f78bcdc6058b
+		;
+	prov:wasGeneratedBy kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89 ;
+	.
+
+kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45
+	a prov:Person ;
+	.
+
+kb:tool-5316a112-dcd3-4515-a14e-06396126ed98
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	prov:qualifiedDelegation kb:Delegation-f5fcb80d-0e23-5fec-bc06-3f52245ce831 ;
+	uco-core:name "Plaso" ;
+	.
+
+kb:tool-d38cc165-d21d-40e3-8080-174671a5f6f6
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigator-72986b46-69f5-4767-878c-d4894be9069e ;
+	prov:qualifiedDelegation kb:Delegation-3ee90c46-916f-5561-8145-a38fd9e18b11 ;
+	uco-core:name "MobileExtractor" ;
+	.
+
+kb:tool-e39f1bf1-8abd-4411-bc05-36f03192bc40
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe ;
+	prov:qualifiedDelegation kb:Delegation-84155f56-7bbe-53c5-9551-11a719485f44 ;
+	uco-core:name "sqlite/android_sms" ;
+	.
+

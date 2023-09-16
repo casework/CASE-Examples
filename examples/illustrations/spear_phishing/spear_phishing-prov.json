@@ -1,0 +1,572 @@
+{
+    "@context": {
+        "kb": "http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "time": "http://www.w3.org/2006/time#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:ActOfEmailDelivery01",
+            "@type": "prov:Activity",
+            "time:intervalBefore": {
+                "@id": "kb:ActOfLinkOpening01"
+            },
+            "prov:endedAtTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-09-02T06:32:16.411Z"
+            },
+            "prov:qualifiedAssociation": {
+                "@id": "kb:Association-434145cb-5f26-4eeb-a2df-4f2c4f412608",
+                "@type": "prov:Association",
+                "prov:agent": {
+                    "@id": "kb:Agent03"
+                },
+                "prov:hadRole": {
+                    "@id": "kb:ThreatActorRole01"
+                }
+            },
+            "prov:qualifiedEnd": {
+                "@id": "kb:End-bc15146e-0e43-48e3-9d7e-9c6bd4b77133",
+                "@type": "prov:End",
+                "prov:atTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2021-09-02T06:32:16.411Z"
+                },
+                "prov:entity": {
+                    "@id": "kb:EmailMessage01"
+                }
+            },
+            "prov:used": {
+                "@id": "kb:EmailAccount02"
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:Agent03"
+                },
+                {
+                    "@id": "kb:ComputingDevice02"
+                },
+                {
+                    "@id": "kb:ComputingDevice03"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ActOfEndpointScan01",
+            "@type": "prov:Activity",
+            "time:intervalBefore": {
+                "@id": "kb:ActOfFileFlagging01"
+            },
+            "prov:qualifiedAssociation": {
+                "@id": "kb:Association-53afbca5-580b-44cf-a4db-967b75226889",
+                "@type": "prov:Association",
+                "prov:agent": {
+                    "@id": "kb:EndpointProtectionSoftware01"
+                },
+                "prov:hadRole": {
+                    "@id": "kb:ScannerRole01"
+                }
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:EndpointProtectionSoftware01"
+                },
+                {
+                    "@id": "kb:MaliciousSoftware01"
+                }
+            ],
+            "prov:wasInformedBy": {
+                "@id": "kb:ActOfMalwareInstallation01"
+            }
+        },
+        {
+            "@id": "kb:ActOfFileFlagging01",
+            "@type": "prov:Activity",
+            "prov:qualifiedAssociation": {
+                "@id": "kb:Association-cfe155bb-3621-4922-80dd-562a2772da2b",
+                "@type": "prov:Association",
+                "prov:agent": {
+                    "@id": "kb:CorporateLoggingTool01"
+                },
+                "prov:hadRole": {
+                    "@id": "kb:ReceiverRole01"
+                }
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:CorporateLoggingTool01"
+                },
+                {
+                    "@id": "kb:EndpointProtectionSoftware01"
+                }
+            ],
+            "prov:wasInformedBy": {
+                "@id": "kb:ActOfEndpointScan01"
+            }
+        },
+        {
+            "@id": "kb:ActOfLinkOpening01",
+            "@type": "prov:Activity",
+            "prov:qualifiedAssociation": [
+                {
+                    "@id": "kb:Association-79872d97-f810-44ce-aa1c-8c033cfa3aa1",
+                    "@type": "prov:Association",
+                    "prov:agent": {
+                        "@id": "kb:Agent01"
+                    },
+                    "prov:hadRole": {
+                        "@id": "kb:TargetRole01"
+                    }
+                },
+                {
+                    "@id": "kb:Association-ee74aacd-0091-4bc1-b326-217a5cff1e1f",
+                    "@type": "prov:Association",
+                    "prov:agent": {
+                        "@id": "kb:ComputingDevice01"
+                    },
+                    "prov:hadRole": {
+                        "@id": "kb:TargetRole02"
+                    }
+                }
+            ],
+            "prov:used": [
+                {
+                    "@id": "kb:EmailAccount01"
+                },
+                {
+                    "@id": "kb:EmailMessage01"
+                },
+                {
+                    "@id": "kb:URL01"
+                }
+            ],
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:Agent01"
+                },
+                {
+                    "@id": "kb:ComputingDevice01"
+                },
+                {
+                    "@id": "kb:EmailSoftwareProgram01"
+                }
+            ],
+            "prov:wasInformedBy": {
+                "@id": "kb:ActOfEmailDelivery01"
+            }
+        },
+        {
+            "@id": "kb:ActOfMalwareDelivery01",
+            "@type": "prov:Activity",
+            "time:intervalBefore": {
+                "@id": "kb:ActOfMalwareInstallation01"
+            },
+            "prov:qualifiedAssociation": {
+                "@id": "kb:Association-9598e945-dda7-483d-ae1c-1b18e2884adf",
+                "@type": "prov:Association",
+                "prov:agent": {
+                    "@id": "kb:ComputingDevice01"
+                },
+                "prov:hadRole": {
+                    "@id": "kb:TargetRole02"
+                }
+            },
+            "prov:used": {
+                "@id": "kb:Webpage01"
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:ComputingDevice01"
+                },
+                {
+                    "@id": "kb:ComputingDevice03"
+                },
+                {
+                    "@id": "kb:MaliciousSoftware01"
+                }
+            ],
+            "prov:wasInformedBy": {
+                "@id": "kb:ActOfLinkOpening01"
+            }
+        },
+        {
+            "@id": "kb:ActOfMalwareInstallation01",
+            "@type": "prov:Activity",
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:ComputingDevice01"
+                },
+                {
+                    "@id": "kb:MaliciousSoftware01"
+                }
+            ],
+            "prov:wasInformedBy": {
+                "@id": "kb:ActOfMalwareDelivery01"
+            }
+        },
+        {
+            "@id": "kb:ActOfNetworkLogin01",
+            "@type": "prov:Activity",
+            "prov:endedAtTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-09-02T07:32:16.411Z"
+            },
+            "prov:used": {
+                "@id": "kb:NetworkAccount01"
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:Agent01"
+                },
+                {
+                    "@id": "kb:ComputingDevice01"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ActOfNetworkLogout01",
+            "@type": "prov:Activity",
+            "prov:endedAtTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-09-02T11:07:30.658Z"
+            },
+            "prov:used": {
+                "@id": "kb:NetworkAccount01"
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:Agent01"
+                },
+                {
+                    "@id": "kb:ComputingDevice01"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ActOfNetworkingSession01",
+            "@type": "prov:Activity",
+            "time:intervalMeets": {
+                "@id": "kb:ActOfNetworkLogout01"
+            },
+            "prov:qualifiedAssociation": {
+                "@id": "kb:Association-b2af2ecf-ad05-4226-ad8c-1a3e741b1b4a",
+                "@type": "prov:Association",
+                "prov:agent": {
+                    "@id": "kb:Agent01"
+                },
+                "prov:hadRole": {
+                    "@id": "kb:EndUserRole01"
+                }
+            },
+            "prov:qualifiedEnd": {
+                "@id": "kb:End-072350cf-7d77-4f70-837e-92f6b6802693",
+                "@type": "prov:End",
+                "prov:hadActivity": {
+                    "@id": "kb:ActOfNetworkLogout01"
+                }
+            },
+            "prov:qualifiedStart": {
+                "@id": "kb:Start-38ea72ed-48c5-4420-a1fd-cbd5110e80bb",
+                "@type": "prov:Start",
+                "prov:hadActivity": {
+                    "@id": "kb:ActOfNetworkLogin01"
+                }
+            },
+            "prov:used": [
+                {
+                    "@id": "kb:ComputingDevice01"
+                },
+                {
+                    "@id": "kb:NetworkAccount01"
+                }
+            ],
+            "prov:wasAssociatedWith": {
+                "@id": "kb:Agent01"
+            }
+        },
+        {
+            "@id": "kb:ActOfSending02",
+            "@type": "prov:Activity",
+            "prov:qualifiedAssociation": {
+                "@id": "kb:Association-9c564cb2-95f2-4261-9430-6e4dc2099fba",
+                "@type": "prov:Association",
+                "prov:agent": {
+                    "@id": "kb:Agent02"
+                },
+                "prov:hadRole": {
+                    "@id": "kb:SOCAnalystRole01"
+                }
+            },
+            "prov:wasAssociatedWith": [
+                {
+                    "@id": "kb:Agent02"
+                },
+                {
+                    "@id": "kb:ComputingDevice04"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Agent01",
+            "@type": "prov:Person"
+        },
+        {
+            "@id": "kb:Agent02",
+            "@type": "prov:Person"
+        },
+        {
+            "@id": "kb:Agent03",
+            "@type": "prov:Person"
+        },
+        {
+            "@id": "kb:Alert01",
+            "@type": "prov:Entity",
+            "prov:wasGeneratedBy": {
+                "@id": "kb:ActOfFileFlagging01"
+            }
+        },
+        {
+            "@id": "kb:ComputingDevice01",
+            "@type": [
+                "prov:Entity",
+                "prov:SoftwareAgent"
+            ],
+            "prov:actedOnBehalfOf": {
+                "@id": "kb:Agent01"
+            },
+            "prov:qualifiedDelegation": [
+                {
+                    "@id": "kb:Delegation-261daaa6-2785-4c4f-9b61-7a6a568e6cc3",
+                    "@type": "prov:Delegation",
+                    "prov:activity": {
+                        "@id": "kb:ActOfLinkOpening01"
+                    },
+                    "prov:agent": {
+                        "@id": "kb:Agent01"
+                    }
+                },
+                {
+                    "@id": "kb:Delegation-377aacd8-5cfb-475b-9e63-257aae39acf0",
+                    "@type": "prov:Delegation",
+                    "prov:activity": {
+                        "@id": "kb:ActOfNetworkLogin01"
+                    },
+                    "prov:agent": {
+                        "@id": "kb:Agent01"
+                    }
+                },
+                {
+                    "@id": "kb:Delegation-b6365f95-76f6-4c9e-86d2-863a1e7cee2f",
+                    "@type": "prov:Delegation",
+                    "prov:activity": {
+                        "@id": "kb:ActOfNetworkLogout01"
+                    },
+                    "prov:agent": {
+                        "@id": "kb:Agent01"
+                    }
+                },
+                {
+                    "@id": "kb:Delegation-e181ca31-2432-4e78-9020-2ce5324d6a73",
+                    "@type": "prov:Delegation",
+                    "prov:activity": {
+                        "@id": "kb:ActOfNetworkingSession01"
+                    },
+                    "prov:agent": {
+                        "@id": "kb:Agent01"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:ComputingDevice02",
+            "@type": "prov:SoftwareAgent"
+        },
+        {
+            "@id": "kb:ComputingDevice03",
+            "@type": "prov:SoftwareAgent",
+            "prov:actedOnBehalfOf": {
+                "@id": "kb:Agent03"
+            },
+            "prov:qualifiedDelegation": {
+                "@id": "kb:Delegation-6f8a4ff4-e604-4c1b-bc5e-cf2c8645c2af",
+                "@type": "prov:Delegation",
+                "prov:agent": {
+                    "@id": "kb:Agent03"
+                },
+                "prov:hadActivity": {
+                    "@id": "kb:ActOfEmailDelivery01"
+                }
+            }
+        },
+        {
+            "@id": "kb:ComputingDevice04",
+            "@type": "prov:SoftwareAgent",
+            "prov:actedOnBehalfOf": {
+                "@id": "kb:Agent02"
+            },
+            "prov:qualifiedDelegation": {
+                "@id": "kb:Delegation-501de1ce-0134-49b6-83b6-2016622541d1",
+                "@type": "prov:Delegation",
+                "prov:agent": {
+                    "@id": "kb:Agent02"
+                },
+                "prov:hadActivity": {
+                    "@id": "kb:ActOfSending02"
+                }
+            }
+        },
+        {
+            "@id": "kb:CorporateLoggingTool01",
+            "@type": "prov:SoftwareAgent"
+        },
+        {
+            "@id": "kb:DetectionEvent01",
+            "@type": "time:ProperInterval",
+            "time:intervalContains": [
+                {
+                    "@id": "kb:ActOfEndpointScan01"
+                },
+                {
+                    "@id": "kb:ActOfFileFlagging01"
+                },
+                {
+                    "@id": "kb:ActOfSending02"
+                }
+            ]
+        },
+        {
+            "@id": "kb:EmailAccount01",
+            "@type": "prov:Entity"
+        },
+        {
+            "@id": "kb:EmailAccount02",
+            "@type": "prov:Entity"
+        },
+        {
+            "@id": "kb:EmailMessage01",
+            "@type": "prov:Entity",
+            "prov:wasGeneratedBy": {
+                "@id": "kb:ActOfEmailDelivery01"
+            }
+        },
+        {
+            "@id": "kb:EmailSoftwareProgram01",
+            "@type": "prov:SoftwareAgent"
+        },
+        {
+            "@id": "kb:EndUserRole01",
+            "@type": "prov:Role"
+        },
+        {
+            "@id": "kb:EndpointProtectionSoftware01",
+            "@type": [
+                "prov:Entity",
+                "prov:SoftwareAgent"
+            ]
+        },
+        {
+            "@id": "kb:InfectionEvent01",
+            "@type": "time:ProperInterval",
+            "time:intervalBefore": {
+                "@id": "kb:DetectionEvent01"
+            },
+            "time:intervalContains": [
+                {
+                    "@id": "kb:ActOfMalwareDelivery01"
+                },
+                {
+                    "@id": "kb:ActOfMalwareInstallation01"
+                }
+            ]
+        },
+        {
+            "@id": "kb:MaliciousSoftware01",
+            "@type": "prov:SoftwareAgent"
+        },
+        {
+            "@id": "kb:NetworkAccount01",
+            "@type": "prov:Entity"
+        },
+        {
+            "@id": "kb:ReceiverRole01",
+            "@type": "prov:Role"
+        },
+        {
+            "@id": "kb:SOCAnalystRole01",
+            "@type": "prov:Role"
+        },
+        {
+            "@id": "kb:ScannerRole01",
+            "@type": "prov:Role"
+        },
+        {
+            "@id": "kb:SpearFishingEvent01",
+            "@type": "time:ProperInterval",
+            "time:intervalBefore": {
+                "@id": "kb:InfectionEvent01"
+            },
+            "time:intervalContains": [
+                {
+                    "@id": "kb:ActOfEmailDelivery01"
+                },
+                {
+                    "@id": "kb:ActOfLinkOpening01"
+                }
+            ]
+        },
+        {
+            "@id": "kb:TargetRole01",
+            "@type": "prov:Role"
+        },
+        {
+            "@id": "kb:TemporalInterval01",
+            "@type": "time:ProperInterval",
+            "time:intervalBefore": {
+                "@id": "kb:InfectionEvent01"
+            },
+            "time:intervalContains": {
+                "@id": "kb:SpearFishingEvent01"
+            }
+        },
+        {
+            "@id": "kb:TemporalInterval02",
+            "@type": "time:ProperInterval",
+            "time:intervalBefore": {
+                "@id": "kb:DetectionEvent01"
+            },
+            "time:intervalContains": {
+                "@id": "kb:InfectionEvent01"
+            }
+        },
+        {
+            "@id": "kb:TemporalInterval03",
+            "@type": "time:ProperInterval",
+            "time:intervalContains": {
+                "@id": "kb:DetectionEvent01"
+            }
+        },
+        {
+            "@id": "kb:ThreatActorRole01",
+            "@type": "prov:Role"
+        },
+        {
+            "@id": "kb:URL01",
+            "@type": "prov:Entity",
+            "prov:qualifiedQuotation": {
+                "@id": "kb:Quotation-5fc7c1f9-f227-4d08-aa83-213182cdda03",
+                "@type": "prov:Quotation",
+                "prov:entity": {
+                    "@id": "kb:EmailMessage01"
+                }
+            },
+            "prov:wasQuotedFrom": {
+                "@id": "kb:EmailMessage01"
+            }
+        },
+        {
+            "@id": "kb:Webpage01",
+            "@type": "prov:Entity"
+        }
+    ]
+}

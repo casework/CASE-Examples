@@ -17,6 +17,9 @@ catalog-v001.xml
 .*.swp
 
 # Workflow files
+*.dot
+*.dot_
+*.svg_
 .*.done.log
 .venv-pre-commit
 venv

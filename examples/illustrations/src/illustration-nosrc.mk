@@ -35,8 +35,30 @@ else
 drafting_validation_flag := --ontology-graph $(wildcard drafting.ttl) --review-tbox
 endif
 
+RENDER_PROV ?=
+ifeq ($(RENDER_PROV),yes)
+prov_svgs := \
+  figures/$(example_name)-prov-all.svg \
+  figures/$(example_name)-prov-activities-agents.svg \
+  figures/$(example_name)-prov-activities-entities.svg \
+  figures/$(example_name)-prov-activities.svg \
+  figures/$(example_name)-prov-agents-entities.svg \
+  figures/$(example_name)-prov-agents.svg \
+  figures/$(example_name)-prov-entities.svg \
+  figures/$(example_name)-prov-time-all.svg \
+  figures/$(example_name)-prov-time-activities-agents.svg \
+  figures/$(example_name)-prov-time-activities-entities.svg \
+  figures/$(example_name)-prov-time-agents-entities.svg \
+  figures/$(example_name)-prov-time-activities.svg \
+  figures/$(example_name)-prov-time-agents.svg \
+  figures/$(example_name)-prov-time-entities.svg
+else
+prov_svgs :=
+endif
+
 all: \
   $(example_name)_validation.ttl \
+  $(prov_svgs) \
   $(example_name)_validation-develop.ttl \
   $(example_name)_validation-develop-2.0.0.ttl \
   $(example_name)_validation-unstable.ttl \
@@ -48,6 +70,37 @@ all: \
 $(RDF_TOOLKIT_JAR):
 	@echo "ERROR:illustration-nosrc.mk:Could not find rdf-toolkit.jar.  Did you run 'make' or 'make download' from the top source directory ($(top_srcdir))?" >&2
 	@test -r $@
+
+%.svg: \
+  %.dot
+	dot \
+	  -T svg \
+	  -o $@_ \
+	  $<
+	mv $@_ $@
+
+$(example_name)-prov.ttl: \
+  $(example_name).json \
+  $(RDF_TOOLKIT_JAR) \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log
+	rm -f __$@
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_rdf \
+	      --allow-empty-results \
+	      --use-deterministic-uuids \
+	      __$@ \
+	      $(drafting_ttl) \
+	      $<
+	java -jar $(RDF_TOOLKIT_JAR) \
+	  --inline-blank-nodes \
+	  --source __$@ \
+	  --source-format turtle \
+	  --target _$@ \
+	  --target-format turtle
+	rm __$@
+	mv _$@ $@
 
 $(example_name)_validation.ttl: \
   $(example_name).json \
@@ -202,4 +255,227 @@ check-pytest: \
 
 clean:
 	@rm -f \
+	  figures/*.dot \
+	  figures/*.svg \
 	  $(example_name)_validation*.ttl
+
+figures/$(example_name)-prov-activities-agents.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --activity-informing \
+	      --agent-delegating \
+	      --dash-unqualified \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-activities-entities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --activity-informing \
+	      --dash-unqualified \
+	      --entity-deriving \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-activities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --activity-informing \
+	      --dash-unqualified \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-agents-entities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --agent-delegating \
+	      --dash-unqualified \
+	      --entity-deriving \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-agents.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --agent-delegating \
+	      --dash-unqualified \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-all.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --dash-unqualified \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-entities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --dash-unqualified \
+	      --entity-deriving \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-activities-agents.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --activity-informing \
+	      --agent-delegating \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-activities-entities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --activity-informing \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --entity-deriving \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-activities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --activity-informing \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-agents.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --agent-delegating \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-agents-entities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --agent-delegating \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --entity-deriving \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-all.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-prov-time-entities.dot: \
+  $(example_name)-prov.ttl
+	mkdir -p figures
+	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	  && source $(top_srcdir)/venv/bin/activate \
+	    && case_prov_dot \
+	      --dash-unqualified \
+	      --display-time-links \
+	      --entity-deriving \
+	      --use-deterministic-uuids \
+	      $@_ \
+	      $(drafting_ttl) \
+	      $(example_name)-prov.ttl \
+	      $(example_name).json
+	mv $@_ $@

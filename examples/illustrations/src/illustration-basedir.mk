@@ -17,6 +17,8 @@ top_srcdir := $(shell cd ../../.. ; pwd)
 
 illustration_name := $(shell basename $$PWD)
 
+RENDER_PROV ?=
+
 # `diff` is used to determine if a copy operation should happen.
 # If it happens each time, validation files will be regenerated on every
 # `make` call.
@@ -31,6 +33,7 @@ all:
 	    src/generated-$(illustration_name).json \
 	    $(illustration_name).json
 	$(MAKE) \
+	  RENDER_PROV="$(RENDER_PROV)" \
 	  --file ../src/illustration-nosrc.mk
 
 check:
@@ -42,6 +45,7 @@ check:
 	  --directory src \
 	  check
 	$(MAKE) \
+	  RENDER_PROV="$(RENDER_PROV)" \
 	  --file ../src/illustration-nosrc.mk \
 	  check
 	diff \
