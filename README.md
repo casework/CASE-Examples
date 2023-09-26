@@ -15,6 +15,7 @@ Mapping notes & respective JSON-LD output:
 - [Call Log](examples/illustrations/call_log/call_log.json)
 - [Cell Site](examples/illustrations/cell_site/cell_site.json) ([*info*](examples/illustrations/cell_site/))
 - [Configured Tool](examples/illustrations/configured_tool/configured_tool.json)
+- [Database records](examples/illustrations/database_records/database_records.json) ([*info*](examples/illustrations/database_records/))
 - [Device](examples/illustrations/device/device.json)
 - [EXIF Data](examples/illustrations/exif_data/exif_data.json)
 - [Event](examples/illustrations/event/event.json)
