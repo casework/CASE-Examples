@@ -12,3 +12,10 @@ The UCO rule requiring all named individuals end with a UUID has been deactivate
 As documentation and figures are transcribed to RDF, all named individuals are initially given only the type `uco-core:UcoThing`.
 
 At the end of the scenario rendering process, all individuals will have the most specific types available within CASE and UCO, and all predicates in the graph with the prefix `unmapped:` will be replaced with approprate properties or `uco-core:Relationship` objects.
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/spear_phishing-relationships.svg](figures/spear_phishing-relationships.svg)

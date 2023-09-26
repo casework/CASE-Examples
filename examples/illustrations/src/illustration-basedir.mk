@@ -18,6 +18,7 @@ top_srcdir := $(shell cd ../../.. ; pwd)
 illustration_name := $(shell basename $$PWD)
 
 RENDER_PROV ?=
+RENDER_RELATIONSHIPS ?=
 
 # `diff` is used to determine if a copy operation should happen.
 # If it happens each time, validation files will be regenerated on every
@@ -34,6 +35,7 @@ all:
 	    $(illustration_name).json
 	$(MAKE) \
 	  RENDER_PROV="$(RENDER_PROV)" \
+	  RENDER_RELATIONSHIPS="$(RENDER_RELATIONSHIPS)" \
 	  --file ../src/illustration-nosrc.mk
 
 check:
@@ -46,6 +48,7 @@ check:
 	  check
 	$(MAKE) \
 	  RENDER_PROV="$(RENDER_PROV)" \
+	  RENDER_RELATIONSHIPS="$(RENDER_RELATIONSHIPS)" \
 	  --file ../src/illustration-nosrc.mk \
 	  check
 	diff \

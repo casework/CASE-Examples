@@ -11,6 +11,8 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+RENDER_RELATIONSHIPS := yes
+
 include ../src/illustration-nosrc.mk
 
 all: spear_phishing.ttl

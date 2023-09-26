@@ -11,3 +11,10 @@ that is explained in [*file*](../file/). By using **Relationship** objects with 
 each fragment of the file can be explicitly associated with the overall file. Each fragment object would then have a **Fragment** property bundle 
 that describes the position (*fragmentIndex*) of this particular fragment within the reconstructed file. 
 The *totalFragments* property may be used to help the serializer know how many total fragments to look for.
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/multipart_file-relationships.svg](figures/multipart_file-relationships.svg)

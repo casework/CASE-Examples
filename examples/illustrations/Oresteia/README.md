@@ -7,9 +7,16 @@ collectively called The Oresteia. For illustrative purposes, the characters
 of these ancient stories are given access to modern technology.
 
 
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/Oresteia-relationships.svg](figures/Oresteia-relationships.svg)
+
+
 ## Provenance illustrations
 
-Following visual-design practices of [PROV-O](https://www.w3.org/TR/prov-o/), the following renders of this scenario are available:
+Following visual-design practices of [PROV-O](https://www.w3.org/TR/prov-o/), the following renders of this scenario's provenance are available:
 
 | Figure's contents | Time hidden | Time displayed |
 | --- | --- | --- |

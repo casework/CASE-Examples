@@ -29,3 +29,10 @@ The reconstructed file can be extracted using dd as follows:
 % shasum -a 256 reconstructed_file 
 ee8b9c17c44e128e9e95d60fe219e95feae53c463b01016a312f8c5b732f21de  reconstructed_file.jpg
 ```
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/reconstructed_file-relationships.svg](figures/reconstructed_file-relationships.svg)

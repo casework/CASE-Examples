@@ -350,6 +350,15 @@ Per practice of this example organization, the derivation of the relationship is
 ]
 ```
 
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/cell_site-relationships.svg](figures/cell_site-relationships.svg)
+
+
+
 [^1]: <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://opencellid.org/images/ccbysa_4.0_80x15.png" /></a> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:cc="https://creativecommons.org/ns#" href="https://opencellid.org" property="cc:attributionName" rel="cc:attributionURL">OpenCelliD Project</span></a> is licensed under a <a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" target='_blank'>Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 [^2]: The example organization has not discussed policy on how to handle matters such as cell sites being retired from service.  Such a policy would be necessary to process that no record is currently found with `cellSiteIdentifier` value `29220952` within their data source.  This is a practice that would be better explored by interested investigative community members.
 [^3]: SOSA defines that a `sosa:Observation` uniquely has one `Property` that is the subject of the measurement.  As OWL ontology data, that property does not necessarily need to be recorded.  By leaving the property absent, we still express that the feature of interest, the cell site, was observed; we just do not say what about it we were observing.  "The property that expresses the location of this object" is not something for which CASE or UCO yet has a clear representation practice, so we omit it in this example.

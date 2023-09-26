@@ -50,3 +50,10 @@ encoding algorithm used to decode the `target` file.
  
 For the extraction of an embedded section of raw bytes within the `target` file, we
 use the **DataRange** property bundle which provides the offset location and range size within the `target` file.
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/file-relationships.svg](figures/file-relationships.svg)

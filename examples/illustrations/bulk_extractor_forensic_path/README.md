@@ -22,3 +22,10 @@ extract out the email addresses.
                 - *relationship3* (Compression : GZIP)  -> **decompressed_gzip0**
                     - *relationship0* (DataRange : 1600) -> **extracted_email_address0**
                     - *relationship1* (DataRange : 16095) -> **extracted_email_address1**
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/bulk_extractor_forensic_path-relationships.svg](figures/bulk_extractor_forensic_path-relationships.svg)

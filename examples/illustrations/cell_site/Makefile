@@ -11,4 +11,6 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
+RENDER_RELATIONSHIPS := yes
+
 include ../src/illustration-basedir.mk
