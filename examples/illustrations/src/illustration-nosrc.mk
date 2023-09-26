@@ -56,9 +56,18 @@ else
 prov_svgs :=
 endif
 
+RENDER_RELATIONSHIPS ?=
+ifeq ($(RENDER_RELATIONSHIPS),yes)
+relationship_svgs := \
+  figures/$(example_name)-relationships.svg
+else
+relationship_svgs :=
+endif
+
 all: \
   $(example_name)_validation.ttl \
   $(prov_svgs) \
+  $(relationship_svgs) \
   $(example_name)_validation-develop.ttl \
   $(example_name)_validation-develop-2.0.0.ttl \
   $(example_name)_validation-unstable.ttl \
@@ -478,4 +487,23 @@ figures/$(example_name)-prov-time-entities.dot: \
 	      $(drafting_ttl) \
 	      $(example_name)-prov.ttl \
 	      $(example_name).json
+	mv $@_ $@
+
+figures/$(example_name)-relationships.dot: \
+  $(example_name).json \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/src/case_relationships_dot.py
+	mkdir -p figures
+	source $(top_srcdir)/venv/bin/activate \
+	  && python3 $(top_srcdir)/src/case_relationships_dot.py \
+	    $@_ \
+	    $<
+	mv $@_ $@
+
+figures/$(example_name)-relationships.svg: \
+  figures/$(example_name)-relationships.dot
+	neato \
+	  -T svg \
+	  -o $@_ \
+	  $<
 	mv $@_ $@

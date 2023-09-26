@@ -177,3 +177,10 @@ This allows an identified artifact (such as a message) to be linked to a databas
 ]
 
 ```
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/database_records-relationships.svg](figures/database_records-relationships.svg)

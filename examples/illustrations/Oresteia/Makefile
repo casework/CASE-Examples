@@ -13,4 +13,6 @@
 
 RENDER_PROV := yes
 
+RENDER_RELATIONSHIPS := yes
+
 include ../src/illustration-nosrc.mk
