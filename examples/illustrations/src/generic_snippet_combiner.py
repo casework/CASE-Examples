@@ -22,12 +22,13 @@ first comand-line argument.
 
 __version__ = "0.1.2"
 
-import logging
 import json
+import logging
 import os
 import sys
 
 _logger = logging.getLogger(os.path.basename(__file__))
+
 
 def main():
     obj = None
@@ -58,10 +59,16 @@ def main():
     json.dump(obj, sys.stdout, indent=4, sort_keys=True)
     sys.stdout.write("\n")
 
+
 if __name__ == "__main__":
     import argparse
+
     parser = argparse.ArgumentParser()
-    parser.add_argument("in_json", nargs="+", help="The first argument is the \"base\" JSON-LD file, including context dictionary.")
+    parser.add_argument(
+        "in_json",
+        nargs="+",
+        help='The first argument is the "base" JSON-LD file, including context dictionary.',
+    )
     args = parser.parse_args()
     logging.basicConfig(level=logging.INFO)
     main()
