@@ -27,6 +27,7 @@ Mapping notes & respective JSON-LD output:
 - [Multipart File](examples/illustrations/multipart_file/multipart_file.json) (*[info](examples/illustrations/multipart_file/)*)
 - [Network connection](examples/illustrations/network_connection/network_connection.json) (*[info](examples/illustrations/network_connection/)*)
 - [Oresteia](examples/illustrations/Oresteia/Oresteia.json) (*[info](examples/illustrations/Oresteia/)*)
+- [Partitions](examples/illustrations/partitions/partitions.json) (*[info](examples/illustrations/partitions/)*)
 - [Raw Data](examples/illustrations/raw_data/raw_data.json) (*[info](examples/illustrations/raw_data/)*)
 - [Reconstructed File](examples/illustrations/reconstructed_file/reconstructed_file.json) (*[info](examples/illustrations/reconstructed_file/)*)
 - [Recoverability](examples/illustrations/recoverability/recoverability.json) (*[info](examples/illustrations/recoverability/)*)

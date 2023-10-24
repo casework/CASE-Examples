@@ -1,0 +1,72 @@
+[
+    {
+        "@id": "kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010"
+        },
+        "uco-analysis:resultContent": {
+            "@id": "kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2"
+        }
+    },
+    {
+        "@id": "kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
+        "uco-core:description": "Compare recovered partition against original",
+        "uco-action:performer": {
+            "@id": "kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976"
+            },
+            {
+                "@id": "kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990"
+            },
+            {
+                "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+            },
+            {
+                "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+            },
+            {
+                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+            },
+            {
+                "@id": "kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2"
+            },
+            {
+                "@id": "kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-ee82f650-2ccf-4363-8fe2-b3fd4c465681"
+            }
+        ]
+    },
+    {
+        "@id": "kb:ProvenanceRecord-ee82f650-2ccf-4363-8fe2-b3fd4c465681",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2"
+            },
+            {
+                "@id": "kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf"
+            }
+        ]
+    }
+]

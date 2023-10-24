@@ -1,0 +1,990 @@
+{
+    "@context": {
+        "@vocab": "http://example.org/ontology/local#",
+        "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "co": "http://purl.org/co/",
+        "drafting": "http://example.org/ontology/drafting/",
+        "prov": "http://www.w3.org/ns/prov#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "time": "http://www.w3.org/2006/time#",
+        "kb": "http://example.org/kb/",
+        "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
+        "uco-analysis": "https://ontology.unifiedcyberontology.org/uco/analysis/",
+        "uco-configuration": "https://ontology.unifiedcyberontology.org/uco/configuration/",
+        "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
+        "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
+        "uco-location": "https://ontology.unifiedcyberontology.org/uco/location/",
+        "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
+        "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
+        "uco-time": "https://ontology.unifiedcyberontology.org/uco/time/",
+        "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
+        "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
+        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:Bundle-8d850b58-3569-4b37-a6e1-7b4c22639e01",
+            "@type": "uco-core:Bundle",
+            "uco-core:description": "Error-focused Test Dataset - Deleted partition, Overwritten File",
+            "uco-core:object": [
+                {
+                    "@id": "kb:Investigation-5e05495a-513a-45ce-a64c-a17b665d263a",
+                    "@type": "case-investigation:Investigation",
+                    "uco-core:name": "USB_2023_EFDS_01",
+                    "case-investigation:focus": "DF Error-focused Tool Testing",
+                    "uco-core:description": "Test whether digital forensic tools can correctly detect and recover deleted partiton and overwritten file.",
+                    "uco-core:object": [
+                        {
+                            "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
+                        },
+                        {
+                            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                        },
+                        {
+                            "@id": "kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac"
+                        },
+                        {
+                            "@id": "kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3"
+                        },
+                        {
+                            "@id": "kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80"
+                        },
+                        {
+                            "@id": "kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c"
+                        },
+                        {
+                            "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+                        },
+                        {
+                            "@id": "kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245"
+                        },
+                        {
+                            "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06"
+                        },
+                        {
+                            "@id": "kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e"
+                        },
+                        {
+                            "@id": "kb:organization-f2910679-990c-4474-8550-a5086a3b01d9"
+                        },
+                        {
+                            "@id": "kb:InvestigativeAction-db5f7449-256e-4d16-9486-6c7f3524c070"
+                        },
+                        {
+                            "@id": "kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976"
+                        },
+                        {
+                            "@id": "kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e"
+                        },
+                        {
+                            "@id": "kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b"
+                        },
+                        {
+                            "@id": "kb:organization-fb0a0400-9eb6-419f-baee-9336bc4a1038"
+                        },
+                        {
+                            "@id": "kb:InvestigativeAction-a5c03fc1-092d-4c1a-9142-adf22966ba93"
+                        },
+                        {
+                            "@id": "kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f"
+                        },
+                        {
+                            "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+                        },
+                        {
+                            "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899"
+                        },
+                        {
+                            "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20"
+                        },
+                        {
+                            "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15"
+                        },
+                        {
+                            "@id": "kb:DiskPartitionExtended-f01d471e-829c-4a8e-afb4-bd3b85f59cd8"
+                        },
+                        {
+                            "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+                        },
+                        {
+                            "@id": "kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b"
+                        },
+                        {
+                            "@id": "kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e"
+                        },
+                        {
+                            "@id": "kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31"
+                        },
+                        {
+                            "@id": "kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d"
+                        },
+                        {
+                            "@id": "kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8"
+                        },
+                        {
+                            "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+                        },
+                        {
+                            "@id": "kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f"
+                        },
+                        {
+                            "@id": "kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28",
+            "@type": "uco-identity:Organization",
+            "uco-core:name": "Chris Hargreaves"
+        },
+        {
+            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81",
+            "@type": "uco-role:Role",
+            "uco-core:name": "Forensic Researcher"
+        },
+        {
+            "@id": "kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
+            },
+            "uco-core:target": {
+                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            },
+            "uco-core:kindOfRelationship": "Has_Role",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3",
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-core:name": "Tool 5",
+            "uco-tool:toolType": "acquisition/duplication",
+            "uco-tool:creator": {
+                "@id": "kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80"
+            },
+            "uco-tool:version": "5.6.7",
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:Configuration-d9f82a71-1074-409f-a481-28f1fbc7ee28",
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
+                    {
+                        "@id": "kb:configuration-entry-3345eee3-7d8d-4378-95f2-30b8ca631e30",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "Mode",
+                        "uco-configuration:itemValue": "DriveToFile"
+                    },
+                    {
+                        "@id": "kb:configuration-entry-43c509fc-8755-410a-97e7-a6001d3a3f61",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "Method",
+                        "uco-configuration:itemValue": "E01Capture"
+                    },
+                    {
+                        "@id": "kb:configuration-entry-7bcf9625-cdf4-4cd9-8fc5-b70987abb20c",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "Hash",
+                        "uco-configuration:itemValue": "SHA-1+MD5"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80",
+            "@type": "uco-identity:Identity",
+            "uco-core:name": "Company 5"
+        },
+        {
+            "@id": "kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "disk image",
+            "uco-core:description": "Acquisition of USB",
+            "uco-action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-16T16:44:02.00Z"
+            },
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-16T16:45:38.00Z"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3"
+            },
+            "uco-action:performer": {
+                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb",
+            "@type": "uco-observable:Disk",
+            "uco-core:description": "USB Disk",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:DiskFacet-81e49f34-38bc-4239-b550-67bd61f4d24f",
+                    "@type": "uco-observable:DiskFacet",
+                    "uco-observable:storageCapacityInBytes": 1048576000
+                },
+                {
+                    "@id": "kb:content-data-facet-7f3d70a8-d16a-49a9-b75d-01a28c49dff9",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": [
+                        {
+                            "@id": "kb:hash-40b16c22-3d7f-4f7c-b207-dc41b771e878",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "MD5"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "4D61E67668E900A12318E5CFF55CE878"
+                            }
+                        },
+                        {
+                            "@id": "kb:hash-5d0be344-b166-4de0-9250-cfc7f7bbd9ae",
+                            "@type": "uco-types:Hash",
+                            "uco-types:hashMethod": {
+                                "@type": "uco-vocabulary:HashNameVocab",
+                                "@value": "SHA1"
+                            },
+                            "uco-types:hashValue": {
+                                "@type": "xsd:hexBinary",
+                                "@value": "56807D313674F386C76A53C5890ECB5D6DC709E8"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "@id": "kb:InvestigativeAction-c08691b3-852c-4d3f-a8d7-cc09ed916090",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:description": "Enter USB Disk into chain of custody",
+            "uco-action:performer": {
+                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            },
+            "uco-action:result": [
+                {
+                    "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:description": "Initial record of USB Disk in chain of custody",
+            "uco-observable:observableCreatedTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-16T16:45:38.00Z"
+            },
+            "case-investigation:exhibitNumber": "20230816-001-001",
+            "case-investigation:rootExhibitNumber": "20230816-001-001",
+            "uco-core:object": {
+                "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+            }
+        },
+        {
+            "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06",
+            "@type": [
+                "uco-observable:File",
+                "uco-observable:Image"
+            ],
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-cd2ecec2-8ff2-4520-af44-c078a42b8383",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:fileName": "NewUSBExample.E01",
+                    "uco-observable:filePath": "EFDS/NewUSBExample.E01",
+                    "uco-observable:extension": "E01",
+                    "uco-observable:fileSystemType": "ntfs",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 2218758,
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-16T16:45:38.00Z"
+                    }
+                },
+                {
+                    "@id": "kb:content-data-facet-17661dfc-7b8a-46c0-8b0e-0f7b1eac3096",
+                    "@type": "uco-observable:ContentDataFacet",
+                    "uco-observable:hash": {
+                        "@id": "kb:hash-66d11615-dd6c-4bba-8643-efe5fe8f58f4",
+                        "@type": "uco-types:Hash",
+                        "uco-types:hashMethod": {
+                            "@type": "uco-vocabulary:HashNameVocab",
+                            "@value": "SHA256"
+                        },
+                        "uco-types:hashValue": {
+                            "@type": "xsd:hexBinary",
+                            "@value": "4beaf62374cf2395a10ac031400ecb0a5572a8173c427f9304bde40237ee9d06"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:description": "Forensic image with E01 capture method",
+            "uco-observable:observableCreatedTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-16T16:44:58.00Z"
+            },
+            "case-investigation:rootExhibitNumber": "20230816-001-001",
+            "case-investigation:exhibitNumber": "20230816-001-001-01",
+            "uco-core:object": {
+                "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06"
+            }
+        },
+        {
+            "@id": "kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b",
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-core:name": "Tool 4",
+            "uco-tool:toolType": "examination/recovery",
+            "uco-tool:creator": {
+                "@id": "kb:organization-fb0a0400-9eb6-419f-baee-9336bc4a1038"
+            },
+            "uco-tool:version": "13.0",
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:Configuration-d5b12717-cb98-476c-bde3-849fd0f91fe2",
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
+                    {
+                        "@id": "kb:configuration-entry-422105bd-1533-46c9-acbf-0b23bffcb96c",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "run_tool_4.sh",
+                        "uco-configuration:itemValue": "run_tool_4.sh -i ewf NewUSBExample.E01"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "kb:organization-fb0a0400-9eb6-419f-baee-9336bc4a1038",
+            "@type": "uco-identity:Identity",
+            "uco-core:name": "Company 4"
+        },
+        {
+            "@id": "kb:InvestigativeAction-a5c03fc1-092d-4c1a-9142-adf22966ba93",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "forensic recovery",
+            "uco-core:description": "Partition recovery using Tool 4",
+            "uco-action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-31T09:32:54.00Z"
+            },
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-31T09:35:13.00Z"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b"
+            },
+            "uco-action:performer": {
+                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa"
+                },
+                {
+                    "@id": "kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3"
+                },
+                {
+                    "@id": "kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1"
+                },
+                {
+                    "@id": "kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e"
+                },
+                {
+                    "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4"
+                },
+                {
+                    "@id": "kb:Relationship-143d1375-76c9-42e0-b26d-de8f7403047c"
+                },
+                {
+                    "@id": "kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037"
+                },
+                {
+                    "@id": "kb:Relationship-61d73f33-1a1d-42d6-8c72-87ab57e4d632"
+                },
+                {
+                    "@id": "kb:Relationship-94c43ab8-337b-45d6-bb24-fd984e2fdbf7"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ProvenanceRecord-7d2c2d0f-e1d6-44ea-9a1d-68370efed01f",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:description": "Parse partition system structure",
+            "uco-observable:observableCreatedTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-31T09:32:12.00Z"
+            },
+            "case-investigation:rootExhibitNumber": "20230816-001-001",
+            "case-investigation:exhibitNumber": "20230816-001-001-01-MBR",
+            "uco-core:object": [
+                {
+                    "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa"
+                },
+                {
+                    "@id": "kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3"
+                },
+                {
+                    "@id": "kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1"
+                },
+                {
+                    "@id": "kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e"
+                },
+                {
+                    "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4"
+                },
+                {
+                    "@id": "kb:Relationship-143d1375-76c9-42e0-b26d-de8f7403047c"
+                },
+                {
+                    "@id": "kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037"
+                },
+                {
+                    "@id": "kb:Relationship-61d73f33-1a1d-42d6-8c72-87ab57e4d632"
+                },
+                {
+                    "@id": "kb:Relationship-94c43ab8-337b-45d6-bb24-fd984e2fdbf7"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e",
+            "@type": "uco-tool:ConfiguredTool",
+            "uco-core:name": "Tool 1",
+            "uco-tool:toolType": "examination/recovery",
+            "uco-tool:creator": {
+                "@id": "kb:organization-f2910679-990c-4474-8550-a5086a3b01d9"
+            },
+            "uco-tool:version": "1.2.3",
+            "uco-configuration:usesConfiguration": {
+                "@id": "kb:Configuration-c279fd13-ed8d-4758-ab3c-962cdff0c96f",
+                "@type": "uco-configuration:Configuration",
+                "uco-configuration:configurationEntry": [
+                    {
+                        "@id": "kb:configuration-entry-77b375c5-59cd-43c0-8eb4-4cbd350f5402",
+                        "@type": "uco-configuration:ConfigurationEntry",
+                        "uco-configuration:itemName": "Partition Recovery",
+                        "uco-configuration:itemValue": "True"
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "kb:organization-f2910679-990c-4474-8550-a5086a3b01d9",
+            "@type": "uco-identity:Identity",
+            "uco-core:name": "Company 1"
+        },
+        {
+            "@id": "kb:InvestigativeAction-db5f7449-256e-4d16-9486-6c7f3524c070",
+            "@type": "case-investigation:InvestigativeAction",
+            "uco-core:name": "forensic recovery",
+            "uco-core:description": "Partition recovery using Tool 1",
+            "uco-action:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-31T09:32:54.00Z"
+            },
+            "uco-action:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-31T09:35:13.00Z"
+            },
+            "uco-action:instrument": {
+                "@id": "kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e"
+            },
+            "uco-action:performer": {
+                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            },
+            "uco-action:object": [
+                {
+                    "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-bf062a94-6d8f-41a9-97b9-5320f2edc07e"
+                }
+            ],
+            "uco-action:result": [
+                {
+                    "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+                },
+                {
+                    "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899"
+                },
+                {
+                    "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20"
+                },
+                {
+                    "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15"
+                },
+                {
+                    "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+                },
+                {
+                    "@id": "kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8"
+                },
+                {
+                    "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+                },
+                {
+                    "@id": "kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f"
+                },
+                {
+                    "@id": "kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51"
+                },
+                {
+                    "@id": "kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6"
+                },
+                {
+                    "@id": "kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b"
+                },
+                {
+                    "@id": "kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31"
+                },
+                {
+                    "@id": "kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d"
+                },
+                {
+                    "@id": "kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e"
+                },
+                {
+                    "@id": "kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89"
+                },
+                {
+                    "@id": "kb:Relationship-732cfd65-1be4-4123-894c-4f951493ae63"
+                },
+                {
+                    "@id": "kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262"
+                },
+                {
+                    "@id": "kb:Relationship-ddc23d5a-5b8c-4f42-bc82-fb4dc8654630"
+                },
+                {
+                    "@id": "kb:Relationship-0b086d89-db06-4503-807e-490563d10292"
+                },
+                {
+                    "@id": "kb:Relationship-6faf5831-fb44-471a-9016-076d439c2d95"
+                },
+                {
+                    "@id": "kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990"
+                },
+                {
+                    "@id": "kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:description": "Forensically recovered partition",
+            "uco-observable:observableCreatedTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-31T09:35:13.00Z"
+            },
+            "case-investigation:rootExhibitNumber": "20230816-001-001",
+            "case-investigation:exhibitNumber": "20230816-001-001-01-P4",
+            "uco-core:object": [
+                {
+                    "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+                },
+                {
+                    "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899"
+                },
+                {
+                    "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20"
+                },
+                {
+                    "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15"
+                },
+                {
+                    "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+                },
+                {
+                    "@id": "kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8"
+                },
+                {
+                    "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+                },
+                {
+                    "@id": "kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f"
+                },
+                {
+                    "@id": "kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51"
+                },
+                {
+                    "@id": "kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6"
+                },
+                {
+                    "@id": "kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b"
+                },
+                {
+                    "@id": "kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31"
+                },
+                {
+                    "@id": "kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d"
+                },
+                {
+                    "@id": "kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e"
+                },
+                {
+                    "@id": "kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89"
+                },
+                {
+                    "@id": "kb:Relationship-732cfd65-1be4-4123-894c-4f951493ae63"
+                },
+                {
+                    "@id": "kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262"
+                },
+                {
+                    "@id": "kb:Relationship-ddc23d5a-5b8c-4f42-bc82-fb4dc8654630"
+                },
+                {
+                    "@id": "kb:Relationship-0b086d89-db06-4503-807e-490563d10292"
+                },
+                {
+                    "@id": "kb:Relationship-6faf5831-fb44-471a-9016-076d439c2d95"
+                },
+                {
+                    "@id": "kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990"
+                }
+            ]
+        },
+        {
+            "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899",
+            "@type": "uco-observable:DiskPartition",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:disk-partition-facet-de753761-b15e-41b2-95da-81672c51d22c",
+                    "@type": "uco-observable:DiskPartitionFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-26T16:39:48Z"
+                    },
+                    "uco-observable:diskPartitionType": "FAT32",
+                    "drafting:partitionName": "NO NAME",
+                    "uco-observable:partitionOffset": 65536,
+                    "uco-observable:partitionID": "1",
+                    "uco-observable:partitionLength": 104857600
+                }
+            ]
+        },
+        {
+            "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20",
+            "@type": "uco-observable:DiskPartition",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:disk-partition-facet-040eb408-94e3-4fdf-a7fc-54d25c66a546",
+                    "@type": "uco-observable:DiskPartitionFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-26T16:40:04Z"
+                    },
+                    "uco-observable:diskPartitionType": "NTFS",
+                    "uco-observable:partitionOffset": 104923136,
+                    "uco-observable:partitionID": "2",
+                    "uco-observable:partitionLength": 125829120
+                }
+            ]
+        },
+        {
+            "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15",
+            "@type": "uco-observable:DiskPartition",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:disk-partition-facet-1cf2213c-6dad-4454-b474-ceda664a81e3",
+                    "@type": "uco-observable:DiskPartitionFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-26T16:40:41Z"
+                    },
+                    "uco-observable:diskPartitionType": "NTFS",
+                    "uco-observable:partitionOffset": 230752256,
+                    "uco-observable:partitionID": "3",
+                    "uco-observable:partitionLength": 146800640
+                }
+            ]
+        },
+        {
+            "@id": "kb:DiskPartitionExtended-f01d471e-829c-4a8e-afb4-bd3b85f59cd8",
+            "@type": "uco-observable:DiskPartition",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:disk-partition-facet-05945610-68c9-475b-bf38-a4bf9d1fc932",
+                    "@type": "uco-observable:DiskPartitionFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-15T00:29:15Z"
+                    },
+                    "uco-observable:diskPartitionType": "DOS Extended (0x05)",
+                    "drafting:diskPartitionOffset": 377552896,
+                    "uco-observable:partitionID": "4",
+                    "drafting:diskPartitionLength": 668991488
+                }
+            ]
+        },
+        {
+            "@id": "kb:Relationship-3fe8ae3f-0bc2-44cd-afb7-100dc5967a31",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:File-ce3a6e6a-bf38-4dec-9b97-a906a998ff06"
+            },
+            "uco-core:target": {
+                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:data-range-facet-2b54a0f8-9737-4c2b-8edd-584558cb6c2f",
+                    "@type": "uco-observable:DataRangeFacet",
+                    "uco-observable:rangeOffset": 377618432,
+                    "uco-observable:rangeSize": 52428800
+                }
+            ]
+        },
+        {
+            "@id": "kb:Relationship-468cd278-cf65-4403-b873-e61164e51c0b",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:DiskPartitionExtended-f01d471e-829c-4a8e-afb4-bd3b85f59cd8"
+            },
+            "uco-core:target": {
+                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+            },
+            "uco-core:kindOfRelationship": "Referenced-By",
+            "uco-core:startTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-15T00:29:15Z"
+            },
+            "uco-core:endTime": {
+                "@type": "xsd:dateTime",
+                "@value": "2023-08-15T16:38:06Z"
+            },
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:Relationship-1b676353-62fd-4c0f-9b5a-5e0739de596d",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8"
+            },
+            "uco-core:target": {
+                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:Volume-ee42d246-ee68-497a-9c79-4b1d5fba93d8",
+            "@type": "uco-observable:Volume",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:volume-facet-87beebe0-20fc-4ab3-a8f5-9b06529ef271",
+                    "@type": "uco-observable:VolumeFacet",
+                    "uco-observable:sectorSize": 512,
+                    "uco-observable:volumeID": "34 A2 74 12"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+            },
+            "uco-core:target": {
+                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true
+        },
+        {
+            "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4",
+            "@type": "uco-observable:FileSystem",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-system-facet-d14c4ae7-75e4-4043-97c5-e16b383ca714",
+                    "@type": "uco-observable:FileSystemFacet",
+                    "uco-observable:fileSystemType": "FAT32"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Relationship-bf0898a4-629d-49dd-926d-bbc24e80dc89",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f"
+            },
+            "uco-core:target": {
+                "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:path-relation-facet-b6f51579-6be3-42e2-bf81-290bfffad44c",
+                    "@type": "uco-observable:PathRelationFacet",
+                    "uco-observable:path": "/missedme.txt"
+                }
+            ]
+        },
+        {
+            "@id": "kb:File-5b6eca8c-bb34-451d-8896-7d4722c7b78f",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:file-facet-16b6a9f9-0b3d-4b7a-9c61-6859e7ca7e45",
+                    "uco-observable:extension": "txt",
+                    "uco-observable:fileName": "missedme.txt",
+                    "uco-observable:filePath": "/NewUSBExample.E01/vol_vol4/missedme.txt",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 81,
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-16T16:37:34Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-09-06T21:12:38Z"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:Relationship-732cfd65-1be4-4123-894c-4f951493ae63",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51"
+            },
+            "uco-core:target": {
+                "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:path-relation-facet-7bf952dc-f372-4432-9ffb-3582727776e3",
+                    "@type": "uco-observable:PathRelationFacet",
+                    "uco-observable:path": "/del_demo/folder1/?IRST.txt"
+                }
+            ]
+        },
+        {
+            "@id": "kb:File-cbb7b465-a251-4af3-80ac-49f7eaac8e51",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "uco-observable:extension": "txt",
+                    "uco-observable:fileName": "?IRST.txt",
+                    "uco-observable:filePath": "/NewUSBExample.E01/vol_vol4/del_demo/folder1/?IRST.txt",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 39,
+                    "@id": "kb:file-facet-fe9bb809-ad2c-41b3-9b04-281c5a4a83a0",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-16T16:37:59Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-08-16T16:38:00Z"
+                    }
+                },
+                {
+                    "@id": "kb:recovered-object-facet-1cba33f1-601f-4716-b409-5c6014c68a47",
+                    "@type": "uco-observable:RecoveredObjectFacet",
+                    "uco-observable:nameRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "partially recovered"
+                    },
+                    "uco-observable:metadataRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "recovered"
+                    },
+                    "uco-observable:contentRecoveredStatus": {
+                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                        "@value": "overwritten"
+                    }
+                }
+            ]
+        },
+        {
+            "@id": "kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6"
+            },
+            "uco-core:target": {
+                "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true,
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:path-relation-facet-3b7077c6-98fe-40bc-9f1f-0805f7cdaa97",
+                    "@type": "uco-observable:PathRelationFacet",
+                    "uco-observable:path": "/del_demo/folder2/SECOND.txt"
+                }
+            ]
+        },
+        {
+            "@id": "kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6",
+            "@type": "uco-observable:File",
+            "uco-core:hasFacet": [
+                {
+                    "uco-observable:extension": "txt",
+                    "uco-observable:fileName": "SECOND.txt",
+                    "uco-observable:filePath": "/NewUSBExample.E01/vol_vol4/del_demo/folder2/SECOND.txt",
+                    "uco-observable:isDirectory": false,
+                    "uco-observable:sizeInBytes": 40,
+                    "@id": "kb:file-facet-7daa8890-8301-4389-82bc-75642a652fdf",
+                    "@type": "uco-observable:FileFacet",
+                    "uco-observable:observableCreatedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2023-08-16T16:38:04Z"
+                    },
+                    "uco-observable:modifiedTime": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-08-16T16:38:06Z"
+                    }
+                }
+            ]
+        }
+    ]
+}

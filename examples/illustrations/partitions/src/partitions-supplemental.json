@@ -1,0 +1,585 @@
+[
+    {
+        "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276",
+        "@type": "uco-identity:Organization",
+        "uco-core:name": "Microsoft"
+    },
+    {
+        "@id": "kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61",
+        "@type": "uco-observable:OperatingSystem",
+        "uco-core:name": "Windows 11 Pro",
+        "uco-core:hasFacet": {
+            "@id": "kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623",
+            "@type": "uco-observable:OperatingSystemFacet",
+            "uco-observable:manufacturer": {
+                "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276"
+            },
+            "uco-observable:version": "22H2",
+            "drafting:buildID": "22621.2283"
+        }
+    },
+    {
+        "@id": "kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696",
+        "@type": [
+            "uco-observable:Software",
+            "uco-tool:Tool"
+        ],
+        "uco-core:name": "Disk Management",
+        "rdfs:seeAlso": {
+            "@id": "https://learn.microsoft.com/en-us/windows-server/storage/disk-management/overview-of-disk-management"
+        },
+        "uco-core:hasFacet": {
+            "@id": "kb:SoftwareFacet-c0a75e42-9ca7-4133-9838-881b67304923",
+            "@type": "uco-observable:SoftwareFacet",
+            "uco-observable:manufacturer": {
+                "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276"
+            }
+        }
+    },
+    {
+        "@id": "kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3",
+        "@type": "uco-observable:DiskPartition",
+        "uco-core:hasFacet": {
+            "@id": "kb:DiskPartitionFacet-9f027d4e-247d-4e29-9094-5f8f071d538e",
+            "@type": "uco-observable:DiskPartitionFacet",
+            "uco-observable:diskPartitionType": "Win95 FAT32 (0x0c)",
+            "uco-observable:partitionID": "000:000",
+            "uco-observable:partitionLength": 104857600,
+            "uco-observable:partitionOffset": 65536
+        }
+    },
+    {
+        "@id": "kb:DiskPartition1-19e98159-c55d-4e69-8281-fc35a6f8003e",
+        "@type": "uco-observable:DiskPartition"
+    },
+    {
+        "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:DiskPartition"
+        ],
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444",
+            "@type": [
+                "drafting:Event",
+                "prov:Generation",
+                "time:Instant"
+            ],
+            "time:after": {
+                "@id": "kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e"
+            }
+        }
+    },
+    {
+        "@id": "kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:DiskPartition"
+        ],
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-26aaae20-6d00-445a-b102-d080753986d2",
+            "@type": [
+                "drafting:Event",
+                "prov:Generation",
+                "time:Instant"
+            ],
+            "time:after": {
+                "@id": "kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444"
+            }
+        }
+    },
+    {
+        "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4",
+        "@type": "uco-observable:DiskPartition",
+        "uco-core:hasFacet": {
+            "@id": "kb:DiskPartitionFacet-9a5200b5-266a-441e-9c32-e1d3550729d6",
+            "@type": "uco-observable:DiskPartitionFacet",
+            "uco-observable:diskPartitionType": "DOS Extended (0x05)",
+            "uco-observable:partitionLength": 668991488,
+            "uco-observable:partitionOffset": 377552896
+        }
+    },
+    {
+        "@id": "kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1",
+        "@type": "uco-observable:DiskPartition",
+        "uco-core:hasFacet": {
+            "@id": "kb:DiskPartitionFacet-8fb6828a-5d96-4acd-beed-b40f32b3ebce",
+            "@type": "uco-observable:DiskPartitionFacet",
+            "uco-observable:diskPartitionType": "NTFS / exFAT (0x07)",
+            "uco-observable:partitionID": "000:001",
+            "uco-observable:partitionLength": 125829120,
+            "uco-observable:partitionOffset": 104923136
+        }
+    },
+    {
+        "@id": "kb:DiskPartition2-28aede24-3a87-4e64-b9ac-587305d0904a",
+        "@type": "uco-observable:DiskPartition"
+    },
+    {
+        "@id": "kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:DiskPartition"
+        ],
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779",
+            "@type": [
+                "drafting:Event",
+                "prov:Generation",
+                "time:Instant"
+            ],
+            "time:after": {
+                "@id": "kb:Event-26aaae20-6d00-445a-b102-d080753986d2"
+            }
+        }
+    },
+    {
+        "@id": "kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e",
+        "@type": "uco-observable:DiskPartition",
+        "uco-core:hasFacet": {
+            "@id": "kb:DiskPartitionFacet-fc793089-fc82-4a67-94aa-8acf1f659fb3",
+            "@type": "uco-observable:DiskPartitionFacet",
+            "uco-observable:diskPartitionType": "NTFS / exFAT (0x07)",
+            "uco-observable:partitionID": "000:002",
+            "uco-observable:partitionLength": 146800640,
+            "uco-observable:partitionOffset": 230752256
+        }
+    },
+    {
+        "@id": "kb:DiskPartition3-38e206a4-b4de-449b-8d47-e1f2db7fa553",
+        "@type": "uco-observable:DiskPartition"
+    },
+    {
+        "@id": "kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c",
+        "@type": [
+            "drafting:Event",
+            "prov:Generation",
+            "time:Instant"
+        ],
+        "time:after": {
+            "@id": "kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779"
+        },
+        "rdfs:comment": "This event was the generation of the extended partition table and its contained partition."
+    },
+    {
+        "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:DiskPartition"
+        ],
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c"
+        }
+    },
+    {
+        "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0",
+        "@type": "prov:Entity",
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c"
+        }
+    },
+    {
+        "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa",
+        "@type": "drafting:DiskPartitionSystem",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:DiskPartitionSystemFacet-f97e7cdb-4458-4c1e-b2c4-119dfbbdba9b",
+                "@type": "drafting:DiskPartitionSystemFacet",
+                "drafting:diskPartitionSchemeType": "MBR",
+                "drafting:partitionList": {
+                    "@id": "kb:partitionlist-e7018775-5b21-48eb-8b1c-25dc643ac9bc",
+                    "@type": "co:List",
+                    "co:size": {
+                        "@type": "xsd:nonNegativeInteger",
+                        "@value": "4"
+                    },
+                    "co:element": [
+                        {
+                            "@id": "kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3"
+                        },
+                        {
+                            "@id": "kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1"
+                        },
+                        {
+                            "@id": "kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e"
+                        },
+                        {
+                            "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4"
+                        }
+                    ],
+                    "co:item": [
+                        {
+                            "@id": "kb:partitionlist-item-19f6c854-19f0-46de-b420-6d5eb458b9c0",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "1"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-2e445cc6-00a7-41dd-9a54-0d7d5e3d328f"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-2e445cc6-00a7-41dd-9a54-0d7d5e3d328f",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "2"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-3b4c5e37-4c7a-4bb7-882e-3a8849b1d914"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-3b4c5e37-4c7a-4bb7-882e-3a8849b1d914",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "3"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-487535b3-4d0d-4a05-b8ce-853d992e75c0"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-487535b3-4d0d-4a05-b8ce-853d992e75c0",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "4"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0",
+        "@type": [
+            "drafting:DiskPartitionSystem",
+            "prov:Entity"
+        ],
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e",
+            "@type": [
+                "drafting:Event",
+                "prov:Generation",
+                "time:Instant"
+            ]
+        },
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:DiskPartitionSystemFacet-fae62886-ed9d-4804-9429-17fd14a8daac",
+                "@type": "drafting:DiskPartitionSystemFacet",
+                "rdfs:comment": "NOTE: Though the user-interface actions taken to create the partition system and each of its child partitions are each potentially time-stampable, separate uco-action:Actions, the Facet design pattern means the generating InvestigativeAction cannot be broken out into separate Actions.  The partition list must be generated and populated at the time of the creation of this Partition System object.  Hence, the act of creating the child partitions is instead represented as part of the multi-minute single Action that creates and populates the partition system.",
+                "drafting:diskPartitionSchemeType": "MBR",
+                "drafting:partitionList": {
+                    "@id": "kb:partitionlist-e9f1481a-d40f-4a9d-a275-b0d057be3a92",
+                    "@type": "co:List",
+                    "co:size": {
+                        "@type": "xsd:nonNegativeInteger",
+                        "@value": "5"
+                    },
+                    "co:element": [
+                        {
+                            "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e"
+                        },
+                        {
+                            "@id": "kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0"
+                        },
+                        {
+                            "@id": "kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5"
+                        },
+                        {
+                            "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1"
+                        },
+                        {
+                            "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+                        }
+                    ],
+                    "co:item": [
+                        {
+                            "@id": "kb:partitionlist-item-163bc314-b73b-46e3-965c-2a2937f2b68a",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "1"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-2adb371a-ac4d-4625-9d26-85b7a12c0db5"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-2adb371a-ac4d-4625-9d26-85b7a12c0db5",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "2"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-3d2e16f8-1f28-44ba-8f96-4ea5fa7b781c"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-3d2e16f8-1f28-44ba-8f96-4ea5fa7b781c",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "3"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-4b763375-1cef-4c18-9cc3-73f745002742"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-4b763375-1cef-4c18-9cc3-73f745002742",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "4"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-58f64e2c-111a-4de0-b53f-23612c4532dd"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-58f64e2c-111a-4de0-b53f-23612c4532dd",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "5"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    {
+        "@id": "kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f",
+        "@type": "uco-identity:Person",
+        "uco-core:name": "Alex Nelson"
+    },
+    {
+        "@id": "kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b",
+        "@type": "uco-role:Role",
+        "uco-core:name": "Forensic Researcher"
+    },
+    {
+        "@id": "kb:Relationship-e1919c92-4d47-4b33-be27-691ef4ec5b8c",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:source": {
+            "@id": "kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f"
+        },
+        "uco-core:target": {
+            "@id": "kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b"
+        },
+        "uco-core:kindOfRelationship": "Has_Role",
+        "uco-core:isDirectional": true
+    },
+    {
+        "@id": "kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+        }
+    },
+    {
+        "@id": "kb:Relationship-143d1375-76c9-42e0-b26d-de8f7403047c",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition2-27073ab0-24d3-4c5d-b472-1b6d5ed8dab1"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa"
+        }
+    },
+    {
+        "@id": "kb:Relationship-7df72f66-9fb2-49b4-be1c-b0cee31ba104",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+        }
+    },
+    {
+        "@id": "kb:Relationship-122dd1b1-1da4-4fa3-a701-f5a334d85037",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa"
+        }
+    },
+    {
+        "@id": "kb:Relationship-ddc23d5a-5b8c-4f42-bc82-fb4dc8654630",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+        }
+    },
+    {
+        "@id": "kb:Relationship-0b086d89-db06-4503-807e-490563d10292",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+        }
+    },
+    {
+        "@id": "kb:Relationship-61d73f33-1a1d-42d6-8c72-87ab57e4d632",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition1-18ddcc3a-bbcd-48ef-af01-3c0deee0d4a3"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa"
+        }
+    },
+    {
+        "@id": "kb:Relationship-6faf5831-fb44-471a-9016-076d439c2d95",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+        }
+    },
+    {
+        "@id": "kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+        }
+    },
+    {
+        "@id": "kb:Relationship-05df462f-a09a-45f9-b0bc-33af56fad990",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245"
+        }
+    },
+    {
+        "@id": "kb:Relationship-94c43ab8-337b-45d6-bb24-fd984e2fdbf7",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition3-374fdbc6-b152-4f91-b0b5-0e4f801b7e4e"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-08e84357-d739-402b-a4b5-3d63c55622fa"
+        }
+    },
+    {
+        "@id": "kb:Relationship-6ca9b1d0-85de-4e33-b8dd-fecbf2ba44ae",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+        }
+    },
+    {
+        "@id": "kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+        }
+    },
+    {
+        "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4",
+        "@type": "uco-observable:FileSystem",
+        "uco-core:hasFacet": {
+            "@id": "kb:FileSystemFacet-0833f401-db1c-42ce-b427-28fe4875193b",
+            "@type": "uco-observable:FileSystemFacet",
+            "uco-observable:fileSystemType": "FAT32"
+        }
+    },
+    {
+        "@id": "kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28",
+        "@type": "uco-observable:ObservableRelationship",
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+        }
+    }
+]

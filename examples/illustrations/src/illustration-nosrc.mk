@@ -72,6 +72,9 @@ all: \
   $(example_name)_validation-develop-2.0.0.ttl \
   $(example_name)_validation-unstable.ttl \
   $(example_name)_validation-unstable-2.0.0.ttl
+	test ! -r figures/Makefile \
+	  || $(MAKE) \
+	    --directory figures
 
 .PHONY: \
   check-pytest
