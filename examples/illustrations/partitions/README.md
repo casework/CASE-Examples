@@ -22,7 +22,7 @@ Illustrative examples are provided here to cover conditions commonly encountered
 
 These examples use a shared dataset that contains an MBR partition table and FAT and NTFS file systems, but the representation of partitions can be translated to other partition schemes.
 
-More specifically, these examples use the disk image `New USB Example.dd` created by Chris Hargreaves with three active partitions and one lost partition that was an extended partition [see CH website](https://www.github.com/chrepo/):
+More specifically, these examples use the disk image `New USB Example.dd` created by Chris Hargreaves with three active partitions and one lost partition that was an extended partition [see CH website](https://github.com/chrishargreaves/):
 
 A tested tool (named "Tool 4" in the accompanying CASE data) provides a list of active partitions, but does not automatically find the lost partition that was previously referenced by the extended partition.
 
