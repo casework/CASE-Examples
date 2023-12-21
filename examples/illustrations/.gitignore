@@ -1,3 +1,4 @@
+.drafting.ttl.validates*.log
 all-drafting.ttl
 generated-*.md
 generated-*.sed
