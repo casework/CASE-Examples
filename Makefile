@@ -111,7 +111,6 @@ all-dependencies: \
   .venv.done.log
 	$(MAKE) \
 	  --directory dependencies
-	touch $@
 
 check: \
   all-dependencies \
