@@ -1,0 +1,26 @@
+[
+    {
+        "@id": "kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2",
+        "@type": "uco-core:Relationship",
+        "uco-core:isDirectional": false,
+        "uco-core:kindOfRelationship": "Corresponds_to",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+        }
+    },
+    {
+        "@id": "kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82",
+        "@type": "uco-core:Relationship",
+        "uco-core:isDirectional": false,
+        "uco-core:kindOfRelationship": "Corresponds_to",
+        "uco-core:source": {
+            "@id": "kb:DiskPartition-e8be10dc-44ec-4fb6-844e-53f18b7513c4"
+        },
+        "uco-core:target": {
+            "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1"
+        }
+    }
+]

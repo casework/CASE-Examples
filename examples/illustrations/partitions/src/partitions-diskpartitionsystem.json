@@ -1,0 +1,92 @@
+[
+    {
+        "@id": "kb:DiskPartitionSystem-a639c005-a0be-4eab-ac44-e9f48cc84245",
+        "@type": "drafting:DiskPartitionSystem",
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:DiskPartitionSystemFacet-61ecd83f-5c20-4b41-bf6f-6d10bebfdb4c",
+                "@type": "drafting:DiskPartitionSystemFacet",
+                "drafting:diskPartitionSchemeType": "MBR",
+                "drafting:diskSignature": "04A95A92",
+                "drafting:unpartitionableSpace": "3997696",
+                "drafting:partitionList": {
+                    "@id": "kb:partitionlist-e0d00075-96fa-443e-be97-78efe0e8bc38",
+                    "@type": "co:List",
+                    "co:size": {
+                        "@type": "xsd:nonNegativeInteger",
+                        "@value": "4"
+                    },
+                    "co:element": [
+                        {
+                            "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899"
+                        },
+                        {
+                            "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20"
+                        },
+                        {
+                            "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15"
+                        },
+                        {
+                            "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+                        }
+                    ],
+                    "co:item": [
+                        {
+                            "@id": "kb:partitionlist-item-470d9cd6-eab4-400f-988d-7b8decb07119",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "1"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition1-d34878c1-5caf-4bea-9436-8d45a2603899"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-3739b0ad-e313-40a8-bfa5-b012449e7e93"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-3739b0ad-e313-40a8-bfa5-b012449e7e93",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "2"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition2-7868ea24-0fcd-4484-9841-9fc9d4f25e20"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "3"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition3-7aad22df-5d2e-40fc-8815-93cc2a815e15"
+                            },
+                            "co:nextItem": {
+                                "@id": "kb:partitionlist-item-9bd1300f-f544-4a27-9729-0c3d2112b6cd"
+                            }
+                        },
+                        {
+                            "@id": "kb:partitionlist-item-9bd1300f-f544-4a27-9729-0c3d2112b6cd",
+                            "@type": "co:ListItem",
+                            "co:index": {
+                                "@type": "xsd:positiveInteger",
+                                "@value": "4"
+                            },
+                            "co:itemContent": {
+                                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+]

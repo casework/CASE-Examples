@@ -214,7 +214,7 @@
                     "@id": "kb:trace-relationship-dfad5a2f-696b-44bd-88b7-04e634f7ee57"
                 },
                 {
-                    "@id": "kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1"
+                    "@id": "kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af"
                 },
                 {
                     "@id": "kb:trace-relationship-bd43f037-cf0f-4494-b36d-94f7a1da700c"
@@ -1083,7 +1083,7 @@
             },
             "uco-core:target": [
                 {
-                    "@id": "kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1"
+                    "@id": "kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af"
                 }
             ],
             "rdfs:comment": "TODO: CyberItemRelationshipEnum does not seem to be tied to uco-core:ControlledVocabulary.  ( https://github.com/ucoProject/UCO/issues/146 )",
@@ -1098,21 +1098,24 @@
             ]
         },
         {
-            "@id": "kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1",
-            "@type": "uco-observable:FileSystem",
+            "@id": "kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af",
+            "@type": "uco-observable:DiskPartition",
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:disk-partition-facet-1adea3d7-80be-4fcb-8e78-38a50404b487",
                     "@type": "uco-observable:DiskPartitionFacet",
-                    "rdfs:comment": [
-                        "TODO: partitionOffset should be in bytes.  Nothing in this example specifies the sector size of the device's storage.",
-                        "TODO: diskPartitionType in UCO 0.3.0 is supposed to describe the type of partition (per documenting rdfs:comment), not the type of the containing partition system.  However, further clarification is needed on the range of this property - the numeric type?  There does not appear to be a consistent dictionary labeling these numeric types, and tools frequently provide multiple guesses (e.g. TSK's mmls reports exfat and ntfs for one code)."
-                    ],
-                    "uco-observable:diskPartitionType": "MBR",
-                    "uco-observable:partitionID": "06",
-                    "uco-observable:partitionOffset": 63,
-                    "uco-observable:partitionLength": 245235063
-                },
+                    "uco-observable:diskPartitionType": "Linux (0x83)",
+                    "drafting:diskPartitionName": "userdata",
+                    "uco-observable:partitionOffset": 11010048,
+                    "uco-observable:partitionID": "42",
+                    "uco-observable:partitionLength": 50053119
+                }
+            ]
+        },
+        {
+            "@id": "kb:cassandra-image-filesystem-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1",
+            "@type": "uco-observable:FileSystem",
+            "uco-core:hasFacet": [
                 {
                     "@id": "kb:file-system-facet-ea298510-c4b6-4c66-b1e6-4c5e57875d3c",
                     "@type": "uco-observable:FileSystemFacet",
@@ -1143,7 +1146,7 @@
             "@id": "kb:trace-relationship-bd43f037-cf0f-4494-b36d-94f7a1da700c",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:source": {
-                "@id": "kb:cassandra-image-partition-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1"
+                "@id": "kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af"
             },
             "uco-core:target": {
                 "@id": "kb:cassandra-mobiledevice-forensicduplicate-95d5a618-8265-4cb8-8140-ac8ea281c536"
@@ -1154,10 +1157,22 @@
                 {
                     "@id": "kb:data-range-facet-5c250680-cc8b-40d5-a6e9-8adb878b8ff7",
                     "@type": "uco-observable:DataRangeFacet",
-                    "uco-observable:rangeOffset": 234909233,
-                    "uco-observable:rangeSize": 120000000000
+                    "uco-observable:rangeOffset": 11010048,
+                    "uco-observable:rangeSize": 50053119
                 }
             ]
+        },
+        {
+            "@id": "kb:trace-relationship-9f68401c-206e-4ff5-b342-2ef14331ad67",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:cassandra-image-filesystem-64c9eeab-7e98-4256-a4f2-c3bb92ae0ef1"
+            },
+            "uco-core:target": {
+                "@id": "kb:cassandra-image-partition-8fcf085d-c5a1-4997-a73e-e04d1c0ad2af"
+            },
+            "uco-core:kindOfRelationship": "Contained_Within",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:person-82684209-0ee5-45d9-b873-125d2ca63919",

@@ -1,0 +1,92 @@
+<!--
+GENERATED FILE  README.md is generated from source files.  Edits to it will be overwritten by automated processes.:
+
+If you need to edit its content, edit src/README.md.in, and then re-run `make` to re-build the file.
+-->
+
+
+# Partitions Examples
+
+*A file containing all of the JSON-LD content within this page is here: [`partitions.json`](partitions.json).*
+
+*A file containing draft ontology concepts is here: [`drafting.ttl`](drafting.ttl).  It is expected to be removed with the completion of [UCO Issue 376](https://github.com/ucoProject/UCO/issues/376).*
+
+Although an individual partition can be represented using [`uco-observable:DiskPartitionFacet`](https://ontology.unifiedcyberontology.org/documentation/class-observablediskpartitionfacet.html), there is a need to represent the `DiskPartitionSystem` that lists the `DiskPartition` details.
+
+The following subclasses may be needed but are beyond the scope of this proposal: `GPTPartitionSystem`, `MBRPartitionSystem`, `BSDDiskLabel`, and `ApplePartitionMap`.
+
+
+## Extended Partitions
+
+Illustrative examples are provided here to cover conditions commonly encountered when parsing partitions and recovering lost partitions.
+
+These examples use a shared dataset that contains an MBR partition table and FAT and NTFS file systems, but the representation of partitions can be translated to other partition schemes.
+
+More specifically, these examples use the disk image `New USB Example.dd` created by Chris Hargreaves with three active partitions and one lost partition that was an extended partition [see CH website](https://github.com/chrishargreaves/):
+
+A tested tool (named "Tool 4" in the accompanying CASE data) provides a list of active partitions, but does not automatically find the lost partition that was previously referenced by the extended partition.
+
+Proposed representation of `DiskPartitionSystem` in CASE:
+
+```json
+@PARTITIONS_DISKPARTITIONSYSTEM_JSON@
+```
+
+A tested tool (named "Tool 1" in the accompanying CASE data) has a feature to recover lost partitions, which was successful with this dataset.
+
+This recovered partition can be represented using the `observable:RecoveredObjectFacet` as follows:
+
+```json
+@PARTITIONS_DISKPARTITION_JSON@
+```
+
+Once the lost partition has been recovered, the contained file system can be parsed and non-allocated files can be recovered.
+
+
+## Result correspondence
+
+One way to review tool results is seeing how the recovered objects compare with known information about the initial subject data.  For instance, the setup notes include that four partitions, plus the special container "Extended" partition, in an MBR partitioning system were created, and the last partition was unallocated but not wiped.  The tools' found partition objects can be related to the original objects using `Relationship`s produced from an `Analysis`.
+
+```json
+@PARTITIONS_CORRELATION_RELATIONSHIPS_JSON@
+```
+
+The first `Relationship` relates the recovered partition to the partition that was deleted, and was drawn from review of the prepared partition system and the recovered partition system.  Illustration of the provenance of specifically the `Analysis`'s found `Relationship` is [here](figures/partitions-prov-focused-b6ab7ce4.svg?raw=true).
+
+```json
+@PARTITIONS_CORRELATION_TOOL_1_JSON@
+```
+
+The other `Relationship` relates the parsed, still-active "Extended" partition reported by Tool 4 to the prepared partition system's "Extended" partition.  Illustration of the provenance of specifically the `Analysis`'s found `Relationship` is [here](figures/partitions-prov-focused-27762c2c.svg?raw=true).
+
+```json
+@PARTITIONS_CORRELATION_TOOL_4_JSON@
+```
+
+These two `AnalyticResults` complement one another by discussing separate interdependent objects from the original partition system.  From them and ground truth knowledge of the initial `Relationship`s, another conclusion is drawn, that the file system recovered by Tool 1 corresponds with the file system in the partition that had been deleted.  That correspondence between file systems is then fed into a similar analysis determining the correspondence between recovered `SECOND.TXT` files.  Illustration of the provenance of specifically the file systems' `Analysis`'s found `Relationship` is [here](figures/partitions-prov-focused-8589174a.svg?raw=true), and the files' [here](figures/partitions-prov-focused-5a191a50.svg?raw=true), though the history by now attains sufficient visual complexity that it is likely total review of the chain of communication and possibly delegation would be more accessible.  See the table in [provenance illustrations](#provenance-illustrations).  Each of the linked SVGs contains searchable text, if one wishes to locate where in an object's history a certain node enters.
+
+```json
+@PARTITIONS_CORRELATION_RECOVERED_FILE_SYSTEM_JSON@
+```
+
+
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/partitions-relationships.svg](figures/partitions-relationships.svg?raw=true)
+
+
+## Provenance illustrations
+
+Following visual-design practices of [PROV-O](https://www.w3.org/TR/prov-o/), the following renders of this scenario are available:
+
+| Figure's contents | Time hidden | Time displayed |
+| --- | --- | --- |
+| All | ![figures/partitions-prov-all.svg](figures/partitions-prov-all.svg?raw=true) | ![figures/partitions-prov-time-all.svg](figures/partitions-prov-time-all.svg?raw=true) |
+| Chains of communication (activities) | ![figures/partitions-prov-activities.svg](figures/partitions-prov-activities.svg?raw=true) | ![figures/partitions-prov-time-activities.svg](figures/partitions-prov-time-activities.svg?raw=true) |
+| Chains of delegation (agents) | ![figures/partitions-prov-agents.svg](figures/partitions-prov-agents.svg?raw=true) | ![figures/partitions-prov-time-agents.svg](figures/partitions-prov-time-agents.svg?raw=true) |
+| Chains of derivation (entities) | ![figures/partitions-prov-entities.svg](figures/partitions-prov-entities.svg?raw=true) | ![figures/partitions-prov-time-entities.svg](figures/partitions-prov-time-entities.svg?raw=true) |
+| Chains of communication and delegation | ![figures/partitions-prov-activities-agents.svg](figures/partitions-prov-activities-agents.svg?raw=true) | ![figures/partitions-prov-time-activities-agents.svg](figures/partitions-prov-time-activities-agents.svg?raw=true) |
+| Chains of communication and derivation | ![figures/partitions-prov-activities-entities.svg](figures/partitions-prov-activities-entities.svg?raw=true) | ![figures/partitions-prov-time-activities-entities.svg](figures/partitions-prov-time-activities-entities.svg?raw=true) |
+| Chains of delegation and derivation | ![figures/partitions-prov-agents-entities.svg](figures/partitions-prov-agents-entities.svg?raw=true) | ![figures/partitions-prov-time-agents-entities.svg](figures/partitions-prov-time-agents-entities.svg?raw=true) |

@@ -1,0 +1,40 @@
+[
+    {
+        "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17",
+        "@type": [
+            "uco-observable:DiskPartition",
+            "uco-observable:RecoveredObject"
+        ],
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:disk-partition-facet-588a0bb6-f791-445c-8d1c-826bd5465f3c",
+                "@type": "uco-observable:DiskPartitionFacet",
+                "uco-observable:observableCreatedTime": {
+                    "@type": "xsd:dateTime",
+                    "@value": "2023-08-15T00:29:15Z"
+                },
+                "uco-observable:diskPartitionType": "FAT32",
+                "drafting:partitionName": "NO NAME",
+                "drafting:diskPartitionOffset": 377618432,
+                "uco-observable:partitionID": "4",
+                "drafting:diskPartitionLength": 52428800
+            },
+            {
+                "@id": "kb:recovered-object-facet-0a916246-a9a0-43ad-a158-ae76cc2c1bb7",
+                "@type": "uco-observable:RecoveredObjectFacet",
+                "uco-observable:contentRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:metadataRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                },
+                "uco-observable:nameRecoveredStatus": {
+                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
+                    "@value": "recovered"
+                }
+            }
+        ]
+    }
+]

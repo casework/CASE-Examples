@@ -1,0 +1,105 @@
+[
+    {
+        "@id": "kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab",
+        "@type": "uco-core:Relationship",
+        "uco-core:isDirectional": false,
+        "uco-core:kindOfRelationship": "Corresponds_to",
+        "uco-core:source": {
+            "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+        },
+        "uco-core:target": {
+            "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+        }
+    },
+    {
+        "@id": "kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:Analysis-32be09b3-89cd-4461-9098-c5204220abd5"
+        },
+        "uco-analysis:resultContent": {
+            "@id": "kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab"
+        }
+    },
+    {
+        "@id": "kb:Analysis-32be09b3-89cd-4461-9098-c5204220abd5",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
+        "uco-core:description": "Using belief of correspondence between parsed extended partition with original extended partition; and recovered partition with original last partition; compare recovered file system against original file system in last partition",
+        "uco-action:performer": {
+            "@id": "kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:Relationship-27762c2c-7140-4ea9-924e-5c9941671c82"
+            },
+            {
+                "@id": "kb:AnalyticResult-8bf460c4-adaf-4839-83b6-ff1d80f7abbd"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-14fde3cf-b65a-4ef8-b539-ef43e0763787"
+            },
+            {
+                "@id": "kb:AnalyticResult-e69d471d-e0a7-4647-9365-1fb662f02bdf"
+            },
+            {
+                "@id": "kb:Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-ee82f650-2ccf-4363-8fe2-b3fd4c465681"
+            },
+            {
+                "@id": "kb:FileSystem-0cb3c77d-6333-405f-b376-e9e30340cfd4"
+            },
+            {
+                "@id": "kb:Relationship-e6679bc7-e4df-416e-9565-c33883f3716e"
+            },
+            {
+                "@id": "kb:DiskPartition4-5715fe11-06b8-45ac-832d-c4167f4aac17"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976"
+            },
+            {
+                "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+            },
+            {
+                "@id": "kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28"
+            },
+            {
+                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab"
+            },
+            {
+                "@id": "kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-ead0d8a8-b8b7-41cc-876e-3a7529cff711"
+            }
+        ]
+    },
+    {
+        "@id": "kb:ProvenanceRecord-ead0d8a8-b8b7-41cc-876e-3a7529cff711",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab"
+            },
+            {
+                "@id": "kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe"
+            }
+        ]
+    }
+]

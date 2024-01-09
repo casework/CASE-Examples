@@ -1,0 +1,87 @@
+[
+    {
+        "@id": "kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1",
+        "@type": "uco-core:Relationship",
+        "uco-core:isDirectional": false,
+        "uco-core:kindOfRelationship": "Corresponds_to",
+        "uco-core:source": {
+            "@id": "kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a"
+        },
+        "uco-core:target": {
+            "@id": "kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6"
+        }
+    },
+    {
+        "@id": "kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a",
+        "@type": "uco-analysis:AnalyticResult",
+        "uco-analysis:originatingAnalysis": {
+            "@id": "kb:Analysis-9dbfb955-d739-42cf-9fcf-7df99a9edc4b"
+        },
+        "uco-analysis:resultContent": {
+            "@id": "kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1"
+        }
+    },
+    {
+        "@id": "kb:Analysis-9dbfb955-d739-42cf-9fcf-7df99a9edc4b",
+        "@type": [
+            "case-investigation:InvestigativeAction",
+            "uco-analysis:Analysis"
+        ],
+        "uco-core:description": "Using belief of correspondence between recovered file system and original file system in last partition, compared recovered file SECOND.TXT with original file of same name.",
+        "uco-action:performer": {
+            "@id": "kb:Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a"
+            },
+            {
+                "@id": "kb:File-d49b16a6-ee81-46ad-ac3f-9111fdc125f6"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-0d32f92d-a906-4066-8ddb-bc264cc7d976"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf"
+            },
+            {
+                "@id": "kb:Relationship-350d53b9-9b4c-4c60-9ea4-8072a599e262"
+            },
+            {
+                "@id": "kb:Relationship-994db660-00b1-468d-844b-1a6636356722"
+            },
+            {
+                "@id": "kb:AnalyticResult-2ffdd3da-9eb5-409c-bcce-6ad289c869fe"
+            },
+            {
+                "@id": "kb:Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-ead0d8a8-b8b7-41cc-876e-3a7529cff711"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1"
+            },
+            {
+                "@id": "kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-7be0575c-63fd-4adc-bd56-523f2c9ca437"
+            }
+        ]
+    },
+    {
+        "@id": "kb:ProvenanceRecord-7be0575c-63fd-4adc-bd56-523f2c9ca437",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:object": [
+            {
+                "@id": "kb:Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1"
+            },
+            {
+                "@id": "kb:AnalyticResult-14641bfa-ef39-4394-a8ae-d0f57a2d637a"
+            }
+        ]
+    }
+]

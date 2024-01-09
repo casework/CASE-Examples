@@ -1,0 +1,244 @@
+@prefix co: <http://purl.org/co/> .
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix uco-observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
+@prefix uco-types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+drafting:DiskPartitionFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-core:Facet ;
+	rdfs:label "DiskPartitionFacet"@en ;
+	rdfs:comment "A disk partition facet is a grouping of characteristics unique to a particular managed region on a storage mechanism."@en ;
+	sh:property
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:partitionStatus ;
+		] ,
+		[
+			sh:datatype xsd:string ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:Literal ;
+			sh:path drafting:partitionName ;
+		]
+		;
+	sh:targetClass drafting:DiskPartitionFacet ;
+	.
+
+drafting:DiskPartitionSystem
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-observable:ObservableObject ;
+	rdfs:label "DiskPartitionSystem"@en ;
+	rdfs:comment "A partition system is an ordered structured list of areas on storage media segmented for file systems or swap space."@en ;
+	sh:targetClass drafting:DiskPartitionSystem ;
+	.
+
+drafting:DiskPartitionSystemFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-core:Facet ;
+	rdfs:label "DiskPartitionSystemFacet"@en ;
+	rdfs:comment "def"@en ;
+	sh:property
+		[
+			sh:class uco-observable:DiskPartition ;
+			sh:description "The contents of ordered items in the Disk Partition linked by DiskPartitionSystem must be partition objects."@en ;
+			sh:path (
+				drafting:partitionList
+				co:item
+				co:itemContent
+			) ;
+		] ,
+		[
+			sh:class uco-observable:DiskPartition ;
+			sh:description "The contents of ordered items in the Disk Partition linked by DiskPartitionSystem must be partition objects."@en ;
+			sh:path (
+				drafting:partitionList
+				drafting:partitionOriginItem
+				co:itemContent
+			) ;
+		] ,
+		[
+			sh:class uco-observable:DiskPartition ;
+			sh:description "The contents of ordered items in the Disk Partition linked by DiskPartitionSystem must be partition objects."@en ;
+			sh:path (
+				drafting:partitionList
+				drafting:partitionTerminalItem
+				co:itemContent
+			) ;
+		] ,
+		[
+			sh:class uco-observable:DiskPartition ;
+			sh:description "The contents of unordered items in the Disk Partition linked by DiskPartitionSystem must be partition objects."@en ;
+			sh:path (
+				drafting:partitionList
+				co:element
+			) ;
+		] ,
+		[
+			sh:class co:List ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path drafting:partitionList ;
+		] ,
+		[
+			sh:class uco-observable:DiskPartition ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path uco-observable:partition ;
+		] 
+		;
+	sh:targetClass drafting:DiskPartitionSystemFacet ;
+	.
+
+drafting:Event
+	a owl:Class ;
+	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/541> ;
+	.
+
+drafting:buildID
+	a owl:DatatypeProperty ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:buildID-objects-shape
+	a sh:NodeShape ;
+	sh:datatype xsd:string ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf drafting:buildID ;
+	.
+
+drafting:partitionList
+	a owl:ObjectProperty ;
+	rdfs:label "Partition List"@en ;
+	rdfs:comment "The list of partitions."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/376> ;
+	rdfs:range co:List ;
+	.
+
+drafting:partitionName
+	a owl:DatatypeProperty ;
+	rdfs:label "Partition Name"@en ;
+	rdfs:comment "The name assigned to a partition."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/376> ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:partitionStatus
+	a owl:DatatypeProperty ;
+	rdfs:label "Partition Status"@en ;
+	rdfs:comment "The status field indicates whether the volume is readable, writable, a system partition, a startup partition, etc."@en ;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/376> ;
+	rdfs:range xsd:string ;
+	.
+
+drafting:result-objects-inverse-shape
+	a sh:NodeShape ;
+	sh:description "This shape enforces that no object be the result of two different Actions, which maps to a PROV-CONSTRAINTs violation of unique Generation."@en ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:maxCount "1"^^xsd:integer ;
+		sh:path [
+			sh:inversePath uco-action:result ;
+		] ;
+	] ;
+	sh:targetObjectsOf uco-action:result ;
+	.
+
+drafting:temp-partition-nesting-shape
+	a sh:NodeShape ;
+	sh:description "This shape is a temporary shape for data consistency within the CASE-Examples illustration 'partitions'."@en ;
+	sh:sparql [
+		a sh:SPARQLConstraint ;
+		sh:description "Find all disk partition objects that are not tied to and related to a partition system generated by the same InvestigativeAction."@en ;
+		sh:message "Focus node is not in partition system found by their shared generating action."@en ;
+		sh:select """
+			PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+			PREFIX co: <http://purl.org/co/>
+			PREFIX drafting: <http://example.org/ontology/drafting/>
+			PREFIX uco-action: <https://ontology.unifiedcyberontology.org/uco/action/>
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this ?value
+			WHERE {
+				?nAction
+					uco-action:result
+						$this ,
+						?value
+						;
+					.
+				?value
+					a drafting:DiskPartitionSystem ;
+					.
+				FILTER NOT EXISTS {
+					?value
+						uco-core:hasFacet / drafting:partitionList ?nPartitionList ;
+						.
+					?nPartitionList
+						co:element $this ;
+						co:item / co:itemContent $this ;
+						.
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass uco-observable:DiskPartition ;
+	.
+
+drafting:temp-partition-relationship-to-partitionsystem-shape
+	a sh:NodeShape ;
+	sh:description "This shape is a temporary shape for data consistency within the CASE-Examples illustration 'partitions'."@en ;
+	sh:sparql [
+		a sh:SPARQLConstraint ;
+		sh:description "Find all disk partition objects that are not related to a partition system with a Relationship object."@en ;
+		sh:message "Focus node does not have a Contained_Within Relationship object tying to its partition system."@en ;
+		sh:select """
+			PREFIX co: <http://purl.org/co/>
+			PREFIX drafting: <http://example.org/ontology/drafting/>
+			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+			SELECT $this ?value
+			WHERE {
+				?value
+					uco-core:hasFacet / drafting:partitionList / co:element $this ;
+					.
+				FILTER NOT EXISTS {
+					?nRelationship
+						uco-core:kindOfRelationship "Contained_Within" ;
+						uco-core:source $this ;
+						uco-core:target ?value ;
+						.
+				}
+			}
+		""" ;
+	] ;
+	sh:targetClass uco-observable:DiskPartition ;
+	.
+
+uco-observable:DiskPartition
+	sh:property [
+		a sh:PropertyShape ;
+		sh:description "This shape confirms a DiskPartition does not have two instances of DiskPartitionFacet."@en ;
+		sh:path uco-core:hasFacet ;
+		sh:qualifiedMaxCount "1"^^xsd:integer ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:class uco-observable:DiskPartitionFacet ;
+		] ;
+	] ;
+	.
+

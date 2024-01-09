@@ -1,0 +1,371 @@
+[
+    {
+        "@id": "kb:InvestigativeAction-83a8b184-075b-4973-9c51-fe3fe2f7c3f8",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:description": "Run preparation script 1: Creation of partition system and file systems",
+        "uco-action:environment": {
+            "@id": "kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696"
+        },
+        "uco-action:performer": {
+            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-f95bcbef-54fd-46ca-874c-051f9674d245"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e"
+            },
+            {
+                "@id": "kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0"
+            },
+            {
+                "@id": "kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5"
+            },
+            {
+                "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1"
+            },
+            {
+                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+            },
+            {
+                "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+            },
+            {
+                "@id": "kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565"
+            },
+            {
+                "@id": "kb:Relationship-7df72f66-9fb2-49b4-be1c-b0cee31ba104"
+            },
+            {
+                "@id": "kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69"
+            },
+            {
+                "@id": "kb:Relationship-6ca9b1d0-85de-4e33-b8dd-fecbf2ba44ae"
+            },
+            {
+                "@id": "kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649"
+            },
+            {
+                "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+            },
+            {
+                "@id": "kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f"
+            }
+        ]
+    },
+    {
+        "@id": "kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Record of modification of disk state: Initial object creation",
+        "uco-core:object": [
+            {
+                "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+            },
+            {
+                "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e"
+            },
+            {
+                "@id": "kb:DiskPartition-251032a2-35e4-4be3-9de8-d2943eeca6a0"
+            },
+            {
+                "@id": "kb:DiskPartition-32f65e72-ffa3-4c01-9a10-ddfb688a86f5"
+            },
+            {
+                "@id": "kb:DiskPartition-4f68c4c7-8efc-4c0f-ad7f-20fe2ced2fb1"
+            },
+            {
+                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+            },
+            {
+                "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+            },
+            {
+                "@id": "kb:Relationship-c439b4b4-e07e-4bbe-b9b1-4fccb762e565"
+            },
+            {
+                "@id": "kb:Relationship-7df72f66-9fb2-49b4-be1c-b0cee31ba104"
+            },
+            {
+                "@id": "kb:Relationship-05f2c909-3a5c-433f-918d-3b410df21e69"
+            },
+            {
+                "@id": "kb:Relationship-6ca9b1d0-85de-4e33-b8dd-fecbf2ba44ae"
+            },
+            {
+                "@id": "kb:Relationship-fb8026c8-4391-4372-98d7-c21cac111649"
+            },
+            {
+                "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+            },
+            {
+                "@id": "kb:Relationship-de84dae6-9be2-4ac1-b334-c667b2fe4b28"
+            }
+        ]
+    },
+    {
+        "@id": "kb:Tool-8ae63f46-44cb-40d9-9e50-539b29f05ea8",
+        "@type": [
+            "prov:Entity",
+            "prov:SoftwareAgent",
+            "uco-tool:Tool"
+        ],
+        "uco-core:name": "file_copier.py",
+        "uco-core:description": "A one-off test subject population script.",
+        "prov:wasAttributedTo": {
+            "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
+        }
+    },
+    {
+        "@id": "kb:InvestigativeAction-37881b8a-edad-41e3-ae0c-4c205cf2d8d1",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:description": "Run preparation script 2: Placing overwritten file",
+        "uco-action:environment": {
+            "@id": "kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:Tool-8ae63f46-44cb-40d9-9e50-539b29f05ea8"
+        },
+        "uco-action:performer": {
+            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:File-dc86b574-f66b-4b79-b254-e55449535ef5"
+            },
+            {
+                "@id": "kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a"
+            },
+            {
+                "@id": "kb:Relationship-72049a02-0ec0-428c-b1ac-043808aa3a6d"
+            },
+            {
+                "@id": "kb:Relationship-77c33269-e357-4203-a1b6-663d71aee493"
+            },
+            {
+                "@id": "kb:Relationship-994db660-00b1-468d-844b-1a6636356722"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf"
+            }
+        ]
+    },
+    {
+        "@id": "kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Record of creation of a file, its deletion, and its overwriting with the creation of another file.",
+        "uco-core:object": [
+            {
+                "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+            },
+            {
+                "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+            },
+            {
+                "@id": "kb:File-dc86b574-f66b-4b79-b254-e55449535ef5"
+            },
+            {
+                "@id": "kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a"
+            },
+            {
+                "@id": "kb:Relationship-72049a02-0ec0-428c-b1ac-043808aa3a6d"
+            },
+            {
+                "@id": "kb:Relationship-77c33269-e357-4203-a1b6-663d71aee493"
+            },
+            {
+                "@id": "kb:Relationship-994db660-00b1-468d-844b-1a6636356722"
+            }
+        ]
+    },
+    {
+        "@id": "kb:File-dc86b574-f66b-4b79-b254-e55449535ef5",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:File"
+        ],
+        "uco-core:name": "FIRST.TXT",
+        "rdfs:comment": "This File object avoids using the uco-observable:fileName property because that property changes values in this scenario, suggesting the need for a Quality to represent how this file's name is represented.",
+        "rdfs:seeAlso": {
+            "@id": "https://github.com/ucoProject/UCO/issues/535"
+        }
+    },
+    {
+        "@id": "kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348",
+        "@type": [
+            "drafting:Event",
+            "prov:Generation",
+            "prov:Invalidation",
+            "time:Instant"
+        ],
+        "rdfs:comment": "The precise timestamp of this file deletion event was not recorded, but it is known to have occurred.  This event invalidates (ends) a Relationship FIRST.TXT had with its file system, leaving FIRST.TXT in a marked-unallocated state apparent from a superseding Relationship."
+    },
+    {
+        "@id": "kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:File"
+        ],
+        "uco-core:name": "SECOND.TXT",
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Generation-6a6274a8-a82b-45ca-b570-dea8789560af",
+            "@type": [
+                "drafting:Event",
+                "prov:Generation",
+                "time:Instant"
+            ],
+            "rdfs:comment": "The precise timestamp of this file creation event was not recorded, but it is known to have occurred after FIRST.TXT's deletion.",
+            "time:after": {
+                "@id": "kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348"
+            }
+        }
+    },
+    {
+        "@id": "kb:Relationship-72049a02-0ec0-428c-b1ac-043808aa3a6d",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:ObservableRelationship"
+        ],
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:File-dc86b574-f66b-4b79-b254-e55449535ef5"
+        },
+        "uco-core:target": {
+            "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+        },
+        "uco-core:hasFacet": {
+            "@id": "kb:PathRelationFacet-df847850-f362-48a6-a8b0-5d03e83f8bba",
+            "@type": "uco-observable:PathRelationFacet",
+            "uco-observable:path": "/del_demo/folder1/FIRST.txt"
+        },
+        "prov:qualifiedInvalidation": {
+            "@id": "kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348"
+        }
+    },
+    {
+        "@id": "kb:Relationship-77c33269-e357-4203-a1b6-663d71aee493",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:ObservableRelationship"
+        ],
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:File-dc86b574-f66b-4b79-b254-e55449535ef5"
+        },
+        "uco-core:target": {
+            "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+        },
+        "uco-core:hasFacet": {
+            "@id": "kb:PathRelationFacet-b9510561-e892-4122-871e-1220533f083c",
+            "@type": "uco-observable:PathRelationFacet",
+            "uco-observable:path": "/del_demo/folder1/?IRST.txt"
+        },
+        "prov:qualifiedGeneration": {
+            "@id": "kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348"
+        }
+    },
+    {
+        "@id": "kb:Relationship-994db660-00b1-468d-844b-1a6636356722",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:ObservableRelationship"
+        ],
+        "uco-core:isDirectional": true,
+        "uco-core:kindOfRelationship": "Contained_Within",
+        "uco-core:source": {
+            "@id": "kb:File-f79ac23c-acdb-43dd-a623-72f1f335996a"
+        },
+        "uco-core:target": {
+            "@id": "kb:FileSystem-4c4577c2-cbf2-41c6-a615-02a78c0577a4"
+        },
+        "uco-core:hasFacet": {
+            "@id": "kb:PathRelationFacet-d2dcd646-2bdc-423c-a80a-bf19588623c1",
+            "@type": "uco-observable:PathRelationFacet",
+            "uco-observable:path": "/del_demo/folder2/SECOND.txt"
+        }
+    },
+    {
+        "@id": "kb:InvestigativeAction-8ab415cd-6156-4e86-b5f5-34d9cb583075",
+        "@type": "case-investigation:InvestigativeAction",
+        "uco-core:description": "Run preparation script 3: Manual deletion of partition",
+        "uco-action:environment": {
+            "@id": "kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61"
+        },
+        "uco-action:instrument": {
+            "@id": "kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696"
+        },
+        "uco-action:performer": {
+            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+        },
+        "uco-action:object": [
+            {
+                "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+            },
+            {
+                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+            },
+            {
+                "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-21988cc3-e873-41bc-819c-117eb80e69bf"
+            },
+            {
+                "@id": "kb:ProvenanceRecord-4e73ba28-8741-41d8-b774-acf06cbd976f"
+            }
+        ],
+        "uco-action:result": [
+            {
+                "@id": "kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1"
+            }
+        ]
+    },
+    {
+        "@id": "kb:ProvenanceRecord-3ac62016-0bbe-4f0e-bf7d-07d4de019fd1",
+        "@type": "case-investigation:ProvenanceRecord",
+        "uco-core:description": "Record of modification of disk state: Deletion of some objects",
+        "uco-core:object": [
+            {
+                "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
+            },
+            {
+                "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0"
+            },
+            {
+                "@id": "kb:DiskPartitionSystem-0c96e621-9eff-43e8-bd3d-9e4e8c075df0"
+            }
+        ]
+    },
+    {
+        "@id": "kb:DiskPartition-5000a2e8-13d4-4cab-bf2a-bcf217b991f0",
+        "@type": [
+            "prov:Entity",
+            "uco-observable:DiskPartition"
+        ],
+        "rdfs:comment": "CASE and UCO do not at present have a concept for an object's 'conclusion', analagous to a PROV Invalidation.  'prov:wasInvalidatedBy' is used to fulfill this need for this example.",
+        "prov:wasInvalidatedBy": {
+            "@id": "kb:InvestigativeAction-83a8b184-075b-4973-9c51-fe3fe2f7c3f8"
+        }
+    }
+]
