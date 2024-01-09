@@ -148,7 +148,7 @@
         },
         {
             "@id": "kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac",
-            "@type": "uco-observable:ObservableRelationship",
+            "@type": "uco-core:Relationship",
             "uco-core:source": {
                 "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
             },

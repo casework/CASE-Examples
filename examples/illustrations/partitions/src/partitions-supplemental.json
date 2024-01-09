@@ -395,7 +395,7 @@
     },
     {
         "@id": "kb:Relationship-e1919c92-4d47-4b33-be27-691ef4ec5b8c",
-        "@type": "uco-observable:ObservableRelationship",
+        "@type": "uco-core:Relationship",
         "uco-core:source": {
             "@id": "kb:Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f"
         },
