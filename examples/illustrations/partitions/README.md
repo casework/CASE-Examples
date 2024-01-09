@@ -150,7 +150,7 @@ This recovered partition can be represented using the `observable:RecoveredObjec
                 "drafting:diskPartitionLength": 52428800
             },
             {
-                "@id": "kb:recovered-object-facet-0a916246-a9a0-43ad-a158-ae76cc2c1bb7",
+                "@id": "kb:recovered-object-facet-f135ac26-bbf0-4eab-949b-6a5dfe147c22",
                 "@type": "uco-observable:RecoveredObjectFacet",
                 "uco-observable:contentRecoveredStatus": {
                     "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
