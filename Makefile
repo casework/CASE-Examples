@@ -16,22 +16,17 @@ SHELL := /bin/bash
 PYTHON3 ?= $(shell which python3.9 2>/dev/null || which python3.8 2>/dev/null || which python3.7 2>/dev/null || which python3.6 2>/dev/null || which python3)
 
 all: \
-  .dependencies.done.log \
+  all-dependencies \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory examples/illustrations
 
 .PHONY: \
+  all-dependencies \
   check-supply-chain \
   check-supply-chain-pre-commit \
   check-supply-chain-submodules \
   download
-
-.dependencies.done.log: \
-  .venv.done.log
-	$(MAKE) \
-	  --directory dependencies
-	touch $@
 
 # Submodules are checked for having been cloned ever.  A global git
 # submodule udpate command is not run, to prevent resetting any pointers
@@ -112,8 +107,13 @@ all: \
 	    --requirement requirements.txt
 	touch $@
 
+all-dependencies: \
+  .venv.done.log
+	$(MAKE) \
+	  --directory dependencies
+
 check: \
-  .dependencies.done.log \
+  all-dependencies \
   .venv-pre-commit/var/.pre-commit-built.log
 	$(MAKE) \
 	  --directory examples/illustrations \
@@ -145,8 +145,6 @@ clean:
 	@$(MAKE) \
 	  --directory examples/illustrations \
 	  clean
-	@rm -f \
-	  .dependencies.done.log
 	@$(MAKE) \
 	  --directory dependencies \
 	  clean

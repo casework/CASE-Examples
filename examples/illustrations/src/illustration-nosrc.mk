@@ -30,9 +30,19 @@ example_name := $(shell basename $$PWD)
 # Use a drafting.ttl file in the validation and dependency list, if it is present.
 drafting_ttl := $(wildcard drafting.ttl)
 ifeq ($(drafting_ttl),)
+drafting_dependency :=
+drafting_dependency_develop :=
+drafting_dependency_develop_2_0_0 :=
+drafting_dependency_unstable :=
+drafting_dependency_unstable_2_0_0 :=
 drafting_validation_flag :=
 else
-drafting_validation_flag := --ontology-graph $(wildcard drafting.ttl) --review-tbox
+drafting_dependency := .drafting.ttl.validates.log
+drafting_dependency_develop := .drafting.ttl.validates-develop.log
+drafting_dependency_develop_2_0_0 := .drafting.ttl.validates-develop-2.0.0.log
+drafting_dependency_unstable := .drafting.ttl.validates-unstable.log
+drafting_dependency_unstable_2_0_0 := .drafting.ttl.validates-unstable-2.0.0.log
+drafting_validation_flag := --ontology-graph $(drafting_ttl)
 endif
 
 RENDER_PROV ?=
@@ -117,7 +127,7 @@ $(example_name)-prov.ttl: \
 $(example_name)_validation.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
-  $(drafting_ttl) \
+  $(drafting_dependency) \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@
 	source $(top_srcdir)/venv/bin/activate \
@@ -141,7 +151,7 @@ $(example_name)_validation.ttl: \
 $(example_name)_validation-develop.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
-  $(drafting_ttl) \
+  $(drafting_dependency_develop) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-develop.ttl
 	rm -f __$@
@@ -168,7 +178,7 @@ $(example_name)_validation-develop.ttl: \
 $(example_name)_validation-develop-2.0.0.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
-  $(drafting_ttl) \
+  $(drafting_dependency_develop_2_0_0) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl
 	rm -f __$@
@@ -195,7 +205,7 @@ $(example_name)_validation-develop-2.0.0.ttl: \
 $(example_name)_validation-unstable.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
-  $(drafting_ttl) \
+  $(drafting_dependency_unstable) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-unstable.ttl
 	rm -f __$@
@@ -222,7 +232,7 @@ $(example_name)_validation-unstable.ttl: \
 $(example_name)_validation-unstable-2.0.0.ttl: \
   $(example_name).json \
   $(RDF_TOOLKIT_JAR) \
-  $(drafting_ttl) \
+  $(drafting_dependency_unstable_2_0_0) \
   $(top_srcdir)/.venv.done.log \
   $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl
 	rm -f __$@
@@ -246,6 +256,78 @@ $(example_name)_validation-unstable-2.0.0.ttl: \
 	rm __$@
 	mv _$@ $@
 
+.drafting.ttl.validates.log: \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --metashacl \
+	    --ontology-graph $(drafting_ttl) \
+	    --review-tbox \
+	    $(drafting_ttl)
+	touch $@
+
+.drafting.ttl.validates-develop.log: \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-develop.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --metashacl \
+	    --ontology-graph $(drafting_ttl) \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop.ttl \
+	    --review-tbox \
+	    $(drafting_ttl)
+	touch $@
+
+.drafting.ttl.validates-develop-2.0.0.log: \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --metashacl \
+	    --ontology-graph $(drafting_ttl) \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-develop-2.0.0.ttl \
+	    --review-tbox \
+	    $(drafting_ttl)
+	touch $@
+
+.drafting.ttl.validates-unstable.log: \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-unstable.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --metashacl \
+	    --ontology-graph $(drafting_ttl) \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable.ttl \
+	    --review-tbox \
+	    $(drafting_ttl)
+	touch $@
+
+.drafting.ttl.validates-unstable-2.0.0.log: \
+  $(drafting_ttl) \
+  $(top_srcdir)/.venv.done.log \
+  $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && case_validate \
+	    --allow-infos \
+	    --built-version none \
+	    --metashacl \
+	    --ontology-graph $(drafting_ttl) \
+	    --ontology-graph $(top_srcdir)/dependencies/CASE-unstable-2.0.0.ttl \
+	    --review-tbox \
+	    $(drafting_ttl)
+	touch $@
+
 check: \
   check-pytest \
   $(example_name)_validation.ttl \
@@ -267,6 +349,7 @@ check-pytest: \
 
 clean:
 	@rm -f \
+	  .drafting.ttl.*.log \
 	  figures/*.dot \
 	  figures/*.svg \
 	  $(example_name)_validation*.ttl
