@@ -10,7 +10,7 @@
             "@id": "kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696"
         },
         "uco-action:performer": {
-            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
         },
         "uco-action:object": [
             {
@@ -124,7 +124,7 @@
         "uco-core:name": "file_copier.py",
         "uco-core:description": "A one-off test subject population script.",
         "prov:wasAttributedTo": {
-            "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
+            "@id": "kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804"
         }
     },
     {
@@ -138,7 +138,7 @@
             "@id": "kb:Tool-8ae63f46-44cb-40d9-9e50-539b29f05ea8"
         },
         "uco-action:performer": {
-            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
         },
         "uco-action:object": [
             {
@@ -316,7 +316,7 @@
             "@id": "kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696"
         },
         "uco-action:performer": {
-            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+            "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
         },
         "uco-action:object": [
             {

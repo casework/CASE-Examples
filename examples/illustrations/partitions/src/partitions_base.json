@@ -37,22 +37,22 @@
                     "uco-core:description": "Test whether digital forensic tools can correctly detect and recover deleted partiton and overwritten file.",
                     "uco-core:object": [
                         {
-                            "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
+                            "@id": "kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804"
                         },
                         {
-                            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                            "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
                         },
                         {
-                            "@id": "kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac"
+                            "@id": "kb:Relationship-e1d02a55-16aa-4490-a115-1695ed8be2d4"
                         },
                         {
                             "@id": "kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3"
                         },
                         {
-                            "@id": "kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80"
+                            "@id": "kb:organization-c9223e2e-4a3b-436d-ad5f-10794d8e17fa"
                         },
                         {
-                            "@id": "kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c"
+                            "@id": "kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba"
                         },
                         {
                             "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb"
@@ -137,23 +137,23 @@
             ]
         },
         {
-            "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28",
+            "@id": "kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804",
             "@type": "uco-identity:Organization",
             "uco-core:name": "Chris Hargreaves"
         },
         {
-            "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81",
+            "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8",
             "@type": "uco-role:Role",
             "uco-core:name": "Forensic Researcher"
         },
         {
-            "@id": "kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac",
+            "@id": "kb:Relationship-e1d02a55-16aa-4490-a115-1695ed8be2d4",
             "@type": "uco-core:Relationship",
             "uco-core:source": {
-                "@id": "kb:Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28"
+                "@id": "kb:Identity-4090b871-838f-4e42-b33e-f7b69928e804"
             },
             "uco-core:target": {
-                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
             },
             "uco-core:kindOfRelationship": "Has_Role",
             "uco-core:isDirectional": true
@@ -164,7 +164,7 @@
             "uco-core:name": "Tool 5",
             "uco-tool:toolType": "acquisition/duplication",
             "uco-tool:creator": {
-                "@id": "kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80"
+                "@id": "kb:organization-c9223e2e-4a3b-436d-ad5f-10794d8e17fa"
             },
             "uco-tool:version": "5.6.7",
             "uco-configuration:usesConfiguration": {
@@ -193,12 +193,12 @@
             }
         },
         {
-            "@id": "kb:organization-cf3010bb-7716-473d-98ee-25e4917e7b80",
+            "@id": "kb:organization-c9223e2e-4a3b-436d-ad5f-10794d8e17fa",
             "@type": "uco-identity:Identity",
             "uco-core:name": "Company 5"
         },
         {
-            "@id": "kb:InvestigativeAction-e019ed92-af10-4a9f-a914-7a9ba539807c",
+            "@id": "kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba",
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:name": "disk image",
             "uco-core:description": "Acquisition of USB",
@@ -214,7 +214,7 @@
                 "@id": "kb:ConfiguredTool-22cb1ad6-7910-4a71-8654-5e93280111a3"
             },
             "uco-action:performer": {
-                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
             },
             "uco-action:object": [
                 {
@@ -280,7 +280,7 @@
             "@type": "case-investigation:InvestigativeAction",
             "uco-core:description": "Enter USB Disk into chain of custody",
             "uco-action:performer": {
-                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
             },
             "uco-action:result": [
                 {
@@ -327,7 +327,7 @@
                     }
                 },
                 {
-                    "@id": "kb:content-data-facet-17661dfc-7b8a-46c0-8b0e-0f7b1eac3096",
+                    "@id": "kb:content-data-facet-340937e3-0e27-4da8-ada1-d2e8394103ea",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:hash": {
                         "@id": "kb:hash-66d11615-dd6c-4bba-8643-efe5fe8f58f4",
@@ -402,7 +402,7 @@
                 "@id": "kb:ConfiguredTool-571e5240-0e58-42f8-89c2-f1917580504b"
             },
             "uco-action:performer": {
-                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
             },
             "uco-action:object": [
                 {
@@ -529,7 +529,7 @@
                 "@id": "kb:ConfiguredTool-fec1a824-f519-403f-a700-d4047ecdb51e"
             },
             "uco-action:performer": {
-                "@id": "kb:Role-870e2626-5ffd-4a80-83c2-8ee429709c81"
+                "@id": "kb:Role-4e37c6b0-f4d7-4720-baa6-0a8f421180f8"
             },
             "uco-action:object": [
                 {
@@ -838,7 +838,7 @@
             "@type": "uco-observable:FileSystem",
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:file-system-facet-d14c4ae7-75e4-4043-97c5-e16b383ca714",
+                    "@id": "kb:file-system-facet-4fe95932-8b21-4463-a20b-85e3b151e388",
                     "@type": "uco-observable:FileSystemFacet",
                     "uco-observable:fileSystemType": "FAT32"
                 }
@@ -868,7 +868,7 @@
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:file-facet-16b6a9f9-0b3d-4b7a-9c61-6859e7ca7e45",
+                    "@id": "kb:file-facet-8f25239c-5952-470f-ad3a-505d15998bb0",
                     "uco-observable:extension": "txt",
                     "uco-observable:fileName": "missedme.txt",
                     "uco-observable:filePath": "/NewUSBExample.E01/vol_vol4/missedme.txt",
