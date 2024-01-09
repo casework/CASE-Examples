@@ -1,5 +1,3 @@
-@prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,68 +6,6 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
-	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Relationship-e1919c92-4d47-4b33-be27-691ef4ec5b8c> ;
-			sh:resultMessage "The source on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-			sh:resultPath core:source ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:Observable ;
-				sh:message "The source on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-				sh:path core:source ;
-				sh:severity sh:Warning ;
-			] ;
-			sh:value <http://example.org/kb/Person-3a62193b-1ea7-4ed7-88df-6cf7e647fd4f> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Relationship-e1919c92-4d47-4b33-be27-691ef4ec5b8c> ;
-			sh:resultMessage "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:Observable ;
-				sh:message "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-				sh:path core:target ;
-				sh:severity sh:Warning ;
-			] ;
-			sh:value <http://example.org/kb/Role-3bfb3efb-ffaa-4d93-a27d-e9e52f345b1b> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac> ;
-			sh:resultMessage "The source on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-			sh:resultPath core:source ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:Observable ;
-				sh:message "The source on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-				sh:path core:source ;
-				sh:severity sh:Warning ;
-			] ;
-			sh:value <http://example.org/kb/Identity-cbfbd171-e56c-4f59-a01b-4404a1e5eb28> ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac> ;
-			sh:resultMessage "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-			sh:resultPath core:target ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:ClassConstraintComponent ;
-			sh:sourceShape [
-				sh:class observable:Observable ;
-				sh:message "The target on an ObservableRelationship is expected to be typed as an Observable, and the noted value node is not.  This will be an error in UCO 2.0.0."@en ;
-				sh:path core:target ;
-				sh:severity sh:Warning ;
-			] ;
-			sh:value <http://example.org/kb/Role-870e2626-5ffd-4a80-83c2-8ee429709c81> ;
-		]
-		;
+	sh:conforms "true"^^xsd:boolean ;
 	.
 

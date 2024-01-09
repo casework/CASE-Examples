@@ -148,7 +148,7 @@
         },
         {
             "@id": "kb:Relationship-ec126575-d6a4-4590-9690-f2571a48b8ac",
-            "@type": "uco-observable:ObservableRelationship",
+            "@type": "uco-core:Relationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Has_Role",
             "uco-core:source": {
@@ -2363,7 +2363,7 @@
         },
         {
             "@id": "kb:Relationship-e1919c92-4d47-4b33-be27-691ef4ec5b8c",
-            "@type": "uco-observable:ObservableRelationship",
+            "@type": "uco-core:Relationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Has_Role",
             "uco-core:source": {
