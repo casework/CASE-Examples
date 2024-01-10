@@ -107,7 +107,7 @@ $(example_name)-prov.ttl: \
   $(drafting_ttl) \
   $(top_srcdir)/.venv.done.log
 	rm -f __$@
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_rdf \
 	      --allow-empty-results \
@@ -357,7 +357,7 @@ clean:
 figures/$(example_name)-prov-activities-agents.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --activity-informing \
@@ -373,7 +373,7 @@ figures/$(example_name)-prov-activities-agents.dot: \
 figures/$(example_name)-prov-activities-entities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --activity-informing \
@@ -389,7 +389,7 @@ figures/$(example_name)-prov-activities-entities.dot: \
 figures/$(example_name)-prov-activities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --activity-informing \
@@ -404,7 +404,7 @@ figures/$(example_name)-prov-activities.dot: \
 figures/$(example_name)-prov-agents-entities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --agent-delegating \
@@ -420,7 +420,7 @@ figures/$(example_name)-prov-agents-entities.dot: \
 figures/$(example_name)-prov-agents.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --agent-delegating \
@@ -435,7 +435,7 @@ figures/$(example_name)-prov-agents.dot: \
 figures/$(example_name)-prov-all.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --dash-unqualified \
@@ -449,7 +449,7 @@ figures/$(example_name)-prov-all.dot: \
 figures/$(example_name)-prov-entities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --dash-unqualified \
@@ -464,7 +464,7 @@ figures/$(example_name)-prov-entities.dot: \
 figures/$(example_name)-prov-time-activities-agents.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --activity-informing \
@@ -481,7 +481,7 @@ figures/$(example_name)-prov-time-activities-agents.dot: \
 figures/$(example_name)-prov-time-activities-entities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --activity-informing \
@@ -498,7 +498,7 @@ figures/$(example_name)-prov-time-activities-entities.dot: \
 figures/$(example_name)-prov-time-activities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --activity-informing \
@@ -514,7 +514,7 @@ figures/$(example_name)-prov-time-activities.dot: \
 figures/$(example_name)-prov-time-agents.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --agent-delegating \
@@ -530,7 +530,7 @@ figures/$(example_name)-prov-time-agents.dot: \
 figures/$(example_name)-prov-time-agents-entities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --agent-delegating \
@@ -547,7 +547,7 @@ figures/$(example_name)-prov-time-agents-entities.dot: \
 figures/$(example_name)-prov-time-all.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --dash-unqualified \
@@ -562,7 +562,7 @@ figures/$(example_name)-prov-time-all.dot: \
 figures/$(example_name)-prov-time-entities.dot: \
   $(example_name)-prov.ttl
 	mkdir -p figures
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --dash-unqualified \

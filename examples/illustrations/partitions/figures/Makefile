@@ -43,7 +43,7 @@ clean:
 partitions-prov-focused-27762c2c.dot: \
   ../partitions.json \
   ../partitions-prov.ttl
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --entity-ancestry 'http://example.org/kb/Relationship-27762c2c-7140-4ea9-924e-5c9941671c82' \
@@ -56,7 +56,7 @@ partitions-prov-focused-27762c2c.dot: \
 partitions-prov-focused-5a191a50.dot: \
   ../partitions.json \
   ../partitions-prov.ttl
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --entity-ancestry 'http://example.org/kb/Relationship-5a191a50-c16f-4566-b8da-e4847f9bf9d1' \
@@ -69,7 +69,7 @@ partitions-prov-focused-5a191a50.dot: \
 partitions-prov-focused-8589174a.dot: \
   ../partitions.json \
   ../partitions-prov.ttl
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --entity-ancestry 'http://example.org/kb/Relationship-8589174a-2a25-4b7d-9ff6-eee7f39e2fab' \
@@ -82,7 +82,7 @@ partitions-prov-focused-8589174a.dot: \
 partitions-prov-focused-b6ab7ce4.dot: \
   ../partitions.json \
   ../partitions-prov.ttl
-	export CASE_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
+	export CDO_DEMO_NONRANDOM_UUID_BASE="$(top_srcdir)" \
 	  && source $(top_srcdir)/venv/bin/activate \
 	    && case_prov_dot \
 	      --entity-ancestry 'http://example.org/kb/Relationship-b6ab7ce4-9f8c-4adc-9fdb-d5ab36f5aad2' \
