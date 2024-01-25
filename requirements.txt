@@ -1,1 +1,1 @@
-case-prov[testing] >=0.11.0,<0.12.0
+case-prov[testing] >=0.12.0,<0.13.0
