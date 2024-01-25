@@ -1,6 +1,5 @@
 {
     "@context": {
-        "drafting": "http://example.org/ontology/drafting/",
         "kb": "http://example.org/kb/",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
@@ -13,9 +12,9 @@
     "@graph": [
         {
             "@id": "kb:event-d4a5a009-7b4d-445d-8d06-9dc85f263b3e",
-            "@type": "drafting:Event",
+            "@type": "uco-core:Event",
             "uco-core:name": "user logged in",
-            "drafting:eventType": "Authentication",
+            "uco-core:eventType": "Authentication",
             "uco-core:startTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2023-07-15T17:59:43.25Z"
@@ -24,7 +23,7 @@
                 "@type": "xsd:dateTime",
                 "@value": "2023-07-15T17:59:45.33Z"
             },
-            "drafting:eventContext": [
+            "uco-core:eventContext": [
                 {
                     "@id": "kb:action-7377c5e6-6b28-4bc7-ad21-6763c070bfcc"
                 },
@@ -32,7 +31,7 @@
                     "@id": "kb:action-a86738e7-c890-4615-b3ab-deaccd3bafbb"
                 }
             ],
-            "drafting:eventAttribute": {
+            "uco-core:eventAttribute": {
                 "@id": "kb:dictionary-b222a5f4-e7eb-442a-8aab-c22c89734b9e"
             }
         },
