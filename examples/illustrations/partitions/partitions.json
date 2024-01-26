@@ -1254,7 +1254,7 @@
             "prov:qualifiedGeneration": {
                 "@id": "kb:Event-13c3666a-f291-4d22-82c5-9e9c841ad444",
                 "@type": [
-                    "drafting:Event",
+                    "uco-core:Event",
                     "prov:Generation",
                     "time:Instant"
                 ],
@@ -1272,7 +1272,7 @@
             "prov:qualifiedGeneration": {
                 "@id": "kb:Event-26aaae20-6d00-445a-b102-d080753986d2",
                 "@type": [
-                    "drafting:Event",
+                    "uco-core:Event",
                     "prov:Generation",
                     "time:Instant"
                 ],
@@ -1290,7 +1290,7 @@
             "prov:qualifiedGeneration": {
                 "@id": "kb:Event-3b2e05b0-3135-4fb6-b11c-afd381d33779",
                 "@type": [
-                    "drafting:Event",
+                    "uco-core:Event",
                     "prov:Generation",
                     "time:Instant"
                 ],
@@ -1521,7 +1521,7 @@
             "prov:qualifiedGeneration": {
                 "@id": "kb:Event-094ab805-f0d6-4a45-9889-d9f7c096068e",
                 "@type": [
-                    "drafting:Event",
+                    "uco-core:Event",
                     "prov:Generation",
                     "time:Instant"
                 ]
@@ -1722,7 +1722,7 @@
         {
             "@id": "kb:Event-48e182d1-2461-4a2e-83aa-73de2a57a81c",
             "@type": [
-                "drafting:Event",
+                "uco-core:Event",
                 "prov:Generation",
                 "time:Instant"
             ],
@@ -1734,7 +1734,7 @@
         {
             "@id": "kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348",
             "@type": [
-                "drafting:Event",
+                "uco-core:Event",
                 "prov:Generation",
                 "prov:Invalidation",
                 "time:Instant"
@@ -1762,7 +1762,7 @@
             "prov:qualifiedGeneration": {
                 "@id": "kb:Generation-6a6274a8-a82b-45ca-b570-dea8789560af",
                 "@type": [
-                    "drafting:Event",
+                    "uco-core:Event",
                     "prov:Generation",
                     "time:Instant"
                 ],
