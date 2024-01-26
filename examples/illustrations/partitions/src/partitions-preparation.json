@@ -212,7 +212,7 @@
     {
         "@id": "kb:Event-6f924dac-5fe1-4583-92e1-ee3547466348",
         "@type": [
-            "drafting:Event",
+            "uco-core:Event",
             "prov:Generation",
             "prov:Invalidation",
             "time:Instant"
@@ -229,7 +229,7 @@
         "prov:qualifiedGeneration": {
             "@id": "kb:Generation-6a6274a8-a82b-45ca-b570-dea8789560af",
             "@type": [
-                "drafting:Event",
+                "uco-core:Event",
                 "prov:Generation",
                 "time:Instant"
             ],

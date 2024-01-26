@@ -106,12 +106,6 @@ drafting:DiskPartitionSystemFacet
 	sh:targetClass drafting:DiskPartitionSystemFacet ;
 	.
 
-drafting:Event
-	a owl:Class ;
-	rdfs:subClassOf uco-core:UcoObject ;
-	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/541> ;
-	.
-
 drafting:buildID
 	a owl:DatatypeProperty ;
 	rdfs:range xsd:string ;
