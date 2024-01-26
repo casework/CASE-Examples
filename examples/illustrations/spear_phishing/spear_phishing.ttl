@@ -174,7 +174,7 @@ kb:CorporateLoggingTool01
 	.
 
 kb:DetectionEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb:ActOfEndpointScan01 ,
 		kb:ActOfFileFlagging01 ,
@@ -223,7 +223,7 @@ kb:EndpointProtectionSoftware01
 	.
 
 kb:InfectionEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb:ActOfMalwareDelivery01 ,
 		kb:ActOfMalwareInstallation01
@@ -277,7 +277,7 @@ kb:ScannerRole01
 	.
 
 kb:SpearFishingEvent01
-	a uco-core:UcoThing ;
+	a uco-core:Event ;
 	unmapped:hasOccurrentPart
 		kb:ActOfEmailDelivery01 ,
 		kb:ActOfLinkOpening01

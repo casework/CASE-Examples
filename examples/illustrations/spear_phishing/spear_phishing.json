@@ -263,7 +263,7 @@
         },
         {
             "@id": "kb:DetectionEvent01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-core:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfSending02"
@@ -364,7 +364,7 @@
         },
         {
             "@id": "kb:InfectionEvent01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-core:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfMalwareDelivery01"
@@ -448,7 +448,7 @@
         },
         {
             "@id": "kb:SpearFishingEvent01",
-            "@type": "uco-core:UcoThing",
+            "@type": "uco-core:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfEmailDelivery01"
