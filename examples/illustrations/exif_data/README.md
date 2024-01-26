@@ -1,6 +1,13 @@
 # EXIF Data Example
 
 
+## Relationship illustrations
+
+Using a proof-of-concept illustration system, a render of this scenario's `uco-core:Relationship` objects is available:
+
+![figures/exif_data-relationships.svg](figures/exif_data-relationships.svg)
+
+
 ## Provenance illustrations
 
 Following visual-design practices of [PROV-O](https://www.w3.org/TR/prov-o/), the following renders of this scenario's provenance are available:

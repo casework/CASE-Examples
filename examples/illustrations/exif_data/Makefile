@@ -29,6 +29,7 @@ all: \
 all-illustration-nosrc:
 	$(MAKE) \
 	  RENDER_PROV=yes \
+	  RENDER_RELATIONSHIPS=yes \
 	  --file $(illustrations_srcdir)/src/illustration-nosrc.mk
 
 check: \
@@ -38,6 +39,7 @@ check: \
 check-illustration-nosrc:
 	$(MAKE) \
 	  RENDER_PROV=yes \
+	  RENDER_RELATIONSHIPS=yes \
 	  --file $(illustrations_srcdir)/src/illustration-nosrc.mk \
 	  check
 
