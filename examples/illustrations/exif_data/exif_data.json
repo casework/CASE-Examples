@@ -206,6 +206,13 @@
             "@type": "uco-location:Location"
         },
         {
+            "@id": "kb:provenance-record-855f91a2-cc07-4d8e-bb93-d2b6db7672db",
+            "@type": "case-investigation:ProvenanceRecord",
+            "uco-core:object": {
+                "@id": "kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b"
+            }
+        },
+        {
             "@id": "kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b",
             "@type": "uco-core:Annotation",
             "uco-core:description": "Photo was taken by a Canon digital camera.",
@@ -239,6 +246,9 @@
             "uco-action:result": [
                 {
                     "@id": "kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b"
+                },
+                {
+                    "@id": "kb:provenance-record-855f91a2-cc07-4d8e-bb93-d2b6db7672db"
                 }
             ],
             "uco-action:location": {

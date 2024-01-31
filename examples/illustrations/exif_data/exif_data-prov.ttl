@@ -1,0 +1,153 @@
+@prefix kb: <http://example.org/kb/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+kb:Association-4efe673f-d484-546d-ba02-744d18c0fd26
+	a prov:Association ;
+	prov:agent kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
+	.
+
+kb:Association-a87a3853-b5f0-59bb-b69b-718d1f35f8d2
+	a prov:Association ;
+	prov:agent kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d ;
+	.
+
+kb:Attribution-52e7fd0b-2459-52ca-9370-e88ca0c9e6f6
+	a prov:Attribution ;
+	prov:agent kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
+	.
+
+kb:Attribution-676da2a8-fdb3-5505-88c1-b1fe581e314e
+	a prov:Attribution ;
+	prov:agent kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
+	.
+
+kb:Delegation-0da6c8e6-1801-5686-ab49-2a9c1be1a9c6
+	a prov:Delegation ;
+	prov:agent kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d ;
+	prov:hadActivity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	.
+
+kb:Derivation-19bf2d02-d31f-58d0-b171-cd30b1ad3a4d
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	.
+
+kb:Derivation-3bc64fb0-ae63-5a32-a786-0eab271c784b
+	a prov:Derivation ;
+	prov:entity prov:EmptyCollection ;
+	prov:hadActivity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	.
+
+kb:End-64e0bccb-5337-5c04-8000-e58afcb6af1d
+	a
+		time:Instant ,
+		prov:End
+		;
+	time:inXSDDateTimeStamp "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Generation-a19bfc2d-0682-5023-8046-4a4b0fe6c3f3
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	.
+
+kb:Generation-abb403d8-3fde-5f17-a74d-d721eb0b3423
+	a
+		time:Instant ,
+		prov:Generation
+		;
+	prov:activity kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	.
+
+kb:Start-1f683eec-81dd-5dad-a2fb-0937aa55b9d4
+	a
+		time:Instant ,
+		prov:Start
+		;
+	time:inXSDDateTimeStamp "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTimeStamp ;
+	prov:atTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	.
+
+kb:Usage-00a4f357-3e85-52a1-857e-9cc8e3c6e124
+	a
+		time:Instant ,
+		prov:Usage
+		;
+	prov:entity prov:EmptyCollection ;
+	.
+
+kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b
+	a prov:Entity ;
+	prov:qualifiedAttribution kb:Attribution-676da2a8-fdb3-5505-88c1-b1fe581e314e ;
+	prov:qualifiedDerivation kb:Derivation-19bf2d02-d31f-58d0-b171-cd30b1ad3a4d ;
+	prov:qualifiedGeneration kb:Generation-a19bfc2d-0682-5023-8046-4a4b0fe6c3f3 ;
+	prov:wasAttributedTo kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	uco-core:description "Photo was taken by a Canon digital camera." ;
+	.
+
+kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8
+	a
+		prov:Agent ,
+		prov:SoftwareAgent
+		;
+	prov:actedOnBehalfOf kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d ;
+	prov:qualifiedDelegation kb:Delegation-0da6c8e6-1801-5686-ab49-2a9c1be1a9c6 ;
+	.
+
+kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d
+	a prov:Agent ;
+	.
+
+kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3
+	a
+		time:ProperInterval ,
+		prov:Activity
+		;
+	time:hasBeginning kb:Start-1f683eec-81dd-5dad-a2fb-0937aa55b9d4 ;
+	time:hasEnd kb:End-64e0bccb-5337-5c04-8000-e58afcb6af1d ;
+	time:inside
+		kb:Generation-a19bfc2d-0682-5023-8046-4a4b0fe6c3f3 ,
+		kb:Generation-abb403d8-3fde-5f17-a74d-d721eb0b3423 ,
+		kb:Usage-00a4f357-3e85-52a1-857e-9cc8e3c6e124
+		;
+	prov:endedAtTime "2010-01-15T18:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:qualifiedAssociation
+		kb:Association-4efe673f-d484-546d-ba02-744d18c0fd26 ,
+		kb:Association-a87a3853-b5f0-59bb-b69b-718d1f35f8d2
+		;
+	prov:qualifiedEnd kb:End-64e0bccb-5337-5c04-8000-e58afcb6af1d ;
+	prov:qualifiedStart kb:Start-1f683eec-81dd-5dad-a2fb-0937aa55b9d4 ;
+	prov:qualifiedUsage kb:Usage-00a4f357-3e85-52a1-857e-9cc8e3c6e124 ;
+	prov:startedAtTime "2010-01-15T17:59:43.250000+00:00"^^xsd:dateTime ;
+	prov:used prov:EmptyCollection ;
+	prov:wasAssociatedWith kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
+	uco-core:name "annotated" ;
+	.
+
+kb:provenance-record-855f91a2-cc07-4d8e-bb93-d2b6db7672db
+	a
+		prov:Collection ,
+		prov:Entity
+		;
+	prov:hadMember kb:annotation-b8258799-b465-4182-904b-c0aa73a35b0b ;
+	prov:qualifiedAttribution kb:Attribution-52e7fd0b-2459-52ca-9370-e88ca0c9e6f6 ;
+	prov:qualifiedDerivation kb:Derivation-3bc64fb0-ae63-5a32-a786-0eab271c784b ;
+	prov:qualifiedGeneration kb:Generation-abb403d8-3fde-5f17-a74d-d721eb0b3423 ;
+	prov:wasAttributedTo kb:annotator_tool-ca41faa8-a59c-4321-b047-4d916f75b1e8 ;
+	prov:wasDerivedFrom prov:EmptyCollection ;
+	prov:wasGeneratedBy kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3 ;
+	.
+
