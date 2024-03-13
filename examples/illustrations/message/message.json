@@ -159,13 +159,13 @@
         {
             "@id": "kb:thread-4237ff8b-e049-4a56-bcf7-e89ed2797d83",
             "@type": "uco-observable:MessageThread",
+            "uco-core:name": "Best Friend Chat!!",
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:message-thread-facet-33f68c51-0737-4716-8b2d-7612cd78a99b",
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "billy~sarah@whatsapp.gs.net",
-                    "uco-observable:displayName": "Best Friend Chat!!",
-                    "drafting:visibility": "PRIVATE",
+                    "uco-observable:visibility": false,
                     "uco-observable:messageThread": {
                         "@id": "kb:thread-c5b68f3b-a9a1-4595-9d54-b3fd3605871e",
                         "@type": "uco-types:Thread",
@@ -240,13 +240,13 @@
         {
             "@id": "kb:thread-64330f59-a10d-4907-93f6-be9fc267834e",
             "@type": "uco-observable:MessageThread",
+            "uco-core:name": "Argle-bargle",
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:message-thread-facet-38d3fc48-8519-40c5-98f3-d4ad4d42a867",
                     "@type": "uco-observable:MessageThreadFacet",
                     "identifier": "twitter_public",
-                    "uco-observable:displayName": "Argle-bargle",
-                    "drafting:visibility": "PUBLIC",
+                    "uco-observable:visibility": true,
                     "uco-observable:messageThread": {
                         "@id": "kb:thread-f8ebd1db-ce49-495e-850a-7b44187cb128",
                         "@type": "uco-types:Thread",
