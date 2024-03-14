@@ -19,7 +19,7 @@
     },
     {
         "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
-        "@type": "uco-observable:ObservableRelationship",
+        "@type": "uco-core:Relationship",
         "uco-observable:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2016-12-12T09:10:11Z"
