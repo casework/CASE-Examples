@@ -152,7 +152,7 @@
         },
         {
             "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
-            "@type": "uco-observable:ObservableRelationship",
+            "@type": "uco-core:Relationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Located_At",
             "uco-core:source": {
@@ -291,7 +291,7 @@
         },
         {
             "@id": "kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4",
-            "@type": "uco-observable:ObservableRelationship",
+            "@type": "uco-core:Relationship",
             "case-investigation:wasDerivedFrom": {
                 "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b"
             },
