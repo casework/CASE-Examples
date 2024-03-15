@@ -224,19 +224,27 @@ drafting:hasHypothesis
 	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
 	.
 
-drafting:hasHypothesis-shape
-	a sh:PropertyShape ;
+drafting:hasHypothesis-objects-shape
+	a sh:NodeShape ;
 	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
-	sh:nodeKind sh:IRI ;
-	sh:or (
-		[
-			sh:class drafting:Hypothesis ;
-		]
-		[
-			sh:class drafting:NegativeHypothesis ;
-		]
-	) ;
-	sh:path drafting:hasHypothesis ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:nodeKind sh:IRI ;
+		sh:or (
+			[
+				sh:class drafting:Hypothesis ;
+			]
+			[
+				sh:class drafting:NegativeHypothesis ;
+			]
+		) ;
+		sh:path drafting:hasHypothesis ;
+	] ;
+	sh:targetSubjectsOf drafting:hasHypothesis ;
+	.
+
+drafting:hasHypothesis-subjects-shape
+	a sh:NodeShape ;
 	sh:targetSubjectsOf drafting:hasHypothesis ;
 	.
 
@@ -245,33 +253,54 @@ drafting:hypothesisProperty
 	rdfs:domain drafting:AbstractHypothesis ;
 	rdfs:seeAlso
 		owl:annotatedProperty ,
+		owl:assertionProperty ,
 		<https://cyberontology.atlassian.net/browse/ONT-434>
 		;
 	.
 
-drafting:hypothesisProperty-shape
-	a sh:PropertyShape ;
-	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
-	sh:nodeKind sh:IRI ;
+drafting:hypothesisProperty-subjects-shape
+	a sh:NodeShape ;
+	sh:class drafting:AbstractHypothesis ;
+	sh:targetSubjectsOf drafting:hypothesisProperty ;
+	.
+
+drafting:hypothesisProperty-objects-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeOrIRI ;
 	sh:or (
 		[
+			a sh:NodeShape ;
+			sh:nodeKind sh:IRI ;
 			sh:class owl:AnnotationProperty ;
 		]
 		[
+			a sh:NodeShape ;
+			sh:nodeKind sh:IRI ;
 			sh:class owl:DatatypeProperty ;
 		]
 		[
+			a sh:NodeShape ;
+			sh:nodeKind sh:IRI ;
 			sh:class owl:ObjectProperty ;
 		]
 		[
+			a sh:NodeShape ;
 			sh:in (
 				rdf:type
 				rdfs:subClassOf
+				owl:equivalentClass
 			) ;
 		]
+		[
+			a sh:NodeShape ;
+			sh:property [
+				a sh:PropertyShape ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:path owl:inverseOf ;
+			] ;
+		]
 	) ;
-	sh:path drafting:hypothesisProperty ;
-	sh:targetSubjectsOf drafting:hypothesisProperty ;
+	sh:targetObjectsOf drafting:hypothesisProperty ;
 	.
 
 drafting:hypothesisSource
@@ -279,16 +308,21 @@ drafting:hypothesisSource
 	rdfs:domain drafting:AbstractHypothesis ;
 	rdfs:seeAlso
 		owl:annotatedSource ,
+		owl:sourceIndividual ,
 		<https://cyberontology.atlassian.net/browse/ONT-434>
 		;
 	.
 
-drafting:hypothesisSource-shape
-	a sh:PropertyShape ;
-	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
-	sh:nodeKind sh:IRI ;
-	sh:path drafting:hypothesisSource ;
+drafting:hypothesisSource-subjects-shape
+	a sh:NodeShape ;
+	sh:class drafting:AbstractHypothesis ;
 	sh:targetSubjectsOf drafting:hypothesisSource ;
+	.
+
+drafting:hypothesisSource-objects-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:BlankNodeORIRI ;
+	sh:targetObjectsOf drafting:hypothesisSource ;
 	.
 
 drafting:hypothesisTargetLiteral
@@ -296,16 +330,21 @@ drafting:hypothesisTargetLiteral
 	rdfs:domain drafting:AbstractDatatypeHypothesis ;
 	rdfs:seeAlso
 		owl:annotatedTarget ,
+		owl:targetIndividual ,
 		<https://cyberontology.atlassian.net/browse/ONT-434>
 		;
 	.
 
-drafting:hypothesisTargetLiteral-shape
-	a sh:PropertyShape ;
-	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
-	sh:nodeKind sh:Literal ;
-	sh:path drafting:hypothesisTargetLiteral ;
+drafting:hypothesisTargetLiteral-subjects-shape
+	a sh:NodeShape ;
+	sh:class drafting:AbstractDatatypeHypothesis ;
 	sh:targetSubjectsOf drafting:hypothesisTargetLiteral ;
+	.
+
+drafting:hypothesisTargetLiteral-objects-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:Literal ;
+	sh:targetObjectsOf drafting:hypothesisTargetLiteral ;
 	.
 
 drafting:hypothesisTargetObject
@@ -313,15 +352,20 @@ drafting:hypothesisTargetObject
 	rdfs:domain drafting:AbstractObjectHypothesis ;
 	rdfs:seeAlso
 		owl:annotatedTarget ,
+		owl:targetIndividual ,
 		<https://cyberontology.atlassian.net/browse/ONT-434>
 		;
 	.
 
-drafting:hypothesisTargetObject-shape
-	a sh:PropertyShape ;
-	rdfs:seeAlso <https://cyberontology.atlassian.net/browse/ONT-434> ;
-	sh:nodeKind sh:IRI ;
-	sh:path drafting:hypothesisTargetObject ;
+drafting:hypothesisTargetObject-subjects-shape
+	a sh:NodeShape ;
+	sh:class drafting:AbstractObjectHypothesis ;
 	sh:targetSubjectsOf drafting:hypothesisTargetObject ;
+	.
+
+drafting:hypothesisTargetObject-objects-shape
+	a sh:NodeShape ;
+	sh:nodeKind sh:IRI ;
+	sh:targetObjectsOf drafting:hypothesisTargetObject ;
 	.
 
