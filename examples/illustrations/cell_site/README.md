@@ -102,7 +102,7 @@ The location of a Cell Site can change over time when it is moved by a telecommu
     },
     {
         "@id": "kb:cdf48c35-c65d-41e4-843b-720f1ad24ab3",
-        "@type": "uco-observable:ObservableRelationship",
+        "@type": "uco-core:Relationship",
         "uco-observable:startTime": {
             "@type": "xsd:dateTime",
             "@value": "2016-12-12T09:10:11Z"
@@ -334,7 +334,7 @@ Per practice of this example organization, the derivation of the relationship is
     },
     {
         "@id": "kb:relationship-7cb73eaa-f2e5-45c1-b84e-0e97d0a828d4",
-        "@type": "uco-observable:ObservableRelationship",
+        "@type": "uco-core:Relationship",
         "case-investigation:wasDerivedFrom": {
             "@id": "kb:observation-21841f2a-6c14-48d7-b9d3-f081d43bc19b"
         },
