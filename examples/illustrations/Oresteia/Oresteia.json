@@ -1412,7 +1412,10 @@
         },
         {
             "@id": "kb:sms-application-4e98e83c-4d9e-48da-ac3a-9bc42b7a545e",
-            "@type": "uco-observable:Application"
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:sms-message-853716fe-c35e-45af-81d3-368dfb6b7eba",

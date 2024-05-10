@@ -1170,7 +1170,10 @@
         },
         {
             "@id": "kb:os-ca81c2d9-d496-4a06-a0f5-0b6bd5647a9e",
-            "@type": "uco-observable:OperatingSystem"
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:parser-26d4c427-5408-46cb-9ecd-90f570b2947b",

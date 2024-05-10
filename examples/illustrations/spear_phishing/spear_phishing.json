@@ -781,7 +781,10 @@
         },
         {
             "@id": "kb:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6",
-            "@type": "uco-observable:OperatingSystem",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
             "rdfs:comment": "TODO, UCO - bitness should use the BitnessVocabulary.",
             "uco-core:name": "Windows 10 Enterprise Evaluation",
             "uco-core:hasFacet": {
@@ -849,7 +852,10 @@
         },
         {
             "@id": "kb:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6",
-            "@type": "uco-observable:WindowsProcess",
+            "@type": [
+                "uco-observable:WindowsProcess",
+                "uco-observable:Software"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b",
@@ -878,7 +884,10 @@
         },
         {
             "@id": "kb:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2",
-            "@type": "uco-observable:WindowsProcess",
+            "@type": [
+                "uco-observable:WindowsProcess",
+                "uco-observable:Software"
+            ],
             "uco-core:hasFacet": {
                 "@id": "kb:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac",
                 "@type": "uco-observable:ProcessFacet",
@@ -891,7 +900,10 @@
         },
         {
             "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c",
-            "@type": "uco-observable:WindowsProcess",
+            "@type": [
+                "uco-observable:WindowsProcess",
+                "uco-observable:Software"
+            ],
             "uco-core:description": "Browser process"
         },
         {

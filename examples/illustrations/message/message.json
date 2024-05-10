@@ -19,7 +19,10 @@
         },
         {
             "@id": "kb:os-abf0fe20-6852-4004-82bb-d9e8da06aea6",
-            "@type": "uco-observable:OperatingSystem",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4",
@@ -34,7 +37,10 @@
         },
         {
             "@id": "kb:application-5340d5ad-0fe1-463c-a461-f211e64edfd4",
-            "@type": "uco-observable:Application",
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:application-facet-d3237eac-1805-43b2-8ff2-58f7c71f0ac6",
@@ -51,7 +57,10 @@
         },
         {
             "@id": "kb:application-5630b5c9-5a2d-4864-b3c4-3e434404d996",
-            "@type": "uco-observable:Application"
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:account-3b61cb4c-f5fd-428c-80d7-79ac841a4f87",

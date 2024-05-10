@@ -31,11 +31,17 @@
         },
         {
             "@id": "kb:application-ed4caa32-84c8-4813-b21d-f350e47cba7c",
-            "@type": "uco-observable:Application"
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:application-db5e8cbe-70e7-4dff-b981-2c5751b7923c",
-            "@type": "uco-observable:Application"
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:facebook_org-84a47032-567a-4580-9b88-f0141abdc7bf",

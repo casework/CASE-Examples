@@ -11,7 +11,10 @@
     "@graph": [
         {
             "@id": "kb:sms_application-97fd9144-39d2-4da2-b955-c8ee9df9848b",
-            "@type": "uco-observable:Application"
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:sms_message-3f59e298-ac20-433b-adaa-2c5efe510ba2",
@@ -195,11 +198,17 @@
         },
         {
             "@id": "kb:os-5b6c1685-c603-4df4-9728-026ebfc78cd5",
-            "@type": "uco-observable:OperatingSystem"
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ]
         },
         {
             "@id": "kb:android_phonebook-5907a3f4-3e63-44d1-8501-2a33adfa4b72",
-            "@type": "uco-observable:Application",
+            "@type": [
+                "uco-observable:Application",
+                "uco-observable:Software"
+            ],
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:application-facet-2d0fc498-fb73-481a-a996-99fe941b1fd5",

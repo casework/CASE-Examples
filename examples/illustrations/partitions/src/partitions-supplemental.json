@@ -6,7 +6,10 @@
     },
     {
         "@id": "kb:OperatingSystem-cccf32d9-3d70-4513-8e33-ff6127a7da61",
-        "@type": "uco-observable:OperatingSystem",
+        "@type": [
+            "uco-observable:OperatingSystem",
+            "uco-observable:Software"
+        ],
         "uco-core:name": "Windows 11 Pro",
         "uco-core:hasFacet": {
             "@id": "kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623",
