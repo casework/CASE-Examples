@@ -49,7 +49,7 @@ This example illustrates manual software malware analysis within the Cyber Threa
         },
         "uco-action:object": [
             {
-                "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         ],
         "uco-action:result": [
