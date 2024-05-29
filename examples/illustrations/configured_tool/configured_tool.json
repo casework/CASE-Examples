@@ -75,7 +75,7 @@
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
@@ -137,7 +137,7 @@
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
@@ -205,7 +205,7 @@
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
@@ -272,25 +272,25 @@
             "@id": "kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
             "@id": "kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
             "@id": "kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
-            "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
+            "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
             "@type": "uco-observable:File"
         },
         {

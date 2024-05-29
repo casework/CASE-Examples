@@ -42,7 +42,7 @@
         "@type": "uco-observable:RasterPicture"
     },
     {
-        "@id": "kb:Software1-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
+        "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
         "@type": "uco-observable:Software"
     }
 ]
