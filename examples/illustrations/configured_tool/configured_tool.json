@@ -13,25 +13,28 @@
     },
     "@graph": [
         {
-            "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
-            "@type": "uco-tool:Tool",
+            "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+            "@type": "uco-tool:AnalyticTool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7"
         },
         {
             "@id": "kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e",
-            "@type": "uco-tool:ConfiguredTool",
+            "@type": [
+                "uco-tool:AnalyticTool",
+                "uco-tool:ConfiguredTool"
+            ],
             "uco-configuration:isConfigurationOf": {
-                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7",
             "uco-configuration:usesConfiguration": {
@@ -83,14 +86,17 @@
         },
         {
             "@id": "kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
-            "@type": "uco-tool:ConfiguredTool",
+            "@type": [
+                "uco-tool:AnalyticTool",
+                "uco-tool:ConfiguredTool"
+            ],
             "uco-configuration:isConfigurationOf": {
-                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7",
             "uco-configuration:usesConfiguration": {
@@ -142,14 +148,17 @@
         },
         {
             "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
-            "@type": "uco-tool:ConfiguredTool",
+            "@type": [
+                "uco-tool:AnalyticTool",
+                "uco-tool:ConfiguredTool"
+            ],
             "uco-configuration:isConfigurationOf": {
-                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7",
             "uco-configuration:usesConfiguration": {
@@ -289,7 +298,7 @@
             "@type": "uco-observable:File"
         },
         {
-            "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784",
+            "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae",
             "@type": "uco-identity:Organization",
             "uco-core:name": "hex-rays"
         }
