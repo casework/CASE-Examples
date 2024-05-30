@@ -25,6 +25,9 @@ all_jsonld := $(foreach illustration_dir,$(illustration_dirs),$(illustration_dir
 all: \
   kb.ttl
 
+.PHONY: \
+  check-pytest
+
 all-drafting.ttl: \
   $(all_drafting_ttl)
 	source $(top_srcdir)/venv/bin/activate \
@@ -35,7 +38,16 @@ all-drafting.ttl: \
 	mv _$@ $@
 
 check: \
+  check-pytest
+
+check-pytest: \
   kb.ttl
+	source $(top_srcdir)/venv/bin/activate \
+	  && pytest \
+	    --ignore message \
+	    --log-level=DEBUG \
+	    --verbose \
+	    --verbose
 
 clean:
 	@rm -f \

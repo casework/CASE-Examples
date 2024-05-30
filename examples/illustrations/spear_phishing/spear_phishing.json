@@ -791,14 +791,14 @@
                 "@id": "kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398",
                 "@type": "uco-observable:OperatingSystemFacet",
                 "uco-observable:manufacturer": {
-                    "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
+                    "@id": "http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
                 },
                 "uco-observable:bitness": "64",
                 "uco-observable:version": "10.0"
             }
         },
         {
-            "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26",
+            "@id": "http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26",
             "@type": "uco-identity:Organization",
             "uco-core:name": "Microsoft"
         },

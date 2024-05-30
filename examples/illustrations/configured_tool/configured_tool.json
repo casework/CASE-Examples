@@ -13,25 +13,28 @@
     },
     "@graph": [
         {
-            "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
-            "@type": "uco-tool:Tool",
+            "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db",
+            "@type": "uco-tool:AnalyticTool",
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7"
         },
         {
             "@id": "kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e",
-            "@type": "uco-tool:ConfiguredTool",
+            "@type": [
+                "uco-tool:AnalyticTool",
+                "uco-tool:ConfiguredTool"
+            ],
             "uco-configuration:isConfigurationOf": {
-                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7",
             "uco-configuration:usesConfiguration": {
@@ -62,35 +65,38 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
                 "@id": "kb:tool-be707329-48fe-4d5d-84f3-7978ba63869e"
             },
             "uco-action:environment": {
-                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
                 {
-                    "@id": "kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b"
+                    "@id": "kb:ProvenanceRecord-4915201f-0805-40aa-aaf2-12a7671214d4"
                 }
             ]
         },
         {
             "@id": "kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377",
-            "@type": "uco-tool:ConfiguredTool",
+            "@type": [
+                "uco-tool:AnalyticTool",
+                "uco-tool:ConfiguredTool"
+            ],
             "uco-configuration:isConfigurationOf": {
-                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7",
             "uco-configuration:usesConfiguration": {
@@ -121,17 +127,17 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
                 "@id": "kb:tool-f40e2a5f-7fdf-491f-8c87-b4cb766a6377"
             },
             "uco-action:environment": {
-                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
@@ -142,14 +148,17 @@
         },
         {
             "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195",
-            "@type": "uco-tool:ConfiguredTool",
+            "@type": [
+                "uco-tool:AnalyticTool",
+                "uco-tool:ConfiguredTool"
+            ],
             "uco-configuration:isConfigurationOf": {
-                "@id": "kb:tool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
+                "@id": "kb:AnalyticTool-0b635b9f-bdb8-4492-9b4e-dec6797b82db"
             },
             "uco-core:name": "IDA Pro",
             "uco-tool:toolType": "binary code analysis tool",
             "uco-tool:creator": {
-                "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784"
+                "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae"
             },
             "uco-tool:version": "7.7",
             "uco-configuration:usesConfiguration": {
@@ -186,17 +195,17 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
                 "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
             },
             "uco-action:environment": {
-                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
-                    "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                    "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
                 }
             ],
             "uco-action:result": [
@@ -221,13 +230,13 @@
                 "@id": "kb:9b82c2bc-10f7-47b2-81a8-443a9f458440"
             },
             "uco-action:performer": {
-                "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
+                "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7"
             },
             "uco-action:instrument": {
                 "@id": "kb:tool-134e3cc0-7f74-4ea2-9ac1-3c447f4f6195"
             },
             "uco-action:environment": {
-                "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
+                "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa"
             },
             "uco-action:object": [
                 {
@@ -245,11 +254,11 @@
             "@type": "uco-location:Location"
         },
         {
-            "@id": "kb:analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7",
+            "@id": "kb:Analyst-c1d5f9cc-10cd-4fdb-9570-e9d00e6df6f7",
             "@type": "uco-identity:Identity"
         },
         {
-            "@id": "kb:computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa",
+            "@id": "kb:Computer-e640f827-1f5b-4e8a-bd89-7afdf2c85caa",
             "@type": "uco-observable:Device"
         },
         {
@@ -263,25 +272,25 @@
             "@id": "kb:provenancerecord-8cf982c3-f6d7-4e11-9acf-d5dcc4390f42",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
-            "@id": "kb:provenancerecord-aa90afe6-9069-49bb-8ad8-b05d3f4f143b",
+            "@id": "kb:ProvenanceRecord-4915201f-0805-40aa-aaf2-12a7671214d4",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
             "@id": "kb:provenancerecord-c462c7de-0391-4c88-a17c-1f9607fb0c46",
             "@type": "case-investigation:ProvenanceRecord",
             "uco-core:object": {
-                "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
+                "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b"
             }
         },
         {
-            "@id": "kb:software-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
+            "@id": "kb:Software-2ef1d3c7-eb2d-470d-89ea-291daed6549b",
             "@type": "uco-observable:File"
         },
         {
@@ -289,7 +298,7 @@
             "@type": "uco-observable:File"
         },
         {
-            "@id": "kb:organization-e06cfbc1-a057-453d-bb14-6c4dfb697784",
+            "@id": "kb:organization-0dfaf75a-7b42-4d9a-9aa1-c84c176461ae",
             "@type": "uco-identity:Organization",
             "uco-core:name": "hex-rays"
         }

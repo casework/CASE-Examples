@@ -205,11 +205,11 @@
                                     "@id": "kb:message-d8330d5a-b8de-4425-9cd8-a37b038afe81"
                                 },
                                 "uco-types:threadNextItem": {
-                                    "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2"
+                                    "@id": "kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46"
                                 }
                             },
                             {
-                                "@id": "kb:thread-item-34eb880e-8ce6-4bc1-a78f-cc95653c11a2",
+                                "@id": "kb:thread-item-b1acba2e-3b77-4f83-9cee-ca444f8b7e46",
                                 "@type": "uco-types:ThreadItem",
                                 "co:index": {
                                     "@type": "xsd:positiveInteger",
