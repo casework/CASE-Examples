@@ -91,7 +91,7 @@
             ]
         },
         {
-            "@id": "kb:4b3cdcbd-6a31-462f-be9b-1ca2944c8876",
+            "@id": "kb:ac7a4b44-0dc1-45a6-9fb9-272c33058b1c",
             "@type": "uco-observable:MobileAccount",
             "uco-core:hasFacet": [
                 {
