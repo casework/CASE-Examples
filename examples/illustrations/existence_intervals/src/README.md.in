@@ -79,3 +79,39 @@ The mapping for `uco-action:Action` would be as follows.
 `uco-core:Event` and `uco-core:Relationship` will look similar.
 
 The "TBD"s above pertain to a decision UCO can make on how endurants and perdurants relate to time, under discussion [UCO Issue 544](https://github.com/ucoProject/UCO/issues/544).
+
+
+## OWL-Time
+
+OWL-Time provides the class `time:TemporalEntity`.  Guidance offers options on how to relate time-things (`time:TemporalEntity`) to things that exist in time (like an activity or an object), drawn from [Section 3.1](https://www.w3.org/TR/owl-time/#topology).
+
+> The properties `:hasTemporalDuration`, `:hasBeginning` and `:hasEnd`, together with a fourth generic property `:hasTime`, support the association of temporal information with any temporal entity, such as an activity or event, or other entity. These provide a standard way to attach time information to things, which may be used directly in applications if suitable, or specialized if needed.
+
+The following figure shows the time coverage for the general usage of `time:TemporalEntity`:
+
+![Abstraction - OWL-Time Temporal Entity](figures/abstraction_time.svg)
+
+The mapping for `time:TemporalEntity` would be as follows.
+
+| Example class or triple | Corresponding class or triple |
+| --- | --- |
+| `ex:TimeBoundedThing` | `owl:Thing` |
+| `ex:ExistenceInterval` | `time:TemporalEntity` |
+| `ex:Instant` | `time:Instant` |
+| `kb:T ex:hasExistenceInterval kb:E` | `kb:T time:hasTime kb:E` |
+| `kb:T ex:existsAtAndSince kb:T0` | N/A |
+| `kb:T ex:existsUntil kb:T1` | N/A |
+| `kb:T ex:hasCreationTimestamp "2020-..."^^xsd:dateTime` | N/A |
+| `kb:T ex:hasTerminationTimestamp "2021-..."^^xsd:dateTime` | N/A |
+| `kb:E ex:hasStart kb:T0` | `kb:E time:hasBeginning kb:T0` |
+| `kb:E ex:hasEnd kb:T1` | `kb:E time:hasEnd kb:T1` |
+| `kb:E ex:hasBeginningTimestamp "2020-..."^^xsd:dateTime` | N/A |
+| `kb:E ex:hasEndingTimestamp "2021-..."^^xsd:dateTime` | N/A |
+| `kb:T0 ex:hasTimestamp "2020-..."^^xsd:dateTime` | `kb:T0 time:inXSDDateTime "2020-..."^^xsd:dateTime` |
+| `kb:T1 ex:hasTimestamp "2021-..."^^xsd:dateTime` | `kb:T1 time:inXSDDateTime "2021-..."^^xsd:dateTime` |
+
+Some of the examples in the OWL-TIME specification include demonstrations of `time:TemporalEntity` that allow for endurants and perdurants as direct subclasses.  Note that the examples section is non-normative.
+
+* [5.4, "iCalendar"](https://www.w3.org/TR/owl-time/#iCal) instantiates the endurant "Abraham Lincoln" (node `_:TE-2`).
+* [5.6, "A Use Case for Scheduling"](https://www.w3.org/TR/owl-time/#scheduling) instantiates perdurants some teleconference and some meeting (nodes `ex:telecon` and `ex:meeting`, respectively).
+* [5.7, "Alignment of PROV-O with OWL-Time"](https://www.w3.org/TR/owl-time/#time-prov) states that `prov:Activity` and `prov:InstantaneousEvent` can be subclasses of `time:TemporalEntity` and `time:Instant`, respectively.
