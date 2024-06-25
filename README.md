@@ -19,7 +19,7 @@ Mapping notes & respective JSON-LD output:
 - [Device](examples/illustrations/device/device.json)
 - [EXIF Data](examples/illustrations/exif_data/exif_data.json)
 - [Event](examples/illustrations/event/event.json)
-- [Existence intervals](examples/illustrations/existence_intervals/existence_intervals.json)
+- [Existence intervals](examples/illustrations/existence_intervals/existence_intervals.json) ([*info*](examples/illustrations/existence_intervals/))
 - [Files](examples/illustrations/file/file.json) (*[info](examples/illustrations/file/)*)
 - [Forensic Lifecycle](examples/illustrations/forensic_lifecycle/forensic_lifecycle.json) ([*info*](examples/illustrations/forensic_lifecycle/))
 - [Location](examples/illustrations/location/location.json)
