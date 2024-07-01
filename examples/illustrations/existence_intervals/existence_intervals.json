@@ -75,6 +75,47 @@
             },
             "rdfs:comment": "The instant that is the end of E.",
             "rdfs:label": "T1"
+        },
+        {
+            "@id": "kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92",
+            "@type": "time:Interval",
+            "rdfs:comment": "The existence interval of T.",
+            "rdfs:label": "E",
+            "time:hasBeginning": {
+                "@id": "kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a"
+            },
+            "time:hasEnd": {
+                "@id": "kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b"
+            }
+        },
+        {
+            "@id": "kb:Instant-531377bb-8e8e-4648-bc61-01942dfe6b0b",
+            "@type": "time:Instant",
+            "rdfs:comment": "The instant that is the end of E.",
+            "rdfs:label": "T1",
+            "time:inXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2021-02-03T04:05:06.7890Z"
+            }
+        },
+        {
+            "@id": "kb:Instant-9c248bb3-ea05-4ef0-9ac7-b68a99d5c07a",
+            "@type": "time:Instant",
+            "rdfs:comment": "The instant that is the beginning of E.",
+            "rdfs:label": "T0",
+            "time:inXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2020-01-02T03:04:05.6789Z"
+            }
+        },
+        {
+            "@id": "kb:TimeBoundThing-b1fd892f-f190-4e15-a928-6c949867c59d",
+            "@type": "owl:Thing",
+            "rdfs:comment": "A thing with a time-bounded existence.",
+            "rdfs:label": "T",
+            "time:hasTime": {
+                "@id": "kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92"
+            }
         }
     ]
 }
