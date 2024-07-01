@@ -1,0 +1,80 @@
+{
+    "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
+        "ex": "http://example.org/ontology/example/",
+        "kb": "http://example.org/kb/",
+        "gufo": "http://purl.org/nemo/gufo#",
+        "obo": "http://purl.obolibrary.org/obo/",
+        "owl": "http://www.w3.org/2002/07/owl#",
+        "prov": "http://www.w3.org/ns/prov#",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "time": "http://www.w3.org/2006/time#",
+        "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "@graph": [
+        {
+            "@id": "kb:TimeBoundThing-bbd18617-4118-4376-ad0c-19fb729a9b54",
+            "@type": "ex:TimeBoundedThing",
+            "rdfs:label": "T",
+            "rdfs:comment": "A thing with a time-bounded existence.",
+            "ex:hasExistenceInterval": {
+                "@id": "kb:ExistenceInterval-03c8fef4-dac9-4f17-bc98-2ef468390daa"
+            },
+            "ex:existsAtAndSince": {
+                "@id": "kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8"
+            },
+            "ex:existsUntil": {
+                "@id": "kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b"
+            },
+            "ex:hasCreationTimestamp": {
+                "@type": "xsd:dateTime",
+                "@value": "2020-01-02T03:04:05.6789Z"
+            },
+            "ex:hasTerminationTimestamp": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-02-03T04:05:06.7890Z"
+            }
+        },
+        {
+            "@id": "kb:ExistenceInterval-03c8fef4-dac9-4f17-bc98-2ef468390daa",
+            "@type": "ex:ExistenceInterval",
+            "rdfs:label": "E",
+            "rdfs:comment": "The existence interval of T.",
+            "ex:hasStart": {
+                "@id": "kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8"
+            },
+            "ex:hasEnd": {
+                "@id": "kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b"
+            },
+            "ex:hasBeginningTimestamp": {
+                "@type": "xsd:dateTime",
+                "@value": "2020-01-02T03:04:05.6789Z"
+            },
+            "ex:hasEndingTimestamp": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-02-03T04:05:06.7890Z"
+            }
+        },
+        {
+            "@id": "kb:Instant-ef0da4b8-d014-4142-b9f5-b0a0091965b8",
+            "@type": "ex:Instant",
+            "rdfs:label": "T0",
+            "rdfs:comment": "The instant that is the beginning of E.",
+            "ex:hasTimestamp": {
+                "@type": "xsd:dateTime",
+                "@value": "2020-01-02T03:04:05.6789Z"
+            }
+        },
+        {
+            "@id": "kb:Instant-a9dd29d9-c854-4cdd-917a-7de5226b389b",
+            "@type": "ex:Instant",
+            "rdfs:label": "T1",
+            "rdfs:comment": "The instant that is the end of E.",
+            "ex:hasTimestamp": {
+                "@type": "xsd:dateTime",
+                "@value": "2021-02-03T04:05:06.7890Z"
+            }
+        }
+    ]
+}

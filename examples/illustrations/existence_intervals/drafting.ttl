@@ -1,0 +1,86 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
+@prefix ex: <http://example.org/ontology/example/> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:ExistenceInterval
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	.
+
+ex:Instant
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	.
+
+ex:TimeBoundedThing
+	a owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	rdfs:comment "A thing with a time-bounded existence."@en ;
+	.
+
+ex:existsAtAndSince
+	a owl:ObjectProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range ex:Instant ;
+	.
+
+ex:existsUntil
+	a owl:ObjectProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range ex:Instant ;
+	.
+
+ex:hasBeginningTimestamp
+	a owl:DatatypeProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range xsd:dateTime ;
+	.
+
+ex:hasCreationTimestamp
+	a owl:DatatypeProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range xsd:dateTime ;
+	.
+
+ex:hasEnd
+	a owl:ObjectProperty ;
+	rdfs:domain ex:ExistenceInterval ;
+	rdfs:range ex:Instant ;
+	.
+
+ex:hasEndingTimestamp
+	a owl:DatatypeProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range xsd:dateTime ;
+	.
+
+ex:hasExistenceInterval
+	a owl:ObjectProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range ex:ExistenceInterval ;
+	.
+
+ex:hasStart
+	a owl:ObjectProperty ;
+	rdfs:domain ex:ExistenceInterval ;
+	rdfs:range ex:Instant ;
+	.
+
+ex:hasTerminationTimestamp
+	a owl:DatatypeProperty ;
+	rdfs:domain ex:TimeBoundedThing ;
+	rdfs:range xsd:dateTime ;
+	.
+
+ex:hasTimestamp
+	a owl:DatatypeProperty ;
+	rdfs:domain ex:Instant ;
+	rdfs:range xsd:dateTime ;
+	.
+

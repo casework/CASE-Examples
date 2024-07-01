@@ -1,0 +1,25 @@
+digraph "abstraction" {
+	n_t [label="T (object):\nAn owl:Thing."] ;
+
+	n_e [label="E (object):\nThe existence interval of T."] ;
+
+	n_t0 [label="T0 (object):\nThe instant that is the beginning of E."];
+	n_t1 [label="T1 (object):\nThe instant that is the end of E."];
+
+	l_ts0 [label="ts0 (literal):\n2020-01-02T03:04:05.6789Z" shape="box"];
+	l_ts1 [label="ts1 (literal):\n2021-02-03T04:05:06.7890Z" shape="box"];
+
+	n_t -> n_e [label="T hasExistenceInterval E"] ;
+	n_t -> n_t0 [label="T existsAtAndSince T0"] ;
+	n_t -> n_t1 [label="T existsUntil T1"] ;
+	n_t -> l_ts0 [label="T hasCreationTimestamp ts0"];
+	n_t -> l_ts1 [label="T hasTerminationTimestamp ts1"];
+
+	n_e -> n_t0 [label="E hasStart T0"];
+	n_e -> n_t1 [label="E hasEnd T1"];
+	n_e -> l_ts0 [label="E hasBeginningTimestamp ts0"] ;
+	n_e -> l_ts1 [label="E hasEndingTimestamp ts1"] ;
+
+	n_t0 -> l_ts0 [label="T0 hasTimestamp ts0"];
+	n_t1 -> l_ts1 [label="T1 hasTimestamp ts1"];
+}
