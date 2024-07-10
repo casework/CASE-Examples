@@ -115,3 +115,101 @@ Some of the examples in the OWL-TIME specification include demonstrations of `ti
 * [5.4, "iCalendar"](https://www.w3.org/TR/owl-time/#iCal) instantiates the endurant "Abraham Lincoln" (node `_:TE-2`).
 * [5.6, "A Use Case for Scheduling"](https://www.w3.org/TR/owl-time/#scheduling) instantiates perdurants some teleconference and some meeting (nodes `ex:telecon` and `ex:meeting`, respectively).
 * [5.7, "Alignment of PROV-O with OWL-Time"](https://www.w3.org/TR/owl-time/#time-prov) states that `prov:Activity` and `prov:InstantaneousEvent` can be subclasses of `time:TemporalEntity` and `time:Instant`, respectively.
+
+
+## gUFO
+
+(gUFO version: [1.0.0](https://github.com/nemo-ufes/gufo/releases/tag/v1.0.0).)
+
+gUFO's topmost class that describes an object that exists in a period of time is "Concrete Individual" (`gufo:ConcreteIndividual`), defined as the disjoint union of "Endurants," "Events," and "Situations."
+
+* `gufo:Endurant` corresponds with UCO Issue 535's "Endurant".
+* `gufo:Event` corresponds with UCO Issue 535's "Perdurant".
+* `gufo:Situation` is left out of scope of this discussion.
+
+Two properties, "has begin point" and "has end point," assign the first and last instants that any concrete individual exists.  The properties have range `time:Instant`, inheriting the vocabulary and entailing the structures of OWL-Time as described above.
+
+None of the three subclasses of `gufo:ConcreteIndividual` specialize restrictions on those existence-bounding properties.  Hence, without loss of generality, we can review a `gufo:Endurant` and see the same time-related applicability for `gufo:Event`.
+
+This is an endurant (more specifically, a `gufo:Object`) with literal-valued instants describing the creation and termination timestamps TS0 and TS1:
+
+```json
+[
+    {
+        "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
+        "@type": "gufo:Object",
+        "rdfs:label": "T",
+        "rdfs:comment": "A thing with a time-bounded existence.",
+        "gufo:hasBeginPointInXSDDateTimeStamp": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2020-01-02T03:04:05.6789Z"
+        },
+        "gufo:hasEndPointInXSDDateTimeStamp": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2021-02-03T04:05:06.7890Z"
+        }
+    }
+]
+```
+
+This is the same endurant with reified instants housing the beginning and end:
+
+```json
+[
+    {
+        "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
+        "rdfs:label": "T",
+        "gufo:hasBeginPoint": {
+            "@id": "kb:Instant-1a250c7b-19c5-4ec4-bed2-d05c9d438e9d",
+            "@type": "time:Instant",
+            "rdfs:label": "T0",
+            "time:inXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2020-01-02T03:04:05.6789Z"
+            }
+        },
+        "gufo:hasEndPoint": {
+            "@id": "kb:Instant-bbd8741a-4af8-4358-802b-a6fb8a4cf7dc",
+            "@type": "time:Instant",
+            "rdfs:label": "T1",
+            "time:inXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2021-02-03T04:05:06.7890Z"
+            }
+        }
+    }
+]
+```
+
+Intervals of existence do not appear to be defined directly in gUFO.  Also, since only the first and last instant of a concrete individual are specified, it is also not explicit in gUFO whether an individual's interval of existence needs to be continuous.  For instance, a `gufo:Situation` may be seen to hold for a period of time (such as a person being a student in a `gufo:TemporaryInstantiationSituation`), then not hold (e.g., when the person graduates from a school), then hold again (e.g., when the person later enrolls in another school).
+
+Timestamps are constrained to `xsd:dateTimeStamp`, not `xsd:dateTime`, which is consistent with OWL-Time's deprecation of `time:inXSDDateTime`.  For UCO, this would necessitate transcoding `xsd:dateTime` timestamps with a non-OWL, and likely non-SPARQL, mechanism.
+
+The following figure shows the time coverage for `gufo:ConcreteIndividual`, re-using covering vocabulary from OWL-Time above:
+
+![Abstraction - gUFO Concrete Individual](figures/abstraction_gufo.svg)
+
+The mapping for `gufo:ConcreteIndividual` would be as follows:
+
+| Example class or triple | Corresponding class or triple |
+| --- | --- |
+| `ex:TimeBoundedThing` | `gufo:ConcreteIndividual` |
+| `ex:ExistenceInterval` | N/A |
+| `ex:Instant` | `time:Instant` |
+| `kb:T ex:hasExistenceInterval kb:E` | N/A |
+| `kb:T ex:existsAtAndSince kb:T0` | `gufo:hasBeginPoint` |
+| `kb:T ex:existsUntil kb:T1` | `gufo:hasEndPoint` |
+| `kb:T ex:hasCreationTimestamp "2020-..."^^xsd:dateTime` | `kb:t gufo:hasBeginPointInXSDDateTimeStamp "2020-..."^^xsd:dateTimeStamp` |
+| `kb:T ex:hasTerminationTimestamp "2021-..."^^xsd:dateTime` | `kb:t gufo:hasEndPointInXSDDateTimeStamp "2021-..."^^xsd:dateTimeStamp` |
+| `kb:E ex:hasStart kb:T0` | N/A |
+| `kb:E ex:hasEnd kb:T1` | N/A |
+| `kb:E ex:hasBeginningTimestamp "2020-..."^^xsd:dateTime` | N/A |
+| `kb:E ex:hasEndingTimestamp "2021-..."^^xsd:dateTime` | N/A |
+| `kb:T0 ex:hasTimestamp "2020-..."^^xsd:dateTime` | `kb:T0 time:inXSDDateTimeStamp "2020-..."^^xsd:dateTimeStamp` |
+| `kb:T1 ex:hasTimestamp "2021-..."^^xsd:dateTime` | `kb:T1 time:inXSDDateTimeStamp "2021-..."^^xsd:dateTimeStamp` |
+
+_Aside_: A side-by-side view of the gUFO and OWL-Time coverage show that an ontology importing gUFO and OWL-Time has complete coverage of the existence-intervals concepts suggested on this page.
+
+| OWL-Time | gUFO |
+| --- | --- |
+| ![Abstraction - OWL-Time Temporal Entity](figures/abstraction_time.svg) | ![Abstraction - gUFO Concrete Individual](figures/abstraction_gufo.svg) |

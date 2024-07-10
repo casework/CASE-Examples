@@ -109,6 +109,42 @@
             }
         },
         {
+            "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
+            "gufo:hasBeginPoint": {
+                "@id": "kb:Instant-1a250c7b-19c5-4ec4-bed2-d05c9d438e9d",
+                "@type": "time:Instant",
+                "rdfs:label": "T0",
+                "time:inXSDDateTimeStamp": {
+                    "@type": "xsd:dateTimeStamp",
+                    "@value": "2020-01-02T03:04:05.6789Z"
+                }
+            },
+            "gufo:hasEndPoint": {
+                "@id": "kb:Instant-bbd8741a-4af8-4358-802b-a6fb8a4cf7dc",
+                "@type": "time:Instant",
+                "rdfs:label": "T1",
+                "time:inXSDDateTimeStamp": {
+                    "@type": "xsd:dateTimeStamp",
+                    "@value": "2021-02-03T04:05:06.7890Z"
+                }
+            },
+            "rdfs:label": "T"
+        },
+        {
+            "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
+            "@type": "gufo:Object",
+            "gufo:hasBeginPointInXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2020-01-02T03:04:05.6789Z"
+            },
+            "gufo:hasEndPointInXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2021-02-03T04:05:06.7890Z"
+            },
+            "rdfs:comment": "A thing with a time-bounded existence.",
+            "rdfs:label": "T"
+        },
+        {
             "@id": "kb:TimeBoundThing-b1fd892f-f190-4e15-a928-6c949867c59d",
             "@type": "owl:Thing",
             "rdfs:comment": "A thing with a time-bounded existence.",
