@@ -18,3 +18,7 @@
 	path = dependencies/CDO-Shapes-Time
 	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-Time.git
 	branch = main
+[submodule "dependencies/CDO-Shapes-gufo"]
+	path = dependencies/CDO-Shapes-gufo
+	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-gufo.git
+	branch = main

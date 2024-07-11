@@ -18,18 +18,25 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../.. ; pwd)
 
+gufo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl
+sh_gufo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl
+
 time_ttl := $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl
 sh_time_ttl := $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 
 all:
 
 .cdo-shapes.done.log: \
+  $(gufo_ttl) \
+  $(sh_gufo_ttl) \
   $(sh_time_ttl) \
   $(time_ttl) \
   $(top_srcdir)/.venv.done.log \
   existence_intervals.json
 	source $(top_srcdir)/venv/bin/activate \
 	  && case_validate \
+	    --ontology-graph $(gufo_ttl) \
+	    --ontology-graph $(sh_gufo_ttl) \
 	    --ontology-graph $(sh_time_ttl) \
 	    --ontology-graph $(time_ttl) \
 	    existence_intervals.json
