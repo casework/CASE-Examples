@@ -1,0 +1,16 @@
+[
+    {
+        "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
+        "@type": "gufo:Object",
+        "rdfs:label": "T",
+        "rdfs:comment": "A thing with a time-bounded existence.",
+        "gufo:hasBeginPointInXSDDateTimeStamp": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2020-01-02T03:04:05.6789Z"
+        },
+        "gufo:hasEndPointInXSDDateTimeStamp": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2021-02-03T04:05:06.7890Z"
+        }
+    }
+]
