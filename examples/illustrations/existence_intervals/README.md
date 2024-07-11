@@ -125,7 +125,7 @@ gUFO's topmost class that describes an object that exists in a period of time is
 
 * `gufo:Endurant` corresponds with UCO Issue 535's "Endurant".
 * `gufo:Event` corresponds with UCO Issue 535's "Perdurant".
-* `gufo:Situation` is left out of scope of this discussion.
+* `gufo:Situation` is mostly out of scope of this discussion, though the interested can review a footnote about temporary `@type` applicability[^1].
 
 Two properties, "has begin point" and "has end point," assign the first and last instants that any concrete individual exists.  The properties have range `time:Instant`, inheriting the vocabulary and entailing the structures of OWL-Time as described above.
 
@@ -158,6 +158,7 @@ This is the same endurant with reified instants housing the beginning and end:
 [
     {
         "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
+        "@type": "gufo:Object",
         "rdfs:label": "T",
         "gufo:hasBeginPoint": {
             "@id": "kb:Instant-1a250c7b-19c5-4ec4-bed2-d05c9d438e9d",
@@ -181,7 +182,7 @@ This is the same endurant with reified instants housing the beginning and end:
 ]
 ```
 
-Intervals of existence do not appear to be defined directly in gUFO.  Also, since only the first and last instant of a concrete individual are specified, it is also not explicit in gUFO whether an individual's interval of existence needs to be continuous.  For instance, a `gufo:Situation` may be seen to hold for a period of time (such as a person being a student in a `gufo:TemporaryInstantiationSituation`), then not hold (e.g., when the person graduates from a school), then hold again (e.g., when the person later enrolls in another school).
+Intervals of existence do not appear to be defined directly in gUFO.  Also, since only the first and last instant of a concrete individual are specified, it is also not explicit in gUFO whether an individual's interval of existence needs to be continuous.  For instance, a `gufo:Situation` may be seen to hold for a period of time, such as a person temporarily being a student in a `gufo:TemporaryInstantiationSituation`[^1], then not hold (e.g., when the person graduates from a school), then hold again (e.g., when the person later enrolls in another school).
 
 Timestamps are constrained to `xsd:dateTimeStamp`, not `xsd:dateTime`, which is consistent with OWL-Time's deprecation of `time:inXSDDateTime`.  For UCO, this would necessitate transcoding `xsd:dateTime` timestamps with a non-OWL, and likely non-SPARQL, mechanism.
 
@@ -213,3 +214,5 @@ _Aside_: A side-by-side view of the gUFO and OWL-Time coverage show that an onto
 | OWL-Time | gUFO |
 | --- | --- |
 | ![Abstraction - OWL-Time Temporal Entity](figures/abstraction_time.svg) | ![Abstraction - gUFO Concrete Individual](figures/abstraction_gufo.svg) |
+
+[^1]: gUFO represents instantations that are not always true with `gufo:TemporaryInstantiationSituation`.  In the case where a person is temporarily a student, "student" is taken to be some subclass of "person" - e.g., `ex:Student rdfs:subClassOf ex:Person`.  For some time, it holds that `kb:person-3393... a ex:Student`, but this is not always true.  To hold this situationally-true statement in a knowledge graph, a `gufo:TemporaryInstantiationSituation` is included to note the conditions when `kb:person-3393...` is a `ex:Student`, instead of encoding the unqualified triple `kb:person-3393... a ex:Student`.  See `kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8` in [`existence_intervals.json`](existence_intervals.json) for a demonstration of this representation.
