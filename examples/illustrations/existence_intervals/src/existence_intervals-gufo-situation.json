@@ -1,0 +1,46 @@
+[
+    {
+        "@id": "ex:Person",
+        "@type": [
+            "owl:Class",
+            "gufo:Kind"
+        ],
+        "rdfs:subClassOf": {
+            "@id": "gufo:Object"
+        }
+    },
+    {
+        "@id": "ex:Student",
+        "@type": [
+            "owl:Class",
+            "gufo:Role"
+        ],
+        "rdfs:subClassOf": {
+            "@id": "ex:Person"
+        }
+    },
+    {
+        "@id": "kb:Person-3393dfc0-c765-4710-86db-8182c34de806",
+        "@type": "ex:Person",
+        "rdfs:label": "J. Doe",
+        "gufo:standsInQualifiedInstantiation": {
+            "@id": "kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8"
+        }
+    },
+    {
+        "@id": "kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8",
+        "@type": "gufo:TemporaryInstantiationSituation",
+        "rdfs:comment": "This is the situation where J. Doe is a student, which started to hold Sep 1 2018, and no longer held on Jun 16, 2022.",
+        "gufo:concernsNonRigidType": {
+            "@id": "ex:Student"
+        },
+        "gufo:hasBeginPointInXSDDateTimeStamp": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2018-09-01T00:00Z"
+        },
+        "gufo:hasEndPointInXSDDateTimeStamp": {
+            "@type": "xsd:dateTimeStamp",
+            "@value": "2022-06-16T00:00:00Z"
+        }
+    }
+]

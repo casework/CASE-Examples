@@ -77,6 +77,26 @@
             "rdfs:label": "T1"
         },
         {
+            "@id": "ex:Person",
+            "@type": [
+                "owl:Class",
+                "gufo:Kind"
+            ],
+            "rdfs:subClassOf": {
+                "@id": "gufo:Object"
+            }
+        },
+        {
+            "@id": "ex:Student",
+            "@type": [
+                "owl:Class",
+                "gufo:Role"
+            ],
+            "rdfs:subClassOf": {
+                "@id": "ex:Person"
+            }
+        },
+        {
             "@id": "kb:ExistenceInterval-27802c47-1c75-43fa-ab4b-fc01aa6c2c92",
             "@type": "time:Interval",
             "rdfs:comment": "The existence interval of T.",
@@ -110,28 +130,6 @@
         },
         {
             "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
-            "gufo:hasBeginPoint": {
-                "@id": "kb:Instant-1a250c7b-19c5-4ec4-bed2-d05c9d438e9d",
-                "@type": "time:Instant",
-                "rdfs:label": "T0",
-                "time:inXSDDateTimeStamp": {
-                    "@type": "xsd:dateTimeStamp",
-                    "@value": "2020-01-02T03:04:05.6789Z"
-                }
-            },
-            "gufo:hasEndPoint": {
-                "@id": "kb:Instant-bbd8741a-4af8-4358-802b-a6fb8a4cf7dc",
-                "@type": "time:Instant",
-                "rdfs:label": "T1",
-                "time:inXSDDateTimeStamp": {
-                    "@type": "xsd:dateTimeStamp",
-                    "@value": "2021-02-03T04:05:06.7890Z"
-                }
-            },
-            "rdfs:label": "T"
-        },
-        {
-            "@id": "kb:Object-bee97e78-8e5e-4ffe-9c2b-28e960f84bbc",
             "@type": "gufo:Object",
             "gufo:hasBeginPointInXSDDateTimeStamp": {
                 "@type": "xsd:dateTimeStamp",
@@ -143,6 +141,30 @@
             },
             "rdfs:comment": "A thing with a time-bounded existence.",
             "rdfs:label": "T"
+        },
+        {
+            "@id": "kb:Person-3393dfc0-c765-4710-86db-8182c34de806",
+            "@type": "ex:Person",
+            "gufo:standsInQualifiedInstantiation": {
+                "@id": "kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8"
+            },
+            "rdfs:label": "J. Doe"
+        },
+        {
+            "@id": "kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8",
+            "@type": "gufo:TemporaryInstantiationSituation",
+            "gufo:concernsNonRigidType": {
+                "@id": "ex:Student"
+            },
+            "gufo:hasBeginPointInXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2018-09-01T00:00Z"
+            },
+            "gufo:hasEndPointInXSDDateTimeStamp": {
+                "@type": "xsd:dateTimeStamp",
+                "@value": "2022-06-16T00:00:00Z"
+            },
+            "rdfs:comment": "This is the situation where J. Doe is a student, which started to hold Sep 1 2018, and no longer held on Jun 16, 2022."
         },
         {
             "@id": "kb:TimeBoundThing-b1fd892f-f190-4e15-a928-6c949867c59d",
