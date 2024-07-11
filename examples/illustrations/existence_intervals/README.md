@@ -127,8 +127,7 @@ gUFO's topmost class that describes an object that exists in a period of time is
 * `gufo:Event` corresponds with UCO Issue 535's "Perdurant".
 * `gufo:Situation` is mostly out of scope of this discussion, though the interested can review a footnote about temporary `@type` applicability[^1].
 
-Two properties, "has begin point" and "has end point," assign the first and last instants that any concrete individual exists.  The properties have range `time:Instant`, inheriting the vocabulary and entailing the structures of OWL-Time as described above.
-
+Concrete individuals have first and last instants in which they exist.  These instants are represented as `time:Instant` objects or as datatype literals (typed `xsd:date` or `xsd:dateTimeStamp`---and, pertinent to UCO, not `xsd:dateTime`).  Two properties, "has begin point" and "has end point," assign the first and last instants that any concrete individual exists as objects.  The properties have range `time:Instant`, inheriting the vocabulary and entailing the structures of OWL-Time as described above.
 None of the three subclasses of `gufo:ConcreteIndividual` specialize restrictions on those existence-bounding properties.  Hence, without loss of generality, we can review a `gufo:Endurant` and see the same time-related applicability for `gufo:Event`.
 
 This is an endurant (more specifically, a `gufo:Object`) with literal-valued instants describing the creation and termination timestamps TS0 and TS1:
@@ -151,6 +150,8 @@ This is an endurant (more specifically, a `gufo:Object`) with literal-valued ins
     }
 ]
 ```
+
+The literal-valued timestamps can also use `gufo:hasBeginPointInXSDDate` when only `xsd:date` is to be used.
 
 This is the same endurant with reified instants housing the beginning and end:
 
