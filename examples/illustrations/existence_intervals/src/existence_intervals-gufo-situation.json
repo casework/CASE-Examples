@@ -1,14 +1,20 @@
 [
     {
         "@id": "ex:Person",
-        "@type": "owl:Class",
+        "@type": [
+            "owl:Class",
+            "gufo:Kind"
+        ],
         "rdfs:subClassOf": {
             "@id": "gufo:Object"
         }
     },
     {
         "@id": "ex:Student",
-        "@type": "owl:Class",
+        "@type": [
+            "owl:Class",
+            "gufo:Role"
+        ],
         "rdfs:subClassOf": {
             "@id": "ex:Person"
         }
