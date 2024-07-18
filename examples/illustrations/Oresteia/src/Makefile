@@ -11,8 +11,4 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-RENDER_PROV := yes
-
-RENDER_RELATIONSHIPS := yes
-
-include ../src/illustration-basedir.mk
+include ../../src/illustration-src.mk

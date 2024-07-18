@@ -1,0 +1,53 @@
+PREFIX kb: <http://example.org/kb/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX case-investigation: <https://ontology.caseontology.org/case/investigation/>
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+PREFIX uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/>
+SELECT ?lPersonName ?lInA ?lInB ?lInC ?lInD ?lInE ?lInF
+WHERE {
+  ?nPerson
+    a/rdfs:subClassOf* uco-identity:Person ;
+    .
+  OPTIONAL {
+    ?nPerson
+      uco-core:name ?lName ;
+      .
+  }
+  OPTIONAL {
+    ?nPerson
+      uco-core:hasFacet / uco-identity:givenName ?lGivenName ;
+      .
+  }
+  BIND(COALESCE(?lGivenName, ?lName) AS ?lPersonName)
+
+  OPTIONAL {
+    kb:investigation-4586742a-710a-454f-bcb8-b60e230ec1b2 uco-core:object ?nPerson .
+    BIND("✓" AS ?lInA)
+  }
+
+  OPTIONAL {
+    kb:investigation-b05226da-eaef-4bc5-a139-ca12c94dbdfd uco-core:object ?nPerson .
+    BIND("✓" AS ?lInB)
+  }
+
+  OPTIONAL {
+    kb:investigation-ac9fd560-261e-4cd6-af64-8b83d100b9a8 uco-core:object ?nPerson .
+    BIND("✓" AS ?lInC)
+  }
+
+  OPTIONAL {
+    kb:investigation-2545442b-321c-454d-bcb8-c40d321ce2c2 uco-core:object ?nPerson .
+    BIND("✓" AS ?lInD)
+  }
+
+  OPTIONAL {
+    kb:investigation-952d677d-6b62-4e53-9bac-1b113d268ac5 uco-core:object ?nPerson .
+    BIND("✓" AS ?lInE)
+  }
+
+  OPTIONAL {
+    kb:investigation-5aa33dc6-7a39-4731-a754-62a9c41e5220 uco-core:object ?nPerson .
+    BIND("✓" AS ?lInF)
+  }
+}
+ORDER BY ?lPersonName

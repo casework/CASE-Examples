@@ -1,0 +1,25 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+PREFIX uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/>
+SELECT ?nPerson ?lName ?lGivenName ?lFamilyName
+WHERE {
+  ?nPerson
+    a/rdfs:subClassOf* uco-identity:Person ;
+    .
+  OPTIONAL {
+    ?nPerson
+      uco-core:name ?lName ;
+      .
+  }
+  OPTIONAL {
+    ?nPerson
+      uco-core:hasFacet / uco-identity:familyName ?lFamilyName ;
+      .
+  }
+  OPTIONAL {
+    ?nPerson
+      uco-core:hasFacet / uco-identity:givenName ?lGivenName ;
+      .
+  }
+}
+ORDER BY ?nPerson
