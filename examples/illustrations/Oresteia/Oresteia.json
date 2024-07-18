@@ -42,6 +42,12 @@
             "uco-core:description": "In Mycenae, Atreus killed two sons of Thyestes, cooked them (except for their hands and heads), fed them to Thyestes, and then taunted Thyestes with his murdered sons' hands and heads.",
             "uco-core:object": [
                 {
+                    "@id": "kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c"
+                },
+                {
+                    "@id": "kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1"
+                },
+                {
                     "@id": "kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45"
                 },
                 {
@@ -63,6 +69,12 @@
             "case-investigation:focus": "Rape",
             "uco-core:description": "In Mycenae, Thyestes raped his daughter Pelopia to have a son (Aegisthus)",
             "uco-core:object": [
+                {
+                    "@id": "kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c"
+                },
+                {
+                    "@id": "kb:pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d"
+                },
                 {
                     "@id": "kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45"
                 },
@@ -88,7 +100,13 @@
             "uco-core:description": "In Mycenae, Aegisthus killed Atreus (Agamemnon's father)",
             "uco-core:object": [
                 {
+                    "@id": "kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c"
+                },
+                {
                     "@id": "kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d"
+                },
+                {
+                    "@id": "kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1"
                 }
             ]
         },
@@ -100,7 +118,13 @@
             "uco-core:description": "In Aulis, Agamemnon killed his daughter Iphigenia as a sacrifice to the gods",
             "uco-core:object": [
                 {
+                    "@id": "kb:aulis-82f1a189-7e8b-4c56-932a-5d871c206527"
+                },
+                {
                     "@id": "kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c"
+                },
+                {
+                    "@id": "kb:iphigenia-323bc6bc-d64b-42d1-a9f5-d4452efdbae6"
                 }
             ]
         },
@@ -111,6 +135,9 @@
             "case-investigation:focus": "Murder",
             "uco-core:description": "In the Palace of Argos, Agamemnon and Cassandra were killed by Clytemnestra (accomplice Aegisthus)",
             "uco-core:object": [
+                {
+                    "@id": "kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006"
+                },
                 {
                     "@id": "kb:argos-palace-d9633e60-a44c-40f5-a0f0-c5225f3ef90e"
                 },
@@ -282,7 +309,13 @@
             "uco-core:description": "In the Palace of Argos, Clytemnestra and Aegisthus were killed by Orestes (accomplice Electra)",
             "uco-core:object": [
                 {
+                    "@id": "kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006"
+                },
+                {
                     "@id": "kb:electra-a960648e-c88e-4728-9853-7b7f06de8caa"
+                },
+                {
+                    "@id": "kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf"
                 },
                 {
                     "@id": "kb:argos-palace-d9633e60-a44c-40f5-a0f0-c5225f3ef90e"
@@ -1710,6 +1743,41 @@
             "@id": "kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c",
             "@type": "uco-identity:Person",
             "uco-core:name": "Agamemnon"
+        },
+        {
+            "@id": "kb:atreus-5c9fc0ba-251a-47c4-a1ec-b49ae7e3bce1",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Atreus"
+        },
+        {
+            "@id": "kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Clytemnestra"
+        },
+        {
+            "@id": "kb:orestes-5e400330-677d-42c1-8b32-2836cda219bf",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Orestes"
+        },
+        {
+            "@id": "kb:pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Pelopia"
+        },
+        {
+            "@id": "kb:mycenae-2d8c3dc2-8423-43d6-bdeb-7ff9b640577c",
+            "@type": "uco-location:Location",
+            "uco-core:name": "Mycenae"
+        },
+        {
+            "@id": "kb:aulis-82f1a189-7e8b-4c56-932a-5d871c206527",
+            "@type": "uco-location:Location",
+            "uco-core:name": "Aulis"
+        },
+        {
+            "@id": "kb:iphigenia-323bc6bc-d64b-42d1-a9f5-d4452efdbae6",
+            "@type": "uco-identity:Person",
+            "uco-core:name": "Iphigenia"
         }
     ]
 }
