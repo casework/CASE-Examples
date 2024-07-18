@@ -51,6 +51,12 @@
                     "@id": "kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45"
                 },
                 {
+                    "@id": "kb:thyestes-son-2a869a9a-ab97-4fc9-95cf-63804fcf061f"
+                },
+                {
+                    "@id": "kb:thyestes-son-e992bb12-2322-46e8-b8f4-5095a4767b14"
+                },
+                {
                     "@id": "kb:victim-bbb4d46f-099e-4bf8-828e-7befd2a5f535"
                 },
                 {
@@ -77,6 +83,9 @@
                 },
                 {
                     "@id": "kb:thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45"
+                },
+                {
+                    "@id": "kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d"
                 },
                 {
                     "@id": "kb:offender-46a9ed63-122d-40bc-a80d-cf7e047821a6"
@@ -145,6 +154,12 @@
             "uco-core:object": [
                 {
                     "@id": "kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006"
+                },
+                {
+                    "@id": "kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d"
+                },
+                {
+                    "@id": "kb:agamemnon-bf5ea2fe-a14b-4f13-9bd3-83063ff6397c"
                 },
                 {
                     "@id": "kb:argos-palace-d9633e60-a44c-40f5-a0f0-c5225f3ef90e"
@@ -310,6 +325,9 @@
             "uco-core:object": [
                 {
                     "@id": "kb:clytemnestra-9e13b5c3-1f27-4035-981a-0ec9a1548006"
+                },
+                {
+                    "@id": "kb:aegisthus-c7da5045-ad5f-4f3d-8a74-a7fd46e9628d"
                 },
                 {
                     "@id": "kb:electra-a960648e-c88e-4728-9853-7b7f06de8caa"
@@ -1778,6 +1796,16 @@
             "@id": "kb:iphigenia-323bc6bc-d64b-42d1-a9f5-d4452efdbae6",
             "@type": "uco-identity:Person",
             "uco-core:name": "Iphigenia"
+        },
+        {
+            "@id": "kb:thyestes-son-2a869a9a-ab97-4fc9-95cf-63804fcf061f",
+            "@type": "uco-identity:Person",
+            "uco-core:description": "Son of Thyestes"
+        },
+        {
+            "@id": "kb:thyestes-son-e992bb12-2322-46e8-b8f4-5095a4767b14",
+            "@type": "uco-identity:Person",
+            "uco-core:description": "Son of Thyestes"
         }
     ]
 }

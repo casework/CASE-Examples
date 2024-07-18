@@ -70,6 +70,8 @@ These are the people mentioned throughout the graph:
 | 11 | http://example.org/kb/pelopia-d4b29a40-998b-4660-b67e-2ebb9683893d      | Pelopia      |               |                |
 | 12 | http://example.org/kb/person-82684209-0ee5-45d9-b873-125d2ca63919       | Joachim Metz |               |                |
 | 13 | http://example.org/kb/thyestes-b9111c63-19a8-4bf4-8287-b14485f01b45     |              | Thyestes      | Mycenae        |
+| 14 | http://example.org/kb/thyestes-son-2a869a9a-ab97-4fc9-95cf-63804fcf061f |              |               |                |
+| 15 | http://example.org/kb/thyestes-son-e992bb12-2322-46e8-b8f4-5095a4767b14 |              |               |                |
 
 <details>
 
@@ -109,19 +111,21 @@ These are the investigations in which the people are generically linked:
 
 |    | ?lPersonName   | ?lInA   | ?lInB   | ?lInC   | ?lInD   | ?lInE   | ?lInF   |
 |----|----------------|---------|---------|---------|---------|---------|---------|
-|  0 | Aegisthus      |         |         | ✓       |         |         |         |
-|  1 | Aeschylus      |         |         |         |         | ✓       |         |
-|  2 | Agamemnon      |         |         |         | ✓       |         |         |
-|  3 | Atreus         | ✓       |         | ✓       |         |         |         |
-|  4 | Cassandra      |         |         |         |         | ✓       |         |
-|  5 | Clytemnestra   |         |         |         |         | ✓       | ✓       |
-|  6 | Electra        |         |         |         |         | ✓       | ✓       |
-|  7 | Euripides      |         |         |         |         | ✓       |         |
-|  8 | Iphigenia      |         |         |         | ✓       |         |         |
-|  9 | Joachim Metz   |         |         |         |         |         |         |
-| 10 | Orestes        |         |         |         |         |         | ✓       |
-| 11 | Pelopia        |         | ✓       |         |         |         |         |
-| 12 | Thyestes       | ✓       | ✓       |         |         | ✓       |         |
+|  0 |                | ✓       |         |         |         |         |         |
+|  1 |                | ✓       |         |         |         |         |         |
+|  2 | Aegisthus      |         | ✓       | ✓       |         | ✓       | ✓       |
+|  3 | Aeschylus      |         |         |         |         | ✓       |         |
+|  4 | Agamemnon      |         |         |         | ✓       | ✓       |         |
+|  5 | Atreus         | ✓       |         | ✓       |         |         |         |
+|  6 | Cassandra      |         |         |         |         | ✓       |         |
+|  7 | Clytemnestra   |         |         |         |         | ✓       | ✓       |
+|  8 | Electra        |         |         |         |         | ✓       | ✓       |
+|  9 | Euripides      |         |         |         |         | ✓       |         |
+| 10 | Iphigenia      |         |         |         | ✓       |         |         |
+| 11 | Joachim Metz   |         |         |         |         |         |         |
+| 12 | Orestes        |         |         |         |         |         | ✓       |
+| 13 | Pelopia        |         | ✓       |         |         |         |         |
+| 14 | Thyestes       | ✓       | ✓       |         |         | ✓       |         |
 
 <details>
 
