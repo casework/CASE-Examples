@@ -177,4 +177,56 @@ _Aside_: A side-by-side view of the gUFO and OWL-Time coverage show that an onto
 | --- | --- |
 | ![Abstraction - OWL-Time Temporal Entity](figures/abstraction_time.svg) | ![Abstraction - gUFO Concrete Individual](figures/abstraction_gufo.svg) |
 
+
+## BFO
+
+(BFO version: [2020](https://github.com/BFO-ontology/BFO-2020).)
+
+BFO's topmost class that describes an object that exists in a period of time is "Entity" (`obo:BFO_0000001`).  The direct subclasses "Continuant" and "Occurrent", which correspond with "Endurant" and "Perdurant" respectively, do not specialize the restrictions on the existence property "exists at".
+
+For reference, these are the class and property labels used in the illustration:
+
+| Structural type | IRI | Label | Notes |
+| --- | --- | --- | --- |
+| `owl:Class` | `obo:BFO_0000001` | (BFO 1) entity | |
+| `owl:Class` | `obo:BFO_0000002` | (BFO 2) continuant | |
+| `owl:Class` | `obo:BFO_0000003` | (BFO 3) occurrent | |
+| `owl:Class` | `obo:BFO_0000008` | (BFO 8) temporal region | |
+| `owl:Class` | `obo:BFO_0000038` | (BFO 38) one-dimensional temporal region | Not necessarily continuous (can have gaps). |
+| `owl:Class` | `obo:BFO_0000148` | (BFO 148) zero-dimensional temporal region | "...a temporal region that is a whole consisting of one or more separated temporal instants as parts." |
+| `owl:Class` | `obo:BFO_0000202` | (BFO 202) temporal interval | Subclass of BFO 38; continous (no gaps or breaks). |
+| `owl:Class` | `obo:BFO_0000203` | (BFO 203) temporal instant | Subclass of BFO 148; has no proper temporal parts. |
+| `owl:ObjectProperty` | `obo:BFO_0000108` | exists at | Range is BFO 8. |
+| `owl:ObjectProperty` | `obo:BFO_0000222` | has first instant | Range is constrained to BFO 203, not 148 (instant, not 0-d region). |
+| `owl:ObjectProperty` | `obo:BFO_0000224` | has last instant | (As with BFO 222.) |
+
+_Restrictions_:
+
+* Usage of the BFO properties 222 and 224 (first and last instant) restrict the alignment of `ex:Instant` to `obo:BFO_0000203` (temporal instant), which is more restrictive than `obo:BFO_0000148` (zero-dimensional temporal region).
+* If existence intervals are required by a BFO-adopting ontology ontology to be continuous, the adopting ontology must use `obo:BFO_0000202` (temporal interval) rather than `obo:BFO_0000038` (one-dimensional temporal region).
+
+The referenced version of BFO does not define any `owl:DatatypeProperty`s.
+
+![Abstraction - BFO Entity](figures/abstraction_bfo.svg)
+
+The mapping for BFO's `entity` (BFO-1) would be as follows:
+
+| Example class or triple | Corresponding class or triple |
+| --- | --- |
+| `ex:TimeBoundedThing` | `obo:BFO_0000001` |
+| `ex:ExistenceInterval` | `obo:BFO_0000038` |
+| `ex:Instant` | `obo:BFO_0000203` |
+| `kb:T ex:hasExistenceInterval kb:E` | `kb:T obo:BFO_0000108 kb:E` |
+| `kb:T ex:existsAtAndSince kb:T0` | N/A |
+| `kb:T ex:existsUntil kb:T1` | N/A |
+| `kb:T ex:hasCreationTimestamp "2020-..."^^xsd:dateTime` | N/A |
+| `kb:T ex:hasTerminationTimestamp "2021-..."^^xsd:dateTime` | N/A |
+| `kb:E ex:hasStart kb:T0` | `kb:E obo:BFO_0000222 kb:T0` |
+| `kb:E ex:hasEnd kb:T1` | `kb:E obo:BFO_0000224 kb:T1` |
+| `kb:E ex:hasBeginningTimestamp "2020-..."^^xsd:dateTime` | N/A |
+| `kb:E ex:hasEndingTimestamp "2021-..."^^xsd:dateTime` | N/A |
+| `kb:T0 ex:hasTimestamp "2020-..."^^xsd:dateTime` | N/A |
+| `kb:T1 ex:hasTimestamp "2021-..."^^xsd:dateTime` | N/A |
+
+
 [^1]: gUFO represents instantations that are not always true with `gufo:TemporaryInstantiationSituation`.  In the case where a person is temporarily a student, "student" is taken to be some subclass of "person" - e.g., `ex:Student rdfs:subClassOf ex:Person`.  For some time, it holds that `kb:person-3393... a ex:Student`, but this is not always true.  To hold this situationally-true statement in a knowledge graph, a `gufo:TemporaryInstantiationSituation` is included to note the conditions when `kb:person-3393...` is a `ex:Student`, instead of encoding the unqualified triple `kb:person-3393... a ex:Student`.  See `kb:TemporaryInstantiationSituation-da1aa582-1358-49bb-b058-4c33990fb9e8` in [`existence_intervals.json`](existence_intervals.json) for a demonstration of this representation.
