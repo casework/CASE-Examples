@@ -14,6 +14,10 @@
 	path = dependencies/CASE-unstable-2.0.0
 	url = https://github.com/casework/CASE-Archive.git
 	branch = unstable-2.0.0
+[submodule "dependencies/CDO-Shapes-BFO"]
+	path = dependencies/CDO-Shapes-BFO
+	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-BFO.git
+	branch = main
 [submodule "dependencies/CDO-Shapes-Time"]
 	path = dependencies/CDO-Shapes-Time
 	url = https://github.com/Cyber-Domain-Ontology/CDO-Shapes-Time.git

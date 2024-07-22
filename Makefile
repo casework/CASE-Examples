@@ -61,6 +61,11 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-unstable-2.0.0 \
 	  .git_submodule_init.done.log
+	# CDO-Shapes-BFO
+	test -r dependencies/CDO-Shapes-BFO/README.md \
+	  || git submodule update --init dependencies/CDO-Shapes-BFO
+	test -r dependencies/CDO-Shapes-BFO/README.md \
+	  || (echo "ERROR:Makefile:CDO-Shapes-BFO submodule README.md file not found, even though CDO-Shapes-BFO submodule initialized." >&2 ; exit 2)
 	# CDO-Shapes-Time
 	test -r dependencies/CDO-Shapes-Time/README.md \
 	  || git submodule update --init dependencies/CDO-Shapes-Time
