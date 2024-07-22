@@ -1,0 +1,31 @@
+[
+    {
+        "@id": "kb:Entity-52d479e6-4b3e-4a21-a60a-29b08397a315",
+        "@type": "obo:BFO_0000001",
+        "rdfs:label": "T",
+        "obo:BFO_0000108": {
+            "@id": "kb:OneDimensionalTemporalRegion-95fc3589-849b-406b-85c4-3b2119121f1e"
+        }
+    },
+    {
+        "@id": "kb:OneDimensionalTemporalRegion-95fc3589-849b-406b-85c4-3b2119121f1e",
+        "@type": "obo:BFO_0000038",
+        "rdfs:label": "E",
+        "obo:BFO_0000222": {
+            "@id": "kb:TemporalInstant-19f182b4-6bc8-4ad8-a456-56fa15aec976"
+        },
+        "obo:BFO_0000224": {
+            "@id": "kb:TemporalInstant-3299e3a8-8d3e-43c7-a142-14bb41638669"
+        }
+    },
+    {
+        "@id": "kb:TemporalInstant-19f182b4-6bc8-4ad8-a456-56fa15aec976",
+        "@type": "obo:BFO_0000203",
+        "rdfs:label": "T0"
+    },
+    {
+        "@id": "kb:TemporalInstant-3299e3a8-8d3e-43c7-a142-14bb41638669",
+        "@type": "obo:BFO_0000203",
+        "rdfs:label": "T1"
+    }
+]
