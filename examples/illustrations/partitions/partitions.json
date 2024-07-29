@@ -1246,6 +1246,10 @@
             }
         },
         {
+            "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb",
+            "@type": "uco-observable:StorageMedium"
+        },
+        {
             "@id": "kb:DiskPartition-1ef219fe-c490-48fc-b8e1-5b5ffe94a07e",
             "@type": [
                 "prov:Entity",
