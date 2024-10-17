@@ -38,19 +38,6 @@
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
-                    "@id": "kb:operating-system-facet-429e8d0f-4974-421b-a01e-2b54437e4287",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Windows 7 Ultimate Edition",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
-                    },
-                    "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601",
-                    "uco-observable:installDate": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2019-07-10T16:33:42Z"
-                    }
-                },
-                {
                     "@id": "kb:computer-specification-facet-d02adab1-cbaa-4ec5-b98c-4fe128e7281f",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
@@ -78,6 +65,44 @@
                     "acme:inventoryNumber": "10503"
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-6c71847e-0569-48c4-9587-772e18c45d9f",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "Windows 7 Ultimate Edition",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:operating-system-facet-2ebffd0a-4d07-4313-8be2-cca326cbd547",
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "uco-observable:installDate": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2019-07-10T16:33:42Z"
+                    }
+                },
+                {
+                    "@id": "kb:software-facet-bb00a67a-4f64-4275-a818-01192b0934bf",
+                    "@type": "uco-observable:SoftwareFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
+                    },
+                    "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
+                }
+            ]
+        },
+        {
+            "@id": "kb:relationship-b96f493a-806b-4914-b522-5f8c4456da3b",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:forensic_lab_computer-a730c324-49e6-4b12-869e-6addd946545d"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-6c71847e-0569-48c4-9587-772e18c45d9f"
+            }
         }
     ]
 }
