@@ -1,4 +1,3 @@
-@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -7,36 +6,6 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
-	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623> ;
-			sh:resultMessage "In UCO 2.0.0, uco-observable:manufacturer will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-			sh:resultPath observable:manufacturer ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "In UCO 2.0.0, uco-observable:manufacturer will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-				sh:path observable:manufacturer ;
-				sh:severity sh:Warning ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623> ;
-			sh:resultMessage "In UCO 2.0.0, uco-observable:version will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-			sh:resultPath observable:version ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "In UCO 2.0.0, uco-observable:version will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-				sh:path observable:version ;
-				sh:severity sh:Warning ;
-			] ;
-		]
-		;
+	sh:conforms "true"^^xsd:boolean ;
 	.
 

@@ -1,5 +1,4 @@
 @prefix core: <https://ontology.unifiedcyberontology.org/uco/core/> .
-@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,46 +7,17 @@
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
-	sh:result
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f> ;
-			sh:resultMessage "In UCO 2.0.0, uco-observable:manufacturer will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-			sh:resultPath observable:manufacturer ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "In UCO 2.0.0, uco-observable:manufacturer will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-				sh:path observable:manufacturer ;
-				sh:severity sh:Warning ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f> ;
-			sh:resultMessage "In UCO 2.0.0, uco-observable:version will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-			sh:resultPath observable:version ;
-			sh:resultSeverity sh:Warning ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape [
-				sh:maxCount "0"^^xsd:integer ;
-				sh:message "In UCO 2.0.0, uco-observable:version will not be associated with uco-observable:OperatingSystemFacet.  Please place this on a uco-observable:SoftwareFacet instead."@en ;
-				sh:path observable:version ;
-				sh:severity sh:Warning ;
-			] ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
-			sh:resultMessage "UcoThings are suggested to end with a UUID." ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraint [
-				a sh:SPARQLConstraint ;
-				rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
-				sh:message "UcoThings are suggested to end with a UUID."@en ;
-				sh:select '''
+	sh:conforms "true"^^xsd:boolean ;
+	sh:result [
+		a sh:ValidationResult ;
+		sh:focusNode <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+		sh:resultMessage "UcoThings are suggested to end with a UUID." ;
+		sh:resultSeverity sh:Info ;
+		sh:sourceConstraint [
+			a sh:SPARQLConstraint ;
+			rdfs:seeAlso <https://datatracker.ietf.org/doc/html/rfc4122#section-4.1.3> ;
+			sh:message "UcoThings are suggested to end with a UUID."@en ;
+			sh:select '''
 			PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 			PREFIX core: <https://ontology.unifiedcyberontology.org/uco/core/>
 			SELECT $this
@@ -62,11 +32,10 @@
 			        )
 			}
 		''' ;
-			] ;
-			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-			sh:sourceShape core:UcoThing-identifier-regex-shape ;
-			sh:value <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
-		]
-		;
+		] ;
+		sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
+		sh:sourceShape core:UcoThing-identifier-regex-shape ;
+		sh:value <urn:example:cell-site-kb:cell-cite-204-16-1014-13399> ;
+	] ;
 	.
 
