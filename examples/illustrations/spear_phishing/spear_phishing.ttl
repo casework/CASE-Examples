@@ -564,15 +564,16 @@ kb:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
 		uco-observable:Software
 		;
 	rdfs:comment "TODO, UCO - bitness should use the BitnessVocabulary." ;
-	uco-core:hasFacet kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ;
+	uco-core:hasFacet
+		kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ,
+		kb:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
+		;
 	uco-core:name "Windows 10 Enterprise Evaluation" ;
 	.
 
 kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:bitness "64" ;
-	uco-observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
-	uco-observable:version "10.0" ;
 	.
 
 kb:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc
@@ -617,6 +618,12 @@ kb:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0
 	uco-core:kindOfRelationship "Has_Role" ;
 	uco-core:source kb:Agent01 ;
 	uco-core:target kb:ManagerRole01 ;
+	.
+
+kb:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
+	a uco-observable:SoftwareFacet ;
+	uco-observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
+	uco-observable:version "10.0" ;
 	.
 
 kb:url-a9b1bdec-8228-4356-a18c-a5357eee613d

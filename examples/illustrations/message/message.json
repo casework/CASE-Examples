@@ -23,11 +23,11 @@
                 "uco-observable:OperatingSystem",
                 "uco-observable:Software"
             ],
+            "uco-core:name": "Android",
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:operating-system-facet-04d6b0b1-b491-4438-b889-d16a28dffaa4",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Android",
+                    "@id": "kb:software-facet-e331aa04-4403-4560-a759-c07a993791ec",
+                    "@type": "uco-observable:SoftwareFacet",
                     "uco-observable:manufacturer": {
                         "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
                     },

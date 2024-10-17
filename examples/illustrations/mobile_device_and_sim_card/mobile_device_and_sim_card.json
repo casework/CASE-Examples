@@ -25,19 +25,6 @@
                     "uco-observable:serialNumber": "F17RN4DXXXXX"
                 },
                 {
-                    "@id": "kb:operating-system-facet-48f9672f-c16c-4137-b9cd-1e99bd368335",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
-                    },
-                    "uco-observable:version": "11.2.6",
-                    "uco-observable:installDate": {
-                        "@type": "xsd:dateTime",
-                        "@value": "2018-04-09T16:33:42Z"
-                    }
-                },
-                {
                     "@id": "kb:mobile-device-facet-78f46f74-0ae8-49b2-b126-7cf5221a52ad",
                     "@type": "uco-observable:MobileDeviceFacet",
                     "uco-observable:keypadUnlockCode": "123456",
@@ -59,6 +46,44 @@
                     "uco-observable:addressValue": "DC:41:5F:44:48:25"
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-be32618a-dade-4284-9435-f18be7e035c6",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "iOS",
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:operating-system-facet-27d37081-422b-466d-b19b-8a338917f230",
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "uco-observable:installDate": {
+                        "@type": "xsd:dateTime",
+                        "@value": "2018-04-09T16:33:42Z"
+                    }
+                },
+                {
+                    "@id": "kb:software-facet-0be3dc19-f97e-4d10-ba8e-d551bfd2ea28",
+                    "@type": "uco-observable:SoftwareFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                    },
+                    "uco-observable:version": "11.2.6"
+                }
+            ]
+        },
+        {
+            "@id": "kb:relationship-5d4c09d2-2109-4828-948f-aa449d07ead9",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:source": {
+                "@id": "kb:mobile-device-d5143a67-8b61-491b-a5e9-863b606e296a"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-be32618a-dade-4284-9435-f18be7e035c6"
+            },
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:isDirectional": true
         },
         {
             "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4",

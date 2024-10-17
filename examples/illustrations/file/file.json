@@ -518,15 +518,6 @@
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
-                    "@id": "kb:operating-system-facet-83153006-3432-4538-a0d7-871a6e879d76",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Windows 7 Ultimate Edition",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
-                    },
-                    "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
-                },
-                {
                     "@id": "kb:computer-specification-facet-fd3be213-cb78-4130-8888-323a259f3509",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
@@ -543,6 +534,34 @@
                     "acme:inventoryNumber": "10503"
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-8a0026cb-2f40-460d-baac-e5b8dc2da0e0",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "Windows 7 Ultimate Edition",
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-de8739b6-74ba-486e-b452-49a990ffbb22",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
+                },
+                "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
+            }
+        },
+        {
+            "@id": "kb:relationship-a66eba82-1224-422e-a427-73895cab5b5a",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-8a0026cb-2f40-460d-baac-e5b8dc2da0e0"
+            }
         },
         {
             "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
@@ -573,15 +592,6 @@
                     "uco-observable:serialNumber": "123456SAM"
                 },
                 {
-                    "@id": "kb:operating-system-facet-f1c16acb-44f7-4728-8f5e-72bcc0f3f3f8",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Android",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
-                    },
-                    "uco-observable:version": "4.2.2"
-                },
-                {
                     "@id": "kb:computer-specification-facet-0f10db33-9374-467c-bb2d-04172ab05a34",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:processorArchitecture": "Octa-core",
@@ -590,6 +600,34 @@
                     "uco-observable:totalRam": 2147483648
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-1d468d48-3ac2-4242-a9cb-61bd47319d43",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "Android",
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-9c9aa4ea-9e84-45e8-8437-ac97327d651b",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+                },
+                "uco-observable:version": "4.2.2"
+            }
+        },
+        {
+            "@id": "kb:relationship-7a75a470-b017-424b-a81b-d1411172c0c6",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:android_device-814c2229-d163-47af-87be-6437b205dde4"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-1d468d48-3ac2-4242-a9cb-61bd47319d43"
+            }
         }
     ]
 }

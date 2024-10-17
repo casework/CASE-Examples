@@ -36,15 +36,6 @@
                     "uco-observable:IMEI": "356420075722843"
                 },
                 {
-                    "@id": "kb:operating-system-facet-407e9113-cb7c-45af-b456-6de8df391d6f",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Android",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
-                    },
-                    "uco-observable:version": "6.0.1"
-                },
-                {
                     "@id": "kb:bluetooth-address-facet-1206416f-2397-49e9-9606-3ce78b1ea0fd",
                     "@type": "uco-observable:BluetoothAddressFacet",
                     "uco-core:name": "",
@@ -57,6 +48,34 @@
                 }
             ],
             "uco-observable:hasChanged": true
+        },
+        {
+            "@id": "kb:operating-system-66ff1c3d-8cf0-439c-b8b0-5697df555b55",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-9796be5d-172d-4c84-aaa1-92daa24d49d7",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-fb6c05a0-b6be-4a10-ba62-0e7b1da4c0ec"
+                },
+                "uco-observable:version": "6.0.1"
+            },
+            "uco-core:name": "Android"
+        },
+        {
+            "@id": "kb:relationship-ae5bc717-1bef-433c-8753-4bc19adae8db",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:6e2c8413-f681-4bc6-a66e-b70a7ecd9d3a"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-66ff1c3d-8cf0-439c-b8b0-5697df555b55"
+            }
         },
         {
             "@id": "kb:2ca4e1c6-9d27-4ba3-fe34-6da3c591b5e2",

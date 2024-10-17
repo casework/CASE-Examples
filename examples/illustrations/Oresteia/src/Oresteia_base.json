@@ -220,6 +220,12 @@
                     "@id": "kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50"
                 },
                 {
+                    "@id": "kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85"
+                },
+                {
+                    "@id": "kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204"
+                },
+                {
                     "@id": "kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e"
                 },
                 {
@@ -795,15 +801,6 @@
                     "drafting:ownerName": "Clytemnestras iPhone"
                 },
                 {
-                    "@id": "kb:operating-system-facet-ad90e7e5-c692-4c59-87c6-d36c463ff1b0",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
-                    },
-                    "uco-observable:version": "10.3"
-                },
-                {
                     "@id": "kb:wifi-address-facet-00ec20e0-4af9-45c0-9246-7a87e8c47f3d",
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "d0:33:11:13:e7:a1"
@@ -814,6 +811,34 @@
                     "uco-observable:addressValue": "d0:33:11:13:e7:a2"
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "iOS",
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-906f160c-bbc0-48a5-bb0c-7338ebabf1e9",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                },
+                "uco-observable:version": "10.3"
+            }
+        },
+        {
+            "@id": "kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204"
+            }
         },
         {
             "@id": "kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e",
