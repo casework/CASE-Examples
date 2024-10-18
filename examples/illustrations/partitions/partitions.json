@@ -1936,15 +1936,21 @@
                 "uco-observable:OperatingSystem",
                 "uco-observable:Software"
             ],
-            "uco-core:hasFacet": {
-                "@id": "kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623",
-                "@type": "uco-observable:OperatingSystemFacet",
-                "drafting:buildID": "22621.2283",
-                "uco-observable:manufacturer": {
-                    "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276"
+            "uco-core:hasFacet": [
+                {
+                    "@id": "kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623",
+                    "@type": "uco-observable:OperatingSystemFacet",
+                    "drafting:buildID": "22621.2283"
                 },
-                "uco-observable:version": "22H2"
-            },
+                {
+                    "@id": "kb:SoftwareFacet-247fe7a7-8434-4fca-8f9b-ac7e136f6ca5",
+                    "@type": "uco-observable:SoftwareFacet",
+                    "uco-observable:manufacturer": {
+                        "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276"
+                    },
+                    "uco-observable:version": "22H2"
+                }
+            ],
             "uco-core:name": "Windows 11 Pro"
         },
         {
