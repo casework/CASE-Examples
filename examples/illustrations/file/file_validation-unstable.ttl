@@ -1,11 +1,471 @@
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-51084177-f4e8-4955-8475-52dc4222e4be> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for observable:byteOrder should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for observable:byteOrder should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-51084177-f4e8-4955-8475-52dc4222e4be> ;
+			sh:resultMessage "Value is not member of the vocabulary EndiannessTypeVocab." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"Big-endian"
+					"Little-endian"
+					"Middle-endian"
+				) ;
+				sh:message "Value is not member of the vocabulary EndiannessTypeVocab." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-fa1faab5-f212-4ab5-ae09-6937ca06e847> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for observable:byteOrder should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for observable:byteOrder should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-fa1faab5-f212-4ab5-ae09-6937ca06e847> ;
+			sh:resultMessage "Value is not member of the vocabulary EndiannessTypeVocab." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"Big-endian"
+					"Little-endian"
+					"Middle-endian"
+				) ;
+				sh:message "Value is not member of the vocabulary EndiannessTypeVocab." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-29cbd7b8-e404-55f0-b667-c1762b73cdcd> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "MD5"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-29cbd7b8-e404-55f0-b667-c1762b73cdcd> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "MD5"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-47323085-5f5a-5252-82b3-347183525558> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-47323085-5f5a-5252-82b3-347183525558> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-7a2f290f-2944-5520-816a-85f722e64525> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-7a2f290f-2944-5520-816a-85f722e64525> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-7c6c42be-0c5b-592f-91a2-c509af290369> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-7c6c42be-0c5b-592f-91a2-c509af290369> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-84b82467-019e-53cf-a1e6-e8a394379916> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-84b82467-019e-53cf-a1e6-e8a394379916> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-9c9f1145-243a-58d6-b420-bd38101cb511> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-9c9f1145-243a-58d6-b420-bd38101cb511> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-c492a39d-88e4-51f1-9f80-31524494f877> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-c492a39d-88e4-51f1-9f80-31524494f877> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-ecccf09c-feb3-5feb-89bc-c7ab13b54605> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-ecccf09c-feb3-5feb-89bc-c7ab13b54605> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-fbd39b90-551d-5a80-8f3d-70e91c5fe472> ;
+			sh:resultMessage "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Warning ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:message "As of UCO 1.4.0, the datatype to use for types:hashMethod should be xsd:string.  Not using xsd:string will be an error in UCO 2.0.0." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Warning ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-fbd39b90-551d-5a80-8f3d-70e91c5fe472> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		]
+		;
 	.
 

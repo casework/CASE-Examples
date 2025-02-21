@@ -1,11 +1,426 @@
+@prefix observable: <https://ontology.unifiedcyberontology.org/uco/observable/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
+@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "true"^^xsd:boolean ;
+	sh:conforms "false"^^xsd:boolean ;
+	sh:result
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-ccebaca3-4485-46d8-bdf2-d2905a08d0c9> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:byteOrder ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-ccebaca3-4485-46d8-bdf2-d2905a08d0c9> ;
+			sh:resultMessage "Value is not member of the vocabulary EndiannessTypeVocab." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"Big-endian"
+					"Little-endian"
+					"Middle-endian"
+				) ;
+				sh:message "Value is not member of the vocabulary EndiannessTypeVocab." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-ed051828-45e7-47b3-82ca-be5b9a88d5f7> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:byteOrder ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-ed051828-45e7-47b3-82ca-be5b9a88d5f7> ;
+			sh:resultMessage "Value is not member of the vocabulary EndiannessTypeVocab." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"Big-endian"
+					"Little-endian"
+					"Middle-endian"
+				) ;
+				sh:message "Value is not member of the vocabulary EndiannessTypeVocab." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-fa866136-c537-4b25-a481-364c7859f8f0> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path observable:byteOrder ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/content-data-facet-fa866136-c537-4b25-a481-364c7859f8f0> ;
+			sh:resultMessage "Value is not member of the vocabulary EndiannessTypeVocab." ;
+			sh:resultPath observable:byteOrder ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"Big-endian"
+					"Little-endian"
+					"Middle-endian"
+				) ;
+				sh:message "Value is not member of the vocabulary EndiannessTypeVocab." ;
+				sh:path observable:byteOrder ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "Big-endian"^^vocabulary:EndiannessTypeVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-47323085-5f5a-5252-82b3-347183525558> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-47323085-5f5a-5252-82b3-347183525558> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-59bd11fd-af49-5e39-ba3b-54ba31f3c8d6> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-59bd11fd-af49-5e39-ba3b-54ba31f3c8d6> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-7a2f290f-2944-5520-816a-85f722e64525> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-7a2f290f-2944-5520-816a-85f722e64525> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-84b82467-019e-53cf-a1e6-e8a394379916> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-84b82467-019e-53cf-a1e6-e8a394379916> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-9c9f1145-243a-58d6-b420-bd38101cb511> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-9c9f1145-243a-58d6-b420-bd38101cb511> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-c492a39d-88e4-51f1-9f80-31524494f877> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-c492a39d-88e4-51f1-9f80-31524494f877> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-f9eebfa7-ce0e-513f-b4be-f3fe7512c79a> ;
+			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Violation ;
+			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
+			sh:sourceShape [
+				sh:datatype xsd:string ;
+				sh:maxCount "1"^^xsd:integer ;
+				sh:minCount "1"^^xsd:integer ;
+				sh:nodeKind sh:Literal ;
+				sh:path types:hashMethod ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		] ,
+		[
+			a sh:ValidationResult ;
+			sh:focusNode <http://example.org/kb/hash-f9eebfa7-ce0e-513f-b4be-f3fe7512c79a> ;
+			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
+			sh:resultPath types:hashMethod ;
+			sh:resultSeverity sh:Info ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape [
+				sh:in (
+					"MD5"
+					"MD6"
+					"SHA1"
+					"SHA224"
+					"SHA256"
+					"SHA3-224"
+					"SHA3-256"
+					"SHA3-384"
+					"SHA3-512"
+					"SHA384"
+					"SHA512"
+					"SSDEEP"
+				) ;
+				sh:message "Value is not member of the vocabulary HashNameVocab." ;
+				sh:path types:hashMethod ;
+				sh:severity sh:Info ;
+			] ;
+			sh:value "SHA256"^^vocabulary:HashNameVocab ;
+		]
+		;
 	.
 
