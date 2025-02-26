@@ -62,17 +62,7 @@
 			sh:resultPath observable:contentRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:contentRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-contentRecoveredStatus-in-shape ;
 			sh:value "partially recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -82,17 +72,7 @@
 			sh:resultPath observable:metadataRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:metadataRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-metadataRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -102,17 +82,7 @@
 			sh:resultPath observable:nameRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:nameRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-nameRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -167,17 +137,7 @@
 			sh:resultPath observable:contentRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:contentRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-contentRecoveredStatus-in-shape ;
 			sh:value "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -187,17 +147,7 @@
 			sh:resultPath observable:metadataRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:metadataRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-metadataRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -207,17 +157,7 @@
 			sh:resultPath observable:nameRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:nameRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-nameRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -272,17 +212,7 @@
 			sh:resultPath observable:contentRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:contentRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-contentRecoveredStatus-in-shape ;
 			sh:value "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -292,17 +222,7 @@
 			sh:resultPath observable:metadataRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:metadataRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-metadataRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -312,17 +232,7 @@
 			sh:resultPath observable:nameRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:nameRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-nameRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -377,17 +287,7 @@
 			sh:resultPath observable:contentRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:contentRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-contentRecoveredStatus-in-shape ;
 			sh:value "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -397,17 +297,7 @@
 			sh:resultPath observable:metadataRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:metadataRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-metadataRecoveredStatus-in-shape ;
 			sh:value "unknown"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -417,17 +307,7 @@
 			sh:resultPath observable:nameRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:nameRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-nameRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -482,17 +362,7 @@
 			sh:resultPath observable:contentRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:contentRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-contentRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -502,17 +372,7 @@
 			sh:resultPath observable:metadataRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:metadataRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-metadataRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		] ,
 		[
@@ -522,17 +382,7 @@
 			sh:resultPath observable:nameRecoveredStatus ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape [
-				sh:in (
-					"recovered"
-					"partially recovered"
-					"overwritten"
-					"unknown"
-				) ;
-				sh:message "Value is not member of the vocabulary RecoveredObjectStatusVocab." ;
-				sh:path observable:nameRecoveredStatus ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceShape observable:RecoveredObjectFacet-nameRecoveredStatus-in-shape ;
 			sh:value "recovered"^^vocabulary:RecoveredObjectStatusVocab ;
 		]
 		;
