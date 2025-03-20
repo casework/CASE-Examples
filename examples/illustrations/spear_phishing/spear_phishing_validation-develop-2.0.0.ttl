@@ -346,15 +346,6 @@
 		] ,
 		[
 			a sh:ValidationResult ;
-			sh:focusNode ep:DetectionEvent01 ;
-			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
-			sh:resultPath unmapped:intervalIn ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape ep:intervalIn-shape ;
-		] ,
-		[
-			a sh:ValidationResult ;
 			sh:focusNode ep:EmailMessage01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:hasRecipient ;
@@ -406,15 +397,6 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:hasOccurrentPart-shape ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:InfectionEvent01 ;
-			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
-			sh:resultPath unmapped:intervalIn ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape ep:intervalIn-shape ;
 		] ,
 		[
 			a sh:ValidationResult ;
@@ -506,15 +488,6 @@
 			a sh:ValidationResult ;
 			sh:focusNode ep:SpearFishingEvent01 ;
 			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
-			sh:resultPath unmapped:intervalIn ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
-			sh:sourceShape ep:intervalIn-shape ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:SpearFishingEvent01 ;
-			sh:resultMessage "This property is unmapped and intended to be replaced."@en ;
 			sh:resultPath unmapped:precedes ;
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
@@ -537,75 +510,6 @@
 			sh:resultSeverity sh:Info ;
 			sh:sourceConstraintComponent sh:MaxCountConstraintComponent ;
 			sh:sourceShape ep:realizedIn-shape ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:TemporalInterval01 ;
-			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraint [
-				a sh:SPARQLConstraint ;
-				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
-				sh:select """
-			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
-			SELECT $this
-			WHERE {
-				FILTER NOT EXISTS {
-					$this a ?nClass .
-					?nClass rdfs:subClassOf+ uco-core:UcoThing .
-				}
-			}
-		""" ;
-			] ;
-			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-			sh:sourceShape ep:subclass-shape ;
-			sh:value ep:TemporalInterval01 ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:TemporalInterval02 ;
-			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraint [
-				a sh:SPARQLConstraint ;
-				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
-				sh:select """
-			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
-			SELECT $this
-			WHERE {
-				FILTER NOT EXISTS {
-					$this a ?nClass .
-					?nClass rdfs:subClassOf+ uco-core:UcoThing .
-				}
-			}
-		""" ;
-			] ;
-			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-			sh:sourceShape ep:subclass-shape ;
-			sh:value ep:TemporalInterval02 ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode ep:TemporalInterval03 ;
-			sh:resultMessage "Focus node is not designated a subclass of UcoThing." ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraint [
-				a sh:SPARQLConstraint ;
-				sh:message "Focus node is not designated a subclass of UcoThing."@en ;
-				sh:select """
-			PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
-			SELECT $this
-			WHERE {
-				FILTER NOT EXISTS {
-					$this a ?nClass .
-					?nClass rdfs:subClassOf+ uco-core:UcoThing .
-				}
-			}
-		""" ;
-			] ;
-			sh:sourceConstraintComponent sh:SPARQLConstraintComponent ;
-			sh:sourceShape ep:subclass-shape ;
-			sh:value ep:TemporalInterval03 ;
 		] ,
 		[
 			a sh:ValidationResult ;

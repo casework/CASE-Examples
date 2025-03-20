@@ -1,7 +1,9 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
@@ -180,12 +182,12 @@ kb:CorporateLoggingTool01
 
 kb:DetectionEvent01
 	a uco-core:Event ;
+	drafting:intervalIn kb:TemporalInterval03 ;
 	unmapped:hasOccurrentPart
 		kb:ActOfEndpointScan01 ,
 		kb:ActOfFileFlagging01 ,
 		kb:ActOfSending02
 		;
-	unmapped:intervalIn kb:TemporalInterval03 ;
 	.
 
 kb:EmailAccount01
@@ -229,11 +231,11 @@ kb:EndpointProtectionSoftware01
 
 kb:InfectionEvent01
 	a uco-core:Event ;
+	drafting:intervalIn kb:TemporalInterval02 ;
 	unmapped:hasOccurrentPart
 		kb:ActOfMalwareDelivery01 ,
 		kb:ActOfMalwareInstallation01
 		;
-	unmapped:intervalIn kb:TemporalInterval02 ;
 	unmapped:precedes kb:DetectionEvent01 ;
 	.
 
@@ -283,11 +285,11 @@ kb:ScannerRole01
 
 kb:SpearFishingEvent01
 	a uco-core:Event ;
+	drafting:intervalIn kb:TemporalInterval01 ;
 	unmapped:hasOccurrentPart
 		kb:ActOfEmailDelivery01 ,
 		kb:ActOfLinkOpening01
 		;
-	unmapped:intervalIn kb:TemporalInterval01 ;
 	unmapped:precedes kb:InfectionEvent01 ;
 	.
 
@@ -305,16 +307,25 @@ kb:TargetRole02
 		;
 	.
 
+kb:TemporalInterval
+	a owl:Class ;
+	rdfs:subClassOf
+		drafting:Perdurant ,
+		time:Interval
+		;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/651> ;
+	.
+
 kb:TemporalInterval01
-	a uco-core:UcoThing ;
+	a kb:TemporalInterval ;
 	.
 
 kb:TemporalInterval02
-	a uco-core:UcoThing ;
+	a kb:TemporalInterval ;
 	.
 
 kb:TemporalInterval03
-	a uco-core:UcoThing ;
+	a kb:TemporalInterval ;
 	.
 
 kb:ThreatActorRole01
@@ -712,9 +723,10 @@ unmapped:hasRole
 	.
 
 unmapped:intervalIn
-	a owl:ObjectProperty ;
-	rdfs:comment "Property name not in drafted documentation; borrowed from W3C Time Ontology." ;
-	rdfs:seeAlso <https://www.w3.org/TR/owl-time/#time:intervalIn> ;
+	a
+		owl:ObjectProperty ,
+		owl:DeprecatedProperty
+		;
 	.
 
 unmapped:isCarrierOf
