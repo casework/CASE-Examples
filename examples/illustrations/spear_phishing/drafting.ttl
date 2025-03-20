@@ -1,8 +1,10 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix ep: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix unmapped: <urn:example:unmapped/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -10,6 +12,17 @@
 uco-core:UcoThing-identifier-regex-shape
 	rdfs:comment "Deactivated for comparison with another mapping of this illustration."@en ;
 	sh:deactivated "true"^^xsd:boolean ;
+	.
+
+drafting:Perdurant
+	a owl:Class ;
+	rdfs:subClassOf uco-core:UcoObject ;
+	rdfs:isDefinedBy <https://github.com/ucoProject/UCO/issues/544> ;
+	.
+
+drafting:intervalIn
+	a owl:ObjectProperty ;
+	rdfs:isDefinedBy <https://github.com/ucoProject/UCO/issues/651> ;
 	.
 
 ep:bearerOf-shape
@@ -107,8 +120,7 @@ ep:intervalIn-shape
 	sh:message "This property is unmapped and intended to be replaced."@en ;
 	sh:maxCount 0 ;
 	sh:path unmapped:intervalIn ;
-	sh:severity sh:Info ;
-	sh:targetClass uco-core:UcoThing ;
+	sh:targetSubjectsOf unmapped:intervalIn ;
 	.
 
 ep:isCarrierOf-shape
@@ -192,5 +204,10 @@ ep:uses-shape
 	sh:path unmapped:uses ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
+	.
+
+time:Interval
+	a owl:Class ;
+	rdfs:isDefinedBy time:2016 ;
 	.
 
