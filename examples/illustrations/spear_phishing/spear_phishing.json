@@ -1,9 +1,11 @@
 {
     "@context": {
+        "drafting": "http://example.org/ontology/drafting/",
         "kb": "http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "time": "http://www.w3.org/2006/time#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
@@ -23,18 +25,18 @@
         },
         {
             "@id": "kb:ActOfMalwareDelivery01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfMalwareInstallation01"
             }
         },
         {
             "@id": "kb:ActOfMalwareInstallation01",
-            "@type": "uco-observable:ObservableAction"
+            "@type": "kb:ObservableAction"
         },
         {
             "@id": "kb:ActOfNetworkLogin01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-09-02T07:32:16.411Z"
@@ -42,7 +44,7 @@
         },
         {
             "@id": "kb:ActOfNetworkLogout01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-09-02T11:07:30.658Z"
@@ -55,18 +57,18 @@
         },
         {
             "@id": "kb:ActOfEmailDelivery01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfLinkOpening01"
             }
         },
         {
             "@id": "kb:ActOfLinkOpening01",
-            "@type": "uco-observable:ObservableAction"
+            "@type": "kb:ObservableAction"
         },
         {
             "@id": "kb:ActOfSending02",
-            "@type": "uco-observable:ObservableAction"
+            "@type": "kb:ObservableAction"
         },
         {
             "@id": "kb:Agent01",
@@ -263,7 +265,7 @@
         },
         {
             "@id": "kb:DetectionEvent01",
-            "@type": "uco-core:Event",
+            "@type": "kb:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfSending02"
@@ -275,7 +277,7 @@
                     "@id": "kb:ActOfFileFlagging01"
                 }
             ],
-            "unmapped:intervalIn": {
+            "drafting:intervalIn": {
                 "@id": "kb:TemporalInterval03"
             }
         },
@@ -350,21 +352,21 @@
         },
         {
             "@id": "kb:ActOfEndpointScan01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
             "@id": "kb:ActOfFileFlagging01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:hasOutput": {
                 "@id": "kb:Alert01"
             }
         },
         {
             "@id": "kb:InfectionEvent01",
-            "@type": "uco-core:Event",
+            "@type": "kb:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfMalwareDelivery01"
@@ -373,7 +375,7 @@
                     "@id": "kb:ActOfMalwareInstallation01"
                 }
             ],
-            "unmapped:intervalIn": {
+            "drafting:intervalIn": {
                 "@id": "kb:TemporalInterval02"
             },
             "unmapped:precedes": {
@@ -448,7 +450,7 @@
         },
         {
             "@id": "kb:SpearFishingEvent01",
-            "@type": "uco-core:Event",
+            "@type": "kb:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfEmailDelivery01"
@@ -457,7 +459,7 @@
                     "@id": "kb:ActOfLinkOpening01"
                 }
             ],
-            "unmapped:intervalIn": {
+            "drafting:intervalIn": {
                 "@id": "kb:TemporalInterval01"
             },
             "unmapped:precedes": {
@@ -486,15 +488,15 @@
         },
         {
             "@id": "kb:TemporalInterval01",
-            "@type": "uco-core:UcoThing"
+            "@type": "kb:TemporalInterval"
         },
         {
             "@id": "kb:TemporalInterval02",
-            "@type": "uco-core:UcoThing"
+            "@type": "kb:TemporalInterval"
         },
         {
             "@id": "kb:TemporalInterval03",
-            "@type": "uco-core:UcoThing"
+            "@type": "kb:TemporalInterval"
         },
         {
             "@id": "kb:ThreatActorRole01",
@@ -706,7 +708,7 @@
         },
         {
             "@id": "kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:object": {
                 "@id": "kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58"
             },
@@ -722,7 +724,7 @@
         },
         {
             "@id": "kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:environment": {
                 "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
             },
@@ -735,7 +737,7 @@
         },
         {
             "@id": "kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:environment": {
                 "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
             },
@@ -913,6 +915,84 @@
             "uco-core:description": "Browser process"
         },
         {
+            "@id": "kb:TemporalInterval",
+            "@type": "owl:Class",
+            "rdfs:seeAlso": {
+                "@id": "https://github.com/ucoProject/UCO/issues/651"
+            },
+            "rdfs:subClassOf": [
+                {
+                    "@id": "drafting:Perdurant"
+                },
+                {
+                    "@id": "time:Interval"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Action",
+            "@type": "owl:Class",
+            "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
+            "rdfs:seeAlso": [
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/544"
+                },
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/651"
+                }
+            ],
+            "rdfs:subClassOf": [
+                {
+                    "@id": "drafting:Perdurant"
+                },
+                {
+                    "@id": "uco-action:Action"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Event",
+            "@type": "owl:Class",
+            "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
+            "rdfs:seeAlso": [
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/544"
+                },
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/651"
+                }
+            ],
+            "rdfs:subClassOf": [
+                {
+                    "@id": "drafting:Perdurant"
+                },
+                {
+                    "@id": "uco-core:Event"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ObservableAction",
+            "@type": "owl:Class",
+            "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
+            "rdfs:seeAlso": [
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/544"
+                },
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/651"
+                }
+            ],
+            "rdfs:subClassOf": [
+                {
+                    "@id": "kb:Action"
+                },
+                {
+                    "@id": "uco-observable:ObservableAction"
+                }
+            ]
+        },
+        {
             "@id": "unmapped:bearerOf",
             "@type": "owl:ObjectProperty"
         },
@@ -955,11 +1035,10 @@
         },
         {
             "@id": "unmapped:intervalIn",
-            "@type": "owl:ObjectProperty",
-            "rdfs:comment": "Property name not in drafted documentation; borrowed from W3C Time Ontology.",
-            "rdfs:seeAlso": {
-                "@id": "https://www.w3.org/TR/owl-time/#time:intervalIn"
-            }
+            "@type": [
+                "owl:DeprecatedProperty",
+                "owl:ObjectProperty"
+            ]
         },
         {
             "@id": "unmapped:isCarrierOf",

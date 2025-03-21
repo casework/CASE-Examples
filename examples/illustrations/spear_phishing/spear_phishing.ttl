@@ -1,7 +1,9 @@
+@prefix drafting: <http://example.org/ontology/drafting/> .
 @prefix kb: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @prefix uco-action: <https://ontology.unifiedcyberontology.org/uco/action/> .
 @prefix uco-core: <https://ontology.unifiedcyberontology.org/uco/core/> .
 @prefix uco-identity: <https://ontology.unifiedcyberontology.org/uco/identity/> .
@@ -28,40 +30,40 @@
 	.
 
 kb:ActOfEmailDelivery01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	unmapped:precedes kb:ActOfLinkOpening01 ;
 	.
 
 kb:ActOfEndpointScan01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	unmapped:precedes kb:ActOfFileFlagging01 ;
 	.
 
 kb:ActOfFileFlagging01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	unmapped:hasOutput kb:Alert01 ;
 	.
 
 kb:ActOfLinkOpening01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	.
 
 kb:ActOfMalwareDelivery01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	unmapped:precedes kb:ActOfMalwareInstallation01 ;
 	.
 
 kb:ActOfMalwareInstallation01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	.
 
 kb:ActOfNetworkLogin01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	uco-action:endTime "2021-09-02T07:32:16.411000+00:00"^^xsd:dateTime ;
 	.
 
 kb:ActOfNetworkLogout01
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	uco-action:endTime "2021-09-02T11:07:30.658000+00:00"^^xsd:dateTime ;
 	.
 
@@ -71,7 +73,20 @@ kb:ActOfNetworkingSession01
 	.
 
 kb:ActOfSending02
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
+	.
+
+kb:Action
+	a owl:Class ;
+	rdfs:subClassOf
+		drafting:Perdurant ,
+		uco-action:Action
+		;
+	rdfs:comment "This class is a temporary class to align concepts for UCO Issues 544 and 651." ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/issues/544> ,
+		<https://github.com/ucoProject/UCO/issues/651>
+		;
 	.
 
 kb:Agent01
@@ -179,13 +194,13 @@ kb:CorporateLoggingTool01
 	.
 
 kb:DetectionEvent01
-	a uco-core:Event ;
+	a kb:Event ;
+	drafting:intervalIn kb:TemporalInterval03 ;
 	unmapped:hasOccurrentPart
 		kb:ActOfEndpointScan01 ,
 		kb:ActOfFileFlagging01 ,
 		kb:ActOfSending02
 		;
-	unmapped:intervalIn kb:TemporalInterval03 ;
 	.
 
 kb:EmailAccount01
@@ -227,13 +242,26 @@ kb:EndpointProtectionSoftware01
 		;
 	.
 
+kb:Event
+	a owl:Class ;
+	rdfs:subClassOf
+		drafting:Perdurant ,
+		uco-core:Event
+		;
+	rdfs:comment "This class is a temporary class to align concepts for UCO Issues 544 and 651." ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/issues/544> ,
+		<https://github.com/ucoProject/UCO/issues/651>
+		;
+	.
+
 kb:InfectionEvent01
-	a uco-core:Event ;
+	a kb:Event ;
+	drafting:intervalIn kb:TemporalInterval02 ;
 	unmapped:hasOccurrentPart
 		kb:ActOfMalwareDelivery01 ,
 		kb:ActOfMalwareInstallation01
 		;
-	unmapped:intervalIn kb:TemporalInterval02 ;
 	unmapped:precedes kb:DetectionEvent01 ;
 	.
 
@@ -261,6 +289,19 @@ kb:NetworkAccount01
 	uco-core:hasFacet kb:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c ;
 	.
 
+kb:ObservableAction
+	a owl:Class ;
+	rdfs:subClassOf
+		kb:Action ,
+		uco-observable:ObservableAction
+		;
+	rdfs:comment "This class is a temporary class to align concepts for UCO Issues 544 and 651." ;
+	rdfs:seeAlso
+		<https://github.com/ucoProject/UCO/issues/544> ,
+		<https://github.com/ucoProject/UCO/issues/651>
+		;
+	.
+
 kb:Port01
 	a uco-core:UcoThing ;
 	unmapped:isCarrierOf kb:MaliciousSoftware01 ;
@@ -282,12 +323,12 @@ kb:ScannerRole01
 	.
 
 kb:SpearFishingEvent01
-	a uco-core:Event ;
+	a kb:Event ;
+	drafting:intervalIn kb:TemporalInterval01 ;
 	unmapped:hasOccurrentPart
 		kb:ActOfEmailDelivery01 ,
 		kb:ActOfLinkOpening01
 		;
-	unmapped:intervalIn kb:TemporalInterval01 ;
 	unmapped:precedes kb:InfectionEvent01 ;
 	.
 
@@ -305,16 +346,25 @@ kb:TargetRole02
 		;
 	.
 
+kb:TemporalInterval
+	a owl:Class ;
+	rdfs:subClassOf
+		drafting:Perdurant ,
+		time:Interval
+		;
+	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/651> ;
+	.
+
 kb:TemporalInterval01
-	a uco-core:UcoThing ;
+	a kb:TemporalInterval ;
 	.
 
 kb:TemporalInterval02
-	a uco-core:UcoThing ;
+	a kb:TemporalInterval ;
 	.
 
 kb:TemporalInterval03
-	a uco-core:UcoThing ;
+	a kb:TemporalInterval ;
 	.
 
 kb:ThreatActorRole01
@@ -514,7 +564,7 @@ kb:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd
 	.
 
 kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	uco-action:object kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58 ;
 	uco-action:participant kb:ComputingDevice02 ;
 	uco-action:performer kb:EmailSoftwareProgram01 ;
@@ -522,14 +572,14 @@ kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835
 	.
 
 kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	uco-action:environment kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c ;
 	uco-action:performer kb:ComputingDevice03 ;
 	uco-action:result kb:MaliciousSoftware01 ;
 	.
 
 kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6
-	a uco-observable:ObservableAction ;
+	a kb:ObservableAction ;
 	uco-action:environment kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c ;
 	uco-action:object kb:URL01 ;
 	.
@@ -712,9 +762,10 @@ unmapped:hasRole
 	.
 
 unmapped:intervalIn
-	a owl:ObjectProperty ;
-	rdfs:comment "Property name not in drafted documentation; borrowed from W3C Time Ontology." ;
-	rdfs:seeAlso <https://www.w3.org/TR/owl-time/#time:intervalIn> ;
+	a
+		owl:ObjectProperty ,
+		owl:DeprecatedProperty
+		;
 	.
 
 unmapped:isCarrierOf
