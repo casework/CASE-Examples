@@ -1,5 +1,5 @@
 @prefix drafting: <http://example.org/ontology/drafting/> .
-@prefix kb: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
+@prefix ep: <http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -29,54 +29,54 @@
 	uco-core:name "Microsoft" ;
 	.
 
-kb:ActOfEmailDelivery01
-	a kb:ObservableAction ;
-	unmapped:precedes kb:ActOfLinkOpening01 ;
+ep:ActOfEmailDelivery01
+	a ep:ObservableAction ;
+	unmapped:precedes ep:ActOfLinkOpening01 ;
 	.
 
-kb:ActOfEndpointScan01
-	a kb:ObservableAction ;
-	unmapped:precedes kb:ActOfFileFlagging01 ;
+ep:ActOfEndpointScan01
+	a ep:ObservableAction ;
+	unmapped:precedes ep:ActOfFileFlagging01 ;
 	.
 
-kb:ActOfFileFlagging01
-	a kb:ObservableAction ;
-	unmapped:hasOutput kb:Alert01 ;
+ep:ActOfFileFlagging01
+	a ep:ObservableAction ;
+	unmapped:hasOutput ep:Alert01 ;
 	.
 
-kb:ActOfLinkOpening01
-	a kb:ObservableAction ;
+ep:ActOfLinkOpening01
+	a ep:ObservableAction ;
 	.
 
-kb:ActOfMalwareDelivery01
-	a kb:ObservableAction ;
-	unmapped:precedes kb:ActOfMalwareInstallation01 ;
+ep:ActOfMalwareDelivery01
+	a ep:ObservableAction ;
+	unmapped:precedes ep:ActOfMalwareInstallation01 ;
 	.
 
-kb:ActOfMalwareInstallation01
-	a kb:ObservableAction ;
+ep:ActOfMalwareInstallation01
+	a ep:ObservableAction ;
 	.
 
-kb:ActOfNetworkLogin01
-	a kb:ObservableAction ;
+ep:ActOfNetworkLogin01
+	a ep:ObservableAction ;
 	uco-action:endTime "2021-09-02T07:32:16.411000+00:00"^^xsd:dateTime ;
 	.
 
-kb:ActOfNetworkLogout01
-	a kb:ObservableAction ;
+ep:ActOfNetworkLogout01
+	a ep:ObservableAction ;
 	uco-action:endTime "2021-09-02T11:07:30.658000+00:00"^^xsd:dateTime ;
 	.
 
-kb:ActOfNetworkingSession01
+ep:ActOfNetworkingSession01
 	a uco-core:UcoThing ;
 	rdfs:comment "TODO - How does this relate to the spear phishing event?" ;
 	.
 
-kb:ActOfSending02
-	a kb:ObservableAction ;
+ep:ActOfSending02
+	a ep:ObservableAction ;
 	.
 
-kb:Action
+ep:Action
 	a owl:Class ;
 	rdfs:subClassOf
 		drafting:Perdurant ,
@@ -89,52 +89,52 @@ kb:Action
 		;
 	.
 
-kb:Agent01
+ep:Agent01
 	a uco-identity:Person ;
 	rdfs:label "Bob" ;
 	unmapped:bearerOf
-		kb:EndUserRole01 ,
-		kb:TargetRole01
+		ep:EndUserRole01 ,
+		ep:TargetRole01
 		;
-	unmapped:controls kb:EmailAccount01 ;
-	unmapped:hasRole kb:EndUserRole01 ;
-	unmapped:operates kb:ComputingDevice01 ;
+	unmapped:controls ep:EmailAccount01 ;
+	unmapped:hasRole ep:EndUserRole01 ;
+	unmapped:operates ep:ComputingDevice01 ;
 	unmapped:participatesIn
-		kb:ActOfLinkOpening01 ,
-		kb:ActOfNetworkLogin01 ,
-		kb:ActOfNetworkLogout01 ,
-		kb:ActOfNetworkingSession01
+		ep:ActOfLinkOpening01 ,
+		ep:ActOfNetworkLogin01 ,
+		ep:ActOfNetworkLogout01 ,
+		ep:ActOfNetworkingSession01
 		;
 	unmapped:uses
-		kb:ComputingDevice01 ,
-		kb:EmailAccount01
+		ep:ComputingDevice01 ,
+		ep:EmailAccount01
 		;
 	.
 
-kb:Agent02
+ep:Agent02
 	a uco-identity:Person ;
 	rdfs:label "Charlie" ;
-	unmapped:hasRole kb:SOCAnalystRole01 ;
-	unmapped:uses kb:ComputingDevice04 ;
+	unmapped:hasRole ep:SOCAnalystRole01 ;
+	unmapped:uses ep:ComputingDevice04 ;
 	.
 
-kb:Agent03
+ep:Agent03
 	a uco-identity:Identity ;
 	rdfs:label "(Malicious)" ;
-	unmapped:bearerOf kb:ThreatActorRole01 ;
-	unmapped:controls kb:EmailAccount02 ;
-	unmapped:hasRole kb:ThreatActorRole01 ;
-	unmapped:operates kb:ComputingDevice03 ;
-	unmapped:participatesIn kb:ActOfEmailDelivery01 ;
-	unmapped:uses kb:ComputingDevice03 ;
+	unmapped:bearerOf ep:ThreatActorRole01 ;
+	unmapped:controls ep:EmailAccount02 ;
+	unmapped:hasRole ep:ThreatActorRole01 ;
+	unmapped:operates ep:ComputingDevice03 ;
+	unmapped:participatesIn ep:ActOfEmailDelivery01 ;
+	unmapped:uses ep:ComputingDevice03 ;
 	.
 
-kb:Alert01
+ep:Alert01
 	a uco-core:UcoThing ;
-	unmapped:participatesIn kb:ActOfFileFlagging01 ;
+	unmapped:participatesIn ep:ActOfFileFlagging01 ;
 	.
 
-kb:ComputingDevice01
+ep:ComputingDevice01
 	a uco-observable:Computer ;
 	rdfs:label "Bob's PC" ;
 	rdfs:comment
@@ -143,106 +143,106 @@ kb:ComputingDevice01
 		"TODO, UCO - gpu should have its maxCount lifted."
 		;
 	uco-core:hasFacet
-		kb:computer-specification-facet-2e4f95bc-e299-405c-bfc3-d8203df339a0 ,
-		kb:ipv4-address-facet-6f6b30df-62b4-4e9c-9ff9-0baf37f3331d
+		ep:computer-specification-facet-2e4f95bc-e299-405c-bfc3-d8203df339a0 ,
+		ep:ipv4-address-facet-6f6b30df-62b4-4e9c-9ff9-0baf37f3331d
 		;
-	unmapped:bearerOf kb:TargetRole02 ;
+	unmapped:bearerOf ep:TargetRole02 ;
 	unmapped:endpointId "766602917342871552" ;
-	unmapped:hasPart kb:Port01 ;
-	unmapped:hasRole kb:TargetRole02 ;
+	unmapped:hasPart ep:Port01 ;
+	unmapped:hasRole ep:TargetRole02 ;
 	unmapped:isCarrierOf
-		kb:EmailSoftwareProgram01 ,
-		kb:EndpointProtectionSoftware01
+		ep:EmailSoftwareProgram01 ,
+		ep:EndpointProtectionSoftware01
 		;
 	unmapped:participatesIn
-		kb:ActOfLinkOpening01 ,
-		kb:ActOfMalwareDelivery01 ,
-		kb:ActOfMalwareInstallation01 ,
-		kb:ActOfNetworkLogin01 ,
-		kb:ActOfNetworkLogout01 ,
-		kb:ActOfNetworkingSession01
+		ep:ActOfLinkOpening01 ,
+		ep:ActOfMalwareDelivery01 ,
+		ep:ActOfMalwareInstallation01 ,
+		ep:ActOfNetworkLogin01 ,
+		ep:ActOfNetworkLogout01 ,
+		ep:ActOfNetworkingSession01
 		;
 	.
 
-kb:ComputingDevice02
+ep:ComputingDevice02
 	a uco-observable:Device ;
 	rdfs:label "Initech email server" ;
-	unmapped:participatesIn kb:ActOfEmailDelivery01 ;
+	unmapped:participatesIn ep:ActOfEmailDelivery01 ;
 	.
 
-kb:ComputingDevice03
+ep:ComputingDevice03
 	a uco-observable:Computer ;
 	rdfs:label "Malicious Server" ;
-	uco-core:hasFacet kb:ipv4-address-facet-2262631d-e23c-492b-8196-2d8523ee9839 ;
-	unmapped:hasPart kb:Webpage01 ;
+	uco-core:hasFacet ep:ipv4-address-facet-2262631d-e23c-492b-8196-2d8523ee9839 ;
+	unmapped:hasPart ep:Webpage01 ;
 	unmapped:participatesIn
-		kb:ActOfEmailDelivery01 ,
-		kb:ActOfMalwareDelivery01
+		ep:ActOfEmailDelivery01 ,
+		ep:ActOfMalwareDelivery01
 		;
 	.
 
-kb:ComputingDevice04
+ep:ComputingDevice04
 	a uco-observable:Appliance ;
 	rdfs:label "C2 Server, SIEM?" ;
-	unmapped:participatesIn kb:ActOfSending02 ;
+	unmapped:participatesIn ep:ActOfSending02 ;
 	.
 
-kb:CorporateLoggingTool01
+ep:CorporateLoggingTool01
 	a uco-tool:AnalyticTool ;
-	unmapped:bearerOf kb:ReceiverRole01 ;
-	unmapped:participatesIn kb:ActOfFileFlagging01 ;
+	unmapped:bearerOf ep:ReceiverRole01 ;
+	unmapped:participatesIn ep:ActOfFileFlagging01 ;
 	.
 
-kb:DetectionEvent01
-	a kb:Event ;
-	drafting:intervalIn kb:TemporalInterval03 ;
+ep:DetectionEvent01
+	a ep:Event ;
+	drafting:intervalIn ep:TemporalInterval03 ;
 	unmapped:hasOccurrentPart
-		kb:ActOfEndpointScan01 ,
-		kb:ActOfFileFlagging01 ,
-		kb:ActOfSending02
+		ep:ActOfEndpointScan01 ,
+		ep:ActOfFileFlagging01 ,
+		ep:ActOfSending02
 		;
 	.
 
-kb:EmailAccount01
+ep:EmailAccount01
 	a uco-observable:EmailAccount ;
 	.
 
-kb:EmailAccount02
+ep:EmailAccount02
 	a uco-observable:EmailAccount ;
 	.
 
-kb:EmailMessage01
+ep:EmailMessage01
 	a uco-observable:EmailMessage ;
-	uco-core:hasFacet kb:email-message-facet-7392d613-2e2d-4906-8d03-c1f50b3432f2 ;
-	unmapped:hasRecipient kb:Agent01 ;
+	uco-core:hasFacet ep:email-message-facet-7392d613-2e2d-4906-8d03-c1f50b3432f2 ;
+	unmapped:hasRecipient ep:Agent01 ;
 	unmapped:participatesIn
-		kb:ActOfEmailDelivery01 ,
-		kb:ActOfLinkOpening01
+		ep:ActOfEmailDelivery01 ,
+		ep:ActOfLinkOpening01
 		;
 	.
 
-kb:EmailSoftwareProgram01
+ep:EmailSoftwareProgram01
 	a uco-observable:Software ;
 	unmapped:contains
-		kb:EmailAccount01 ,
-		kb:EmailMessage01
+		ep:EmailAccount01 ,
+		ep:EmailMessage01
 		;
 	.
 
-kb:EndUserRole01
+ep:EndUserRole01
 	a uco-role:Role ;
 	.
 
-kb:EndpointProtectionSoftware01
+ep:EndpointProtectionSoftware01
 	a uco-observable:Software ;
-	unmapped:bearerOf kb:ScannerRole01 ;
+	unmapped:bearerOf ep:ScannerRole01 ;
 	unmapped:participatesIn
-		kb:ActOfEndpointScan01 ,
-		kb:ActOfFileFlagging01
+		ep:ActOfEndpointScan01 ,
+		ep:ActOfFileFlagging01
 		;
 	.
 
-kb:Event
+ep:Event
 	a owl:Class ;
 	rdfs:subClassOf
 		drafting:Perdurant ,
@@ -255,44 +255,44 @@ kb:Event
 		;
 	.
 
-kb:InfectionEvent01
-	a kb:Event ;
-	drafting:intervalIn kb:TemporalInterval02 ;
+ep:InfectionEvent01
+	a ep:Event ;
+	drafting:intervalIn ep:TemporalInterval02 ;
 	unmapped:hasOccurrentPart
-		kb:ActOfMalwareDelivery01 ,
-		kb:ActOfMalwareInstallation01
+		ep:ActOfMalwareDelivery01 ,
+		ep:ActOfMalwareInstallation01
 		;
-	unmapped:precedes kb:DetectionEvent01 ;
+	unmapped:precedes ep:DetectionEvent01 ;
 	.
 
-kb:MaliciousSoftware01
+ep:MaliciousSoftware01
 	a
 		uco-observable:Software ,
 		uco-tool:MaliciousTool
 		;
 	unmapped:participatesIn
-		kb:ActOfEndpointScan01 ,
-		kb:ActOfMalwareDelivery01 ,
-		kb:ActOfMalwareInstallation01 ,
-		kb:InfectionEvent01
+		ep:ActOfEndpointScan01 ,
+		ep:ActOfMalwareDelivery01 ,
+		ep:ActOfMalwareInstallation01 ,
+		ep:InfectionEvent01
 		;
 	.
 
-kb:ManagerRole01
+ep:ManagerRole01
 	a uco-role:Role ;
 	.
 
-kb:NetworkAccount01
+ep:NetworkAccount01
 	a uco-observable:UserAccount ;
 	rdfs:comment "TODO, OCA - Will Bob's OS account be represented separately?" ;
-	rdfs:seeAlso kb:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6 ;
-	uco-core:hasFacet kb:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c ;
+	rdfs:seeAlso ep:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6 ;
+	uco-core:hasFacet ep:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c ;
 	.
 
-kb:ObservableAction
+ep:ObservableAction
 	a owl:Class ;
 	rdfs:subClassOf
-		kb:Action ,
+		ep:Action ,
 		uco-observable:ObservableAction
 		;
 	rdfs:comment "This class is a temporary class to align concepts for UCO Issues 544 and 651." ;
@@ -302,51 +302,51 @@ kb:ObservableAction
 		;
 	.
 
-kb:Port01
+ep:Port01
 	a uco-core:UcoThing ;
-	unmapped:isCarrierOf kb:MaliciousSoftware01 ;
-	unmapped:unknown01 kb:MaliciousSoftware01 ;
+	unmapped:isCarrierOf ep:MaliciousSoftware01 ;
+	unmapped:unknown01 ep:MaliciousSoftware01 ;
 	.
 
-kb:ReceiverRole01
+ep:ReceiverRole01
 	a uco-role:Role ;
-	unmapped:realizedIn kb:ActOfFileFlagging01 ;
+	unmapped:realizedIn ep:ActOfFileFlagging01 ;
 	.
 
-kb:SOCAnalystRole01
+ep:SOCAnalystRole01
 	a uco-role:Role ;
 	.
 
-kb:ScannerRole01
+ep:ScannerRole01
 	a uco-role:Role ;
-	unmapped:realizedIn kb:ActOfEndpointScan01 ;
+	unmapped:realizedIn ep:ActOfEndpointScan01 ;
 	.
 
-kb:SpearFishingEvent01
-	a kb:Event ;
-	drafting:intervalIn kb:TemporalInterval01 ;
+ep:SpearFishingEvent01
+	a ep:Event ;
+	drafting:intervalIn ep:TemporalInterval01 ;
 	unmapped:hasOccurrentPart
-		kb:ActOfEmailDelivery01 ,
-		kb:ActOfLinkOpening01
+		ep:ActOfEmailDelivery01 ,
+		ep:ActOfLinkOpening01
 		;
-	unmapped:precedes kb:InfectionEvent01 ;
+	unmapped:precedes ep:InfectionEvent01 ;
 	.
 
-kb:TargetRole01
+ep:TargetRole01
 	a uco-victim:Victim ;
-	unmapped:realizedIn kb:ActOfLinkOpening01 ;
+	unmapped:realizedIn ep:ActOfLinkOpening01 ;
 	.
 
-kb:TargetRole02
+ep:TargetRole02
 	a uco-role:NeutralRole ;
 	rdfs:comment "uco-victim:Victim is scoped to persons or organizations, not devices, and thus is inappropriate to apply to Bob's computer." ;
 	unmapped:realizedIn
-		kb:ActOfLinkOpening01 ,
-		kb:ActOfMalwareDelivery01
+		ep:ActOfLinkOpening01 ,
+		ep:ActOfMalwareDelivery01
 		;
 	.
 
-kb:TemporalInterval
+ep:TemporalInterval
 	a owl:Class ;
 	rdfs:subClassOf
 		drafting:Perdurant ,
@@ -355,364 +355,364 @@ kb:TemporalInterval
 	rdfs:seeAlso <https://github.com/ucoProject/UCO/issues/651> ;
 	.
 
-kb:TemporalInterval01
-	a kb:TemporalInterval ;
+ep:TemporalInterval01
+	a ep:TemporalInterval ;
 	.
 
-kb:TemporalInterval02
-	a kb:TemporalInterval ;
+ep:TemporalInterval02
+	a ep:TemporalInterval ;
 	.
 
-kb:TemporalInterval03
-	a kb:TemporalInterval ;
+ep:TemporalInterval03
+	a ep:TemporalInterval ;
 	.
 
-kb:ThreatActorRole01
+ep:ThreatActorRole01
 	a uco-role:MaliciousRole ;
-	unmapped:realizedIn kb:ActOfEmailDelivery01 ;
+	unmapped:realizedIn ep:ActOfEmailDelivery01 ;
 	.
 
-kb:URL01
+ep:URL01
 	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-3764c009-65b6-47a5-8c7b-cde6e8bc1570 ;
+	uco-core:hasFacet ep:url-facet-3764c009-65b6-47a5-8c7b-cde6e8bc1570 ;
 	.
 
-kb:Webpage01
+ep:Webpage01
 	a uco-observable:WebPage ;
-	unmapped:designatedBy kb:URL01 ;
+	unmapped:designatedBy ep:URL01 ;
 	.
 
-kb:company-73fe8030-289b-45d3-8637-6078773f914e
+ep:company-73fe8030-289b-45d3-8637-6078773f914e
 	a uco-identity:Organization ;
 	uco-core:name "Initech" ;
 	.
 
-kb:computer-specification-facet-2e4f95bc-e299-405c-bfc3-d8203df339a0
+ep:computer-specification-facet-2e4f95bc-e299-405c-bfc3-d8203df339a0
 	a uco-observable:ComputerSpecificationFacet ;
 	uco-observable:cpuFamily "Intel(R) Xeon(R) W-10885M CPU @ 2.40GHz" ;
 	.
 
-kb:content-data-facet-b79059f4-ae44-48e7-8f57-015eae54f47d
+ep:content-data-facet-b79059f4-ae44-48e7-8f57-015eae54f47d
 	a uco-observable:ContentDataFacet ;
 	uco-observable:hash
-		kb:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057 ,
-		kb:hash-9d18e157-42d0-56bb-af67-db152b71107d ,
-		kb:hash-bffe8332-c441-58f8-aa60-5dc0915e322a
+		ep:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057 ,
+		ep:hash-9d18e157-42d0-56bb-af67-db152b71107d ,
+		ep:hash-bffe8332-c441-58f8-aa60-5dc0915e322a
 		;
 	.
 
-kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3
+ep:department-2827b0f3-46db-48c2-ae84-01f28225b0d3
 	a uco-identity:Organization ;
 	uco-core:name "Software Engineering Department" ;
 	.
 
-kb:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c
+ep:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c
 	a uco-observable:DigitalAccountFacet ;
 	uco-observable:displayName "IWANTASLOTHTEST\\IEUser" ;
 	.
 
-kb:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221
+ep:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221
 	a uco-observable:EmailAddress ;
-	uco-core:hasFacet kb:email-address-facet-86beda1b-11cb-429a-ae05-7ee0c532e523 ;
+	uco-core:hasFacet ep:email-address-facet-86beda1b-11cb-429a-ae05-7ee0c532e523 ;
 	.
 
-kb:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf
+ep:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf
 	a uco-observable:EmailAddress ;
-	uco-core:hasFacet kb:email-address-facet-3a3815a0-246d-494d-b4bd-4739c4f15b47 ;
+	uco-core:hasFacet ep:email-address-facet-3a3815a0-246d-494d-b4bd-4739c4f15b47 ;
 	.
 
-kb:email-address-facet-3a3815a0-246d-494d-b4bd-4739c4f15b47
+ep:email-address-facet-3a3815a0-246d-494d-b4bd-4739c4f15b47
 	a uco-observable:EmailAddressFacet ;
 	uco-observable:addressValue "badguys@badguys.gotham" ;
 	uco-observable:displayName "Alice Jones" ;
 	.
 
-kb:email-address-facet-86beda1b-11cb-429a-ae05-7ee0c532e523
+ep:email-address-facet-86beda1b-11cb-429a-ae05-7ee0c532e523
 	a uco-observable:EmailAddressFacet ;
 	uco-observable:addressValue "bob@initech.org" ;
 	.
 
-kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58
+ep:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58
 	a uco-observable:EmailMessage ;
 	rdfs:comment "TODO, UCO - What is the difference between from and sender?  If sender is meant to be the routing senders, is the sh:maxCount 1 an error in the specification, or a requirement that it's the last (i.e. top) sender that should be recorded?" ;
 	uco-core:description "Email message stored on server." ;
-	uco-core:hasFacet kb:email-message-facet-6ce06886-4f47-4617-8f06-f1980f3b8d03 ;
+	uco-core:hasFacet ep:email-message-facet-6ce06886-4f47-4617-8f06-f1980f3b8d03 ;
 	.
 
-kb:email-message-facet-6ce06886-4f47-4617-8f06-f1980f3b8d03
+ep:email-message-facet-6ce06886-4f47-4617-8f06-f1980f3b8d03
 	a uco-observable:EmailMessageFacet ;
 	rdfs:comment "Illustration note - embedded link is not yet represented in this UCO render of the message body." ;
 	uco-observable:body "here's an important document for our project, please click on this link" ;
-	uco-observable:from kb:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf ;
-	uco-observable:to kb:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221 ;
+	uco-observable:from ep:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf ;
+	uco-observable:to ep:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221 ;
 	.
 
-kb:email-message-facet-7392d613-2e2d-4906-8d03-c1f50b3432f2
+ep:email-message-facet-7392d613-2e2d-4906-8d03-c1f50b3432f2
 	a uco-observable:EmailMessageFacet ;
 	uco-observable:body "here's an important document for our project, please click on this link" ;
-	uco-observable:from kb:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf ;
+	uco-observable:from ep:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf ;
 	uco-observable:receivedTime "2021-09-02T06:32:16.411000+00:00"^^xsd:dateTime ;
-	uco-observable:to kb:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221 ;
+	uco-observable:to ep:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221 ;
 	.
 
-kb:event-log-68df51be-89d1-443c-bfc7-428bdf89db12
+ep:event-log-68df51be-89d1-443c-bfc7-428bdf89db12
 	a uco-observable:EventLog ;
 	uco-core:description "Network traffic audit log file" ;
 	.
 
-kb:event-record-3365fec9-d5ec-40c4-ab4e-eba682b06d49
+ep:event-record-3365fec9-d5ec-40c4-ab4e-eba682b06d49
 	a uco-observable:EventRecord ;
 	uco-core:description "Email delivery record" ;
-	uco-core:hasFacet kb:event-record-facet-860b4e15-c693-4021-8c2c-b2bcb8b2983c ;
+	uco-core:hasFacet ep:event-record-facet-860b4e15-c693-4021-8c2c-b2bcb8b2983c ;
 	.
 
-kb:event-record-624c080d-3883-4b6f-a73b-c2a946174a39
+ep:event-record-624c080d-3883-4b6f-a73b-c2a946174a39
 	a uco-observable:EventRecord ;
 	uco-core:description "File transmission record" ;
-	uco-core:hasFacet kb:event-record-facet-f8c4eda8-0d05-40b2-a35f-df699e6d374c ;
+	uco-core:hasFacet ep:event-record-facet-f8c4eda8-0d05-40b2-a35f-df699e6d374c ;
 	.
 
-kb:event-record-a08d17e6-dcad-4243-997b-a4d49f1d43cc
+ep:event-record-a08d17e6-dcad-4243-997b-a4d49f1d43cc
 	a uco-observable:EventRecord ;
 	uco-core:description "Link visit record" ;
-	uco-core:hasFacet kb:event-record-facet-ca032a19-f4a4-48c0-a970-42d9ce22929b ;
+	uco-core:hasFacet ep:event-record-facet-ca032a19-f4a4-48c0-a970-42d9ce22929b ;
 	.
 
-kb:event-record-facet-860b4e15-c693-4021-8c2c-b2bcb8b2983c
+ep:event-record-facet-860b4e15-c693-4021-8c2c-b2bcb8b2983c
 	a uco-observable:EventRecordFacet ;
-	uco-observable:cyberAction kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835 ;
+	uco-observable:cyberAction ep:observable-action-295ce323-3284-402c-a320-e8fc4c04f835 ;
 	uco-observable:endTime "2021-09-02T06:32:16.411000+00:00"^^xsd:dateTime ;
-	uco-observable:eventRecordDevice kb:ComputingDevice02 ;
+	uco-observable:eventRecordDevice ep:ComputingDevice02 ;
 	.
 
-kb:event-record-facet-ca032a19-f4a4-48c0-a970-42d9ce22929b
+ep:event-record-facet-ca032a19-f4a4-48c0-a970-42d9ce22929b
 	a uco-observable:EventRecordFacet ;
-	uco-observable:cyberAction kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6 ;
+	uco-observable:cyberAction ep:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6 ;
 	uco-observable:endTime "2021-09-02T11:08:30.658000+00:00"^^xsd:dateTime ;
-	uco-observable:eventRecordDevice kb:ComputingDevice02 ;
+	uco-observable:eventRecordDevice ep:ComputingDevice02 ;
 	.
 
-kb:event-record-facet-f8c4eda8-0d05-40b2-a35f-df699e6d374c
+ep:event-record-facet-f8c4eda8-0d05-40b2-a35f-df699e6d374c
 	a uco-observable:EventRecordFacet ;
-	uco-observable:cyberAction kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c ;
+	uco-observable:cyberAction ep:observable-action-7522ac48-586f-4fba-84b4-b409d042658c ;
 	uco-observable:endTime "2021-09-02T11:08:40.658000+00:00"^^xsd:dateTime ;
-	uco-observable:eventRecordDevice kb:ComputingDevice02 ;
+	uco-observable:eventRecordDevice ep:ComputingDevice02 ;
 	.
 
-kb:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac
+ep:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac
 	a uco-observable:File ;
 	uco-core:hasFacet
-		kb:content-data-facet-b79059f4-ae44-48e7-8f57-015eae54f47d ,
-		kb:file-facet-973a8f7e-aff3-451e-b642-9d7b8412a9cf
+		ep:content-data-facet-b79059f4-ae44-48e7-8f57-015eae54f47d ,
+		ep:file-facet-973a8f7e-aff3-451e-b642-9d7b8412a9cf
 		;
 	.
 
-kb:file-facet-973a8f7e-aff3-451e-b642-9d7b8412a9cf
+ep:file-facet-973a8f7e-aff3-451e-b642-9d7b8412a9cf
 	a uco-observable:FileFacet ;
 	uco-observable:fileName "cmd.exe" ;
 	uco-observable:filePath "c:\\windows\\system32\\cmd.exe" ;
 	uco-observable:sizeInBytes "278528"^^xsd:integer ;
 	.
 
-kb:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057
+ep:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA256"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "bc866cfcdda37e24dc2634dc282c7a0e6f55209da17a8fa105b07414c0e7c527"^^xsd:hexBinary ;
 	.
 
-kb:hash-9d18e157-42d0-56bb-af67-db152b71107d
+ep:hash-9d18e157-42d0-56bb-af67-db152b71107d
 	a uco-types:Hash ;
 	uco-types:hashMethod "MD5"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "911d039e71583a07320b32bde22f8e22"^^xsd:hexBinary ;
 	.
 
-kb:hash-bffe8332-c441-58f8-aa60-5dc0915e322a
+ep:hash-bffe8332-c441-58f8-aa60-5dc0915e322a
 	a uco-types:Hash ;
 	uco-types:hashMethod "SHA1"^^uco-vocabulary:HashNameVocab ;
 	uco-types:hashValue "ded8fd7f36417f66eb6ada10e0c0d7c0022986e9"^^xsd:hexBinary ;
 	.
 
-kb:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1
+ep:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1
 	a uco-observable:IPv4Address ;
-	uco-core:hasFacet kb:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd ;
+	uco-core:hasFacet ep:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd ;
 	.
 
-kb:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7
+ep:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7
 	a uco-observable:IPv4Address ;
-	uco-core:hasFacet kb:ipv4-address-facet-7599b7e5-e25c-47e0-a22e-a88f069475ae ;
+	uco-core:hasFacet ep:ipv4-address-facet-7599b7e5-e25c-47e0-a22e-a88f069475ae ;
 	.
 
-kb:ipv4-address-facet-2262631d-e23c-492b-8196-2d8523ee9839
+ep:ipv4-address-facet-2262631d-e23c-492b-8196-2d8523ee9839
 	a uco-observable:IPv4AddressFacet ;
 	uco-observable:addressValue "10.2.150.45" ;
 	.
 
-kb:ipv4-address-facet-6f6b30df-62b4-4e9c-9ff9-0baf37f3331d
+ep:ipv4-address-facet-6f6b30df-62b4-4e9c-9ff9-0baf37f3331d
 	a uco-observable:IPv4AddressFacet ;
 	rdfs:comment "TODO, UCO - an IP address allocation needs to be modeled as a time-bounded class." ;
 	uco-observable:addressValue "172.16.150.132" ;
 	.
 
-kb:ipv4-address-facet-7599b7e5-e25c-47e0-a22e-a88f069475ae
+ep:ipv4-address-facet-7599b7e5-e25c-47e0-a22e-a88f069475ae
 	a uco-observable:IPv4AddressFacet ;
 	uco-observable:addressValue "10.2.150.45" ;
 	.
 
-kb:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd
+ep:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd
 	a uco-observable:IPv4AddressFacet ;
 	uco-observable:addressValue "10.2.150.45" ;
 	.
 
-kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835
-	a kb:ObservableAction ;
-	uco-action:object kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58 ;
-	uco-action:participant kb:ComputingDevice02 ;
-	uco-action:performer kb:EmailSoftwareProgram01 ;
-	uco-action:result kb:EmailMessage01 ;
+ep:observable-action-295ce323-3284-402c-a320-e8fc4c04f835
+	a ep:ObservableAction ;
+	uco-action:object ep:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58 ;
+	uco-action:participant ep:ComputingDevice02 ;
+	uco-action:performer ep:EmailSoftwareProgram01 ;
+	uco-action:result ep:EmailMessage01 ;
 	.
 
-kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c
-	a kb:ObservableAction ;
-	uco-action:environment kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c ;
-	uco-action:performer kb:ComputingDevice03 ;
-	uco-action:result kb:MaliciousSoftware01 ;
+ep:observable-action-7522ac48-586f-4fba-84b4-b409d042658c
+	a ep:ObservableAction ;
+	uco-action:environment ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c ;
+	uco-action:performer ep:ComputingDevice03 ;
+	uco-action:result ep:MaliciousSoftware01 ;
 	.
 
-kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6
-	a kb:ObservableAction ;
-	uco-action:environment kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c ;
-	uco-action:object kb:URL01 ;
+ep:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6
+	a ep:ObservableAction ;
+	uco-action:environment ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c ;
+	uco-action:object ep:URL01 ;
 	.
 
-kb:observable-relationship-9212049f-6a34-42e3-b1a5-5fa8ea8017b7
+ep:observable-relationship-9212049f-6a34-42e3-b1a5-5fa8ea8017b7
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
-	uco-core:source kb:url-a9b1bdec-8228-4356-a18c-a5357eee613d ;
-	uco-core:target kb:event-log-68df51be-89d1-443c-bfc7-428bdf89db12 ;
+	uco-core:source ep:url-a9b1bdec-8228-4356-a18c-a5357eee613d ;
+	uco-core:target ep:event-log-68df51be-89d1-443c-bfc7-428bdf89db12 ;
 	.
 
-kb:observable-relationship-f7a1270d-5435-4f19-9a7a-724810ef1f91
+ep:observable-relationship-f7a1270d-5435-4f19-9a7a-724810ef1f91
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Used" ;
-	uco-core:source kb:ComputingDevice01 ;
-	uco-core:target kb:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6 ;
+	uco-core:source ep:ComputingDevice01 ;
+	uco-core:target ep:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6 ;
 	.
 
-kb:observable-relationship-f849b7ab-9e18-46fb-a70d-ea3fd8e47437
+ep:observable-relationship-f849b7ab-9e18-46fb-a70d-ea3fd8e47437
 	a uco-observable:ObservableRelationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Contained_Within" ;
-	uco-core:source kb:URL01 ;
-	uco-core:target kb:EmailMessage01 ;
+	uco-core:source ep:URL01 ;
+	uco-core:target ep:EmailMessage01 ;
 	.
 
-kb:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
+ep:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6
 	a
 		uco-observable:OperatingSystem ,
 		uco-observable:Software
 		;
 	rdfs:comment "TODO, UCO - bitness should use the BitnessVocabulary." ;
 	uco-core:hasFacet
-		kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ,
-		kb:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
+		ep:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398 ,
+		ep:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
 		;
 	uco-core:name "Windows 10 Enterprise Evaluation" ;
 	.
 
-kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398
+ep:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398
 	a uco-observable:OperatingSystemFacet ;
 	uco-observable:bitness "64" ;
 	.
 
-kb:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc
+ep:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc
 	a uco-observable:WindowsProcessFacet ;
 	uco-observable:ownerSID "S-1-5-21-321011808-3761883066-353627080-1000" ;
 	.
 
-kb:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b
+ep:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b
 	a uco-observable:ProcessFacet ;
-	uco-observable:binary kb:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac ;
-	uco-observable:creatorUser kb:NetworkAccount01 ;
+	uco-observable:binary ep:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac ;
+	uco-observable:creatorUser ep:NetworkAccount01 ;
 	uco-observable:observableCreatedTime "2021-09-02T08:19:25.341000+00:00"^^xsd:dateTime ;
-	uco-observable:parent kb:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2 ;
+	uco-observable:parent ep:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2 ;
 	uco-observable:pid "3212"^^xsd:integer ;
 	.
 
-kb:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac
+ep:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac
 	a uco-observable:ProcessFacet ;
 	uco-observable:observableCreatedTime "2021-09-02T07:32:15.275000+00:00"^^xsd:dateTime ;
 	uco-observable:pid "4460"^^xsd:integer ;
 	.
 
-kb:relationship-013c7665-a539-4314-adba-60df1c2f5e12
+ep:relationship-013c7665-a539-4314-adba-60df1c2f5e12
 	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Member_Of" ;
-	uco-core:source kb:Agent01 ;
-	uco-core:target kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3 ;
+	uco-core:source ep:Agent01 ;
+	uco-core:target ep:department-2827b0f3-46db-48c2-ae84-01f28225b0d3 ;
 	.
 
-kb:relationship-65248f06-2c56-4bbb-bb62-0f154831fd86
+ep:relationship-65248f06-2c56-4bbb-bb62-0f154831fd86
 	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Employee_Of" ;
-	uco-core:source kb:Agent01 ;
-	uco-core:target kb:company-73fe8030-289b-45d3-8637-6078773f914e ;
+	uco-core:source ep:Agent01 ;
+	uco-core:target ep:company-73fe8030-289b-45d3-8637-6078773f914e ;
 	.
 
-kb:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0
+ep:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0
 	a uco-core:Relationship ;
 	uco-core:isDirectional "true"^^xsd:boolean ;
 	uco-core:kindOfRelationship "Has_Role" ;
-	uco-core:source kb:Agent01 ;
-	uco-core:target kb:ManagerRole01 ;
+	uco-core:source ep:Agent01 ;
+	uco-core:target ep:ManagerRole01 ;
 	.
 
-kb:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
+ep:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e
 	a uco-observable:SoftwareFacet ;
 	uco-observable:manufacturer <http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26> ;
 	uco-observable:version "10.0" ;
 	.
 
-kb:url-a9b1bdec-8228-4356-a18c-a5357eee613d
+ep:url-a9b1bdec-8228-4356-a18c-a5357eee613d
 	a uco-observable:URL ;
-	uco-core:hasFacet kb:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25 ;
+	uco-core:hasFacet ep:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25 ;
 	.
 
-kb:url-facet-3764c009-65b6-47a5-8c7b-cde6e8bc1570
+ep:url-facet-3764c009-65b6-47a5-8c7b-cde6e8bc1570
 	a uco-observable:URLFacet ;
-	uco-observable:host kb:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1 ;
+	uco-observable:host ep:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1 ;
 	uco-observable:port "80"^^xsd:integer ;
 	.
 
-kb:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25
+ep:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25
 	a uco-observable:URLFacet ;
-	uco-observable:host kb:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7 ;
+	uco-observable:host ep:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7 ;
 	uco-observable:port "80"^^xsd:integer ;
 	.
 
-kb:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6
+ep:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6
 	a
 		uco-observable:Software ,
 		uco-observable:WindowsProcess
 		;
 	uco-core:hasFacet
-		kb:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc ,
-		kb:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b
+		ep:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc ,
+		ep:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b
 		;
 	.
 
-kb:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2
+ep:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2
 	a
 		uco-observable:Software ,
 		uco-observable:WindowsProcess
 		;
-	uco-core:hasFacet kb:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac ;
+	uco-core:hasFacet ep:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac ;
 	.
 
-kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c
+ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c
 	a
 		uco-observable:Software ,
 		uco-observable:WindowsProcess
