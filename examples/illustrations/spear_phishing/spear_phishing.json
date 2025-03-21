@@ -1,7 +1,7 @@
 {
     "@context": {
         "drafting": "http://example.org/ontology/drafting/",
-        "kb": "http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/",
+        "ep": "http://www.semanticweb.org/OpenCyberSecurityAlliance/Ontology/EndpointProtection/",
         "owl": "http://www.w3.org/2002/07/owl#",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
@@ -24,139 +24,139 @@
             "@type": "owl:Ontology"
         },
         {
-            "@id": "kb:ActOfMalwareDelivery01",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:ActOfMalwareDelivery01",
+            "@type": "ep:ObservableAction",
             "unmapped:precedes": {
-                "@id": "kb:ActOfMalwareInstallation01"
+                "@id": "ep:ActOfMalwareInstallation01"
             }
         },
         {
-            "@id": "kb:ActOfMalwareInstallation01",
-            "@type": "kb:ObservableAction"
+            "@id": "ep:ActOfMalwareInstallation01",
+            "@type": "ep:ObservableAction"
         },
         {
-            "@id": "kb:ActOfNetworkLogin01",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:ActOfNetworkLogin01",
+            "@type": "ep:ObservableAction",
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-09-02T07:32:16.411Z"
             }
         },
         {
-            "@id": "kb:ActOfNetworkLogout01",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:ActOfNetworkLogout01",
+            "@type": "ep:ObservableAction",
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-09-02T11:07:30.658Z"
             }
         },
         {
-            "@id": "kb:ActOfNetworkingSession01",
+            "@id": "ep:ActOfNetworkingSession01",
             "@type": "uco-core:UcoThing",
             "rdfs:comment": "TODO - How does this relate to the spear phishing event?"
         },
         {
-            "@id": "kb:ActOfEmailDelivery01",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:ActOfEmailDelivery01",
+            "@type": "ep:ObservableAction",
             "unmapped:precedes": {
-                "@id": "kb:ActOfLinkOpening01"
+                "@id": "ep:ActOfLinkOpening01"
             }
         },
         {
-            "@id": "kb:ActOfLinkOpening01",
-            "@type": "kb:ObservableAction"
+            "@id": "ep:ActOfLinkOpening01",
+            "@type": "ep:ObservableAction"
         },
         {
-            "@id": "kb:ActOfSending02",
-            "@type": "kb:ObservableAction"
+            "@id": "ep:ActOfSending02",
+            "@type": "ep:ObservableAction"
         },
         {
-            "@id": "kb:Agent01",
+            "@id": "ep:Agent01",
             "@type": "uco-identity:Person",
             "rdfs:label": "Bob",
             "unmapped:bearerOf": [
                 {
-                    "@id": "kb:EndUserRole01"
+                    "@id": "ep:EndUserRole01"
                 },
                 {
-                    "@id": "kb:TargetRole01"
+                    "@id": "ep:TargetRole01"
                 }
             ],
             "unmapped:controls": {
-                "@id": "kb:EmailAccount01"
+                "@id": "ep:EmailAccount01"
             },
             "unmapped:hasRole": {
-                "@id": "kb:EndUserRole01"
+                "@id": "ep:EndUserRole01"
             },
             "unmapped:operates": {
-                "@id": "kb:ComputingDevice01"
+                "@id": "ep:ComputingDevice01"
             },
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:ActOfLinkOpening01"
+                    "@id": "ep:ActOfLinkOpening01"
                 },
                 {
-                    "@id": "kb:ActOfNetworkLogin01"
+                    "@id": "ep:ActOfNetworkLogin01"
                 },
                 {
-                    "@id": "kb:ActOfNetworkLogout01"
+                    "@id": "ep:ActOfNetworkLogout01"
                 },
                 {
-                    "@id": "kb:ActOfNetworkingSession01"
+                    "@id": "ep:ActOfNetworkingSession01"
                 }
             ],
             "unmapped:uses": [
                 {
-                    "@id": "kb:ComputingDevice01"
+                    "@id": "ep:ComputingDevice01"
                 },
                 {
-                    "@id": "kb:EmailAccount01"
+                    "@id": "ep:EmailAccount01"
                 }
             ]
         },
         {
-            "@id": "kb:Agent02",
+            "@id": "ep:Agent02",
             "@type": "uco-identity:Person",
             "rdfs:label": "Charlie",
             "unmapped:hasRole": {
-                "@id": "kb:SOCAnalystRole01"
+                "@id": "ep:SOCAnalystRole01"
             },
             "unmapped:uses": {
-                "@id": "kb:ComputingDevice04"
+                "@id": "ep:ComputingDevice04"
             }
         },
         {
-            "@id": "kb:Agent03",
+            "@id": "ep:Agent03",
             "@type": "uco-identity:Identity",
             "rdfs:label": "(Malicious)",
             "unmapped:bearerOf": {
-                "@id": "kb:ThreatActorRole01"
+                "@id": "ep:ThreatActorRole01"
             },
             "unmapped:controls": {
-                "@id": "kb:EmailAccount02"
+                "@id": "ep:EmailAccount02"
             },
             "unmapped:operates": {
-                "@id": "kb:ComputingDevice03"
+                "@id": "ep:ComputingDevice03"
             },
             "unmapped:participatesIn": {
-                "@id": "kb:ActOfEmailDelivery01"
+                "@id": "ep:ActOfEmailDelivery01"
             },
             "unmapped:uses": {
-                "@id": "kb:ComputingDevice03"
+                "@id": "ep:ComputingDevice03"
             },
             "unmapped:hasRole": {
-                "@id": "kb:ThreatActorRole01"
+                "@id": "ep:ThreatActorRole01"
             }
         },
         {
-            "@id": "kb:Alert01",
+            "@id": "ep:Alert01",
             "@type": "uco-core:UcoThing",
             "unmapped:participatesIn": {
-                "@id": "kb:ActOfFileFlagging01"
+                "@id": "ep:ActOfFileFlagging01"
             }
         },
         {
-            "@id": "kb:ComputingDevice01",
+            "@id": "ep:ComputingDevice01",
             "@type": "uco-observable:Computer",
             "rdfs:label": "Bob's PC",
             "rdfs:comment": [
@@ -166,483 +166,483 @@
             ],
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:computer-specification-facet-2e4f95bc-e299-405c-bfc3-d8203df339a0",
+                    "@id": "ep:computer-specification-facet-2e4f95bc-e299-405c-bfc3-d8203df339a0",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:cpuFamily": "Intel(R) Xeon(R) W-10885M CPU @ 2.40GHz"
                 },
                 {
-                    "@id": "kb:ipv4-address-facet-6f6b30df-62b4-4e9c-9ff9-0baf37f3331d",
+                    "@id": "ep:ipv4-address-facet-6f6b30df-62b4-4e9c-9ff9-0baf37f3331d",
                     "@type": "uco-observable:IPv4AddressFacet",
                     "rdfs:comment": "TODO, UCO - an IP address allocation needs to be modeled as a time-bounded class.",
                     "uco-observable:addressValue": "172.16.150.132"
                 }
             ],
             "unmapped:bearerOf": {
-                "@id": "kb:TargetRole02"
+                "@id": "ep:TargetRole02"
             },
             "unmapped:endpointId": "766602917342871552",
             "unmapped:hasPart": {
-                "@id": "kb:Port01"
+                "@id": "ep:Port01"
             },
             "unmapped:hasRole": {
-                "@id": "kb:TargetRole02"
+                "@id": "ep:TargetRole02"
             },
             "unmapped:isCarrierOf": [
                 {
-                    "@id": "kb:EmailSoftwareProgram01"
+                    "@id": "ep:EmailSoftwareProgram01"
                 },
                 {
-                    "@id": "kb:EndpointProtectionSoftware01"
+                    "@id": "ep:EndpointProtectionSoftware01"
                 }
             ],
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:ActOfLinkOpening01"
+                    "@id": "ep:ActOfLinkOpening01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareDelivery01"
+                    "@id": "ep:ActOfMalwareDelivery01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareInstallation01"
+                    "@id": "ep:ActOfMalwareInstallation01"
                 },
                 {
-                    "@id": "kb:ActOfNetworkLogin01"
+                    "@id": "ep:ActOfNetworkLogin01"
                 },
                 {
-                    "@id": "kb:ActOfNetworkLogout01"
+                    "@id": "ep:ActOfNetworkLogout01"
                 },
                 {
-                    "@id": "kb:ActOfNetworkingSession01"
+                    "@id": "ep:ActOfNetworkingSession01"
                 }
             ]
         },
         {
-            "@id": "kb:ComputingDevice02",
+            "@id": "ep:ComputingDevice02",
             "@type": "uco-observable:Device",
             "rdfs:label": "Initech email server",
             "unmapped:participatesIn": {
-                "@id": "kb:ActOfEmailDelivery01"
+                "@id": "ep:ActOfEmailDelivery01"
             }
         },
         {
-            "@id": "kb:ComputingDevice03",
+            "@id": "ep:ComputingDevice03",
             "@type": "uco-observable:Computer",
             "rdfs:label": "Malicious Server",
             "uco-core:hasFacet": {
-                "@id": "kb:ipv4-address-facet-2262631d-e23c-492b-8196-2d8523ee9839",
+                "@id": "ep:ipv4-address-facet-2262631d-e23c-492b-8196-2d8523ee9839",
                 "@type": "uco-observable:IPv4AddressFacet",
                 "uco-observable:addressValue": "10.2.150.45"
             },
             "unmapped:hasPart": {
-                "@id": "kb:Webpage01"
+                "@id": "ep:Webpage01"
             },
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:ActOfEmailDelivery01"
+                    "@id": "ep:ActOfEmailDelivery01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareDelivery01"
+                    "@id": "ep:ActOfMalwareDelivery01"
                 }
             ]
         },
         {
-            "@id": "kb:ComputingDevice04",
+            "@id": "ep:ComputingDevice04",
             "@type": "uco-observable:Appliance",
             "rdfs:label": "C2 Server, SIEM?",
             "unmapped:participatesIn": {
-                "@id": "kb:ActOfSending02"
+                "@id": "ep:ActOfSending02"
             }
         },
         {
-            "@id": "kb:CorporateLoggingTool01",
+            "@id": "ep:CorporateLoggingTool01",
             "@type": "uco-tool:AnalyticTool",
             "unmapped:bearerOf": {
-                "@id": "kb:ReceiverRole01"
+                "@id": "ep:ReceiverRole01"
             },
             "unmapped:participatesIn": {
-                "@id": "kb:ActOfFileFlagging01"
+                "@id": "ep:ActOfFileFlagging01"
             }
         },
         {
-            "@id": "kb:DetectionEvent01",
-            "@type": "kb:Event",
+            "@id": "ep:DetectionEvent01",
+            "@type": "ep:Event",
             "unmapped:hasOccurrentPart": [
                 {
-                    "@id": "kb:ActOfSending02"
+                    "@id": "ep:ActOfSending02"
                 },
                 {
-                    "@id": "kb:ActOfEndpointScan01"
+                    "@id": "ep:ActOfEndpointScan01"
                 },
                 {
-                    "@id": "kb:ActOfFileFlagging01"
+                    "@id": "ep:ActOfFileFlagging01"
                 }
             ],
             "drafting:intervalIn": {
-                "@id": "kb:TemporalInterval03"
+                "@id": "ep:TemporalInterval03"
             }
         },
         {
-            "@id": "kb:EmailAccount01",
+            "@id": "ep:EmailAccount01",
             "@type": "uco-observable:EmailAccount"
         },
         {
-            "@id": "kb:EmailAccount02",
+            "@id": "ep:EmailAccount02",
             "@type": "uco-observable:EmailAccount"
         },
         {
-            "@id": "kb:EmailMessage01",
+            "@id": "ep:EmailMessage01",
             "@type": "uco-observable:EmailMessage",
             "uco-core:hasFacet": {
-                "@id": "kb:email-message-facet-7392d613-2e2d-4906-8d03-c1f50b3432f2",
+                "@id": "ep:email-message-facet-7392d613-2e2d-4906-8d03-c1f50b3432f2",
                 "@type": "uco-observable:EmailMessageFacet",
                 "uco-observable:body": "here's an important document for our project, please click on this link",
                 "uco-observable:from": {
-                    "@id": "kb:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf"
+                    "@id": "ep:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf"
                 },
                 "uco-observable:receivedTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-09-02T06:32:16.411Z"
                 },
                 "uco-observable:to": {
-                    "@id": "kb:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221"
+                    "@id": "ep:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221"
                 }
             },
             "unmapped:hasRecipient": {
-                "@id": "kb:Agent01"
+                "@id": "ep:Agent01"
             },
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:ActOfEmailDelivery01"
+                    "@id": "ep:ActOfEmailDelivery01"
                 },
                 {
-                    "@id": "kb:ActOfLinkOpening01"
+                    "@id": "ep:ActOfLinkOpening01"
                 }
             ]
         },
         {
-            "@id": "kb:EmailSoftwareProgram01",
+            "@id": "ep:EmailSoftwareProgram01",
             "@type": "uco-observable:Software",
             "unmapped:contains": [
                 {
-                    "@id": "kb:EmailAccount01"
+                    "@id": "ep:EmailAccount01"
                 },
                 {
-                    "@id": "kb:EmailMessage01"
+                    "@id": "ep:EmailMessage01"
                 }
             ]
         },
         {
-            "@id": "kb:EndUserRole01",
+            "@id": "ep:EndUserRole01",
             "@type": "uco-role:Role"
         },
         {
-            "@id": "kb:EndpointProtectionSoftware01",
+            "@id": "ep:EndpointProtectionSoftware01",
             "@type": "uco-observable:Software",
             "unmapped:bearerOf": {
-                "@id": "kb:ScannerRole01"
+                "@id": "ep:ScannerRole01"
             },
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:ActOfEndpointScan01"
+                    "@id": "ep:ActOfEndpointScan01"
                 },
                 {
-                    "@id": "kb:ActOfFileFlagging01"
+                    "@id": "ep:ActOfFileFlagging01"
                 }
             ]
         },
         {
-            "@id": "kb:ActOfEndpointScan01",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:ActOfEndpointScan01",
+            "@type": "ep:ObservableAction",
             "unmapped:precedes": {
-                "@id": "kb:ActOfFileFlagging01"
+                "@id": "ep:ActOfFileFlagging01"
             }
         },
         {
-            "@id": "kb:ActOfFileFlagging01",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:ActOfFileFlagging01",
+            "@type": "ep:ObservableAction",
             "unmapped:hasOutput": {
-                "@id": "kb:Alert01"
+                "@id": "ep:Alert01"
             }
         },
         {
-            "@id": "kb:InfectionEvent01",
-            "@type": "kb:Event",
+            "@id": "ep:InfectionEvent01",
+            "@type": "ep:Event",
             "unmapped:hasOccurrentPart": [
                 {
-                    "@id": "kb:ActOfMalwareDelivery01"
+                    "@id": "ep:ActOfMalwareDelivery01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareInstallation01"
+                    "@id": "ep:ActOfMalwareInstallation01"
                 }
             ],
             "drafting:intervalIn": {
-                "@id": "kb:TemporalInterval02"
+                "@id": "ep:TemporalInterval02"
             },
             "unmapped:precedes": {
-                "@id": "kb:DetectionEvent01"
+                "@id": "ep:DetectionEvent01"
             }
         },
         {
-            "@id": "kb:MaliciousSoftware01",
+            "@id": "ep:MaliciousSoftware01",
             "@type": [
                 "uco-observable:Software",
                 "uco-tool:MaliciousTool"
             ],
             "unmapped:participatesIn": [
                 {
-                    "@id": "kb:ActOfEndpointScan01"
+                    "@id": "ep:ActOfEndpointScan01"
                 },
                 {
-                    "@id": "kb:InfectionEvent01"
+                    "@id": "ep:InfectionEvent01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareDelivery01"
+                    "@id": "ep:ActOfMalwareDelivery01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareInstallation01"
+                    "@id": "ep:ActOfMalwareInstallation01"
                 }
             ]
         },
         {
-            "@id": "kb:ManagerRole01",
+            "@id": "ep:ManagerRole01",
             "@type": "uco-role:Role"
         },
         {
-            "@id": "kb:NetworkAccount01",
+            "@id": "ep:NetworkAccount01",
             "@type": "uco-observable:UserAccount",
             "rdfs:comment": "TODO, OCA - Will Bob's OS account be represented separately?",
             "rdfs:seeAlso": {
-                "@id": "kb:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6"
+                "@id": "ep:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6"
             },
             "uco-core:hasFacet": {
-                "@id": "kb:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c",
+                "@id": "ep:digital-account-facet-cb1b2980-3859-439f-81a4-b3bf0cd2b65c",
                 "@type": "uco-observable:DigitalAccountFacet",
                 "uco-observable:displayName": "IWANTASLOTHTEST\\IEUser"
             }
         },
         {
-            "@id": "kb:Port01",
+            "@id": "ep:Port01",
             "@type": "uco-core:UcoThing",
             "unmapped:isCarrierOf": {
-                "@id": "kb:MaliciousSoftware01"
+                "@id": "ep:MaliciousSoftware01"
             },
             "unmapped:unknown01": {
-                "@id": "kb:MaliciousSoftware01"
+                "@id": "ep:MaliciousSoftware01"
             }
         },
         {
-            "@id": "kb:ReceiverRole01",
+            "@id": "ep:ReceiverRole01",
             "@type": "uco-role:Role",
             "unmapped:realizedIn": {
-                "@id": "kb:ActOfFileFlagging01"
+                "@id": "ep:ActOfFileFlagging01"
             }
         },
         {
-            "@id": "kb:SOCAnalystRole01",
+            "@id": "ep:SOCAnalystRole01",
             "@type": "uco-role:Role"
         },
         {
-            "@id": "kb:ScannerRole01",
+            "@id": "ep:ScannerRole01",
             "@type": "uco-role:Role",
             "unmapped:realizedIn": {
-                "@id": "kb:ActOfEndpointScan01"
+                "@id": "ep:ActOfEndpointScan01"
             }
         },
         {
-            "@id": "kb:SpearFishingEvent01",
-            "@type": "kb:Event",
+            "@id": "ep:SpearFishingEvent01",
+            "@type": "ep:Event",
             "unmapped:hasOccurrentPart": [
                 {
-                    "@id": "kb:ActOfEmailDelivery01"
+                    "@id": "ep:ActOfEmailDelivery01"
                 },
                 {
-                    "@id": "kb:ActOfLinkOpening01"
+                    "@id": "ep:ActOfLinkOpening01"
                 }
             ],
             "drafting:intervalIn": {
-                "@id": "kb:TemporalInterval01"
+                "@id": "ep:TemporalInterval01"
             },
             "unmapped:precedes": {
-                "@id": "kb:InfectionEvent01"
+                "@id": "ep:InfectionEvent01"
             }
         },
         {
-            "@id": "kb:TargetRole01",
+            "@id": "ep:TargetRole01",
             "@type": "uco-victim:Victim",
             "unmapped:realizedIn": {
-                "@id": "kb:ActOfLinkOpening01"
+                "@id": "ep:ActOfLinkOpening01"
             }
         },
         {
-            "@id": "kb:TargetRole02",
+            "@id": "ep:TargetRole02",
             "@type": "uco-role:NeutralRole",
             "rdfs:comment": "uco-victim:Victim is scoped to persons or organizations, not devices, and thus is inappropriate to apply to Bob's computer.",
             "unmapped:realizedIn": [
                 {
-                    "@id": "kb:ActOfLinkOpening01"
+                    "@id": "ep:ActOfLinkOpening01"
                 },
                 {
-                    "@id": "kb:ActOfMalwareDelivery01"
+                    "@id": "ep:ActOfMalwareDelivery01"
                 }
             ]
         },
         {
-            "@id": "kb:TemporalInterval01",
-            "@type": "kb:TemporalInterval"
+            "@id": "ep:TemporalInterval01",
+            "@type": "ep:TemporalInterval"
         },
         {
-            "@id": "kb:TemporalInterval02",
-            "@type": "kb:TemporalInterval"
+            "@id": "ep:TemporalInterval02",
+            "@type": "ep:TemporalInterval"
         },
         {
-            "@id": "kb:TemporalInterval03",
-            "@type": "kb:TemporalInterval"
+            "@id": "ep:TemporalInterval03",
+            "@type": "ep:TemporalInterval"
         },
         {
-            "@id": "kb:ThreatActorRole01",
+            "@id": "ep:ThreatActorRole01",
             "@type": "uco-role:MaliciousRole",
             "unmapped:realizedIn": {
-                "@id": "kb:ActOfEmailDelivery01"
+                "@id": "ep:ActOfEmailDelivery01"
             }
         },
         {
-            "@id": "kb:URL01",
+            "@id": "ep:URL01",
             "@type": "uco-observable:URL",
             "uco-core:hasFacet": {
-                "@id": "kb:url-facet-3764c009-65b6-47a5-8c7b-cde6e8bc1570",
+                "@id": "ep:url-facet-3764c009-65b6-47a5-8c7b-cde6e8bc1570",
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:host": {
-                    "@id": "kb:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1"
+                    "@id": "ep:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1"
                 },
                 "uco-observable:port": 80
             }
         },
         {
-            "@id": "kb:Webpage01",
+            "@id": "ep:Webpage01",
             "@type": "uco-observable:WebPage",
             "unmapped:designatedBy": {
-                "@id": "kb:URL01"
+                "@id": "ep:URL01"
             }
         },
         {
-            "@id": "kb:company-73fe8030-289b-45d3-8637-6078773f914e",
+            "@id": "ep:company-73fe8030-289b-45d3-8637-6078773f914e",
             "@type": "uco-identity:Organization",
             "uco-core:name": "Initech"
         },
         {
-            "@id": "kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3",
+            "@id": "ep:department-2827b0f3-46db-48c2-ae84-01f28225b0d3",
             "@type": "uco-identity:Organization",
             "uco-core:name": "Software Engineering Department"
         },
         {
-            "@id": "kb:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221",
+            "@id": "ep:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": {
-                "@id": "kb:email-address-facet-86beda1b-11cb-429a-ae05-7ee0c532e523",
+                "@id": "ep:email-address-facet-86beda1b-11cb-429a-ae05-7ee0c532e523",
                 "@type": "uco-observable:EmailAddressFacet",
                 "uco-observable:addressValue": "bob@initech.org"
             }
         },
         {
-            "@id": "kb:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf",
+            "@id": "ep:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf",
             "@type": "uco-observable:EmailAddress",
             "uco-core:hasFacet": {
-                "@id": "kb:email-address-facet-3a3815a0-246d-494d-b4bd-4739c4f15b47",
+                "@id": "ep:email-address-facet-3a3815a0-246d-494d-b4bd-4739c4f15b47",
                 "@type": "uco-observable:EmailAddressFacet",
                 "uco-observable:addressValue": "badguys@badguys.gotham",
                 "uco-observable:displayName": "Alice Jones"
             }
         },
         {
-            "@id": "kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58",
+            "@id": "ep:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58",
             "@type": "uco-observable:EmailMessage",
             "uco-core:description": "Email message stored on server.",
             "rdfs:comment": "TODO, UCO - What is the difference between from and sender?  If sender is meant to be the routing senders, is the sh:maxCount 1 an error in the specification, or a requirement that it's the last (i.e. top) sender that should be recorded?",
             "uco-core:hasFacet": {
-                "@id": "kb:email-message-facet-6ce06886-4f47-4617-8f06-f1980f3b8d03",
+                "@id": "ep:email-message-facet-6ce06886-4f47-4617-8f06-f1980f3b8d03",
                 "@type": "uco-observable:EmailMessageFacet",
                 "rdfs:comment": "Illustration note - embedded link is not yet represented in this UCO render of the message body.",
                 "uco-observable:body": "here's an important document for our project, please click on this link",
                 "uco-observable:from": {
-                    "@id": "kb:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf"
+                    "@id": "ep:email-address-5d1b1fa5-82c7-439b-82ce-1aa07429efcf"
                 },
                 "uco-observable:to": {
-                    "@id": "kb:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221"
+                    "@id": "ep:email-address-44944b74-5180-4a0c-b09f-a20c2cc99221"
                 }
             }
         },
         {
-            "@id": "kb:event-log-68df51be-89d1-443c-bfc7-428bdf89db12",
+            "@id": "ep:event-log-68df51be-89d1-443c-bfc7-428bdf89db12",
             "@type": "uco-observable:EventLog",
             "uco-core:description": "Network traffic audit log file"
         },
         {
-            "@id": "kb:event-record-3365fec9-d5ec-40c4-ab4e-eba682b06d49",
+            "@id": "ep:event-record-3365fec9-d5ec-40c4-ab4e-eba682b06d49",
             "@type": "uco-observable:EventRecord",
             "uco-core:description": "Email delivery record",
             "uco-core:hasFacet": {
-                "@id": "kb:event-record-facet-860b4e15-c693-4021-8c2c-b2bcb8b2983c",
+                "@id": "ep:event-record-facet-860b4e15-c693-4021-8c2c-b2bcb8b2983c",
                 "@type": "uco-observable:EventRecordFacet",
                 "uco-observable:cyberAction": {
-                    "@id": "kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835"
+                    "@id": "ep:observable-action-295ce323-3284-402c-a320-e8fc4c04f835"
                 },
                 "uco-observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-09-02T06:32:16.411Z"
                 },
                 "uco-observable:eventRecordDevice": {
-                    "@id": "kb:ComputingDevice02"
+                    "@id": "ep:ComputingDevice02"
                 }
             }
         },
         {
-            "@id": "kb:event-record-624c080d-3883-4b6f-a73b-c2a946174a39",
+            "@id": "ep:event-record-624c080d-3883-4b6f-a73b-c2a946174a39",
             "@type": "uco-observable:EventRecord",
             "uco-core:description": "File transmission record",
             "uco-core:hasFacet": {
-                "@id": "kb:event-record-facet-f8c4eda8-0d05-40b2-a35f-df699e6d374c",
+                "@id": "ep:event-record-facet-f8c4eda8-0d05-40b2-a35f-df699e6d374c",
                 "@type": "uco-observable:EventRecordFacet",
                 "uco-observable:cyberAction": {
-                    "@id": "kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c"
+                    "@id": "ep:observable-action-7522ac48-586f-4fba-84b4-b409d042658c"
                 },
                 "uco-observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-09-02T11:08:40.658Z"
                 },
                 "uco-observable:eventRecordDevice": {
-                    "@id": "kb:ComputingDevice02"
+                    "@id": "ep:ComputingDevice02"
                 }
             }
         },
         {
-            "@id": "kb:event-record-a08d17e6-dcad-4243-997b-a4d49f1d43cc",
+            "@id": "ep:event-record-a08d17e6-dcad-4243-997b-a4d49f1d43cc",
             "@type": "uco-observable:EventRecord",
             "uco-core:description": "Link visit record",
             "uco-core:hasFacet": {
-                "@id": "kb:event-record-facet-ca032a19-f4a4-48c0-a970-42d9ce22929b",
+                "@id": "ep:event-record-facet-ca032a19-f4a4-48c0-a970-42d9ce22929b",
                 "@type": "uco-observable:EventRecordFacet",
                 "uco-observable:cyberAction": {
-                    "@id": "kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6"
+                    "@id": "ep:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6"
                 },
                 "uco-observable:endTime": {
                     "@type": "xsd:dateTime",
                     "@value": "2021-09-02T11:08:30.658Z"
                 },
                 "uco-observable:eventRecordDevice": {
-                    "@id": "kb:ComputingDevice02"
+                    "@id": "ep:ComputingDevice02"
                 }
             }
         },
         {
-            "@id": "kb:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac",
+            "@id": "ep:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac",
             "@type": "uco-observable:File",
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:content-data-facet-b79059f4-ae44-48e7-8f57-015eae54f47d",
+                    "@id": "ep:content-data-facet-b79059f4-ae44-48e7-8f57-015eae54f47d",
                     "@type": "uco-observable:ContentDataFacet",
                     "uco-observable:hash": [
                         {
-                            "@id": "kb:hash-9d18e157-42d0-56bb-af67-db152b71107d",
+                            "@id": "ep:hash-9d18e157-42d0-56bb-af67-db152b71107d",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -654,7 +654,7 @@
                             }
                         },
                         {
-                            "@id": "kb:hash-bffe8332-c441-58f8-aa60-5dc0915e322a",
+                            "@id": "ep:hash-bffe8332-c441-58f8-aa60-5dc0915e322a",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -666,7 +666,7 @@
                             }
                         },
                         {
-                            "@id": "kb:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057",
+                            "@id": "ep:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057",
                             "@type": "uco-types:Hash",
                             "uco-types:hashMethod": {
                                 "@type": "uco-vocabulary:HashNameVocab",
@@ -680,7 +680,7 @@
                     ]
                 },
                 {
-                    "@id": "kb:file-facet-973a8f7e-aff3-451e-b642-9d7b8412a9cf",
+                    "@id": "ep:file-facet-973a8f7e-aff3-451e-b642-9d7b8412a9cf",
                     "@type": "uco-observable:FileFacet",
                     "uco-observable:fileName": "cmd.exe",
                     "uco-observable:filePath": "c:\\windows\\system32\\cmd.exe",
@@ -689,100 +689,100 @@
             ]
         },
         {
-            "@id": "kb:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1",
+            "@id": "ep:ipv4-address-4a2829b2-f20c-4d14-b15c-bad519d191e1",
             "@type": "uco-observable:IPv4Address",
             "uco-core:hasFacet": {
-                "@id": "kb:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd",
+                "@id": "ep:ipv4-address-facet-e167349a-c017-4a89-880a-648751c8fffd",
                 "@type": "uco-observable:IPv4AddressFacet",
                 "uco-observable:addressValue": "10.2.150.45"
             }
         },
         {
-            "@id": "kb:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7",
+            "@id": "ep:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7",
             "@type": "uco-observable:IPv4Address",
             "uco-core:hasFacet": {
-                "@id": "kb:ipv4-address-facet-7599b7e5-e25c-47e0-a22e-a88f069475ae",
+                "@id": "ep:ipv4-address-facet-7599b7e5-e25c-47e0-a22e-a88f069475ae",
                 "@type": "uco-observable:IPv4AddressFacet",
                 "uco-observable:addressValue": "10.2.150.45"
             }
         },
         {
-            "@id": "kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:observable-action-295ce323-3284-402c-a320-e8fc4c04f835",
+            "@type": "ep:ObservableAction",
             "uco-action:object": {
-                "@id": "kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58"
+                "@id": "ep:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58"
             },
             "uco-action:participant": {
-                "@id": "kb:ComputingDevice02"
+                "@id": "ep:ComputingDevice02"
             },
             "uco-action:performer": {
-                "@id": "kb:EmailSoftwareProgram01"
+                "@id": "ep:EmailSoftwareProgram01"
             },
             "uco-action:result": {
-                "@id": "kb:EmailMessage01"
+                "@id": "ep:EmailMessage01"
             }
         },
         {
-            "@id": "kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:observable-action-7522ac48-586f-4fba-84b4-b409d042658c",
+            "@type": "ep:ObservableAction",
             "uco-action:environment": {
-                "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
+                "@id": "ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
             },
             "uco-action:performer": {
-                "@id": "kb:ComputingDevice03"
+                "@id": "ep:ComputingDevice03"
             },
             "uco-action:result": {
-                "@id": "kb:MaliciousSoftware01"
+                "@id": "ep:MaliciousSoftware01"
             }
         },
         {
-            "@id": "kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6",
-            "@type": "kb:ObservableAction",
+            "@id": "ep:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6",
+            "@type": "ep:ObservableAction",
             "uco-action:environment": {
-                "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
+                "@id": "ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
             },
             "uco-action:object": {
-                "@id": "kb:URL01"
+                "@id": "ep:URL01"
             }
         },
         {
-            "@id": "kb:observable-relationship-9212049f-6a34-42e3-b1a5-5fa8ea8017b7",
+            "@id": "ep:observable-relationship-9212049f-6a34-42e3-b1a5-5fa8ea8017b7",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:source": {
-                "@id": "kb:url-a9b1bdec-8228-4356-a18c-a5357eee613d"
+                "@id": "ep:url-a9b1bdec-8228-4356-a18c-a5357eee613d"
             },
             "uco-core:target": {
-                "@id": "kb:event-log-68df51be-89d1-443c-bfc7-428bdf89db12"
+                "@id": "ep:event-log-68df51be-89d1-443c-bfc7-428bdf89db12"
             }
         },
         {
-            "@id": "kb:observable-relationship-f7a1270d-5435-4f19-9a7a-724810ef1f91",
+            "@id": "ep:observable-relationship-f7a1270d-5435-4f19-9a7a-724810ef1f91",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Used",
             "uco-core:source": {
-                "@id": "kb:ComputingDevice01"
+                "@id": "ep:ComputingDevice01"
             },
             "uco-core:target": {
-                "@id": "kb:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6"
+                "@id": "ep:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6"
             }
         },
         {
-            "@id": "kb:observable-relationship-f849b7ab-9e18-46fb-a70d-ea3fd8e47437",
+            "@id": "ep:observable-relationship-f849b7ab-9e18-46fb-a70d-ea3fd8e47437",
             "@type": "uco-observable:ObservableRelationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Contained_Within",
             "uco-core:source": {
-                "@id": "kb:URL01"
+                "@id": "ep:URL01"
             },
             "uco-core:target": {
-                "@id": "kb:EmailMessage01"
+                "@id": "ep:EmailMessage01"
             }
         },
         {
-            "@id": "kb:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6",
+            "@id": "ep:operating-system-900c35f2-f000-4bc5-92ae-16b96152b0d6",
             "@type": [
                 "uco-observable:OperatingSystem",
                 "uco-observable:Software"
@@ -791,12 +791,12 @@
             "uco-core:name": "Windows 10 Enterprise Evaluation",
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398",
+                    "@id": "ep:operating-system-facet-9081ae82-8691-4830-9846-c3a4b26e7398",
                     "@type": "uco-observable:OperatingSystemFacet",
                     "uco-observable:bitness": "64"
                 },
                 {
-                    "@id": "kb:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e",
+                    "@id": "ep:software-facet-686c4cb6-6f9a-45c5-b1b6-8d6d520f5d2e",
                     "@type": "uco-observable:SoftwareFacet",
                     "uco-observable:manufacturer": {
                         "@id": "http://example.org/kb/organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
@@ -811,93 +811,93 @@
             "uco-core:name": "Microsoft"
         },
         {
-            "@id": "kb:relationship-013c7665-a539-4314-adba-60df1c2f5e12",
+            "@id": "ep:relationship-013c7665-a539-4314-adba-60df1c2f5e12",
             "@type": "uco-core:Relationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Member_Of",
             "uco-core:source": {
-                "@id": "kb:Agent01"
+                "@id": "ep:Agent01"
             },
             "uco-core:target": {
-                "@id": "kb:department-2827b0f3-46db-48c2-ae84-01f28225b0d3"
+                "@id": "ep:department-2827b0f3-46db-48c2-ae84-01f28225b0d3"
             }
         },
         {
-            "@id": "kb:relationship-65248f06-2c56-4bbb-bb62-0f154831fd86",
+            "@id": "ep:relationship-65248f06-2c56-4bbb-bb62-0f154831fd86",
             "@type": "uco-core:Relationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Employee_Of",
             "uco-core:source": {
-                "@id": "kb:Agent01"
+                "@id": "ep:Agent01"
             },
             "uco-core:target": {
-                "@id": "kb:company-73fe8030-289b-45d3-8637-6078773f914e"
+                "@id": "ep:company-73fe8030-289b-45d3-8637-6078773f914e"
             }
         },
         {
-            "@id": "kb:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0",
+            "@id": "ep:relationship-7cbcc94e-0472-46bd-8cf5-86c33b27c0a0",
             "@type": "uco-core:Relationship",
             "uco-core:isDirectional": true,
             "uco-core:kindOfRelationship": "Has_Role",
             "uco-core:source": {
-                "@id": "kb:Agent01"
+                "@id": "ep:Agent01"
             },
             "uco-core:target": {
-                "@id": "kb:ManagerRole01"
+                "@id": "ep:ManagerRole01"
             }
         },
         {
-            "@id": "kb:url-a9b1bdec-8228-4356-a18c-a5357eee613d",
+            "@id": "ep:url-a9b1bdec-8228-4356-a18c-a5357eee613d",
             "@type": "uco-observable:URL",
             "uco-core:hasFacet": {
-                "@id": "kb:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25",
+                "@id": "ep:url-facet-431dc4be-8a13-4aaa-8762-91e152fbee25",
                 "@type": "uco-observable:URLFacet",
                 "uco-observable:host": {
-                    "@id": "kb:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7"
+                    "@id": "ep:ipv4-address-a4016308-49ae-4f0c-bdce-dd7717596ed7"
                 },
                 "uco-observable:port": 80
             }
         },
         {
-            "@id": "kb:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6",
+            "@id": "ep:windows-process-82b66ba3-5fb3-4fdc-a34a-5dbb077e28b6",
             "@type": [
                 "uco-observable:WindowsProcess",
                 "uco-observable:Software"
             ],
             "uco-core:hasFacet": [
                 {
-                    "@id": "kb:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b",
+                    "@id": "ep:process-facet-837f4a50-97ba-4726-b85e-5988f5d4a69b",
                     "@type": "uco-observable:ProcessFacet",
                     "uco-observable:binary": {
-                        "@id": "kb:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac"
+                        "@id": "ep:file-c9e014eb-a3bd-4aee-aa0d-2db257de3eac"
                     },
                     "uco-observable:creatorUser": {
-                        "@id": "kb:NetworkAccount01"
+                        "@id": "ep:NetworkAccount01"
                     },
                     "uco-observable:observableCreatedTime": {
                         "@type": "xsd:dateTime",
                         "@value": "2021-09-02T08:19:25.341Z"
                     },
                     "uco-observable:parent": {
-                        "@id": "kb:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2"
+                        "@id": "ep:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2"
                     },
                     "uco-observable:pid": 3212
                 },
                 {
-                    "@id": "kb:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc",
+                    "@id": "ep:process-facet-054efc43-754d-4c8b-9106-5c690cdc3cfc",
                     "@type": "uco-observable:WindowsProcessFacet",
                     "uco-observable:ownerSID": "S-1-5-21-321011808-3761883066-353627080-1000"
                 }
             ]
         },
         {
-            "@id": "kb:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2",
+            "@id": "ep:windows-process-9bea652f-27d1-49ad-897f-6963977f3bc2",
             "@type": [
                 "uco-observable:WindowsProcess",
                 "uco-observable:Software"
             ],
             "uco-core:hasFacet": {
-                "@id": "kb:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac",
+                "@id": "ep:process-facet-8486787d-a29f-4250-b77e-108cbe4675ac",
                 "@type": "uco-observable:ProcessFacet",
                 "uco-observable:observableCreatedTime": {
                     "@type": "xsd:dateTime",
@@ -907,7 +907,7 @@
             }
         },
         {
-            "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c",
+            "@id": "ep:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c",
             "@type": [
                 "uco-observable:WindowsProcess",
                 "uco-observable:Software"
@@ -915,7 +915,7 @@
             "uco-core:description": "Browser process"
         },
         {
-            "@id": "kb:TemporalInterval",
+            "@id": "ep:TemporalInterval",
             "@type": "owl:Class",
             "rdfs:seeAlso": {
                 "@id": "https://github.com/ucoProject/UCO/issues/651"
@@ -930,7 +930,7 @@
             ]
         },
         {
-            "@id": "kb:Action",
+            "@id": "ep:Action",
             "@type": "owl:Class",
             "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
             "rdfs:seeAlso": [
@@ -951,7 +951,7 @@
             ]
         },
         {
-            "@id": "kb:Event",
+            "@id": "ep:Event",
             "@type": "owl:Class",
             "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
             "rdfs:seeAlso": [
@@ -972,7 +972,7 @@
             ]
         },
         {
-            "@id": "kb:ObservableAction",
+            "@id": "ep:ObservableAction",
             "@type": "owl:Class",
             "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
             "rdfs:seeAlso": [
@@ -985,7 +985,7 @@
             ],
             "rdfs:subClassOf": [
                 {
-                    "@id": "kb:Action"
+                    "@id": "ep:Action"
                 },
                 {
                     "@id": "uco-observable:ObservableAction"
