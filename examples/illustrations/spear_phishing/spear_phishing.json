@@ -25,18 +25,18 @@
         },
         {
             "@id": "kb:ActOfMalwareDelivery01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfMalwareInstallation01"
             }
         },
         {
             "@id": "kb:ActOfMalwareInstallation01",
-            "@type": "uco-observable:ObservableAction"
+            "@type": "kb:ObservableAction"
         },
         {
             "@id": "kb:ActOfNetworkLogin01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-09-02T07:32:16.411Z"
@@ -44,7 +44,7 @@
         },
         {
             "@id": "kb:ActOfNetworkLogout01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:endTime": {
                 "@type": "xsd:dateTime",
                 "@value": "2021-09-02T11:07:30.658Z"
@@ -57,18 +57,18 @@
         },
         {
             "@id": "kb:ActOfEmailDelivery01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfLinkOpening01"
             }
         },
         {
             "@id": "kb:ActOfLinkOpening01",
-            "@type": "uco-observable:ObservableAction"
+            "@type": "kb:ObservableAction"
         },
         {
             "@id": "kb:ActOfSending02",
-            "@type": "uco-observable:ObservableAction"
+            "@type": "kb:ObservableAction"
         },
         {
             "@id": "kb:Agent01",
@@ -265,7 +265,7 @@
         },
         {
             "@id": "kb:DetectionEvent01",
-            "@type": "uco-core:Event",
+            "@type": "kb:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfSending02"
@@ -352,21 +352,21 @@
         },
         {
             "@id": "kb:ActOfEndpointScan01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:precedes": {
                 "@id": "kb:ActOfFileFlagging01"
             }
         },
         {
             "@id": "kb:ActOfFileFlagging01",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "unmapped:hasOutput": {
                 "@id": "kb:Alert01"
             }
         },
         {
             "@id": "kb:InfectionEvent01",
-            "@type": "uco-core:Event",
+            "@type": "kb:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfMalwareDelivery01"
@@ -450,7 +450,7 @@
         },
         {
             "@id": "kb:SpearFishingEvent01",
-            "@type": "uco-core:Event",
+            "@type": "kb:Event",
             "unmapped:hasOccurrentPart": [
                 {
                     "@id": "kb:ActOfEmailDelivery01"
@@ -708,7 +708,7 @@
         },
         {
             "@id": "kb:observable-action-295ce323-3284-402c-a320-e8fc4c04f835",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:object": {
                 "@id": "kb:email-message-4a81644f-04ad-4d79-8159-a963ddd2fb58"
             },
@@ -724,7 +724,7 @@
         },
         {
             "@id": "kb:observable-action-7522ac48-586f-4fba-84b4-b409d042658c",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:environment": {
                 "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
             },
@@ -737,7 +737,7 @@
         },
         {
             "@id": "kb:observable-action-abfeee80-d2b7-451a-91b5-e753798ca4c6",
-            "@type": "uco-observable:ObservableAction",
+            "@type": "kb:ObservableAction",
             "uco-action:environment": {
                 "@id": "kb:windows-process-b2afcc1c-2f41-4b4d-8c8f-b74d4b7ec22c"
             },
@@ -926,6 +926,69 @@
                 },
                 {
                     "@id": "time:Interval"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Action",
+            "@type": "owl:Class",
+            "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
+            "rdfs:seeAlso": [
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/544"
+                },
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/651"
+                }
+            ],
+            "rdfs:subClassOf": [
+                {
+                    "@id": "drafting:Perdurant"
+                },
+                {
+                    "@id": "uco-action:Action"
+                }
+            ]
+        },
+        {
+            "@id": "kb:Event",
+            "@type": "owl:Class",
+            "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
+            "rdfs:seeAlso": [
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/544"
+                },
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/651"
+                }
+            ],
+            "rdfs:subClassOf": [
+                {
+                    "@id": "drafting:Perdurant"
+                },
+                {
+                    "@id": "uco-core:Event"
+                }
+            ]
+        },
+        {
+            "@id": "kb:ObservableAction",
+            "@type": "owl:Class",
+            "rdfs:comment": "This class is a temporary class to align concepts for UCO Issues 544 and 651.",
+            "rdfs:seeAlso": [
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/544"
+                },
+                {
+                    "@id": "https://github.com/ucoProject/UCO/issues/651"
+                }
+            ],
+            "rdfs:subClassOf": [
+                {
+                    "@id": "kb:Action"
+                },
+                {
+                    "@id": "uco-observable:ObservableAction"
                 }
             ]
         },
