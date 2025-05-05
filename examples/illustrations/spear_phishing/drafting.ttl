@@ -9,11 +9,6 @@
 @prefix unmapped: <urn:example:unmapped/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-uco-core:UcoThing-identifier-regex-shape
-	rdfs:comment "Deactivated for comparison with another mapping of this illustration."@en ;
-	sh:deactivated "true"^^xsd:boolean ;
-	.
-
 drafting:Perdurant
 	a owl:Class ;
 	rdfs:subClassOf uco-core:UcoObject ;
@@ -27,8 +22,8 @@ drafting:intervalIn
 
 ep:bearerOf-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:bearerOf ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -36,8 +31,8 @@ ep:bearerOf-shape
 
 ep:contains-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:contains ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -45,8 +40,8 @@ ep:contains-shape
 
 ep:controls-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:controls ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -54,8 +49,8 @@ ep:controls-shape
 
 ep:designatedBy-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:designatedBy ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -63,8 +58,8 @@ ep:designatedBy-shape
 
 ep:endpointId-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:endpointId ;
 	sh:severity sh:Info ;
 	sh:targetSubjectsOf unmapped:endpointId ;
@@ -72,26 +67,17 @@ ep:endpointId-shape
 
 ep:hasOccurrentPart-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:hasOccurrentPart ;
-	sh:severity sh:Info ;
-	sh:targetClass uco-core:UcoThing ;
-	.
-
-ep:hasRecipient-shape
-	a sh:PropertyShape ;
-	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
-	sh:path unmapped:hasRecipient ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
 	.
 
 ep:hasOutput-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:hasOutput ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -99,17 +85,26 @@ ep:hasOutput-shape
 
 ep:hasPart-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:hasPart ;
+	sh:severity sh:Info ;
+	sh:targetClass uco-core:UcoThing ;
+	.
+
+ep:hasRecipient-shape
+	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
+	sh:message "This property is unmapped and intended to be replaced."@en ;
+	sh:path unmapped:hasRecipient ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
 	.
 
 ep:hasRole-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:hasRole ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -117,16 +112,16 @@ ep:hasRole-shape
 
 ep:intervalIn-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:intervalIn ;
 	sh:targetSubjectsOf unmapped:intervalIn ;
 	.
 
 ep:isCarrierOf-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:isCarrierOf ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -134,8 +129,8 @@ ep:isCarrierOf-shape
 
 ep:operates-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:operates ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -143,8 +138,8 @@ ep:operates-shape
 
 ep:participatesIn-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:participatesIn ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -152,8 +147,8 @@ ep:participatesIn-shape
 
 ep:precedes-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:precedes ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -161,8 +156,8 @@ ep:precedes-shape
 
 ep:realizedIn-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:realizedIn ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -170,6 +165,7 @@ ep:realizedIn-shape
 
 ep:subclass-shape
 	a sh:NodeShape ;
+	sh:severity sh:Info ;
 	sh:sparql [
 		a sh:SPARQLConstraint ;
 		sh:message "Focus node is not designated a subclass of UcoThing."@en ;
@@ -184,14 +180,13 @@ ep:subclass-shape
 			}
 		""" ;
 	] ;
-	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
 	.
 
 ep:unknown01-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:unknown01 ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -199,8 +194,8 @@ ep:unknown01-shape
 
 ep:uses-shape
 	a sh:PropertyShape ;
+	sh:maxCount "0"^^xsd:integer ;
 	sh:message "This property is unmapped and intended to be replaced."@en ;
-	sh:maxCount 0 ;
 	sh:path unmapped:uses ;
 	sh:severity sh:Info ;
 	sh:targetClass uco-core:UcoThing ;
@@ -209,5 +204,10 @@ ep:uses-shape
 time:Interval
 	a owl:Class ;
 	rdfs:isDefinedBy time:2016 ;
+	.
+
+uco-core:UcoThing-identifier-regex-shape
+	rdfs:comment "Deactivated for comparison with another mapping of this illustration."@en ;
+	sh:deactivated "true"^^xsd:boolean ;
 	.
 
