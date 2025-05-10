@@ -61,6 +61,12 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-unstable-2.0.0 \
 	  .git_submodule_init.done.log
+	# UCO-Profile-Time
+	test -r dependencies/UCO-Profile-Time/README.md \
+	  || git submodule update --init dependencies/UCO-Profile-Time
+	$(MAKE) \
+	  --directory dependencies/UCO-Profile-Time \
+	  .git_submodule_init.done.log
 	# Retrieve rdf-toolkit.jar.
 	$(MAKE) \
 	  --directory dependencies/CASE-develop \

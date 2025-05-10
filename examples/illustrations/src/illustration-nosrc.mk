@@ -85,6 +85,9 @@ all: \
 	test ! -r figures/Makefile \
 	  || $(MAKE) \
 	    --directory figures
+	test ! -r postvisit.mk \
+	  || $(MAKE) \
+	    --file postvisit.mk
 
 .PHONY: \
   check-pytest
@@ -335,6 +338,10 @@ check: \
   $(example_name)_validation-develop-2.0.0.ttl \
   $(example_name)_validation-unstable.ttl \
   $(example_name)_validation-unstable-2.0.0.ttl
+	test ! -r postvisit.mk \
+	  || $(MAKE) \
+	    --file postvisit.mk \
+	    check
 
 # Run pytest tests only if any are written.
 # (Pytest exits in an error state if called with no tests found.)
@@ -348,6 +355,10 @@ check-pytest: \
 	  )
 
 clean:
+	@test ! -r postvisit.mk \
+	  || $(MAKE) \
+	    --file postvisit.mk \
+	    clean
 	@rm -f \
 	  .drafting.ttl.*.log \
 	  figures/*.dot \
