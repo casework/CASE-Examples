@@ -64,18 +64,9 @@ Using the NIST image `dfr-01-fat.dd` of a FAT 12 file system with unallocated fi
             {
                 "@id": "kb:recovered-object-facet-cdb678d8-f75c-4997-a975-59966d8c5530",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                }
+                "uco-observable:nameRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "recovered",
+                "uco-observable:contentRecoveredStatus": "recovered"
             }
         ]
     }
@@ -113,18 +104,9 @@ This recovered file system entry can be represented using the `observable:Recove
             {
                 "@id": "kb:recovered-object-facet-b95a915a-d4f4-4dd7-8367-b11dce27c9cc",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "unknown"
-                },
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "unknown"
-                }
+                "uco-observable:nameRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "unknown",
+                "uco-observable:contentRecoveredStatus": "unknown"
             }
         ]
     }
@@ -166,18 +148,9 @@ Again using the [Crossover](https://caseontology.org/examples/crossover/) shared
             {
                 "@id": "kb:recovered-object-facet-65fd4337-734a-4350-ab0c-18d8098b8b0e",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "unknown"
-                }
+                "uco-observable:nameRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "recovered",
+                "uco-observable:contentRecoveredStatus": "unknown"
             }
         ]
     }
@@ -211,18 +184,9 @@ Similar to a LNK file on Windows, entries in the external.db entry on the Samsun
             {
                 "@id": "kb:recovered-object-facet-95c7b098-ab46-4867-b050-6b095a7bd1b8",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "unknown"
-                }
+                "uco-observable:nameRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "recovered",
+                "uco-observable:contentRecoveredStatus": "unknown"
             }
         ]
     }
@@ -267,18 +231,9 @@ This recovered chat message can be represented using the `observable:RecoveredOb
             {
                 "@id": "kb:recovered-object-facet-1dc5e3f4-4951-44ff-b9f3-14bd63684b29",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "partially recovered"
-                }
+                "uco-observable:nameRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "recovered",
+                "uco-observable:contentRecoveredStatus": "partially recovered"
             }
         ]
     }

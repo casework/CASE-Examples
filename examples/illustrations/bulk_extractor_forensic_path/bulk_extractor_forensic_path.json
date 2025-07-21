@@ -5,7 +5,6 @@
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -16,20 +15,14 @@
                 {
                     "@id": "kb:content-data-facet-ccebaca3-4485-46d8-bdf2-d2905a08d0c9",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 17,
                     "uco-observable:dataPayload": "bmVsc29uQGNyeW53ci5jb20=",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-f9eebfa7-ce0e-513f-b4be-f3fe7512c79a",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "8fabebdaf41b54014f6c3507c44ae160547d05d31bd50d6a12234c5bc4bdb45c"
@@ -66,20 +59,14 @@
                 {
                     "@id": "kb:content-data-facet-fa866136-c537-4b25-a481-364c7859f8f0",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 15,
                     "uco-observable:dataPayload": "c3Rya0BrZXliaXQubmV0",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-59bd11fd-af49-5e39-ba3b-54ba31f3c8d6",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "9a6c11d66829bf429efe5ef4c066d50272394481cc3f8ae8116a006c81dc6cf9"
@@ -116,10 +103,7 @@
                 {
                     "@id": "kb:content-data-facet-ed051828-45e7-47b3-82ca-be5b9a88d5f7",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:magicNumber": "H4s=",
                     "uco-observable:mimeType": "application/x-compressed",
                     "uco-observable:sizeInBytes": 17605,
@@ -127,10 +111,7 @@
                         {
                             "@id": "kb:hash-7a2f290f-2944-5520-816a-85f722e64525",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"
@@ -172,10 +153,7 @@
                         {
                             "@id": "kb:hash-47323085-5f5a-5252-82b3-347183525558",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
@@ -218,10 +196,7 @@
                         {
                             "@id": "kb:hash-9c9f1145-243a-58d6-b420-bd38101cb511",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
@@ -263,10 +238,7 @@
                         {
                             "@id": "kb:hash-84b82467-019e-53cf-a1e6-e8a394379916",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
@@ -312,10 +284,7 @@
                         {
                             "@id": "kb:hash-c492a39d-88e4-51f1-9f80-31524494f877",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"

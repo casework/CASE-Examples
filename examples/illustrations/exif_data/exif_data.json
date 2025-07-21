@@ -10,7 +10,6 @@
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -70,10 +69,7 @@
                 {
                     "@id": "kb:content-data-facet-79503339-556a-4e23-ae5c-c2c948bde088",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:sizeInBytes": 35000,
@@ -82,10 +78,7 @@
                         {
                             "@id": "kb:hash-77fbf31d-c4f0-51bd-b04e-c50d13312fba",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "6b86b273ff34fce19d6b804eff5a3f5747ada4eaa22f1d49c01e52ddb7875b4b"

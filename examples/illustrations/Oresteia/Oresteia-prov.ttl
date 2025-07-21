@@ -723,7 +723,7 @@ kb:euripides-3696c710-161f-47af-9ae8-61b178611773
 
 kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-9e0e52fc-16d6-5536-ab0c-d9728e2f35b8 ;
@@ -746,7 +746,7 @@ kb:investigative-action-30079255-a489-4dc2-ab5a-b9633a1cce95
 
 kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-a2131571-c0fa-5fd0-97d6-777208d72098 ;
@@ -785,7 +785,7 @@ kb:investigative-action-49e0d70c-f1bc-40a4-8866-45ddb8ad4e89
 
 kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-e4a6a525-e2d0-5cea-a868-cf883f517ea5 ;
@@ -820,7 +820,7 @@ kb:investigative-action-714255fe-ce2d-43e5-b0da-0910cc0e3997
 
 kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-b80b4d9a-9047-557c-b253-de62930afbc0 ;
@@ -851,7 +851,7 @@ kb:investigative-action-7786ff3a-d40b-45a9-b65c-94ad10597b62
 
 kb:investigative-action-b8fd94b9-ceae-4c2f-aa38-8cfaa98804fe
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity ,
 		prov:Agent
 		;

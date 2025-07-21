@@ -9,67 +9,19 @@
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 334.36)">
 <title>PROV&#45;O render</title>
 <polygon fill="white" stroke="none" points="-4,4 -4,-334.36 1020.57,-334.36 1020.57,4 -4,4"/>
-<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08 -->
-<g id="node1" class="node">
-<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08</title>
-<g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b">
-<ellipse fill="#fff68f" stroke="#808080" cx="606.57" cy="-123.56" rx="248.9" ry="40.31"/>
-<text text-anchor="middle" x="606.57" y="-134.76" font-family="Times,serif" font-size="14.00">ID &#45; kb:annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b</text>
-<text text-anchor="middle" x="606.57" y="-102.26" font-family="Times,serif" font-size="14.00">Photo was taken by a Canon digital camera.</text>
-</a>
-</g>
-</g>
 <!-- _ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276 -->
-<g id="node2" class="node">
+<g id="node1" class="node">
 <title>_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
-<g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8">
+<g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8">
 <polygon fill="#fed37f" stroke="black" points="619.13,-234.67 309.57,-247.11 0,-234.67 0.29,-214.55 618.84,-214.55 619.13,-234.67"/>
 <text text-anchor="middle" x="309.57" y="-224.06" font-family="Times,serif" font-size="14.00">ID &#45; kb:annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8</text>
 </a>
 </g>
 </g>
-<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276 -->
-<g id="edge1" class="edge">
-<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
-<path fill="none" stroke="#fed37f" d="M503.11,-160.63C454.86,-177.45 399.6,-196.72 360.51,-210.35"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="359.4,-207.03 351.11,-213.62 361.71,-213.64 359.4,-207.03"/>
-<text text-anchor="middle" x="474.78" y="-183.61" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
-</g>
-<!-- _357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
-<g id="node5" class="node">
-<title>_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
-<g id="a_node5"><a xlink:title="ID &#45; http://www.w3.org/ns/prov#EmptyCollection">
-<polygon fill="#cdc673" stroke="#808080" points="877.44,-247.11 874.44,-251.11 853.44,-251.11 850.44,-247.11 713.69,-247.11 713.69,-211.11 877.44,-211.11 877.44,-247.11"/>
-<text text-anchor="middle" x="795.57" y="-224.06" font-family="Times,serif" font-size="14.00">ID &#45; prov:EmptyCollection</text>
-</a>
-</g>
-</g>
-<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
-<g id="edge2" class="edge">
-<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
-<path fill="none" stroke="black" d="M676.14,-162.67C702.15,-176.93 730.88,-192.67 753.64,-205.14"/>
-<polygon fill="black" stroke="black" points="751.87,-208.16 762.32,-209.89 755.23,-202.02 751.87,-208.16"/>
-<text text-anchor="middle" x="763.91" y="-183.61" font-family="Times,serif" font-size="10.00">wasDerivedFrom</text>
-</g>
-<!-- _9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896 -->
-<g id="node7" class="node">
-<title>_9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896</title>
-<g id="a_node7"><a xlink:title="Generation of http://example.org/kb/annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b">
-<ellipse fill="lightgray" stroke="dimgray" cx="936.57" cy="-229.11" rx="1.8" ry="1.8"/>
-</a>
-</g>
-</g>
-<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896 -->
-<g id="edge8" class="edge">
-<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896</title>
-<path fill="none" stroke="dimgray" stroke-dasharray="1,5" d="M728.13,-159.11C752.83,-166.41 778.58,-174.22 802.57,-181.86 852.29,-197.7 911.59,-219.03 930.47,-225.89"/>
-<polygon fill="dimgray" stroke="dimgray" points="935.75,-222.49 932.33,-231.89 930.45,-231.2 933.87,-221.81 935.75,-222.49"/>
-<polyline fill="none" stroke="dimgray" points="934.98,-227.53 930.29,-225.82"/>
-</g>
 <!-- _fef2c7a50aa047afde2c4e41b1d4da1913d582cb18936249b94b4b848662fb84 -->
-<g id="node3" class="node">
+<g id="node2" class="node">
 <title>_fef2c7a50aa047afde2c4e41b1d4da1913d582cb18936249b94b4b848662fb84</title>
-<g id="a_node3"><a xlink:title="ID &#45; http://example.org/kb/examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d">
+<g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d">
 <polygon fill="#fed37f" stroke="black" points="596.99,-317.92 309.57,-330.36 22.14,-317.92 22.41,-297.8 596.72,-297.8 596.99,-317.92"/>
 <text text-anchor="middle" x="309.57" y="-307.31" font-family="Times,serif" font-size="14.00">ID &#45; kb:examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d</text>
 </a>
@@ -83,11 +35,44 @@
 <text text-anchor="middle" x="345.57" y="-266.86" font-family="Times,serif" font-size="10.00">actedOnBehalfOf</text>
 </g>
 <!-- _04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46 -->
-<g id="node4" class="node">
+<g id="node3" class="node">
 <title>_04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46</title>
-<g id="a_node4"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;855f91a2&#45;cc07&#45;4d8e&#45;bb93&#45;d2b6db7672db">
+<g id="a_node3"><a xlink:title="ID &#45; http://example.org/kb/provenance&#45;record&#45;855f91a2&#45;cc07&#45;4d8e&#45;bb93&#45;d2b6db7672db">
 <polygon fill="#cdc673" stroke="#808080" points="1016.57,-36 1013.57,-40 992.57,-40 989.57,-36 622.57,-36 622.57,0 1016.57,0 1016.57,-36"/>
 <text text-anchor="middle" x="819.57" y="-12.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:provenance&#45;record&#45;855f91a2&#45;cc07&#45;4d8e&#45;bb93&#45;d2b6db7672db</text>
+</a>
+</g>
+</g>
+<!-- _04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276 -->
+<g id="edge5" class="edge">
+<title>_04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
+<path fill="none" stroke="#fed37f" d="M622.14,-29.89C477.54,-39.94 302.63,-57.29 279.57,-83.25 249.54,-117.07 275.01,-172.9 293.85,-204.46"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="290.83,-206.25 299.09,-212.89 296.77,-202.55 290.83,-206.25"/>
+<text text-anchor="middle" x="314.07" y="-119.68" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
+</g>
+<!-- _357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
+<g id="node4" class="node">
+<title>_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
+<g id="a_node4"><a xlink:title="ID &#45; http://www.w3.org/ns/prov#EmptyCollection">
+<polygon fill="#cdc673" stroke="#808080" points="877.44,-247.11 874.44,-251.11 853.44,-251.11 850.44,-247.11 713.69,-247.11 713.69,-211.11 877.44,-211.11 877.44,-247.11"/>
+<text text-anchor="middle" x="795.57" y="-224.06" font-family="Times,serif" font-size="14.00">ID &#45; prov:EmptyCollection</text>
+</a>
+</g>
+</g>
+<!-- _04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
+<g id="edge6" class="edge">
+<title>_04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
+<path fill="none" stroke="black" d="M836.29,-36.47C846.64,-48.56 859,-65.59 864.57,-83.25 875.34,-117.42 878.86,-131.01 864.57,-163.86 857.72,-179.59 844.91,-193.21 832.17,-203.81"/>
+<polygon fill="black" stroke="black" points="830.34,-200.8 824.63,-209.72 834.66,-206.31 830.34,-200.8"/>
+<text text-anchor="middle" x="908.89" y="-119.68" font-family="Times,serif" font-size="10.00">wasDerivedFrom</text>
+</g>
+<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08 -->
+<g id="node5" class="node">
+<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08</title>
+<g id="a_node5"><a xlink:title="ID &#45; http://example.org/kb/annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b">
+<ellipse fill="#fff68f" stroke="#808080" cx="606.57" cy="-123.56" rx="248.9" ry="40.31"/>
+<text text-anchor="middle" x="606.57" y="-134.76" font-family="Times,serif" font-size="14.00">ID &#45; kb:annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b</text>
+<text text-anchor="middle" x="606.57" y="-102.26" font-family="Times,serif" font-size="14.00">Photo was taken by a Canon digital camera.</text>
 </a>
 </g>
 </g>
@@ -98,24 +83,10 @@
 <polygon fill="black" stroke="black" points="692.74,-76.77 685.28,-84.29 695.8,-83.06 692.74,-76.77"/>
 <text text-anchor="middle" x="768.97" y="-55.75" font-family="Times,serif" font-size="10.00">hadMember</text>
 </g>
-<!-- _04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276 -->
-<g id="edge5" class="edge">
-<title>_04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
-<path fill="none" stroke="#fed37f" d="M622.14,-29.89C477.54,-39.94 302.63,-57.29 279.57,-83.25 249.54,-117.07 275.01,-172.9 293.85,-204.46"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="290.83,-206.25 299.09,-212.89 296.77,-202.55 290.83,-206.25"/>
-<text text-anchor="middle" x="314.07" y="-119.68" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
-</g>
-<!-- _04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
-<g id="edge6" class="edge">
-<title>_04caa700f1a6435ae095937068493d8bfad070989a6c527781d80bfa9343ab46&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
-<path fill="none" stroke="black" d="M836.29,-36.47C846.64,-48.56 859,-65.59 864.57,-83.25 875.34,-117.42 878.86,-131.01 864.57,-163.86 857.72,-179.59 844.91,-193.21 832.17,-203.81"/>
-<polygon fill="black" stroke="black" points="830.34,-200.8 824.63,-209.72 834.66,-206.31 830.34,-200.8"/>
-<text text-anchor="middle" x="908.89" y="-119.68" font-family="Times,serif" font-size="10.00">wasDerivedFrom</text>
-</g>
 <!-- _3e79c086c5a73d48794f201821f3b0508cf92e737416812c471811d5a99f5725 -->
 <g id="node8" class="node">
 <title>_3e79c086c5a73d48794f201821f3b0508cf92e737416812c471811d5a99f5725</title>
-<g id="a_node8"><a xlink:title="Generation of http://example.org/kb/provenance&#45;record&#45;855f91a2&#45;cc07&#45;4d8e&#45;bb93&#45;d2b6db7672db">
+<g id="a_node8"><a xlink:title="ID &#45; http://example.org/kb/Generation&#45;abb403d8&#45;3fde&#45;5f17&#45;a74d&#45;d721eb0b3423&#10;&#10;Generation of http://example.org/kb/provenance&#45;record&#45;855f91a2&#45;cc07&#45;4d8e&#45;bb93&#45;d2b6db7672db">
 <ellipse fill="lightgray" stroke="dimgray" cx="996.57" cy="-229.11" rx="1.8" ry="1.8"/>
 </a>
 </g>
@@ -127,10 +98,39 @@
 <polygon fill="dimgray" stroke="dimgray" points="1002.01,-227.7 992.54,-224.49 993.18,-222.59 1002.65,-225.81 1002.01,-227.7"/>
 <polyline fill="none" stroke="dimgray" points="996.95,-227.04 998.56,-222.31"/>
 </g>
+<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276 -->
+<g id="edge1" class="edge">
+<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
+<path fill="none" stroke="#fed37f" d="M503.11,-160.63C454.86,-177.45 399.6,-196.72 360.51,-210.35"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="359.4,-207.03 351.11,-213.62 361.71,-213.64 359.4,-207.03"/>
+<text text-anchor="middle" x="474.78" y="-183.61" font-family="Times,serif" font-size="10.00">wasAttributedTo</text>
+</g>
+<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf -->
+<g id="edge2" class="edge">
+<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_357f00248bdc728725be43338ec69113a99cec9793681d0accd1f777e4dd5fbf</title>
+<path fill="none" stroke="black" d="M676.14,-162.67C702.15,-176.93 730.88,-192.67 753.64,-205.14"/>
+<polygon fill="black" stroke="black" points="751.87,-208.16 762.32,-209.89 755.23,-202.02 751.87,-208.16"/>
+<text text-anchor="middle" x="763.91" y="-183.61" font-family="Times,serif" font-size="10.00">wasDerivedFrom</text>
+</g>
+<!-- _9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896 -->
+<g id="node7" class="node">
+<title>_9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896</title>
+<g id="a_node7"><a xlink:title="ID &#45; http://example.org/kb/Generation&#45;a19bfc2d&#45;0682&#45;5023&#45;8046&#45;4a4b0fe6c3f3&#10;&#10;Generation of http://example.org/kb/annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b">
+<ellipse fill="lightgray" stroke="dimgray" cx="936.57" cy="-229.11" rx="1.8" ry="1.8"/>
+</a>
+</g>
+</g>
+<!-- _932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896 -->
+<g id="edge8" class="edge">
+<title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08&#45;&gt;_9df200b9a6acadfcc5d1838496aee74a73f304c13e7a348fd10d1b2919493896</title>
+<path fill="none" stroke="dimgray" stroke-dasharray="1,5" d="M728.13,-159.11C752.83,-166.41 778.58,-174.22 802.57,-181.86 852.29,-197.7 911.59,-219.03 930.47,-225.89"/>
+<polygon fill="dimgray" stroke="dimgray" points="935.75,-222.49 932.33,-231.89 930.45,-231.2 933.87,-221.81 935.75,-222.49"/>
+<polyline fill="none" stroke="dimgray" points="934.98,-227.53 930.29,-225.82"/>
+</g>
 <!-- _4b9fa4b423a28dd8196eae1d699fc600dbdbd535941e01754b4c8fa389aa8616 -->
 <g id="node6" class="node">
 <title>_4b9fa4b423a28dd8196eae1d699fc600dbdbd535941e01754b4c8fa389aa8616</title>
-<g id="a_node6"><a xlink:title="End of http://example.org/kb/forensic_action&#45;306e44f8&#45;446d&#45;4cff&#45;a2fd&#45;9e54affb1fa3">
+<g id="a_node6"><a xlink:title="ID &#45; http://example.org/kb/End&#45;64e0bccb&#45;5337&#45;5c04&#45;8000&#45;e58afcb6af1d&#10;&#10;2010&#45;01&#45;15T18:59:43.250000+00:00&#10;&#10;End of http://example.org/kb/forensic_action&#45;306e44f8&#45;446d&#45;4cff&#45;a2fd&#45;9e54affb1fa3">
 <ellipse fill="lightgray" stroke="dimgray" cx="981.57" cy="-123.56" rx="1.8" ry="1.8"/>
 </a>
 </g>
@@ -150,7 +150,7 @@
 <!-- _df4f7732f717c26c1499efb644f2346cde441cb8c8c35d1e5e1dc69cbce4c1a7 -->
 <g id="node9" class="node">
 <title>_df4f7732f717c26c1499efb644f2346cde441cb8c8c35d1e5e1dc69cbce4c1a7</title>
-<g id="a_node9"><a xlink:title="Start of http://example.org/kb/forensic_action&#45;306e44f8&#45;446d&#45;4cff&#45;a2fd&#45;9e54affb1fa3">
+<g id="a_node9"><a xlink:title="ID &#45; http://example.org/kb/Start&#45;1f683eec&#45;81dd&#45;5dad&#45;a2fb&#45;0937aa55b9d4&#10;&#10;2010&#45;01&#45;15T17:59:43.250000+00:00&#10;&#10;Start of http://example.org/kb/forensic_action&#45;306e44f8&#45;446d&#45;4cff&#45;a2fd&#45;9e54affb1fa3">
 <ellipse fill="lightgray" stroke="dimgray" cx="966.57" cy="-312.36" rx="1.8" ry="1.8"/>
 </a>
 </g>

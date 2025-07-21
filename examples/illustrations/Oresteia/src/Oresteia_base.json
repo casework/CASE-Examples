@@ -16,7 +16,6 @@
         "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd",
@@ -1069,10 +1068,7 @@
                         {
                             "@id": "kb:hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "7ea081166336119da78ee4bbdbd06840b94efe28988a2bdb0bcf2387a481e283"
@@ -1138,10 +1134,7 @@
                         {
                             "@id": "kb:hash-c6cc7dd6-1bf9-5454-9653-37caff09411d",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "a13225720074371d56a4f4d5117fbb4953c5b1d316b31f21edcb7ed8fdf66c6e"
@@ -1205,10 +1198,7 @@
                         {
                             "@id": "kb:hash-1a6175e1-cef7-5ee3-8703-22f5f7a43603",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "0611ea093d19b1c73a5285ff43741dd77f2a8d983c1c71044eb072e44f5dcb0a"

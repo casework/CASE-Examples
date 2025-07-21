@@ -3,13 +3,11 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix types: <https://ontology.unifiedcyberontology.org/uco/types/> .
-@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
 	a sh:ValidationReport ;
-	sh:conforms "false"^^xsd:boolean ;
+	sh:conforms "true"^^xsd:boolean ;
 	sh:result
 		[
 			a sh:ValidationResult ;
@@ -30,84 +28,6 @@
 			sh:sourceConstraintComponent sh:InConstraintComponent ;
 			sh:sourceShape observable:AccountFacet-accountType-in-shape ;
 			sh:value "Phone" ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hash-1a6175e1-cef7-5ee3-8703-22f5f7a43603> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath types:hashMethod ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path types:hashMethod ;
-			] ;
-			sh:value "SHA256"^^vocabulary:HashNameVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hash-1a6175e1-cef7-5ee3-8703-22f5f7a43603> ;
-			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
-			sh:resultPath types:hashMethod ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape types:Hash-hashMethod-in-shape ;
-			sh:value "SHA256"^^vocabulary:HashNameVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath types:hashMethod ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path types:hashMethod ;
-			] ;
-			sh:value "SHA256"^^vocabulary:HashNameVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d> ;
-			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
-			sh:resultPath types:hashMethod ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape types:Hash-hashMethod-in-shape ;
-			sh:value "SHA256"^^vocabulary:HashNameVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hash-c6cc7dd6-1bf9-5454-9653-37caff09411d> ;
-			sh:resultMessage "Value is not Literal with datatype xsd:string" ;
-			sh:resultPath types:hashMethod ;
-			sh:resultSeverity sh:Violation ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype xsd:string ;
-				sh:maxCount "1"^^xsd:integer ;
-				sh:minCount "1"^^xsd:integer ;
-				sh:nodeKind sh:Literal ;
-				sh:path types:hashMethod ;
-			] ;
-			sh:value "SHA256"^^vocabulary:HashNameVocab ;
-		] ,
-		[
-			a sh:ValidationResult ;
-			sh:focusNode <http://example.org/kb/hash-c6cc7dd6-1bf9-5454-9653-37caff09411d> ;
-			sh:resultMessage "Value is not member of the vocabulary HashNameVocab." ;
-			sh:resultPath types:hashMethod ;
-			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:InConstraintComponent ;
-			sh:sourceShape types:Hash-hashMethod-in-shape ;
-			sh:value "SHA256"^^vocabulary:HashNameVocab ;
 		]
 		;
 	.
