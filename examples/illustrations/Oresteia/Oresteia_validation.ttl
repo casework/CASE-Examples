@@ -3,7 +3,6 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix vocabulary: <https://ontology.unifiedcyberontology.org/uco/vocabulary/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 []
@@ -13,31 +12,21 @@
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/account-facet-265c4daa-b473-43d3-a186-77ff2da9ac70> ;
-			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
 			sh:resultPath observable:accountType ;
 			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary:AccountTypeVocab ;
-				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
-				sh:path observable:accountType ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape observable:AccountFacet-accountType-in-shape ;
 			sh:value "Phone" ;
 		] ,
 		[
 			a sh:ValidationResult ;
 			sh:focusNode <http://example.org/kb/account-facet-5f3e4a6d-4cf1-41fa-a948-759a08db3ab7> ;
-			sh:resultMessage "Value is outside the default vocabulary AccountTypeVocab." ;
+			sh:resultMessage "Value is not member of the vocabulary AccountTypeVocab." ;
 			sh:resultPath observable:accountType ;
 			sh:resultSeverity sh:Info ;
-			sh:sourceConstraintComponent sh:DatatypeConstraintComponent ;
-			sh:sourceShape [
-				sh:datatype vocabulary:AccountTypeVocab ;
-				sh:message "Value is outside the default vocabulary AccountTypeVocab." ;
-				sh:path observable:accountType ;
-				sh:severity sh:Info ;
-			] ;
+			sh:sourceConstraintComponent sh:InConstraintComponent ;
+			sh:sourceShape observable:AccountFacet-accountType-in-shape ;
 			sh:value "Phone" ;
 		]
 		;

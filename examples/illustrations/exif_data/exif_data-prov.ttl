@@ -113,7 +113,7 @@ kb:examiner-88a08acc-dad2-4964-be3b-8b70e11a4f4d
 
 kb:forensic_action-306e44f8-446d-4cff-a2fd-9e54affb1fa3
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-1f683eec-81dd-5dad-a2fb-0937aa55b9d4 ;

@@ -152,18 +152,9 @@ This recovered partition can be represented using the `observable:RecoveredObjec
             {
                 "@id": "kb:recovered-object-facet-f135ac26-bbf0-4eab-949b-6a5dfe147c22",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                }
+                "uco-observable:contentRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "recovered",
+                "uco-observable:nameRecoveredStatus": "recovered"
             }
         ]
     }

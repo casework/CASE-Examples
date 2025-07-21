@@ -92,10 +92,9 @@
 <g id="node6" class="node">
 <title>_bd40f374d8f2e85d5f211f446a5ea1078f32550ed896c666dc8ea9790dc0093b</title>
 <g id="a_node6"><a xlink:title="ID &#45; http://example.org/kb/investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe">
-<polygon fill="#9fb1fc" stroke="#0000ff" points="4628.34,-183.51 4190.84,-183.51 4190.84,-126.01 4628.34,-126.01 4628.34,-183.51"/>
-<text text-anchor="middle" x="4409.59" y="-166.21" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe</text>
-<text text-anchor="middle" x="4409.59" y="-149.71" font-family="Times,serif" font-size="14.00">[2017&#45;06&#45;22T09:57:23.640000+00:00, 2017&#45;06&#45;22T10:31:19.240000+00:00]</text>
-<text text-anchor="middle" x="4409.59" y="-133.21" font-family="Times,serif" font-size="14.00">extracted</text>
+<polygon fill="#fed37f" stroke="black" points="4748.06,-165.83 4409.59,-190.59 4071.12,-165.83 4071.43,-125.76 4747.74,-125.76 4748.06,-165.83"/>
+<text text-anchor="middle" x="4409.59" y="-157.96" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe</text>
+<text text-anchor="middle" x="4409.59" y="-141.46" font-family="Times,serif" font-size="14.00">extracted</text>
 </a>
 </g>
 </g>
@@ -155,8 +154,8 @@
 <!-- _aa3b2b26b6301dc0b1d1ae41c66e5054c27e7e54199489382ca81a57651e149f&#45;&gt;_bd40f374d8f2e85d5f211f446a5ea1078f32550ed896c666dc8ea9790dc0093b -->
 <g id="edge5" class="edge">
 <title>_aa3b2b26b6301dc0b1d1ae41c66e5054c27e7e54199489382ca81a57651e149f&#45;&gt;_bd40f374d8f2e85d5f211f446a5ea1078f32550ed896c666dc8ea9790dc0093b</title>
-<path fill="none" stroke="#fed37f" d="M4409.59,-71.92C4409.59,-85.37 4409.59,-100.8 4409.59,-114.61"/>
-<polygon fill="#fed37f" stroke="#fed37f" points="4406.09,-114.24 4409.59,-124.24 4413.09,-114.24 4406.09,-114.24"/>
+<path fill="none" stroke="#fed37f" d="M4409.59,-71.92C4409.59,-85.13 4409.59,-100.25 4409.59,-113.87"/>
+<polygon fill="#fed37f" stroke="#fed37f" points="4406.09,-113.86 4409.59,-123.86 4413.09,-113.86 4406.09,-113.86"/>
 <text text-anchor="middle" x="4445.59" y="-91.42" font-family="Times,serif" font-size="10.00">actedOnBehalfOf</text>
 </g>
 </g>
