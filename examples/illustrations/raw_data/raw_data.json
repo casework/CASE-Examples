@@ -29,10 +29,7 @@
                         {
                             "@id": "kb:hash-29cbd7b8-e404-55f0-b667-c1762b73cdcd",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "MD5"
-                            },
+                            "uco-types:hashMethod": "MD5",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "3d137a188c1e82247b815209ce44af2c"

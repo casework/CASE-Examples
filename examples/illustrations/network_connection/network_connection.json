@@ -10,7 +10,6 @@
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "kb:bundle-2a13e958a-d975-41aa-b1bb-029d2b6707ab",
@@ -194,10 +193,7 @@
                         {
                             "@id": "kb:hash-aba102b6-d835-595f-9ff5-3fa77204056a",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "MD5"
-                            },
+                            "uco-types:hashMethod": "MD5",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "dd7558b16eae4d582d7b4608e85d862a"

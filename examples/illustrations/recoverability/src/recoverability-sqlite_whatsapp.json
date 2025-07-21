@@ -22,18 +22,9 @@
             {
                 "@id": "kb:recovered-object-facet-95c7b098-ab46-4867-b050-6b095a7bd1b8",
                 "@type": "uco-observable:RecoveredObjectFacet",
-                "uco-observable:nameRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:metadataRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "recovered"
-                },
-                "uco-observable:contentRecoveredStatus": {
-                    "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                    "@value": "unknown"
-                }
+                "uco-observable:nameRecoveredStatus": "recovered",
+                "uco-observable:metadataRecoveredStatus": "recovered",
+                "uco-observable:contentRecoveredStatus": "unknown"
             }
         ]
     }

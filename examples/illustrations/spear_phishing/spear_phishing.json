@@ -14,7 +14,6 @@
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
         "uco-victim": "https://ontology.unifiedcyberontology.org/uco/victim/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "unmapped": "urn:example:unmapped/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
@@ -644,10 +643,7 @@
                         {
                             "@id": "ep:hash-9d18e157-42d0-56bb-af67-db152b71107d",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "MD5"
-                            },
+                            "uco-types:hashMethod": "MD5",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "911d039e71583a07320b32bde22f8e22"
@@ -656,10 +652,7 @@
                         {
                             "@id": "ep:hash-bffe8332-c441-58f8-aa60-5dc0915e322a",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA1"
-                            },
+                            "uco-types:hashMethod": "SHA1",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "ded8fd7f36417f66eb6ada10e0c0d7c0022986e9"
@@ -668,10 +661,7 @@
                         {
                             "@id": "ep:hash-73b67dae-7bc7-5388-978d-9f9f98aa4057",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "bc866cfcdda37e24dc2634dc282c7a0e6f55209da17a8fa105b07414c0e7c527"
