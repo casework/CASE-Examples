@@ -1,0 +1,16 @@
+# Keyword Search
+
+_This example is under construction, and an experimentation space for [CASE Issue 179](https://github.com/casework/CASE/issues/179)._
+
+
+## Unprocessed early draft graph
+
+The Turtle below was primed from [this comment](https://github.com/casework/CASE/issues/179#issuecomment-3198470425).
+
+```turtle
+@KEYWORD_SEARCH_FIRST_SKETCH_TTL@
+```
+
+The results of the symmetric difference query are:
+
+@QUERY_SYMDIFF_1_MD@

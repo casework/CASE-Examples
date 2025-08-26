@@ -1,0 +1,100 @@
+@prefix ex: <http://example.org/ontology/> .
+
+################################################################
+# ex: prefix in use while deciding whether classes are more fit for CASE or for upstream in UCO.
+
+ex:SearchAction
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	sh:targetClass ex:SearchAction ;
+	rdfs:subClassOf uco-analysis:Analysis ;
+	sh:property [
+		a sh:PropertyShape ;
+		sh:description """The restriction to exactly one
+			LogicalPattern as input is to prevent questions
+			on whether multiple patterns are taken as
+			conjunctive, disjunctive, or a mix (i.e.,
+			AND/OR/nested)."""@en ;
+		sh:message """A SearchAction must take exactly one
+			LogicalPattern as one of the action-inputs."""@en ;
+		sh:path uco-action:object ;
+		sh:qualifiedMaxCount 1 ;
+		sh:qualifiedMinCount 1 ;
+		sh:qualifiedValueShape [
+			a sh:NodeShape ;
+			sh:class uco-pattern:LogicalPattern ;
+	] ;
+	sh:sparql [
+		a sh:SPARQLConstraint ;
+		sh:description """The things searched in the SearchAction
+			should be considered reviewed as part one or
+			more assembled sets (a Compilation or some
+			subclass) with growing but non-expiring
+			membership.  For instance, a set could be
+			\"All logged events indexed as of
+			2025-01-02T03:04:56Z\", and dynamically
+			instantiated and populated at the search's
+			commencement until the search's conclusion,
+			whether from exhaustion or user cancellation.
+			If not supplied, one should be created in the
+			course of the search, and should be kept distinct
+			from the set of the search's results."""@en ;
+		sh:message """A SearchAction must take at least one
+			Compilation as one of the action-inputs, or record
+			that a compilation of searched items was created."""@en ;
+		sh:select """
+SELECT $this
+WHERE {
+	FILTER NOT EXISTS {
+		$this
+			uco-action:object / a / rdfs:subClassOf* uco-core:Compilation ;
+			.
+	}
+	FILTER NOT EXISTS {
+		$this
+			uco-action:result
+				?nInputCompilation ,
+				?nResultCompilation
+				;
+			.
+		?nResultCompilation
+			a / rdfs:subClassOf* uco-core:Compilation ;
+			investigation:wasDerivedFrom ?nInputCompilation ;
+			.
+		?nInputCompilation
+			investigation:wasDerivedFrom ?nInputCompilation ;
+			.
+	}
+}
+""" ;
+	] ;
+	.
+
+ex:SearchResult
+	rdfs:subClassOf uco-analysis:AnalyticResult ;
+	rdfs:comment """To prevent confusion of search result-sets vs. the searches
+		that created them, use of uco-analysis:originatingAnalysis is
+		strongly encouraged."""@en ;
+	rdfs:seeAlso uco-analysis:originatingAnalysis ;
+	sh:property
+		[
+			a sh:PropertyShape ;
+			sh:description """A SearchResult is expected to group its
+				results into an assembled set (a Compilation or some
+				subclass) with fixed membership, similar in formation
+				to the search action's input Compilation.  Multiple
+				sets can returned, e.g. each from different input
+				Compilations.  Derivation relationships are encouraged
+				in the case of many-from-many result-set constructions."""@en ;
+			rdfs:seeAlso investigation:wasDerivedFrom ;
+			sh:path uco-analysis:resultContent ;
+			sh:qualifiedMinCount 1 ;
+			sh:qualifiedValueShape [
+				a sh:NodeShape ;
+				sh:class uco-core:Compilation ;
+			] ;
+		]
+		;
+	.

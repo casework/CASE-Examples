@@ -1,0 +1,27 @@
+PREFIX uco-core: <https://ontology.unifiedcyberontology.org/uco/core/>
+SELECT ?nObject ?lInLeft ?lInBoth ?lInRight
+WHERE {
+	{
+		?nLeft uco-core:object ?nObject .
+		?nRight uco-core:object ?nObject .
+		BIND("" AS ?lInLeft)
+		BIND("✓" AS ?lInBoth)
+		BIND("" AS ?lInRight)
+	} UNION {
+		?nLeft uco-core:object ?nObject .
+		FILTER NOT EXISTS {
+			?nRight uco-core:object ?nObject .
+		}
+		BIND("✓" AS ?lInLeft)
+		BIND("" AS ?lInBoth)
+		BIND("" AS ?lInRight)
+	} UNION {
+		FILTER NOT EXISTS {
+			?nLeft uco-core:object ?nObject .
+		}
+		?nRight uco-core:object ?nObject .
+		BIND("" AS ?lInLeft)
+		BIND("" AS ?lInBoth)
+		BIND("✓" AS ?lInRight)
+	}
+}

@@ -22,6 +22,7 @@ Mapping notes & respective JSON-LD output:
 - [Existence intervals](examples/illustrations/existence_intervals/existence_intervals.json) ([*info*](examples/illustrations/existence_intervals/README.md))
 - [Files](examples/illustrations/file/file.json) (*[info](examples/illustrations/file/)*)
 - [Forensic Lifecycle](examples/illustrations/forensic_lifecycle/forensic_lifecycle.json) ([*info*](examples/illustrations/forensic_lifecycle/))
+- [Keyword Search](examples/illustrations/keyword_search/keyword_search.json) ([*info*](examples/illustrations/keyword_search/))
 - [Location](examples/illustrations/location/location.json)
 - [Message](examples/illustrations/message/message.json) ([*info*](examples/illustrations/message/))
 - [Mobile device and SIM card](examples/illustrations/mobile_device_and_sim_card/mobile_device_and_sim_card.json) ([*info*](examples/illustrations/mobile_device_and_sim_card/))
