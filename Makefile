@@ -61,6 +61,21 @@ all: \
 	$(MAKE) \
 	  --directory dependencies/CASE-unstable-2.0.0 \
 	  .git_submodule_init.done.log
+	# CDO-Shapes-BFO
+	test -r dependencies/CDO-Shapes-BFO/README.md \
+	  || git submodule update --init dependencies/CDO-Shapes-BFO
+	test -r dependencies/CDO-Shapes-BFO/README.md \
+	  || (echo "ERROR:Makefile:CDO-Shapes-BFO submodule README.md file not found, even though CDO-Shapes-BFO submodule initialized." >&2 ; exit 2)
+	# CDO-Shapes-Time
+	test -r dependencies/CDO-Shapes-Time/README.md \
+	  || git submodule update --init dependencies/CDO-Shapes-Time
+	test -r dependencies/CDO-Shapes-Time/README.md \
+	  || (echo "ERROR:Makefile:CDO-Shapes-Time submodule README.md file not found, even though CDO-Shapes-Time submodule initialized." >&2 ; exit 2)
+	# CDO-Shapes-gufo
+	test -r dependencies/CDO-Shapes-gufo/README.md \
+	  || git submodule update --init dependencies/CDO-Shapes-gufo
+	test -r dependencies/CDO-Shapes-gufo/README.md \
+	  || (echo "ERROR:Makefile:CDO-Shapes-gufo submodule README.md file not found, even though CDO-Shapes-gufo submodule initialized." >&2 ; exit 2)
 	# Retrieve rdf-toolkit.jar.
 	$(MAKE) \
 	  --directory dependencies/CASE-develop \
