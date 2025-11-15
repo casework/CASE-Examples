@@ -14,3 +14,7 @@
 	path = dependencies/CASE-unstable-2.0.0
 	url = https://github.com/casework/CASE-Archive.git
 	branch = unstable-2.0.0
+[submodule "dependencies/UCO-Profile-Time"]
+	path = dependencies/UCO-Profile-Time
+	url = https://github.com/ucoProject/UCO-Profile-Time.git
+	branch = main
