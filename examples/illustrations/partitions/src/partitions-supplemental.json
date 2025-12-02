@@ -1,5 +1,9 @@
 [
     {
+        "@id": "kb:Disk-8ad9fa04-cf49-4082-b828-29b7f01f47cb",
+        "@type": "uco-observable:StorageMedium"
+    },
+    {
         "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276",
         "@type": "uco-identity:Organization",
         "uco-core:name": "Microsoft"
@@ -11,15 +15,21 @@
             "uco-observable:Software"
         ],
         "uco-core:name": "Windows 11 Pro",
-        "uco-core:hasFacet": {
-            "@id": "kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623",
-            "@type": "uco-observable:OperatingSystemFacet",
-            "uco-observable:manufacturer": {
-                "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276"
+        "uco-core:hasFacet": [
+            {
+                "@id": "kb:OperatingSystemFacet-aeb7c83f-3fc6-4775-806a-a83b7a875623",
+                "@type": "uco-observable:OperatingSystemFacet",
+                "drafting:buildID": "22621.2283"
             },
-            "uco-observable:version": "22H2",
-            "drafting:buildID": "22621.2283"
-        }
+            {
+                "@id": "kb:SoftwareFacet-247fe7a7-8434-4fca-8f9b-ac7e136f6ca5",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:Organization-a94338c2-030a-493f-9d26-55cade656276"
+                },
+                "uco-observable:version": "22H2"
+            }
+        ]
     },
     {
         "@id": "kb:Tool-e7ce892b-8a19-4f62-b43d-4736ccb6b696",

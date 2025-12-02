@@ -16,7 +16,6 @@
         "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@id": "kb:bundle-3b13e958a-d975-41aa-b1bb-029d2b6707cd",
@@ -226,6 +225,12 @@
                 },
                 {
                     "@id": "kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50"
+                },
+                {
+                    "@id": "kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85"
+                },
+                {
+                    "@id": "kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204"
                 },
                 {
                     "@id": "kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e"
@@ -795,15 +800,6 @@
                     "drafting:uniqueID": "B3858A69A29375E6C706226B3633A3A11EB2A774"
                 },
                 {
-                    "@id": "kb:operating-system-facet-ad90e7e5-c692-4c59-87c6-d36c463ff1b0",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "iOS",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
-                    },
-                    "uco-observable:version": "10.3"
-                },
-                {
                     "@id": "kb:wifi-address-facet-00ec20e0-4af9-45c0-9246-7a87e8c47f3d",
                     "@type": "uco-observable:WifiAddressFacet",
                     "uco-observable:addressValue": "d0:33:11:13:e7:a1"
@@ -814,6 +810,34 @@
                     "uco-observable:addressValue": "d0:33:11:13:e7:a2"
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-906f160c-bbc0-48a5-bb0c-7338ebabf1e9",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-0645704f-fc66-4d90-810a-dc0fb8a95fa4"
+                },
+                "uco-observable:version": "10.3"
+            },
+            "uco-core:name": "iOS"
+        },
+        {
+            "@id": "kb:relationship-3707f6c4-b90a-4c70-9482-bb208d332e85",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:clytemnestra-device-3a61cb3a-422d-4953-af70-25a860456e50"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-9eea07c7-c348-4fa3-aef6-67f2fe651204"
+            }
         },
         {
             "@id": "kb:clytemnestra-mobileaccount-363dd368-94bd-4dbb-af1d-f53d0085791e",
@@ -1044,10 +1068,7 @@
                         {
                             "@id": "kb:hash-bfa02feb-6184-5ca5-9ba3-272bf4367c5d",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "7ea081166336119da78ee4bbdbd06840b94efe28988a2bdb0bcf2387a481e283"
@@ -1111,10 +1132,7 @@
                         {
                             "@id": "kb:hash-c6cc7dd6-1bf9-5454-9653-37caff09411d",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "a13225720074371d56a4f4d5117fbb4953c5b1d316b31f21edcb7ed8fdf66c6e"
@@ -1179,10 +1197,7 @@
                         {
                             "@id": "kb:hash-1a6175e1-cef7-5ee3-8703-22f5f7a43603",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "0611ea093d19b1c73a5285ff43741dd77f2a8d983c1c71044eb072e44f5dcb0a"

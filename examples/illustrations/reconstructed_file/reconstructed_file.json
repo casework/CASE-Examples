@@ -12,7 +12,6 @@
         "uco-role": "https://ontology.unifiedcyberontology.org/uco/role/",
         "uco-tool": "https://ontology.unifiedcyberontology.org/uco/tool/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -102,36 +101,21 @@
                 {
                     "@id": "kb:recovered-object-facet-cb087927-5970-4361-a958-5343e81b189d",
                     "@type": "uco-observable:RecoveredObjectFacet",
-                    "uco-observable:contentRecoveredStatus": {
-                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                        "@value": "recovered"
-                    },
-                    "uco-observable:metadataRecoveredStatus": {
-                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                        "@value": "unknown"
-                    },
-                    "uco-observable:nameRecoveredStatus": {
-                        "@type": "uco-vocabulary:RecoveredObjectStatusVocab",
-                        "@value": "unknown"
-                    }
+                    "uco-observable:contentRecoveredStatus": "recovered",
+                    "uco-observable:metadataRecoveredStatus": "unknown",
+                    "uco-observable:nameRecoveredStatus": "unknown"
                 },
                 {
                     "@id": "kb:content-data-facet-3839294c-0007-4518-8598-1f5d6c7a8000",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 1625600,
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-a6e58409-9013-51a9-846b-64aa0741ebca",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "fb07a847daf108af066b4cc55f807a3eb694b9b31e27d8146585b7cc08494c70"
@@ -148,10 +132,7 @@
                 {
                     "@id": "kb:content-data-facet-3f04b6a9-91f1-461a-ab37-154a47254268",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 325120,
                     "uco-observable:mimeType": "image/jpg",
                     "uco-observable:dataPayload": "/9j/4R5+RXhpZg==CUTFORBREVITY",
@@ -159,10 +140,7 @@
                         {
                             "@id": "kb:hash-e811bf31-b1a6-58f9-bc2c-e58f4b7f9779",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "c7c7fb626c7f15efc407b73f704f990f6b683ad36185018a48202fa9b88369fa"
@@ -179,20 +157,14 @@
                 {
                     "@id": "kb:content-data-facet-f75c76c3-a0b1-4f9e-be2b-997178bfcc98",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 325120,
                     "uco-observable:dataPayload": "W+ZAudrTwDd8ww==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-c44c6e67-bbef-5d15-b478-d5f7de058b53",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "903bba8035446dccb9578852704c3936b06b3c9e3731dba988dded71cba4fdc4"
@@ -209,20 +181,14 @@
                 {
                     "@id": "kb:content-data-facet-0aa4e6e1-63d4-41ec-b0f6-2820f8717fa6",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 975001,
                     "uco-observable:dataPayload": "sSGyTg4OWr6s8A==CUTFORBREVITY",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-34a09d83-3604-5225-9fce-549743f997be",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "0ca956f49d8308da0d133ac43e8d9de7e0fcc3aa922d1997246bec1fd4a63fa8"
@@ -324,10 +290,7 @@
                         {
                             "@id": "kb:hash-2baba81a-8973-585b-b484-fde3c4b5b5fb",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "c7e3256e5873df286c803e2cba1a54e6e7c1bc8dfc0891a98e3b3d38c1981dbb"

@@ -10,7 +10,7 @@
 
 kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-19522c70-0824-5ab8-8447-bbe0147903d8 ;
@@ -63,7 +63,7 @@ kb:Analysis-313d688e-0bb9-4504-a474-d390b0a27010
 
 kb:Analysis-32be09b3-89cd-4461-9098-c5204220abd5
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-7c41473b-3bd4-5f68-872f-835b7b8662f6 ;
@@ -143,7 +143,7 @@ kb:Analysis-32be09b3-89cd-4461-9098-c5204220abd5
 
 kb:Analysis-39dcec1b-caa0-41c9-ab12-e45a39d73233
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-b02cc11c-19fb-5a2c-9471-3d6cde7e5f5c ;
@@ -201,7 +201,7 @@ kb:Analysis-39dcec1b-caa0-41c9-ab12-e45a39d73233
 
 kb:Analysis-9dbfb955-d739-42cf-9fcf-7df99a9edc4b
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-b0bad645-fcb8-528e-9959-5fea2cd1b858 ;
@@ -3440,7 +3440,7 @@ kb:Invalidation-986d8a7b-775c-5a87-afd5-1c6d645369df
 
 kb:InvestigativeAction-37881b8a-edad-41e3-ae0c-4c205cf2d8d1
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-bdb6c3c2-89e0-5ba8-ae0d-263439a4cb14 ;
@@ -3473,7 +3473,7 @@ kb:InvestigativeAction-37881b8a-edad-41e3-ae0c-4c205cf2d8d1
 
 kb:InvestigativeAction-83a8b184-075b-4973-9c51-fe3fe2f7c3f8
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-4d84489d-5cd6-54da-ba4e-b47ad9baf75c ;
@@ -3511,7 +3511,7 @@ kb:InvestigativeAction-83a8b184-075b-4973-9c51-fe3fe2f7c3f8
 
 kb:InvestigativeAction-8ab415cd-6156-4e86-b5f5-34d9cb583075
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-4e9189e7-55c4-56a8-b415-ba8d03fa5bae ;
@@ -3556,7 +3556,7 @@ kb:InvestigativeAction-8ab415cd-6156-4e86-b5f5-34d9cb583075
 
 kb:InvestigativeAction-a5c03fc1-092d-4c1a-9142-adf22966ba93
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-35459f24-ed50-5ec8-9418-cca432efc9a2 ;
@@ -3600,7 +3600,7 @@ kb:InvestigativeAction-a5c03fc1-092d-4c1a-9142-adf22966ba93
 
 kb:InvestigativeAction-c08691b3-852c-4d3f-a8d7-cc09ed916090
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-34cf42fd-b263-59a2-9d65-35b1195efe95 ;
@@ -3619,7 +3619,7 @@ kb:InvestigativeAction-c08691b3-852c-4d3f-a8d7-cc09ed916090
 
 kb:InvestigativeAction-db5f7449-256e-4d16-9486-6c7f3524c070
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-2c7faeee-59ae-5ceb-a4aa-af7f9ebd7a47 ;
@@ -3675,7 +3675,7 @@ kb:InvestigativeAction-db5f7449-256e-4d16-9486-6c7f3524c070
 
 kb:InvestigativeAction-e55a3d16-a516-4ebe-bba2-cf7aa9a6b8ba
 	a
-		time:ProperInterval ,
+		time:Interval ,
 		prov:Activity
 		;
 	time:hasBeginning kb:Start-abb5ef21-39c3-52aa-bf4b-eff16dd0d6c5 ;

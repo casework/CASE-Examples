@@ -6,7 +6,6 @@
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -81,20 +80,14 @@
                 {
                     "@id": "kb:content-data-facet-f56b996f-e398-46f3-83ac-ecf88d3a3518",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 30,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-db733818-ce26-5f82-b0fd-6ecaebf4bac0",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "15e2b0d3c33891ebb0f1ef609ec419420c20e320ce94c65fbc8c3312448eb225"
@@ -130,20 +123,14 @@
                 {
                     "@id": "kb:content-data-facet-863b5f55-20cb-467c-9b67-df9664fe89ac",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 10,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-8c52214c-fd4c-50bc-ada8-dd1ebdc4587d",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "2943a567bc05bc66ca6201dbc5f00bec3f774a47b1b94289a2ae8e79834c21a5"
@@ -179,20 +166,14 @@
                 {
                     "@id": "kb:content-data-facet-db0f82a0-2e07-48d4-ab91-2fc1056b59e3",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 10,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-4cb311f8-e967-517e-b176-ba1758a8e7ad",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "882b8486a082615ea7fbbba8b8e7082ac8b3a94c9e152fc0920b715edf02cb15"
@@ -228,20 +209,14 @@
                 {
                     "@id": "kb:content-data-facet-42c807ed-5499-4eb5-b823-953a272eb712",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 10,
                     "uco-observable:dataPayload": "<base 64 encoded data of the file>",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-bc845e02-36fc-5583-ae78-b826b5a62948",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "c2608309ab2e636950109918e5de24526e3ad9053311859b168cee8606c9d3e2"

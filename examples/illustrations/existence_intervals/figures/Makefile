@@ -20,6 +20,7 @@ top_srcdir := $(shell cd ../../../.. ; pwd)
 
 all: \
   abstraction_all.svg \
+  abstraction_bfo.svg \
   abstraction_gufo.svg \
   abstraction_time.svg \
   abstraction_uco_1_3_0_action.svg \

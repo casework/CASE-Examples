@@ -8,7 +8,6 @@
         "uco-identity": "https://ontology.unifiedcyberontology.org/uco/identity/",
         "uco-observable": "https://ontology.unifiedcyberontology.org/uco/observable/",
         "uco-types": "https://ontology.unifiedcyberontology.org/uco/types/",
-        "uco-vocabulary": "https://ontology.unifiedcyberontology.org/uco/vocabulary/",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     },
     "@graph": [
@@ -19,20 +18,14 @@
                 {
                     "@id": "kb:content-data-facet-fa1faab5-f212-4ab5-ae09-6937ca06e847",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 29,
                     "uco-observable:dataPayload": "Q0FTRSBpcyBhbiBhd2Vzb21lIG9udG9sb2d5IQ=",
                     "uco-observable:hash": [
                         {
                             "@id": "kb:hash-fbd39b90-551d-5a80-8f3d-70e91c5fe472",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "6b51d431df5d7f141cbececcf79edf3dd861c3b4069f0b11661a3eefacbba918"
@@ -69,10 +62,7 @@
                 {
                     "@id": "kb:content-data-facet-51084177-f4e8-4955-8475-52dc4222e4be",
                     "@type": "uco-observable:ContentDataFacet",
-                    "uco-observable:byteOrder": {
-                        "@type": "uco-vocabulary:EndiannessTypeVocab",
-                        "@value": "Big-endian"
-                    },
+                    "uco-observable:byteOrder": "Big-endian",
                     "uco-observable:sizeInBytes": 3500,
                     "uco-observable:magicNumber": "/9j/ww==",
                     "uco-observable:mimeType": "image/jpg",
@@ -81,10 +71,7 @@
                         {
                             "@id": "kb:hash-29cbd7b8-e404-55f0-b667-c1762b73cdcd",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "MD5"
-                            },
+                            "uco-types:hashMethod": "MD5",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "3d137a188c1e82247b815209ce44af2c"
@@ -93,10 +80,7 @@
                         {
                             "@id": "kb:hash-7a2f290f-2944-5520-816a-85f722e64525",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "8c8b39473c4064f6b4db11a67251ffdf65c42ebadc5c3e02a009f95f6cf7c9e8"
@@ -156,10 +140,7 @@
                         {
                             "@id": "kb:hash-47323085-5f5a-5252-82b3-347183525558",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3"
@@ -208,10 +189,7 @@
                         {
                             "@id": "kb:hash-9c9f1145-243a-58d6-b420-bd38101cb511",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "03ac674216f3e15c761ee1a5e255f067953623c8b388b4459e13f978d7c846f4"
@@ -256,10 +234,7 @@
                         {
                             "@id": "kb:hash-84b82467-019e-53cf-a1e6-e8a394379916",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5"
@@ -334,10 +309,7 @@
                         {
                             "@id": "kb:hash-c492a39d-88e4-51f1-9f80-31524494f877",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"
@@ -379,10 +351,7 @@
                         {
                             "@id": "kb:hash-ecccf09c-feb3-5feb-89bc-c7ab13b54605",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "8bb0cf6eb9b17d0f7d22b456f121257dc1254e1f01665370476383ea776df414"
@@ -445,10 +414,7 @@
                         {
                             "@id": "kb:hash-7c6c42be-0c5b-592f-91a2-c509af290369",
                             "@type": "uco-types:Hash",
-                            "uco-types:hashMethod": {
-                                "@type": "uco-vocabulary:HashNameVocab",
-                                "@value": "SHA256"
-                            },
+                            "uco-types:hashMethod": "SHA256",
                             "uco-types:hashValue": {
                                 "@type": "xsd:hexBinary",
                                 "@value": "ef797c8118f02dfb649607dd5d3f8c7623048c9c063d532cc95c5ed7a898a64f"
@@ -518,15 +484,6 @@
                     "uco-observable:serialNumber": "D1234567"
                 },
                 {
-                    "@id": "kb:operating-system-facet-83153006-3432-4538-a0d7-871a6e879d76",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Windows 7 Ultimate Edition",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
-                    },
-                    "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
-                },
-                {
                     "@id": "kb:computer-specification-facet-fd3be213-cb78-4130-8888-323a259f3509",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:biosVersion": "E1762IMS.10M",
@@ -543,6 +500,34 @@
                     "acme:inventoryNumber": "10503"
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-8a0026cb-2f40-460d-baac-e5b8dc2da0e0",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "Windows 7 Ultimate Edition",
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-de8739b6-74ba-486e-b452-49a990ffbb22",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-cc0e0667-eadf-4b2e-9618-3f62b1bdae26"
+                },
+                "uco-observable:version": "6.1.7601 Service Pack 1 Build 7601"
+            }
+        },
+        {
+            "@id": "kb:relationship-a66eba82-1224-422e-a427-73895cab5b5a",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:forensic_lab_computer-89c30df0-5e7f-4076-8f74-3271e730a013"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-8a0026cb-2f40-460d-baac-e5b8dc2da0e0"
+            }
         },
         {
             "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7",
@@ -573,15 +558,6 @@
                     "uco-observable:serialNumber": "123456SAM"
                 },
                 {
-                    "@id": "kb:operating-system-facet-f1c16acb-44f7-4728-8f5e-72bcc0f3f3f8",
-                    "@type": "uco-observable:OperatingSystemFacet",
-                    "uco-core:name": "Android",
-                    "uco-observable:manufacturer": {
-                        "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
-                    },
-                    "uco-observable:version": "4.2.2"
-                },
-                {
                     "@id": "kb:computer-specification-facet-0f10db33-9374-467c-bb2d-04172ab05a34",
                     "@type": "uco-observable:ComputerSpecificationFacet",
                     "uco-observable:processorArchitecture": "Octa-core",
@@ -590,6 +566,34 @@
                     "uco-observable:totalRam": 2147483648
                 }
             ]
+        },
+        {
+            "@id": "kb:operating-system-1d468d48-3ac2-4242-a9cb-61bd47319d43",
+            "@type": [
+                "uco-observable:OperatingSystem",
+                "uco-observable:Software"
+            ],
+            "uco-core:name": "Android",
+            "uco-core:hasFacet": {
+                "@id": "kb:software-facet-9c9aa4ea-9e84-45e8-8437-ac97327d651b",
+                "@type": "uco-observable:SoftwareFacet",
+                "uco-observable:manufacturer": {
+                    "@id": "kb:organization-2b3b98e2-aea2-4270-876a-7f9917623cb7"
+                },
+                "uco-observable:version": "4.2.2"
+            }
+        },
+        {
+            "@id": "kb:relationship-7a75a470-b017-424b-a81b-d1411172c0c6",
+            "@type": "uco-observable:ObservableRelationship",
+            "uco-core:isDirectional": true,
+            "uco-core:kindOfRelationship": "Has_Operating_System",
+            "uco-core:source": {
+                "@id": "kb:android_device-814c2229-d163-47af-87be-6437b205dde4"
+            },
+            "uco-core:target": {
+                "@id": "kb:operating-system-1d468d48-3ac2-4242-a9cb-61bd47319d43"
+            }
         }
     ]
 }
