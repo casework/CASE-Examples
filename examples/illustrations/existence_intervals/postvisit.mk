@@ -18,13 +18,13 @@ SHELL := /bin/bash
 
 top_srcdir := $(shell cd ../../.. ; pwd)
 
-bfo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-BFO/dependencies/BFO.ttl
+bfo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-BFO/dependencies/formatted-BFO.ttl
 sh_bfo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-BFO/shapes/sh-bfo.ttl
 
-gufo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-gufo/dependencies/gufo.ttl
+gufo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-gufo/dependencies/formatted-gufo.ttl
 sh_gufo_ttl := $(top_srcdir)/dependencies/CDO-Shapes-gufo/shapes/sh-gufo.ttl
 
-time_ttl := $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/time.ttl
+time_ttl := $(top_srcdir)/dependencies/CDO-Shapes-Time/dependencies/formatted-time.ttl
 sh_time_ttl := $(top_srcdir)/dependencies/CDO-Shapes-Time/shapes/sh-time.ttl
 
 all:
