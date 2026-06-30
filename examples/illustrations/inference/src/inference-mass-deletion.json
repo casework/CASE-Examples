@@ -106,7 +106,7 @@
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-443f07d4-50be-42e1-906c-1d1e4551a32d",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvidenceEvaluationResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
@@ -126,14 +126,14 @@
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-5dae0b2b-9120-443e-b8be-329a8f0d7bd1",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvidenceEvaluationResultFacet",
                 "drafting:evidenceEvaluation": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "Probability",
                 "drafting:conclusion": false,
-                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records."
+                "drafting:evaluationRationale": "Observed evidence contradicts hypothesis of multiple folders and contents being deleted, as well as Recycle Bin records."
             }
         ]
     }
