@@ -6,13 +6,13 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 -->
 
 
-# HypothesisTestResult (a.k.a. AnalyticInference) Examples
+# EvidenceEvaluationResult Examples
 
-This illustration includes cyber-investigation examples that require hypothessis testing and a resulting evidence-based opinion/conclusion. The sample JSON-LD provides *proposed* use of a HypothesisTestResult facet atached to an AnalyticResult object. 
+This illustration includes cyber-investigation examples that require evaluation of evidence under opposing hypotheses and a resulting evidence-based opinion/conclusion. The sample JSON-LD provides *proposed* use of a EvidenceEvaluationResult facet atached to an AnalyticResult object. 
 
-This structure is an updated example of AnalyticInference based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are analytic results related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
+This structure is an updated example of EvidenceEvaluationResult based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are analytic results related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
 
-When performing evidence-based hypothesis testing, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
+When performing evidence-based evaluation under alternative hypotheses, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
 
 When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
 
@@ -512,12 +512,12 @@ However, a skeptic might argue that photographs can be faked or geolocation info
 ]
 ```
 
-If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first hypothesis test result over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's hypothesis. Furthermore, the first AnalyticInference could be updated to match the Skeptic's. Therefore, hypothesis test results can change as new information becomes available.
+If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first hypothesis test result over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's hypothesis. Furthermore, the first EvidenceEvaluationResult could be updated to match the Skeptic's. Therefore, hypothesis test results can change as new information becomes available.
 
 
 ### Query - Differences in basis evidence
 
-Two hypothesis test results (analytic inferences) are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
+Two EvidenceEvaluationResult are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
 
 The following table is the results of [this query](src/query-select-skeptic-difference.sparql).  "Supports A" is support for only the initial analyst's finding, "Supports B" is support for only the skeptic's finding.
 
@@ -536,7 +536,7 @@ The following table is the results of [this query](src/query-select-skeptic-diff
 * Hypothesis 1: File wiping occurred 
 * Hypothesis 2: File wiping did not occur
 
-The following hypothesis test results can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
+The following EvidenceEvaluationResults can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
 
 ```json
 [
@@ -696,7 +696,7 @@ The following hypothesis test results can be stated in words as the observations
 * Hypothesis 1: A folder and all its contents were deleted on 17 April 2021 
 * Hypothesis 2: A folder and all its contents were not deleted on 17 April 2021
 
-The following hypothesis test results can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
+The following EvidenceEvaluationResults can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
 
 ```json
 [
