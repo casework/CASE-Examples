@@ -7,13 +7,32 @@
 @prefix uco-pattern: <https://ontology.unifiedcyberontology.org/uco/pattern/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-drafting:HypothesisTestResultFacet
+drafting:Hypothesis
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
-	rdfs:subClassOf uco-core:Facet ;
-	rdfs:label "HypothesisTestResultFacet"@en ;
+	rdfs:subClassOf core:Assertion ;
+	rdfs:label "Hypothesis"@en ;
+	rdfs:comment "A statement that is either true or false, the truth of which is uncertain."@en ;
+	sh:property
+		[
+			sh:class uco-type:Technique ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path uco-type:generatingHypothesis ;
+		] 
+		;
+	sh:targetClass analysis:Hypothesis ;
+	.
+
+drafting:EvidenceEvaluationResultFacet
+	a
+		owl:Class ,
+		sh:NodeShape
+		;
+	rdfs:subClassOf uco-analysis:AnalyticResultFacet ;
+	rdfs:label "EvidenceEvaluationResultFacet"@en ;
 	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis."@en ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	sh:property
@@ -41,23 +60,15 @@ drafting:HypothesisTestResultFacet
 			sh:minCount "0"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
 			sh:path drafting:conclusion ;
+		] ,
+		[
+			sh:class uco-type:Technique ; ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path uco-type:usedTechnique ;
 		]
 		;
-	sh:targetClass drafting:HypothesisTestResultFacet ;
-	.
-
-drafting:Method
-	a
-		owl:Class ,
-		sh:NodeShape
-		;
-	rdfs:subClassOf uco-pattern:Pattern ;
-	rdfs:label "Method"@en ;
-	rdfs:comment
-		"A method is a form of procedura for accomplishing a specific task."@en
-		;
-	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
-	sh:targetClass drafting:Method ;
+	sh:targetClass drafting:EvidenceEvaluationResultFacet ;
 	.
 
 drafting:evaluationRationale
@@ -95,11 +106,11 @@ drafting:conclusion
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
-drafting:usedMethod
+drafting:usedTechnique
 	a owl:ObjectProperty ;
-	rdfs:label "usedMethod"@en ;
-	rdfs:comment "The process/algorithm used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
-	rdfs:range drafting:Method ;
+	rdfs:label "usedTechnique"@en ;
+	rdfs:comment "The technique used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
+	rdfs:range uco-type:Technique ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
