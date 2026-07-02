@@ -66,6 +66,12 @@ drafting:EvidenceEvaluationResultFacet
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
 			sh:path uco-type:usedTechnique ;
+		] ,
+		[
+			sh:class uco-type:AnalyticAction ; ;
+			sh:maxCount "1"^^xsd:integer ;
+			sh:nodeKind sh:IRI ;
+			sh:path uco-type:supercedes ;
 		]
 		;
 	sh:targetClass drafting:EvidenceEvaluationResultFacet ;
@@ -110,6 +116,14 @@ drafting:usedTechnique
 	a owl:ObjectProperty ;
 	rdfs:label "usedTechnique"@en ;
 	rdfs:comment "The technique used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
+	rdfs:range uco-type:Technique ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
+
+drafting:supercedes
+	a owl:ObjectProperty ;
+	rdfs:label "supercedes"@en ;
+	rdfs:comment "An earlier EvidenceEvaluationResult instance that this one replaces." ;
 	rdfs:range uco-type:Technique ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
