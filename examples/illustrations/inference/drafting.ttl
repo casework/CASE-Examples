@@ -20,7 +20,7 @@ drafting:Hypothesis
 			sh:class uco-type:Technique ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:IRI ;
-			sh:path uco-type:generatingHypothesis ;
+			sh:path uco-type:generatingTechnique ;
 		] 
 		;
 	sh:targetClass analysis:Hypothesis ;
@@ -114,3 +114,10 @@ drafting:usedTechnique
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
+drafting:usedTechnique
+	a owl:ObjectProperty ;
+	rdfs:label "generatingTechnique"@en ;
+	rdfs:comment "The technique used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
+	rdfs:range uco-type:Technique ;
+	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
+	.
