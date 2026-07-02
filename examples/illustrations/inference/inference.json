@@ -476,7 +476,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-bfe8b5bd-538b-41d9-96fd-2452d349f500",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": false,
                     "drafting:evaluationRationale": "Recovered content data not compatible with expected based on file type. No complete recovered content could be attributed to this file.",
                     "drafting:evaluationType": "C-Scale",
@@ -496,7 +496,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-443f07d4-50be-42e1-906c-1d1e4551a32d",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": true,
                     "drafting:evaluationRationale": "Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files.",
                     "drafting:evaluationType": "Probability",
@@ -516,7 +516,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-ca2d4732-c740-43eb-a871-e1ec31910511",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": false,
                     "drafting:evaluationRationale": "No fragment of recovered content could be attributed to this file.",
                     "drafting:evaluationType": "C-Scale",
@@ -536,7 +536,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-d00368ad-405f-4d57-83c9-2b1ecfc767c9",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": true,
                     "drafting:evaluationRationale": "Filename and metadata were recovered for this file, but no associated content was recovered.",
                     "drafting:evaluationType": "C-Scale",
@@ -556,7 +556,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-5dae0b2b-9120-443e-b8be-329a8f0d7bd1",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": false,
                     "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records.",
                     "drafting:evaluationType": "Probability",
@@ -576,7 +576,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-6f17672c-8eed-4131-8449-b530facdb380",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": false,
                     "drafting:evaluationRationale": "Metadata was recovered along with filename, but no associated content was recovered.",
                     "drafting:evaluationType": "C-Scale",
@@ -600,7 +600,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:evaluationRationale": "Photograph contents and Exif data can be altered",
                     "drafting:evaluationType": "probability",
                     "drafting:evidenceEvaluation": {
@@ -619,7 +619,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-859da12a-ca33-405a-aaeb-9b478960d10a",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": false,
                     "drafting:evaluationRationale": "Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument",
                     "drafting:evaluationType": "probability",
@@ -639,7 +639,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-6082b0d8-d661-49da-b7cb-a203f8d6f395",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": true,
                     "drafting:evaluationRationale": "Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument",
                     "drafting:evaluationType": "probability",
@@ -659,7 +659,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-273dc533-e496-4349-9d4b-febbe7ba1a6c",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": false,
                     "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system",
                     "drafting:evaluationType": "probability",
@@ -679,7 +679,7 @@
             "uco-core:hasFacet": [
                 {
                     "@id": "kb:hypothesis-test-result-facet-14f1ed75-3a3d-4430-9173-e76679914ba2",
-                    "@type": "drafting:HypothesisTestResultFacet",
+                    "@type": "drafting:EvidenceEvaluationResultFacet",
                     "drafting:conclusion": true,
                     "drafting:evaluationRationale": "Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system",
                     "drafting:evaluationType": "probability",
