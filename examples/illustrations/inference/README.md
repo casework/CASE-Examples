@@ -6,15 +6,15 @@ https://github.com/casework/casework.github.io/blob/master/CONTRIBUTE.md#mainten
 -->
 
 
-# EvidenceEvaluationResult Examples
+# EvaluationResult Examples
 
-This illustration includes cyber-investigation examples that require evaluation of evidence under opposing hypotheses and a resulting evidence-based opinion/conclusion. The sample JSON-LD provides *proposed* use of a EvidenceEvaluationResult facet atached to an AnalyticResult object. 
+This illustration includes cyber-investigation examples that require evaluation of observations under opposing hypotheses and a resulting evidence-based opinion/conclusion. The sample JSON-LD provides *proposed* use of a EvaluationResult facet atached to an AnalyticResult object. 
 
-This structure is an updated example of EvidenceEvaluationResult based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are analytic results related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
+This structure is an updated example of EvaluationResult based on the paper [Standardization of File Recovery Classification and Authentication](https://doi.org/10.1016/j.diin.2019.06.004) by Casey, Nelson, and Hyde.  This example is also related to examples in [Standardization of forming and expressing preliminary evaluative opinions on digital evidence](https://doi.org/10.1016/j.fsidi.2019.200888) by Casey.  The data tampering examples ("Wiping", "Mass deletion") are analytic results related to evidence tampering, with background provided in the DFRWS-EU 2020 presentation "[Expressing evaluative conclusions in cases involving tampering of digital evidence](https://dfrws.org/wp-content/uploads/2020/06/DFRWS-EU-2020-Expressing-evaluative-conclusions-in-cases-involving-tampering-of-digital-evidence.pdf)" by Bollé, Servida, Polewczyk, Souvignet and Casey.
 
-When performing evidence-based evaluation under alternative hypotheses, the evidenceEvaluation value is assigned to the observations, not the hypothesis.
+When performing evidence-based evaluation under alternative hypotheses, the evaluationValue is assigned to the observations, not the hypothesis.
 
-When making inferences on the basis of observed evidence, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observed evidence is the result of an activity, not the activity itself. The observed evidence could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observed evidence, including the opposing hypothesis.
+When making inferences on the basis of observations, it is important to consider alternatives. Selecting a single hypothesis without consideration of alternatives increases risk of confirmation bias. When conducting a cyber-investigation, observations are the result of an activity, not the activity itself. The observations could have an alternative explanation than the most obvious or initially imagined one. Therefore, it is good practice to consider alternative hypotheses when evaluating observations, including the opposing hypothesis.
 
 
 ## State of this illustration
@@ -225,7 +225,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
             {
                 "@id": "kb:hypothesis-test-result-facet-bfe8b5bd-538b-41d9-96fd-2452d349f500",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
@@ -245,7 +245,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
             {
                 "@id": "kb:hypothesis-test-result-facet-ca2d4732-c740-43eb-a871-e1ec31910511",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
@@ -265,7 +265,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
             {
                 "@id": "kb:hypothesis-test-result-facet-d00368ad-405f-4d57-83c9-2b1ecfc767c9",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "5.5"
                 },
@@ -285,7 +285,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
             {
                 "@id": "kb:hypothesis-test-result-facet-6f17672c-8eed-4131-8449-b530facdb380",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
@@ -309,14 +309,14 @@ Further analysis finds that the data on disk presented by the tool is incompatib
 
 To ask whether the file is `Fully Recovered` is the wrong question because it does not consider alternatives and raises the risk of confirmation bias.
 
-Rather, the question is "Which class/category of file recovery is more supported by the evidence?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
+Rather, the question is "Which class/category of file recovery is more supported by the observations?" In this example, the result of only `Name and Metadata Recovered` has the highest assigned probability versus the others.
 
-|    | ?lEvaluationType   |   ?lEvidenceEvaluation | ?lEvaluationRationale                                                                                                                                                                                                                    | ?lConclusion   |
+|    | ?lEvaluationType   |   ?levaluationValue | ?lEvaluationRationale                                                                                                                                                                                                                    | ?lConclusion   |
 |----|--------------------|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------|
 |  0 | probability        |                   0.95 | Overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system                                                                                                                           | True           |
-|  1 | probability        |                   0.05 | Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system                                                                               | False          |
+|  1 | probability        |                   0.05 | Hypothesis contradicts observations of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system                                                                               | False          |
 |  2 | Probability        |                   0.9  | Folder and all subfolders in deleted state have the same last accessed date on 17 April 2021, which occurs when parent folder is deleted. This last accessed data is close in time to Recycle Bin records associated with deleted files. | True           |
-|  3 | Probability        |                   0.1  | Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records.                                                                                                                 | False          |
+|  3 | Probability        |                   0.1  | Hypothesis contradicts observations of multiple folders and contents being deleted, as well as Recycle Bin records.                                                                                                                 | False          |
 |  4 | probability        |                   0.9  | Looks like the obelisk at Washington Monument and photo Exif contains geolocation data that resolves to a location near the Washington monument                                                                                          | True           |
 |  5 | C-Scale            |                   0.1  | Metadata was recovered along with filename, but no associated content was recovered.                                                                                                                                                     | False          |
 |  6 | probability        |                   0.1  | Does not looks like Cleopatra's Needle in New York City and photo Exif contains geolocation data that resolves to a location near the Washington monument                                                                                | False          |
@@ -331,9 +331,9 @@ Consider an example of a photograph of the Washington monument from an angle at 
 * *ML1 Hypothesis*: The object in the photograph is the Washington Monument in Washington, DC.
 * *ML2 Hypothesis*: The object in the photograph is Cleopatra's Needle in New York City.
 
-Further forensic analysis is performed of the photograph and its metadata, which reveals that it was taken in Washington DC. Inference assigns a value (e.g., probability, strength) to the observations (photograph content) and analysis outputs (geolocation information) given each Hypothesis:
+Further forensic analysis is performed of the photograph and its metadata, which reveals that it was taken in Washington DC. Evaluation assigns a value (e.g., probability, strength) to the observations (photograph content) and analysis outputs (geolocation information) given each Hypothesis:
 
-*AnalyticInference 1*: The observations and analysis results are exceedingly more likely given the assertion that the object in the photograph is the Washington Monument in Washington, DC, rather than Cleopatra's Needle in New York City. 
+*EvaluationResult 1*: The observations and analysis results are exceedingly more likely given the assertion that the object in the photograph is the Washington Monument in Washington, DC, rather than Cleopatra's Needle in New York City. 
 
 ```json
 [
@@ -401,7 +401,7 @@ Further forensic analysis is performed of the photograph and its metadata, which
             {
                 "@id": "kb:hypothesis-test-result-facet-6082b0d8-d661-49da-b7cb-a203f8d6f395",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
                 },
@@ -465,7 +465,7 @@ Further forensic analysis is performed of the photograph and its metadata, which
             {
                 "@id": "kb:hypothesis-test-result-facet-859da12a-ca33-405a-aaeb-9b478960d10a",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
@@ -478,11 +478,11 @@ Further forensic analysis is performed of the photograph and its metadata, which
 ]
 ```
 
-However, a skeptic might argue that photographs can be faked or geolocation information can be spoofed, and might make the following Hypothesis and AnalyticInference:
+However, a skeptic might argue that photographs can be faked or geolocation information can be spoofed, and might make the following Hypothesis and Evaluation:
 
 * *Skeptic's Hypothesis*: The photograph is fake.
 
-*Skeptic's AnalyticInference*: The observations and analysis results are equally probable given the assertion that the object in the photograph is the Washington Monument in Washington, DC or Cleopatra's Needle in New York City. 
+*Skeptic's EvaluationResult*: The observations and analysis results are equally probable given the assertion that the object in the photograph is the Washington Monument in Washington, DC or Cleopatra's Needle in New York City. 
 
 ```json
 [
@@ -501,7 +501,7 @@ However, a skeptic might argue that photographs can be faked or geolocation info
                 "@id": "kb:hypothesis-test-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evaluationType": "probability",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
                 },
@@ -512,12 +512,12 @@ However, a skeptic might argue that photographs can be faked or geolocation info
 ]
 ```
 
-If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first hypothesis test result over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's hypothesis. Furthermore, the first EvidenceEvaluationResult could be updated to match the Skeptic's. Therefore, hypothesis test results can change as new information becomes available.
+If there is no indication that the photograph was tampered with, a reasonable decision maker would favor the first hypothesis test result over the Skeptic's. Conversely, if further analysis reveals that the photograph was tampered with, the decision maker might give more consideration to the Skeptic's hypothesis. Furthermore, the first EvaluationResult could be updated to match the Skeptic's. Therefore, hypothesis test results can change as new information becomes available.
 
 
 ### Query - Differences in basis evidence
 
-Two EvidenceEvaluationResult are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
+Two EvaluationResult are referenced above (`kb:analysisresult-C16CEAB2...` and `kb:analysisresult-5BCEDE9F...`).  What differences in basis evidence did the two have?
 
 The following table is the results of [this query](src/query-select-skeptic-difference.sparql).  "Supports A" is support for only the initial analyst's finding, "Supports B" is support for only the skeptic's finding.
 
@@ -536,7 +536,7 @@ The following table is the results of [this query](src/query-select-skeptic-diff
 * Hypothesis 1: File wiping occurred 
 * Hypothesis 2: File wiping did not occur
 
-The following EvidenceEvaluationResults can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
+The following EvaluationResults can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (wiping), rather than Hypothesis 2 (no wiping).
 
 ```json
 [
@@ -609,7 +609,7 @@ The following EvidenceEvaluationResults can be stated in words as the observatio
                 "@id": "kb:hypothesis-test-result-facet-14f1ed75-3a3d-4430-9173-e76679914ba2",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evaluationType": "probability",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.95"
                 },
@@ -677,12 +677,12 @@ The following EvidenceEvaluationResults can be stated in words as the observatio
                 "@id": "kb:hypothesis-test-result-facet-273dc533-e496-4349-9d4b-febbe7ba1a6c",
                 "@type": "drafting:HypothesisTestResultFacet",
                 "drafting:evaluationType": "probability",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.05"
                 },
                 "drafting:conclusion": false,
-                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
+                "drafting:evaluationRationale": "Hypothesis contradicts observations of overwrite patterns of deleted files/filenames compatible with use of sdelete.exe wiping tool present on system"
             }
         ]
     }
@@ -696,7 +696,7 @@ The following EvidenceEvaluationResults can be stated in words as the observatio
 * Hypothesis 1: A folder and all its contents were deleted on 17 April 2021 
 * Hypothesis 2: A folder and all its contents were not deleted on 17 April 2021
 
-The following EvidenceEvaluationResults can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
+The following EvaluationResults can be stated in words as the observations are exceedingly more probable in light of Hypothesis 1 (targeted and deliberate deletion), rather than Hypothesis 2 (not targeted and deliberate deletion)
 
 ```json
 [
@@ -808,7 +808,7 @@ The following EvidenceEvaluationResults can be stated in words as the observatio
             {
                 "@id": "kb:hypothesis-test-result-facet-443f07d4-50be-42e1-906c-1d1e4551a32d",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
                 },
@@ -828,13 +828,13 @@ The following EvidenceEvaluationResults can be stated in words as the observatio
             {
                 "@id": "kb:hypothesis-test-result-facet-5dae0b2b-9120-443e-b8be-329a8f0d7bd1",
                 "@type": "drafting:HypothesisTestResultFacet",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
                 },
                 "drafting:evaluationType": "Probability",
                 "drafting:conclusion": false,
-                "drafting:evaluationRationale": "Hypothesis contradicts observed evidence of multiple folders and contents being deleted, as well as Recycle Bin records."
+                "drafting:evaluationRationale": "Hypothesis contradicts observations of multiple folders and contents being deleted, as well as Recycle Bin records."
             }
         ]
     }
