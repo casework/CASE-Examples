@@ -224,7 +224,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-bfe8b5bd-538b-41d9-96fd-2452d349f500",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
@@ -244,7 +244,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-ca2d4732-c740-43eb-a871-e1ec31910511",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
@@ -264,7 +264,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-d00368ad-405f-4d57-83c9-2b1ecfc767c9",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "5.5"
@@ -284,7 +284,7 @@ Further analysis finds that the data on disk presented by the tool is incompatib
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-6f17672c-8eed-4131-8449-b530facdb380",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
@@ -400,7 +400,7 @@ Further forensic analysis is performed of the photograph and its metadata, which
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-6082b0d8-d661-49da-b7cb-a203f8d6f395",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
@@ -464,7 +464,7 @@ Further forensic analysis is performed of the photograph and its metadata, which
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-859da12a-ca33-405a-aaeb-9b478960d10a",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
@@ -499,7 +499,7 @@ However, a skeptic might argue that photographs can be faked or geolocation info
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationType": "probability",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
@@ -607,7 +607,7 @@ The following EvaluationResults can be stated in words as the observations are e
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-14f1ed75-3a3d-4430-9173-e76679914ba2",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationType": "probability",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
@@ -675,7 +675,7 @@ The following EvaluationResults can be stated in words as the observations are e
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-273dc533-e496-4349-9d4b-febbe7ba1a6c",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationType": "probability",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
@@ -807,7 +807,7 @@ The following EvaluationResults can be stated in words as the observations are e
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-443f07d4-50be-42e1-906c-1d1e4551a32d",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
@@ -827,7 +827,7 @@ The following EvaluationResults can be stated in words as the observations are e
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-5dae0b2b-9120-443e-b8be-329a8f0d7bd1",
-                "@type": "drafting:HypothesisTestResultFacet",
+                "@type": "drafting:EvaluationEvidenceFacet",
                 "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.1"
