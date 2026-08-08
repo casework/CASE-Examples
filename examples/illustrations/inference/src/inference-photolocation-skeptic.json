@@ -12,9 +12,9 @@
         "uco-core:hasFacet": [
             {
                 "@id": "kb:hypothesis-test-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
-                "@type": "drafting:EvidenceEvaluationResultFacet",
+                "@type": "drafting:EvaluationResultFacet",
                 "drafting:evaluationType": "probability",
-                "drafting:evidenceEvaluation": {
+                "drafting:evaluationValue": {
                     "@type": "xsd:decimal",
                     "@value": "0.9"
                 },
