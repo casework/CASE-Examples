@@ -26,21 +26,21 @@ drafting:Hypothesis
 	sh:targetClass analysis:Hypothesis ;
 	.
 
-drafting:EvidenceEvaluationResultFacet
+drafting:EvaluationResultFacet
 	a
 		owl:Class ,
 		sh:NodeShape
 		;
 	rdfs:subClassOf uco-analysis:AnalyticResultFacet ;
-	rdfs:label "EvidenceEvaluationResultFacet"@en ;
-	rdfs:comment "An opinion that is formed on the basis of observed objects (evidence) in light of a given hypothesis."@en ;
+	rdfs:label "EvaluationResultFacet"@en ;
+	rdfs:comment "An opinion that is formed on the basis of observations in light of a given hypothesis."@en ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	sh:property
 		[
 			sh:datatype xsd:decimal ;
 			sh:maxCount "1"^^xsd:integer ;
 			sh:nodeKind sh:Literal ;
-			sh:path drafting:evidenceEvaluation ;
+			sh:path drafting:evaluationValue ;
 		] ,
 		[
 			sh:datatype xsd:string ;
@@ -74,7 +74,7 @@ drafting:EvidenceEvaluationResultFacet
 			sh:path uco-type:supercedes ;
 		]
 		;
-	sh:targetClass drafting:EvidenceEvaluationResultFacet ;
+	sh:targetClass drafting:EvaluationResultFacet ;
 	.
 
 drafting:evaluationRationale
@@ -93,9 +93,9 @@ drafting:evaluationType
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
 
-drafting:evidenceEvaluation
+drafting:evaluationValue
 	a owl:DatatypeProperty ;
-	rdfs:label "evidenceEvaluation"@en ;
+	rdfs:label "evaluationValue"@en ;
 	rdfs:comment
 		"(TODO This should probably go into UCO Core.)"@en ,
 		"A number that represents the probability, strength, similarity, etc. of the observed object(s) in light of the hypothesis."@en
@@ -115,7 +115,7 @@ drafting:conclusion
 drafting:usedTechnique
 	a owl:ObjectProperty ;
 	rdfs:label "usedTechnique"@en ;
-	rdfs:comment "The technique used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
+	rdfs:comment "The technique used to assign a value to the observations such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
 	rdfs:range uco-type:Technique ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
@@ -123,7 +123,7 @@ drafting:usedTechnique
 drafting:supercedes
 	a owl:ObjectProperty ;
 	rdfs:label "supercedes"@en ;
-	rdfs:comment "An earlier EvidenceEvaluationResult instance that this one replaces." ;
+	rdfs:comment "An earlier EvaluationResult instance that this one replaces." ;
 	rdfs:range uco-type:Technique ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
@@ -131,7 +131,7 @@ drafting:supercedes
 drafting:usedTechnique
 	a owl:ObjectProperty ;
 	rdfs:label "generatingTechnique"@en ;
-	rdfs:comment "The technique used to assign a value to the observed evidence such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
+	rdfs:comment "The technique used to assign a value to the observations such as probability model, computed similarity (e.g., Levenshtein distance), strength of evidence (e.g. C-Scale)." ;
 	rdfs:range uco-type:Technique ;
 	rdfs:seeAlso <https://case.atlassian.net/browse/ONT-434> ;
 	.
