@@ -11,7 +11,7 @@
         },
         "uco-core:hasFacet": [
             {
-                "@id": "kb:hypothesis-test-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
+                "@id": "kb:evaluation-result-facet-8b32eede-ff1f-410e-bf2a-4165a4211514",
                 "@type": "drafting:EvaluationResultFacet",
                 "drafting:evaluationType": "probability",
                 "drafting:evaluationValue": {
