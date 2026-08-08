@@ -19,11 +19,11 @@ WHERE {
 
   ?nAnalyticResult
     a uco-analysis:AnalyticResult ;
-    uco-core:hasFacet ?nHypothesisTestResultFacet ;
+    uco-core:hasFacet ?nEvaluationResultFacet ;
     .
 
-  ?nHypothesisTestResultFacet
-    a drafting:HypothesisTestResultFacet ;
+  ?nEvaluationResultFacet
+    a drafting:EvaluationResultFacet ;
     drafting:evaluationRationale ?lEvaluationRationale ;
     drafting:evaluationType ?lEvaluationType ;
     drafting:conclusion ?lConclusion ;
@@ -36,4 +36,4 @@ WHERE {
 #    .
 }
 # Note - the IRIs' UUID components were picked to sort in a desired presentation order.
-ORDER BY ?nHypothesisTestResultFacet
+ORDER BY ?nEvaluationResultFacet
