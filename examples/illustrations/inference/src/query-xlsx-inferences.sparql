@@ -9,7 +9,7 @@
 #
 # We would appreciate acknowledgement if the software is used.
 
-SELECT ?lEvaluationType ?lEvidenceEvaluation ?lEvaluationRationale ?lConclusion
+SELECT ?lEvaluationType ?lEvaluation ?lEvaluationRationale ?lConclusion
 WHERE {
 #  ?nAnalysis
 #    a uco-analysis:Analysis ;
@@ -27,7 +27,7 @@ WHERE {
     drafting:evaluationRationale ?lEvaluationRationale ;
     drafting:evaluationType ?lEvaluationType ;
     drafting:conclusion ?lConclusion ;
-    drafting:evidenceEvaluation ?lEvidenceEvaluation ;
+    drafting:evaluationValue ?lEvaluationValue ;
     .
 
 #  ?nHypothesis
