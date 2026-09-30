@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>_bd40f374d8f2e85d5f211f446a5ea1078f32550ed896c666dc8ea9790dc0093b</title>
 <g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe">
-<polygon fill="#fed37f" stroke="black" points="703.76,-192.26 365.29,-217.02 26.82,-192.26 27.14,-152.19 703.44,-152.19 703.76,-192.26"/>
+<polygon fill="#fed37f" stroke="#000000" points="703.76,-192.26 365.29,-217.02 26.82,-192.26 27.14,-152.19 703.44,-152.19 703.76,-192.26"/>
 <text xml:space="preserve" text-anchor="middle" x="365.29" y="-184.39" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe</text>
 <text xml:space="preserve" text-anchor="middle" x="365.29" y="-167.89" font-family="Times,serif" font-size="14.00">extracted</text>
 </a>

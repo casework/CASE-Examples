@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
 <g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8">
-<polygon fill="#fed37f" stroke="black" points="800.44,-339.42 490.88,-351.86 181.31,-339.42 181.6,-319.3 800.15,-319.3 800.44,-339.42"/>
+<polygon fill="#fed37f" stroke="#000000" points="800.44,-339.42 490.88,-351.86 181.31,-339.42 181.6,-319.3 800.15,-319.3 800.44,-339.42"/>
 <text xml:space="preserve" text-anchor="middle" x="490.88" y="-328.81" font-family="Times,serif" font-size="14.00">ID &#45; kb:annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8</text>
 </a>
 </g>
@@ -22,7 +22,7 @@
 <g id="node2" class="node">
 <title>_fef2c7a50aa047afde2c4e41b1d4da1913d582cb18936249b94b4b848662fb84</title>
 <g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d">
-<polygon fill="#fed37f" stroke="black" points="951.3,-422.67 663.88,-435.11 376.45,-422.67 376.72,-402.55 951.03,-402.55 951.3,-422.67"/>
+<polygon fill="#fed37f" stroke="#000000" points="951.3,-422.67 663.88,-435.11 376.45,-422.67 376.72,-402.55 951.03,-402.55 951.3,-422.67"/>
 <text xml:space="preserve" text-anchor="middle" x="663.88" y="-412.06" font-family="Times,serif" font-size="14.00">ID &#45; kb:examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d</text>
 </a>
 </g>
@@ -70,7 +70,7 @@
 <g id="node5" class="node">
 <title>_932826a2287c048d0900d9e6dacbffcc0c6fb6ecafe48111ff362f5e8a1d5f08</title>
 <g id="a_node5"><a xlink:title="ID &#45; http://example.org/kb/annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b">
-<ellipse fill="#fff68f" stroke="#808080" cx="459.88" cy="-123.56" rx="248.9" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="459.88" cy="-123.56" rx="248.9" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="459.88" y="-134.76" font-family="Times,serif" font-size="14.00">ID &#45; kb:annotation&#45;b8258799&#45;b465&#45;4182&#45;904b&#45;c0aa73a35b0b</text>
 <text xml:space="preserve" text-anchor="middle" x="459.88" y="-102.26" font-family="Times,serif" font-size="14.00">Photo was taken by a Canon digital camera.</text>
 </a>

@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>_64182b93b29bf9753edab8aaf833eea6f309be3e2ab20a5504ba80adf90be4cb</title>
 <g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/ConfiguredTool&#45;22cb1ad6&#45;7910&#45;4a71&#45;8654&#45;5e93280111a3">
-<polygon fill="#fed37f" stroke="black" points="1103.22,-917.82 770,-942.59 436.78,-917.82 437.09,-877.76 1102.91,-877.76 1103.22,-917.82"/>
+<polygon fill="#fed37f" stroke="#000000" points="1103.22,-917.82 770,-942.59 436.78,-917.82 437.09,-877.76 1102.91,-877.76 1103.22,-917.82"/>
 <text xml:space="preserve" text-anchor="middle" x="770" y="-909.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:ConfiguredTool&#45;22cb1ad6&#45;7910&#45;4a71&#45;8654&#45;5e93280111a3</text>
 <text xml:space="preserve" text-anchor="middle" x="770" y="-893.45" font-family="Times,serif" font-size="14.00">Tool 5</text>
 </a>
@@ -23,7 +23,7 @@
 <g id="node4" class="node">
 <title>_262d12eae474e9b0be0be4c83ab88afaa60ce5efaf2259f400f146bfedf782f0</title>
 <g id="a_node4"><a xlink:title="ID &#45; http://example.org/kb/Role&#45;4e37c6b0&#45;f4d7&#45;4720&#45;baa6&#45;0a8f421180f8">
-<polygon fill="#fed37f" stroke="black" points="1199.57,-2214.12 926,-2238.88 652.43,-2214.12 652.68,-2174.05 1199.32,-2174.05 1199.57,-2214.12"/>
+<polygon fill="#fed37f" stroke="#000000" points="1199.57,-2214.12 926,-2238.88 652.43,-2214.12 652.68,-2174.05 1199.32,-2174.05 1199.57,-2214.12"/>
 <text xml:space="preserve" text-anchor="middle" x="926" y="-2206.24" font-family="Times,serif" font-size="14.00">ID &#45; kb:Role&#45;4e37c6b0&#45;f4d7&#45;4720&#45;baa6&#45;0a8f421180f8</text>
 <text xml:space="preserve" text-anchor="middle" x="926" y="-2189.74" font-family="Times,serif" font-size="14.00">Forensic Researcher</text>
 </a>
@@ -40,7 +40,7 @@
 <g id="node2" class="node">
 <title>_10fbbca9cdab0d6037bbabdd52de6c2ceffe7dbfaf478b42542dba8cd461255e</title>
 <g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/ConfiguredTool&#45;fec1a824&#45;f519&#45;403f&#45;a700&#45;d4047ecdb51e">
-<polygon fill="#fed37f" stroke="black" points="935.01,-576.57 609,-601.34 282.99,-576.57 283.29,-536.51 934.71,-536.51 935.01,-576.57"/>
+<polygon fill="#fed37f" stroke="#000000" points="935.01,-576.57 609,-601.34 282.99,-576.57 283.29,-536.51 934.71,-536.51 935.01,-576.57"/>
 <text xml:space="preserve" text-anchor="middle" x="609" y="-568.7" font-family="Times,serif" font-size="14.00">ID &#45; kb:ConfiguredTool&#45;fec1a824&#45;f519&#45;403f&#45;a700&#45;d4047ecdb51e</text>
 <text xml:space="preserve" text-anchor="middle" x="609" y="-552.2" font-family="Times,serif" font-size="14.00">Tool 1</text>
 </a>
@@ -57,7 +57,7 @@
 <g id="node3" class="node">
 <title>_e721a162dcc4dc6f26be6e259bfc1245e74c3ab0b9a82deb28e86d0fe36cf97f</title>
 <g id="a_node3"><a xlink:title="ID &#45; http://example.org/kb/Role&#45;3bfb3efb&#45;ffaa&#45;4d93&#45;a27d&#45;e9e52f345b1b">
-<polygon fill="#fed37f" stroke="black" points="2617.98,-235.32 2349,-260.09 2080.02,-235.32 2080.27,-195.26 2617.73,-195.26 2617.98,-235.32"/>
+<polygon fill="#fed37f" stroke="#000000" points="2617.98,-235.32 2349,-260.09 2080.02,-235.32 2080.27,-195.26 2617.73,-195.26 2617.98,-235.32"/>
 <text xml:space="preserve" text-anchor="middle" x="2349" y="-227.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:Role&#45;3bfb3efb&#45;ffaa&#45;4d93&#45;a27d&#45;e9e52f345b1b</text>
 <text xml:space="preserve" text-anchor="middle" x="2349" y="-210.95" font-family="Times,serif" font-size="14.00">Forensic Researcher</text>
 </a>
@@ -67,7 +67,7 @@
 <g id="node5" class="node">
 <title>_b93b4e978e18b0b301c5df93859c36a0b1c8ea142ae061203ac93c4444347dd9</title>
 <g id="a_node5"><a xlink:title="ID &#45; http://example.org/kb/Tool&#45;8ae63f46&#45;44cb&#45;40d9&#45;9e50&#45;539b29f05ea8">
-<polygon fill="#fed37f" stroke="black" points="1621.88,-1404.09 1347,-1448.48 1072.12,-1404.09 1072.37,-1332.27 1621.63,-1332.27 1621.88,-1404.09"/>
+<polygon fill="#fed37f" stroke="#000000" points="1621.88,-1404.09 1347,-1448.48 1072.12,-1404.09 1072.37,-1332.27 1621.63,-1332.27 1621.88,-1404.09"/>
 <text xml:space="preserve" text-anchor="middle" x="1347" y="-1403.69" font-family="Times,serif" font-size="14.00">ID &#45; kb:Tool&#45;8ae63f46&#45;44cb&#45;40d9&#45;9e50&#45;539b29f05ea8</text>
 <text xml:space="preserve" text-anchor="middle" x="1347" y="-1387.19" font-family="Times,serif" font-size="14.00">file_copier.py</text>
 <text xml:space="preserve" text-anchor="middle" x="1347" y="-1354.69" font-family="Times,serif" font-size="14.00">A one&#45;off test subject population script.</text>
@@ -85,7 +85,7 @@
 <g id="node6" class="node">
 <title>_2e5ea510449124f4a3619d59b7c84c9a38b15bcf5856db312d01775b869b1b80</title>
 <g id="a_node6"><a xlink:title="ID &#45; http://example.org/kb/Tool&#45;e7ce892b&#45;8a19&#45;4f62&#45;b43d&#45;4736ccb6b696">
-<polygon fill="#fed37f" stroke="black" points="1137.85,-1862.17 861,-1886.93 584.15,-1862.17 584.41,-1822.11 1137.59,-1822.11 1137.85,-1862.17"/>
+<polygon fill="#fed37f" stroke="#000000" points="1137.85,-1862.17 861,-1886.93 584.15,-1862.17 584.41,-1822.11 1137.59,-1822.11 1137.85,-1862.17"/>
 <text xml:space="preserve" text-anchor="middle" x="861" y="-1854.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:Tool&#45;e7ce892b&#45;8a19&#45;4f62&#45;b43d&#45;4736ccb6b696</text>
 <text xml:space="preserve" text-anchor="middle" x="861" y="-1837.8" font-family="Times,serif" font-size="14.00">Disk Management</text>
 </a>
@@ -138,7 +138,7 @@
 <g id="node16" class="node">
 <title>_fc0c5da04ac5fbc5306853d1a2b8244c9ba4c915aa9c9a6be4570f396b112877</title>
 <g id="a_node16"><a xlink:title="ID &#45; http://example.org/kb/DiskPartition4&#45;5715fe11&#45;06b8&#45;45ac&#45;832d&#45;c4167f4aac17">
-<ellipse fill="#fff68f" stroke="#808080" cx="378" cy="-326.25" rx="250.44" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="378" cy="-326.25" rx="250.44" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="378" y="-321.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:DiskPartition4&#45;5715fe11&#45;06b8&#45;45ac&#45;832d&#45;c4167f4aac17</text>
 </a>
 </g>
@@ -154,7 +154,7 @@
 <g id="node18" class="node">
 <title>_6cb98bb7f6c962a0ade51a0538d063f524ffc4c467b06e154b0f6b87fce354dd</title>
 <g id="a_node18"><a xlink:title="ID &#45; http://example.org/kb/DiskPartitionSystem&#45;a639c005&#45;a0be&#45;4eab&#45;ac44&#45;e9f48cc84245">
-<ellipse fill="#fff68f" stroke="#808080" cx="1455" cy="-326.25" rx="272.96" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1455" cy="-326.25" rx="272.96" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1455" y="-321.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:DiskPartitionSystem&#45;a639c005&#45;a0be&#45;4eab&#45;ac44&#45;e9f48cc84245</text>
 </a>
 </g>
@@ -170,7 +170,7 @@
 <g id="node19" class="node">
 <title>_aa91429be3e2f53d41811ce42a7774ec3eaa4b65c3b8b5fe06c424d3fc98a022</title>
 <g id="a_node19"><a xlink:title="ID &#45; http://example.org/kb/File&#45;ce3a6e6a&#45;bf38&#45;4dec&#45;9b97&#45;a906a998ff06">
-<ellipse fill="#fff68f" stroke="#808080" cx="1367" cy="-667.5" rx="208.48" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1367" cy="-667.5" rx="208.48" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1367" y="-662.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:File&#45;ce3a6e6a&#45;bf38&#45;4dec&#45;9b97&#45;a906a998ff06</text>
 </a>
 </g>
@@ -186,7 +186,7 @@
 <g id="node21" class="node">
 <title>_fa718e5b18eef487718a727dc2d4847c7ec1316da00007726bfc5018fefdb434</title>
 <g id="a_node21"><a xlink:title="ID &#45; http://example.org/kb/Relationship&#45;05df462f&#45;a09a&#45;45f9&#45;b0bc&#45;33af56fad990">
-<ellipse fill="#fff68f" stroke="#808080" cx="924" cy="-326.25" rx="239.7" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="924" cy="-326.25" rx="239.7" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="924" y="-321.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:Relationship&#45;05df462f&#45;a09a&#45;45f9&#45;b0bc&#45;33af56fad990</text>
 </a>
 </g>
@@ -259,7 +259,7 @@
 <g id="node14" class="node">
 <title>_f6a1d3b259463ef1714d7d2216d484dccdd595779e07a79bbfec50d45df7e546</title>
 <g id="a_node14"><a xlink:title="ID &#45; http://example.org/kb/Disk&#45;8ad9fa04&#45;cf49&#45;4082&#45;b828&#45;29b7f01f47cb">
-<ellipse fill="#fff68f" stroke="#808080" cx="926" cy="-1975.4" rx="220.26" ry="40.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="926" cy="-1975.4" rx="220.26" ry="40.31"/>
 <text xml:space="preserve" text-anchor="middle" x="926" y="-1986.6" font-family="Times,serif" font-size="14.00">ID &#45; kb:Disk&#45;8ad9fa04&#45;cf49&#45;4082&#45;b828&#45;29b7f01f47cb</text>
 <text xml:space="preserve" text-anchor="middle" x="926" y="-1954.1" font-family="Times,serif" font-size="14.00">USB Disk</text>
 </a>
@@ -276,7 +276,7 @@
 <g id="node20" class="node">
 <title>_2851dbf8980b1134144308d6dfbe25343b9cfea5a003fcb74391c60bfb718ca2</title>
 <g id="a_node20"><a xlink:title="ID &#45; http://example.org/kb/FileSystem&#45;4c4577c2&#45;cbf2&#45;41c6&#45;a615&#45;02a78c0577a4">
-<ellipse fill="#fff68f" stroke="#808080" cx="1586" cy="-1571.04" rx="239.7" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1586" cy="-1571.04" rx="239.7" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1586" y="-1565.99" font-family="Times,serif" font-size="14.00">ID &#45; kb:FileSystem&#45;4c4577c2&#45;cbf2&#45;41c6&#45;a615&#45;02a78c0577a4</text>
 </a>
 </g>
@@ -364,7 +364,7 @@
 <g id="node15" class="node">
 <title>_e5b723ea042441484d024f921800e8b10f82288632a40a7b832d6ebf28aabbe4</title>
 <g id="a_node15"><a xlink:title="ID &#45; http://example.org/kb/DiskPartition&#45;5000a2e8&#45;13d4&#45;4cab&#45;bf2a&#45;bcf217b991f0">
-<ellipse fill="#fff68f" stroke="#808080" cx="2859" cy="-1571.04" rx="253.67" ry="75.31"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2859" cy="-1571.04" rx="253.67" ry="75.31"/>
 <text xml:space="preserve" text-anchor="middle" x="2859" y="-1606.99" font-family="Times,serif" font-size="14.00">ID &#45; kb:DiskPartition&#45;5000a2e8&#45;13d4&#45;4cab&#45;bf2a&#45;bcf217b991f0</text>
 <text xml:space="preserve" text-anchor="middle" x="2859" y="-1574.49" font-family="Times,serif" font-size="14.00">CASE and UCO do not at present have a concept for an </text>
 <text xml:space="preserve" text-anchor="middle" x="2859" y="-1557.99" font-family="Times,serif" font-size="14.00">object&#39;s &#39;conclusion&#39;, analagous to a PROV Invalidation. &#160;</text>
@@ -391,7 +391,7 @@
 <g id="node17" class="node">
 <title>_f174a839111bfde440da2483399e67d4345818f2b143ba2e85580f3fd26b8b02</title>
 <g id="a_node17"><a xlink:title="ID &#45; http://example.org/kb/DiskPartitionSystem&#45;0c96e621&#45;9eff&#45;43e8&#45;bd3d&#45;9e4e8c075df0">
-<ellipse fill="#fff68f" stroke="#808080" cx="2277" cy="-1571.04" rx="271.94" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2277" cy="-1571.04" rx="271.94" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2277" y="-1565.99" font-family="Times,serif" font-size="14.00">ID &#45; kb:DiskPartitionSystem&#45;0c96e621&#45;9eff&#45;43e8&#45;bd3d&#45;9e4e8c075df0</text>
 </a>
 </g>
@@ -493,7 +493,7 @@
 <g id="node22" class="node">
 <title>_cd4820919161cc469843f1d63d22b92fb115a670079fad206b0eca90a23d085f</title>
 <g id="a_node22"><a xlink:title="ID &#45; http://example.org/kb/Relationship&#45;05f2c909&#45;3a5c&#45;433f&#45;918d&#45;3b410df21e69">
-<ellipse fill="#fff68f" stroke="#808080" cx="789" cy="-1571.04" rx="243.28" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="789" cy="-1571.04" rx="243.28" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="789" y="-1565.99" font-family="Times,serif" font-size="14.00">ID &#45; kb:Relationship&#45;05f2c909&#45;3a5c&#45;433f&#45;918d&#45;3b410df21e69</text>
 </a>
 </g>
@@ -890,7 +890,7 @@
 <g id="node23" class="node">
 <title>_7081b62bbe61577a2322d080b29f9a434bdbfa59f8cb8f20590f9fe9e4713a08</title>
 <g id="a_node23"><a xlink:title="ID &#45; http://example.org/kb/Relationship&#45;b6ab7ce4&#45;9f8c&#45;4adc&#45;9fdb&#45;d5ab36f5aad2">
-<ellipse fill="#fff68f" stroke="#808080" cx="1919" cy="-18" rx="240.72" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1919" cy="-18" rx="240.72" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1919" y="-12.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:Relationship&#45;b6ab7ce4&#45;9f8c&#45;4adc&#45;9fdb&#45;d5ab36f5aad2</text>
 </a>
 </g>

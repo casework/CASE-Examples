@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>_9e4cde24c30ce07bf4b9078546ff9ba2d16afcea1003f475930915476ca37d74</title>
 <g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/aeschylus&#45;1ab8a80e&#45;39fb&#45;4209&#45;9781&#45;b10bdbc5d0c2">
-<polygon fill="#fed37f" stroke="black" points="1161.59,-50.56 871,-63 580.41,-50.56 580.68,-30.44 1161.32,-30.44 1161.59,-50.56"/>
+<polygon fill="#fed37f" stroke="#000000" points="1161.59,-50.56 871,-63 580.41,-50.56 580.68,-30.44 1161.32,-30.44 1161.59,-50.56"/>
 <text xml:space="preserve" text-anchor="middle" x="871" y="-39.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:aeschylus&#45;1ab8a80e&#45;39fb&#45;4209&#45;9781&#45;b10bdbc5d0c2</text>
 </a>
 </g>
@@ -22,7 +22,7 @@
 <g id="node2" class="node">
 <title>_50550124da9b361eb5768623204fd5ea3e47387a1b1481ab726ce17832c36623</title>
 <g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/athens&#45;warrant&#45;3a0c2e90&#45;d6ad&#45;412d&#45;a4d2&#45;e0997e640305">
-<polygon fill="#fed37f" stroke="black" points="2698.63,-1547.73 2384,-1560.17 2069.37,-1547.73 2069.67,-1527.61 2698.33,-1527.61 2698.63,-1547.73"/>
+<polygon fill="#fed37f" stroke="#000000" points="2698.63,-1547.73 2384,-1560.17 2069.37,-1547.73 2069.67,-1527.61 2698.33,-1527.61 2698.63,-1547.73"/>
 <text xml:space="preserve" text-anchor="middle" x="2384" y="-1537.12" font-family="Times,serif" font-size="14.00">ID &#45; kb:athens&#45;warrant&#45;3a0c2e90&#45;d6ad&#45;412d&#45;a4d2&#45;e0997e640305</text>
 </a>
 </g>
@@ -31,7 +31,7 @@
 <g id="node7" class="node">
 <title>_becc3c40125141cf7a29d5f51b989a313e6be9887b9af5139829b1c44fc36125</title>
 <g id="a_node7"><a xlink:title="ID &#45; http://example.org/kb/investigator&#45;6f465841&#45;07f4&#45;40a6&#45;b9ac&#45;7b069a7cf196">
-<polygon fill="#fed37f" stroke="black" points="3068,-1654.33 2761,-1679.09 2454,-1654.33 2454.28,-1614.26 3067.72,-1614.26 3068,-1654.33"/>
+<polygon fill="#fed37f" stroke="#000000" points="3068,-1654.33 2761,-1679.09 2454,-1654.33 2454.28,-1614.26 3067.72,-1614.26 3068,-1654.33"/>
 <text xml:space="preserve" text-anchor="middle" x="2761" y="-1646.46" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigator&#45;6f465841&#45;07f4&#45;40a6&#45;b9ac&#45;7b069a7cf196</text>
 <text xml:space="preserve" text-anchor="middle" x="2761" y="-1629.96" font-family="Times,serif" font-size="14.00">Investigator</text>
 </a>
@@ -48,7 +48,7 @@
 <g id="node8" class="node">
 <title>_f49372e9cffc6109da5e21920d5959ba21cdd104e44aaa036a58d1b4f54e9ff7</title>
 <g id="a_node8"><a xlink:title="ID &#45; http://example.org/kb/investigator&#45;72986b46&#45;69f5&#45;4767&#45;878c&#45;d4894be9069e">
-<polygon fill="#fed37f" stroke="black" points="2280.25,-1654.33 1968,-1679.09 1655.75,-1654.33 1656.04,-1614.26 2279.96,-1614.26 2280.25,-1654.33"/>
+<polygon fill="#fed37f" stroke="#000000" points="2280.25,-1654.33 1968,-1679.09 1655.75,-1654.33 1656.04,-1614.26 2279.96,-1614.26 2280.25,-1654.33"/>
 <text xml:space="preserve" text-anchor="middle" x="1968" y="-1646.46" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigator&#45;72986b46&#45;69f5&#45;4767&#45;878c&#45;d4894be9069e</text>
 <text xml:space="preserve" text-anchor="middle" x="1968" y="-1629.96" font-family="Times,serif" font-size="14.00">Investigator</text>
 </a>
@@ -65,7 +65,7 @@
 <g id="node3" class="node">
 <title>_615b47f56ce2df0f9f8f1660f3458349d6870f49d88531323814f159fbe9b568</title>
 <g id="a_node3"><a xlink:title="ID &#45; http://example.org/kb/cassandra&#45;1b38d28a&#45;f88f&#45;471f&#45;8f83&#45;16877dedacc0">
-<polygon fill="#fed37f" stroke="black" points="2163.89,-50.56 1879,-63 1594.11,-50.56 1594.37,-30.44 2163.63,-30.44 2163.89,-50.56"/>
+<polygon fill="#fed37f" stroke="#000000" points="2163.89,-50.56 1879,-63 1594.11,-50.56 1594.37,-30.44 2163.63,-30.44 2163.89,-50.56"/>
 <text xml:space="preserve" text-anchor="middle" x="1879" y="-39.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:cassandra&#45;1b38d28a&#45;f88f&#45;471f&#45;8f83&#45;16877dedacc0</text>
 </a>
 </g>
@@ -74,7 +74,7 @@
 <g id="node4" class="node">
 <title>_1b75697124e69347e0e37861741e3f89c7177b85faa74d99437fb21c757963f6</title>
 <g id="a_node4"><a xlink:title="ID &#45; http://example.org/kb/electra&#45;a960648e&#45;c88e&#45;4728&#45;9853&#45;7b7f06de8caa">
-<polygon fill="#fed37f" stroke="black" points="2731.77,-50.56 2457,-63 2182.23,-50.56 2182.48,-30.44 2731.52,-30.44 2731.77,-50.56"/>
+<polygon fill="#fed37f" stroke="#000000" points="2731.77,-50.56 2457,-63 2182.23,-50.56 2182.48,-30.44 2731.52,-30.44 2731.77,-50.56"/>
 <text xml:space="preserve" text-anchor="middle" x="2457" y="-39.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:electra&#45;a960648e&#45;c88e&#45;4728&#45;9853&#45;7b7f06de8caa</text>
 </a>
 </g>
@@ -83,7 +83,7 @@
 <g id="node5" class="node">
 <title>_6c7a2319969674c8d7a95a587ba3981c2af5c6dde7af5720a93d4869353f43dd</title>
 <g id="a_node5"><a xlink:title="ID &#45; http://example.org/kb/euripides&#45;3696c710&#45;161f&#45;47af&#45;9ae8&#45;61b178611773">
-<polygon fill="#fed37f" stroke="black" points="3323.79,-50.56 3037,-63 2750.21,-50.56 2750.48,-30.44 3323.52,-30.44 3323.79,-50.56"/>
+<polygon fill="#fed37f" stroke="#000000" points="3323.79,-50.56 3037,-63 2750.21,-50.56 2750.48,-30.44 3323.52,-30.44 3323.79,-50.56"/>
 <text xml:space="preserve" text-anchor="middle" x="3037" y="-39.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:euripides&#45;3696c710&#45;161f&#45;47af&#45;9ae8&#45;61b178611773</text>
 </a>
 </g>
@@ -92,7 +92,7 @@
 <g id="node6" class="node">
 <title>_bd40f374d8f2e85d5f211f446a5ea1078f32550ed896c666dc8ea9790dc0093b</title>
 <g id="a_node6"><a xlink:title="ID &#45; http://example.org/kb/investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe">
-<polygon fill="#fed37f" stroke="black" points="2121.47,-592.66 1783,-617.42 1444.53,-592.66 1444.85,-552.59 2121.15,-552.59 2121.47,-592.66"/>
+<polygon fill="#fed37f" stroke="#000000" points="2121.47,-592.66 1783,-617.42 1444.53,-592.66 1444.85,-552.59 2121.15,-552.59 2121.47,-592.66"/>
 <text xml:space="preserve" text-anchor="middle" x="1783" y="-584.79" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigative&#45;action&#45;b8fd94b9&#45;ceae&#45;4c2f&#45;aa38&#45;8cfaa98804fe</text>
 <text xml:space="preserve" text-anchor="middle" x="1783" y="-568.29" font-family="Times,serif" font-size="14.00">extracted</text>
 </a>
@@ -109,7 +109,7 @@
 <g id="node10" class="node">
 <title>_b64c08e6643fcaa7433a98b1a0c32be0aa261f87f029fe8968fa0793e07b0fd2</title>
 <g id="a_node10"><a xlink:title="ID &#45; http://example.org/kb/tool&#45;5316a112&#45;dcd3&#45;4515&#45;a14e&#45;06396126ed98">
-<polygon fill="#fed37f" stroke="black" points="2293.54,-720.74 2018,-745.51 1742.46,-720.74 1742.72,-680.68 2293.28,-680.68 2293.54,-720.74"/>
+<polygon fill="#fed37f" stroke="#000000" points="2293.54,-720.74 2018,-745.51 1742.46,-720.74 1742.72,-680.68 2293.28,-680.68 2293.54,-720.74"/>
 <text xml:space="preserve" text-anchor="middle" x="2018" y="-712.87" font-family="Times,serif" font-size="14.00">ID &#45; kb:tool&#45;5316a112&#45;dcd3&#45;4515&#45;a14e&#45;06396126ed98</text>
 <text xml:space="preserve" text-anchor="middle" x="2018" y="-696.37" font-family="Times,serif" font-size="14.00">Plaso</text>
 </a>
@@ -145,7 +145,7 @@
 <g id="node23" class="node">
 <title>_f9d7b1029b1d231369ac701e88d0cbdb6e7a953e1d7a76837c2426317209ef58</title>
 <g id="a_node23"><a xlink:title="ID &#45; http://example.org/kb/cassandra&#45;mobiledevice&#45;forensicduplicate&#45;95d5a618&#45;8265&#45;4cb8&#45;8140&#45;ac8ea281c536">
-<ellipse fill="#fff68f" stroke="#808080" cx="2329" cy="-819.92" rx="355.37" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2329" cy="-819.92" rx="355.37" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2329" y="-814.87" font-family="Times,serif" font-size="14.00">ID &#45; kb:cassandra&#45;mobiledevice&#45;forensicduplicate&#45;95d5a618&#45;8265&#45;4cb8&#45;8140&#45;ac8ea281c536</text>
 </a>
 </g>
@@ -194,7 +194,7 @@
 <g id="node9" class="node">
 <title>_10c65ed8b92b2983766f24d048458224f9001233d2ea8e635f06816e9a83cc7a</title>
 <g id="a_node9"><a xlink:title="ID &#45; http://example.org/kb/thyestes&#45;b9111c63&#45;19a8&#45;4bf4&#45;8287&#45;b14485f01b45">
-<polygon fill="#fed37f" stroke="black" points="3908,-50.56 3625,-63 3342,-50.56 3342.27,-30.44 3907.73,-30.44 3908,-50.56"/>
+<polygon fill="#fed37f" stroke="#000000" points="3908,-50.56 3625,-63 3342,-50.56 3342.27,-30.44 3907.73,-30.44 3908,-50.56"/>
 <text xml:space="preserve" text-anchor="middle" x="3625" y="-39.95" font-family="Times,serif" font-size="14.00">ID &#45; kb:thyestes&#45;b9111c63&#45;19a8&#45;4bf4&#45;8287&#45;b14485f01b45</text>
 </a>
 </g>
@@ -210,7 +210,7 @@
 <g id="node11" class="node">
 <title>_fddc20887bdadaf9c7733fa69676aafd9f76fd38d869aff6208107d2b9093be0</title>
 <g id="a_node11"><a xlink:title="ID &#45; http://example.org/kb/tool&#45;d38cc165&#45;d21d&#45;40e3&#45;8080&#45;174671a5f6f6">
-<polygon fill="#fed37f" stroke="black" points="2327.26,-1037.74 2055,-1062.51 1782.74,-1037.74 1782.99,-997.68 2327.01,-997.68 2327.26,-1037.74"/>
+<polygon fill="#fed37f" stroke="#000000" points="2327.26,-1037.74 2055,-1062.51 1782.74,-1037.74 1782.99,-997.68 2327.01,-997.68 2327.26,-1037.74"/>
 <text xml:space="preserve" text-anchor="middle" x="2055" y="-1029.87" font-family="Times,serif" font-size="14.00">ID &#45; kb:tool&#45;d38cc165&#45;d21d&#45;40e3&#45;8080&#45;174671a5f6f6</text>
 <text xml:space="preserve" text-anchor="middle" x="2055" y="-1013.37" font-family="Times,serif" font-size="14.00">MobileExtractor</text>
 </a>
@@ -227,7 +227,7 @@
 <g id="node12" class="node">
 <title>_aa3b2b26b6301dc0b1d1ae41c66e5054c27e7e54199489382ca81a57651e149f</title>
 <g id="a_node12"><a xlink:title="ID &#45; http://example.org/kb/tool&#45;e39f1bf1&#45;8abd&#45;4411&#45;bc05&#45;36f03192bc40">
-<polygon fill="#fed37f" stroke="black" points="1320.29,-381.32 1050,-406.09 779.71,-381.32 779.96,-341.26 1320.04,-341.26 1320.29,-381.32"/>
+<polygon fill="#fed37f" stroke="#000000" points="1320.29,-381.32 1050,-406.09 779.71,-381.32 779.96,-341.26 1320.04,-341.26 1320.29,-381.32"/>
 <text xml:space="preserve" text-anchor="middle" x="1050" y="-373.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:tool&#45;e39f1bf1&#45;8abd&#45;4411&#45;bc05&#45;36f03192bc40</text>
 <text xml:space="preserve" text-anchor="middle" x="1050" y="-356.95" font-family="Times,serif" font-size="14.00">sqlite/android_sms</text>
 </a>
@@ -278,7 +278,7 @@
 <g id="node22" class="node">
 <title>_68d3376d994fc5710c5e2d65f80584e045aee886122a698a96317b1676fb4133</title>
 <g id="a_node22"><a xlink:title="ID &#45; http://example.org/kb/cassandra&#45;device&#45;d2ac1471&#45;2d0f&#45;4032&#45;8cca&#45;53d317600cba">
-<ellipse fill="#fff68f" stroke="#808080" cx="2617" cy="-1354.17" rx="261.19" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2617" cy="-1354.17" rx="261.19" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2617" y="-1349.12" font-family="Times,serif" font-size="14.00">ID &#45; kb:cassandra&#45;device&#45;d2ac1471&#45;2d0f&#45;4032&#45;8cca&#45;53d317600cba</text>
 </a>
 </g>
@@ -437,7 +437,7 @@
 <g id="node19" class="node">
 <title>_8949f18c14b4dec324e841d79a013264766588ae72e8ead9caa40c514e77b60a</title>
 <g id="a_node19"><a xlink:title="ID &#45; http://example.org/kb/argive&#45;elder1&#45;phoneaccnt&#45;10ecce02&#45;71b9&#45;4623&#45;8fbc&#45;1f2914c79362">
-<ellipse fill="#fff68f" stroke="#808080" cx="2685" cy="-155.25" rx="291.39" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2685" cy="-155.25" rx="291.39" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2685" y="-150.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:argive&#45;elder1&#45;phoneaccnt&#45;10ecce02&#45;71b9&#45;4623&#45;8fbc&#45;1f2914c79362</text>
 </a>
 </g>
@@ -453,7 +453,7 @@
 <g id="node20" class="node">
 <title>_5732ebac575c06441f1658553cf3d041ec2c00fd435bb5384be6b5f742cffb77</title>
 <g id="a_node20"><a xlink:title="ID &#45; http://example.org/kb/argive&#45;elder2&#45;phoneaccnt&#45;7d296cea&#45;00aa&#45;4f42&#45;b357&#45;281a64df01e6">
-<ellipse fill="#fff68f" stroke="#808080" cx="959" cy="-155.25" rx="290.88" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="959" cy="-155.25" rx="290.88" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="959" y="-150.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:argive&#45;elder2&#45;phoneaccnt&#45;7d296cea&#45;00aa&#45;4f42&#45;b357&#45;281a64df01e6</text>
 </a>
 </g>
@@ -469,7 +469,7 @@
 <g id="node21" class="node">
 <title>_45b920239cd6e6527c0e1c5b8f9d9fc3a4dc6e74cc62da69996503d6a6c12171</title>
 <g id="a_node21"><a xlink:title="ID &#45; http://example.org/kb/argive&#45;elder3&#45;phoneaccnt&#45;93b32564&#45;9b02&#45;497e&#45;a58f&#45;1b4f1c03c41e">
-<ellipse fill="#fff68f" stroke="#808080" cx="358" cy="-155.25" rx="291.9" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="358" cy="-155.25" rx="291.9" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="358" y="-150.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:argive&#45;elder3&#45;phoneaccnt&#45;93b32564&#45;9b02&#45;497e&#45;a58f&#45;1b4f1c03c41e</text>
 </a>
 </g>
@@ -485,7 +485,7 @@
 <g id="node24" class="node">
 <title>_a885f418a772eeaeaec18751cbaf879740913db395d1586cbcfcbb5a5744e989</title>
 <g id="a_node24"><a xlink:title="ID &#45; http://example.org/kb/cassandra&#45;mobiledevice&#45;mmssms&#45;1ab55cb8&#45;581d&#45;4ebc&#45;99e4&#45;4db8d4261535">
-<ellipse fill="#fff68f" stroke="#808080" cx="1712" cy="-480.5" rx="326.7" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1712" cy="-480.5" rx="326.7" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1712" y="-475.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:cassandra&#45;mobiledevice&#45;mmssms&#45;1ab55cb8&#45;581d&#45;4ebc&#45;99e4&#45;4db8d4261535</text>
 </a>
 </g>
@@ -501,7 +501,7 @@
 <g id="node26" class="node">
 <title>_b1b8c32bc66f52e7c2c7b86d6265cdec702ef6d71a5060ac4d3f6bb1fee0fa54</title>
 <g id="a_node26"><a xlink:title="ID &#45; http://example.org/kb/sms&#45;message&#45;4e9bfb9e&#45;c4b4&#45;4ebd&#45;a7b0&#45;a49eba0811a6">
-<ellipse fill="#fff68f" stroke="#808080" cx="2129" cy="-155.25" rx="246.86" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2129" cy="-155.25" rx="246.86" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2129" y="-150.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:sms&#45;message&#45;4e9bfb9e&#45;c4b4&#45;4ebd&#45;a7b0&#45;a49eba0811a6</text>
 </a>
 </g>
@@ -517,7 +517,7 @@
 <g id="node27" class="node">
 <title>_d94847b1053adefa995fa0e874e4ffd04b1c6ed0f1136a08070e9afc082ab35d</title>
 <g id="a_node27"><a xlink:title="ID &#45; http://example.org/kb/sms&#45;message&#45;853716fe&#45;c35e&#45;45af&#45;81d3&#45;368dfb6b7eba">
-<ellipse fill="#fff68f" stroke="#808080" cx="1619" cy="-155.25" rx="245.33" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="1619" cy="-155.25" rx="245.33" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="1619" y="-150.2" font-family="Times,serif" font-size="14.00">ID &#45; kb:sms&#45;message&#45;853716fe&#45;c35e&#45;45af&#45;81d3&#45;368dfb6b7eba</text>
 </a>
 </g>
@@ -651,7 +651,7 @@
 <g id="node25" class="node">
 <title>_075c6b647d2d361588976e410e08cdf343ea63a22a8b450a5b60ae53480e4a2e</title>
 <g id="a_node25"><a xlink:title="ID &#45; http://example.org/kb/investigative&#45;action&#45;relationship&#45;97b9d9ac&#45;deeb&#45;45ea&#45;8f81&#45;6acda53c9b3e">
-<ellipse fill="#fff68f" stroke="#808080" cx="2516" cy="-480.5" rx="315.44" ry="18"/>
+<ellipse fill="#fffc87" stroke="#808080" cx="2516" cy="-480.5" rx="315.44" ry="18"/>
 <text xml:space="preserve" text-anchor="middle" x="2516" y="-475.45" font-family="Times,serif" font-size="14.00">ID &#45; kb:investigative&#45;action&#45;relationship&#45;97b9d9ac&#45;deeb&#45;45ea&#45;8f81&#45;6acda53c9b3e</text>
 </a>
 </g>

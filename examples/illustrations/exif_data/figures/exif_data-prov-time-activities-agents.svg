@@ -13,7 +13,7 @@
 <g id="node1" class="node">
 <title>_ea4b51e21131e6583c4894d8a05668a4b427ba124c6c1f28c6a60c0caf27a276</title>
 <g id="a_node1"><a xlink:title="ID &#45; http://example.org/kb/annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8">
-<polygon fill="#fed37f" stroke="black" points="619.13,-168.91 309.57,-181.35 0,-168.91 0.29,-148.79 618.84,-148.79 619.13,-168.91"/>
+<polygon fill="#fed37f" stroke="#000000" points="619.13,-168.91 309.57,-181.35 0,-168.91 0.29,-148.79 618.84,-148.79 619.13,-168.91"/>
 <text xml:space="preserve" text-anchor="middle" x="309.57" y="-158.3" font-family="Times,serif" font-size="14.00">ID &#45; kb:annotator_tool&#45;ca41faa8&#45;a59c&#45;4321&#45;b047&#45;4d916f75b1e8</text>
 </a>
 </g>
@@ -22,7 +22,7 @@
 <g id="node2" class="node">
 <title>_fef2c7a50aa047afde2c4e41b1d4da1913d582cb18936249b94b4b848662fb84</title>
 <g id="a_node2"><a xlink:title="ID &#45; http://example.org/kb/examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d">
-<polygon fill="#fed37f" stroke="black" points="769.99,-252.16 482.57,-264.6 195.14,-252.16 195.41,-232.04 769.72,-232.04 769.99,-252.16"/>
+<polygon fill="#fed37f" stroke="#000000" points="769.99,-252.16 482.57,-264.6 195.14,-252.16 195.41,-232.04 769.72,-232.04 769.99,-252.16"/>
 <text xml:space="preserve" text-anchor="middle" x="482.57" y="-241.55" font-family="Times,serif" font-size="14.00">ID &#45; kb:examiner&#45;88a08acc&#45;dad2&#45;4964&#45;be3b&#45;8b70e11a4f4d</text>
 </a>
 </g>
