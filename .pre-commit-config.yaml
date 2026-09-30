@@ -14,13 +14,13 @@ repos:
     hooks:
       - id: black
   - repo: https://github.com/pycqa/flake8
-    rev: 7.3.0
+    rev: 7.4.1
     hooks:
       - id: flake8
         args:
           - --extend-ignore=E203,E501
   - repo: https://github.com/pycqa/isort
-    rev: 9.0.0b1
+    rev: 9.0.2
     hooks:
       - id: isort
         name: isort (python)
