@@ -5,6 +5,7 @@
         "kb": "http://example.org/kb/",
         "acme": "http://custompb.acme.org/core#",
         "case-investigation": "https://ontology.caseontology.org/case/investigation/",
+        "drafting": "http://example.org/ontology/drafting/",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "uco-action": "https://ontology.unifiedcyberontology.org/uco/action/",
         "uco-core": "https://ontology.unifiedcyberontology.org/uco/core/",
@@ -18,36 +19,17 @@
     },
     "@graph": [
         {
-            "@id": "kb:forensic_lifecycle-d1780ea9-0289-46f4-bebf-25add2120e60",
+            "@id": "kb:forensic_lifecycle-b87e1d27-980a-40af-b1fc-64f935ede85e",
             "@type": "uco-action:ActionLifecycle",
-            "uco-core:description": "Describes the forensic lifecycle.",
-            "uco-action:phase": {
-                "@id": "kb:array-of-action-7bfb7e0e-0607-4733-82f1-bbf13a2112bf"
+            "uco-core:description": "Describes a forensic lifecycle.",
+            "drafting:phaseThread": {
+                "@id": "kb:thread-of-actions-6d1da03e-06e3-4a3f-b364-00aeb9a32f52"
             }
         },
         {
-            "@id": "kb:array-of-action-7bfb7e0e-0607-4733-82f1-bbf13a2112bf",
+            "@id": "kb:thread-of-actions-6d1da03e-06e3-4a3f-b364-00aeb9a32f52",
             "@type": [
-                "uco-action:ArrayOfAction",
-                "co:List"
-            ],
-            "rdfs:comment": "TODO - Propose defining ArrayOfAction as subclass of co:List; or, deprecate and set qualified shapes on uco-action:phase.  Deprecate action:action, replacing with co:element.  Define types:ListItem, similar to types:ThreadItem.",
-            "uco-action:action": [
-                {
-                    "@id": "kb:phase-42cf3a99-f609-443a-9ed1-c71a81335f76"
-                },
-                {
-                    "@id": "kb:phase-23d8e393-b6d4-4446-aee5-3ff3c94cd4ed"
-                },
-                {
-                    "@id": "kb:phase-fa076a4f-2fd6-4832-9caa-72d6c3a55333"
-                },
-                {
-                    "@id": "kb:phase-2c08ce87-7660-440f-9e75-dfb0a5d1858f"
-                },
-                {
-                    "@id": "kb:phase-2d0c2aff-0af8-4199-98f4-88f700eff427"
-                }
+                "drafting:ThreadOfActions"
             ],
             "co:element": [
                 {
@@ -72,71 +54,48 @@
             },
             "co:item": [
                 {
-                    "@id": "kb:list-item-bed033ed-e2c3-43c9-a74d-3a242502f58d",
-                    "@type": [
-                        "co:ListItem",
-                        "uco-core:UcoInherentCharacterizationThing"
-                    ],
-                    "co:index": {
-                        "@type": "xsd:positiveInteger",
-                        "@value": "1"
-                    },
+                    "@id": "kb:thread-item-28808080-7d88-4d21-9fc0-fab18cde8ffc",
+                    "@type": "uco-types:ThreadItem",
                     "co:itemContent": {
                         "@id": "kb:phase-42cf3a99-f609-443a-9ed1-c71a81335f76"
+                    },
+                    "uco-types:threadNextItem": {
+                        "@id": "kb:thread-item-41073be0-f403-4641-8095-bbfad577f79e"
                     }
                 },
                 {
-                    "@id": "kb:list-item-01ad3a0c-1102-44f4-8433-1b89f6eb52aa",
-                    "@type": [
-                        "co:ListItem",
-                        "uco-core:UcoInherentCharacterizationThing"
-                    ],
-                    "co:index": {
-                        "@type": "xsd:positiveInteger",
-                        "@value": "2"
-                    },
+                    "@id": "kb:thread-item-41073be0-f403-4641-8095-bbfad577f79e",
+                    "@type": "uco-types:ThreadItem",
                     "co:itemContent": {
                         "@id": "kb:phase-23d8e393-b6d4-4446-aee5-3ff3c94cd4ed"
+                    },
+                    "uco-types:threadNextItem": {
+                        "@id": "kb:thread-item-e2daa304-a1af-4ef0-9a7f-bc8ca0352363"
                     }
                 },
                 {
-                    "@id": "kb:list-item-6f344a10-edf4-4914-ae96-3ae59b69d058",
-                    "@type": [
-                        "co:ListItem",
-                        "uco-core:UcoInherentCharacterizationThing"
-                    ],
-                    "co:index": {
-                        "@type": "xsd:positiveInteger",
-                        "@value": "3"
-                    },
+                    "@id": "kb:thread-item-e2daa304-a1af-4ef0-9a7f-bc8ca0352363",
+                    "@type": "uco-types:ThreadItem",
                     "co:itemContent": {
                         "@id": "kb:phase-fa076a4f-2fd6-4832-9caa-72d6c3a55333"
+                    },
+                    "uco-types:threadNextItem": {
+                        "@id": "kb:thread-item-f16536c5-ba0c-4fb1-a940-a5c83762e98a"
                     }
                 },
                 {
-                    "@id": "kb:list-item-f70efc71-ae31-4b18-ac7a-7a6439d99dd9",
-                    "@type": [
-                        "co:ListItem",
-                        "uco-core:UcoInherentCharacterizationThing"
-                    ],
-                    "co:index": {
-                        "@type": "xsd:positiveInteger",
-                        "@value": "4"
-                    },
+                    "@id": "kb:thread-item-f16536c5-ba0c-4fb1-a940-a5c83762e98a",
+                    "@type": "uco-types:ThreadItem",
                     "co:itemContent": {
                         "@id": "kb:phase-2c08ce87-7660-440f-9e75-dfb0a5d1858f"
+                    },
+                    "uco-types:threadNextItem": {
+                        "@id": "kb:thread-item-faa3f691-276a-4fb0-b9f2-f124b51b4627"
                     }
                 },
                 {
-                    "@id": "kb:list-item-2022e71d-368a-414d-89b4-f3d8ca48d6ec",
-                    "@type": [
-                        "co:ListItem",
-                        "uco-core:UcoInherentCharacterizationThing"
-                    ],
-                    "co:index": {
-                        "@type": "xsd:positiveInteger",
-                        "@value": "5"
-                    },
+                    "@id": "kb:thread-item-faa3f691-276a-4fb0-b9f2-f124b51b4627",
+                    "@type": "uco-types:ThreadItem",
                     "co:itemContent": {
                         "@id": "kb:phase-2d0c2aff-0af8-4199-98f4-88f700eff427"
                     }
