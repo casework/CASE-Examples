@@ -70,12 +70,14 @@ drafting:ThreadOfActions
 		[
 			a owl:Restriction ;
 			rdfs:comment "A thread of actions groups and orders at least one action.  While there should be at least one Action linked, to allow for partial information sharing, this minimal link missing is warned about if absent, but not enforced."@en ;
+			rdfs:seeAlso drafting:ThreadOfActions-actions-shape ;
 			owl:onProperty co:element ;
 			owl:someValuesFrom uco-action:Action ;
 		] ,
 		[
 			a owl:Restriction ;
 			rdfs:comment "A thread of actions groups and orders at least one action.  While there should be at least one ThreadItem linked, to allow for partial information sharing, this minimal link missing is warned about if absent, but not enforced."@en ;
+			rdfs:seeAlso drafting:ThreadOfActions-actions-shape ;
 			owl:onProperty co:item ;
 			owl:someValuesFrom uco-types:ThreadItem ;
 		]
@@ -84,7 +86,6 @@ drafting:ThreadOfActions
 	rdfs:comment "A thread of actions is a partially ordered set of references to actions that are performed as a group.  As a summary of the member actions, co:element can directly link the ordered actions; but, the order between the actions is set by ThreadItems linked by co:item."@en ;
 	rdfs:isDefinedBy <https://github.com/ucoProject/UCO/issues/678> ;
 	sh:property
-		drafting:ThreadOfActions-element-shape ,
 		[
 			sh:class uco-action:Action ;
 			sh:path co:element ;
@@ -106,7 +107,7 @@ drafting:ThreadOfActions
 
 drafting:ThreadOfActions-actions-shape
 	a sh:NodeShape ;
-	rdfs:comment "This shape checks whether a ThreadOfActions links to a an Action in an ordered or unordered manner.  In scenarios with partial data sharing where the thread is intended to be indicated but not defined, this shape can be deactivated to quiet warnings."@en ;
+	rdfs:comment "This shape checks whether a ThreadOfActions links to an Action in an ordered or unordered manner.  In scenarios with partial data sharing where the thread is intended to be indicated but not defined, this shape can be deactivated to quiet warnings."@en ;
 	sh:property
 		drafting:ThreadOfActions-element-shape ,
 		drafting:ThreadOfActions-item-shape
